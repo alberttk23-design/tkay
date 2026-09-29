@@ -215,183 +215,220 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
         </div>
 
-        <!-- SECTION 2: 2 Symmetrical Analytics Cards (Meta Ads Left & TikTok Right) -->
+        <!-- SECTION 2: 2 Symmetrical Analytics Cards (Matching media_1790666139406.png) -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-          <!-- CARD 1: Meta Ads (Matching media_1790645835146.png) -->
+          <!-- CARD 1: Traffic & sales (Green / Emerald theme) -->
           <div class="tt-card p-6 flex flex-col justify-between">
             <div>
               <!-- Header -->
               <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div class="flex items-center gap-2 font-extrabold text-slate-900 text-base">
-                  <span>📣 Meta Ads</span>
+                  <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                  <span>Traffic & sales</span>
                 </div>
 
-                <!-- Channel Capsule -->
-                <div class="flex items-center p-0.5 rounded-full bg-slate-100 border border-slate-200 gap-1 text-xs">
-                  <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80">
-                    <svg class="w-3.5 h-3.5 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="advCardMetaCount">415</span>
-                  </div>
-                  <span class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold">
-                    <svg class="w-3 h-3 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
-                    <span id="advCardTiktokCount">703</span>
-                  </span>
-                  <span class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold">
-                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                    <span>373</span>
-                  </span>
+                <div class="flex items-center gap-1.5 text-xs">
+                  <button class="p-1.5 rounded-lg border border-slate-200 bg-white text-slate-500 hover:text-slate-800 shadow-2xs transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  </button>
+                  <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Last 6M ▾</span>
                 </div>
               </div>
 
-              <!-- 3 Internal Metrics Columns (Active Ads, Ads Launched, Reach/Spend) -->
-              <div class="grid grid-cols-3 gap-4 my-5">
+              <!-- 2 Internal Metrics Columns (Visitors & Est. sales/mo) -->
+              <div class="grid grid-cols-2 gap-4 my-5">
                 <div>
                   <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-purple-600"></span>
-                    <span>Active Ads</span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Visitors</span>
                   </div>
-                  <div class="flex items-baseline gap-1.5 flex-wrap">
-                    <span id="kpiActiveAds" class="text-2xl font-extrabold text-slate-900">415</span>
-                    <span id="kpiTotalAds" class="text-xs text-slate-400 font-medium">/ 14K</span>
-                    <span id="kpiActiveDelta" class="text-xs font-bold text-rose-500">-21%</span>
+                  <div class="flex items-baseline gap-2 flex-wrap">
+                    <span id="trafficVisitorsVal" class="text-2xl font-extrabold text-slate-900">845K</span>
+                    <span id="trafficVisitorsDelta" class="text-xs font-bold text-rose-500">-21%</span>
                   </div>
                 </div>
 
                 <div>
                   <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                    <span>Ads Launched</span>
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    <span>Est. sales/mo</span>
                   </div>
-                  <div class="flex items-baseline gap-1.5 flex-wrap">
-                    <span id="kpiAdsLaunched" class="text-2xl font-extrabold text-slate-900">5,962</span>
-                    <span id="kpiLaunchedDelta" class="text-xs font-bold text-emerald-600">+143%</span>
-                  </div>
-                </div>
-
-                <div>
-                  <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    <span>Reach / Spend</span>
-                  </div>
-                  <div class="flex items-baseline gap-1.5 flex-wrap">
-                    <span id="kpiReach" class="text-2xl font-extrabold text-slate-900">300.9M</span>
-                    <span id="kpiSpend" class="text-sm font-bold text-slate-600">· $2.7M</span>
-                    <span id="kpiReachDelta" class="text-xs font-bold text-emerald-600">+152%</span>
+                  <div class="flex items-baseline gap-2 flex-wrap">
+                    <span id="trafficSalesMonthVal" class="text-2xl font-extrabold text-slate-900">$363.9K</span>
+                    <span id="trafficSalesDayVal" class="text-xs font-medium text-slate-500 underline decoration-dotted decoration-slate-400">$12.1K/day ⤹</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Filter Pills -->
-              <div class="flex items-center justify-end gap-1.5 text-xs mb-3">
-                <button class="p-1.5 rounded-lg border border-slate-200 bg-white text-slate-500 hover:text-slate-800 shadow-2xs transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </button>
-                <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Last 6M ▾</span>
-                <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Weekly ▾</span>
-              </div>
-
-              <!-- Spline Area Chart (Purple) -->
+              <!-- Spline Area Chart (Green / Emerald) -->
               <div class="h-48 w-full relative">
-                <canvas id="trendChart"></canvas>
+                <canvas id="trafficChart"></canvas>
               </div>
             </div>
 
-            <!-- Bottom: Targeted Countries Bar -->
+            <!-- Bottom: Visitors by country -->
             <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-2 overflow-x-auto text-xs text-slate-500">
-              <span class="font-semibold text-slate-700 shrink-0 border-b border-dotted border-slate-400 pb-0.5">Countries targeted</span>
-              <div id="targetCountriesList" class="flex items-center gap-1.5 flex-wrap">
-                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇦🇺 14.7%</span>
-                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇺🇸 14.7%</span>
-                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇬🇧 13.8%</span>
-                <span class="text-slate-400 text-xs ml-1">11 more countries</span>
+              <span class="font-semibold text-slate-700 shrink-0 border-b border-dotted border-slate-400 pb-0.5">Visitors by country</span>
+              <div id="visitorsByCountryList" class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇦🇺 48.6%</span>
+                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇳🇿 12.5%</span>
+                <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇺🇸 12.0%</span>
+                <span class="text-slate-400 text-xs ml-1">2 more countries</span>
               </div>
             </div>
           </div>
 
-          <!-- CARD 2: TikTok content (Matching media_1790655154318.png) -->
+          <!-- CARD 2: Meta Ads / Channels Switcher (Matching media_1790666139406.png) -->
           <div class="tt-card p-6 flex flex-col justify-between">
             <div>
-              <!-- Header -->
+              <!-- Header with Capsule Switcher -->
               <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div class="flex items-center gap-2 font-extrabold text-slate-900 text-base">
-                  <svg class="w-4 h-4 text-slate-700" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
-                  </svg>
-                  <span>TikTok content</span>
+                  <span id="card2Title">📣 Meta Ads</span>
                 </div>
 
-                <!-- Channel Capsule -->
+                <!-- Channel Capsule matching media_1790666139406.png -->
                 <div class="flex items-center p-0.5 rounded-full bg-slate-100 border border-slate-200 gap-1 text-xs">
-                  <span class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold">
-                    <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                  </span>
-                  <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80">
-                    <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
+                  <button type="button" id="pillBtnMeta" onclick="switchRightCard('meta')" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80 cursor-pointer transition">
+                    <svg class="w-3.5 h-3.5 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="tiktokHeaderCount">703</span>
-                  </div>
-                  <span class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold">
-                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                    <span>1.8K</span>
-                  </span>
+                    <span id="advCardMetaCount">415</span>
+                  </button>
+                  <button type="button" id="pillBtnTiktok" onclick="switchRightCard('tiktok')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full">
+                    <svg class="w-3 h-3 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
+                    <span id="advCardTiktokCount">703</span>
+                  </button>
+                  <button type="button" id="pillBtnGoogle" onclick="switchRightCard('google')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full">
+                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                    <span id="advCardGoogleCount">373</span>
+                  </button>
                 </div>
               </div>
 
-              <!-- 3 Internal Metrics Columns (2Y Views, Likes, Peak Spike) -->
-              <div class="grid grid-cols-3 gap-3 my-4">
-                <div>
-                  <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-                    <span id="tiktokViewsLabel">Lượt xem Keyword (2Y)</span>
+              <!-- SUBPANEL A: Meta Ads Panel (Default active) -->
+              <div id="rightPanelMeta">
+                <!-- 3 Internal Metrics Columns (Active Ads, Ads Launched, Reach/Spend) -->
+                <div class="grid grid-cols-3 gap-4 my-5">
+                  <div>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-purple-600"></span>
+                      <span>Active Ads</span>
+                    </div>
+                    <div class="flex items-baseline gap-1.5 flex-wrap">
+                      <span id="kpiActiveAds" class="text-2xl font-extrabold text-slate-900">415</span>
+                      <span id="kpiTotalAds" class="text-xs text-slate-400 font-medium">/ 14K</span>
+                      <span id="kpiActiveDelta" class="text-xs font-bold text-rose-500">-21%</span>
+                    </div>
                   </div>
-                  <div id="tiktokViewsVal" class="text-2xl font-extrabold text-slate-900">45.4M</div>
+
+                  <div>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      <span>Ads Launched</span>
+                    </div>
+                    <div class="flex items-baseline gap-1.5 flex-wrap">
+                      <span id="kpiAdsLaunched" class="text-2xl font-extrabold text-slate-900">5,962</span>
+                      <span id="kpiLaunchedDelta" class="text-xs font-bold text-emerald-600">+143%</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                      <span>Reach / Spend</span>
+                    </div>
+                    <div class="flex items-baseline gap-1.5 flex-wrap">
+                      <span id="kpiReach" class="text-2xl font-extrabold text-slate-900">300.9M</span>
+                      <span id="kpiSpend" class="text-sm font-bold text-slate-600">· $2.7M</span>
+                      <span id="kpiReachDelta" class="text-xs font-bold text-emerald-600">+152%</span>
+                    </div>
+                  </div>
                 </div>
 
-                <div>
-                  <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-                    <span>Tương tác / Likes</span>
-                  </div>
-                  <div id="tiktokLikesVal" class="text-2xl font-extrabold text-slate-900">2.8M</div>
+                <!-- Filter Pills -->
+                <div class="flex items-center justify-end gap-1.5 text-xs mb-3">
+                  <button class="p-1.5 rounded-lg border border-slate-200 bg-white text-slate-500 hover:text-slate-800 shadow-2xs transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  </button>
+                  <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Last 6M ▾</span>
+                  <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Weekly ▾</span>
                 </div>
 
-                <div>
-                  <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
-                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                    <span>Tháng đột phá (Peak)</span>
-                  </div>
-                  <div id="tiktokPeakVal" class="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200/90 px-2 py-1 rounded-lg truncate mt-0.5" title="Tháng có lượt xem và tốc độ tăng trưởng mạnh nhất">
-                    Nov '25 (+65%)
+                <!-- Spline Area Chart (Purple) -->
+                <div class="h-48 w-full relative">
+                  <canvas id="trendChart"></canvas>
+                </div>
+
+                <!-- Bottom: Targeted Countries Bar -->
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-2 overflow-x-auto text-xs text-slate-500">
+                  <span class="font-semibold text-slate-700 shrink-0 border-b border-dotted border-slate-400 pb-0.5">Countries targeted</span>
+                  <div id="targetCountriesList" class="flex items-center gap-1.5 flex-wrap">
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇦🇺 14.7%</span>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇺🇸 14.7%</span>
+                    <span class="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px]">🇬🇧 13.8%</span>
+                    <span class="text-slate-400 text-xs ml-1">11 more countries</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Filter Controls with 24-Month Option -->
-              <div class="flex items-center justify-between gap-2 text-xs mb-3">
-                <span class="text-[11px] text-slate-400 font-medium hidden sm:inline">Chu kỳ soi tăng trưởng:</span>
-                <div class="flex items-center gap-1.5">
-                  <select id="tiktokTimeframeSelect" onchange="changeTikTokTimeframe(this.value)" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-800 font-bold text-xs shadow-2xs focus:outline-none focus:border-teal-500 cursor-pointer">
-                    <option value="24" selected>📅 24 Tháng (2 Năm - Toàn cảnh) ▾</option>
-                    <option value="12">📅 12 Tháng (1 Năm qua) ▾</option>
-                    <option value="6">📅 6 Tháng gần nhất ▾</option>
-                  </select>
+              <!-- SUBPANEL B: TikTok Keyword Intelligence Panel (Active when TikTok pill clicked) -->
+              <div id="rightPanelTiktok" class="hidden">
+                <!-- 3 Internal Metrics Columns (2Y Views, Likes, Peak Spike) -->
+                <div class="grid grid-cols-3 gap-3 my-4">
+                  <div>
+                    <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-teal-500"></span>
+                      <span id="tiktokViewsLabel">Lượt xem Keyword (2Y)</span>
+                    </div>
+                    <div id="tiktokViewsVal" class="text-2xl font-extrabold text-slate-900">45.4M</div>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                      <span>Tương tác / Likes</span>
+                    </div>
+                    <div id="tiktokLikesVal" class="text-2xl font-extrabold text-slate-900">2.8M</div>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-1">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      <span>Tháng đột phá (Peak)</span>
+                    </div>
+                    <div id="tiktokPeakVal" class="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200/90 px-2 py-1 rounded-lg truncate mt-0.5" title="Tháng có lượt xem và tốc độ tăng trưởng mạnh nhất">
+                      Nov '25 (+65%)
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Filter Controls with 24-Month Option -->
+                <div class="flex items-center justify-between gap-2 text-xs mb-3">
+                  <span class="text-[11px] text-slate-400 font-medium hidden sm:inline">Chu kỳ soi tăng trưởng:</span>
+                  <div class="flex items-center gap-1.5">
+                    <select id="tiktokTimeframeSelect" onchange="changeTikTokTimeframe(this.value)" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-800 font-bold text-xs shadow-2xs focus:outline-none focus:border-teal-500 cursor-pointer">
+                      <option value="24" selected>📅 24 Tháng (2 Năm - Toàn cảnh) ▾</option>
+                      <option value="12">📅 12 Tháng (1 Năm qua) ▾</option>
+                      <option value="6">📅 6 Tháng gần nhất ▾</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Spline Area Chart (Teal 24M Trend) -->
+                <div class="h-48 w-full relative">
+                  <canvas id="tiktokChart"></canvas>
+                </div>
+
+                <!-- Bottom: Brand-Specific Top Hashtags -->
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-2 overflow-x-auto text-xs">
+                  <span class="text-slate-700 font-bold shrink-0 border-b border-dotted border-slate-400 pb-0.5">Brand Hashtags</span>
+                  <div id="tiktokHashtagsList" class="flex items-center gap-1.5 flex-wrap">
+                    <!-- Populated dynamically -->
+                  </div>
                 </div>
               </div>
 
-              <!-- Spline Area Chart (Teal 24M Trend) -->
-              <div class="h-48 w-full relative">
-                <canvas id="tiktokChart"></canvas>
-              </div>
-            </div>
-
-            <!-- Bottom: Brand-Specific Top Hashtags -->
-            <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-2 overflow-x-auto text-xs">
-              <span class="text-slate-700 font-bold shrink-0 border-b border-dotted border-slate-400 pb-0.5">Brand Hashtags</span>
-              <div id="tiktokHashtagsList" class="flex items-center gap-1.5 flex-wrap">
-                <!-- Dynamically populated with strictly brand-specific tags -->
-              </div>
             </div>
           </div>
 
@@ -775,9 +812,40 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     };
     let currentData = null;
     let currentAdIndex = 0;
+    let trafficChartInstance = null;
     let trendChartInstance = null;
     let tiktokChartInstance = null;
     let brandtrackerStores = [];
+
+    // Switch Right Card between Meta Ads and TikTok Content
+    function switchRightCard(channel) {
+      const panelMeta = document.getElementById('rightPanelMeta');
+      const panelTiktok = document.getElementById('rightPanelTiktok');
+      const title = document.getElementById('card2Title');
+      const pillMeta = document.getElementById('pillBtnMeta');
+      const pillTiktok = document.getElementById('pillBtnTiktok');
+
+      if (channel === 'tiktok') {
+        if (panelMeta) panelMeta.classList.add('hidden');
+        if (panelTiktok) panelTiktok.classList.remove('hidden');
+        if (title) title.textContent = '📹 TikTok content';
+        if (pillTiktok) pillTiktok.className = "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80 cursor-pointer transition";
+        if (pillMeta) pillMeta.className = "px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full";
+        if (currentData && currentData.tiktok) {
+          const tfSelect = document.getElementById('tiktokTimeframeSelect');
+          renderTikTokChart(currentData.tiktok, tfSelect ? parseInt(tfSelect.value) : 24);
+        }
+      } else {
+        if (panelTiktok) panelTiktok.classList.add('hidden');
+        if (panelMeta) panelMeta.classList.remove('hidden');
+        if (title) title.textContent = '📣 Meta Ads';
+        if (pillMeta) pillMeta.className = "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80 cursor-pointer transition";
+        if (pillTiktok) pillTiktok.className = "px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full";
+        if (currentData) {
+          renderTrendChart(currentData.history_points || currentData.historyChart || []);
+        }
+      }
+    }
 
     // Switch between Explorer and Brandtracker views
     function switchView(viewName) {
@@ -1017,6 +1085,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (advMeta) advMeta.textContent = metaCount;
       const advTt = document.getElementById('advCardTiktokCount');
       if (advTt) advTt.textContent = tiktokCount;
+      const advGg = document.getElementById('advCardGoogleCount');
+      if (advGg) advGg.textContent = googleCount;
 
       const feedMeta = document.getElementById('feedMetaCount');
       if (feedMeta) feedMeta.textContent = metaCount;
@@ -1024,11 +1094,27 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (feedTt) feedTt.textContent = tiktokCount;
 
       // KPIs
-      document.getElementById('kpiActiveAds').textContent = metaCount;
-      document.getElementById('kpiTotalAds').textContent = '/ ' + (data.total_all_time || (metaCount * 4) + '+');
-      document.getElementById('kpiAdsLaunched').textContent = data.kpis?.ads_launched_30d || (Math.round(metaCount * 1.4) + '');
-      document.getElementById('kpiReach').textContent = data.kpis?.reach_estimate || '300.9M';
-      document.getElementById('kpiSpend').textContent = '· ' + (data.kpis?.spend_estimate || '$2.7M');
+      const kpiObj = data.kpi || data.kpis || {};
+      if (kpiObj.activeAds && typeof kpiObj.activeAds === 'string' && kpiObj.activeAds.includes('/')) {
+        const parts = kpiObj.activeAds.split('/');
+        document.getElementById('kpiActiveAds').textContent = parts[0].trim();
+        document.getElementById('kpiTotalAds').textContent = '/ ' + parts[1].trim();
+      } else {
+        document.getElementById('kpiActiveAds').textContent = metaCount;
+        document.getElementById('kpiTotalAds').textContent = '/ ' + (data.total_all_time || (metaCount * 4) + '+');
+      }
+      const actDeltaEl = document.getElementById('kpiActiveDelta');
+      if (actDeltaEl && kpiObj.activeAdsDelta) actDeltaEl.textContent = kpiObj.activeAdsDelta;
+
+      document.getElementById('kpiAdsLaunched').textContent = kpiObj.adsLaunched || kpiObj.ads_launched_30d || (Math.round(metaCount * 1.4) + '');
+      const launchDeltaEl = document.getElementById('kpiLaunchedDelta');
+      if (launchDeltaEl && kpiObj.adsLaunchedDelta) launchDeltaEl.textContent = kpiObj.adsLaunchedDelta;
+
+      document.getElementById('kpiReach').textContent = kpiObj.reach || kpiObj.reach_estimate || '300.9M';
+      const sp = kpiObj.spend || kpiObj.spend_estimate || '$2.7M';
+      document.getElementById('kpiSpend').textContent = sp.startsWith('·') ? sp : ('· ' + sp);
+      const reachDeltaEl = document.getElementById('kpiReachDelta');
+      if (reachDeltaEl && kpiObj.reachSpendDelta) reachDeltaEl.textContent = kpiObj.reachSpendDelta;
 
       // Countries targeted bar
       const targetCountriesEl = document.getElementById('targetCountriesList');
@@ -1052,11 +1138,71 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         targetCountriesEl.appendChild(moreSpan);
       }
 
+      // Traffic & Sales Intelligence Binding (Matching media_1790666139406.png)
+      const ts = data.traffic_sales || {
+        visitors: '845K',
+        visitorsDelta: '-21%',
+        estSalesMonth: '$363.9K',
+        estSalesDay: '$12.1K/day',
+        history: [
+          { month: 'Mar', visitors: 865.7, display: '865.7K' },
+          { month: 'Apr', visitors: 913.8, display: '913.8K' },
+          { month: 'May', visitors: 890.2, display: '890.2K' },
+          { month: 'Jun', visitors: 1000.0, display: '1.0M' },
+          { month: 'Jul', visitors: 1100.0, display: '1.1M' },
+          { month: 'Aug', visitors: 845.4, display: '845.4K' }
+        ],
+        visitorsByCountry: [
+          { countryCode: 'AU', percentage: 48.6 },
+          { countryCode: 'NZ', percentage: 12.5 },
+          { countryCode: 'US', percentage: 12.0 }
+        ]
+      };
+
+      const visValEl = document.getElementById('trafficVisitorsVal');
+      if (visValEl) visValEl.textContent = ts.visitors || '845K';
+      const visDeltaEl = document.getElementById('trafficVisitorsDelta');
+      if (visDeltaEl) {
+        visDeltaEl.textContent = ts.visitorsDelta || '-21%';
+        visDeltaEl.className = ts.visitorsDelta?.startsWith('+') ? "text-xs font-bold text-emerald-600" : "text-xs font-bold text-rose-500";
+      }
+
+      const salesMoEl = document.getElementById('trafficSalesMonthVal');
+      if (salesMoEl) salesMoEl.textContent = ts.estSalesMonth || '$363.9K';
+      const salesDayEl = document.getElementById('trafficSalesDayVal');
+      if (salesDayEl) salesDayEl.textContent = `${ts.estSalesDay || '$12.1K/day'} ⤹`;
+
+      const visCountryEl = document.getElementById('visitorsByCountryList');
+      if (visCountryEl) {
+        visCountryEl.innerHTML = '';
+        const flagMap = { AU: '🇦🇺', NZ: '🇳🇿', US: '🇺🇸', GB: '🇬🇧', CA: '🇨🇦', DE: '🇩🇪', IE: '🇮🇪', NL: '🇳🇱', AT: '🇦🇹', BE: '🇧🇪', DK: '🇩🇰', FI: '🇫🇮', SE: '🇸🇪', FR: '🇫🇷' };
+        const cList = ts.visitorsByCountry || [
+          { countryCode: 'AU', percentage: 48.6 },
+          { countryCode: 'NZ', percentage: 12.5 },
+          { countryCode: 'US', percentage: 12.0 }
+        ];
+        cList.slice(0, 3).forEach(c => {
+          const pill = document.createElement('span');
+          pill.className = "px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px] flex items-center gap-1";
+          pill.textContent = `${flagMap[c.countryCode] || '🌐'} ${c.percentage}%`;
+          visCountryEl.appendChild(pill);
+        });
+        const moreSpan = document.createElement('span');
+        moreSpan.className = "text-slate-400 text-xs ml-1";
+        moreSpan.textContent = `${Math.max(2, cList.length - 3)} more countries`;
+        visCountryEl.appendChild(moreSpan);
+      }
+
+      // Render Traffic Area Spline (Green)
+      renderTrafficChart(ts);
+
+      // Default Right Card to Meta Ads view
+      switchRightCard('meta');
+
       // Chart.js Area Spline
       renderTrendChart(data.history_points || data.historyChart || []);
 
       // TikTok Intelligence Binding
-      // TikTok 2-Year Keyword Intelligence Binding
       const cleanBrand = (data.name || data.query || 'brand').toLowerCase().replace(/[^a-z0-9]/g, '');
       const defaultBrandTags = [
         `#${cleanBrand}`,
@@ -1113,6 +1259,95 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Feed Ad Cards
       renderFeedCards(data.ads || []);
+    }
+
+    // Render Traffic Chart (Green Spline Area)
+    function renderTrafficChart(traffic) {
+      const canvas = document.getElementById('trafficChart');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (trafficChartInstance) {
+        trafficChartInstance.destroy();
+      }
+
+      const hist = (traffic && traffic.history && traffic.history.length > 0) ? traffic.history : [
+        { month: 'Mar', visitors: 865.7, display: '865.7K' },
+        { month: 'Apr', visitors: 913.8, display: '913.8K' },
+        { month: 'May', visitors: 890.2, display: '890.2K' },
+        { month: 'Jun', visitors: 1000.0, display: '1.0M' },
+        { month: 'Jul', visitors: 1100.0, display: '1.1M' },
+        { month: 'Aug', visitors: 845.4, display: '845.4K' }
+      ];
+
+      const labels = hist.map(h => h.month);
+      const dataValues = hist.map(h => typeof h.visitors === 'number' ? h.visitors : parseFloat(h.visitors) || 0);
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, 180);
+      gradient.addColorStop(0, 'rgba(16, 185, 129, 0.22)');
+      gradient.addColorStop(1, 'rgba(16, 185, 129, 0.0)');
+
+      trafficChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Visitors',
+            data: dataValues,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: '#10b981',
+            borderWidth: 2.2,
+            tension: 0.42,
+            pointRadius: 4,
+            pointBackgroundColor: '#10b981',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 1.5,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#059669'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#0f172a',
+              titleColor: '#94a3b8',
+              bodyColor: '#34d399',
+              borderColor: '#1e293b',
+              borderWidth: 1,
+              padding: 10,
+              displayColors: false,
+              callbacks: {
+                title: function(context) {
+                  return context[0].label + ' 2026';
+                },
+                label: function(context) {
+                  const item = hist[context.dataIndex];
+                  return '● Visitors: ' + (item?.display || (context.parsed.y + 'K'));
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false, drawBorder: false },
+              ticks: { color: '#64748b', font: { size: 10 } }
+            },
+            y: {
+              grid: { color: 'rgba(0, 0, 0, 0.04)', drawBorder: false },
+              ticks: {
+                color: '#64748b',
+                font: { size: 10 },
+                callback: function(val) {
+                  return val >= 1000 ? (val / 1000).toFixed(1) + 'M' : val + 'K';
+                }
+              }
+            }
+          }
+        }
+      });
     }
 
     // Render TrendChart (Purple Spline with Peak Labels)

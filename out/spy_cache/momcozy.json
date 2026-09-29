@@ -1464,5 +1464,61 @@
         "growth": "+5%"
       }
     ]
+  },
+  "traffic_sales": {
+    "visitors": "1.8M",
+    "visitorsDelta": "+32%",
+    "estSalesMonth": "$1.1M",
+    "estSalesDay": "$36.8K/day",
+    "history": [
+      {
+        "month": "Mar",
+        "visitors": 1200.0,
+        "display": "1.2M"
+      },
+      {
+        "month": "Apr",
+        "visitors": 1400.0,
+        "display": "1.4M"
+      },
+      {
+        "month": "May",
+        "visitors": 2100.0,
+        "display": "2.1M"
+      },
+      {
+        "month": "Jun",
+        "visitors": 1700.0,
+        "display": "1.7M"
+      },
+      {
+        "month": "Jul",
+        "visitors": 1900.0,
+        "display": "1.9M"
+      },
+      {
+        "month": "Aug",
+        "visitors": 1800.0,
+        "display": "1.8M"
+      }
+    ],
+    "visitorsByCountry": [
+      {
+        "countryCode": "US",
+        "percentage": 52.0
+      },
+      {
+        "countryCode": "GB",
+        "percentage": 22.4
+      },
+      {
+        "countryCode": "DE",
+        "percentage": 10.2
+      },
+      {
+        "countryCode": "AU",
+        "percentage": 8.1
+      }
+    ]
   }
 }

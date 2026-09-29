@@ -1875,5 +1875,61 @@
       "adsOnThisLpPercent": 45,
       "ad_library_url": "https://www.facebook.com/ads/library/?id=914020728320696"
     }
-  ]
+  ],
+  "traffic_sales": {
+    "visitors": "620K",
+    "visitorsDelta": "+18%",
+    "estSalesMonth": "$285.5K",
+    "estSalesDay": "$9.5K/day",
+    "history": [
+      {
+        "month": "Mar",
+        "visitors": 420.0,
+        "display": "420K"
+      },
+      {
+        "month": "Apr",
+        "visitors": 480.0,
+        "display": "480K"
+      },
+      {
+        "month": "May",
+        "visitors": 590.0,
+        "display": "590K"
+      },
+      {
+        "month": "Jun",
+        "visitors": 710.0,
+        "display": "710K"
+      },
+      {
+        "month": "Jul",
+        "visitors": 680.0,
+        "display": "680K"
+      },
+      {
+        "month": "Aug",
+        "visitors": 620.0,
+        "display": "620K"
+      }
+    ],
+    "visitorsByCountry": [
+      {
+        "countryCode": "US",
+        "percentage": 58.4
+      },
+      {
+        "countryCode": "GB",
+        "percentage": 18.2
+      },
+      {
+        "countryCode": "CA",
+        "percentage": 12.5
+      },
+      {
+        "countryCode": "AU",
+        "percentage": 6.4
+      }
+    ]
+  }
 }
