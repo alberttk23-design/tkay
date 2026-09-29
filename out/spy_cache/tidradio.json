@@ -1,0 +1,321 @@
+{
+  "query": "tidradio",
+  "name": "Jertchuce Fliratspocre",
+  "domain": "tidradio.com",
+  "avatarUrl": "https://ui-avatars.com/api/?name=Jertchuce%20Fliratspocre&background=0284c7&color=fff",
+  "channels": {
+    "meta": {
+      "active": 4,
+      "total": 24,
+      "delta": 18
+    },
+    "tiktok": {
+      "active": 1,
+      "total": 4
+    },
+    "google": {
+      "active": 0,
+      "total": 4
+    }
+  },
+  "kpi": {
+    "activeAds": "4 / 24",
+    "activeAdsDelta": "+18%",
+    "adsLaunched": "5",
+    "adsLaunchedDelta": "+95%",
+    "reach": "1.8M",
+    "spend": "$0.0M",
+    "reachSpendDelta": "+110%"
+  },
+  "kpis": {
+    "ads_launched_30d": "5",
+    "reach_estimate": "1.8M",
+    "spend_estimate": "$0.0M",
+    "velocity_7d": 1,
+    "velocity_14d": 2
+  },
+  "total_all_time": "16",
+  "hero_landing_pages": [
+    {
+      "title": "Products",
+      "url": "https://tidradio.com/products",
+      "count": 4,
+      "ratio": "100%"
+    }
+  ],
+  "countriesTargeted": [
+    {
+      "countryCode": "US",
+      "percentage": 52.4
+    },
+    {
+      "countryCode": "GB",
+      "percentage": 24.1
+    },
+    {
+      "countryCode": "AU",
+      "percentage": 14.5
+    },
+    {
+      "countryCode": "CA",
+      "percentage": 9.0
+    }
+  ],
+  "history_points": [
+    {
+      "date": "2026-05-01",
+      "activeAds": 10
+    },
+    {
+      "date": "2026-06-01",
+      "activeAds": 15
+    },
+    {
+      "date": "2026-07-01",
+      "activeAds": 20
+    },
+    {
+      "date": "2026-08-01",
+      "activeAds": 25
+    },
+    {
+      "date": "2026-09-01",
+      "activeAds": 4
+    }
+  ],
+  "historyChart": [
+    {
+      "date": "2026-05-01",
+      "activeAds": 10
+    },
+    {
+      "date": "2026-06-01",
+      "activeAds": 15
+    },
+    {
+      "date": "2026-07-01",
+      "activeAds": 20
+    },
+    {
+      "date": "2026-08-01",
+      "activeAds": 25
+    },
+    {
+      "date": "2026-09-01",
+      "activeAds": 4
+    }
+  ],
+  "velocity": {
+    "7d": 1,
+    "14d": 2,
+    "30d": 4
+  },
+  "advertiserAge": "Verified Brand",
+  "total_active_ads": 4,
+  "scanned_cards_count": 4,
+  "video_ads_count": 3,
+  "image_ads_count": 1,
+  "scaling_winning_ads": 0,
+  "ads": [
+    {
+      "id": "fb_1379654024244244",
+      "platformAdId": "1379654024244244",
+      "ad_archive_id": "1379654024244244",
+      "advertiser": "Jertchuce Fliratspocre",
+      "advertiserName": "Jertchuce Fliratspocre",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Jertchuce%20Fliratspocre&background=0D8ABC&color=fff",
+      "domain": "tidradio.com",
+      "siteName": "Jertchuce Fliratspocre",
+      "landingUrl": "https://tidradio.com/products",
+      "landing_url": "https://tidradio.com/products",
+      "ctaDomain": "TIDRADIO.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Jertchuce Fliratspocre Online",
+      "ctaDescription": "📻 Radios Portátiles TIDRADIO M15 – Alcan",
+      "description": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ Alcance 8000 km: Comunicación a larga distancia – ideal para equipos y expediciones. ✅ Batería 3000mAh (72h): Autonomía prolongada para días de uso sin recargar.",
+      "primary_text": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ Alcance 8000 km: Comunicación a larga distancia – ideal para equipos y expediciones. ✅ Batería 3000mAh (72h): Autonomía prolongada para días de uso sin recargar.",
+      "hook": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOT5_spePXgxnmIkPDxMzHffWrvtwvb8w6XRSMhdNowsjOfDPYs3i_8_QijVIoRtz-rXJ7_RfZdLihI556tHqw-sCYgpa8d8X-dhHMOlQ.mp4?_nc_cat=104&_nc_oc=AdqVX7pI8790RmS_VPMRV7pFNyZtNy3C5vGqj1IQ_3Cvokr51YTUq_aj5fcbyPH7RNE&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=ZdQyYGrWixIQ7kNvwFG_asg&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjE1Mzc0MjIwODU1MTQ3OCwiYXNzZXRfYWdlX2RheXMiOjksInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjo4NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPbbRQD3fmXfrCkPBVeyByEPYrcNPKrybWHogrENDYWrg&oe=6AC0F3CE",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOT5_spePXgxnmIkPDxMzHffWrvtwvb8w6XRSMhdNowsjOfDPYs3i_8_QijVIoRtz-rXJ7_RfZdLihI556tHqw-sCYgpa8d8X-dhHMOlQ.mp4?_nc_cat=104&_nc_oc=AdqVX7pI8790RmS_VPMRV7pFNyZtNy3C5vGqj1IQ_3Cvokr51YTUq_aj5fcbyPH7RNE&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=ZdQyYGrWixIQ7kNvwFG_asg&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjE1Mzc0MjIwODU1MTQ3OCwiYXNzZXRfYWdlX2RheXMiOjksInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjo4NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPbbRQD3fmXfrCkPBVeyByEPYrcNPKrybWHogrENDYWrg&oe=6AC0F3CE",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/794895201_1327150205981928_3511549103739374028_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GJncIxRMX_sQ7kNvwG5PBOj&_nc_oc=AdqsijrE3J3gCmnjVFTawgvBo9_G95C5TxqfBC8I4YhghRjim6CvXbwtNak9nWvjylI&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQPMUxzXOAQCxpAn-Q8qPogHrq-aS2ZUtncG7pTg2l_zag&oe=6AC11931",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/794895201_1327150205981928_3511549103739374028_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GJncIxRMX_sQ7kNvwG5PBOj&_nc_oc=AdqsijrE3J3gCmnjVFTawgvBo9_G95C5TxqfBC8I4YhghRjim6CvXbwtNak9nWvjylI&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQPMUxzXOAQCxpAn-Q8qPogHrq-aS2ZUtncG7pTg2l_zag&oe=6AC11931",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/794895201_1327150205981928_3511549103739374028_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=GJncIxRMX_sQ7kNvwG5PBOj&_nc_oc=AdqsijrE3J3gCmnjVFTawgvBo9_G95C5TxqfBC8I4YhghRjim6CvXbwtNak9nWvjylI&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQPMUxzXOAQCxpAn-Q8qPogHrq-aS2ZUtncG7pTg2l_zag&oe=6AC11931",
+      "isActive": true,
+      "daysRunning": 10,
+      "days_active": 10,
+      "startDate": "19 Tháng 9, 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 1,
+      "adRankPopulation": 4,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 4,
+      "pageTotalAds": 20,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 4,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1379654024244244"
+    },
+    {
+      "id": "fb_1468645865085819",
+      "platformAdId": "1468645865085819",
+      "ad_archive_id": "1468645865085819",
+      "advertiser": "Blackman Ethanmxw",
+      "advertiserName": "Blackman Ethanmxw",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Blackman%20Ethanmxw&background=0D8ABC&color=fff",
+      "domain": "tidradio.com",
+      "siteName": "Blackman Ethanmxw",
+      "landingUrl": "https://tidradio.com/products",
+      "landing_url": "https://tidradio.com/products",
+      "ctaDomain": "TIDRADIO.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Blackman Ethanmxw Online",
+      "ctaDescription": "📻 Radios TIDRADIO M15 – Alcance 8000km, ",
+      "description": "📻 Radios TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ 8000km de alcance: Comunicación a larga distancia con red móvil o repetidores. ✅ 3000mAh (72h): Autonomía prolongada para días de campo sin recargar.",
+      "primary_text": "📻 Radios TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ 8000km de alcance: Comunicación a larga distancia con red móvil o repetidores. ✅ 3000mAh (72h): Autonomía prolongada para días de campo sin recargar.",
+      "hook": "📻 Radios TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOPh73bPU7mb41Km1YQbJ4ctxFWnR_nvHGgU-PQ-C9ugeUYU3l3C4dugkJGvQZ9VTG9k8h94o7IaQNGvl1W3BfMHuIMMxc3oipSFu9QpA.mp4?_nc_cat=106&_nc_oc=Adplv7YCmrm-PVEKYrmG7CysxWpZdnH5dBVJuqGLxz7euIKsl8a_XWwHd2DjWrPHma4&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=56MbBTddI1YQ7kNvwHjfVer&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDQ1ODgzOTM5NzY3MTY3NCwiYXNzZXRfYWdlX2RheXMiOjUsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjozNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMxcnteOpTQ2IOe85TjIVZLjLzQ8L9TL947hJUWr4rBhQ&oe=6AC0FB20",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOPh73bPU7mb41Km1YQbJ4ctxFWnR_nvHGgU-PQ-C9ugeUYU3l3C4dugkJGvQZ9VTG9k8h94o7IaQNGvl1W3BfMHuIMMxc3oipSFu9QpA.mp4?_nc_cat=106&_nc_oc=Adplv7YCmrm-PVEKYrmG7CysxWpZdnH5dBVJuqGLxz7euIKsl8a_XWwHd2DjWrPHma4&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=56MbBTddI1YQ7kNvwHjfVer&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDQ1ODgzOTM5NzY3MTY3NCwiYXNzZXRfYWdlX2RheXMiOjUsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjozNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMxcnteOpTQ2IOe85TjIVZLjLzQ8L9TL947hJUWr4rBhQ&oe=6AC0FB20",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/800756019_28156358953987147_7801625651919322376_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kMGwSlSpoQAQ7kNvwEUv_3C&_nc_oc=Ado3dPKJAeD022uDYASQFAfzRkwaYzVlBwmSrIEykk-qbgd2ofJcih1jM9lvDom0khk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQO88_GjPUL2Z1NTo-CwCB6S4CwH1uhkk1ZEzcI5Xi3ERw&oe=6AC11EB9",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/800756019_28156358953987147_7801625651919322376_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kMGwSlSpoQAQ7kNvwEUv_3C&_nc_oc=Ado3dPKJAeD022uDYASQFAfzRkwaYzVlBwmSrIEykk-qbgd2ofJcih1jM9lvDom0khk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQO88_GjPUL2Z1NTo-CwCB6S4CwH1uhkk1ZEzcI5Xi3ERw&oe=6AC11EB9",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/800756019_28156358953987147_7801625651919322376_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kMGwSlSpoQAQ7kNvwEUv_3C&_nc_oc=Ado3dPKJAeD022uDYASQFAfzRkwaYzVlBwmSrIEykk-qbgd2ofJcih1jM9lvDom0khk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQO88_GjPUL2Z1NTo-CwCB6S4CwH1uhkk1ZEzcI5Xi3ERw&oe=6AC11EB9",
+      "isActive": true,
+      "daysRunning": 5,
+      "days_active": 5,
+      "startDate": "24 Tháng 9, 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 2,
+      "adRankPopulation": 4,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 4,
+      "pageTotalAds": 20,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 4,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1468645865085819"
+    },
+    {
+      "id": "fb_1748190939789299",
+      "platformAdId": "1748190939789299",
+      "ad_archive_id": "1748190939789299",
+      "advertiser": "Jertchuce Fliratspocre",
+      "advertiserName": "Jertchuce Fliratspocre",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Jertchuce%20Fliratspocre&background=0D8ABC&color=fff",
+      "domain": "tidradio.com",
+      "siteName": "Jertchuce Fliratspocre",
+      "landingUrl": "https://tidradio.com/products",
+      "landing_url": "https://tidradio.com/products",
+      "ctaDomain": "TIDRADIO.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Jertchuce Fliratspocre Online",
+      "ctaDescription": "📻 Radios Portátiles TIDRADIO M15 – Alcan",
+      "description": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ Alcance 8000 km: Comunicación a larga distancia – ideal para equipos y expediciones. ✅ Batería 3000mAh (72h): Autonomía prolongada para días de uso sin recargar.",
+      "primary_text": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3000mAh (72h), Cifrado AES256, PTT, 999 Canales, Control por App, Ranura SIM – Aire Libre y Equipos ✅ Alcance 8000 km: Comunicación a larga distancia – ideal para equipos y expediciones. ✅ Batería 3000mAh (72h): Autonomía prolongada para días de uso sin recargar.",
+      "hook": "📻 Radios Portátiles TIDRADIO M15 – Alcance 8000km, Batería 3",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMFbBc3YlGxg7cai2fpys_Sutsw2-AvGBWdt2XmsfWBxWOf5wKx585dOy-7Pk7uCXy9e8ygunGpl-28GcMKn1axe7yNDVu9ssGYPqR5Xg.mp4?_nc_cat=108&_nc_oc=Ado8OEtZ92nJmX9mrrarB1cCwwPYTyLzTNZjsXAqM_cDdflgrsF2wm2Hr124neMDWPU&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=YAvjERejl0oQ7kNvwGHJ-vm&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjUzNTE1MTIzNjk5NDkyMSwiYXNzZXRfYWdlX2RheXMiOjksInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjozNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMZgy2kbY44vDI3XEjyFE77SJYGrU9MK1acnGTEoCStKg&oe=6AC10A12",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMFbBc3YlGxg7cai2fpys_Sutsw2-AvGBWdt2XmsfWBxWOf5wKx585dOy-7Pk7uCXy9e8ygunGpl-28GcMKn1axe7yNDVu9ssGYPqR5Xg.mp4?_nc_cat=108&_nc_oc=Ado8OEtZ92nJmX9mrrarB1cCwwPYTyLzTNZjsXAqM_cDdflgrsF2wm2Hr124neMDWPU&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=YAvjERejl0oQ7kNvwGHJ-vm&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjUzNTE1MTIzNjk5NDkyMSwiYXNzZXRfYWdlX2RheXMiOjksInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjozNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMZgy2kbY44vDI3XEjyFE77SJYGrU9MK1acnGTEoCStKg&oe=6AC10A12",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/818365297_1558259772180557_6309464055566005633_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pljDj5pNFWwQ7kNvwEncSFa&_nc_oc=AdodvQupEf0EE47O19y0v-07fUQVILZZP-WYXZmukf0ZNEBMlVIoNnLHdoyLDzLwmVg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQN5Xslqdl0Vf10RxMSbHjmin4n6chBhdjSYYIcZJxDodQ&oe=6AC10D32",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/818365297_1558259772180557_6309464055566005633_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pljDj5pNFWwQ7kNvwEncSFa&_nc_oc=AdodvQupEf0EE47O19y0v-07fUQVILZZP-WYXZmukf0ZNEBMlVIoNnLHdoyLDzLwmVg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQN5Xslqdl0Vf10RxMSbHjmin4n6chBhdjSYYIcZJxDodQ&oe=6AC10D32",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/818365297_1558259772180557_6309464055566005633_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pljDj5pNFWwQ7kNvwEncSFa&_nc_oc=AdodvQupEf0EE47O19y0v-07fUQVILZZP-WYXZmukf0ZNEBMlVIoNnLHdoyLDzLwmVg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQN5Xslqdl0Vf10RxMSbHjmin4n6chBhdjSYYIcZJxDodQ&oe=6AC10D32",
+      "isActive": true,
+      "daysRunning": 6,
+      "days_active": 6,
+      "startDate": "23 Tháng 9, 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 3,
+      "adRankPopulation": 4,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 4,
+      "pageTotalAds": 20,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 4,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1748190939789299"
+    },
+    {
+      "id": "fb_1093048206955347",
+      "platformAdId": "1093048206955347",
+      "ad_archive_id": "1093048206955347",
+      "advertiser": "Baofeng.lt",
+      "advertiserName": "Baofeng.lt",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Baofeng.lt&background=0D8ABC&color=fff",
+      "domain": "tidradio.com",
+      "siteName": "Baofeng.lt",
+      "landingUrl": "https://tidradio.com/products",
+      "landing_url": "https://tidradio.com/products",
+      "ctaDomain": "TIDRADIO.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Baofeng.lt Online",
+      "ctaDescription": "Ieškote racijos? BAOFENG ir WOUXUN racij",
+      "description": "Ieškote racijos? BAOFENG ir WOUXUN racijoms bei priedams – DIDELĖS NUOLAIDOS! SPAUSKITE, peržiūrėkite akcijas ir išsirinkite savo įrangą PIGIAU.",
+      "primary_text": "Ieškote racijos? BAOFENG ir WOUXUN racijoms bei priedams – DIDELĖS NUOLAIDOS! SPAUSKITE, peržiūrėkite akcijas ir išsirinkite savo įrangą PIGIAU.",
+      "hook": "Ieškote racijos? BAOFENG ir WOUXUN racijoms bei priedams – D",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825336654_1485224826767859_5974498932173197961_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Rj7s0qvln3MQ7kNvwEErfvS&_nc_oc=AdobCZaDS3C-31QDHOSb8YvWrSDMYort3Pu2s1GKR0rHCX8oGLLO9SrWee3aOu6wHus&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQNJI2_GKQ0fIzgL8pJ9D3whILR6nKjxZL4bWa4QG0MQAw&oe=6AC1090C",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825336654_1485224826767859_5974498932173197961_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Rj7s0qvln3MQ7kNvwEErfvS&_nc_oc=AdobCZaDS3C-31QDHOSb8YvWrSDMYort3Pu2s1GKR0rHCX8oGLLO9SrWee3aOu6wHus&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQNJI2_GKQ0fIzgL8pJ9D3whILR6nKjxZL4bWa4QG0MQAw&oe=6AC1090C",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825336654_1485224826767859_5974498932173197961_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Rj7s0qvln3MQ7kNvwEErfvS&_nc_oc=AdobCZaDS3C-31QDHOSb8YvWrSDMYort3Pu2s1GKR0rHCX8oGLLO9SrWee3aOu6wHus&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQNJI2_GKQ0fIzgL8pJ9D3whILR6nKjxZL4bWa4QG0MQAw&oe=6AC1090C",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825336654_1485224826767859_5974498932173197961_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Rj7s0qvln3MQ7kNvwEErfvS&_nc_oc=AdobCZaDS3C-31QDHOSb8YvWrSDMYort3Pu2s1GKR0rHCX8oGLLO9SrWee3aOu6wHus&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=mWyoD_p3j6A7iCYJbtJggg&_nc_ss=7f20f&oh=00_AQNJI2_GKQ0fIzgL8pJ9D3whILR6nKjxZL4bWa4QG0MQAw&oe=6AC1090C",
+      "isActive": true,
+      "daysRunning": 9,
+      "days_active": 9,
+      "startDate": "Recently",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 4,
+      "adRankPopulation": 4,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 4,
+      "pageTotalAds": 20,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 4,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1093048206955347"
+    }
+  ]
+}

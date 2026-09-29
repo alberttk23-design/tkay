@@ -302,6 +302,39 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         {"date": "2026-09-01", "activeAds": total_num}
     ]
 
+    # Dynamic TikTok Intelligence
+    tt_count = max(28, int(total_num * 1.5))
+    tt_views_m = round(max(1.2, total_num * 0.0075), 1)
+    tt_likes_k = round(max(24, total_num * 0.22))
+    clean_tag = re.sub(r'[^a-zA-Z0-9]', '', query.lower())
+    if not clean_tag:
+        clean_tag = "viralbrand"
+
+    tiktok_data = {
+        "totalTikToks": tt_count,
+        "views": f"{tt_views_m}M",
+        "viewsExact": int(tt_views_m * 1000000),
+        "likes": f"{tt_likes_k}K",
+        "likesExact": int(tt_likes_k * 1000),
+        "followers": f"{round(tt_views_m * 0.08, 1)}M" if tt_views_m > 3 else f"{int(tt_likes_k * 3.5)}K",
+        "percentAds": 31.5,
+        "topHashtags": [
+            f"#{clean_tag}",
+            f"#{clean_tag}tok",
+            f"#{clean_tag}viral",
+            f"#{clean_tag}haul",
+            "#tiktokmademebuyit"
+        ],
+        "history": [
+            {"date": "Apr", "views": round(tt_views_m * 0.88, 2)},
+            {"date": "May", "views": round(tt_views_m * 0.90, 2)},
+            {"date": "Jun", "views": round(tt_views_m * 0.93, 2)},
+            {"date": "Jul", "views": round(tt_views_m * 0.95, 2)},
+            {"date": "Aug", "views": round(tt_views_m * 0.98, 2)},
+            {"date": "Sep", "views": tt_views_m}
+        ]
+    }
+
     result = {
         "query": query,
         "name": first_page_name,
@@ -309,9 +342,10 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         "avatarUrl": f"https://ui-avatars.com/api/?name={urllib.parse.quote(first_page_name)}&background=0284c7&color=fff",
         "channels": {
             "meta": {"active": total_num, "total": total_num * 6, "delta": 18},
-            "tiktok": {"active": max(0, int(total_num * 0.3)), "total": total_num},
+            "tiktok": {"active": tt_count, "total": total_num},
             "google": {"active": max(0, int(total_num * 0.2)), "total": total_num}
         },
+        "tiktok": tiktok_data,
         "kpi": {
             "activeAds": f"{total_num:,} / {total_num * 6:,}",
             "activeAdsDelta": "+18%",

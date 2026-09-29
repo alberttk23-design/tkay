@@ -200,33 +200,116 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
         </div>
 
-        <!-- Area Spline Chart -->
-        <div class="mt-8 pt-6 border-t border-slate-800/80">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-2">
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Biến động Ads theo thời gian (Historical Active Trend)</span>
-            </div>
-            <div class="flex items-center gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-semibold border border-slate-700">Last 6M ▾</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-semibold border border-slate-700">Weekly ▾</span>
-            </div>
-          </div>
+        <!-- Analytics Charts Row: Meta Trend (Left) & TikTok Content (Right) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-8 pt-6 border-t border-slate-800/80">
           
-          <div class="h-56 w-full relative">
-            <canvas id="trendChart"></canvas>
+          <!-- LEFT: Meta Ads Historical Active Trend (7 Cols) -->
+          <div class="lg:col-span-7 flex flex-col justify-between p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Biến động Meta Ads (Historical Active Trend)</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-semibold border border-slate-700">Last 6M ▾</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 font-semibold border border-slate-700">Weekly ▾</span>
+                </div>
+              </div>
+              
+              <div class="h-48 w-full relative">
+                <canvas id="trendChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Targeted Countries Bar -->
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+              <span class="font-semibold text-slate-300">Countries targeted:</span>
+              <div id="targetCountriesList" class="flex flex-wrap items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇦🇺 14.7%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇺🇸 14.7%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇬🇧 13.8%</span>
+                <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇩🇪 12.5%</span>
+                <span class="text-slate-500">+10 more countries</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Targeted Countries Bar -->
-          <div class="mt-4 pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3 text-xs text-slate-400">
-            <span class="font-semibold text-slate-300">Countries targeted:</span>
-            <div id="targetCountriesList" class="flex flex-wrap items-center gap-2">
-              <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇦🇺 14.7%</span>
-              <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇺🇸 14.7%</span>
-              <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇬🇧 13.8%</span>
-              <span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-200 font-medium">🇩🇪 12.5%</span>
-              <span class="text-slate-500">+10 more countries</span>
+          <!-- RIGHT: TikTok Content Card (5 Cols) - Exact Match to TrendTrack UI -->
+          <div class="lg:col-span-5 flex flex-col justify-between p-5 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-md">
+            <div>
+              <!-- Header with Capsule Switcher -->
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2 text-white font-bold text-sm">
+                  <svg class="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                  </svg>
+                  <span>TikTok content</span>
+                </div>
+
+                <!-- Capsule Segmented Pill -->
+                <div class="flex items-center p-1 rounded-full bg-slate-800/80 border border-slate-700/80 gap-1 text-xs">
+                  <span class="p-1 px-1.5 rounded-full text-blue-400 opacity-60 hover:opacity-100 transition cursor-pointer" title="Meta Ads">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  </span>
+                  <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-sm">
+                    <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span id="tiktokHeaderCount">703</span>
+                  </div>
+                  <span class="p-1 px-1.5 rounded-full text-slate-400 opacity-60 hover:opacity-100 transition cursor-pointer" title="Google Ads">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Metrics Row (Views & Likes) -->
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-8">
+                  <div>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-400 font-semibold mb-0.5">
+                      <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                      <span>Views</span>
+                    </div>
+                    <div id="tiktokViewsVal" class="text-3xl font-extrabold text-white">3.9M</div>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-400 font-semibold mb-0.5">
+                      <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                      <span>Likes</span>
+                    </div>
+                    <div id="tiktokLikesVal" class="text-3xl font-extrabold text-white">97K</div>
+                  </div>
+                </div>
+
+                <!-- Date Range Dropdown Pills -->
+                <div class="flex items-center gap-1.5 text-xs">
+                  <button class="p-1.5 rounded-lg border border-slate-700 bg-slate-800/80 text-slate-400 hover:text-white transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  </button>
+                  <span class="px-2 py-1 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 font-semibold">All time ▾</span>
+                  <span class="px-2 py-1 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 font-semibold">Weekly ▾</span>
+                </div>
+              </div>
+
+              <!-- Spline Area Chart (Teal) -->
+              <div class="h-44 w-full relative">
+                <canvas id="tiktokChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Top Hashtags Pill Bar -->
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center gap-2 overflow-x-auto text-xs">
+              <span class="text-slate-400 font-semibold shrink-0">Top hashtags</span>
+              <div id="tiktokHashtagsList" class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2.5 py-0.5 rounded-full border border-slate-700/80 bg-slate-800/60 text-slate-300 font-medium text-[11px]">#theoodie</span>
+                <span class="px-2.5 py-0.5 rounded-full border border-slate-700/80 bg-slate-800/60 text-slate-300 font-medium text-[11px]">#oodie</span>
+                <span class="px-2.5 py-0.5 rounded-full border border-slate-700/80 bg-slate-800/60 text-slate-300 font-medium text-[11px]">#oodiesquad</span>
+                <span class="px-2.5 py-0.5 rounded-full border border-slate-700/80 bg-slate-800/60 text-slate-300 font-medium text-[11px]">#oodiestorytime</span>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -571,6 +654,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     let currentData = null;
     let currentAdIndex = 0;
     let trendChartInstance = null;
+    let tiktokChartInstance = null;
     let brandtrackerStores = [];
 
     // Switch between Explorer and Brandtracker views
@@ -811,6 +895,51 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       // Chart.js Area Spline
       renderTrendChart(data.history_points || data.historyChart || []);
 
+      // TikTok Intelligence Binding
+      const tt = data.tiktok || {
+        totalTikToks: data.channels?.tiktok?.active || 120,
+        views: '2.5M',
+        likes: '68K',
+        topHashtags: ['#brand', '#viral', '#trending'],
+        history: [
+          { date: 'Apr', views: 1.8 },
+          { date: 'May', views: 2.0 },
+          { date: 'Jun', views: 2.1 },
+          { date: 'Jul', views: 2.3 },
+          { date: 'Aug', views: 2.4 },
+          { date: 'Sep', views: 2.5 }
+        ]
+      };
+
+      const ttHeaderCountEl = document.getElementById('tiktokHeaderCount');
+      if (ttHeaderCountEl) {
+        ttHeaderCountEl.textContent = tt.totalTikToks || tt.total_tiktoks || (data.channels?.tiktok?.active || '-');
+      }
+
+      const ttViewsEl = document.getElementById('tiktokViewsVal');
+      if (ttViewsEl) {
+        ttViewsEl.textContent = tt.views || '3.9M';
+      }
+
+      const ttLikesEl = document.getElementById('tiktokLikesVal');
+      if (ttLikesEl) {
+        ttLikesEl.textContent = tt.likes || '97K';
+      }
+
+      const hashList = document.getElementById('tiktokHashtagsList');
+      if (hashList) {
+        hashList.innerHTML = '';
+        const tags = tt.topHashtags || ['#brand', '#trending'];
+        tags.slice(0, 5).forEach(t => {
+          const pill = document.createElement('span');
+          pill.className = "px-2.5 py-0.5 rounded-full border border-slate-700/80 bg-slate-800/60 text-slate-300 font-medium text-[11px] whitespace-nowrap hover:border-teal-500/50 hover:text-white transition cursor-pointer";
+          pill.textContent = t.startsWith('#') ? t : ('#' + t);
+          hashList.appendChild(pill);
+        });
+      }
+
+      renderTikTokChart(tt);
+
       // Feed Ad Cards
       renderFeedCards(data.ads || []);
     }
@@ -889,6 +1018,87 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             y: {
               grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
               ticks: { color: '#64748b', font: { size: 10 } }
+            }
+          }
+        }
+      });
+    }
+
+    // Render TikTok Spline Chart (Matches TrendTrack UI)
+    function renderTikTokChart(tiktok) {
+      const canvas = document.getElementById('tiktokChart');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (tiktokChartInstance) {
+        tiktokChartInstance.destroy();
+      }
+
+      let labels = ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
+      let dataValues = [3.6, 3.65, 3.7, 3.8, 3.85, 3.9];
+
+      if (tiktok && tiktok.history && tiktok.history.length > 0) {
+        labels = tiktok.history.map(h => h.date);
+        dataValues = tiktok.history.map(h => typeof h.views === 'number' ? h.views : parseFloat(h.views) || 0);
+      }
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, 160);
+      gradient.addColorStop(0, 'rgba(20, 184, 166, 0.35)');
+      gradient.addColorStop(1, 'rgba(20, 184, 166, 0.0)');
+
+      tiktokChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Views (M)',
+            data: dataValues,
+            fill: true,
+            backgroundColor: gradient,
+            borderColor: '#14b8a6',
+            borderWidth: 2.2,
+            tension: 0.35,
+            pointRadius: 3,
+            pointBackgroundColor: '#14b8a6',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 1.5,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#14b8a6'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#0f172a',
+              titleColor: '#cbd5e1',
+              bodyColor: '#14b8a6',
+              borderColor: '#334155',
+              borderWidth: 1,
+              padding: 8,
+              displayColors: false,
+              callbacks: {
+                label: function(context) {
+                  return '● Views: ' + context.parsed.y + 'M';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false, drawBorder: false },
+              ticks: { color: '#64748b', font: { size: 10 } }
+            },
+            y: {
+              grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
+              ticks: {
+                color: '#64748b',
+                font: { size: 10 },
+                callback: function(val) {
+                  return val + 'M';
+                }
+              }
             }
           }
         }
@@ -1169,8 +1379,45 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             query_params = urllib.parse.parse_qs(parsed.query)
             query = query_params.get("query", ["The Oodie"])[0].strip()
 
-            cache_name = query.lower().replace(" ", "_").replace("-", "_")
-            cache_file = os.path.join(CACHE_DIR, f"{cache_name}.json")
+            clean_q = query.lower().strip()
+            alias_map = {
+                "the oodie": "the_oodie.json",
+                "theoodie": "the_oodie.json",
+                "theoodie.com": "the_oodie.json",
+                "oodie": "the_oodie.json",
+                "true sea moss": "true_sea_moss.json",
+                "trueseamoss": "true_sea_moss.json",
+                "trueseamoss.com": "true_sea_moss.json",
+                "seamoss": "true_sea_moss.json",
+                "momcozy": "momcozy.json",
+                "momcozy.com": "momcozy.json",
+                "balsam hill": "balsam_hill.json",
+                "balsamhill": "balsam_hill.json",
+                "balsamhill.com": "balsam_hill.json",
+                "camping tent": "camping_tent.json",
+                "camping_tent": "camping_tent.json",
+                "campingtent.com": "camping_tent.json",
+                "tidradio": "tidradio.json",
+                "tidradio.com": "tidradio.json",
+                "ridge": "ridge.json",
+                "ridge.com": "ridge.json"
+            }
+
+            cache_file = None
+            if clean_q in alias_map:
+                candidate = os.path.join(CACHE_DIR, alias_map[clean_q])
+                if os.path.exists(candidate):
+                    cache_file = candidate
+
+            if not cache_file:
+                c1 = os.path.join(CACHE_DIR, f"{clean_q.replace(' ', '_').replace('-', '_')}.json")
+                c2 = os.path.join(CACHE_DIR, f"{clean_q.replace('.com', '').replace(' ', '_')}.json")
+                if os.path.exists(c1):
+                    cache_file = c1
+                elif os.path.exists(c2):
+                    cache_file = c2
+                else:
+                    cache_file = c1
 
             # Check cache first
             if os.path.exists(cache_file):

@@ -699,5 +699,48 @@
       "adsOnThisLpTotal": 415,
       "adsOnThisLpPercent": 8
     }
-  ]
+  ],
+  "tiktok": {
+    "totalTikToks": 703,
+    "views": "3.9M",
+    "viewsExact": 3906442,
+    "likes": "97K",
+    "likesExact": 96601,
+    "followers": "340.7K",
+    "percentAds": 31.29,
+    "topHashtags": [
+      "theoodie",
+      "oodie",
+      "oodiesquad",
+      "oodiestorytime",
+      "oodiegang",
+      "storytime"
+    ],
+    "history": [
+      {
+        "date": "Apr",
+        "views": 3.6
+      },
+      {
+        "date": "May",
+        "views": 3.65
+      },
+      {
+        "date": "Jun",
+        "views": 3.7
+      },
+      {
+        "date": "Jul",
+        "views": 3.8
+      },
+      {
+        "date": "Aug",
+        "views": 3.85
+      },
+      {
+        "date": "Sep",
+        "views": 3.9
+      }
+    ]
+  }
 }

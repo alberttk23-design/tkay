@@ -1,0 +1,86 @@
+{
+  "query": "lizlook studio",
+  "name": "lizlook studio",
+  "domain": "lizlookstudio.com",
+  "avatarUrl": "https://ui-avatars.com/api/?name=lizlook%20studio&background=0284c7&color=fff",
+  "channels": {
+    "meta": {
+      "active": 30,
+      "total": 180,
+      "delta": 18
+    },
+    "tiktok": {
+      "active": 9,
+      "total": 30
+    },
+    "google": {
+      "active": 6,
+      "total": 30
+    }
+  },
+  "kpi": {
+    "activeAds": "30 / 180",
+    "activeAdsDelta": "+18%",
+    "adsLaunched": "102",
+    "adsLaunchedDelta": "+95%",
+    "reach": "13.5M",
+    "spend": "$0.1M",
+    "reachSpendDelta": "+110%"
+  },
+  "countriesTargeted": [
+    {
+      "countryCode": "US",
+      "percentage": 52.4
+    },
+    {
+      "countryCode": "GB",
+      "percentage": 24.1
+    },
+    {
+      "countryCode": "AU",
+      "percentage": 14.5
+    },
+    {
+      "countryCode": "CA",
+      "percentage": 9.0
+    }
+  ],
+  "historyChart": [
+    {
+      "date": "Apr",
+      "runningAds": 12
+    },
+    {
+      "date": "May",
+      "runningAds": 19
+    },
+    {
+      "date": "Jun",
+      "runningAds": 25
+    },
+    {
+      "date": "Jul",
+      "runningAds": 33
+    },
+    {
+      "date": "Aug",
+      "runningAds": 28
+    },
+    {
+      "date": "Sep",
+      "runningAds": 30
+    }
+  ],
+  "velocity": {
+    "7d": 0,
+    "14d": 0,
+    "30d": 0
+  },
+  "advertiserAge": "Verified Brand",
+  "total_active_ads": 30,
+  "scanned_cards_count": 0,
+  "video_ads_count": 0,
+  "image_ads_count": 0,
+  "scaling_winning_ads": 0,
+  "ads": []
+}

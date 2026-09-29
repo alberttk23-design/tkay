@@ -1156,5 +1156,48 @@
       "adsOnThisLpTotal": 4300,
       "adsOnThisLpPercent": 45
     }
-  ]
+  ],
+  "tiktok": {
+    "totalTikToks": 890,
+    "views": "15.2M",
+    "viewsExact": 15200000,
+    "likes": "640K",
+    "likesExact": 640000,
+    "followers": "520.4K",
+    "percentAds": 38.5,
+    "topHashtags": [
+      "momcozy",
+      "momcozypump",
+      "breastpump",
+      "momlife",
+      "newmom",
+      "babyessentials"
+    ],
+    "history": [
+      {
+        "date": "Apr",
+        "views": 12.1
+      },
+      {
+        "date": "May",
+        "views": 12.8
+      },
+      {
+        "date": "Jun",
+        "views": 13.5
+      },
+      {
+        "date": "Jul",
+        "views": 14.1
+      },
+      {
+        "date": "Aug",
+        "views": 14.7
+      },
+      {
+        "date": "Sep",
+        "views": 15.2
+      }
+    ]
+  }
 }

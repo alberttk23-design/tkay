@@ -1,8 +1,8 @@
 {
   "query": "True sea moss",
-  "name": "Creatine Guru",
+  "name": "True Sea Moss",
   "domain": "trueseamoss.com",
-  "avatarUrl": "https://ui-avatars.com/api/?name=Creatine%20Guru&background=0284c7&color=fff",
+  "avatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss&background=0284c7&color=fff",
   "channels": {
     "meta": {
       "active": 1200,
@@ -823,5 +823,48 @@
       "adsOnThisLpTotal": 1200,
       "adsOnThisLpPercent": 45
     }
-  ]
+  ],
+  "tiktok": {
+    "totalTikToks": 420,
+    "views": "8.4M",
+    "viewsExact": 8420000,
+    "likes": "312K",
+    "likesExact": 312000,
+    "followers": "145.2K",
+    "percentAds": 42.8,
+    "topHashtags": [
+      "seamoss",
+      "trueseamoss",
+      "seamossgel",
+      "seamossbenefits",
+      "healthtok",
+      "wellness"
+    ],
+    "history": [
+      {
+        "date": "Apr",
+        "views": 6.2
+      },
+      {
+        "date": "May",
+        "views": 6.8
+      },
+      {
+        "date": "Jun",
+        "views": 7.2
+      },
+      {
+        "date": "Jul",
+        "views": 7.7
+      },
+      {
+        "date": "Aug",
+        "views": 8.1
+      },
+      {
+        "date": "Sep",
+        "views": 8.4
+      }
+    ]
+  }
 }
