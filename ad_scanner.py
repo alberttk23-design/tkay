@@ -505,8 +505,9 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "growth": growth_str
         })
 
+    tt_count = max(45, int(total_num * 1.8))
     tiktok_data = {
-        "totalTikToks": max(45, int(total_num * 1.8)),
+        "totalTikToks": tt_count,
         "views": f"{tt_views_m}M",
         "viewsExact": int(tt_views_m * 1000000),
         "likes": f"{tt_likes_m}M" if tt_likes_m >= 1.0 else f"{int(tt_likes_m * 1000)}K",

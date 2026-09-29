@@ -1,8 +1,8 @@
 {
   "query": "True sea moss",
-  "name": "True Sea Moss",
+  "name": "Creatine Guru",
   "domain": "trueseamoss.com",
-  "avatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss&background=0284c7&color=fff",
+  "avatarUrl": "https://ui-avatars.com/api/?name=Creatine%20Guru&background=0284c7&color=fff",
   "channels": {
     "meta": {
       "active": 1200,
@@ -10,7 +10,7 @@
       "delta": 18
     },
     "tiktok": {
-      "active": 360,
+      "active": 2160,
       "total": 1200
     },
     "google": {
@@ -18,15 +18,339 @@
       "total": 1200
     }
   },
+  "tiktok": {
+    "totalTikToks": 2160,
+    "views": "45.4M",
+    "viewsExact": 45400000,
+    "likes": "2.8M",
+    "likesExact": 2800000,
+    "peakMonth": "Feb '26: 4.5M views (+78% New Year Detox Spike)",
+    "timeframe": "24M (2 Years)",
+    "topHashtags": [
+      "#trueseamoss (18.4M)",
+      "#trueseamossgel (12.1M)",
+      "#trueseamossreview (6.8M)",
+      "#trueseamossofficial (4.2M)",
+      "#trueseamosshealth (3.9M)"
+    ],
+    "history": [
+      {
+        "date": "Oct '24",
+        "month": "Oct '24",
+        "views": 1.14,
+        "growth": "+0%"
+      },
+      {
+        "date": "Nov '24",
+        "month": "Nov '24",
+        "views": 1.09,
+        "growth": "-4%"
+      },
+      {
+        "date": "Dec '24",
+        "month": "Dec '24",
+        "views": 0.91,
+        "growth": "-17%"
+      },
+      {
+        "date": "Jan '25",
+        "month": "Jan '25",
+        "views": 2.72,
+        "growth": "+199%"
+      },
+      {
+        "date": "Feb '25",
+        "month": "Feb '25",
+        "views": 3.18,
+        "growth": "+17%"
+      },
+      {
+        "date": "Mar '25",
+        "month": "Mar '25",
+        "views": 2.5,
+        "growth": "-21%"
+      },
+      {
+        "date": "Apr '25",
+        "month": "Apr '25",
+        "views": 2.04,
+        "growth": "-18%"
+      },
+      {
+        "date": "May '25",
+        "month": "May '25",
+        "views": 2.95,
+        "growth": "+45%"
+      },
+      {
+        "date": "Jun '25",
+        "month": "Jun '25",
+        "views": 3.4,
+        "growth": "+15%"
+      },
+      {
+        "date": "Jul '25",
+        "month": "Jul '25",
+        "views": 2.18,
+        "growth": "-36%"
+      },
+      {
+        "date": "Aug '25",
+        "month": "Aug '25",
+        "views": 1.82,
+        "growth": "-17%"
+      },
+      {
+        "date": "Sep '25",
+        "month": "Sep '25",
+        "views": 1.91,
+        "growth": "+5%"
+      },
+      {
+        "date": "Oct '25",
+        "month": "Oct '25",
+        "views": 1.45,
+        "growth": "-24%"
+      },
+      {
+        "date": "Nov '25",
+        "month": "Nov '25",
+        "views": 1.36,
+        "growth": "-6%"
+      },
+      {
+        "date": "Dec '25",
+        "month": "Dec '25",
+        "views": 1.18,
+        "growth": "-13%"
+      },
+      {
+        "date": "Jan '26",
+        "month": "Jan '26",
+        "views": 3.72,
+        "growth": "+215%"
+      },
+      {
+        "date": "Feb '26",
+        "month": "Feb '26",
+        "views": 4.45,
+        "growth": "+20%"
+      },
+      {
+        "date": "Mar '26",
+        "month": "Mar '26",
+        "views": 3.54,
+        "growth": "-20%"
+      },
+      {
+        "date": "Apr '26",
+        "month": "Apr '26",
+        "views": 2.95,
+        "growth": "-17%"
+      },
+      {
+        "date": "May '26",
+        "month": "May '26",
+        "views": 4.0,
+        "growth": "+36%"
+      },
+      {
+        "date": "Jun '26",
+        "month": "Jun '26",
+        "views": 4.77,
+        "growth": "+19%"
+      },
+      {
+        "date": "Jul '26",
+        "month": "Jul '26",
+        "views": 3.4,
+        "growth": "-29%"
+      },
+      {
+        "date": "Aug '26",
+        "month": "Aug '26",
+        "views": 2.95,
+        "growth": "-13%"
+      },
+      {
+        "date": "Sep '26",
+        "month": "Sep '26",
+        "views": 3.18,
+        "growth": "+8%"
+      }
+    ],
+    "history24m": [
+      {
+        "date": "Oct '24",
+        "month": "Oct '24",
+        "views": 1.14,
+        "growth": "+0%"
+      },
+      {
+        "date": "Nov '24",
+        "month": "Nov '24",
+        "views": 1.09,
+        "growth": "-4%"
+      },
+      {
+        "date": "Dec '24",
+        "month": "Dec '24",
+        "views": 0.91,
+        "growth": "-17%"
+      },
+      {
+        "date": "Jan '25",
+        "month": "Jan '25",
+        "views": 2.72,
+        "growth": "+199%"
+      },
+      {
+        "date": "Feb '25",
+        "month": "Feb '25",
+        "views": 3.18,
+        "growth": "+17%"
+      },
+      {
+        "date": "Mar '25",
+        "month": "Mar '25",
+        "views": 2.5,
+        "growth": "-21%"
+      },
+      {
+        "date": "Apr '25",
+        "month": "Apr '25",
+        "views": 2.04,
+        "growth": "-18%"
+      },
+      {
+        "date": "May '25",
+        "month": "May '25",
+        "views": 2.95,
+        "growth": "+45%"
+      },
+      {
+        "date": "Jun '25",
+        "month": "Jun '25",
+        "views": 3.4,
+        "growth": "+15%"
+      },
+      {
+        "date": "Jul '25",
+        "month": "Jul '25",
+        "views": 2.18,
+        "growth": "-36%"
+      },
+      {
+        "date": "Aug '25",
+        "month": "Aug '25",
+        "views": 1.82,
+        "growth": "-17%"
+      },
+      {
+        "date": "Sep '25",
+        "month": "Sep '25",
+        "views": 1.91,
+        "growth": "+5%"
+      },
+      {
+        "date": "Oct '25",
+        "month": "Oct '25",
+        "views": 1.45,
+        "growth": "-24%"
+      },
+      {
+        "date": "Nov '25",
+        "month": "Nov '25",
+        "views": 1.36,
+        "growth": "-6%"
+      },
+      {
+        "date": "Dec '25",
+        "month": "Dec '25",
+        "views": 1.18,
+        "growth": "-13%"
+      },
+      {
+        "date": "Jan '26",
+        "month": "Jan '26",
+        "views": 3.72,
+        "growth": "+215%"
+      },
+      {
+        "date": "Feb '26",
+        "month": "Feb '26",
+        "views": 4.45,
+        "growth": "+20%"
+      },
+      {
+        "date": "Mar '26",
+        "month": "Mar '26",
+        "views": 3.54,
+        "growth": "-20%"
+      },
+      {
+        "date": "Apr '26",
+        "month": "Apr '26",
+        "views": 2.95,
+        "growth": "-17%"
+      },
+      {
+        "date": "May '26",
+        "month": "May '26",
+        "views": 4.0,
+        "growth": "+36%"
+      },
+      {
+        "date": "Jun '26",
+        "month": "Jun '26",
+        "views": 4.77,
+        "growth": "+19%"
+      },
+      {
+        "date": "Jul '26",
+        "month": "Jul '26",
+        "views": 3.4,
+        "growth": "-29%"
+      },
+      {
+        "date": "Aug '26",
+        "month": "Aug '26",
+        "views": 2.95,
+        "growth": "-13%"
+      },
+      {
+        "date": "Sep '26",
+        "month": "Sep '26",
+        "views": 3.18,
+        "growth": "+8%"
+      }
+    ]
+  },
   "kpi": {
     "activeAds": "1,200 / 7,200",
     "activeAdsDelta": "+18%",
-    "adsLaunched": "4,080",
+    "adsLaunched": "1,680",
     "adsLaunchedDelta": "+95%",
     "reach": "540.0M",
     "spend": "$4.2M",
     "reachSpendDelta": "+110%"
   },
+  "kpis": {
+    "ads_launched_30d": "1,680",
+    "reach_estimate": "540.0M",
+    "spend_estimate": "$4.2M",
+    "velocity_7d": 10,
+    "velocity_14d": 18
+  },
+  "total_all_time": "4,800",
+  "hero_landing_pages": [
+    {
+      "title": "Products",
+      "url": "https://trueseamoss.com/products",
+      "count": 29,
+      "ratio": "100%"
+    }
+  ],
   "countriesTargeted": [
     {
       "countryCode": "US",
@@ -45,61 +369,91 @@
       "percentage": 9.0
     }
   ],
+  "history_points": [
+    {
+      "date": "2026-05-01",
+      "activeAds": 420
+    },
+    {
+      "date": "2026-06-01",
+      "activeAds": 660
+    },
+    {
+      "date": "2026-07-01",
+      "activeAds": 900
+    },
+    {
+      "date": "2026-08-01",
+      "activeAds": 1080
+    },
+    {
+      "date": "2026-09-01",
+      "activeAds": 1200
+    }
+  ],
   "historyChart": [
     {
-      "date": "Apr",
-      "runningAds": 480
+      "date": "2026-05-01",
+      "activeAds": 420
     },
     {
-      "date": "May",
-      "runningAds": 780
+      "date": "2026-06-01",
+      "activeAds": 660
     },
     {
-      "date": "Jun",
-      "runningAds": 1020
+      "date": "2026-07-01",
+      "activeAds": 900
     },
     {
-      "date": "Jul",
-      "runningAds": 1320
+      "date": "2026-08-01",
+      "activeAds": 1080
     },
     {
-      "date": "Aug",
-      "runningAds": 1140
-    },
-    {
-      "date": "Sep",
-      "runningAds": 1200
+      "date": "2026-09-01",
+      "activeAds": 1200
     }
   ],
   "velocity": {
-    "7d": 6,
-    "14d": 12,
-    "30d": 20
+    "7d": 10,
+    "14d": 18,
+    "30d": 29
   },
   "advertiserAge": "Verified Brand",
   "total_active_ads": 1200,
-  "scanned_cards_count": 20,
-  "video_ads_count": 18,
-  "image_ads_count": 2,
-  "scaling_winning_ads": 20,
+  "scanned_cards_count": 29,
+  "video_ads_count": 24,
+  "image_ads_count": 5,
+  "scaling_winning_ads": 29,
   "ads": [
     {
       "id": "fb_1454672926686595",
       "platformAdId": "1454672926686595",
+      "ad_archive_id": "1454672926686595",
+      "advertiser": "Creatine Guru",
       "advertiserName": "Creatine Guru",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Creatine%20Guru&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Creatine Guru",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Creatine Guru Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNcqO9BaonHDmbzqWcMEUeu-bxVidRuEsJTdkrwtHXsChbCmkjP9sPLKXNGb21GPXWdxBFnUfvmvCrXNsB3vEKW-Vs2FB96D3EuSMZXxw.mp4?_nc_cat=106&_nc_oc=AdpouMTkXDcWD8ITTDEZbNfXH6li3fksQWUoHCOq-0YFkCBSdSr6YAqR99uYIZaPo74&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=_1m_xW52LPsQ7kNvwGN0W0B&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTIyMDA4OTE5MDEzMTg5MywiYXNzZXRfYWdlX2RheXMiOjQyMywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNsfsqezwD6hBnVV_uy7XYQ6xOBeFccPjGZ-XGnmj2kjw&oe=6AC0FD34",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/672688956_1312606134119210_7396962863674262259_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sjPsYyqZ25QQ7kNvwF2UfIw&_nc_oc=AdoAxZRJzeQxPzSCoQSh8bXAp6U2UG914iI0ZqPoUYkywO-RpXwTYO6Pfk-QewsC9-g&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQPv4WbWeC64iXnaWW6DbjtGKHLSB5avaEI9zx5TBd3cAA&oe=6AC11084",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNcqO9BaonHDmbzqWcMEUeu-bxVidRuEsJTdkrwtHXsChbCmkjP9sPLKXNGb21GPXWdxBFnUfvmvCrXNsB3vEKW-Vs2FB96D3EuSMZXxw.mp4?_nc_cat=106&_nc_oc=AdpouMTkXDcWD8ITTDEZbNfXH6li3fksQWUoHCOq-0YFkCBSdSr6YAqR99uYIZaPo74&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=_1m_xW52LPsQ7kNvwGN0W0B&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTIyMDA4OTE5MDEzMTg5MywiYXNzZXRfYWdlX2RheXMiOjQyMywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOy_cGqDfLyL-pbqJLyS_EAwGGeSwal8yy6rAXvNXIbpA&oe=6AC13574",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNcqO9BaonHDmbzqWcMEUeu-bxVidRuEsJTdkrwtHXsChbCmkjP9sPLKXNGb21GPXWdxBFnUfvmvCrXNsB3vEKW-Vs2FB96D3EuSMZXxw.mp4?_nc_cat=106&_nc_oc=AdpouMTkXDcWD8ITTDEZbNfXH6li3fksQWUoHCOq-0YFkCBSdSr6YAqR99uYIZaPo74&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=_1m_xW52LPsQ7kNvwGN0W0B&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTIyMDA4OTE5MDEzMTg5MywiYXNzZXRfYWdlX2RheXMiOjQyMywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOy_cGqDfLyL-pbqJLyS_EAwGGeSwal8yy6rAXvNXIbpA&oe=6AC13574",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/672688956_1312606134119210_7396962863674262259_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sjPsYyqZ25QQ7kNvwF2UfIw&_nc_oc=AdoAxZRJzeQxPzSCoQSh8bXAp6U2UG914iI0ZqPoUYkywO-RpXwTYO6Pfk-QewsC9-g&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOM3tvXsDSqMQueft1mT3kzj1NeHTBNvzn-8SXt79SenA&oe=6AC148C4",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/672688956_1312606134119210_7396962863674262259_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sjPsYyqZ25QQ7kNvwF2UfIw&_nc_oc=AdoAxZRJzeQxPzSCoQSh8bXAp6U2UG914iI0ZqPoUYkywO-RpXwTYO6Pfk-QewsC9-g&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOM3tvXsDSqMQueft1mT3kzj1NeHTBNvzn-8SXt79SenA&oe=6AC148C4",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/672688956_1312606134119210_7396962863674262259_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sjPsYyqZ25QQ7kNvwF2UfIw&_nc_oc=AdoAxZRJzeQxPzSCoQSh8bXAp6U2UG914iI0ZqPoUYkywO-RpXwTYO6Pfk-QewsC9-g&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOM3tvXsDSqMQueft1mT3kzj1NeHTBNvzn-8SXt79SenA&oe=6AC148C4",
       "isActive": true,
       "daysRunning": 142,
+      "days_active": 142,
       "startDate": "7 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -118,25 +472,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1454672926686595"
     },
     {
       "id": "fb_1622784418708867",
       "platformAdId": "1622784418708867",
+      "ad_archive_id": "1622784418708867",
+      "advertiser": "Stephanie DB",
       "advertiserName": "Stephanie DB",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Stephanie%20DB&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Stephanie DB",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Stephanie DB Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO-YdVa3JOnyalLyVIg2Z-xjfr2MdJuUC7MoNDWzhVbwCIQplFOhTR26bAuKrd6hjaBG683TCh96jDyQb11hc5TiIDqvHy_dEdKQHTGSw.mp4?_nc_cat=106&_nc_oc=AdpzzUU4_xGRnTX9lVVPVuaaHqa7UkoxHRkrN-y3E4Gdeb8OdC0WuVqqy-b1N9C4efs&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=L1V9YmXoiKUQ7kNvwEjQ4Xq&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6ODM3MTkyNTY1NTU0MjE0LCJhc3NldF9hZ2VfZGF5cyI6MzM4LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQO8e8vCTd01PefL0rYDcaN8QaIxNDUEpso_0DKCuVpqKA&oe=6AC0F5EC",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/577644421_1340995464374200_7924642591628577065_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rAEHq0R_OmwQ7kNvwFa7GvQ&_nc_oc=AdrICyWj66H2_4wHufF_hMLvLKM2yOUWUdX3a3Q1dFLaMv5ukMd3gCupdTO3TS8uWNw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQO0MazcEhHQk87ClOeuEebO7T4IYinBZ17rYe5ddO2m1Q&oe=6AC0E0F6",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO-YdVa3JOnyalLyVIg2Z-xjfr2MdJuUC7MoNDWzhVbwCIQplFOhTR26bAuKrd6hjaBG683TCh96jDyQb11hc5TiIDqvHy_dEdKQHTGSw.mp4?_nc_cat=106&_nc_oc=AdpzzUU4_xGRnTX9lVVPVuaaHqa7UkoxHRkrN-y3E4Gdeb8OdC0WuVqqy-b1N9C4efs&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=L1V9YmXoiKUQ7kNvwEjQ4Xq&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6ODM3MTkyNTY1NTU0MjE0LCJhc3NldF9hZ2VfZGF5cyI6MzM4LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOnw6C1RmZn28CqYKeottt0egK4MuC096oLWg-wVsyx0w&oe=6AC12E2C",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO-YdVa3JOnyalLyVIg2Z-xjfr2MdJuUC7MoNDWzhVbwCIQplFOhTR26bAuKrd6hjaBG683TCh96jDyQb11hc5TiIDqvHy_dEdKQHTGSw.mp4?_nc_cat=106&_nc_oc=AdpzzUU4_xGRnTX9lVVPVuaaHqa7UkoxHRkrN-y3E4Gdeb8OdC0WuVqqy-b1N9C4efs&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=L1V9YmXoiKUQ7kNvwEjQ4Xq&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6ODM3MTkyNTY1NTU0MjE0LCJhc3NldF9hZ2VfZGF5cyI6MzM4LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOnw6C1RmZn28CqYKeottt0egK4MuC096oLWg-wVsyx0w&oe=6AC12E2C",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/577644421_1340995464374200_7924642591628577065_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rAEHq0R_OmwQ7kNvwFa7GvQ&_nc_oc=AdrICyWj66H2_4wHufF_hMLvLKM2yOUWUdX3a3Q1dFLaMv5ukMd3gCupdTO3TS8uWNw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOc2XYiLr-p0ZL4D0AUdv42K0PHu8q-2yXV1FYzJdEYQA&oe=6AC11936",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/577644421_1340995464374200_7924642591628577065_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rAEHq0R_OmwQ7kNvwFa7GvQ&_nc_oc=AdrICyWj66H2_4wHufF_hMLvLKM2yOUWUdX3a3Q1dFLaMv5ukMd3gCupdTO3TS8uWNw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOc2XYiLr-p0ZL4D0AUdv42K0PHu8q-2yXV1FYzJdEYQA&oe=6AC11936",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/577644421_1340995464374200_7924642591628577065_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rAEHq0R_OmwQ7kNvwFa7GvQ&_nc_oc=AdrICyWj66H2_4wHufF_hMLvLKM2yOUWUdX3a3Q1dFLaMv5ukMd3gCupdTO3TS8uWNw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOc2XYiLr-p0ZL4D0AUdv42K0PHu8q-2yXV1FYzJdEYQA&oe=6AC11936",
       "isActive": true,
       "daysRunning": 235,
+      "days_active": 235,
       "startDate": "4 Tháng 2, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -155,25 +522,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1622784418708867"
     },
     {
       "id": "fb_1424702852748521",
       "platformAdId": "1424702852748521",
+      "ad_archive_id": "1424702852748521",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPwdtFg1k_6BXr50fkJwts-iWNJZ4fxDsNz4CysuYNq-0TvqijwFxo14Ec2D0Yi_4IN5S5O04ry0FbfiJ9xUvrcDifJDErKq1tOx95JNw.mp4?_nc_cat=104&_nc_oc=Adoq2m4BvtHUvamMvhrB5fmbVa9HeqwpIt98QZlRk4SEjt8Rhc2NLdc_Q1ix0uvSkEI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Vbby1-EnEyQQ7kNvwFx1v34&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI5NDg1MjA5NjE3NzU3MiwiYXNzZXRfYWdlX2RheXMiOjEyOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjQyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMMoakjoRXGAwGljhgyDLeHmE0Mj704EwwWars2FaziAg&oe=6AC0F90E&bitrate=385259&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/705214589_2069369026958117_5023100152962007824_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5hL5a27EugoQ7kNvwF7zcDd&_nc_oc=AdrWNGdoUr81jEf7SuP84zfAUxn1tSFT67DX6sQW0YO1jwUkp8PsG7rLseHGP06O05k&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQOSeua6-UNgL3Cz2L4Kux-QBGJx279H-2b2NNGiVuf48g&oe=6AC10F84",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPwdtFg1k_6BXr50fkJwts-iWNJZ4fxDsNz4CysuYNq-0TvqijwFxo14Ec2D0Yi_4IN5S5O04ry0FbfiJ9xUvrcDifJDErKq1tOx95JNw.mp4?_nc_cat=104&_nc_oc=Adoq2m4BvtHUvamMvhrB5fmbVa9HeqwpIt98QZlRk4SEjt8Rhc2NLdc_Q1ix0uvSkEI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Vbby1-EnEyQQ7kNvwFx1v34&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI5NDg1MjA5NjE3NzU3MiwiYXNzZXRfYWdlX2RheXMiOjEyOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjQyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPswQFe45B5JIYOcdbDwyoLuvsJepkGdqZQqQWEZ_PByA&oe=6AC1314E&bitrate=385259&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPwdtFg1k_6BXr50fkJwts-iWNJZ4fxDsNz4CysuYNq-0TvqijwFxo14Ec2D0Yi_4IN5S5O04ry0FbfiJ9xUvrcDifJDErKq1tOx95JNw.mp4?_nc_cat=104&_nc_oc=Adoq2m4BvtHUvamMvhrB5fmbVa9HeqwpIt98QZlRk4SEjt8Rhc2NLdc_Q1ix0uvSkEI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Vbby1-EnEyQQ7kNvwFx1v34&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI5NDg1MjA5NjE3NzU3MiwiYXNzZXRfYWdlX2RheXMiOjEyOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjQyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPswQFe45B5JIYOcdbDwyoLuvsJepkGdqZQqQWEZ_PByA&oe=6AC1314E&bitrate=385259&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/705214589_2069369026958117_5023100152962007824_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5hL5a27EugoQ7kNvwF7zcDd&_nc_oc=AdrWNGdoUr81jEf7SuP84zfAUxn1tSFT67DX6sQW0YO1jwUkp8PsG7rLseHGP06O05k&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxn-IUVYCrZeMWLEZDutnOd9clt_rgaS3f51MFvUy9Kw&oe=6AC147C4",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/705214589_2069369026958117_5023100152962007824_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5hL5a27EugoQ7kNvwF7zcDd&_nc_oc=AdrWNGdoUr81jEf7SuP84zfAUxn1tSFT67DX6sQW0YO1jwUkp8PsG7rLseHGP06O05k&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxn-IUVYCrZeMWLEZDutnOd9clt_rgaS3f51MFvUy9Kw&oe=6AC147C4",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/705214589_2069369026958117_5023100152962007824_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5hL5a27EugoQ7kNvwF7zcDd&_nc_oc=AdrWNGdoUr81jEf7SuP84zfAUxn1tSFT67DX6sQW0YO1jwUkp8PsG7rLseHGP06O05k&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxn-IUVYCrZeMWLEZDutnOd9clt_rgaS3f51MFvUy9Kw&oe=6AC147C4",
       "isActive": true,
       "daysRunning": 127,
+      "days_active": 127,
       "startDate": "22 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -192,25 +572,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1424702852748521"
     },
     {
       "id": "fb_2107688353403232",
       "platformAdId": "2107688353403232",
+      "ad_archive_id": "2107688353403232",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 Your ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQP531UfRe_xZLqU71BCxEXO0iZsMfxPEVx-lfKwWf6rOqmMgQBIK6jBVq3nEIUIDVElsZMU7wbU1GSRJTnRnaIE29k9xrfYxwjcQ58xGg.mp4?_nc_cat=106&_nc_oc=Adrf083rZrfnjHRtb8UkhDhIWE2iwklr9KXLrBp72IVGlkzRwP4mjbSyL-gaIYjrCcA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=WFqE-L7T8N0Q7kNvwESbKKW&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQzOTkxNjczNDg0NzIyNiwiYXNzZXRfYWdlX2RheXMiOjE0OCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPvdB5VW2RWnhJlHbMdKbLn-wGpaABye9qOkMi-dzp8ig&oe=6AC0FB60&bitrate=390896&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/686941651_976472254829663_4714526555353667626_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y-fF7Fwp4XIQ7kNvwEqov6d&_nc_oc=AdrsLBkF1O7LTP0ixBUq8qRw30vqMmJBU3pkhlBTYdaCdwifyRO5n-BhPVxEs-_sMvE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQOvVv8cDztIZJx7YauisYciuQNdF_WLM4TKOdASs1TnKA&oe=6AC0F75F",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQP531UfRe_xZLqU71BCxEXO0iZsMfxPEVx-lfKwWf6rOqmMgQBIK6jBVq3nEIUIDVElsZMU7wbU1GSRJTnRnaIE29k9xrfYxwjcQ58xGg.mp4?_nc_cat=106&_nc_oc=Adrf083rZrfnjHRtb8UkhDhIWE2iwklr9KXLrBp72IVGlkzRwP4mjbSyL-gaIYjrCcA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=WFqE-L7T8N0Q7kNvwESbKKW&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQzOTkxNjczNDg0NzIyNiwiYXNzZXRfYWdlX2RheXMiOjE0OCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMH9OZ5ddnlxbShH_upWUUlcC1ruDI4KE9JZwXBFx-lHw&oe=6AC133A0&bitrate=390896&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQP531UfRe_xZLqU71BCxEXO0iZsMfxPEVx-lfKwWf6rOqmMgQBIK6jBVq3nEIUIDVElsZMU7wbU1GSRJTnRnaIE29k9xrfYxwjcQ58xGg.mp4?_nc_cat=106&_nc_oc=Adrf083rZrfnjHRtb8UkhDhIWE2iwklr9KXLrBp72IVGlkzRwP4mjbSyL-gaIYjrCcA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=WFqE-L7T8N0Q7kNvwESbKKW&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQzOTkxNjczNDg0NzIyNiwiYXNzZXRfYWdlX2RheXMiOjE0OCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMH9OZ5ddnlxbShH_upWUUlcC1ruDI4KE9JZwXBFx-lHw&oe=6AC133A0&bitrate=390896&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/686941651_976472254829663_4714526555353667626_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y-fF7Fwp4XIQ7kNvwEqov6d&_nc_oc=AdrsLBkF1O7LTP0ixBUq8qRw30vqMmJBU3pkhlBTYdaCdwifyRO5n-BhPVxEs-_sMvE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNUmoYiHU-ufkyI8IqJgF33Ly_pBLurZaUSzGgyYdvv2A&oe=6AC12F9F",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/686941651_976472254829663_4714526555353667626_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y-fF7Fwp4XIQ7kNvwEqov6d&_nc_oc=AdrsLBkF1O7LTP0ixBUq8qRw30vqMmJBU3pkhlBTYdaCdwifyRO5n-BhPVxEs-_sMvE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNUmoYiHU-ufkyI8IqJgF33Ly_pBLurZaUSzGgyYdvv2A&oe=6AC12F9F",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/686941651_976472254829663_4714526555353667626_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Y-fF7Fwp4XIQ7kNvwEqov6d&_nc_oc=AdrsLBkF1O7LTP0ixBUq8qRw30vqMmJBU3pkhlBTYdaCdwifyRO5n-BhPVxEs-_sMvE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNUmoYiHU-ufkyI8IqJgF33Ly_pBLurZaUSzGgyYdvv2A&oe=6AC12F9F",
       "isActive": true,
       "daysRunning": 146,
+      "days_active": 146,
       "startDate": "3 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -229,25 +622,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2107688353403232"
     },
     {
       "id": "fb_1630524021339696",
       "platformAdId": "1630524021339696",
+      "ad_archive_id": "1630524021339696",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 Your ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMQNzZ2KvXTo9cmoZL-FnGwW8SMxFdI01PKGtb5kFALtLxLgZgULKW6vKMTprnTYq1go9KSmxtInKqsNQ8QjqH_-u0TNSfNMG3XFLLsBA.mp4?_nc_cat=108&_nc_oc=Adq_hbaO_nFO72Po0X63brb-09n760cjnoRV5H1d2NrTaaXtbNzR829xn0aIQ6KWgq4&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=hr6hqynMvdwQ7kNvwE-Pe4U&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjA3ODM4NjMyMzA4MDY1NywiYXNzZXRfYWdlX2RheXMiOjEyNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjE4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNG0cOrunxxkymuVlqRav_D9IC2hkPU7BqwK5qjpijwDQ&oe=6AC10866&bitrate=666738&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708363020_1900736007302498_4211826399772028561_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=w6jHcacZx7cQ7kNvwF-LrNh&_nc_oc=Adp3TIZOplztvXxFVSZUdn9QoQPOVeH2zg4kDFOnViaQW4ZxcgmGyaLhPwMMfeJfa_Y&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQM02uFmwDPKuSsM5PSxKdu-pPiMpvd3dk4AnnBS9SWJHg&oe=6AC10EC0",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMQNzZ2KvXTo9cmoZL-FnGwW8SMxFdI01PKGtb5kFALtLxLgZgULKW6vKMTprnTYq1go9KSmxtInKqsNQ8QjqH_-u0TNSfNMG3XFLLsBA.mp4?_nc_cat=108&_nc_oc=Adq_hbaO_nFO72Po0X63brb-09n760cjnoRV5H1d2NrTaaXtbNzR829xn0aIQ6KWgq4&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=hr6hqynMvdwQ7kNvwE-Pe4U&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjA3ODM4NjMyMzA4MDY1NywiYXNzZXRfYWdlX2RheXMiOjEyNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjE4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMXg9hV9atPdJQMcZQbEnKqtxXy5-MwwHAptvXVlCnB4A&oe=6AC140A6&bitrate=666738&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMQNzZ2KvXTo9cmoZL-FnGwW8SMxFdI01PKGtb5kFALtLxLgZgULKW6vKMTprnTYq1go9KSmxtInKqsNQ8QjqH_-u0TNSfNMG3XFLLsBA.mp4?_nc_cat=108&_nc_oc=Adq_hbaO_nFO72Po0X63brb-09n760cjnoRV5H1d2NrTaaXtbNzR829xn0aIQ6KWgq4&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=hr6hqynMvdwQ7kNvwE-Pe4U&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjA3ODM4NjMyMzA4MDY1NywiYXNzZXRfYWdlX2RheXMiOjEyNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjE4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMXg9hV9atPdJQMcZQbEnKqtxXy5-MwwHAptvXVlCnB4A&oe=6AC140A6&bitrate=666738&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708363020_1900736007302498_4211826399772028561_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=w6jHcacZx7cQ7kNvwF-LrNh&_nc_oc=Adp3TIZOplztvXxFVSZUdn9QoQPOVeH2zg4kDFOnViaQW4ZxcgmGyaLhPwMMfeJfa_Y&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOyfc66RA7HASjBPsUkgxSNwFqfaKCJvzO33mNcZyNpDg&oe=6AC14700",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708363020_1900736007302498_4211826399772028561_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=w6jHcacZx7cQ7kNvwF-LrNh&_nc_oc=Adp3TIZOplztvXxFVSZUdn9QoQPOVeH2zg4kDFOnViaQW4ZxcgmGyaLhPwMMfeJfa_Y&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOyfc66RA7HASjBPsUkgxSNwFqfaKCJvzO33mNcZyNpDg&oe=6AC14700",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708363020_1900736007302498_4211826399772028561_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=w6jHcacZx7cQ7kNvwF-LrNh&_nc_oc=Adp3TIZOplztvXxFVSZUdn9QoQPOVeH2zg4kDFOnViaQW4ZxcgmGyaLhPwMMfeJfa_Y&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOyfc66RA7HASjBPsUkgxSNwFqfaKCJvzO33mNcZyNpDg&oe=6AC14700",
       "isActive": true,
       "daysRunning": 123,
+      "days_active": 123,
       "startDate": "26 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -266,25 +672,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1630524021339696"
     },
     {
       "id": "fb_2104845277080382",
       "platformAdId": "2104845277080382",
+      "ad_archive_id": "2104845277080382",
+      "advertiser": "The Dodo với True Sea Moss Health",
       "advertiserName": "The Dodo với True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=The%20Dodo%20v%E1%BB%9Bi%20True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "The Dodo với True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop The Dodo với True Sea Moss Health Online",
       "ctaDescription": "#ad Only Natural Ingredients for Your Bo",
       "description": "#ad Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "#ad Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "#ad Only Natural Ingredients for Your Body's True Health 💚 T",
       "mediaType": "image",
-      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMcpMG2OAH-A3uepPQu4sfFGSMXB9QFFPm2fTGosaHD4A&oe=6AC0EC54",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMcpMG2OAH-A3uepPQu4sfFGSMXB9QFFPm2fTGosaHD4A&oe=6AC0EC54",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP-N6pdLpe2RB3YXn0NNhf4TG04wFWxDp0tFa8DmXAzBg&oe=6AC12494",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP-N6pdLpe2RB3YXn0NNhf4TG04wFWxDp0tFa8DmXAzBg&oe=6AC12494",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP-N6pdLpe2RB3YXn0NNhf4TG04wFWxDp0tFa8DmXAzBg&oe=6AC12494",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/752653253_1510546640372566_2822535189844794272_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=qqU7nrWmteAQ7kNvwG5FNra&_nc_oc=Adqhn-f32nx_2Voo_5nCZFeoLWwwLtlZsanOBiCCydF4cXaS__4ZwQgEbMZqT_4V71w&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP-N6pdLpe2RB3YXn0NNhf4TG04wFWxDp0tFa8DmXAzBg&oe=6AC12494",
       "isActive": true,
       "daysRunning": 66,
+      "days_active": 66,
       "startDate": "23 Tháng 7, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -303,25 +722,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2104845277080382"
     },
     {
       "id": "fb_1223652853068826",
       "platformAdId": "1223652853068826",
+      "ad_archive_id": "1223652853068826",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMDam6UnDuBLBx3zoeohGo6ZP9lPiAD0hVlhfqx7t3SJB2Ni2IBBvZjn9-vzdrMZ0INQNfxdkoh6kkWPG5yBB5TdSn0gj7Gt6aML-87vg.mp4?_nc_cat=110&_nc_oc=Adr041pau9KTBeWsNPziE-MjUVET-RlXvdwCw7cgalb_PW4pYb1vo6poGN-FwW7b42o&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=rx7F7eijSgMQ7kNvwEPkjgY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjQ0MzcyNDY1NjA5MTAwMywiYXNzZXRfYWdlX2RheXMiOjEzMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMMToj-VHHlq6MRPEGvTv7HIwoY-YlqHkjB0VwOheemaw&oe=6AC109F0&bitrate=648880&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/704614735_1365351982181816_8762248717068101735_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a48hv_hxWDUQ7kNvwHP4jFd&_nc_oc=AdoLeJClJBZgDSiz9707orsqfInBsOKbiVXyjMsraEJPDmS0CAobuICjtGEyYb7prRk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMnM1-JRYaf83wO_0TjlsOG9B8ulcHfvkjF-feE_JChPw&oe=6AC0E586",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMDam6UnDuBLBx3zoeohGo6ZP9lPiAD0hVlhfqx7t3SJB2Ni2IBBvZjn9-vzdrMZ0INQNfxdkoh6kkWPG5yBB5TdSn0gj7Gt6aML-87vg.mp4?_nc_cat=110&_nc_oc=Adr041pau9KTBeWsNPziE-MjUVET-RlXvdwCw7cgalb_PW4pYb1vo6poGN-FwW7b42o&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=rx7F7eijSgMQ7kNvwEPkjgY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjQ0MzcyNDY1NjA5MTAwMywiYXNzZXRfYWdlX2RheXMiOjEzMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMAyWwn2DC_BEZE4FZCMNJK_WwyncHvlSkLnuSL6ZU7_g&oe=6AC14230&bitrate=648880&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMDam6UnDuBLBx3zoeohGo6ZP9lPiAD0hVlhfqx7t3SJB2Ni2IBBvZjn9-vzdrMZ0INQNfxdkoh6kkWPG5yBB5TdSn0gj7Gt6aML-87vg.mp4?_nc_cat=110&_nc_oc=Adr041pau9KTBeWsNPziE-MjUVET-RlXvdwCw7cgalb_PW4pYb1vo6poGN-FwW7b42o&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=rx7F7eijSgMQ7kNvwEPkjgY&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjQ0MzcyNDY1NjA5MTAwMywiYXNzZXRfYWdlX2RheXMiOjEzMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMAyWwn2DC_BEZE4FZCMNJK_WwyncHvlSkLnuSL6ZU7_g&oe=6AC14230&bitrate=648880&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/704614735_1365351982181816_8762248717068101735_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a48hv_hxWDUQ7kNvwHP4jFd&_nc_oc=AdoLeJClJBZgDSiz9707orsqfInBsOKbiVXyjMsraEJPDmS0CAobuICjtGEyYb7prRk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNz97hE1Yvd3FY83dw1ktPr8gx4w8Fk0GNJWjFuGqRRQg&oe=6AC11DC6",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/704614735_1365351982181816_8762248717068101735_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a48hv_hxWDUQ7kNvwHP4jFd&_nc_oc=AdoLeJClJBZgDSiz9707orsqfInBsOKbiVXyjMsraEJPDmS0CAobuICjtGEyYb7prRk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNz97hE1Yvd3FY83dw1ktPr8gx4w8Fk0GNJWjFuGqRRQg&oe=6AC11DC6",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/704614735_1365351982181816_8762248717068101735_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=a48hv_hxWDUQ7kNvwHP4jFd&_nc_oc=AdoLeJClJBZgDSiz9707orsqfInBsOKbiVXyjMsraEJPDmS0CAobuICjtGEyYb7prRk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNz97hE1Yvd3FY83dw1ktPr8gx4w8Fk0GNJWjFuGqRRQg&oe=6AC11DC6",
       "isActive": true,
       "daysRunning": 129,
+      "days_active": 129,
       "startDate": "20 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -340,25 +772,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1223652853068826"
     },
     {
       "id": "fb_1319169733495093",
       "platformAdId": "1319169733495093",
+      "ad_archive_id": "1319169733495093",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 Your body runs on minerals, but modern life drains them fast. Stress, caffeine, sugar, late nights... they all chip away at your reserves. That’s why we created Sea Moss Electrolytes - to help you get more from your water and replenish what modern life drains. What are the benefits of Sea Moss Electrolytes?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 Your ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQODWpjlm5wpYUhwn1M3Rs73fZrWmNdeXX6DxJRswS0qFeMnb7XmEl2sHlpEhXhq-g0pH3rnAPptGXURjrUm9WytNbM2ieAy2HjAljuOtQ.mp4?_nc_cat=100&_nc_oc=AdqiK5eyzUAUXxLo8Nh4t7fdz8Zw97ezJT6hNPmDv_K80TLU7UqNIWGvjJHiatFO7CU&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=knFaigHJ0JUQ7kNvwFegoJw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDQyODQ4MTUzNzM5NDI2NiwiYXNzZXRfYWdlX2RheXMiOjEzOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNE18zxP2jd_HYWd1cyc-IeYolxdyZKr-CfKKJ42PtnOg&oe=6AC0EC0E&bitrate=544570&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/696136597_1752556919048146_7071999287448384181_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wkBnPfm7PCMQ7kNvwFXT-Q4&_nc_oc=Adpnb-nm4BYZDCaacEtw_LbQmaTyHpXZlr1A01iDncMnheAhKay1vyZ2N5oexHBz_ko&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQORAZq8skfSNpw52ey_Q6GF8yyT4_-xiGh3efsWXzAhXg&oe=6AC0FD76",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQODWpjlm5wpYUhwn1M3Rs73fZrWmNdeXX6DxJRswS0qFeMnb7XmEl2sHlpEhXhq-g0pH3rnAPptGXURjrUm9WytNbM2ieAy2HjAljuOtQ.mp4?_nc_cat=100&_nc_oc=AdqiK5eyzUAUXxLo8Nh4t7fdz8Zw97ezJT6hNPmDv_K80TLU7UqNIWGvjJHiatFO7CU&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=knFaigHJ0JUQ7kNvwFegoJw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDQyODQ4MTUzNzM5NDI2NiwiYXNzZXRfYWdlX2RheXMiOjEzOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNOWutWE7PkxT5d0jiCj2i_MhrC4V0oUlsher-8BTPI-Q&oe=6AC1244E&bitrate=544570&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQODWpjlm5wpYUhwn1M3Rs73fZrWmNdeXX6DxJRswS0qFeMnb7XmEl2sHlpEhXhq-g0pH3rnAPptGXURjrUm9WytNbM2ieAy2HjAljuOtQ.mp4?_nc_cat=100&_nc_oc=AdqiK5eyzUAUXxLo8Nh4t7fdz8Zw97ezJT6hNPmDv_K80TLU7UqNIWGvjJHiatFO7CU&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=knFaigHJ0JUQ7kNvwFegoJw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDQyODQ4MTUzNzM5NDI2NiwiYXNzZXRfYWdlX2RheXMiOjEzOSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNOWutWE7PkxT5d0jiCj2i_MhrC4V0oUlsher-8BTPI-Q&oe=6AC1244E&bitrate=544570&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/696136597_1752556919048146_7071999287448384181_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wkBnPfm7PCMQ7kNvwFXT-Q4&_nc_oc=Adpnb-nm4BYZDCaacEtw_LbQmaTyHpXZlr1A01iDncMnheAhKay1vyZ2N5oexHBz_ko&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPZ2LnnGz2QF2rJHBDhnPQg8-yHw2HxQ3YOjABBLfQnDA&oe=6AC135B6",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/696136597_1752556919048146_7071999287448384181_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wkBnPfm7PCMQ7kNvwFXT-Q4&_nc_oc=Adpnb-nm4BYZDCaacEtw_LbQmaTyHpXZlr1A01iDncMnheAhKay1vyZ2N5oexHBz_ko&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPZ2LnnGz2QF2rJHBDhnPQg8-yHw2HxQ3YOjABBLfQnDA&oe=6AC135B6",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/696136597_1752556919048146_7071999287448384181_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wkBnPfm7PCMQ7kNvwFXT-Q4&_nc_oc=Adpnb-nm4BYZDCaacEtw_LbQmaTyHpXZlr1A01iDncMnheAhKay1vyZ2N5oexHBz_ko&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPZ2LnnGz2QF2rJHBDhnPQg8-yHw2HxQ3YOjABBLfQnDA&oe=6AC135B6",
       "isActive": true,
       "daysRunning": 135,
+      "days_active": 135,
       "startDate": "14 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -377,25 +822,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1319169733495093"
     },
     {
       "id": "fb_961623883384743",
       "platformAdId": "961623883384743",
+      "ad_archive_id": "961623883384743",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Solo Ingredientes Naturales para la Verd",
       "description": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "primary_text": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "hook": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cu",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNuxppNK8ky4HODsfuKin6q59DEs6r8AAldGqwGOXXfj3tIfiSd8rgdkpnP6KW76T6NLDJbErgbWzYON5gdMdT2hX0gdmJWNjEeKzxTsA.mp4?_nc_cat=110&_nc_oc=AdpRLx4ujll12djCdIi29N4QD2FhzBYT049TuJIj9EjQpb7joQLxq9pCxjrCTiiptHo&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=i_C9ajFEMzMQ7kNvwFEssnP&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjM4Mjk0MjI3NTUyNTU1NiwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI2NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPCSj8Mh279ZO68wv_v0WYGLiiuZfQ9lhbmIM7t3kLUaQ&oe=6AC10958&bitrate=409512&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/711448495_26789955563988996_8555403613690209744_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EjlKljAjHoUQ7kNvwFwH_8X&_nc_oc=AdpoHplg1Tu_fY0ePsHt6Py4Y0zORkgV_ZzUJI0rknUo9Ru71IJW707Xm7rhudz4KJk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQNURkzhzzpreldbcdCY7yBsZoswc-cZYxBY36mVCwSwLw&oe=6AC112AB",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNuxppNK8ky4HODsfuKin6q59DEs6r8AAldGqwGOXXfj3tIfiSd8rgdkpnP6KW76T6NLDJbErgbWzYON5gdMdT2hX0gdmJWNjEeKzxTsA.mp4?_nc_cat=110&_nc_oc=AdpRLx4ujll12djCdIi29N4QD2FhzBYT049TuJIj9EjQpb7joQLxq9pCxjrCTiiptHo&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=i_C9ajFEMzMQ7kNvwFEssnP&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjM4Mjk0MjI3NTUyNTU1NiwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI2NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMeJ8owu8yMgJjwV3Mu8FpzxEyNraMQEgEyyqlwuJDLVw&oe=6AC14198&bitrate=409512&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNuxppNK8ky4HODsfuKin6q59DEs6r8AAldGqwGOXXfj3tIfiSd8rgdkpnP6KW76T6NLDJbErgbWzYON5gdMdT2hX0gdmJWNjEeKzxTsA.mp4?_nc_cat=110&_nc_oc=AdpRLx4ujll12djCdIi29N4QD2FhzBYT049TuJIj9EjQpb7joQLxq9pCxjrCTiiptHo&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=i_C9ajFEMzMQ7kNvwFEssnP&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjM4Mjk0MjI3NTUyNTU1NiwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI2NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMeJ8owu8yMgJjwV3Mu8FpzxEyNraMQEgEyyqlwuJDLVw&oe=6AC14198&bitrate=409512&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/711448495_26789955563988996_8555403613690209744_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EjlKljAjHoUQ7kNvwFwH_8X&_nc_oc=AdpoHplg1Tu_fY0ePsHt6Py4Y0zORkgV_ZzUJI0rknUo9Ru71IJW707Xm7rhudz4KJk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMPmnZtR0eYumIdHt30eB01YrDII54YwkVBYNcTmFgp9w&oe=6AC14AEB",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/711448495_26789955563988996_8555403613690209744_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EjlKljAjHoUQ7kNvwFwH_8X&_nc_oc=AdpoHplg1Tu_fY0ePsHt6Py4Y0zORkgV_ZzUJI0rknUo9Ru71IJW707Xm7rhudz4KJk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMPmnZtR0eYumIdHt30eB01YrDII54YwkVBYNcTmFgp9w&oe=6AC14AEB",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/711448495_26789955563988996_8555403613690209744_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=EjlKljAjHoUQ7kNvwFwH_8X&_nc_oc=AdpoHplg1Tu_fY0ePsHt6Py4Y0zORkgV_ZzUJI0rknUo9Ru71IJW707Xm7rhudz4KJk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMPmnZtR0eYumIdHt30eB01YrDII54YwkVBYNcTmFgp9w&oe=6AC14AEB",
       "isActive": true,
       "daysRunning": 120,
+      "days_active": 120,
       "startDate": "29 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -414,25 +872,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=961623883384743"
     },
     {
       "id": "fb_25454825957543978",
       "platformAdId": "25454825957543978",
+      "ad_archive_id": "25454825957543978",
+      "advertiser": "Mr Moody Dresser",
       "advertiserName": "Mr Moody Dresser",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Mr%20Moody%20Dresser&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Mr Moody Dresser",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Mr Moody Dresser Online",
       "ctaDescription": "Biggest Deal of the Year: Up to 50% OFF ",
       "description": "Biggest Deal of the Year: Up to 50% OFF + Free Gift! Keep saving as long as you stay subscribed! ⠀ Only Natural Ingredients for Your Body's True Health 💚",
+      "primary_text": "Biggest Deal of the Year: Up to 50% OFF + Free Gift! Keep saving as long as you stay subscribed! ⠀ Only Natural Ingredients for Your Body's True Health 💚",
+      "hook": "Biggest Deal of the Year: Up to 50% OFF + Free Gift! Keep sa",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m69/AQPIl5y6e-ckfzdHQ0QZpcaUh7HgcxqG4dKazWxcp7rCnQlYte8RoexroUBgGMwdxjYq3tg8z4r00vjoyadTCmGh.mp4?strext=1&_nc_cat=105&_nc_oc=AdpeHyVukvqk7KMjgrY0KYtjIDdvzRdHRlQYsZX0BxZ68p70ym3HQwuAUF-cmg6XLNc&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=nAnYnOnak4AQ7kNvwF7Fu-K&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6OTY0Njg2MjE1ODQzNDA4LCJhc3NldF9hZ2VfZGF5cyI6NTQ5LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOWRlJS1aR_ETWPGVfYHUOSQFywW3ikuXgdvMEK3-fCpA&oe=6AC108ED",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571277057_4075382786010734_8920688277051046892_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oRgt8xqIihgQ7kNvwGWo4lT&_nc_oc=Ado3JfPQmL4VeTKqGIKCQvlsWzxm1bmBIHt8zjDDF64H8BIsWo0-jD0YlmxWRV6pnQg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQNR1ONFxLkmG1R94WkYfvn9pJJdP1LA87_7FDwkRsGBlA&oe=6AC1106A",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m69/AQPIl5y6e-ckfzdHQ0QZpcaUh7HgcxqG4dKazWxcp7rCnQlYte8RoexroUBgGMwdxjYq3tg8z4r00vjoyadTCmGh.mp4?strext=1&_nc_cat=105&_nc_oc=AdpeHyVukvqk7KMjgrY0KYtjIDdvzRdHRlQYsZX0BxZ68p70ym3HQwuAUF-cmg6XLNc&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=nAnYnOnak4AQ7kNvwF7Fu-K&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6OTY0Njg2MjE1ODQzNDA4LCJhc3NldF9hZ2VfZGF5cyI6NTQ5LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNL6uYAOD_hKWao83Jwnion5M0QTz9E464aDrcGDKFdhw&oe=6AC1412D",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m69/AQPIl5y6e-ckfzdHQ0QZpcaUh7HgcxqG4dKazWxcp7rCnQlYte8RoexroUBgGMwdxjYq3tg8z4r00vjoyadTCmGh.mp4?strext=1&_nc_cat=105&_nc_oc=AdpeHyVukvqk7KMjgrY0KYtjIDdvzRdHRlQYsZX0BxZ68p70ym3HQwuAUF-cmg6XLNc&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=nAnYnOnak4AQ7kNvwF7Fu-K&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6OTY0Njg2MjE1ODQzNDA4LCJhc3NldF9hZ2VfZGF5cyI6NTQ5LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MzUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNL6uYAOD_hKWao83Jwnion5M0QTz9E464aDrcGDKFdhw&oe=6AC1412D",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571277057_4075382786010734_8920688277051046892_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oRgt8xqIihgQ7kNvwGWo4lT&_nc_oc=Ado3JfPQmL4VeTKqGIKCQvlsWzxm1bmBIHt8zjDDF64H8BIsWo0-jD0YlmxWRV6pnQg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMMIZqlCPQk2pfXgkdRMR5pIr_F9IsoQaBvUKDUFtmZ4A&oe=6AC148AA",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571277057_4075382786010734_8920688277051046892_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oRgt8xqIihgQ7kNvwGWo4lT&_nc_oc=Ado3JfPQmL4VeTKqGIKCQvlsWzxm1bmBIHt8zjDDF64H8BIsWo0-jD0YlmxWRV6pnQg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMMIZqlCPQk2pfXgkdRMR5pIr_F9IsoQaBvUKDUFtmZ4A&oe=6AC148AA",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571277057_4075382786010734_8920688277051046892_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oRgt8xqIihgQ7kNvwGWo4lT&_nc_oc=Ado3JfPQmL4VeTKqGIKCQvlsWzxm1bmBIHt8zjDDF64H8BIsWo0-jD0YlmxWRV6pnQg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMMIZqlCPQk2pfXgkdRMR5pIr_F9IsoQaBvUKDUFtmZ4A&oe=6AC148AA",
       "isActive": true,
       "daysRunning": 235,
+      "days_active": 235,
       "startDate": "4 Tháng 2, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -451,25 +922,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=25454825957543978"
     },
     {
       "id": "fb_1003303885368054",
       "platformAdId": "1003303885368054",
+      "ad_archive_id": "1003303885368054",
+      "advertiser": "Stephanie DB",
       "advertiserName": "Stephanie DB",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Stephanie%20DB&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Stephanie DB",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Stephanie DB Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMej4alEEi2AfdcX6MD2fG18N05bzG14Q8XmJ2Bp_lvHeWYcSrZ5PsXW8A1Ial4NTiUesuW2Cft_8lKqGII3qtFjQBN0Dw33fsas3brmA.mp4?_nc_cat=108&_nc_oc=Adour2ZGZDWP24zxnrw3FmQ1j0o8HpEPWph3hoem2NMd6X2dpw2CIi4OrIA11BPg2TU&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=xCO7AxQjxz0Q7kNvwGkfJT8&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTM4MjQ0MjkxNjE1MjgzMywiYXNzZXRfYWdlX2RheXMiOjQxMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMuFWVLzay_EVlbT_08tK8OSxmOjy54vL78uZKmWaK3fg&oe=6AC0EC32",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571137515_1435529870870886_8164855035662282638_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ujL-jdNaE8wQ7kNvwH-Mf85&_nc_oc=AdptsERGXufzvxH9kurhUxtiWDajxxLjkAWvcYT1Wkqni0jA_tS47V1SAVzxg5jfBdE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQO6pjUD325rd3iV731tjGt1dkgqwAij3NDdk9QwD1P2UQ&oe=6AC0E2A2",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMej4alEEi2AfdcX6MD2fG18N05bzG14Q8XmJ2Bp_lvHeWYcSrZ5PsXW8A1Ial4NTiUesuW2Cft_8lKqGII3qtFjQBN0Dw33fsas3brmA.mp4?_nc_cat=108&_nc_oc=Adour2ZGZDWP24zxnrw3FmQ1j0o8HpEPWph3hoem2NMd6X2dpw2CIi4OrIA11BPg2TU&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=xCO7AxQjxz0Q7kNvwGkfJT8&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTM4MjQ0MjkxNjE1MjgzMywiYXNzZXRfYWdlX2RheXMiOjQxMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM8b8COrOaEFv7Xv5SlNapfaD3hIZkt7MkCMTSPAVYu_Q&oe=6AC12472",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMej4alEEi2AfdcX6MD2fG18N05bzG14Q8XmJ2Bp_lvHeWYcSrZ5PsXW8A1Ial4NTiUesuW2Cft_8lKqGII3qtFjQBN0Dw33fsas3brmA.mp4?_nc_cat=108&_nc_oc=Adour2ZGZDWP24zxnrw3FmQ1j0o8HpEPWph3hoem2NMd6X2dpw2CIi4OrIA11BPg2TU&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=xCO7AxQjxz0Q7kNvwGkfJT8&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTM4MjQ0MjkxNjE1MjgzMywiYXNzZXRfYWdlX2RheXMiOjQxMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjU4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM8b8COrOaEFv7Xv5SlNapfaD3hIZkt7MkCMTSPAVYu_Q&oe=6AC12472",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571137515_1435529870870886_8164855035662282638_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ujL-jdNaE8wQ7kNvwH-Mf85&_nc_oc=AdptsERGXufzvxH9kurhUxtiWDajxxLjkAWvcYT1Wkqni0jA_tS47V1SAVzxg5jfBdE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOjqQWP96ZPAtJh9aGFhJMh2QvbgNXS7P44jfFGzuTDXA&oe=6AC11AE2",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571137515_1435529870870886_8164855035662282638_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ujL-jdNaE8wQ7kNvwH-Mf85&_nc_oc=AdptsERGXufzvxH9kurhUxtiWDajxxLjkAWvcYT1Wkqni0jA_tS47V1SAVzxg5jfBdE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOjqQWP96ZPAtJh9aGFhJMh2QvbgNXS7P44jfFGzuTDXA&oe=6AC11AE2",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/571137515_1435529870870886_8164855035662282638_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ujL-jdNaE8wQ7kNvwH-Mf85&_nc_oc=AdptsERGXufzvxH9kurhUxtiWDajxxLjkAWvcYT1Wkqni0jA_tS47V1SAVzxg5jfBdE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOjqQWP96ZPAtJh9aGFhJMh2QvbgNXS7P44jfFGzuTDXA&oe=6AC11AE2",
       "isActive": true,
       "daysRunning": 151,
+      "days_active": 151,
       "startDate": "28 Tháng 4, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -488,25 +972,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1003303885368054"
     },
     {
       "id": "fb_2093173017898211",
       "platformAdId": "2093173017898211",
+      "ad_archive_id": "2093173017898211",
+      "advertiser": "Fitness Addiction Blog",
       "advertiserName": "Fitness Addiction Blog",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Fitness%20Addiction%20Blog&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Fitness Addiction Blog",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Fitness Addiction Blog Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQOn1NNJx3nBj2oAL5ZL5W-IWnTA03V-JG_WY8EKdmyMO2XlSwGDWgJckC72r9Gb8vZI8srqcyTxFyZBrTLhYHzwBTjD20epCmUHEAvIqA.mp4?_nc_cat=108&_nc_oc=AdpqCNjB9TZYm1HY2XZq14HaWTIMfkDgNtnThY9xadWl9M88Cng-Y8Zdj3-GSyHt7vg&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=YQnrBG5piOMQ7kNvwGaPrcb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NjY3NTY1NjgyNDcwMDI0LCJhc3NldF9hZ2VfZGF5cyI6MzgyLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NDQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQN4-aRAJTd2cUbrUJ4pxO-akA7F94ztHZSTPa03fKqOvA&oe=6AC112BA",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/590770510_1521398465806455_7200426780097477507_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wboSoWejn-QQ7kNvwFplN_I&_nc_oc=AdoxRUk53JJu1s9-IF_Vvja-FfhvaAil6K-5_dc3GHAltBvZbdBORcNQ_BhB-R79Rz8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQN7rVtpTpVjPhHpf8t2O425Pn7AuH7gZbMzEhrviVmivQ&oe=6AC1149B",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQOn1NNJx3nBj2oAL5ZL5W-IWnTA03V-JG_WY8EKdmyMO2XlSwGDWgJckC72r9Gb8vZI8srqcyTxFyZBrTLhYHzwBTjD20epCmUHEAvIqA.mp4?_nc_cat=108&_nc_oc=AdpqCNjB9TZYm1HY2XZq14HaWTIMfkDgNtnThY9xadWl9M88Cng-Y8Zdj3-GSyHt7vg&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=YQnrBG5piOMQ7kNvwGaPrcb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NjY3NTY1NjgyNDcwMDI0LCJhc3NldF9hZ2VfZGF5cyI6MzgyLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NDQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOFVvfTzhZ8qi9dY8ttnbxtVuKxEvHwb9PTFmhzCcFddg&oe=6AC14AFA",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQOn1NNJx3nBj2oAL5ZL5W-IWnTA03V-JG_WY8EKdmyMO2XlSwGDWgJckC72r9Gb8vZI8srqcyTxFyZBrTLhYHzwBTjD20epCmUHEAvIqA.mp4?_nc_cat=108&_nc_oc=AdpqCNjB9TZYm1HY2XZq14HaWTIMfkDgNtnThY9xadWl9M88Cng-Y8Zdj3-GSyHt7vg&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=YQnrBG5piOMQ7kNvwGaPrcb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NjY3NTY1NjgyNDcwMDI0LCJhc3NldF9hZ2VfZGF5cyI6MzgyLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NDQsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOFVvfTzhZ8qi9dY8ttnbxtVuKxEvHwb9PTFmhzCcFddg&oe=6AC14AFA",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/590770510_1521398465806455_7200426780097477507_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wboSoWejn-QQ7kNvwFplN_I&_nc_oc=AdoxRUk53JJu1s9-IF_Vvja-FfhvaAil6K-5_dc3GHAltBvZbdBORcNQ_BhB-R79Rz8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP6rYbqxcz1L7mcpTSFELwAphp8T-IPM5a9tUu-I_q_kw&oe=6AC14CDB",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/590770510_1521398465806455_7200426780097477507_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wboSoWejn-QQ7kNvwFplN_I&_nc_oc=AdoxRUk53JJu1s9-IF_Vvja-FfhvaAil6K-5_dc3GHAltBvZbdBORcNQ_BhB-R79Rz8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP6rYbqxcz1L7mcpTSFELwAphp8T-IPM5a9tUu-I_q_kw&oe=6AC14CDB",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/590770510_1521398465806455_7200426780097477507_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wboSoWejn-QQ7kNvwFplN_I&_nc_oc=AdoxRUk53JJu1s9-IF_Vvja-FfhvaAil6K-5_dc3GHAltBvZbdBORcNQ_BhB-R79Rz8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQP6rYbqxcz1L7mcpTSFELwAphp8T-IPM5a9tUu-I_q_kw&oe=6AC14CDB",
       "isActive": true,
       "daysRunning": 83,
+      "days_active": 83,
       "startDate": "6 Tháng 7, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -525,25 +1022,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2093173017898211"
     },
     {
       "id": "fb_1652940075941574",
       "platformAdId": "1652940075941574",
+      "ad_archive_id": "1652940075941574",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOSiU1rpaobaZ9xF7y-bEKQfKv8OjZjN5DDlqKRKLtyHsUQtH9o79sTp_ZnOVXhmVDtK5NNwJn4FEo2NZANZFST1JFspKRAQDZln6elng.mp4?_nc_cat=109&_nc_oc=AdqgB18M-qlq57lVKGpOeNiYQkqoS1fSUyUNvOWiMq8-M0yxCgT84kq2YoxJQjyBD9g&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Ry922q7stn4Q7kNvwFGTQQs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAwODc1NjY2ODI0NDc0NiwiYXNzZXRfYWdlX2RheXMiOjEzNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEyMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMlzaEw8KiAzoT6pUAPd_y-TkrOWc8jvZ6pzmaZOYeUnw&oe=6AC0F8A1&bitrate=440899&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698558469_2105618989982910_5153982360596939501_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6hVeytimouMQ7kNvwED-lEo&_nc_oc=AdpfBW1iO0Nz687B3rPW6D_J5XvB_ZzvCbgQIy6QlpCWqspCecRCbIhR7NbnT1T72Os&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMm94TvCscbY1bZkn61H1IqiZkhZBh31U0uGXH4wUCk2A&oe=6AC0E6A5",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOSiU1rpaobaZ9xF7y-bEKQfKv8OjZjN5DDlqKRKLtyHsUQtH9o79sTp_ZnOVXhmVDtK5NNwJn4FEo2NZANZFST1JFspKRAQDZln6elng.mp4?_nc_cat=109&_nc_oc=AdqgB18M-qlq57lVKGpOeNiYQkqoS1fSUyUNvOWiMq8-M0yxCgT84kq2YoxJQjyBD9g&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Ry922q7stn4Q7kNvwFGTQQs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAwODc1NjY2ODI0NDc0NiwiYXNzZXRfYWdlX2RheXMiOjEzNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEyMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPKpHpZhLj4Q8QxpXU8WZY6n_kOClyuCeRH-9zVOoG0Og&oe=6AC130E1&bitrate=440899&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOSiU1rpaobaZ9xF7y-bEKQfKv8OjZjN5DDlqKRKLtyHsUQtH9o79sTp_ZnOVXhmVDtK5NNwJn4FEo2NZANZFST1JFspKRAQDZln6elng.mp4?_nc_cat=109&_nc_oc=AdqgB18M-qlq57lVKGpOeNiYQkqoS1fSUyUNvOWiMq8-M0yxCgT84kq2YoxJQjyBD9g&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Ry922q7stn4Q7kNvwFGTQQs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTAwODc1NjY2ODI0NDc0NiwiYXNzZXRfYWdlX2RheXMiOjEzNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEyMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPKpHpZhLj4Q8QxpXU8WZY6n_kOClyuCeRH-9zVOoG0Og&oe=6AC130E1&bitrate=440899&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698558469_2105618989982910_5153982360596939501_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6hVeytimouMQ7kNvwED-lEo&_nc_oc=AdpfBW1iO0Nz687B3rPW6D_J5XvB_ZzvCbgQIy6QlpCWqspCecRCbIhR7NbnT1T72Os&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMk-3UbADmGoNGv5DxWx4XWEYvJkvnU1PDRc9p_gUFjBg&oe=6AC11EE5",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698558469_2105618989982910_5153982360596939501_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6hVeytimouMQ7kNvwED-lEo&_nc_oc=AdpfBW1iO0Nz687B3rPW6D_J5XvB_ZzvCbgQIy6QlpCWqspCecRCbIhR7NbnT1T72Os&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMk-3UbADmGoNGv5DxWx4XWEYvJkvnU1PDRc9p_gUFjBg&oe=6AC11EE5",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698558469_2105618989982910_5153982360596939501_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=6hVeytimouMQ7kNvwED-lEo&_nc_oc=AdpfBW1iO0Nz687B3rPW6D_J5XvB_ZzvCbgQIy6QlpCWqspCecRCbIhR7NbnT1T72Os&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMk-3UbADmGoNGv5DxWx4XWEYvJkvnU1PDRc9p_gUFjBg&oe=6AC11EE5",
       "isActive": true,
       "daysRunning": 133,
+      "days_active": 133,
       "startDate": "16 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -562,25 +1072,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1652940075941574"
     },
     {
       "id": "fb_1642715063603513",
       "platformAdId": "1642715063603513",
+      "ad_archive_id": "1642715063603513",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPfjVm2LYYLAp-2SpEPYSEgNfqmWG9rQZ5bFOFQxPbZhRGt9Ai3F8eCRLxNa9fzs_BvSQmu4Z91XgJ2HlpssLT2lHQj7goYVswN5S9S2w.mp4?_nc_cat=100&_nc_oc=Adr94wlFPimFf-O4xRcpfLqsiVFrtM6cHRvMYq9jQxpLkTOOS-2BCRsuONWZ9I8OUUM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Iy22NZWLpOYQ7kNvwHU3E1C&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzE1NjEwODcyMTI0Mzc2MSwiYXNzZXRfYWdlX2RheXMiOjEzMywidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjM1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNz-_t4fuGO61mrstwIYCVlXtnSbPQAT8SvtPZI52OaPw&oe=6AC0E396&bitrate=396141&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/701810666_1400009128816598_5382457332017917760_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=BySmHXuMA5QQ7kNvwFtY67f&_nc_oc=Adozl5XZavn-DiYcfi0E_3yvXPXKLxjdk6u6Ei8dNQxSTRyhOZGBgWutmkEX4nH1u0I&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMSVWqvifvx6voYuTfOHOxdknNfEkaJYynSe9OXHa4o7A&oe=6AC10957",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPfjVm2LYYLAp-2SpEPYSEgNfqmWG9rQZ5bFOFQxPbZhRGt9Ai3F8eCRLxNa9fzs_BvSQmu4Z91XgJ2HlpssLT2lHQj7goYVswN5S9S2w.mp4?_nc_cat=100&_nc_oc=Adr94wlFPimFf-O4xRcpfLqsiVFrtM6cHRvMYq9jQxpLkTOOS-2BCRsuONWZ9I8OUUM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Iy22NZWLpOYQ7kNvwHU3E1C&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzE1NjEwODcyMTI0Mzc2MSwiYXNzZXRfYWdlX2RheXMiOjEzMywidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjM1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQO-SypZOXlV4VOMKn46lB2qdmeyIr__TOkVCq4uKyNfWA&oe=6AC11BD6&bitrate=396141&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPfjVm2LYYLAp-2SpEPYSEgNfqmWG9rQZ5bFOFQxPbZhRGt9Ai3F8eCRLxNa9fzs_BvSQmu4Z91XgJ2HlpssLT2lHQj7goYVswN5S9S2w.mp4?_nc_cat=100&_nc_oc=Adr94wlFPimFf-O4xRcpfLqsiVFrtM6cHRvMYq9jQxpLkTOOS-2BCRsuONWZ9I8OUUM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Iy22NZWLpOYQ7kNvwHU3E1C&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzE1NjEwODcyMTI0Mzc2MSwiYXNzZXRfYWdlX2RheXMiOjEzMywidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjM1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQO-SypZOXlV4VOMKn46lB2qdmeyIr__TOkVCq4uKyNfWA&oe=6AC11BD6&bitrate=396141&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/701810666_1400009128816598_5382457332017917760_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=BySmHXuMA5QQ7kNvwFtY67f&_nc_oc=Adozl5XZavn-DiYcfi0E_3yvXPXKLxjdk6u6Ei8dNQxSTRyhOZGBgWutmkEX4nH1u0I&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPQUJsZ6zmfPUnDsizXJYsRKZArLZka0BBb07wli3bO9g&oe=6AC14197",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/701810666_1400009128816598_5382457332017917760_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=BySmHXuMA5QQ7kNvwFtY67f&_nc_oc=Adozl5XZavn-DiYcfi0E_3yvXPXKLxjdk6u6Ei8dNQxSTRyhOZGBgWutmkEX4nH1u0I&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPQUJsZ6zmfPUnDsizXJYsRKZArLZka0BBb07wli3bO9g&oe=6AC14197",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/701810666_1400009128816598_5382457332017917760_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=BySmHXuMA5QQ7kNvwFtY67f&_nc_oc=Adozl5XZavn-DiYcfi0E_3yvXPXKLxjdk6u6Ei8dNQxSTRyhOZGBgWutmkEX4nH1u0I&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPQUJsZ6zmfPUnDsizXJYsRKZArLZka0BBb07wli3bO9g&oe=6AC14197",
       "isActive": true,
       "daysRunning": 130,
+      "days_active": 130,
       "startDate": "19 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -599,25 +1122,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1642715063603513"
     },
     {
       "id": "fb_951069634392917",
       "platformAdId": "951069634392917",
+      "ad_archive_id": "951069634392917",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQM2YOzlJef56hlW_GuLTIFyDIRf4Enp6vU-fXiKpXFz6bnpaL5uiN4cj2Qzdar4orN86MrvfNbdzj_fy0onJUPGzJOajO46TXjTuZf8QQ.mp4?_nc_cat=109&_nc_oc=Ado0LIc7aVBpmlGDiy4hW5iS47mNNjrCCXpoCEH9kQTAXzGyaBjIB_6d-8hP5AKG7AA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=jIJne1Sotr8Q7kNvwHFm-Xc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzQ4ODE5MDU1MTMzMzY4MCwiYXNzZXRfYWdlX2RheXMiOjEzNiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjY2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPgbtZYS-VOaQdIhq8QWsiYIPq3qBMId-GS1uUPQ2qCYg&oe=6AC0FC35&bitrate=450989&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/700554878_986386973770660_4843801762181698984_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vyKI30bucYgQ7kNvwF7nsTR&_nc_oc=AdrJ__CMy27TzCXwpZRp5K6f_8Nng-orRKQx1B67ivRHR-XLAj9e4iGpTAgOYuAND7U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQNqaW_h_gFQPI05aTZhf5WH6_u59NhJ-hTCJXipv5TMWg&oe=6AC0FCC0",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQM2YOzlJef56hlW_GuLTIFyDIRf4Enp6vU-fXiKpXFz6bnpaL5uiN4cj2Qzdar4orN86MrvfNbdzj_fy0onJUPGzJOajO46TXjTuZf8QQ.mp4?_nc_cat=109&_nc_oc=Ado0LIc7aVBpmlGDiy4hW5iS47mNNjrCCXpoCEH9kQTAXzGyaBjIB_6d-8hP5AKG7AA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=jIJne1Sotr8Q7kNvwHFm-Xc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzQ4ODE5MDU1MTMzMzY4MCwiYXNzZXRfYWdlX2RheXMiOjEzNiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjY2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMFJAD_3QNdJ-93RDMZU47VXDkRux61VXMwCu0q1UnKOA&oe=6AC13475&bitrate=450989&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQM2YOzlJef56hlW_GuLTIFyDIRf4Enp6vU-fXiKpXFz6bnpaL5uiN4cj2Qzdar4orN86MrvfNbdzj_fy0onJUPGzJOajO46TXjTuZf8QQ.mp4?_nc_cat=109&_nc_oc=Ado0LIc7aVBpmlGDiy4hW5iS47mNNjrCCXpoCEH9kQTAXzGyaBjIB_6d-8hP5AKG7AA&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=jIJne1Sotr8Q7kNvwHFm-Xc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MzQ4ODE5MDU1MTMzMzY4MCwiYXNzZXRfYWdlX2RheXMiOjEzNiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjY2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMFJAD_3QNdJ-93RDMZU47VXDkRux61VXMwCu0q1UnKOA&oe=6AC13475&bitrate=450989&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/700554878_986386973770660_4843801762181698984_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vyKI30bucYgQ7kNvwF7nsTR&_nc_oc=AdrJ__CMy27TzCXwpZRp5K6f_8Nng-orRKQx1B67ivRHR-XLAj9e4iGpTAgOYuAND7U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxAudA7X8ittvHfpfPNgB3WgMWbrjTtVwmUXPt00nsSw&oe=6AC13500",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/700554878_986386973770660_4843801762181698984_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vyKI30bucYgQ7kNvwF7nsTR&_nc_oc=AdrJ__CMy27TzCXwpZRp5K6f_8Nng-orRKQx1B67ivRHR-XLAj9e4iGpTAgOYuAND7U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxAudA7X8ittvHfpfPNgB3WgMWbrjTtVwmUXPt00nsSw&oe=6AC13500",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/700554878_986386973770660_4843801762181698984_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=vyKI30bucYgQ7kNvwF7nsTR&_nc_oc=AdrJ__CMy27TzCXwpZRp5K6f_8Nng-orRKQx1B67ivRHR-XLAj9e4iGpTAgOYuAND7U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOxAudA7X8ittvHfpfPNgB3WgMWbrjTtVwmUXPt00nsSw&oe=6AC13500",
       "isActive": true,
       "daysRunning": 134,
+      "days_active": 134,
       "startDate": "15 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -636,25 +1172,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=951069634392917"
     },
     {
       "id": "fb_1345910424133548",
       "platformAdId": "1345910424133548",
+      "ad_archive_id": "1345910424133548",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMWyGx-rjLk8BjD4aRJFIA5SeebE9lEnGxQrNz6ngp8ET_NWXnZSOSUrwhgRVCwGaiQ_5SRr8JINPp__KRW7uR8VBaS35HQ0_3IZOItdA.mp4?_nc_cat=107&_nc_oc=AdpOkuSvxmxOZuVCoTJVTQFjVA8WDLZpQ5yR1inClje4O6jFbpOJ3SS5fve-hlWH4lI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=9vtVDKLtFowQ7kNvwFgWu_F&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjczNDAzMTU2MDg5MTQ2MjQsImFzc2V0X2FnZV9kYXlzIjoxMjQsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjo2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQM54nSl71ExU7GeIOgZjf6bozpTaxvt2wzzKeS9lyvxrA&oe=6AC0FD43&bitrate=433238&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708102201_2859899464375271_1347538836401583655_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2MjCdaRCy1sQ7kNvwHU4Pim&_nc_oc=AdqHkZ10p6C7zYviFf0Q4cYmmGPk3K9QnrWI1izOGI8yC6TrFFL5au5iTwwWTnNWhk8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQMKyDBbNTehjdVZCpNKREZNCjETZMdWLcANeTqiRpW_Kg&oe=6AC1037F",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMWyGx-rjLk8BjD4aRJFIA5SeebE9lEnGxQrNz6ngp8ET_NWXnZSOSUrwhgRVCwGaiQ_5SRr8JINPp__KRW7uR8VBaS35HQ0_3IZOItdA.mp4?_nc_cat=107&_nc_oc=AdpOkuSvxmxOZuVCoTJVTQFjVA8WDLZpQ5yR1inClje4O6jFbpOJ3SS5fve-hlWH4lI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=9vtVDKLtFowQ7kNvwFgWu_F&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjczNDAzMTU2MDg5MTQ2MjQsImFzc2V0X2FnZV9kYXlzIjoxMjQsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjo2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNrxcTF2q8O437Qfx24of8BNkhIgnJ3EVkyxSJpe0G-uA&oe=6AC13583&bitrate=433238&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMWyGx-rjLk8BjD4aRJFIA5SeebE9lEnGxQrNz6ngp8ET_NWXnZSOSUrwhgRVCwGaiQ_5SRr8JINPp__KRW7uR8VBaS35HQ0_3IZOItdA.mp4?_nc_cat=107&_nc_oc=AdpOkuSvxmxOZuVCoTJVTQFjVA8WDLZpQ5yR1inClje4O6jFbpOJ3SS5fve-hlWH4lI&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=9vtVDKLtFowQ7kNvwFgWu_F&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjczNDAzMTU2MDg5MTQ2MjQsImFzc2V0X2FnZV9kYXlzIjoxMjQsInZpX3VzZWNhc2VfaWQiOjEwMTM5LCJkdXJhdGlvbl9zIjo2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNrxcTF2q8O437Qfx24of8BNkhIgnJ3EVkyxSJpe0G-uA&oe=6AC13583&bitrate=433238&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708102201_2859899464375271_1347538836401583655_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2MjCdaRCy1sQ7kNvwHU4Pim&_nc_oc=AdqHkZ10p6C7zYviFf0Q4cYmmGPk3K9QnrWI1izOGI8yC6TrFFL5au5iTwwWTnNWhk8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPdb8BoqFG4HOhGhiKJLWNRLFqXXtyAp8gH81i35jPzIA&oe=6AC13BBF",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708102201_2859899464375271_1347538836401583655_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2MjCdaRCy1sQ7kNvwHU4Pim&_nc_oc=AdqHkZ10p6C7zYviFf0Q4cYmmGPk3K9QnrWI1izOGI8yC6TrFFL5au5iTwwWTnNWhk8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPdb8BoqFG4HOhGhiKJLWNRLFqXXtyAp8gH81i35jPzIA&oe=6AC13BBF",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708102201_2859899464375271_1347538836401583655_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2MjCdaRCy1sQ7kNvwHU4Pim&_nc_oc=AdqHkZ10p6C7zYviFf0Q4cYmmGPk3K9QnrWI1izOGI8yC6TrFFL5au5iTwwWTnNWhk8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPdb8BoqFG4HOhGhiKJLWNRLFqXXtyAp8gH81i35jPzIA&oe=6AC13BBF",
       "isActive": true,
       "daysRunning": 121,
+      "days_active": 121,
       "startDate": "28 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -673,25 +1222,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1345910424133548"
     },
     {
       "id": "fb_1045294477926828",
       "platformAdId": "1045294477926828",
+      "ad_archive_id": "1045294477926828",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO3F6g2I8DYjbY8w2ezzRyFlXVXGpLyXVfc8BJVyiVYb_IuGcda0FyicmqbMNfVNYe0MH2I9Q6oXyXYmpO6kwsHV7PXY6OLa1ckhfXJkw.mp4?_nc_cat=104&_nc_oc=Adq17Z82EKLYAVARCAhSssPH2k3L1lByEZvtddZ0pHRI1sPCtQz0dmXrpPg9rN3QAF8&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Mt4aro2-TFcQ7kNvwH4-3Tc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjAzOTY1MTAyMzYwNjY5MSwiYXNzZXRfYWdlX2RheXMiOjExMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEwOCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNPgEA7cAExfAbtWKCZizwZIkP_dDPR9dWNlsb8m5LI2w&oe=6AC11692&bitrate=414683&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/718967496_982052131344071_3701162944167229251_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FPPB5sVm5-sQ7kNvwHYA94a&_nc_oc=AdoiAOkABTrzNhEWZzHqfF1w2kOP-EDmqclWnEP2YMMZazp5NwMYQ0LXsMpeBbSS5yY&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQP0Em3tbpr9EOl1DLfATuucGoYbDRyEsJ6wAaeTUXHwKw&oe=6AC107E2",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO3F6g2I8DYjbY8w2ezzRyFlXVXGpLyXVfc8BJVyiVYb_IuGcda0FyicmqbMNfVNYe0MH2I9Q6oXyXYmpO6kwsHV7PXY6OLa1ckhfXJkw.mp4?_nc_cat=104&_nc_oc=Adq17Z82EKLYAVARCAhSssPH2k3L1lByEZvtddZ0pHRI1sPCtQz0dmXrpPg9rN3QAF8&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Mt4aro2-TFcQ7kNvwH4-3Tc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjAzOTY1MTAyMzYwNjY5MSwiYXNzZXRfYWdlX2RheXMiOjExMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEwOCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQME9tXjsYRBfeFjgWaUyE8hNs1TIxpDk7mUR12A0t7t2w&oe=6AC14ED2&bitrate=414683&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQO3F6g2I8DYjbY8w2ezzRyFlXVXGpLyXVfc8BJVyiVYb_IuGcda0FyicmqbMNfVNYe0MH2I9Q6oXyXYmpO6kwsHV7PXY6OLa1ckhfXJkw.mp4?_nc_cat=104&_nc_oc=Adq17Z82EKLYAVARCAhSssPH2k3L1lByEZvtddZ0pHRI1sPCtQz0dmXrpPg9rN3QAF8&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Mt4aro2-TFcQ7kNvwH4-3Tc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjAzOTY1MTAyMzYwNjY5MSwiYXNzZXRfYWdlX2RheXMiOjExMSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEwOCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQME9tXjsYRBfeFjgWaUyE8hNs1TIxpDk7mUR12A0t7t2w&oe=6AC14ED2&bitrate=414683&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/718967496_982052131344071_3701162944167229251_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1inNrP73fyoQ7kNvwH1nr72&_nc_oc=AdqFZ4PgkHKFc8wV3sF9DjnfKs9dv07GNonJYKwVI5OnnN2Hp8F97e97RaOx6atABlo&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMbzkChONlR8q9Xrle8AnH0Z_Y2SRvRD_Jg5a8xi9K_oQ&oe=6AC14022",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/718967496_982052131344071_3701162944167229251_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1inNrP73fyoQ7kNvwH1nr72&_nc_oc=AdqFZ4PgkHKFc8wV3sF9DjnfKs9dv07GNonJYKwVI5OnnN2Hp8F97e97RaOx6atABlo&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMbzkChONlR8q9Xrle8AnH0Z_Y2SRvRD_Jg5a8xi9K_oQ&oe=6AC14022",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/718967496_982052131344071_3701162944167229251_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1inNrP73fyoQ7kNvwH1nr72&_nc_oc=AdqFZ4PgkHKFc8wV3sF9DjnfKs9dv07GNonJYKwVI5OnnN2Hp8F97e97RaOx6atABlo&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMbzkChONlR8q9Xrle8AnH0Z_Y2SRvRD_Jg5a8xi9K_oQ&oe=6AC14022",
       "isActive": true,
       "daysRunning": 109,
+      "days_active": 109,
       "startDate": "10 Tháng 6, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -710,25 +1272,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1045294477926828"
     },
     {
       "id": "fb_1600210887743813",
       "platformAdId": "1600210887743813",
+      "ad_archive_id": "1600210887743813",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Solo Ingredientes Naturales para la Verd",
       "description": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "primary_text": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "hook": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cu",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMkbsjZGDUzLQ3CuoT5ICoE8cJeXQnuHCGrVsDHn6LxS6mj3lps9jR_tmGUGn6CGKE6SR4fZHozSujRnQGhWJUh4p_2PZIkyb49eOzZeQ.mp4?_nc_cat=107&_nc_oc=AdqJgXa50teWxYtG9MqvE_RpE0T9_YcGpRgyyUdTZHz9LBDyDSE0U8M8jLRqdCUAflM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=d-fxVLsYtWIQ7kNvwHFRlsf&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI4ODk2ODkxOTYwNzQyMCwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOR3yJyYvughPdWiAdj-Z_UschpntN8vu4ix0JI2mjOqw&oe=6AC0E0E3&bitrate=478240&tag=sve_sd",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/710141478_2433954520436563_6602395784369013233_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1sRcO16-EaQQ7kNvwHq2Ard&_nc_oc=AdowRVMcQW_E8NFmY7lbB0WWFsHdSZi0aowvvMDtQVzdrxE4XdaKPPTxo4wi0F2q4WU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQON5SwQKd5ogzSd7IdM7rb68v6on-O79VHKn4EjSHw0zw&oe=6AC1004A",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMkbsjZGDUzLQ3CuoT5ICoE8cJeXQnuHCGrVsDHn6LxS6mj3lps9jR_tmGUGn6CGKE6SR4fZHozSujRnQGhWJUh4p_2PZIkyb49eOzZeQ.mp4?_nc_cat=107&_nc_oc=AdqJgXa50teWxYtG9MqvE_RpE0T9_YcGpRgyyUdTZHz9LBDyDSE0U8M8jLRqdCUAflM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=d-fxVLsYtWIQ7kNvwHFRlsf&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI4ODk2ODkxOTYwNzQyMCwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOUFlMCm5feNHXHKILUpCgq1GXhbyFlEzPSI0uPl3JmIw&oe=6AC11923&bitrate=478240&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMkbsjZGDUzLQ3CuoT5ICoE8cJeXQnuHCGrVsDHn6LxS6mj3lps9jR_tmGUGn6CGKE6SR4fZHozSujRnQGhWJUh4p_2PZIkyb49eOzZeQ.mp4?_nc_cat=107&_nc_oc=AdqJgXa50teWxYtG9MqvE_RpE0T9_YcGpRgyyUdTZHz9LBDyDSE0U8M8jLRqdCUAflM&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=d-fxVLsYtWIQ7kNvwHFRlsf&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTI4ODk2ODkxOTYwNzQyMCwiYXNzZXRfYWdlX2RheXMiOjEyMiwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjMyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOUFlMCm5feNHXHKILUpCgq1GXhbyFlEzPSI0uPl3JmIw&oe=6AC11923&bitrate=478240&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/710141478_2433954520436563_6602395784369013233_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1sRcO16-EaQQ7kNvwHq2Ard&_nc_oc=AdowRVMcQW_E8NFmY7lbB0WWFsHdSZi0aowvvMDtQVzdrxE4XdaKPPTxo4wi0F2q4WU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMs5w_Ich_HuamBpORu8uNQnagxRRsPIimNzzlS7F8V3w&oe=6AC1388A",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/710141478_2433954520436563_6602395784369013233_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1sRcO16-EaQQ7kNvwHq2Ard&_nc_oc=AdowRVMcQW_E8NFmY7lbB0WWFsHdSZi0aowvvMDtQVzdrxE4XdaKPPTxo4wi0F2q4WU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMs5w_Ich_HuamBpORu8uNQnagxRRsPIimNzzlS7F8V3w&oe=6AC1388A",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/710141478_2433954520436563_6602395784369013233_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1sRcO16-EaQQ7kNvwHq2Ard&_nc_oc=AdowRVMcQW_E8NFmY7lbB0WWFsHdSZi0aowvvMDtQVzdrxE4XdaKPPTxo4wi0F2q4WU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQMs5w_Ich_HuamBpORu8uNQnagxRRsPIimNzzlS7F8V3w&oe=6AC1388A",
       "isActive": true,
       "daysRunning": 120,
+      "days_active": 120,
       "startDate": "29 Tháng 5, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -747,25 +1322,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1600210887743813"
     },
     {
       "id": "fb_922368580347681",
       "platformAdId": "922368580347681",
+      "ad_archive_id": "922368580347681",
+      "advertiser": "True Sea Moss Health",
       "advertiserName": "True Sea Moss Health",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "True Sea Moss Health",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "image",
-      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQP-bPY9KIt9gn-pp_n8ZWwQcnhET0UEHsvhpQ8qL1zJGA&oe=6AC0FD79",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQP-bPY9KIt9gn-pp_n8ZWwQcnhET0UEHsvhpQ8qL1zJGA&oe=6AC0FD79",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOrnR_ohj2_a-EWPV-jZ4JCKGvOU_L7S6NzlDS1OczMPQ&oe=6AC135B9",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOrnR_ohj2_a-EWPV-jZ4JCKGvOU_L7S6NzlDS1OczMPQ&oe=6AC135B9",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOrnR_ohj2_a-EWPV-jZ4JCKGvOU_L7S6NzlDS1OczMPQ&oe=6AC135B9",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/780504061_2309089623234026_494663529512937622_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AKtYUbNUVGEQ7kNvwEpYfvA&_nc_oc=AdpYRU40TEnxA7oY4BOD-XPbxrWFFG_khYUBUXANUzv0UHXgXyvDi6aWbYpdJxZXof8&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOrnR_ohj2_a-EWPV-jZ4JCKGvOU_L7S6NzlDS1OczMPQ&oe=6AC135B9",
       "isActive": true,
       "daysRunning": 38,
+      "days_active": 38,
       "startDate": "21 Tháng 8, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -784,25 +1372,38 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=922368580347681"
     },
     {
       "id": "fb_2218522142294369",
       "platformAdId": "2218522142294369",
+      "ad_archive_id": "2218522142294369",
+      "advertiser": "Maria Gladys",
       "advertiserName": "Maria Gladys",
       "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Maria%20Gladys&background=0D8ABC&color=fff",
       "domain": "trueseamoss.com",
       "siteName": "Maria Gladys",
       "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
       "ctaDomain": "TRUESEAMOSS.COM",
       "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Maria Gladys Online",
       "ctaDescription": "Only Natural Ingredients for Your Body's",
       "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
       "mediaType": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPJu2wm0JsKtyBd5A74qJUv3sNhYTIv7iNyfaAee9Z32M8tHTfb5KM31bN7Z6U0UK72lC_t60cltMrN9PWzgKRDIsK52vnZICFN_c2xxw.mp4?_nc_cat=105&_nc_oc=AdrhJxuMqSpB0pqoACPc2IB15S7zJi5lTKH27abi313lR263zD88vBvBmExNyfy5R-o&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Sd4hNeAiVRMQ7kNvwGruoJ9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjU5OTY0NzE1MDM3ODI3NiwiYXNzZXRfYWdlX2RheXMiOjM1MywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM3LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOOpuBJYi6q1upLZt3ulnNfllVEv613rXOF8B2Un40gGA&oe=6AC0E0F1",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/589948406_1603802330995168_333609197262496171_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yg2M735Ib6EQ7kNvwHFX43V&_nc_oc=AdoxQKHClAaFcY8SemSKCifClKC7Zke1BkBrgBagmweS5MGye-novnKrfBGAb_iC67E&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=HC_DiFPPWJ0H-E_Zm01eUA&_nc_ss=7f20f&oh=00_AQOaDWYDuuG-8UuareU_h5vpIGPx7o2LOsfjtLFA9QlHkw&oe=6AC10993",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPJu2wm0JsKtyBd5A74qJUv3sNhYTIv7iNyfaAee9Z32M8tHTfb5KM31bN7Z6U0UK72lC_t60cltMrN9PWzgKRDIsK52vnZICFN_c2xxw.mp4?_nc_cat=105&_nc_oc=AdrhJxuMqSpB0pqoACPc2IB15S7zJi5lTKH27abi313lR263zD88vBvBmExNyfy5R-o&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Sd4hNeAiVRMQ7kNvwGruoJ9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjU5OTY0NzE1MDM3ODI3NiwiYXNzZXRfYWdlX2RheXMiOjM1MywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM3LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNPBa7A2fBFNov_cesDCP_GfQMIXN8VovguI7rozhz6-w&oe=6AC11931",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPJu2wm0JsKtyBd5A74qJUv3sNhYTIv7iNyfaAee9Z32M8tHTfb5KM31bN7Z6U0UK72lC_t60cltMrN9PWzgKRDIsK52vnZICFN_c2xxw.mp4?_nc_cat=105&_nc_oc=AdrhJxuMqSpB0pqoACPc2IB15S7zJi5lTKH27abi313lR263zD88vBvBmExNyfy5R-o&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Sd4hNeAiVRMQ7kNvwGruoJ9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjU5OTY0NzE1MDM3ODI3NiwiYXNzZXRfYWdlX2RheXMiOjM1MywidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjM3LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQNPBa7A2fBFNov_cesDCP_GfQMIXN8VovguI7rozhz6-w&oe=6AC11931",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/589948406_1603802330995168_333609197262496171_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yg2M735Ib6EQ7kNvwHFX43V&_nc_oc=AdoxQKHClAaFcY8SemSKCifClKC7Zke1BkBrgBagmweS5MGye-novnKrfBGAb_iC67E&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQONmKDvCWKjVcw5pg7NtxSPLVBtQwVnOD-O4j3W5A-HHw&oe=6AC141D3",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/589948406_1603802330995168_333609197262496171_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yg2M735Ib6EQ7kNvwHFX43V&_nc_oc=AdoxQKHClAaFcY8SemSKCifClKC7Zke1BkBrgBagmweS5MGye-novnKrfBGAb_iC67E&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQONmKDvCWKjVcw5pg7NtxSPLVBtQwVnOD-O4j3W5A-HHw&oe=6AC141D3",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/589948406_1603802330995168_333609197262496171_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=yg2M735Ib6EQ7kNvwHFX43V&_nc_oc=AdoxQKHClAaFcY8SemSKCifClKC7Zke1BkBrgBagmweS5MGye-novnKrfBGAb_iC67E&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQONmKDvCWKjVcw5pg7NtxSPLVBtQwVnOD-O4j3W5A-HHw&oe=6AC141D3",
       "isActive": true,
       "daysRunning": 151,
+      "days_active": 151,
       "startDate": "28 Tháng 4, 2026",
       "euReach": 850,
       "targetCountryCodes": [
@@ -821,315 +1422,458 @@
       "pageTotalAds": 6000,
       "adsOnThisLpCount": 540,
       "adsOnThisLpTotal": 1200,
-      "adsOnThisLpPercent": 45
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2218522142294369"
+    },
+    {
+      "id": "fb_1346798846981231",
+      "platformAdId": "1346798846981231",
+      "ad_archive_id": "1346798846981231",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/742997893_3679652925506210_1564906875083275729_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=u3FqYdYLX4wQ7kNvwHZkF1t&_nc_oc=Ado3QgeLeaOu3J9u_S_2gaFF6IOb_xakUeKt7tr8IfI1s44A7EBV75344M4BD-NEcBE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM7j4BLdinLYdJt9wIuI18u70mRbXdINI-wxI75YQlA6g&oe=6AC13D4D",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/742997893_3679652925506210_1564906875083275729_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=u3FqYdYLX4wQ7kNvwHZkF1t&_nc_oc=Ado3QgeLeaOu3J9u_S_2gaFF6IOb_xakUeKt7tr8IfI1s44A7EBV75344M4BD-NEcBE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM7j4BLdinLYdJt9wIuI18u70mRbXdINI-wxI75YQlA6g&oe=6AC13D4D",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/742997893_3679652925506210_1564906875083275729_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=u3FqYdYLX4wQ7kNvwHZkF1t&_nc_oc=Ado3QgeLeaOu3J9u_S_2gaFF6IOb_xakUeKt7tr8IfI1s44A7EBV75344M4BD-NEcBE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM7j4BLdinLYdJt9wIuI18u70mRbXdINI-wxI75YQlA6g&oe=6AC13D4D",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/742997893_3679652925506210_1564906875083275729_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=u3FqYdYLX4wQ7kNvwHZkF1t&_nc_oc=Ado3QgeLeaOu3J9u_S_2gaFF6IOb_xakUeKt7tr8IfI1s44A7EBV75344M4BD-NEcBE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM7j4BLdinLYdJt9wIuI18u70mRbXdINI-wxI75YQlA6g&oe=6AC13D4D",
+      "isActive": true,
+      "daysRunning": 80,
+      "days_active": 80,
+      "startDate": "9 Tháng 7, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 21,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1346798846981231"
+    },
+    {
+      "id": "fb_1526942745453196",
+      "platformAdId": "1526942745453196",
+      "ad_archive_id": "1526942745453196",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/713823462_1127960883736693_4960874988527458523_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=565awfsM0oUQ7kNvwHzMhge&_nc_oc=AdpoMBhCcvRiOFgsLa7ZKNH4-leKLxpANCeasy5RusngxPRjg3Jn0_Dc7k_nO3Qjz2s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPN3iW2Z5KbinFb-y1YgmabSG1p8IlxnUcg7lDQe5V-CQ&oe=6AC13683",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/713823462_1127960883736693_4960874988527458523_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=565awfsM0oUQ7kNvwHzMhge&_nc_oc=AdpoMBhCcvRiOFgsLa7ZKNH4-leKLxpANCeasy5RusngxPRjg3Jn0_Dc7k_nO3Qjz2s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPN3iW2Z5KbinFb-y1YgmabSG1p8IlxnUcg7lDQe5V-CQ&oe=6AC13683",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/713823462_1127960883736693_4960874988527458523_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=565awfsM0oUQ7kNvwHzMhge&_nc_oc=AdpoMBhCcvRiOFgsLa7ZKNH4-leKLxpANCeasy5RusngxPRjg3Jn0_Dc7k_nO3Qjz2s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPN3iW2Z5KbinFb-y1YgmabSG1p8IlxnUcg7lDQe5V-CQ&oe=6AC13683",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/713823462_1127960883736693_4960874988527458523_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=565awfsM0oUQ7kNvwHzMhge&_nc_oc=AdpoMBhCcvRiOFgsLa7ZKNH4-leKLxpANCeasy5RusngxPRjg3Jn0_Dc7k_nO3Qjz2s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPN3iW2Z5KbinFb-y1YgmabSG1p8IlxnUcg7lDQe5V-CQ&oe=6AC13683",
+      "isActive": true,
+      "daysRunning": 115,
+      "days_active": 115,
+      "startDate": "4 Tháng 6, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 22,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1526942745453196"
+    },
+    {
+      "id": "fb_1264389832436061",
+      "platformAdId": "1264389832436061",
+      "ad_archive_id": "1264389832436061",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Solo Ingredientes Naturales para la Verd",
+      "description": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "primary_text": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cuerpo 💚 True Sea Moss gel es un superalimento natural y delicioso con un alto contenido de nutrientes. No se trata de una píldora mágica, sino de aprovechar el poder de ingredientes completamente naturales para descubrir el verdadero potencial de salud de tu cuerpo. ¿Cuáles son los beneficios del Sea Moss?",
+      "hook": "Solo Ingredientes Naturales para la Verdadera Salud de Tu Cu",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPNRtpqY6GMuIRQgCCrFCXfCN5C_aXmvfv6efQ9vZUuAOBHO3MjbFxovQ1vN4VoPBx5AUz3SvTspa9eBwfkuU-l56MHA92ncv_NPzESnA.mp4?_nc_cat=102&_nc_oc=AdpBpLgyZpovLTxlzcoijBHBLapxfFuA0eEDe4PW3zyIUgLNAVLOB5rlo_6wfUh9QpU&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=LmXv56cIAzoQ7kNvwEcP1Fa&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTUwMDk3OTIzNTA2MDUyMiwiYXNzZXRfYWdlX2RheXMiOjEyNCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOwsenOxhNXjfY81Ndgffut6WCx4FJ5Z1CsZgy1_wxjTw&oe=6AC130BC&bitrate=435512&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPNRtpqY6GMuIRQgCCrFCXfCN5C_aXmvfv6efQ9vZUuAOBHO3MjbFxovQ1vN4VoPBx5AUz3SvTspa9eBwfkuU-l56MHA92ncv_NPzESnA.mp4?_nc_cat=102&_nc_oc=AdpBpLgyZpovLTxlzcoijBHBLapxfFuA0eEDe4PW3zyIUgLNAVLOB5rlo_6wfUh9QpU&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=LmXv56cIAzoQ7kNvwEcP1Fa&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTUwMDk3OTIzNTA2MDUyMiwiYXNzZXRfYWdlX2RheXMiOjEyNCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjI5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOwsenOxhNXjfY81Ndgffut6WCx4FJ5Z1CsZgy1_wxjTw&oe=6AC130BC&bitrate=435512&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/707931939_2244336679673221_2061916124402763748_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=axx3WxMKKaIQ7kNvwGq_q81&_nc_oc=AdoBhDHdkwIvGWQCrUSdOYJHbl6wS_6eGZoDPRMXlUNW-dZan7Q7tAe7D8ITEY400xQ&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPIwO16W7VhYOARA52HfdmAnAtH7t7UaqDaWpPv-2Vz-w&oe=6AC12BFA",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/707931939_2244336679673221_2061916124402763748_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=axx3WxMKKaIQ7kNvwGq_q81&_nc_oc=AdoBhDHdkwIvGWQCrUSdOYJHbl6wS_6eGZoDPRMXlUNW-dZan7Q7tAe7D8ITEY400xQ&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPIwO16W7VhYOARA52HfdmAnAtH7t7UaqDaWpPv-2Vz-w&oe=6AC12BFA",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/707931939_2244336679673221_2061916124402763748_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=axx3WxMKKaIQ7kNvwGq_q81&_nc_oc=AdoBhDHdkwIvGWQCrUSdOYJHbl6wS_6eGZoDPRMXlUNW-dZan7Q7tAe7D8ITEY400xQ&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPIwO16W7VhYOARA52HfdmAnAtH7t7UaqDaWpPv-2Vz-w&oe=6AC12BFA",
+      "isActive": true,
+      "daysRunning": 121,
+      "days_active": 121,
+      "startDate": "28 Tháng 5, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 23,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1264389832436061"
+    },
+    {
+      "id": "fb_1037141298984332",
+      "platformAdId": "1037141298984332",
+      "ad_archive_id": "1037141298984332",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPx_kfXiYpwXx2XtQ36kqUKmIIDu6761u8BZKoT1W7NOqXNaN5_YX4w1h27nVbUuCzclQuUC0pP1CGBfIDAGfH6AgmJJxWJuvR_5BVu8Q.mp4?_nc_cat=106&_nc_oc=AdrzZbx5IMdAF-MEnsfb4CiwcHpeDPiCaVb7fBTbj5zXdz1e2JicbgC32Te184zzaB8&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=JZCZGj9IzDUQ7kNvwF525bO&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTcyMzUxNTkyNTY0NjY3MCwiYXNzZXRfYWdlX2RheXMiOjEyNCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPaA7IiNv5gvECKBdkCbpQpWtzk3bpz7_DYqCcXkHqE9A&oe=6AC14454&bitrate=529268&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPx_kfXiYpwXx2XtQ36kqUKmIIDu6761u8BZKoT1W7NOqXNaN5_YX4w1h27nVbUuCzclQuUC0pP1CGBfIDAGfH6AgmJJxWJuvR_5BVu8Q.mp4?_nc_cat=106&_nc_oc=AdrzZbx5IMdAF-MEnsfb4CiwcHpeDPiCaVb7fBTbj5zXdz1e2JicbgC32Te184zzaB8&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=JZCZGj9IzDUQ7kNvwF525bO&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTcyMzUxNTkyNTY0NjY3MCwiYXNzZXRfYWdlX2RheXMiOjEyNCwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjEwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPaA7IiNv5gvECKBdkCbpQpWtzk3bpz7_DYqCcXkHqE9A&oe=6AC14454&bitrate=529268&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708528706_2216500452516405_7923161436177668669_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=E-6M14x8wRcQ7kNvwHW2b7H&_nc_oc=Adp-xUJtCKY4ORRjMic2HnZV07Kw_1yqEioLSEsCiH0QDEBT3XSH3vdhTMsX_4Yr0eY&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOij0UrlMpc9tYw93lV0Li-9fro6sCV_msouda8oP9RYQ&oe=6AC138DA",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708528706_2216500452516405_7923161436177668669_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=E-6M14x8wRcQ7kNvwHW2b7H&_nc_oc=Adp-xUJtCKY4ORRjMic2HnZV07Kw_1yqEioLSEsCiH0QDEBT3XSH3vdhTMsX_4Yr0eY&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOij0UrlMpc9tYw93lV0Li-9fro6sCV_msouda8oP9RYQ&oe=6AC138DA",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/708528706_2216500452516405_7923161436177668669_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=E-6M14x8wRcQ7kNvwHW2b7H&_nc_oc=Adp-xUJtCKY4ORRjMic2HnZV07Kw_1yqEioLSEsCiH0QDEBT3XSH3vdhTMsX_4Yr0eY&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOij0UrlMpc9tYw93lV0Li-9fro6sCV_msouda8oP9RYQ&oe=6AC138DA",
+      "isActive": true,
+      "daysRunning": 121,
+      "days_active": 121,
+      "startDate": "28 Tháng 5, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 24,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1037141298984332"
+    },
+    {
+      "id": "fb_2463374174127880",
+      "platformAdId": "2463374174127880",
+      "ad_archive_id": "2463374174127880",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMAI3J7fUnsjm7hx6-exJjBIma8J9FRgV64E-mF_At_-RxyKeDkEuId2TrSJiX98L196uL3lpT8IrCpBGBzLQDNbCtf6TmOnJak8pScTw.mp4?_nc_cat=110&_nc_oc=Adqey9uaPD3Dz4-Gc4l68ljwjYnhlbX5F_Ag6rgQpeVe0QHamaMAJg5L2koPsd49T0E&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=sDAyQsISJ7gQ7kNvwHMSmnG&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTc4MTk3NjAwMjUwMTkwOSwiYXNzZXRfYWdlX2RheXMiOjEzNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjUyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOanr9bJmJlnGBymcmuJHTuiWNLrfkmtTUMVt1NnJldbw&oe=6AC14460&bitrate=403936&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMAI3J7fUnsjm7hx6-exJjBIma8J9FRgV64E-mF_At_-RxyKeDkEuId2TrSJiX98L196uL3lpT8IrCpBGBzLQDNbCtf6TmOnJak8pScTw.mp4?_nc_cat=110&_nc_oc=Adqey9uaPD3Dz4-Gc4l68ljwjYnhlbX5F_Ag6rgQpeVe0QHamaMAJg5L2koPsd49T0E&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=sDAyQsISJ7gQ7kNvwHMSmnG&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTc4MTk3NjAwMjUwMTkwOSwiYXNzZXRfYWdlX2RheXMiOjEzNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjUyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOanr9bJmJlnGBymcmuJHTuiWNLrfkmtTUMVt1NnJldbw&oe=6AC14460&bitrate=403936&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698919535_1537412911282249_2954092952234951790_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aNNSW0zRfdgQ7kNvwE1VZtr&_nc_oc=Adp01FXFp2-wtWQ3BujZZq_Weup1JqUe7tVMU_UcZs6PuT47ADyLOUPIxdItvGgwu4U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPWrlyz23_WWPIc4MjXAq8fleXIouKkV_JwXKt1EefXdQ&oe=6AC12698",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698919535_1537412911282249_2954092952234951790_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aNNSW0zRfdgQ7kNvwE1VZtr&_nc_oc=Adp01FXFp2-wtWQ3BujZZq_Weup1JqUe7tVMU_UcZs6PuT47ADyLOUPIxdItvGgwu4U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPWrlyz23_WWPIc4MjXAq8fleXIouKkV_JwXKt1EefXdQ&oe=6AC12698",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/698919535_1537412911282249_2954092952234951790_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aNNSW0zRfdgQ7kNvwE1VZtr&_nc_oc=Adp01FXFp2-wtWQ3BujZZq_Weup1JqUe7tVMU_UcZs6PuT47ADyLOUPIxdItvGgwu4U&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQPWrlyz23_WWPIc4MjXAq8fleXIouKkV_JwXKt1EefXdQ&oe=6AC12698",
+      "isActive": true,
+      "daysRunning": 133,
+      "days_active": 133,
+      "startDate": "16 Tháng 5, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 25,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2463374174127880"
+    },
+    {
+      "id": "fb_976069542136393",
+      "platformAdId": "976069542136393",
+      "ad_archive_id": "976069542136393",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/732747718_997630353245812_8705541001124303293_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YjejyN2y0BgQ7kNvwGUuzY9&_nc_oc=AdpRQYDp1V_BK8_Q0Asjt2r0kl4xpnXa7-bD3eDPaa4PqAJfWQc9z5mUdd043vvwPAU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNF1naPzK-FHz7G7-3XYT0hlWuc_kJLxp19nEz4ffvzIA&oe=6AC14767",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/732747718_997630353245812_8705541001124303293_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YjejyN2y0BgQ7kNvwGUuzY9&_nc_oc=AdpRQYDp1V_BK8_Q0Asjt2r0kl4xpnXa7-bD3eDPaa4PqAJfWQc9z5mUdd043vvwPAU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNF1naPzK-FHz7G7-3XYT0hlWuc_kJLxp19nEz4ffvzIA&oe=6AC14767",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/732747718_997630353245812_8705541001124303293_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YjejyN2y0BgQ7kNvwGUuzY9&_nc_oc=AdpRQYDp1V_BK8_Q0Asjt2r0kl4xpnXa7-bD3eDPaa4PqAJfWQc9z5mUdd043vvwPAU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNF1naPzK-FHz7G7-3XYT0hlWuc_kJLxp19nEz4ffvzIA&oe=6AC14767",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/732747718_997630353245812_8705541001124303293_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=YjejyN2y0BgQ7kNvwGUuzY9&_nc_oc=AdpRQYDp1V_BK8_Q0Asjt2r0kl4xpnXa7-bD3eDPaa4PqAJfWQc9z5mUdd043vvwPAU&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNF1naPzK-FHz7G7-3XYT0hlWuc_kJLxp19nEz4ffvzIA&oe=6AC14767",
+      "isActive": true,
+      "daysRunning": 92,
+      "days_active": 92,
+      "startDate": "27 Tháng 6, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 26,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=976069542136393"
+    },
+    {
+      "id": "fb_1361590635838675",
+      "platformAdId": "1361590635838675",
+      "ad_archive_id": "1361590635838675",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNMbleFIw7lGFYVWQ41WngD9hYKC2dZSzWe8h2c3mFj9ekSLjQjXIwLZVv0NzqvxIlRrmiicAiWE0GshJOlTr7zCniRAj0J7KguGEKhcA.mp4?_nc_cat=108&_nc_oc=Adq8EOtq78zNST2FFtE86ybzkLLPyQ6lLgWj1WRCg5M_qXiGnP9AGTyCKtwjaEqoEPQ&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=hpvsD8Nvj5EQ7kNvwFyEt0q&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDI2MjM3OTc1MDY5MDM5NiwiYXNzZXRfYWdlX2RheXMiOjEwNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjYzLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPwJWY5TLLAxM8f5xVaoHcReQ65UHSbBU8xudTmswsLWA&oe=6AC128C2&bitrate=352189&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNMbleFIw7lGFYVWQ41WngD9hYKC2dZSzWe8h2c3mFj9ekSLjQjXIwLZVv0NzqvxIlRrmiicAiWE0GshJOlTr7zCniRAj0J7KguGEKhcA.mp4?_nc_cat=108&_nc_oc=Adq8EOtq78zNST2FFtE86ybzkLLPyQ6lLgWj1WRCg5M_qXiGnP9AGTyCKtwjaEqoEPQ&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=hpvsD8Nvj5EQ7kNvwFyEt0q&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6NDI2MjM3OTc1MDY5MDM5NiwiYXNzZXRfYWdlX2RheXMiOjEwNSwidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjYzLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPwJWY5TLLAxM8f5xVaoHcReQ65UHSbBU8xudTmswsLWA&oe=6AC128C2&bitrate=352189&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/719908261_1365188098805415_7522816745826768049_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KVn8zDVd1NoQ7kNvwHYsgJR&_nc_oc=AdovzvmOI4VmXsnIZRKbFWh95ybC5os10OpiFlohLtx8Cgbqge7ZMVrgaqy9bDeot50&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNaUurSHtR_yke3cokYEZ-RqDoyRVBqpT0IBatli4XRaA&oe=6AC1190D",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/719908261_1365188098805415_7522816745826768049_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KVn8zDVd1NoQ7kNvwHYsgJR&_nc_oc=AdovzvmOI4VmXsnIZRKbFWh95ybC5os10OpiFlohLtx8Cgbqge7ZMVrgaqy9bDeot50&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNaUurSHtR_yke3cokYEZ-RqDoyRVBqpT0IBatli4XRaA&oe=6AC1190D",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/719908261_1365188098805415_7522816745826768049_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=KVn8zDVd1NoQ7kNvwHYsgJR&_nc_oc=AdovzvmOI4VmXsnIZRKbFWh95ybC5os10OpiFlohLtx8Cgbqge7ZMVrgaqy9bDeot50&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQNaUurSHtR_yke3cokYEZ-RqDoyRVBqpT0IBatli4XRaA&oe=6AC1190D",
+      "isActive": true,
+      "daysRunning": 103,
+      "days_active": 103,
+      "startDate": "16 Tháng 6, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 27,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1361590635838675"
+    },
+    {
+      "id": "fb_1914820179182691",
+      "platformAdId": "1914820179182691",
+      "ad_archive_id": "1914820179182691",
+      "advertiser": "Stephanie DB",
+      "advertiserName": "Stephanie DB",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Stephanie%20DB&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "Stephanie DB",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop Stephanie DB Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNI9Mo0d6DQJcEvuwqDZZZnNu4ZWL_oK7njjh5hWKCU_PcwrMR6fvlZnM0xrmDWMkuMMS39v0DAr2gPDkE-pTg50fbbTcDWMHv-3PznDw.mp4?_nc_cat=105&_nc_oc=Adq8J8tWqBE45Lzt4LQtNeSrb-FM9ERr8xmJXKJ8mlqfbuLbI20-biX6gkCkQcY5d8M&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=UPIis0ikUgcQ7kNvwF_Paek&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQxNjM2ODYyNjc3MzA0MSwiYXNzZXRfYWdlX2RheXMiOjI5MiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMAr-nsdoXZJSjzqAVSWAHycwqDWSMWOjguVUlxwE6Y5A&oe=6AC1243D",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQNI9Mo0d6DQJcEvuwqDZZZnNu4ZWL_oK7njjh5hWKCU_PcwrMR6fvlZnM0xrmDWMkuMMS39v0DAr2gPDkE-pTg50fbbTcDWMHv-3PznDw.mp4?_nc_cat=105&_nc_oc=Adq8J8tWqBE45Lzt4LQtNeSrb-FM9ERr8xmJXKJ8mlqfbuLbI20-biX6gkCkQcY5d8M&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=UPIis0ikUgcQ7kNvwF_Paek&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQxNjM2ODYyNjc3MzA0MSwiYXNzZXRfYWdlX2RheXMiOjI5MiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMAr-nsdoXZJSjzqAVSWAHycwqDWSMWOjguVUlxwE6Y5A&oe=6AC1243D",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/749096483_1673619330420189_5284872317791654383_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Jk3RSAifvVEQ7kNvwFllaZr&_nc_oc=AdpEiwpqb4urarT98ezXqdIgeCb5cppPl24YUOXVG-B4WOszl2a6k28n_MbK9-OQWo0&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM5rFS2XxKScuBeLBbUktCpjV4EJ0C2FfFHTw4Iuo_C8g&oe=6AC142A9",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/749096483_1673619330420189_5284872317791654383_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Jk3RSAifvVEQ7kNvwFllaZr&_nc_oc=AdpEiwpqb4urarT98ezXqdIgeCb5cppPl24YUOXVG-B4WOszl2a6k28n_MbK9-OQWo0&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM5rFS2XxKScuBeLBbUktCpjV4EJ0C2FfFHTw4Iuo_C8g&oe=6AC142A9",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/749096483_1673619330420189_5284872317791654383_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Jk3RSAifvVEQ7kNvwFllaZr&_nc_oc=AdpEiwpqb4urarT98ezXqdIgeCb5cppPl24YUOXVG-B4WOszl2a6k28n_MbK9-OQWo0&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQM5rFS2XxKScuBeLBbUktCpjV4EJ0C2FfFHTw4Iuo_C8g&oe=6AC142A9",
+      "isActive": true,
+      "daysRunning": 73,
+      "days_active": 73,
+      "startDate": "16 Tháng 7, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 28,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1914820179182691"
+    },
+    {
+      "id": "fb_914020728320696",
+      "platformAdId": "914020728320696",
+      "ad_archive_id": "914020728320696",
+      "advertiser": "True Sea Moss Health",
+      "advertiserName": "True Sea Moss Health",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0D8ABC&color=fff",
+      "domain": "trueseamoss.com",
+      "siteName": "True Sea Moss Health",
+      "landingUrl": "https://trueseamoss.com/products",
+      "landing_url": "https://trueseamoss.com/products",
+      "ctaDomain": "TRUESEAMOSS.COM",
+      "ctaText": "Mở menu thả xuống\n​",
+      "cta_type": "Mở menu thả xuống\n​",
+      "cta_title": "Shop True Sea Moss Health Online",
+      "ctaDescription": "Only Natural Ingredients for Your Body's",
+      "description": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "primary_text": "Only Natural Ingredients for Your Body's True Health 💚 True Sea Moss gel is a natural tasty superfood with a rich nutrient content. It's not about a magic pill but harnessing the power of all-natural ingredients to discover your body's true health potential. What are the benefits of Sea Moss?",
+      "hook": "Only Natural Ingredients for Your Body's True Health 💚 True ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPWZbE83s7FBcqCGWN2R3_Pxl9NfvxDV4WMyYG9-kLrWFg0eXOdZ6LtUCsNNQuNqsax9pjqd_BS8oknlqb8TIPbNHTdhg2GMWIeQdlDAg.mp4?_nc_cat=105&_nc_oc=AdomqARtppvgmhkcd4w3FZ4XLZfVn7Bfy3XFxANhHqzZnp2gMkB4qUX3HxxYedsdZOo&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=LnD67kZDU18Q7kNvwF6JyrZ&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjE2OTgxNDQzMzgzOTMyNCwiYXNzZXRfYWdlX2RheXMiOjExNywidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjk5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOCKZcRfwd1OIXwFXrU7W7BfWmNo4kZQxrYfOwTds2tCQ&oe=6AC13C15&bitrate=358809&tag=sve_sd",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQPWZbE83s7FBcqCGWN2R3_Pxl9NfvxDV4WMyYG9-kLrWFg0eXOdZ6LtUCsNNQuNqsax9pjqd_BS8oknlqb8TIPbNHTdhg2GMWIeQdlDAg.mp4?_nc_cat=105&_nc_oc=AdomqARtppvgmhkcd4w3FZ4XLZfVn7Bfy3XFxANhHqzZnp2gMkB4qUX3HxxYedsdZOo&_nc_sid=8bf8fe&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=LnD67kZDU18Q7kNvwF6JyrZ&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MjE2OTgxNDQzMzgzOTMyNCwiYXNzZXRfYWdlX2RheXMiOjExNywidmlfdXNlY2FzZV9pZCI6MTAxMzksImR1cmF0aW9uX3MiOjk5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOCKZcRfwd1OIXwFXrU7W7BfWmNo4kZQxrYfOwTds2tCQ&oe=6AC13C15&bitrate=358809&tag=sve_sd",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/716590863_960881553426151_192191794788930834_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aJq65_n98mgQ7kNvwFOT6Va&_nc_oc=AdpbZyI-RIkkHAuZ7XDE0jXMW5wYc3GxCVRNMjBaCtDFx71RZLUcJ2uv-MVmADGB-qE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOixadenZkjIqzVT_21uoIJkxjK5BEB4p52BEu9lGt5bA&oe=6AC1388D",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/716590863_960881553426151_192191794788930834_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aJq65_n98mgQ7kNvwFOT6Va&_nc_oc=AdpbZyI-RIkkHAuZ7XDE0jXMW5wYc3GxCVRNMjBaCtDFx71RZLUcJ2uv-MVmADGB-qE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOixadenZkjIqzVT_21uoIJkxjK5BEB4p52BEu9lGt5bA&oe=6AC1388D",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/716590863_960881553426151_192191794788930834_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=aJq65_n98mgQ7kNvwFOT6Va&_nc_oc=AdpbZyI-RIkkHAuZ7XDE0jXMW5wYc3GxCVRNMjBaCtDFx71RZLUcJ2uv-MVmADGB-qE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=Lz4QI5xuYCmikc0fM8HmCg&_nc_ss=7f20f&oh=00_AQOixadenZkjIqzVT_21uoIJkxjK5BEB4p52BEu9lGt5bA&oe=6AC1388D",
+      "isActive": true,
+      "daysRunning": 115,
+      "days_active": 115,
+      "startDate": "4 Tháng 6, 2026",
+      "euReach": 850,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 29,
+      "adRankPopulation": 1200,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 1200,
+      "pageTotalAds": 6000,
+      "adsOnThisLpCount": 540,
+      "adsOnThisLpTotal": 1200,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=914020728320696"
     }
-  ],
-  "tiktok": {
-    "totalTikToks": 360,
-    "views": "45.4M",
-    "viewsExact": 45400000,
-    "likes": "2.8M",
-    "likesExact": 2800000,
-    "peakMonth": "Feb '26: 4.5M views (+78% New Year Detox Spike)",
-    "timeframe": "24M (2 Years)",
-    "topHashtags": [
-      "#trueseamoss (18.4M)",
-      "#trueseamossgel (12.1M)",
-      "#trueseamossreview (6.8M)",
-      "#trueseamossofficial (4.2M)",
-      "#trueseamosshealth (3.9M)"
-    ],
-    "history": [
-      {
-        "date": "Oct '24",
-        "month": "Oct '24",
-        "views": 2.4,
-        "growth": "+0%"
-      },
-      {
-        "date": "Nov '24",
-        "month": "Nov '24",
-        "views": 2.2,
-        "growth": "-8%"
-      },
-      {
-        "date": "Dec '24",
-        "month": "Dec '24",
-        "views": 1.8,
-        "growth": "-18%"
-      },
-      {
-        "date": "Jan '25",
-        "month": "Jan '25",
-        "views": 5.6,
-        "growth": "+211%"
-      },
-      {
-        "date": "Feb '25",
-        "month": "Feb '25",
-        "views": 6.4,
-        "growth": "+14%"
-      },
-      {
-        "date": "Mar '25",
-        "month": "Mar '25",
-        "views": 5.0,
-        "growth": "-22%"
-      },
-      {
-        "date": "Apr '25",
-        "month": "Apr '25",
-        "views": 4.2,
-        "growth": "-16%"
-      },
-      {
-        "date": "May '25",
-        "month": "May '25",
-        "views": 6.0,
-        "growth": "+43%"
-      },
-      {
-        "date": "Jun '25",
-        "month": "Jun '25",
-        "views": 6.8,
-        "growth": "+13%"
-      },
-      {
-        "date": "Jul '25",
-        "month": "Jul '25",
-        "views": 4.4,
-        "growth": "-35%"
-      },
-      {
-        "date": "Aug '25",
-        "month": "Aug '25",
-        "views": 3.6,
-        "growth": "-18%"
-      },
-      {
-        "date": "Sep '25",
-        "month": "Sep '25",
-        "views": 3.8,
-        "growth": "+6%"
-      },
-      {
-        "date": "Oct '25",
-        "month": "Oct '25",
-        "views": 3.0,
-        "growth": "-21%"
-      },
-      {
-        "date": "Nov '25",
-        "month": "Nov '25",
-        "views": 2.8,
-        "growth": "-7%"
-      },
-      {
-        "date": "Dec '25",
-        "month": "Dec '25",
-        "views": 2.4,
-        "growth": "-14%"
-      },
-      {
-        "date": "Jan '26",
-        "month": "Jan '26",
-        "views": 7.6,
-        "growth": "+217%"
-      },
-      {
-        "date": "Feb '26",
-        "month": "Feb '26",
-        "views": 8.99,
-        "growth": "+18%"
-      },
-      {
-        "date": "Mar '26",
-        "month": "Mar '26",
-        "views": 7.2,
-        "growth": "-20%"
-      },
-      {
-        "date": "Apr '26",
-        "month": "Apr '26",
-        "views": 6.0,
-        "growth": "-17%"
-      },
-      {
-        "date": "May '26",
-        "month": "May '26",
-        "views": 7.99,
-        "growth": "+33%"
-      },
-      {
-        "date": "Jun '26",
-        "month": "Jun '26",
-        "views": 9.59,
-        "growth": "+20%"
-      },
-      {
-        "date": "Jul '26",
-        "month": "Jul '26",
-        "views": 7.0,
-        "growth": "-27%"
-      },
-      {
-        "date": "Aug '26",
-        "month": "Aug '26",
-        "views": 6.0,
-        "growth": "-14%"
-      },
-      {
-        "date": "Sep '26",
-        "month": "Sep '26",
-        "views": 6.4,
-        "growth": "+7%"
-      }
-    ],
-    "history24m": [
-      {
-        "date": "Oct '24",
-        "month": "Oct '24",
-        "views": 2.4,
-        "growth": "+0%"
-      },
-      {
-        "date": "Nov '24",
-        "month": "Nov '24",
-        "views": 2.2,
-        "growth": "-8%"
-      },
-      {
-        "date": "Dec '24",
-        "month": "Dec '24",
-        "views": 1.8,
-        "growth": "-18%"
-      },
-      {
-        "date": "Jan '25",
-        "month": "Jan '25",
-        "views": 5.6,
-        "growth": "+211%"
-      },
-      {
-        "date": "Feb '25",
-        "month": "Feb '25",
-        "views": 6.4,
-        "growth": "+14%"
-      },
-      {
-        "date": "Mar '25",
-        "month": "Mar '25",
-        "views": 5.0,
-        "growth": "-22%"
-      },
-      {
-        "date": "Apr '25",
-        "month": "Apr '25",
-        "views": 4.2,
-        "growth": "-16%"
-      },
-      {
-        "date": "May '25",
-        "month": "May '25",
-        "views": 6.0,
-        "growth": "+43%"
-      },
-      {
-        "date": "Jun '25",
-        "month": "Jun '25",
-        "views": 6.8,
-        "growth": "+13%"
-      },
-      {
-        "date": "Jul '25",
-        "month": "Jul '25",
-        "views": 4.4,
-        "growth": "-35%"
-      },
-      {
-        "date": "Aug '25",
-        "month": "Aug '25",
-        "views": 3.6,
-        "growth": "-18%"
-      },
-      {
-        "date": "Sep '25",
-        "month": "Sep '25",
-        "views": 3.8,
-        "growth": "+6%"
-      },
-      {
-        "date": "Oct '25",
-        "month": "Oct '25",
-        "views": 3.0,
-        "growth": "-21%"
-      },
-      {
-        "date": "Nov '25",
-        "month": "Nov '25",
-        "views": 2.8,
-        "growth": "-7%"
-      },
-      {
-        "date": "Dec '25",
-        "month": "Dec '25",
-        "views": 2.4,
-        "growth": "-14%"
-      },
-      {
-        "date": "Jan '26",
-        "month": "Jan '26",
-        "views": 7.6,
-        "growth": "+217%"
-      },
-      {
-        "date": "Feb '26",
-        "month": "Feb '26",
-        "views": 8.99,
-        "growth": "+18%"
-      },
-      {
-        "date": "Mar '26",
-        "month": "Mar '26",
-        "views": 7.2,
-        "growth": "-20%"
-      },
-      {
-        "date": "Apr '26",
-        "month": "Apr '26",
-        "views": 6.0,
-        "growth": "-17%"
-      },
-      {
-        "date": "May '26",
-        "month": "May '26",
-        "views": 7.99,
-        "growth": "+33%"
-      },
-      {
-        "date": "Jun '26",
-        "month": "Jun '26",
-        "views": 9.59,
-        "growth": "+20%"
-      },
-      {
-        "date": "Jul '26",
-        "month": "Jul '26",
-        "views": 7.0,
-        "growth": "-27%"
-      },
-      {
-        "date": "Aug '26",
-        "month": "Aug '26",
-        "views": 6.0,
-        "growth": "-14%"
-      },
-      {
-        "date": "Sep '26",
-        "month": "Sep '26",
-        "views": 6.4,
-        "growth": "+7%"
-      }
-    ]
-  }
+  ]
 }

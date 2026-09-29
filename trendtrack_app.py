@@ -768,6 +768,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   </div>
 
   <script>
+    const round = (val, decimals = 2) => {
+      if (typeof val !== 'number') val = parseFloat(val) || 0;
+      const factor = Math.pow(10, decimals);
+      return Math.round(val * factor) / factor;
+    };
     let currentData = null;
     let currentAdIndex = 0;
     let trendChartInstance = null;
@@ -974,6 +979,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const url = '/api/scan?query=' + encodeURIComponent(query) + (forceRefresh ? '&refresh=true' : '');
         const res = await fetch(url);
         const data = await res.json();
+        if (data.error) {
+          alert('Lỗi khi quét dữ liệu: ' + data.error);
+          return;
+        }
         currentData = data;
         renderDashboard(data);
       } catch (err) {
