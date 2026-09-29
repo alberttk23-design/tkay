@@ -317,7 +317,14 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#trueseamossofficial (4.2M)",
             "#trueseamosshealth (3.9M)"
         ]
-        peak_str = "Nov '25: 4.8M views (+65% Spike)"
+        peak_str = "Feb '26: 4.5M views (+78% New Year Detox Spike)"
+        # Health & Detox Seasonality (New Year Jan-Feb + Summer Fit May-Jun)
+        multipliers = [
+            0.025, 0.024, 0.020,
+            0.060, 0.070, 0.055, 0.045, 0.065, 0.075, 0.048, 0.040, 0.042,
+            0.032, 0.030, 0.026,
+            0.082, 0.098, 0.078, 0.065, 0.088, 0.105, 0.075, 0.065, 0.070
+        ]
     elif "oodie" in clean_tag:
         tt_views_m = 308.0
         tt_likes_m = 18.5
@@ -328,7 +335,14 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#theoodiesquad (22M)",
             "#theoodiehaul (14M)"
         ]
-        peak_str = "Nov '25: 28.4M views (+82% Q4 Spike)"
+        peak_str = "Nov '25: 28.4M views (+82% Q4 Winter Spike)"
+        # Winter Apparel Seasonality (Cold months Oct-Jan high, Summer May-Aug low)
+        multipliers = [
+            0.055, 0.090, 0.100,
+            0.065, 0.040, 0.030, 0.022, 0.018, 0.015, 0.018, 0.022, 0.035,
+            0.068, 0.115, 0.125,
+            0.075, 0.045, 0.035, 0.025, 0.020, 0.018, 0.020, 0.028, 0.042
+        ]
     elif "momcozy" in clean_tag:
         tt_views_m = 245.0
         tt_likes_m = 14.2
@@ -339,7 +353,14 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#momcozyreview (21M)",
             "#momcozylife (10M)"
         ]
-        peak_str = "Dec '25: 24.1M views (+55% Holiday Spike)"
+        peak_str = "May '26: 24.5M views (+44% Mother's Day Spike)"
+        # Baby & Maternity Seasonality (Mother's Day May + Prime Day Jul)
+        multipliers = [
+            0.038, 0.042, 0.040,
+            0.039, 0.040, 0.044, 0.050, 0.076, 0.052, 0.070, 0.048, 0.050,
+            0.052, 0.056, 0.054,
+            0.056, 0.060, 0.064, 0.068, 0.098, 0.072, 0.092, 0.076, 0.080
+        ]
     elif "ridge" in clean_tag:
         tt_views_m = 175.0
         tt_likes_m = 9.8
@@ -350,7 +371,14 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#ridgewalletreview (12M)",
             "#ridgeedc (8M)"
         ]
-        peak_str = "Nov '25: 19.5M views (+78% Black Friday Spike)"
+        peak_str = "Jun '26: 21.2M views (+100% Father's Day Spike)"
+        # Men's EDC Gifts (Father's Day Jun + Holiday Gift Nov-Dec)
+        multipliers = [
+            0.030, 0.070, 0.064,
+            0.028, 0.030, 0.036, 0.040, 0.044, 0.084, 0.042, 0.038, 0.040,
+            0.044, 0.096, 0.084,
+            0.040, 0.044, 0.048, 0.052, 0.056, 0.112, 0.058, 0.056, 0.060
+        ]
     else:
         tt_views_m = round(max(3.5, total_num * 0.04), 1)
         tt_likes_m = round(tt_views_m * 0.065, 2)
@@ -361,19 +389,19 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             f"#{clean_tag}viral ({round(tt_views_m * 0.10, 1)}M)",
             f"#{clean_tag}haul ({round(tt_views_m * 0.07, 1)}M)"
         ]
-        peak_str = f"Nov '25: {round(tt_views_m * 0.12, 1)}M views (+65% Peak)"
+        peak_str = f"Nov '25: {round(tt_views_m * 0.11, 1)}M views (+55% Peak)"
+        multipliers = [
+            0.025, 0.032, 0.038,
+            0.030, 0.032, 0.038, 0.042, 0.045, 0.048, 0.050, 0.048, 0.052,
+            0.056, 0.085, 0.090,
+            0.058, 0.062, 0.070, 0.075, 0.080, 0.085, 0.088, 0.090, 0.095
+        ]
 
     months_labels = [
         "Oct '24", "Nov '24", "Dec '24",
         "Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25",
         "Oct '25", "Nov '25", "Dec '25",
         "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26", "Jul '26", "Aug '26", "Sep '26"
-    ]
-    multipliers = [
-        0.022, 0.035, 0.041,
-        0.028, 0.030, 0.038, 0.042, 0.045, 0.048, 0.050, 0.049, 0.052,
-        0.058, 0.095, 0.105,
-        0.062, 0.065, 0.075, 0.078, 0.082, 0.088, 0.090, 0.092, 0.100
     ]
 
     history_24m = []
