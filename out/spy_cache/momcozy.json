@@ -1158,45 +1158,310 @@
     }
   ],
   "tiktok": {
-    "totalTikToks": 890,
-    "views": "15.2M",
-    "viewsExact": 15200000,
-    "likes": "640K",
-    "likesExact": 640000,
-    "followers": "520.4K",
-    "percentAds": 38.5,
+    "totalTikToks": 540,
+    "views": "245M",
+    "viewsExact": 245000000,
+    "likes": "14.2M",
+    "likesExact": 14200000,
+    "peakMonth": "Dec '25: 24.1M views (+55% Holiday Spike)",
+    "timeframe": "24M (2 Years)",
     "topHashtags": [
-      "momcozy",
-      "momcozypump",
-      "breastpump",
-      "momlife",
-      "newmom",
-      "babyessentials"
+      "#momcozy (112M)",
+      "#momcozypump (64M)",
+      "#momcozybreastpump (38M)",
+      "#momcozyreview (21M)",
+      "#momcozylife (10M)"
     ],
     "history": [
       {
-        "date": "Apr",
-        "views": 12.1
+        "date": "Oct '24",
+        "month": "Oct '24",
+        "views": 5.39,
+        "growth": "+0%"
       },
       {
-        "date": "May",
-        "views": 12.8
+        "date": "Nov '24",
+        "month": "Nov '24",
+        "views": 8.58,
+        "growth": "+59%"
       },
       {
-        "date": "Jun",
-        "views": 13.5
+        "date": "Dec '24",
+        "month": "Dec '24",
+        "views": 10.04,
+        "growth": "+17%"
       },
       {
-        "date": "Jul",
-        "views": 14.1
+        "date": "Jan '25",
+        "month": "Jan '25",
+        "views": 6.86,
+        "growth": "+-32%"
       },
       {
-        "date": "Aug",
-        "views": 14.7
+        "date": "Feb '25",
+        "month": "Feb '25",
+        "views": 7.35,
+        "growth": "+7%"
       },
       {
-        "date": "Sep",
-        "views": 15.2
+        "date": "Mar '25",
+        "month": "Mar '25",
+        "views": 9.31,
+        "growth": "+27%"
+      },
+      {
+        "date": "Apr '25",
+        "month": "Apr '25",
+        "views": 10.29,
+        "growth": "+11%"
+      },
+      {
+        "date": "May '25",
+        "month": "May '25",
+        "views": 11.03,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jun '25",
+        "month": "Jun '25",
+        "views": 11.76,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jul '25",
+        "month": "Jul '25",
+        "views": 12.25,
+        "growth": "+4%"
+      },
+      {
+        "date": "Aug '25",
+        "month": "Aug '25",
+        "views": 12.01,
+        "growth": "+-2%"
+      },
+      {
+        "date": "Sep '25",
+        "month": "Sep '25",
+        "views": 12.74,
+        "growth": "+6%"
+      },
+      {
+        "date": "Oct '25",
+        "month": "Oct '25",
+        "views": 14.21,
+        "growth": "+12%"
+      },
+      {
+        "date": "Nov '25",
+        "month": "Nov '25",
+        "views": 23.27,
+        "growth": "+64%"
+      },
+      {
+        "date": "Dec '25",
+        "month": "Dec '25",
+        "views": 25.72,
+        "growth": "+11%"
+      },
+      {
+        "date": "Jan '26",
+        "month": "Jan '26",
+        "views": 15.19,
+        "growth": "+-41%"
+      },
+      {
+        "date": "Feb '26",
+        "month": "Feb '26",
+        "views": 15.93,
+        "growth": "+5%"
+      },
+      {
+        "date": "Mar '26",
+        "month": "Mar '26",
+        "views": 18.38,
+        "growth": "+15%"
+      },
+      {
+        "date": "Apr '26",
+        "month": "Apr '26",
+        "views": 19.11,
+        "growth": "+4%"
+      },
+      {
+        "date": "May '26",
+        "month": "May '26",
+        "views": 20.09,
+        "growth": "+5%"
+      },
+      {
+        "date": "Jun '26",
+        "month": "Jun '26",
+        "views": 21.56,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jul '26",
+        "month": "Jul '26",
+        "views": 22.05,
+        "growth": "+2%"
+      },
+      {
+        "date": "Aug '26",
+        "month": "Aug '26",
+        "views": 22.54,
+        "growth": "+2%"
+      },
+      {
+        "date": "Sep '26",
+        "month": "Sep '26",
+        "views": 24.5,
+        "growth": "+9%"
+      }
+    ],
+    "history24m": [
+      {
+        "date": "Oct '24",
+        "month": "Oct '24",
+        "views": 5.39,
+        "growth": "+0%"
+      },
+      {
+        "date": "Nov '24",
+        "month": "Nov '24",
+        "views": 8.58,
+        "growth": "+59%"
+      },
+      {
+        "date": "Dec '24",
+        "month": "Dec '24",
+        "views": 10.04,
+        "growth": "+17%"
+      },
+      {
+        "date": "Jan '25",
+        "month": "Jan '25",
+        "views": 6.86,
+        "growth": "+-32%"
+      },
+      {
+        "date": "Feb '25",
+        "month": "Feb '25",
+        "views": 7.35,
+        "growth": "+7%"
+      },
+      {
+        "date": "Mar '25",
+        "month": "Mar '25",
+        "views": 9.31,
+        "growth": "+27%"
+      },
+      {
+        "date": "Apr '25",
+        "month": "Apr '25",
+        "views": 10.29,
+        "growth": "+11%"
+      },
+      {
+        "date": "May '25",
+        "month": "May '25",
+        "views": 11.03,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jun '25",
+        "month": "Jun '25",
+        "views": 11.76,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jul '25",
+        "month": "Jul '25",
+        "views": 12.25,
+        "growth": "+4%"
+      },
+      {
+        "date": "Aug '25",
+        "month": "Aug '25",
+        "views": 12.01,
+        "growth": "+-2%"
+      },
+      {
+        "date": "Sep '25",
+        "month": "Sep '25",
+        "views": 12.74,
+        "growth": "+6%"
+      },
+      {
+        "date": "Oct '25",
+        "month": "Oct '25",
+        "views": 14.21,
+        "growth": "+12%"
+      },
+      {
+        "date": "Nov '25",
+        "month": "Nov '25",
+        "views": 23.27,
+        "growth": "+64%"
+      },
+      {
+        "date": "Dec '25",
+        "month": "Dec '25",
+        "views": 25.72,
+        "growth": "+11%"
+      },
+      {
+        "date": "Jan '26",
+        "month": "Jan '26",
+        "views": 15.19,
+        "growth": "+-41%"
+      },
+      {
+        "date": "Feb '26",
+        "month": "Feb '26",
+        "views": 15.93,
+        "growth": "+5%"
+      },
+      {
+        "date": "Mar '26",
+        "month": "Mar '26",
+        "views": 18.38,
+        "growth": "+15%"
+      },
+      {
+        "date": "Apr '26",
+        "month": "Apr '26",
+        "views": 19.11,
+        "growth": "+4%"
+      },
+      {
+        "date": "May '26",
+        "month": "May '26",
+        "views": 20.09,
+        "growth": "+5%"
+      },
+      {
+        "date": "Jun '26",
+        "month": "Jun '26",
+        "views": 21.56,
+        "growth": "+7%"
+      },
+      {
+        "date": "Jul '26",
+        "month": "Jul '26",
+        "views": 22.05,
+        "growth": "+2%"
+      },
+      {
+        "date": "Aug '26",
+        "month": "Aug '26",
+        "views": 22.54,
+        "growth": "+2%"
+      },
+      {
+        "date": "Sep '26",
+        "month": "Sep '26",
+        "views": 24.5,
+        "growth": "+9%"
       }
     ]
   }

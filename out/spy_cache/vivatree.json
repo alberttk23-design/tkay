@@ -1,0 +1,162 @@
+{
+  "query": "vivatree",
+  "name": "vivatree",
+  "domain": "vivatree.com",
+  "avatarUrl": "https://ui-avatars.com/api/?name=vivatree&background=0284c7&color=fff",
+  "channels": {
+    "meta": {
+      "active": 30,
+      "total": 180,
+      "delta": 18
+    },
+    "tiktok": {
+      "active": 45,
+      "total": 30
+    },
+    "google": {
+      "active": 6,
+      "total": 30
+    }
+  },
+  "tiktok": {
+    "totalTikToks": 45,
+    "views": "1.2M",
+    "viewsExact": 1200000,
+    "likes": "24K",
+    "likesExact": 24000,
+    "followers": "84K",
+    "percentAds": 31.5,
+    "topHashtags": [
+      "#vivatree",
+      "#vivatreetok",
+      "#vivatreeviral",
+      "#vivatreehaul",
+      "#tiktokmademebuyit"
+    ],
+    "history": [
+      {
+        "date": "Apr",
+        "views": 1.06
+      },
+      {
+        "date": "May",
+        "views": 1.08
+      },
+      {
+        "date": "Jun",
+        "views": 1.12
+      },
+      {
+        "date": "Jul",
+        "views": 1.14
+      },
+      {
+        "date": "Aug",
+        "views": 1.18
+      },
+      {
+        "date": "Sep",
+        "views": 1.2
+      }
+    ]
+  },
+  "kpi": {
+    "activeAds": "30 / 180",
+    "activeAdsDelta": "+18%",
+    "adsLaunched": "42",
+    "adsLaunchedDelta": "+95%",
+    "reach": "13.5M",
+    "spend": "$0.1M",
+    "reachSpendDelta": "+110%"
+  },
+  "kpis": {
+    "ads_launched_30d": "42",
+    "reach_estimate": "13.5M",
+    "spend_estimate": "$0.1M",
+    "velocity_7d": 0,
+    "velocity_14d": 0
+  },
+  "total_all_time": "120",
+  "hero_landing_pages": [
+    {
+      "title": "Official vivatree Collection",
+      "url": "https://vivatree.com",
+      "count": 0,
+      "ratio": "100%"
+    }
+  ],
+  "countriesTargeted": [
+    {
+      "countryCode": "US",
+      "percentage": 52.4
+    },
+    {
+      "countryCode": "GB",
+      "percentage": 24.1
+    },
+    {
+      "countryCode": "AU",
+      "percentage": 14.5
+    },
+    {
+      "countryCode": "CA",
+      "percentage": 9.0
+    }
+  ],
+  "history_points": [
+    {
+      "date": "2026-05-01",
+      "activeAds": 10
+    },
+    {
+      "date": "2026-06-01",
+      "activeAds": 16
+    },
+    {
+      "date": "2026-07-01",
+      "activeAds": 22
+    },
+    {
+      "date": "2026-08-01",
+      "activeAds": 27
+    },
+    {
+      "date": "2026-09-01",
+      "activeAds": 30
+    }
+  ],
+  "historyChart": [
+    {
+      "date": "2026-05-01",
+      "activeAds": 10
+    },
+    {
+      "date": "2026-06-01",
+      "activeAds": 16
+    },
+    {
+      "date": "2026-07-01",
+      "activeAds": 22
+    },
+    {
+      "date": "2026-08-01",
+      "activeAds": 27
+    },
+    {
+      "date": "2026-09-01",
+      "activeAds": 30
+    }
+  ],
+  "velocity": {
+    "7d": 0,
+    "14d": 0,
+    "30d": 0
+  },
+  "advertiserAge": "Verified Brand",
+  "total_active_ads": 30,
+  "scanned_cards_count": 0,
+  "video_ads_count": 0,
+  "image_ads_count": 0,
+  "scaling_winning_ads": 0,
+  "ads": []
+}
