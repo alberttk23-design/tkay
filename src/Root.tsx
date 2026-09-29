@@ -1,25 +1,27 @@
 import "./index.css";
-import { Composition, staticFile } from "remotion";
-import {
-  CaptionedVideo,
-  calculateCaptionedVideoMetadata,
-  captionedVideoSchema,
-} from "./CaptionedVideo";
-
-// Each <Composition> is an entry in the sidebar!
+import { Composition } from "remotion";
+import { FamilyChristmasTVC } from "./FamilyChristmasTVC";
+import { LuxuryTreeCommercial } from "./LuxuryTreeCommercial";
 
 export const RemotionRoot: React.FC = () => {
   return (
-    <Composition
-      id="CaptionedVideo"
-      component={CaptionedVideo}
-      calculateMetadata={calculateCaptionedVideoMetadata}
-      schema={captionedVideoSchema}
-      width={1080}
-      height={1920}
-      defaultProps={{
-        src: staticFile("sample-video.mp4"),
-      }}
-    />
+    <>
+      <Composition
+        id="LuxuryTreeCommercial"
+        component={LuxuryTreeCommercial}
+        durationInFrames={918}
+        fps={60}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="FamilyChristmasTVC"
+        component={FamilyChristmasTVC}
+        durationInFrames={396}
+        fps={24}
+        width={1080}
+        height={1920}
+      />
+    </>
   );
 };

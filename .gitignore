@@ -2,7 +2,16 @@ node_modules
 dist
 .DS_Store
 .env
+__pycache__/
+*.pyc
 
-# Ignore the output video from Git but not videos you import into src/.
-out
+# Ignore heavy video outputs & screenshots
+out/*.mp4
+out/*.png
+out/*.jpg
+out/*.txt
+out/*.json
+!out/spy_cache/
+!out/spy_cache/*.json
+
 whisper.cpp

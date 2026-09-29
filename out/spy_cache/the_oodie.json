@@ -1,0 +1,703 @@
+{
+  "query": "The Oodie",
+  "shopId": "6d2c137a-6101-4e45-b4cc-03b58133b285",
+  "name": "The Oodie",
+  "domain": "theoodie.com",
+  "avatarUrl": "https://r2.trendtrack.io/profile_photos/6d2c137a-6101-4e45-b4cc-03b58133b285.jpg",
+  "channels": {
+    "meta": {
+      "active": 415,
+      "total": 13908,
+      "delta": -21
+    },
+    "tiktok": {
+      "active": 703,
+      "total": 1800
+    },
+    "google": {
+      "active": 373,
+      "total": 2400
+    }
+  },
+  "kpi": {
+    "activeAds": "415 / 14K",
+    "activeAdsDelta": "-21%",
+    "adsLaunched": "5,962",
+    "adsLaunchedDelta": "+143%",
+    "reach": "300.9M",
+    "spend": ".7M",
+    "reachSpendDelta": "+152%"
+  },
+  "countriesTargeted": [
+    {
+      "countryCode": "AU",
+      "count": 47,
+      "percentage": 14.7
+    },
+    {
+      "countryCode": "US",
+      "count": 47,
+      "percentage": 14.7
+    },
+    {
+      "countryCode": "GB",
+      "count": 44,
+      "percentage": 13.8
+    },
+    {
+      "countryCode": "DE",
+      "count": 40,
+      "percentage": 12.5
+    },
+    {
+      "countryCode": "IE",
+      "count": 40,
+      "percentage": 12.5
+    },
+    {
+      "countryCode": "NL",
+      "count": 40,
+      "percentage": 12.5
+    },
+    {
+      "countryCode": "CA",
+      "count": 36,
+      "percentage": 11.3
+    },
+    {
+      "countryCode": "AT",
+      "count": 31,
+      "percentage": 9.7
+    },
+    {
+      "countryCode": "BE",
+      "count": 31,
+      "percentage": 9.7
+    },
+    {
+      "countryCode": "DK",
+      "count": 31,
+      "percentage": 9.7
+    },
+    {
+      "countryCode": "FI",
+      "count": 31,
+      "percentage": 9.7
+    },
+    {
+      "countryCode": "SE",
+      "count": 31,
+      "percentage": 9.7
+    },
+    {
+      "countryCode": "NZ",
+      "count": 17,
+      "percentage": 5.3
+    },
+    {
+      "countryCode": "FR",
+      "count": 15,
+      "percentage": 4.7
+    }
+  ],
+  "historyChart": [
+    {
+      "date": "2026-04-02",
+      "runningAds": 271,
+      "adsLaunched": 10,
+      "reach": 149633
+    },
+    {
+      "date": "2026-04-09",
+      "runningAds": 206,
+      "adsLaunched": 30,
+      "reach": 167007
+    },
+    {
+      "date": "2026-04-16",
+      "runningAds": 270,
+      "adsLaunched": 28,
+      "reach": 124613
+    },
+    {
+      "date": "2026-04-23",
+      "runningAds": 178,
+      "adsLaunched": 21,
+      "reach": 146387
+    },
+    {
+      "date": "2026-04-30",
+      "runningAds": 256,
+      "adsLaunched": 34,
+      "reach": 180926
+    },
+    {
+      "date": "2026-05-07",
+      "runningAds": 326,
+      "adsLaunched": 21,
+      "reach": 213699
+    },
+    {
+      "date": "2026-05-14",
+      "runningAds": 362,
+      "adsLaunched": 44,
+      "reach": 230868
+    },
+    {
+      "date": "2026-05-21",
+      "runningAds": 267,
+      "adsLaunched": 27,
+      "reach": 273130
+    },
+    {
+      "date": "2026-05-28",
+      "runningAds": 94,
+      "adsLaunched": 72,
+      "reach": 158860
+    },
+    {
+      "date": "2026-06-04",
+      "runningAds": 268,
+      "adsLaunched": 32,
+      "reach": 254886
+    },
+    {
+      "date": "2026-06-11",
+      "runningAds": 284,
+      "adsLaunched": 31,
+      "reach": 176742
+    },
+    {
+      "date": "2026-06-18",
+      "runningAds": 470,
+      "adsLaunched": 40,
+      "reach": 212470
+    },
+    {
+      "date": "2026-06-25",
+      "runningAds": 564,
+      "adsLaunched": 44,
+      "reach": 239738
+    },
+    {
+      "date": "2026-07-02",
+      "runningAds": 323,
+      "adsLaunched": 68,
+      "reach": 368925
+    },
+    {
+      "date": "2026-07-09",
+      "runningAds": 435,
+      "adsLaunched": 43,
+      "reach": 226308
+    },
+    {
+      "date": "2026-07-16",
+      "runningAds": 548,
+      "adsLaunched": 9,
+      "reach": 758670
+    },
+    {
+      "date": "2026-07-23",
+      "runningAds": 517,
+      "adsLaunched": 40,
+      "reach": 195333
+    },
+    {
+      "date": "2026-07-30",
+      "runningAds": 516,
+      "adsLaunched": 143,
+      "reach": 520551
+    },
+    {
+      "date": "2026-08-06",
+      "runningAds": 447,
+      "adsLaunched": 51,
+      "reach": 295072
+    },
+    {
+      "date": "2026-08-13",
+      "runningAds": 469,
+      "adsLaunched": 35,
+      "reach": 460451
+    },
+    {
+      "date": "2026-08-20",
+      "runningAds": 418,
+      "adsLaunched": 47,
+      "reach": 276549
+    },
+    {
+      "date": "2026-08-27",
+      "runningAds": 512,
+      "adsLaunched": 47,
+      "reach": 230417
+    },
+    {
+      "date": "2026-09-03",
+      "runningAds": 592,
+      "adsLaunched": 13,
+      "reach": 497173
+    },
+    {
+      "date": "2026-09-10",
+      "runningAds": 613,
+      "adsLaunched": 66,
+      "reach": 856948
+    },
+    {
+      "date": "2026-09-17",
+      "runningAds": 550,
+      "adsLaunched": 61,
+      "reach": 927883
+    },
+    {
+      "date": "2026-09-24",
+      "runningAds": 394,
+      "adsLaunched": 85,
+      "reach": 1580265
+    },
+    {
+      "date": "2026-09-28",
+      "runningAds": 415,
+      "adsLaunched": 34,
+      "reach": 620269
+    }
+  ],
+  "followers": {
+    "total": 1182821,
+    "networks": [
+      {
+        "platform": "instagram",
+        "followers": 483064,
+        "growth30d": 0.013,
+        "profileUrl": "https://instagram.com/the_oodie"
+      },
+      {
+        "platform": "facebook",
+        "followers": 359057,
+        "growth30d": 0.0056,
+        "profileUrl": "https://facebook.com/theofficialoodie"
+      },
+      {
+        "platform": "tiktok",
+        "followers": 340700,
+        "growth30d": null,
+        "profileUrl": "https://www.tiktok.com/@the_oodie"
+      }
+    ],
+    "missingGrowthPlatforms": [
+      "tiktok"
+    ]
+  },
+  "velocity": {
+    "7d": 84,
+    "14d": 115,
+    "30d": 395
+  },
+  "advertiserAge": "Apr 25, 2018 · 8 yr 5 mo",
+  "total_active_ads": 415,
+  "scanned_cards_count": 12,
+  "ads": [
+    {
+      "id": "facebook_1693124685506904",
+      "platformAdId": "1693124685506904",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "theoodie.co.uk",
+      "siteName": "The Oodie UK",
+      "landingUrl": "https://theoodie.co.uk/collections/oodie-sleep-tees",
+      "ctaDomain": "theoodie.co.uk",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "Cool Nights Start Here ☀️",
+      "description": "Too hot for clingy PJs? Too cute for boring loungewear? Say hello to the Oodie Sleep Tee 👋\n\nMade for warm nights, lazy mornings, and all-day lounging ☀️\n\nWhy 300,000+ 5⭐ reviewers are obsessed:\n💨 Breathable bamboo blend = cooling relief\n👚 Oversized fit – soft, stretchy, one-size-fits-most\n🎨 60+ prints to match your mood\n🙌 Side pockets – because snacks are essential\n🧼 Machine washable + dries fast\n\nFrom movie marathons to midnight scrolls, this is the comfy-cute summer staple you'll live in.\n\n👉 Shop now and find your print",
+      "mediaType": "dco",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/42183b5a143878b2ab163712a1664f089e2785cb6dba20aafdb211b2f028ca98.jpg",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/42183b5a143878b2ab163712a1664f089e2785cb6dba20aafdb211b2f028ca98.jpg",
+      "isActive": true,
+      "daysRunning": 0,
+      "startDate": "2026-09-28T07:00:00",
+      "euReach": 2,
+      "targetCountryCodes": [
+        "GB"
+      ],
+      "duplicates": 1,
+      "adOrder": 415,
+      "adRankPopulation": 415,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 252,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 61
+    },
+    {
+      "id": "facebook_3050853575266627",
+      "platformAdId": "3050853575266627",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "fb.me",
+      "siteName": "Facebook - log in or sign up",
+      "landingUrl": "http://fb.me/",
+      "ctaDomain": "fb.me",
+      "ctaText": "SIGN_UP",
+      "ctaDescription": "Your Chance To WIN The Ultimate Oodie™ Bundle 👀",
+      "description": "We’re celebrating cosy season with our biggest giveaway, with 160 bundles of Oodie™ favourites up for grabs.\n\nEach 6-piece bundle includes cosy favourites like:\n\n💗 Oodie™ Originals\n🧥 Puffer Jackets\n☁️ Sherpa Blankets\n🥰 Dressing Gowns & more\n\nFancy an Oodie™ wardrobe refresh?\n\n👇 Sign up to take part",
+      "mediaType": "image",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/a53cba5fc5ade5f263284e757865de93f30716a611aab818756ce536fcaa0380.png",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/a53cba5fc5ade5f263284e757865de93f30716a611aab818756ce536fcaa0380.png",
+      "isActive": true,
+      "daysRunning": 1,
+      "startDate": "2026-09-27T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 293,
+      "adRankPopulation": 415,
+      "adRankDelta7d": null,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_3940525749416020",
+      "platformAdId": "3940525749416020",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "oodie.eu",
+      "siteName": "The Oodie EU",
+      "landingUrl": "https://oodie.eu/collections/limited-promo",
+      "ctaDomain": "oodie.eu",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "🤑 WDYM selected blankets are 30% off? 🤑",
+      "description": "One more blanket won’t hurt... especially at 30% off!\n\nAn offer this good feels like a perfect excuse to save on:\n\n💚 Moss Green Weighted Blanket\n🍫 Chocolate Weighted Blanket\n🐆 Leopard Sherpa Blanket & more\n\nAdds another blanket to the cart 🛒 😁\n\nShop blankets perfect for:�\n😴 A calmer night sleep\n🛋️ Lazy sofa weekends\n🍿 Cosy movie marathons",
+      "mediaType": "image",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/33065a54fa67c8846abe3c1de9e69ef70dc87da1305e167f2b92debeb9af5b3e.png",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/33065a54fa67c8846abe3c1de9e69ef70dc87da1305e167f2b92debeb9af5b3e.png",
+      "isActive": true,
+      "daysRunning": 2,
+      "startDate": "2026-09-26T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 229,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -7,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1655675919516293",
+      "platformAdId": "1655675919516293",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "theoodie.co.uk",
+      "siteName": "The Oodie UK",
+      "landingUrl": "https://theoodie.co.uk/collections/limited-promo",
+      "ctaDomain": "theoodie.co.uk",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "🤩 30% Off Selected Blankets 🤩​",
+      "description": "One more blanket won’t hurt... especially at 30% off!​\n\nAn offer this good feels like a perfect excuse to save on:​\n\n💚 Moss Green Weighted Blanket​\n🍫 Chocolate Weighted Blanket​\n🐆 Leopard Sherpa Blanket & more​\n​\nAdds another blanket to the cart. Shop blankets perfect for:\n\n😴 A calmer night sleep​\n🛋️ Lazy sofa weekends​\n🍿 Cosy movie marathons",
+      "mediaType": "image",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/33065a54fa67c8846abe3c1de9e69ef70dc87da1305e167f2b92debeb9af5b3e.png",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/33065a54fa67c8846abe3c1de9e69ef70dc87da1305e167f2b92debeb9af5b3e.png",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 227,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -25,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_2094007417913897",
+      "platformAdId": "2094007417913897",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "oodie.eu",
+      "siteName": "The Oodie EU",
+      "landingUrl": "https://oodie.eu/collections/limited-promo",
+      "ctaDomain": "oodie.eu",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "🤑 WDYM selected blankets are 30% off? 🤑",
+      "description": "One more blanket won’t hurt... especially at 30% off!\n\nAn offer this good feels like a perfect excuse to save on:\n\n💚 Moss Green Weighted Blanket\n🍫 Chocolate Weighted Blanket\n🐆 Leopard Sherpa Blanket & more\n\nAdds another blanket to the cart 🛒 😁\n\nShop blankets perfect for:\n😴 A calmer night sleep\n🛋️ Lazy sofa weekends\n🍿 Cosy movie marathons",
+      "mediaType": "video",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/video/375718c735a575cf2bb23863f77381028dbcaafdb472ba4480141fc41f1c38ec.mp4",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/thumbnails/df7cef37922ef8f404d74e3b6a04698d5f3f3b325ca771fbb1271d31bd2ad8d9.jpg",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 200,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -21,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1641966510799909",
+      "platformAdId": "1641966510799909",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "theoodie.com",
+      "siteName": "The Oodie",
+      "landingUrl": "https://theoodie.com/collections/cooling-blankets",
+      "ctaDomain": "theoodie.com",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "NEW Cooling Blankets: Hot Sleepers, This Way 🙋",
+      "description": "🤩 Hot sleepers: Turn down the temp, turn up the colour!\n\nNEW Cooling Blankets, are here to add a refreshing look & feel with:\n\n🖤 Black / Charcoal Stripe\n💙 Teal Geo\n💜 Purple Wave\n🩵 Sky Plum\n\nStay on the cool side with Cooling Blankets perfect for: hot sleepers, sofa lounging & more! 🔥 🛋️\n\n❄️ Keep the blanket, lose the heat...",
+      "mediaType": "video",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/video/8d19fa8ce76c57423f8d87fdd4f14e207971036c174bb58ca2d92ea0ac1e45b9.mp4",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/thumbnails/8b2adbac53aa6e23318065c702b91838ca5d7857ff2c1561db08a54d4f579c0c.jpg",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 126,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -12,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1625897145638566",
+      "platformAdId": "1625897145638566",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "oodie.eu",
+      "siteName": "The Oodie EU",
+      "landingUrl": "https://oodie.eu/collections/oodies",
+      "ctaDomain": "oodie.eu",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "So Many Oodie™ Originals To Choose From",
+      "description": "🚨 BREAKING: Your new favourite Oodie™ Original just dropped.\n\nMore colours. More prints. More reasons to never wear normal clothes around the house again.\n\n☁️ Ultra-soft ToastyTek™ fleece\n🔥 Warm Sherpa lining\n🙌 Iconic oversized fit\n🎨 So many designs to choose from\n\nConsider this your official excuse to add another Oodie™ Original to the collection.\n\n👇 Find your new favourite",
+      "mediaType": "image",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/f9bf321779db6f3da6310905800766c861e4944525aa76e2e5eb4fb8a920d1f8.png",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/f9bf321779db6f3da6310905800766c861e4944525aa76e2e5eb4fb8a920d1f8.png",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 223,
+      "adRankPopulation": 415,
+      "adRankDelta7d": 2,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1441519814777464",
+      "platformAdId": "1441519814777464",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "theoodie.co.uk",
+      "siteName": "The Oodie UK",
+      "landingUrl": "https://theoodie.co.uk/collections/limited-offer",
+      "ctaDomain": "theoodie.co.uk",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "🛎️ Buy 1 Get 1 FREE on selected Oodie™ Originals 🛎️",
+      "description": "Comfort has doubled with 2 FOR 1 on selected Oodie™ Originals! 💸\n\nOne for you, one for a friend, or both for you? The choice is yours. All we know is that snuggles are guaranteed. ☺️\n\nOodie™ Originals are perfect for:\n🛋️ Lazy mornings\n🍿 Movie nights\n☁️ Cold days...\nSo, what are you waiting for? 👀\n\nOne thing’s for sure, an offer this good won’t last long!\n\n👇 Shop the deal 👇",
+      "mediaType": "video",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/video/18841c8c9e24393ec66936f74a5c893e53398ba4d43b3f698091f88c01dd7ba0.mp4",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/thumbnails/82a3f72632285101e95dd8e25b929e364c8c62875644b4cc0bdb93f6e5e17f5b.jpg",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 189,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -24,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1069857485650334",
+      "platformAdId": "1069857485650334",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "oodie.eu",
+      "siteName": "The Oodie EU",
+      "landingUrl": "https://oodie.eu/products/black-charcoal-swirl-long-puffer-jacket",
+      "ctaDomain": "oodie.eu",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "Black/Charcoal Swirl Long Puffer Jacket",
+      "description": "You LOVE us inside, now lets go out!\n\n🩵 Take classic Oodie comfort outdoors with cosiness that feels like you never left home:​\n\n🧥 Long Puffer Jackets - Fully reversible with ToastyTek™ lining.​\n\n🤩 Classic Puffer Jackets - Premium look without the spend.​\n\nGet ready to expand your comfort zone with a puffer that offers maximum comfort, with minimum effort! 🤗​\n\n☁️ Cloud-like comfort​\n😍 4 million+ happy customers​\n⭐️ Over 300,000 5 star reviews​\n\nShop Puffer Jackets... 👇",
+      "mediaType": "dpa",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/b7956ace582146860115853eb4ce1cc2ed3a47add16c971aa5908ac4055bb439.jpg",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/b7956ace582146860115853eb4ce1cc2ed3a47add16c971aa5908ac4055bb439.jpg",
+      "isActive": true,
+      "daysRunning": 3,
+      "startDate": "2026-09-25T07:00:00",
+      "euReach": null,
+      "targetCountryCodes": [],
+      "duplicates": null,
+      "adOrder": 249,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -22,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1771331563989840",
+      "platformAdId": "1771331563989840",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "fb.me",
+      "siteName": "Facebook - log in or sign up",
+      "landingUrl": "http://fb.me/",
+      "ctaDomain": "fb.me",
+      "ctaText": "SIGN_UP",
+      "ctaDescription": "Your winter comfort upgrade could be sorted 👀❄️",
+      "description": "We’re celebrating cosy season with our biggest giveaway, with 160 bundles of Oodie™ favourites up for grabs.\n\nEach 6-piece bundle includes cosy favourites like:\n\n💗 Oodie™ Originals\n🧥 Puffer Jackets\n☁️ Sherpa Blankets\n🥰 Dressing Gowns & more\n\nFancy an Oodie™ wardrobe refresh?\n\n👇 Sign up to take part",
+      "mediaType": "video",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/video/c8719cd0fb7f54361f7f7e1e8f5ed97af22d30cad6f43fd3499ec814f7bbf069.mp4",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/thumbnails/b217b4b1f58db2868c327357b6eb83e433ded273db1cf1de114a89d47964c443.jpg",
+      "isActive": true,
+      "daysRunning": 4,
+      "startDate": "2026-09-24T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [],
+      "duplicates": 1,
+      "adOrder": 196,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -49,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1731535381260247",
+      "platformAdId": "1731535381260247",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "theoodie.com",
+      "siteName": "The Oodie",
+      "landingUrl": "https://theoodie.com/collections/limited-offer",
+      "ctaDomain": "theoodie.com",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "💸 Sleep Tees Sale! Double The Comfort, Half the Price 😴",
+      "description": "Buy 1, get 1 free on Sleep Tee!* It’s that simple.\n\nYou heard us right! That’s one for you and another... for you! Perfect for:\n🍿 Movie nights\n🛏️ Soothing sleep\n😴 Chilled mornings\n\nSo whether you’re searching for a gift or honestly... both for you (who can blame you), snap up this limited time offer!\n\n👇 Make it a pair",
+      "mediaType": "dco",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/605599262597738a5368d763df134446f435c6a9ff5184c6dce6e66c45887e73.png",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/605599262597738a5368d763df134446f435c6a9ff5184c6dce6e66c45887e73.png",
+      "isActive": true,
+      "daysRunning": 4,
+      "startDate": "2026-09-24T07:00:00",
+      "euReach": 0,
+      "targetCountryCodes": [
+        "AU"
+      ],
+      "duplicates": 2,
+      "adOrder": 283,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -21,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    },
+    {
+      "id": "facebook_1385584200400525",
+      "platformAdId": "1385584200400525",
+      "advertiserName": "The Oodie",
+      "advertiserAvatarUrl": "https://medias.trendtrack.io/profile_picture/601495866852901.jpg",
+      "domain": "us.theoodie.com",
+      "siteName": "The Oodie USA",
+      "landingUrl": "https://us.theoodie.com/products/sage-oodie-original",
+      "ctaDomain": "us.theoodie.com",
+      "ctaText": "SHOP_NOW",
+      "ctaDescription": "Sage Oodie™ Original",
+      "description": "It said please 🥹🙏☁️​ \nMeet the Oodie™ Original ✨​\n\nThe wearable blanket loved by 9 million+ people worldwide is waiting to come home with you 🥹. Buttery-soft fleece, a Sherpa lining, an oversized hood and a pocket made for the things that matter most on the sofa.​\n\nOnce you try it, you'll understand why people never want to take it off.​\n\n☁️ Cloud-Like Comfort​\n✅ 30 Day Comfort Guarantee​\n🌎 Loved By 9 Million+ Worldwide​\n\n​👇 Shop Oodie™ Originals 👇",
+      "mediaType": "dpa",
+      "mediaUrl": "https://medias.trendtrack.io/facebook/image/f99c4e51568f1bfdc346716753fe24f23fc390333f24b0fb81dbe4e0ada95eca.jpg",
+      "thumbnailUrl": "https://medias.trendtrack.io/facebook/image/f99c4e51568f1bfdc346716753fe24f23fc390333f24b0fb81dbe4e0ada95eca.jpg",
+      "isActive": true,
+      "daysRunning": 4,
+      "startDate": "2026-09-24T07:00:00",
+      "euReach": null,
+      "targetCountryCodes": [],
+      "duplicates": null,
+      "adOrder": 135,
+      "adRankPopulation": 415,
+      "adRankDelta7d": -21,
+      "hasLowImpressions": false,
+      "pageCreatedAt": "2018-04-25T04:49:43",
+      "pageFollowers": 359077,
+      "pageActiveAds": 415,
+      "pageTotalAds": 13908,
+      "adsOnThisLpCount": 31,
+      "adsOnThisLpTotal": 415,
+      "adsOnThisLpPercent": 8
+    }
+  ]
+}
