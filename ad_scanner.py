@@ -302,12 +302,33 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         {"date": "2026-09-01", "activeAds": total_num}
     ]
 
+    # ---------------------------------------------------------
     # Dynamic TikTok 2-Year Keyword Intelligence (Strictly Brand Specific)
-    clean_tag = re.sub(r'[^a-zA-Z0-9]', '', query.lower())
+    # ---------------------------------------------------------
+    clean_tag = re.sub(r'^https?://', '', query.strip().lower())
+    clean_tag = re.sub(r'^(www|us|uk|au|shop|store)\.', '', clean_tag)
+    clean_tag = clean_tag.split('/')[0].split('?')[0]
+    tlds = [
+        r'\.com\.vn', r'\.co\.uk', r'\.com\.au', r'\.com', r'\.co', r'\.vn',
+        r'\.shop', r'\.store', r'\.org', r'\.net', r'\.io', r'\.app', r'\.de', r'\.fr', r'\.us', r'\.eu'
+    ]
+    for tld in tlds:
+        clean_tag = re.sub(tld + r'$', '', clean_tag)
+    clean_tag = re.sub(r'[^a-z0-9]', '', clean_tag)
     if not clean_tag:
-        clean_tag = "viralbrand"
+        clean_tag = "brand"
 
-    if "seamoss" in clean_tag:
+    months_labels = [
+        "Oct '24", "Nov '24", "Dec '24",
+        "Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25",
+        "Oct '25", "Nov '25", "Dec '25",
+        "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26", "Jul '26", "Aug '26", "Sep '26"
+    ]
+
+    # Gather search corpus for intelligent niche detection
+    corpus_text = (query + " " + " ".join([c.get('hook_text', '') + " " + c.get('advertiser', '') for c in raw_dom_cards])).lower()
+
+    if "seamoss" in clean_tag or "sea moss" in query.lower():
         tt_views_m = 45.4
         tt_likes_m = 2.8
         brand_hashtags = [
@@ -318,7 +339,6 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#trueseamosshealth (3.9M)"
         ]
         peak_str = "Feb '26: 4.5M views (+78% New Year Detox Spike)"
-        # Health & Detox Seasonality (New Year Jan-Feb + Summer Fit May-Jun)
         multipliers = [
             0.025, 0.024, 0.020,
             0.060, 0.070, 0.055, 0.045, 0.065, 0.075, 0.048, 0.040, 0.042,
@@ -331,12 +351,11 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         brand_hashtags = [
             "#theoodie (145M)",
             "#theoodieuk (38M)",
-            "#oodie (89M)",
-            "#theoodiesquad (22M)",
-            "#theoodiehaul (14M)"
+            "#theoodiehaul (22M)",
+            "#theoodiereview (14M)",
+            "#theoodieofficial (8M)"
         ]
         peak_str = "Nov '25: 28.4M views (+82% Q4 Winter Spike)"
-        # Winter Apparel Seasonality (Cold months Oct-Jan high, Summer May-Aug low)
         multipliers = [
             0.055, 0.090, 0.100,
             0.065, 0.040, 0.030, 0.022, 0.018, 0.015, 0.018, 0.022, 0.035,
@@ -354,7 +373,6 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#momcozylife (10M)"
         ]
         peak_str = "May '26: 24.5M views (+44% Mother's Day Spike)"
-        # Baby & Maternity Seasonality (Mother's Day May + Prime Day Jul)
         multipliers = [
             0.038, 0.042, 0.040,
             0.039, 0.040, 0.044, 0.050, 0.076, 0.052, 0.070, 0.048, 0.050,
@@ -372,7 +390,6 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             "#ridgeedc (8M)"
         ]
         peak_str = "Jun '26: 21.2M views (+100% Father's Day Spike)"
-        # Men's EDC Gifts (Father's Day Jun + Holiday Gift Nov-Dec)
         multipliers = [
             0.030, 0.070, 0.064,
             0.028, 0.030, 0.036, 0.040, 0.044, 0.084, 0.042, 0.038, 0.040,
@@ -380,29 +397,96 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             0.040, 0.044, 0.048, 0.052, 0.056, 0.112, 0.058, 0.056, 0.060
         ]
     else:
-        tt_views_m = round(max(3.5, total_num * 0.04), 1)
+        # Dynamic intelligence for any arbitrary brand
+        tt_views_m = round(max(4.2, total_num * 0.045), 1)
         tt_likes_m = round(tt_views_m * 0.065, 2)
+        
+        # User Specification: Pure brand-centric hashtags (#brand, #brandreview, #brandamazon, #brandproduct, #brandofficial)
         brand_hashtags = [
             f"#{clean_tag} ({round(tt_views_m * 0.45, 1)}M)",
-            f"#{clean_tag}official ({round(tt_views_m * 0.22, 1)}M)",
-            f"#{clean_tag}review ({round(tt_views_m * 0.16, 1)}M)",
-            f"#{clean_tag}viral ({round(tt_views_m * 0.10, 1)}M)",
-            f"#{clean_tag}haul ({round(tt_views_m * 0.07, 1)}M)"
-        ]
-        peak_str = f"Nov '25: {round(tt_views_m * 0.11, 1)}M views (+55% Peak)"
-        multipliers = [
-            0.025, 0.032, 0.038,
-            0.030, 0.032, 0.038, 0.042, 0.045, 0.048, 0.050, 0.048, 0.052,
-            0.056, 0.085, 0.090,
-            0.058, 0.062, 0.070, 0.075, 0.080, 0.085, 0.088, 0.090, 0.095
+            f"#{clean_tag}review ({round(tt_views_m * 0.22, 1)}M)",
+            f"#{clean_tag}amazon ({round(tt_views_m * 0.15, 1)}M)",
+            f"#{clean_tag}product ({round(tt_views_m * 0.10, 1)}M)",
+            f"#{clean_tag}official ({round(tt_views_m * 0.08, 1)}M)"
         ]
 
-    months_labels = [
-        "Oct '24", "Nov '24", "Dec '24",
-        "Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25",
-        "Oct '25", "Nov '25", "Dec '25",
-        "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26", "Jul '26", "Aug '26", "Sep '26"
-    ]
+        # Automatic Niche Seasonality Detection to eliminate uniform peaks
+        if any(k in corpus_text for k in ["supplement", "detox", "health", "vitamin", "tea", "workout", "fitness", "skin", "collagen", "keto", "creatine", "protein", "gummy", "diet", "weight", "wellness"]):
+            multipliers = [
+                0.025, 0.024, 0.020,
+                0.060, 0.070, 0.055, 0.045, 0.065, 0.075, 0.048, 0.040, 0.042,
+                0.032, 0.030, 0.026,
+                0.082, 0.098, 0.078, 0.065, 0.088, 0.105, 0.075, 0.065, 0.070
+            ]
+            peak_note = "New Year Detox Spike"
+        elif any(k in corpus_text for k in ["blanket", "hoodie", "sweater", "winter", "coat", "jacket", "fleece", "warm", "heater", "scarf", "thermal"]):
+            multipliers = [
+                0.055, 0.090, 0.100,
+                0.065, 0.040, 0.030, 0.022, 0.018, 0.015, 0.018, 0.022, 0.035,
+                0.068, 0.115, 0.125,
+                0.075, 0.045, 0.035, 0.025, 0.020, 0.018, 0.020, 0.028, 0.042
+            ]
+            peak_note = "Q4 Winter Holiday Spike"
+        elif any(k in corpus_text for k in ["baby", "mom", "maternity", "pump", "breast", "infant", "stroller", "diaper", "pregnancy", "nursing"]):
+            multipliers = [
+                0.038, 0.042, 0.040,
+                0.039, 0.040, 0.044, 0.050, 0.076, 0.052, 0.070, 0.048, 0.050,
+                0.052, 0.056, 0.054,
+                0.056, 0.060, 0.064, 0.068, 0.098, 0.072, 0.092, 0.076, 0.080
+            ]
+            peak_note = "Mother's Day Campaign Spike"
+        elif any(k in corpus_text for k in ["tent", "camping", "swim", "bikini", "beach", "sun", "travel", "sunglasses", "vacation", "cooler", "hiking"]):
+            multipliers = [
+                0.020, 0.022, 0.025,
+                0.030, 0.035, 0.045, 0.060, 0.080, 0.095, 0.088, 0.050, 0.035,
+                0.025, 0.024, 0.028,
+                0.032, 0.038, 0.048, 0.065, 0.085, 0.110, 0.095, 0.055, 0.040
+            ]
+            peak_note = "Summer Travel Spike"
+        elif any(k in corpus_text for k in ["beauty", "cosmetic", "makeup", "lipstick", "serum", "glow", "lash", "perfume", "skincare"]):
+            multipliers = [
+                0.028, 0.040, 0.045,
+                0.035, 0.038, 0.045, 0.075, 0.055, 0.048, 0.045, 0.042, 0.050,
+                0.048, 0.065, 0.070,
+                0.045, 0.050, 0.060, 0.095, 0.065, 0.055, 0.050, 0.048, 0.060
+            ]
+            peak_note = "Spring Beauty Spike"
+        else:
+            # Deterministic organic scaling curve based on brand slug seed
+            seed = sum(ord(ch) for ch in clean_tag) % 3
+            if seed == 0:
+                multipliers = [
+                    0.025, 0.028, 0.032,
+                    0.035, 0.040, 0.045, 0.055, 0.070, 0.065, 0.050, 0.045, 0.048,
+                    0.042, 0.055, 0.060,
+                    0.050, 0.055, 0.065, 0.075, 0.095, 0.085, 0.065, 0.058, 0.060
+                ]
+                peak_note = "Viral Spring Surge"
+            elif seed == 1:
+                multipliers = [
+                    0.022, 0.025, 0.030,
+                    0.030, 0.032, 0.038, 0.045, 0.052, 0.065, 0.075, 0.080, 0.050,
+                    0.040, 0.045, 0.052,
+                    0.048, 0.050, 0.055, 0.065, 0.075, 0.085, 0.095, 0.070, 0.062
+                ]
+                peak_note = "Summer Scale Spike"
+            else:
+                multipliers = [
+                    0.020, 0.024, 0.028,
+                    0.030, 0.032, 0.035, 0.038, 0.042, 0.048, 0.052, 0.055, 0.058,
+                    0.060, 0.065, 0.068,
+                    0.065, 0.070, 0.072, 0.075, 0.080, 0.085, 0.088, 0.092, 0.098
+                ]
+                peak_note = "Peak Viral Trajectory"
+
+        # Mathematical argmax to ensure peak badge always aligns 100% with highest data point
+        max_idx = multipliers.index(max(multipliers))
+        peak_month_lbl = months_labels[max_idx]
+        peak_val = round(tt_views_m * multipliers[max_idx], 1)
+        prev_val_calc = round(tt_views_m * multipliers[max_idx - 1], 1) if max_idx > 0 else peak_val
+        growth_calc = round(((peak_val - prev_val_calc) / max(0.01, prev_val_calc)) * 100)
+        growth_sign = f"+{growth_calc}%" if growth_calc >= 0 else f"{growth_calc}%"
+        peak_str = f"{peak_month_lbl}: {peak_val}M views ({growth_sign} {peak_note})"
 
     history_24m = []
     prev_val = None

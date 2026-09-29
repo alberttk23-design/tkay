@@ -8,6 +8,7 @@ Matches 100% of TrendTrack's authentic light SaaS UI, metrics formulas, and data
 
 import os
 import sys
+import re
 import json
 import urllib.parse
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
@@ -124,19 +125,25 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     <header class="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-30 px-6 h-16 flex items-center justify-between gap-4">
       <!-- Quick Search Bar -->
       <form id="topSearchForm" class="flex-1 max-w-lg">
-        <div class="relative">
+        <div class="relative flex items-center">
           <input 
             type="text" 
             id="brandInput" 
             placeholder="Search shops (The Oodie, Ridge, momcozy, True sea moss...)" 
             value="The Oodie"
-            class="w-full h-10 pl-10 pr-24 rounded-xl tt-input text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition font-medium"
+            class="w-full h-10 pl-10 pr-36 rounded-xl tt-input text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition font-medium"
           />
           <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-          <button type="submit" class="absolute right-1 top-1 bottom-1 px-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition cursor-pointer flex items-center gap-1.5 shadow-sm">
-            <span id="btnText">Quét</span>
-            <svg id="btnSpinner" class="hidden animate-spin h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-          </button>
+          <div class="absolute right-1 top-1 bottom-1 flex items-center gap-1">
+            <button type="button" id="btnRefresh" onclick="handleRefresh()" title="Làm mới (Bỏ qua cache & quét lại)" class="px-2.5 h-full rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 text-xs font-semibold transition cursor-pointer flex items-center gap-1 border border-slate-200 shadow-2xs">
+              <svg id="refreshIcon" class="w-3.5 h-3.5 text-slate-500 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              <span class="hidden sm:inline text-[11px]">Làm mới</span>
+            </button>
+            <button type="submit" class="px-3.5 h-full rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <span id="btnText">Quét</span>
+              <svg id="btnSpinner" class="hidden animate-spin h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+            </button>
+          </div>
         </div>
       </form>
 
@@ -176,6 +183,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <span id="shopAge" class="text-slate-500 font-medium">Apr 25, 2018 · 8 yr 5 mo</span>
                 <span>•</span>
                 <span id="shopFollowers" class="text-slate-500 font-medium">415 active ads on Meta</span>
+                <span>•</span>
+                <button type="button" onclick="handleRefresh()" title="Quét lại trực tiếp bỏ qua cache" class="hover:text-blue-600 flex items-center gap-1 text-slate-500 hover:text-blue-600 transition font-semibold cursor-pointer">
+                  <svg class="w-3 h-3 text-slate-400 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                  <span>Làm mới dữ liệu</span>
+                </button>
               </div>
             </div>
           </div>
@@ -928,10 +940,22 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       renderBrandtrackerTable(sorted);
     }
 
+    // Force Refresh Handler (Bypasses Cache)
+    function handleRefresh() {
+      const q = document.getElementById('brandInput').value.trim();
+      if (!q) return;
+      const icon = document.getElementById('refreshIcon');
+      if (icon) icon.classList.add('animate-spin');
+      switchView('explorer');
+      loadBrand(q, true).finally(() => {
+        if (icon) icon.classList.remove('animate-spin');
+      });
+    }
+
     // Load Brand Data for Explorer
-    async function loadBrand(query) {
+    async function loadBrand(query, forceRefresh = false) {
       document.getElementById('btnSpinner').classList.remove('hidden');
-      document.getElementById('btnText').textContent = 'Đang quét...';
+      document.getElementById('btnText').textContent = forceRefresh ? 'Đang làm mới...' : 'Đang quét...';
 
       document.getElementById('shopName').textContent = query;
       document.getElementById('shopDomain').textContent = 'Đang phân tích tên miền...';
@@ -940,14 +964,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <div class="col-span-full py-20 flex flex-col items-center justify-center text-center space-y-4">
           <div class="w-12 h-12 rounded-full border-4 border-blue-500/20 border-t-blue-600 animate-spin"></div>
           <div>
-            <div class="text-base font-bold text-slate-900">Đang quét Meta Ad Library cho: <span class="text-blue-600 font-extrabold">${query}</span>...</div>
+            <div class="text-base font-bold text-slate-900">${forceRefresh ? 'Đang làm mới & quét lại Meta Ad Library cho:' : 'Đang quét Meta Ad Library cho:'} <span class="text-blue-600 font-extrabold">${query}</span>...</div>
             <div class="text-xs text-slate-500 mt-1">Đang bóc tách video creative, link landing page và ngày chạy...</div>
           </div>
         </div>
       `;
 
       try {
-        const res = await fetch('/api/scan?query=' + encodeURIComponent(query));
+        const url = '/api/scan?query=' + encodeURIComponent(query) + (forceRefresh ? '&refresh=true' : '');
+        const res = await fetch(url);
         const data = await res.json();
         currentData = data;
         renderDashboard(data);
@@ -1692,8 +1717,14 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/scan":
             query_params = urllib.parse.parse_qs(parsed.query)
             query = query_params.get("query", ["The Oodie"])[0].strip()
+            force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
 
             clean_q = query.lower().strip()
+            norm_q = re.sub(r'^https?://', '', clean_q)
+            norm_q = re.sub(r'^(www|us|uk|au|shop|store)\.', '', norm_q)
+            norm_q = norm_q.split('/')[0].split('?')[0]
+            clean_brand_slug = re.sub(r'\.(com|co|vn|io|shop|store|org|net|app|us|uk|de|fr|ca|au)$', '', norm_q)
+
             alias_map = {
                 "the oodie": "the_oodie.json",
                 "theoodie": "the_oodie.json",
@@ -1720,21 +1751,23 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             cache_file = None
             if clean_q in alias_map:
                 candidate = os.path.join(CACHE_DIR, alias_map[clean_q])
-                if os.path.exists(candidate):
-                    cache_file = candidate
+                cache_file = candidate
+            elif clean_brand_slug in alias_map:
+                candidate = os.path.join(CACHE_DIR, alias_map[clean_brand_slug])
+                cache_file = candidate
 
             if not cache_file:
                 c1 = os.path.join(CACHE_DIR, f"{clean_q.replace(' ', '_').replace('-', '_')}.json")
-                c2 = os.path.join(CACHE_DIR, f"{clean_q.replace('.com', '').replace(' ', '_')}.json")
+                c2 = os.path.join(CACHE_DIR, f"{clean_brand_slug.replace(' ', '_')}.json")
                 if os.path.exists(c1):
                     cache_file = c1
                 elif os.path.exists(c2):
                     cache_file = c2
                 else:
-                    cache_file = c1
+                    cache_file = c2
 
-            # Check cache first
-            if os.path.exists(cache_file):
+            # Check cache first if not force_refresh
+            if not force_refresh and os.path.exists(cache_file):
                 print(f"⚡ [CACHE HIT] Tải ngay dữ liệu từ: {cache_file}")
                 with open(cache_file, "r", encoding="utf-8") as f:
                     cached_data = f.read()
@@ -1745,7 +1778,7 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.wfile.write(cached_data.encode("utf-8"))
                 return
 
-            print(f"🔍 [LIVE SCAN] Quét Meta Ad Library cho: query='{query}'...")
+            print(f"🔍 [LIVE SCAN / REFRESH] Quét Meta Ad Library cho: query='{query}' (force_refresh={force_refresh})...")
             try:
                 data = scan_brand_ads(query, max_ads=30)
                 with open(cache_file, "w", encoding="utf-8") as f:
