@@ -23,6 +23,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrendTrack - Store & Ad Intelligence</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233b82f6'/%3E%3Cstop offset='50%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='128' height='128' rx='32' fill='url(%23bgGrad)'/%3E%3Ctext x='64' y='88' font-family='-apple-system, BlinkMacSystemFont, sans-serif' font-size='84' font-weight='900' fill='%23ffffff' text-anchor='middle'%3E@%3C/text%3E%3C/svg%3E">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +49,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     <div class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-6">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center font-extrabold text-white shadow-lg shadow-blue-500/25 tracking-tighter">TT</div>
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-indigo-500/30 border border-white/20 select-none">
+            @
+          </div>
           <div>
             <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">TrendTrack</span>
             <span class="text-[10px] uppercase font-bold tracking-wider text-blue-400 ml-2 px-2 py-0.5 rounded-full bg-blue-950/70 border border-blue-800/50">Pro v3</span>
@@ -1359,6 +1364,25 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
             self.wfile.write(HTML_DASHBOARD.encode("utf-8"))
+            return
+
+        if parsed.path in ["/favicon.ico", "/favicon.svg"]:
+            svg_icon = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)"/>
+  <text x="64" y="88" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="84" font-weight="900" fill="#ffffff" text-anchor="middle">@</text>
+</svg>"""
+            self.send_response(200)
+            self.send_header("Content-Type", "image/svg+xml")
+            self.send_header("Cache-Control", "public, max-age=86400")
+            self.end_headers()
+            self.wfile.write(svg_icon.encode("utf-8"))
             return
 
         if parsed.path == "/api/brandtracker":
