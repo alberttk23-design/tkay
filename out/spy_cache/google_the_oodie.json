@@ -1,0 +1,414 @@
+{
+  "brand": "The Oodie",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR07524972952463343617",
+    "advertiser_name": "Davie Group Trading (Australia) Pty Ltd",
+    "country": "AU",
+    "ad_count_min": "46",
+    "ad_count_max": "46"
+  },
+  "total_analyzed": 42,
+  "total_estimated": 1767,
+  "active_ads": 375,
+  "format_mix_total": 1306,
+  "format_mix": {
+    "Text": {
+      "count": 613,
+      "pct": 47.0
+    },
+    "Image": {
+      "count": 496,
+      "pct": 38.0
+    },
+    "Video": {
+      "count": 195,
+      "pct": 15.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 777,
+      "pct": 44.0
+    },
+    "Unknown": {
+      "count": 460,
+      "pct": 26.0
+    },
+    "YouTube": {
+      "count": 212,
+      "pct": 12.0
+    },
+    "Other": {
+      "count": 176,
+      "pct": 10.0
+    },
+    "Shopping": {
+      "count": 141,
+      "pct": 8.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 6,
+      "pct": 14.3
+    },
+    "31-90 d": {
+      "count": 8,
+      "pct": 19.0
+    },
+    "91-180 d": {
+      "count": 9,
+      "pct": 21.4
+    },
+    "181-365 d": {
+      "count": 13,
+      "pct": 31.0
+    },
+    "365 d +": {
+      "count": 6,
+      "pct": 14.3
+    }
+  },
+  "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 887,
+      "pct": 58.0
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 370,
+      "pct": 23.0
+    },
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 274,
+      "pct": 17.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR08321945984397475841",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1091,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 04, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4421747471758750853",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR02776462195247022081",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1091,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 04, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16554349975288460105",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07449520083698712577",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 767,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 23, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13909984466849792826",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06494988238095122433",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 586,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 20, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=733871488049&uiFeatures=12,54&adGroupId=176709377953&itemIds=12558910246276017948&sig=ACiVB_w5D-0SCuI4r0n9MSl81hvGgodV0Q&htmlParentId=fletch-render-10756753178727509666&responseCallback=fletchCallback10756753178727509666",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16247251756189220865",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 586,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 20, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=733796392717&uiFeatures=12,54&adGroupId=170469785170&itemIds=4080769839646769715&sig=ACiVB_ytl8doXDR0pWMAwhu7poIqBODGGg&htmlParentId=fletch-render-1617247393800203136&responseCallback=fletchCallback1617247393800203136",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07407716677380472833",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 369,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 25, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16069633627792270030",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06301735703575265281",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 343,
+      "reach_tag": "50K-100K",
+      "first_shown": "Oct 21, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12643408508466811704",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12102997370866761729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2191287240668121637",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00553042236963553281",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 299,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/237346350068266837",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00803382342910476289",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 285,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 18, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4663852576140301597",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR02083518193254531073",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 221,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=797852906308&uiFeatures=12,54&adGroupId=196546312474&itemIds=17296704038798540074&sig=ACiVB_ywqaPHjjPFWE2PHCavnvKsVxrfvQ&htmlParentId=fletch-render-16352029951588026689&responseCallback=fletchCallback16352029951588026689",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR01847612475957051393",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 221,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10128344603168232269",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR01880634108674048001",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 221,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=1462291200&creativeId=797858150329&uiFeatures=12,54&adGroupId=196211246849&itemIds=9355086779278744828&sig=ACiVB_wwL7pXj4C_QSHGor-DnOrJSwKlLg&htmlParentId=fletch-render-2686861832588466725&responseCallback=fletchCallback2686861832588466725",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06537457690761756673",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 220,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6290662769352556723",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15412572613658017793",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 198,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 15, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=798885965241&uiFeatures=12,54&adGroupId=193319772946&assets=%3DH4sIAAAAAAAAAOPS4eLk-DX975WnnAKsXJwc_x8fXvmUU4CRi5OjddqHvnYWATYuTo4pT8CizAAEbZ4QLgAAAA&sig=ACiVB_xU0bIBNr6JE8c91SVzUJW1YlwCbA&htmlParentId=fletch-render-18075978381710955660&responseCallback=fletchCallback18075978381710955660",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR17025161996686852097",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 196,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 16, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6648315082783044368",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15053253862968262657",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 193,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11335357973154502976",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR03022183501953761281",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 189,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3477502403220840793",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16735376292618174465",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 187,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 26, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=801727296610&uiFeatures=12,54&adGroupId=193877863199&versionId=1&assets=%3DH4sIAAAAAAAAAAEuANH_CiwKCQjz-cz_pAUQAwoJCKaK-8y2BBABCgkIhZbwjocEEAYKCQiyyf3OhAUQBX-7EYQuAAAA&sig=ACiVB_wYHT69wlnRPUe7otupLfhE8VeUHg&htmlParentId=fletch-render-8148791017129006180&responseCallback=fletchCallback8148791017129006180",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11485284479887474689",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 168,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 14, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7795105661171684295",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07700943577966182401",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 164,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 18, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11470191245508561454",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR08459954046805999617",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 162,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 20, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=805199144845&uiFeatures=12,54&adGroupId=196149981780&assets=%3DH4sIAAAAAAAAAAFCAL3_CkAKCQjbla36lQoQAgoICO27oI4-EAEKCQiM2tKZiQQQKQoJCJjqopydChAMCggIlKiXt0YQKAoJCK28ipipBBAGAPvgOEIAAAA&allowedVariations=46&sig=ACiVB_yI8R0VBpIoy4JrSvSfdGRTda5bbw&htmlParentId=fletch-render-3295630719046520560&responseCallback=fletchCallback3295630719046520560",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR02782473130826792961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 147,
+      "reach_tag": "Global ads",
+      "first_shown": "May 05, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=1462291200&creativeId=807712456749&uiFeatures=12,54&adGroupId=201842868128&itemIds=13851446237403837397&sig=ACiVB_yXcJy9YDK45JrjNsqF1NvScY6c_w&htmlParentId=fletch-render-5651236080935303626&responseCallback=fletchCallback5651236080935303626",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06091998182630227969",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 147,
+      "reach_tag": "Global ads",
+      "first_shown": "May 05, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=807739071109&uiFeatures=12,54&adGroupId=196528644695&itemIds=7019005456294304496&sig=ACiVB_xUH9J6hWAg_5e2z8Z-hswZ1sPMOw&htmlParentId=fletch-render-6052711900864797814&responseCallback=fletchCallback6052711900864797814",
+      "headline": "The Oodie - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T20:50:02.780619"
+}

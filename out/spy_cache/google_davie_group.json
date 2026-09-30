@@ -1,0 +1,333 @@
+{
+  "brand": "Davie Group",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR07524972952463343617",
+    "advertiser_name": "Davie Group Trading (Australia) Pty Ltd",
+    "country": "AU",
+    "ad_count_min": "3000",
+    "ad_count_max": "4000"
+  },
+  "total_analyzed": 120,
+  "total_estimated": "4000",
+  "active_ads": 120,
+  "format_mix": {
+    "Video": {
+      "count": 3,
+      "pct": 2.5
+    },
+    "Text": {
+      "count": 69,
+      "pct": 57.5
+    },
+    "Image": {
+      "count": 48,
+      "pct": 40.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 69,
+      "pct": 57.5
+    },
+    "Other": {
+      "count": 48,
+      "pct": 40.0
+    },
+    "YouTube": {
+      "count": 3,
+      "pct": 2.5
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 36,
+      "pct": 30.0
+    },
+    "31-90 d": {
+      "count": 21,
+      "pct": 17.5
+    },
+    "91-180 d": {
+      "count": 15,
+      "pct": 12.5
+    },
+    "181-365 d": {
+      "count": 42,
+      "pct": 35.0
+    },
+    "365 d +": {
+      "count": 6,
+      "pct": 5.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR16317311279901442049",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1083,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 12, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12216774621335013310",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16317311279901442049",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1083,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 12, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12216774621335013310",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16317311279901442049",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1083,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 12, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12216774621335013310",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR09433369257292333057",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 383,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=773554257035&uiFeatures=12,54&adGroupId=186099274998&itemIds=18206918055459477518&overlay=%3DH4sIAAAAAAAAALMSMxLhEuLku-F3rvH76j-CU0L3PeRVSdT2kuESSC4udsksLshJrAwuKcrMSxfi4GJzz89Pz0n1UuGSKM7ILyjIzEt3TPFPS0stci5KTSzJLEs1EOKwYuN4winEyOqliFOVoRCrFTPHOm48BhmBDfrFBDLoOjOXeEFRfkppcoljSnFQal5KKshBLokliUK7mb12MHdduX2J_y0Tl1gQFwejEBvH--a_V9iyODjYBRgkGBUYuGKzODi4IexDTAEwbwgwSmz8Z6Ykn1FSUlBspa9fXl6ulw6W0UvOz9WHOUzDyEpWwEDCwIHBgyHAIMIgccqbv6ssInV6i5g4mIuYOFi4lKXEeQ9_rXAQcJJi0TAz01R4Nfn7t6UdD9ZpwN3AKMTKxezuFCBlx2XmlJOYnK3vk5pfkFiUouCTn5euEFAK8ruCV2JydmqJwqOGyQrB-r5gOiQjVcE_PyUzVYBZQkKDWYmT48DeWfoajBZsWrZcPHBZhVBvgafrnxZKaYCcnZlWGe_uFG9oYmlmYGxobGpsZG5pFG9qamRqYWloZm5iaWZhYWTOpS1wh1viDrfDK2aPs4wBHSwRL1kTFaLXHTeuvnq7iImDEebBIiYOLrAvZjBqPGFMYpjEyCTAOAkU5nZcVhyMQhqMTMwsrGzsHJxc3Dy8fPwCgkLCIqJi4hKSUtIysnLyCopKyiqqauoaWjwcjBKMGjMYC5g3MCoLsAAAlGuaRX8CAAA&sig=ACiVB_xD_sFDa3jRoRzJT6A9rOfaTsLtAw&htmlParentId=fletch-render-12099217041183520848&responseCallback=fletchCallback12099217041183520848",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR09433369257292333057",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 383,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=773554257035&uiFeatures=12,54&adGroupId=186099274998&itemIds=18206918055459477518&overlay=%3DH4sIAAAAAAAAALMSMxLhEuLku-F3rvH76j-CU0L3PeRVSdT2kuESSC4udsksLshJrAwuKcrMSxfi4GJzz89Pz0n1UuGSKM7ILyjIzEt3TPFPS0stci5KTSzJLEs1EOKwYuN4winEyOqliFOVoRCrFTPHOm48BhmBDfrFBDLoOjOXeEFRfkppcoljSnFQal5KKshBLokliUK7mb12MHdduX2J_y0Tl1gQFwejEBvH--a_V9iyODjYBRgkGBUYuGKzODi4IexDTAEwbwgwSmz8Z6Ykn1FSUlBspa9fXl6ulw6W0UvOz9WHOUzDyEpWwEDCwIHBgyHAIMIgccqbv6ssInV6i5g4mIuYOFi4lKXEeQ9_rXAQcJJi0TAz01R4Nfn7t6UdD9ZpwN3AKMTKxezuFCBlx2XmlJOYnK3vk5pfkFiUouCTn5euEFAK8ruCV2JydmqJwqOGyQrB-r5gOiQjVcE_PyUzVYBZQkKDWYmT48DeWfoajBZsWrZcPHBZhVBvgafrnxZKaYCcnZlWGe_uFG9oYmlmYGxobGpsZG5pFG9qamRqYWloZm5iaWZhYWTOpS1wh1viDrfDK2aPs4wBHSwRL1kTFaLXHTeuvnq7iImDEebBIiYOLrAvZjBqPGFMYpjEyCTAOAkU5nZcVhyMQhqMTMwsrGzsHJxc3Dy8fPwCgkLCIqJi4hKSUtIysnLyCopKyiqqauoaWjwcjBKMGjMYC5g3MCoLsAAAlGuaRX8CAAA&sig=ACiVB_xD_sFDa3jRoRzJT6A9rOfaTsLtAw&htmlParentId=fletch-render-1044293341194143694&responseCallback=fletchCallback1044293341194143694",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR09433369257292333057",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 383,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=773554257035&uiFeatures=12,54&adGroupId=186099274998&itemIds=18206918055459477518&overlay=%3DH4sIAAAAAAAAALMSMxLhEuLku-F3rvH76j-CU0L3PeRVSdT2kuESSC4udsksLshJrAwuKcrMSxfi4GJzz89Pz0n1UuGSKM7ILyjIzEt3TPFPS0stci5KTSzJLEs1EOKwYuN4winEyOqliFOVoRCrFTPHOm48BhmBDfrFBDLoOjOXeEFRfkppcoljSnFQal5KKshBLokliUK7mb12MHdduX2J_y0Tl1gQFwejEBvH--a_V9iyODjYBRgkGBUYuGKzODi4IexDTAEwbwgwSmz8Z6Ykn1FSUlBspa9fXl6ulw6W0UvOz9WHOUzDyEpWwEDCwIHBgyHAIMIgccqbv6ssInV6i5g4mIuYOFi4lKXEeQ9_rXAQcJJi0TAz01R4Nfn7t6UdD9ZpwN3AKMTKxezuFCBlx2XmlJOYnK3vk5pfkFiUouCTn5euEFAK8ruCV2JydmqJwqOGyQrB-r5gOiQjVcE_PyUzVYBZQkKDWYmT48DeWfoajBZsWrZcPHBZhVBvgafrnxZKaYCcnZlWGe_uFG9oYmlmYGxobGpsZG5pFG9qamRqYWloZm5iaWZhYWTOpS1wh1viDrfDK2aPs4wBHSwRL1kTFaLXHTeuvnq7iImDEebBIiYOLrAvZjBqPGFMYpjEyCTAOAkU5nZcVhyMQhqMTMwsrGzsHJxc3Dy8fPwCgkLCIqJi4hKSUtIysnLyCopKyiqqauoaWjwcjBKMGjMYC5g3MCoLsAAAlGuaRX8CAAA&sig=ACiVB_xD_sFDa3jRoRzJT6A9rOfaTsLtAw&htmlParentId=fletch-render-8250290949006641314&responseCallback=fletchCallback8250290949006641314",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12102997370866761729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2191287240668121637",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14356736748833210369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982445522466119562",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16082328439406723073",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=786435169431&uiFeatures=12,54&adGroupId=187271807697&itemIds=5879778708165601739&sig=ACiVB_yPvIAcfjUybzEsW9ETtGD0G0fzAg&htmlParentId=fletch-render-10910814261745740775&responseCallback=fletchCallback10910814261745740775",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12102997370866761729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2191287240668121637",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14356736748833210369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982445522466119562",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16082328439406723073",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=786435169431&uiFeatures=12,54&adGroupId=187271807697&itemIds=5879778708165601739&sig=ACiVB_yPvIAcfjUybzEsW9ETtGD0G0fzAg&htmlParentId=fletch-render-8640652451222520053&responseCallback=fletchCallback8640652451222520053",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12102997370866761729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2191287240668121637",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14356736748833210369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982445522466119562",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16082328439406723073",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 301,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 02, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=786435169431&uiFeatures=12,54&adGroupId=187271807697&itemIds=5879778708165601739&sig=ACiVB_yPvIAcfjUybzEsW9ETtGD0G0fzAg&htmlParentId=fletch-render-8823567911008830229&responseCallback=fletchCallback8823567911008830229",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00803382342910476289",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 285,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 18, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4663852576140301597",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00803382342910476289",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 285,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 18, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4663852576140301597",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00803382342910476289",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 285,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 18, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4663852576140301597",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR13641882941842784257",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 265,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jan 06, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3765891023&creativeId=791328299995&uiFeatures=12,54&adGroupId=191116944213&itemIds=17804764517232059496&overlay=%3DH4sIAAAAAAAAAH2RX0sUURjG95zZP2fPah5H03Fba9Rdnax0HN1xHbJ0E9e2SEkF62YZd8_ujq0748zo4p1BV0EQ1lXkVUHQhVqfQPIbRFCQBAVeRIFBiJAkMSt6Z3fvw_vwPr-HV6mTajHrz7_kXh0o9XvV2Rc3w8P3d3aTIUzSljWkWUZBXRy3Ta2YYxH2JnQ9V6DJMOasvG4YWjE3mBnNZql5zaSqrS1QkUWKF31lWOBJNp3o6mI9CoNWA8nIiRaJ9Ss-tOpnIQP_k9ddzvsDnbxnblxvmHpmPm0PZqzbtJihDveQaqvsAZPcZx5--Py-ap3BNXd9CMd-bf4GMwj5iIsDvAs_cETgULyDpaOuBHBvDuTm4bxtG5bS2VkqlTpy5U1HWp_ttKhqpvNX7enZfoewda6_qOXydkQSMya1rIgkFvRiLiKJVoHSBSpISiMROXHANeIaE6dE9enPv69jdy4-MiFiTIjcODSDEHNIMQOR-y0IoI2950ES5qEAcEOwsnJz9_EAqQq6ha7o-WN-wHowk4iPBa_jwXhBTd_j4_O2rRcvTRp8XJ2d1nV-vECpwU9Qyt9yEMt8h6NG-W9LT_iJPOVH9YxGCeQ4ATb70cbKJyKAmLf9Mq443vKTN8j22vZcsM1prGUXU4l4Su6TZbEn1hvtkvt6UtFotyzLUakvFu2VRKkXXyBbAW4rMLAPR36AsR3P1IpPhXUJ43vqy0cTInBU34QIl_ssAWEJTLuWASRg2XnbFawgwAoAMm6P14f8OFBReaqKVLM1tafr6rmG4JlQ49lzfFNzSzjS2ia0VyDAOTcMZh20EPc_FiEz7OkCAAA&sig=ACiVB_x4yGB8y17QHEYRqjlNY1U9jOT8IA&htmlParentId=fletch-render-17796988450428813087&responseCallback=fletchCallback17796988450428813087",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06801689713808769025",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 265,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jan 06, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17398192347039741222",
+      "headline": "Davie Group - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T19:59:28.179453"
+}

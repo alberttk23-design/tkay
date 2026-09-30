@@ -14,4 +14,8 @@ out/*.json
 !out/spy_cache/
 !out/spy_cache/*.json
 
+/*.png
+!static/
+!static/**
+
 whisper.cpp

@@ -1,0 +1,316 @@
+{
+  "brand": "Ridge",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR12833707853516636161",
+    "advertiser_name": "RIDGEWEL",
+    "country": "FR",
+    "ad_count_min": "19",
+    "ad_count_max": "19"
+  },
+  "total_analyzed": 19,
+  "total_estimated": "19",
+  "active_ads": 13,
+  "format_mix": {
+    "Video": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Text": {
+      "count": 1,
+      "pct": 5.3
+    },
+    "Image": {
+      "count": 18,
+      "pct": 94.7
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 1,
+      "pct": 5.3
+    },
+    "Other": {
+      "count": 18,
+      "pct": 94.7
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "31-90 d": {
+      "count": 2,
+      "pct": 10.5
+    },
+    "91-180 d": {
+      "count": 1,
+      "pct": 5.3
+    },
+    "181-365 d": {
+      "count": 7,
+      "pct": 36.8
+    },
+    "365 d +": {
+      "count": 9,
+      "pct": 47.4
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR01472887823605432321",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 440,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7326616550255672776",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11701147517549805569",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 440,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 15, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15524775929402115038",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR08276661378236809217",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 440,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5746786495167151443",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16755391364203544577",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 439,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/196709030494745080",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12263644197302566913",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 439,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14731790960126344264",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06122951195888713729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 438,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15916331676956022497",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11984379814489358337",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 432,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 23, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17563877200848113167",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16954037750581952513",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 427,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 24, 2025",
+      "last_shown": "Sep 24, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4661694238890884072",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05623151787297996801",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 420,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 28, 2025",
+      "last_shown": "Sep 22, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4283143493474326537",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11100236719021096961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 307,
+      "reach_tag": "50K-100K",
+      "first_shown": "Nov 24, 2025",
+      "last_shown": "Sep 28, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4283474518623504703",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12717741056465043457",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 270,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 18, 2025",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1105619484011576302",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR04874049747880509441",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 270,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 18, 2025",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2874028139677606109",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10546119168275513345",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 252,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16114371105385410816",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR17864776151130439681",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 231,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 09, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2781303469948153643",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00238965391869607937",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 231,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 09, 2026",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10483715571417811676",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR01445780489704046593",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 216,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 10, 2026",
+      "last_shown": "Sep 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12053013949798707141",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15100955599413706753",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 117,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "Nov 12, 2025",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7212746256820774550",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12969119539475251201",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 84,
+      "reach_tag": "Global ads",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13909401511124009407",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14131048243336839169",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 84,
+      "reach_tag": "Global ads",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2962920039956842729",
+      "headline": "Ridge - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T19:30:07.774990"
+}

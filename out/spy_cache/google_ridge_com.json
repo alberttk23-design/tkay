@@ -1,0 +1,134 @@
+{
+  "brand": "ridge.com",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR05987014295559340033",
+    "advertiser_name": "Blue Ridge Company",
+    "country": "US",
+    "ad_count_min": "5",
+    "ad_count_max": "5"
+  },
+  "total_analyzed": 5,
+  "total_estimated": "5",
+  "active_ads": 1,
+  "format_mix": {
+    "Video": {
+      "count": 1,
+      "pct": 20.0
+    },
+    "Text": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Image": {
+      "count": 4,
+      "pct": 80.0
+    }
+  },
+  "platform_mix": {
+    "Other": {
+      "count": 4,
+      "pct": 80.0
+    },
+    "YouTube": {
+      "count": 1,
+      "pct": 20.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "31-90 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "91-180 d": {
+      "count": 1,
+      "pct": 20.0
+    },
+    "181-365 d": {
+      "count": 1,
+      "pct": 20.0
+    },
+    "365 d +": {
+      "count": 3,
+      "pct": 60.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR10283494519559159809",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 933,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 26, 2023",
+      "last_shown": "May 16, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13539605617028217149",
+      "headline": "ridge.com - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR13909701872467312641",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 841,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 26, 2023",
+      "last_shown": "Feb 13, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3390872920837616601",
+      "headline": "ridge.com - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06070513287336820737",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 437,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 18, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2115046147&creativeId=764599310081&uiFeatures=12,54&adGroupId=182952896335&versionId=1&assets=%3DH4sIAAAAAAAAAONy5OLkWLFq_9pr7ALMXJwcl-91fNzNJcCDEGXi4uDYc_37X2YBTS5OjsO3v3T-ZhZg4-LkeDH91Mq_jAKMAB-Q03pDAAAA&sig=ACiVB_x-3S_xcB7Dcg3C5LRnW-Hs3grixw&htmlParentId=fletch-render-3726921641903625098&responseCallback=fletchCallback3726921641903625098",
+      "headline": "ridge.com - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11570066215187513345",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 231,
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 08, 2025",
+      "last_shown": "Mar 27, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/262819202872523317",
+      "headline": "ridge.com - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR04746700462860795905",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 156,
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 08, 2025",
+      "last_shown": "Jan 11, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17458125407124070287",
+      "headline": "ridge.com - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T19:30:16.983565"
+}

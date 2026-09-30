@@ -1,0 +1,333 @@
+{
+  "brand": "Dr. Squatch",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR10925667841994653697",
+    "advertiser_name": "Dr. Squatch, Inc.",
+    "country": "US",
+    "ad_count_min": "5000",
+    "ad_count_max": "6000"
+  },
+  "total_analyzed": 120,
+  "total_estimated": "6000",
+  "active_ads": 120,
+  "format_mix": {
+    "Video": {
+      "count": 81,
+      "pct": 67.5
+    },
+    "Text": {
+      "count": 3,
+      "pct": 2.5
+    },
+    "Image": {
+      "count": 36,
+      "pct": 30.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 3,
+      "pct": 2.5
+    },
+    "Other": {
+      "count": 36,
+      "pct": 30.0
+    },
+    "YouTube": {
+      "count": 81,
+      "pct": 67.5
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 63,
+      "pct": 52.5
+    },
+    "31-90 d": {
+      "count": 9,
+      "pct": 7.5
+    },
+    "91-180 d": {
+      "count": 9,
+      "pct": 7.5
+    },
+    "181-365 d": {
+      "count": 9,
+      "pct": 7.5
+    },
+    "365 d +": {
+      "count": 30,
+      "pct": 25.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR05517425042683592705",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 889,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 23, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4245604157148959727",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05517425042683592705",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 889,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 23, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4245604157148959727",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05517425042683592705",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 889,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 23, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4245604157148959727",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR03230765350278660097",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11622351865639074705",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06959014718048567297",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17800639723269581713",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR03230765350278660097",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11622351865639074705",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06959014718048567297",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17800639723269581713",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR03230765350278660097",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11622351865639074705",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06959014718048567297",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 764,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 26, 2024",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17800639723269581713",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12690047347858604033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3746845275482189724",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07722775936113836033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14349507708123585666",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12690047347858604033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3746845275482189724",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07722775936113836033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14349507708123585666",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR12690047347858604033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3746845275482189724",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07722775936113836033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 595,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 11, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14349507708123585666",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05257671553834811393",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 446,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 10, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16376422340209513982",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05257671553834811393",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 446,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 10, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16376422340209513982",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05257671553834811393",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 446,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 10, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16376422340209513982",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15083326648449236993",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 440,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3128773696&creativeId=764018260248&uiFeatures=12,54&adGroupId=181238687974&itemIds=6624738871072177611&sig=ACiVB_zOxMTttpBKExt928LfKiTK62_MaQ&htmlParentId=fletch-render-5451803354687045245&responseCallback=fletchCallback5451803354687045245",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15083326648449236993",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 440,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3128773696&creativeId=764018260248&uiFeatures=12,54&adGroupId=181238687974&itemIds=6624738871072177611&sig=ACiVB_zOxMTttpBKExt928LfKiTK62_MaQ&htmlParentId=fletch-render-12844774138413255349&responseCallback=fletchCallback12844774138413255349",
+      "headline": "Dr. Squatch - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T20:00:15.511833"
+}

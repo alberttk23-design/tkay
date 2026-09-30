@@ -1,0 +1,78 @@
+{
+  "brand": "Coolmate",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR05984355959911219201",
+    "advertiser_name": "Coolmate Solution",
+    "country": "TH",
+    "ad_count_min": "1",
+    "ad_count_max": "1"
+  },
+  "total_analyzed": 1,
+  "total_estimated": "1",
+  "active_ads": 1,
+  "format_mix": {
+    "Video": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Text": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Image": {
+      "count": 1,
+      "pct": 100.0
+    }
+  },
+  "platform_mix": {
+    "Other": {
+      "count": 1,
+      "pct": 100.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 1,
+      "pct": 100.0
+    },
+    "31-90 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "91-180 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "181-365 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "365 d +": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR14472313047458250753",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 4,
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 21, 2026",
+      "last_shown": "Sep 25, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7693599074907378299",
+      "headline": "Coolmate - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T19:30:50.804137"
+}

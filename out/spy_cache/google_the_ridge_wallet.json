@@ -1,0 +1,333 @@
+{
+  "brand": "The Ridge Wallet",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR14056452383756517377",
+    "advertiser_name": "THE RIDGE WALLET LLC",
+    "country": "US",
+    "ad_count_min": "6000",
+    "ad_count_max": "7000"
+  },
+  "total_analyzed": 120,
+  "total_estimated": "7000",
+  "active_ads": 120,
+  "format_mix": {
+    "Video": {
+      "count": 24,
+      "pct": 20.0
+    },
+    "Text": {
+      "count": 39,
+      "pct": 32.5
+    },
+    "Image": {
+      "count": 57,
+      "pct": 47.5
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 39,
+      "pct": 32.5
+    },
+    "Other": {
+      "count": 57,
+      "pct": 47.5
+    },
+    "YouTube": {
+      "count": 24,
+      "pct": 20.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 9,
+      "pct": 7.5
+    },
+    "31-90 d": {
+      "count": 27,
+      "pct": 22.5
+    },
+    "91-180 d": {
+      "count": 24,
+      "pct": 20.0
+    },
+    "181-365 d": {
+      "count": 6,
+      "pct": 5.0
+    },
+    "365 d +": {
+      "count": 54,
+      "pct": 45.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR00449374284922486785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1650,
+      "reach_tag": "350K-400K",
+      "first_shown": "Mar 24, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2470533959&creativeId=588229095010&uiFeatures=12,54&adGroupId=138283187167&itemIds=13408849730192652961&sig=ACiVB_wma5iHv57DRH3nGxeSOEmMHkzorA&htmlParentId=fletch-render-3397210583538311784&responseCallback=fletchCallback3397210583538311784",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00449374284922486785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1650,
+      "reach_tag": "350K-400K",
+      "first_shown": "Mar 24, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2470533959&creativeId=588229095010&uiFeatures=12,54&adGroupId=138283187167&itemIds=13408849730192652961&sig=ACiVB_wma5iHv57DRH3nGxeSOEmMHkzorA&htmlParentId=fletch-render-11183691331066769198&responseCallback=fletchCallback11183691331066769198",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00449374284922486785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1650,
+      "reach_tag": "350K-400K",
+      "first_shown": "Mar 24, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2470533959&creativeId=588229095010&uiFeatures=12,54&adGroupId=138283187167&itemIds=13408849730192652961&sig=ACiVB_wma5iHv57DRH3nGxeSOEmMHkzorA&htmlParentId=fletch-render-11160923776990213238&responseCallback=fletchCallback11160923776990213238",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15500627612253814785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1621,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 22, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9752033253&creativeId=594197798090&uiFeatures=12,54&adGroupId=134588785326&itemIds=9246080114237265818&overlay=%3DH4sIAAAAAAAAAH2RS0wTURSGe-_0cXsrMIxAxwbjETEZKoW2KoEmRrDl4STEpkDAhYuhc2mnDJ3mziAh6YKdiQZjiIlEXakbFAnqxgULIu58JUZXblywIMa4MyZG0QDpxgR3Jzn_f_7vnJNoiNdRyX979Evv5-X0XO394fk1-uzEktpIxaxtpwy7ZGqzQw43ijmJUG-_ZeVMpjZT2c5bpZJRzPXoFyYmGE9ypjnGZRaVSMJLfmAJedSj-6pikichkJWAenxfSVzyJ3xkxS9hAf8n7-Ru3k8sIaTecdNgiVv6dNbp0e0MK-pshzulOZr0R1B_CVc_fHpfsyHQ6gwmUoEQr-iSEbjopQIhgb36BU5XthSR_GS7o-lI3nFKdqK9fWZmpi2322nLWlPtFSAlnjgsRuVot2vAlY6ORbWbX38_7LzYOs8xETgmbtpYIETYG1_AxP0UBcj6jedhUQGsIHosFKx68_put9gSciunYi2w9Hjj3drc21dqgRDfnk3yUKF3JBO6heh1lDH0HINRzTSZAxFIM6047dgQgX7L0qGfG2wCyjBkGlMwyBzNhEzf-RScM63spFHMVYxlGLBM3YZYJBaHpMZ1G8qQ1Ow8DDlcK4HFYdAqsllImkYJytDVFUlps5Ax7MlIH2cMhrmhmVAWsSwrQpOfrH-7d0hBnd5wM60fzjP4B7N3RHy0fG0VhTw90djpeLyDhsUtn7zl6x4f-I7SD7xj24JWe_bKS_LxzDjHBFXOxzGhIpIRLCJlE427FhAW0cLOJ1upQpAURFhwe7w-4qeBA1XVNWKtdLCuviEYDhAkI2URraJNJLr_AssdzALqAgAA&sig=ACiVB_yHnblTmWyzinhXdyKQIGU2rQSfKg&htmlParentId=fletch-render-17919192128563820729&responseCallback=fletchCallback17919192128563820729",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15500627612253814785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1621,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 22, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9752033253&creativeId=594197798090&uiFeatures=12,54&adGroupId=134588785326&itemIds=9246080114237265818&overlay=%3DH4sIAAAAAAAAAH2RS0wTURSGe-_0cXsrMIxAxwbjETEZKoW2KoEmRrDl4STEpkDAhYuhc2mnDJ3mziAh6YKdiQZjiIlEXakbFAnqxgULIu58JUZXblywIMa4MyZG0QDpxgR3Jzn_f_7vnJNoiNdRyX979Evv5-X0XO394fk1-uzEktpIxaxtpwy7ZGqzQw43ijmJUG-_ZeVMpjZT2c5bpZJRzPXoFyYmGE9ypjnGZRaVSMJLfmAJedSj-6pikichkJWAenxfSVzyJ3xkxS9hAf8n7-Ru3k8sIaTecdNgiVv6dNbp0e0MK-pshzulOZr0R1B_CVc_fHpfsyHQ6gwmUoEQr-iSEbjopQIhgb36BU5XthSR_GS7o-lI3nFKdqK9fWZmpi2322nLWlPtFSAlnjgsRuVot2vAlY6ORbWbX38_7LzYOs8xETgmbtpYIETYG1_AxP0UBcj6jedhUQGsIHosFKx68_put9gSciunYi2w9Hjj3drc21dqgRDfnk3yUKF3JBO6heh1lDH0HINRzTSZAxFIM6047dgQgX7L0qGfG2wCyjBkGlMwyBzNhEzf-RScM63spFHMVYxlGLBM3YZYJBaHpMZ1G8qQ1Ow8DDlcK4HFYdAqsllImkYJytDVFUlps5Ax7MlIH2cMhrmhmVAWsSwrQpOfrH-7d0hBnd5wM60fzjP4B7N3RHy0fG0VhTw90djpeLyDhsUtn7zl6x4f-I7SD7xj24JWe_bKS_LxzDjHBFXOxzGhIpIRLCJlE427FhAW0cLOJ1upQpAURFhwe7w-4qeBA1XVNWKtdLCuviEYDhAkI2URraJNJLr_AssdzALqAgAA&sig=ACiVB_yHnblTmWyzinhXdyKQIGU2rQSfKg&htmlParentId=fletch-render-15189703913090905628&responseCallback=fletchCallback15189703913090905628",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15500627612253814785",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1621,
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 22, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9752033253&creativeId=594197798090&uiFeatures=12,54&adGroupId=134588785326&itemIds=9246080114237265818&overlay=%3DH4sIAAAAAAAAAH2RS0wTURSGe-_0cXsrMIxAxwbjETEZKoW2KoEmRrDl4STEpkDAhYuhc2mnDJ3mziAh6YKdiQZjiIlEXakbFAnqxgULIu58JUZXblywIMa4MyZG0QDpxgR3Jzn_f_7vnJNoiNdRyX979Evv5-X0XO394fk1-uzEktpIxaxtpwy7ZGqzQw43ijmJUG-_ZeVMpjZT2c5bpZJRzPXoFyYmGE9ypjnGZRaVSMJLfmAJedSj-6pikichkJWAenxfSVzyJ3xkxS9hAf8n7-Ru3k8sIaTecdNgiVv6dNbp0e0MK-pshzulOZr0R1B_CVc_fHpfsyHQ6gwmUoEQr-iSEbjopQIhgb36BU5XthSR_GS7o-lI3nFKdqK9fWZmpi2322nLWlPtFSAlnjgsRuVot2vAlY6ORbWbX38_7LzYOs8xETgmbtpYIETYG1_AxP0UBcj6jedhUQGsIHosFKx68_put9gSciunYi2w9Hjj3drc21dqgRDfnk3yUKF3JBO6heh1lDH0HINRzTSZAxFIM6047dgQgX7L0qGfG2wCyjBkGlMwyBzNhEzf-RScM63spFHMVYxlGLBM3YZYJBaHpMZ1G8qQ1Ow8DDlcK4HFYdAqsllImkYJytDVFUlps5Ax7MlIH2cMhrmhmVAWsSwrQpOfrH-7d0hBnd5wM60fzjP4B7N3RHy0fG0VhTw90djpeLyDhsUtn7zl6x4f-I7SD7xj24JWe_bKS_LxzDjHBFXOxzGhIpIRLCJlE427FhAW0cLOJ1upQpAURFhwe7w-4qeBA1XVNWKtdLCuviEYDhAkI2URraJNJLr_AssdzALqAgAA&sig=ACiVB_yHnblTmWyzinhXdyKQIGU2rQSfKg&htmlParentId=fletch-render-7026443744406798550&responseCallback=fletchCallback7026443744406798550",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11851850000046751745",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1524,
+      "reach_tag": "350K-400K",
+      "first_shown": "Jul 28, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2339938605414013238",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11851850000046751745",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1524,
+      "reach_tag": "350K-400K",
+      "first_shown": "Jul 28, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2339938605414013238",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11851850000046751745",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1524,
+      "reach_tag": "350K-400K",
+      "first_shown": "Jul 28, 2022",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2339938605414013238",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16541600966089113601",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1328,
+      "reach_tag": "350K-400K",
+      "first_shown": "Feb 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=644932703173&uiFeatures=12,54&adGroupId=146008930020&itemIds=10312351465824038126&sig=ACiVB_x3CGoH3kDFmiyZ6H4f150lAWZsbg&htmlParentId=fletch-render-6122896583170853528&responseCallback=fletchCallback6122896583170853528",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16541600966089113601",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1328,
+      "reach_tag": "350K-400K",
+      "first_shown": "Feb 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=644932703173&uiFeatures=12,54&adGroupId=146008930020&itemIds=10312351465824038126&sig=ACiVB_x3CGoH3kDFmiyZ6H4f150lAWZsbg&htmlParentId=fletch-render-13617564575973410766&responseCallback=fletchCallback13617564575973410766",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16541600966089113601",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1328,
+      "reach_tag": "350K-400K",
+      "first_shown": "Feb 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=644932703173&uiFeatures=12,54&adGroupId=146008930020&itemIds=10312351465824038126&sig=ACiVB_x3CGoH3kDFmiyZ6H4f150lAWZsbg&htmlParentId=fletch-render-11965853868410181686&responseCallback=fletchCallback11965853868410181686",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10437603890374377473",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1245,
+      "reach_tag": "350K-400K",
+      "first_shown": "May 03, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2533270296004510259",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10437603890374377473",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1245,
+      "reach_tag": "350K-400K",
+      "first_shown": "May 03, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2533270296004510259",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10437603890374377473",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1245,
+      "reach_tag": "350K-400K",
+      "first_shown": "May 03, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2533270296004510259",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR18246348493180370945",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1116,
+      "reach_tag": "350K-400K",
+      "first_shown": "Sep 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=673284818549&uiFeatures=12,54&adGroupId=151656831565&itemIds=1543096580542872877&sig=ACiVB_wgvQf2GYb3a797fvZWCgJLZOKS8w&htmlParentId=fletch-render-11528153745235140820&responseCallback=fletchCallback11528153745235140820",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR18246348493180370945",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1116,
+      "reach_tag": "350K-400K",
+      "first_shown": "Sep 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=673284818549&uiFeatures=12,54&adGroupId=151656831565&itemIds=1543096580542872877&sig=ACiVB_wgvQf2GYb3a797fvZWCgJLZOKS8w&htmlParentId=fletch-render-10586039292796373478&responseCallback=fletchCallback10586039292796373478",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR18246348493180370945",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1116,
+      "reach_tag": "350K-400K",
+      "first_shown": "Sep 09, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6225494039&creativeId=673284818549&uiFeatures=12,54&adGroupId=151656831565&itemIds=1543096580542872877&sig=ACiVB_wgvQf2GYb3a797fvZWCgJLZOKS8w&htmlParentId=fletch-render-1448139276974696959&responseCallback=fletchCallback1448139276974696959",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06481254461690871809",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1027,
+      "reach_tag": "350K-400K",
+      "first_shown": "Dec 07, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15496973782363572588",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06481254461690871809",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1027,
+      "reach_tag": "350K-400K",
+      "first_shown": "Dec 07, 2023",
+      "last_shown": "Sep 29, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15496973782363572588",
+      "headline": "The Ridge Wallet - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-29T19:30:34.144938"
+}
