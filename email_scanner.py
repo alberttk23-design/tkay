@@ -1122,7 +1122,7 @@ def get_emails_data(brand_name: str, force_refresh: bool = False) -> dict:
     lower = brand_name.lower().strip()
     if "oodie" in lower:
         data = generate_oodie_dataset()
-    elif "sea moss" in lower or "seamoss" in lower or "creatine" in lower:
+    elif "sea moss" in lower or "seamoss" in lower:
         data = generate_true_sea_moss_dataset()
     else:
         data = generate_dynamic_dataset(brand_name)

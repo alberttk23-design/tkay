@@ -455,8 +455,38 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
 
     parsed_ads = []
     seen_ids = set()
-    first_page_name = query
-    first_landing_domain = query.lower().replace(" ", "") + ".com"
+    clean_q_slug = re.sub(r'[^a-z0-9]', '', query.lower())
+    first_page_name = query.strip().title()
+    first_landing_domain = clean_q_slug + ".com" if clean_q_slug else "brand.com"
+
+    # Intelligent brand name selection: pick the pageName that best matches the query
+    from collections import Counter
+    query_words = [w.lower() for w in re.findall(r'[a-zA-Z0-9]+', query) if len(w) > 2]
+    candidate_names = []
+    candidate_domains = []
+    
+    for c in raw_dom_cards:
+        pn = (c.get("pageName") or "").strip()
+        if pn and pn.lower() != "advertiser":
+            pn_lower = pn.lower()
+            if any(w in pn_lower for w in query_words) or clean_q_slug in pn_lower.replace(" ", ""):
+                candidate_names.append(pn)
+        lp = c.get("landingPage") or ""
+        if lp and "http" in lp:
+            try:
+                nl = urllib.parse.urlparse(lp).netloc.lower()
+                if nl and (any(w in nl for w in query_words) or clean_q_slug in nl):
+                    candidate_domains.append(nl)
+            except:
+                pass
+
+    if candidate_names:
+        first_page_name = Counter(candidate_names).most_common(1)[0][0]
+    elif raw_dom_cards and raw_dom_cards[0].get("pageName") and raw_dom_cards[0].get("pageName") != "Advertiser":
+        first_page_name = raw_dom_cards[0].get("pageName")
+        
+    if candidate_domains:
+        first_landing_domain = Counter(candidate_domains).most_common(1)[0][0]
 
     for idx, c in enumerate(raw_dom_cards[:max_ads]):
         ad_id = c.get("id") or str(idx + 1)
@@ -464,20 +494,12 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             continue
         seen_ids.add(ad_id)
         
-        page_name = c.get("pageName") or query
-        if idx == 0 and page_name and page_name != "Advertiser":
-            first_page_name = page_name
-
+        page_name = c.get("pageName") or first_page_name
         start_date = c.get("startDate") or "Recently"
         days_active = parse_vietnamese_date_to_days(start_date)
         is_scaling = days_active >= 25
 
         landing = c.get("landingPage") or f"https://{first_landing_domain}/products"
-        if landing and "http" in landing:
-            try:
-                first_landing_domain = urllib.parse.urlparse(landing).netloc
-            except:
-                pass
 
         parsed_ads.append({
             "id": f"fb_{ad_id}",

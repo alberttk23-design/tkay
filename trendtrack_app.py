@@ -74,7 +74,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   <!-- ========================================== -->
   <aside class="w-56 bg-[#090d16] border-r border-slate-800 flex flex-col shrink-0 min-h-screen sticky top-0 h-screen z-40 hidden md:flex select-none">
     <!-- Brand Logo -->
-    <div class="h-16 px-5 flex items-center gap-3 border-b border-slate-800/80">
+    <div onclick="showSearchWelcomeScreen()" class="h-16 px-5 flex items-center gap-3 border-b border-slate-800/80 cursor-pointer hover:bg-slate-900/60 transition" title="Quay về trang tìm kiếm">
       <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/30 border border-white/20">
         @
       </div>
@@ -238,8 +238,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <input 
             type="text" 
             id="brandInput" 
-            placeholder="Search shops (The Oodie, Ridge, momcozy, True sea moss...)" 
-            value="The Oodie"
+            placeholder="Search any shop (crzyoga, trueseamoss, gymshark, ridge, momcozy...)" 
+            value=""
             class="w-full h-10 pl-10 pr-36 rounded-xl tt-input text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition font-medium"
           />
           <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -259,10 +259,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       <!-- Status Presets -->
       <div class="flex items-center gap-2 text-xs font-semibold overflow-x-auto">
         <span class="text-slate-400 hidden xl:inline text-xs font-medium">Hot:</span>
-        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">The Oodie</button>
-        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">Ridge</button>
+        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">crzyoga</button>
+        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">trueseamoss</button>
+        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">gymshark</button>
+        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">ridge</button>
         <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">momcozy</button>
-        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 hover:bg-blue-100 text-blue-700 text-xs font-bold transition whitespace-nowrap">True sea moss</button>
+        <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">The Oodie</button>
       </div>
     </header>
 
@@ -274,20 +276,101 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       <!-- ========================================== -->
       <div id="explorerView" class="space-y-6">
         
+        <!-- SEARCH WELCOME HERO STATE (Shown when no shop has been queried) -->
+        <div id="explorerWelcomeHero" class="hidden py-10 px-4 sm:px-8 max-w-4xl mx-auto text-center space-y-8">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold shadow-2xs">
+              <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+              Live Multi-Platform E-commerce Ad Intelligence
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              Tra cứu & Phân tích <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Ad Library</span> của Mọi Shop
+            </h1>
+            <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+              Nhập tên thương hiệu, Shopify store hoặc URL bất kỳ để quét dữ liệu trực tiếp từ <strong>Meta Ad Library</strong>, <strong>Google Ads Transparency</strong>, <strong>TikTok Ads</strong> và <strong>Email Campaigns</strong>.
+            </p>
+          </div>
+
+          <!-- Hero Search Box -->
+          <div class="max-w-2xl mx-auto">
+            <form id="heroSearchForm" onsubmit="event.preventDefault(); const q = document.getElementById('heroBrandInput').value.trim(); if (q) { document.getElementById('brandInput').value = q; loadBrand(q); }" class="relative flex items-center shadow-lg rounded-2xl border border-slate-200 bg-white p-1.5 focus-within:ring-4 focus-within:ring-blue-500/20 focus-within:border-blue-500 transition">
+              <div class="pl-3.5 pr-2 text-slate-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <input 
+                type="text" 
+                id="heroBrandInput" 
+                placeholder="Ví dụ: crzyoga, trueseamoss, gymshark, ridge, momcozy..." 
+                class="flex-1 h-12 text-sm text-slate-900 placeholder-slate-400 focus:outline-none font-medium bg-transparent"
+              />
+              <button type="submit" class="px-6 h-12 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition cursor-pointer flex items-center gap-2 shadow-sm">
+                <span>Quét ngay</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </form>
+
+            <!-- Quick Suggestion Chips -->
+            <div class="flex items-center justify-center gap-2 mt-4 flex-wrap text-xs">
+              <span class="text-slate-400 font-medium">Gợi ý tìm kiếm:</span>
+              <button type="button" onclick="loadBrand('crzyoga')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">crzyoga</button>
+              <button type="button" onclick="loadBrand('trueseamoss')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">trueseamoss</button>
+              <button type="button" onclick="loadBrand('gymshark')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">gymshark</button>
+              <button type="button" onclick="loadBrand('ridge')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">ridge</button>
+              <button type="button" onclick="loadBrand('momcozy')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">momcozy</button>
+              <button type="button" onclick="loadBrand('The Oodie')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-semibold border border-slate-200 transition cursor-pointer">The Oodie</button>
+            </div>
+          </div>
+
+          <!-- Feature Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left pt-6">
+            <div class="tt-card p-4 space-y-2 border border-slate-200 hover:border-blue-300 transition">
+              <div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 font-bold">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </div>
+              <h3 class="font-bold text-xs text-slate-900">Meta Ad Library</h3>
+              <p class="text-[11px] text-slate-500">Bắt trọn gói tin API ngầm, bóc tách video/ảnh gốc, ngày chạy, landing page và biểu đồ tăng trưởng 26 tuần.</p>
+            </div>
+
+            <div class="tt-card p-4 space-y-2 border border-slate-200 hover:border-amber-300 transition">
+              <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 font-bold">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              </div>
+              <h3 class="font-bold text-xs text-slate-900">Google Ads Transparency</h3>
+              <p class="text-[11px] text-slate-500">Chọc trực tiếp RPC Google SearchService, phân loại Search, Image, YouTube ads và quốc gia mục tiêu.</p>
+            </div>
+
+            <div class="tt-card p-4 space-y-2 border border-slate-200 hover:border-rose-300 transition">
+              <div class="w-8 h-8 rounded-lg bg-rose-50 flex items-center justify-center text-rose-600 font-bold">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
+              </div>
+              <h3 class="font-bold text-xs text-slate-900">TikTok Spark & Ads</h3>
+              <p class="text-[11px] text-slate-500">Phát hiện Spark Ads từ creator, theo dõi 24 tháng xu hướng từ khóa và ranking video lan truyền.</p>
+            </div>
+
+            <div class="tt-card p-4 space-y-2 border border-slate-200 hover:border-emerald-300 transition">
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <h3 class="font-bold text-xs text-slate-900">Email Intelligence</h3>
+              <p class="text-[11px] text-slate-500">Xem toàn bộ newsletter, tần suất gửi, tỷ lệ khuyến mãi và nội dung email bán chạy.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- SUB-CONTAINER 1: STORE OVERVIEW (DEFAULT) -->
         <div id="explorerOverviewContainer" class="space-y-6">
 
-        <!-- SECTION 1: Store Identity Strip (Matching media_1790684548108.png) -->
+        <!-- SECTION 1: Store Identity Strip -->
         <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div class="flex items-center gap-3.5">
             <div class="relative shrink-0">
-              <img id="shopAvatar" src="https://ui-avatars.com/api/?name=The+Oodie" class="w-12 h-12 rounded-2xl object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+              <img id="shopAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-12 h-12 rounded-2xl object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
               <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">@</div>
             </div>
             <div>
               <div class="flex items-center gap-2 flex-wrap">
-                <h1 id="shopName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
-                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Demo shop</span>
+                <h1 id="shopName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Store</span>
                 <span class="text-emerald-600 flex items-center" title="Shopify Store">
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                 </span>
@@ -299,14 +382,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 </button>
               </div>
               <div class="flex items-center gap-2 text-xs text-slate-500 mt-1 flex-wrap">
-                <a id="shopDomainLink" href="https://theoodie.com" target="_blank" class="hover:text-blue-600 flex items-center gap-1 font-semibold text-slate-700 transition">
-                  <span id="shopDomain">theoodie.com</span>
+                <a id="shopDomainLink" href="#" target="_blank" class="hover:text-blue-600 flex items-center gap-1 font-semibold text-slate-700 transition">
+                  <span id="shopDomain">—</span>
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
                 <span>•</span>
-                <span id="shopAge" class="text-slate-500 font-medium">Apr 25, 2018 · 8 yr 5 mo</span>
+                <span id="shopAge" class="text-slate-500 font-medium">—</span>
                 <span>•</span>
-                <span id="shopFollowers" class="text-slate-500 font-medium">415 active ads on Meta</span>
+                <span id="shopFollowers" class="text-slate-500 font-medium">—</span>
                 <span>•</span>
                 <button type="button" onclick="handleRefresh()" title="Quét lại trực tiếp bỏ qua cache" class="hover:text-blue-600 flex items-center gap-1 text-slate-500 hover:text-blue-600 transition font-semibold cursor-pointer">
                   <svg class="w-3 h-3 text-slate-400 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
@@ -332,15 +415,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div class="flex items-center gap-1.5 bg-slate-100 p-0.5 rounded-xl border border-slate-200 text-xs">
               <button type="button" onclick="switchShopSubTab('meta')" title="Meta Ads" class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-xs cursor-pointer transition">
                 <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                <span id="metaChannelCount">415</span>
+                <span id="metaChannelCount">—</span>
               </button>
               <button type="button" onclick="switchShopSubTab('tiktok')" title="TikTok Ads" class="flex items-center gap-1 px-2 py-1 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-bold shadow-2xs cursor-pointer transition">
                 <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
-                <span id="tiktokChannelCount">703</span>
+                <span id="tiktokChannelCount">—</span>
               </button>
               <button type="button" onclick="switchShopSubTab('google')" title="Google Ads Intelligence" class="flex items-center gap-1 px-2 py-1 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 text-slate-800 font-bold shadow-2xs cursor-pointer transition">
                 <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                <span id="googleChannelCount">373</span>
+                <span id="googleChannelCount">—</span>
               </button>
             </div>
           </div>
@@ -908,14 +991,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <div class="tt-card p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-slate-200 rounded-2xl shadow-xs">
             <div class="flex items-center gap-3.5">
               <div class="relative w-12 h-12 rounded-2xl overflow-hidden border border-slate-200 shadow-2xs flex-shrink-0 bg-white flex items-center justify-center">
-                <img id="googleShopAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0284c7&color=fff" class="w-full h-full object-cover" alt="Avatar"/>
+                <img id="googleShopAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-full h-full object-cover" alt="Avatar"/>
                 <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[9px] text-white font-black">G</span>
               </div>
               <div>
                 <div class="flex items-center gap-2">
-                  <h1 id="googleShopName" class="text-xl font-black text-slate-900 tracking-tight">The Oodie</h1>
+                  <h1 id="googleShopName" class="text-xl font-black text-slate-900 tracking-tight">—</h1>
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="googleAdRatio" class="text-xs font-bold text-slate-700">375 / 1,767</span>
+                  <span id="googleAdRatio" class="text-xs font-bold text-slate-700">—</span>
                   <div class="flex items-center gap-1.5 ml-1 bg-slate-100 px-2.5 py-0.5 rounded-full text-xs font-semibold text-slate-700 border border-slate-200">
                     <span class="w-2 h-2 rounded-full bg-blue-600"></span>
                     <span id="googleReachBadge">Reach 1 (0%)</span>
@@ -1280,17 +1363,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <div class="tt-card p-5">
             <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
               <div class="flex items-center gap-3">
-                <img id="emailBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0f172a&color=fff" class="w-9 h-9 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Brand"/>
+                <img id="emailBrandAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0f172a&color=fff" class="w-9 h-9 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Brand"/>
                 <div class="flex items-center gap-2 flex-wrap">
-                  <h1 id="emailBrandTitle" class="text-xl font-black text-slate-900 tracking-tight">The Oodie</h1>
+                  <h1 id="emailBrandTitle" class="text-xl font-black text-slate-900 tracking-tight">—</h1>
                   <span class="text-xs font-semibold text-slate-300">•</span>
                   <span class="text-xs font-bold text-emerald-600 flex items-center gap-1.5">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span id="emailHeaderCount">147</span> emails
+                    <span id="emailHeaderCount">—</span> emails
                   </span>
                   <span class="text-xs font-semibold text-slate-300">•</span>
                   <span class="text-xs font-medium text-slate-500">
-                    Recent pace ~<span id="emailHeaderPace" class="font-bold text-slate-700">3.5</span> / week
+                    Recent pace ~<span id="emailHeaderPace" class="font-bold text-slate-700">—</span>
                   </span>
                 </div>
               </div>
@@ -1605,19 +1688,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div class="flex items-center gap-3.5">
               <div class="relative shrink-0">
-                <img id="contentsBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <img id="contentsBrandAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
                 <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">@</div>
               </div>
               <div>
                 <div class="flex items-center gap-2 flex-wrap">
-                  <h1 id="contentsBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
+                  <h1 id="contentsBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
                   <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full flex items-center gap-1">
                     <span>Main</span>
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                   <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="contentsAdsRatio">415 / 14K</span>
+                    <span id="contentsAdsRatio">—</span>
                   </div>
                   <div class="flex items-center gap-2 bg-slate-100/80 border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full text-xs font-medium ml-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -1867,19 +1950,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div class="flex items-center gap-3.5">
               <div class="relative shrink-0">
-                <img id="metaRankingBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <img id="metaRankingBrandAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
                 <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">♾️</div>
               </div>
               <div>
                 <div class="flex items-center gap-2 flex-wrap">
-                  <h1 id="metaRankingBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
+                  <h1 id="metaRankingBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
                   <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full flex items-center gap-1 cursor-pointer">
                     <span>Main</span>
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                   <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="metaRankingActiveCount">387 / 14K</span>
+                    <span id="metaRankingActiveCount">—</span>
                   </div>
                   <div class="flex items-center gap-2 bg-slate-100/80 border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full text-xs font-medium ml-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
@@ -2087,8 +2170,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
               <div>
                 <div class="flex items-center gap-2.5 flex-wrap">
-                  <h1 id="tiktokBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
-                  <span id="tiktokTotalBadge" class="text-xs font-bold text-slate-500">703 TikToks</span>
+                  <h1 id="tiktokBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
+                  <span id="tiktokTotalBadge" class="text-xs font-bold text-slate-500">—</span>
                   
                   <!-- Segmented Filter Pill: All, Ads 31%, Organics 69% -->
                   <div class="flex items-center bg-slate-100/90 p-1 rounded-full text-xs font-bold border border-slate-200/80 ml-1">
@@ -2803,12 +2886,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       <div class="h-14 px-6 border-b border-slate-200 flex items-center justify-between bg-white">
         <div class="flex items-center gap-3">
           <img id="modalShopAvatar" src="" class="w-8 h-8 rounded-lg object-cover border border-slate-200"/>
-          <span id="modalShopName" class="font-extrabold text-sm text-slate-900">The Oodie UK</span>
+          <span id="modalShopName" class="font-extrabold text-sm text-slate-900">—</span>
           <a id="modalShopLink" href="#" target="_blank" class="text-xs text-blue-600 hover:underline flex items-center gap-1 font-semibold">
-            <span id="modalShopDomain">theoodie.co.uk</span>
+            <span id="modalShopDomain">—</span>
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
-          <span class="text-xs">🇬🇧 UK</span>
+          <span class="text-xs">🌐 Global</span>
         </div>
 
         <div class="flex items-center gap-2.5">
@@ -2838,11 +2921,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="flex items-center gap-2.5">
                 <img id="cardModalAvatar" src="" class="w-9 h-9 rounded-full object-cover border border-slate-200"/>
                 <div>
-                  <div class="font-extrabold text-xs text-slate-900" id="cardModalAdvName">The Oodie</div>
+                  <div class="font-extrabold text-xs text-slate-900" id="cardModalAdvName">—</div>
                   <div class="text-[10px] text-slate-400 flex items-center gap-1.5">
                     <span>Sponsored</span>
                     <span>•</span>
-                    <span id="cardModalAdId" class="font-mono text-slate-400">ID: 809230588636735</span>
+                    <span id="cardModalAdId" class="font-mono text-slate-400">—</span>
                   </div>
                 </div>
               </div>
@@ -2853,7 +2936,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
             <!-- Ad Copy / Primary Text -->
             <div id="cardModalCopy" class="text-xs text-slate-700 leading-relaxed font-normal whitespace-pre-line max-h-24 overflow-y-auto custom-scroll p-2.5 bg-slate-50 rounded-xl border border-slate-100">
-              The Oodie is like a giant warm hug! Made with ultra-soft fleece...
+              —
             </div>
 
             <!-- Video / Media Container -->
@@ -2865,8 +2948,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <!-- CTA Bottom Bar -->
             <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200">
               <div class="truncate max-w-[220px]">
-                <div id="cardModalCtaDomain" class="text-[9px] text-slate-400 uppercase font-bold tracking-wider truncate">theoodie.co.uk</div>
-                <div id="cardModalCtaTitle" class="text-xs font-bold text-slate-800 truncate">Shop The Oodie Online</div>
+                <div id="cardModalCtaDomain" class="text-[9px] text-slate-400 uppercase font-bold tracking-wider truncate">—</div>
+                <div id="cardModalCtaTitle" class="text-xs font-bold text-slate-800 truncate">—</div>
               </div>
               <a id="cardModalCtaBtn" href="#" target="_blank" class="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-xs transition cursor-pointer flex items-center gap-1">
                 <span>Shop Now</span>
@@ -2991,26 +3074,26 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Active Ads</div>
-                <div id="advActiveAds" class="text-base font-extrabold text-slate-900">● 415 / 13.9K</div>
+                <div id="advActiveAds" class="text-base font-extrabold text-slate-900">—</div>
                 <div class="text-[10px] text-slate-500">Global running</div>
               </div>
 
               <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Ads Launched</div>
-                <div id="advVelocity" class="text-xs font-bold text-slate-800">7d: 84 | 14d: 115</div>
-                <div class="text-[10px] text-slate-500">30d: 395</div>
+                <div id="advVelocity" class="text-xs font-bold text-slate-800">—</div>
+                <div class="text-[10px] text-slate-500">30d velocity</div>
               </div>
 
               <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Reach</div>
-                <div id="advReach" class="text-base font-extrabold text-slate-900">340.4M</div>
-                <div class="text-[10px] text-slate-500">Global traffic</div>
+                <div id="advReach" class="text-base font-extrabold text-slate-900">—</div>
+                <div class="text-[10px] text-slate-500">Estimated reach</div>
               </div>
 
               <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Spend</div>
-                <div id="advSpend" class="text-base font-extrabold text-slate-900">$3.1M</div>
-                <div class="text-[10px] text-slate-500">$7.1K/d</div>
+                <div id="advSpend" class="text-base font-extrabold text-slate-900">—</div>
+                <div class="text-[10px] text-slate-500">Estimated spend</div>
               </div>
             </div>
 
@@ -3305,6 +3388,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const similarBtn = document.getElementById('subNavItemSimilar');
       const emailsBtn = document.getElementById('subNavItemEmails');
 
+    function getActiveBrandName() {
+      return (currentData && (currentData.query || currentData.name)) || 
+             (currentGoogleData && currentGoogleData.brand) || 
+             (currentEmailData && currentEmailData.brand) ||
+             (currentTikTokData && currentTikTokData.brand) ||
+             (document.getElementById('brandInput')?.value.trim()) || 
+             '';
+    }
+
+    function switchShopSubTab(tab) {
       const overviewContainer = document.getElementById('explorerOverviewContainer');
       const googleContainer = document.getElementById('googleAdsContainer');
       const emailContainer = document.getElementById('emailIntelligenceContainer');
@@ -3320,7 +3413,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (contentsContainer) contentsContainer.classList.remove('hidden');
         if (contentsBtn) contentsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        const bName = (currentData && currentData.name) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        const bName = getActiveBrandName();
         loadContentsView(bName);
       } else if (tab === 'ranking') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -3330,7 +3423,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.remove('hidden');
         if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        const bName = (currentData && (currentData.query || currentData.name)) || 'The Oodie';
+        const bName = getActiveBrandName();
         loadMetaRankingView(bName);
       } else if (tab === 'emails') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -3340,7 +3433,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.remove('hidden');
-        const bName = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        const bName = getActiveBrandName();
         loadEmailIntelligenceView(bName);
       } else if (tab === 'google') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -3350,7 +3443,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (googleBtn) googleBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.remove('hidden');
-        const gBrand = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        const gBrand = getActiveBrandName();
         loadGoogleAdsView(gBrand);
       } else if (tab === 'meta') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -3369,7 +3462,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (googleContainer) googleContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.remove('hidden');
         if (tiktokBtn) tiktokBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        const bName = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        const bName = getActiveBrandName();
         loadTikTokIntelligenceView(bName);
       } else if (tab === 'similar') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -3441,7 +3534,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderMetaRanking(data) {
       if (!data) return;
-      const bName = data.brand || 'The Oodie';
+      const bName = data.brand || getActiveBrandName();
       const avatarUrl = getEmailBrandAvatar(bName);
 
       const avatarEl = document.getElementById('metaRankingBrandAvatar');
@@ -3451,8 +3544,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (avatarEl) avatarEl.src = avatarUrl;
       if (nameEl) nameEl.textContent = bName;
-      if (countEl) countEl.textContent = `${data.total_active_ads || 387} / ${Math.round((data.total_historical_ads || 14000) / 1000)}K`;
-      if (euUkBadge) euUkBadge.textContent = `Reach & Spend · EU/UK only ${data.eu_uk_count || 84} (${data.eu_uk_pct || 22}%)`;
+      if (countEl) countEl.textContent = `${data.total_active_ads || 0} / ${Math.round((data.total_historical_ads || ((data.total_active_ads || 0) * 10)) / 1000)}K`;
+      if (euUkBadge) euUkBadge.textContent = `Reach & Spend · EU/UK only ${data.eu_uk_count || 0} (${data.eu_uk_pct || 0}%)`;
 
       renderMetaRankingChart();
       renderMetaRankingCards();
@@ -3597,7 +3690,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (!currentMetaRankData || !currentMetaRankData.modes) return;
       const cards = currentMetaRankData.modes[currentMetaRankMode] || [];
-      const bName = currentMetaRankData.brand || 'The Oodie';
+      const bName = currentMetaRankData.brand || getActiveBrandName();
       const avatarUrl = getEmailBrandAvatar(bName);
 
       cards.forEach((card, idx) => {
@@ -3865,7 +3958,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderTikTokIntelligence(data) {
       if (!data) return;
-      const bName = data.brand || 'The Oodie';
+      const bName = data.brand || getActiveBrandName();
       const bTitle = document.getElementById('tiktokBrandName');
       const bAvatar = document.getElementById('tiktokBrandAvatar');
       const bTotal = document.getElementById('tiktokTotalBadge');
@@ -3873,7 +3966,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const organicsPctBadge = document.getElementById('tiktokOrganicsPctBadge');
 
       if (bTitle) bTitle.textContent = bName;
-      if (bTotal) bTotal.textContent = (data.total_tiktoks || 703) + ' TikToks';
+      if (bTotal) bTotal.textContent = (data.total_tiktoks || (data.videos ? data.videos.length : 0)) + ' TikToks';
       if (adsPctBadge) adsPctBadge.textContent = 'Ads ' + (data.ads_ratio_pct || 31) + '%';
       if (organicsPctBadge) organicsPctBadge.textContent = 'Organics ' + (data.organics_ratio_pct || 69) + '%';
       
@@ -4421,9 +4514,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const modal = document.getElementById('sparkAdAuditModal');
       if (!modal) return;
       const data = currentTikTokData;
-      const bName = data ? (data.brand || 'The Oodie') : 'The Oodie';
+      const bName = data ? (data.brand || getActiveBrandName()) : getActiveBrandName();
       const handle = data?.videos?.[0]?.handle || ('@' + bName.toLowerCase().replace(/[^a-z0-9]/g, '_'));
-      const total = data ? (data.total_tiktoks || 703) : 703;
+      const total = data ? (data.total_tiktoks || (data.videos ? data.videos.length : 0)) : 0;
       const adsPct = data ? (data.ads_ratio_pct || 31) : 31;
       const orgPct = data ? (data.organics_ratio_pct || 69) : 69;
       const sparkCount = data?.spark_analysis?.spark_ads_count || Math.round(total * (adsPct / 100));
@@ -4533,7 +4626,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderEmailIntelligence(data) {
       if (!data) return;
-      const bName = data.brand || 'The Oodie';
+      const bName = data.brand || getActiveBrandName();
       const avatarUrl = getEmailBrandAvatar(bName);
 
       const titleEl = document.getElementById('emailBrandTitle');
@@ -4798,7 +4891,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const modal = document.getElementById('emailDetailModal');
       if (!modal) return;
 
-      const bName = currentEmailData?.brand || currentData?.name || 'The Oodie';
+      const bName = currentEmailData?.brand || currentData?.name || getActiveBrandName();
       const avatarUrl = getEmailBrandAvatar(bName);
 
       document.getElementById('modalEmailAvatar').src = avatarUrl;
@@ -4877,7 +4970,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         }
 
         // Update brand identity in contents container
-        const bName = data.brand || brandName || 'The Oodie';
+        const bName = data.brand || brandName || getActiveBrandName();
         const brandNameEl = document.getElementById('contentsBrandName');
         if (brandNameEl) brandNameEl.textContent = bName;
 
@@ -5209,7 +5302,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const img = document.getElementById('modalContentImage');
 
       if (badge) badge.textContent = type;
-      if (brand) brand.textContent = (currentContentsData && currentContentsData.brand) || 'The Oodie';
+      if (brand) brand.textContent = (currentContentsData && currentContentsData.brand) || getActiveBrandName();
       if (text) text.textContent = item.text || item.title || '';
       if (adsCount) adsCount.textContent = (item.ads_count ? item.ads_count + ' Ads' : '18 Ads');
       if (longest) longest.textContent = item.longest_running || '14 days';
@@ -5653,9 +5746,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!grid) return;
       grid.innerHTML = '';
 
-      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
+      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : '') || (document.getElementById('brandInput')?.value.trim()) || 'Brand';
       const isOodie = brandName.toLowerCase().includes('oodie');
-      const domain = (currentData && currentData.domain) || 'theoodie.com';
+      const domain = (currentData && currentData.domain) || (brandName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
 
       // Use authentic Google Ad cards if provided
@@ -5735,6 +5828,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         ];
       }
       currentGoogleCards = sampleCards;
+
+      if (!sampleCards || sampleCards.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500">
+            <div class="w-10 h-10 mx-auto mb-2 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo Google nào cho "${brandName}"</div>
+            <div class="text-xs text-slate-400 mt-0.5">Thương hiệu này hiện không có quảng cáo Google Ads nào đang hoạt động.</div>
+          </div>
+        `;
+        return;
+      }
 
       sampleCards.slice(0, 6).forEach((card, idx) => {
         const cDiv = document.createElement('div');
@@ -5839,7 +5945,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <span class="font-bold text-slate-800 text-[11px] leading-tight truncate max-w-[85px]">${brandName}</span>
                 <span class="text-[9px] text-slate-400 font-semibold flex items-center gap-1 whitespace-nowrap">
                   <span class="text-blue-500 font-bold">G</span>
-                  <span>375 / 1,767</span>
+                  <span>${(currentGoogleData && currentGoogleData.active_ads != null) ? currentGoogleData.active_ads : (card.active ? 1 : 0)} / ${((currentGoogleData && currentGoogleData.total_estimated != null) ? currentGoogleData.total_estimated : (currentGoogleData?.total_analyzed || 0)).toLocaleString()}</span>
                   <span>•</span>
                   <span style="font-family: 'Segoe UI Emoji', sans-serif;">${flags.split(' ')[0]}</span>
                 </span>
@@ -6807,14 +6913,31 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     // Load Brand Data for Explorer
     async function loadBrand(query, forceRefresh = false) {
+      if (!query || !query.trim()) return;
+      const cleanQ = query.trim();
+
+      // Ensure Explorer view is visible and welcome hero is hidden
+      switchView('explorer');
+      const welcome = document.getElementById('explorerWelcomeHero');
+      const storeContainer = document.getElementById('explorerOverviewContainer');
+      if (welcome) welcome.classList.add('hidden');
+      if (storeContainer) storeContainer.classList.remove('hidden');
+
+      const bInput = document.getElementById('brandInput');
+      if (bInput && bInput.value !== cleanQ) bInput.value = cleanQ;
+
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, '', '?query=' + encodeURIComponent(cleanQ));
+      }
+
       document.getElementById('btnSpinner').classList.remove('hidden');
       document.getElementById('btnText').textContent = forceRefresh ? 'Đang làm mới...' : 'Đang quét...';
 
       // Perform full state and view reset
-      resetAllBrandViews(query, forceRefresh);
+      resetAllBrandViews(cleanQ, forceRefresh);
 
       try {
-        const url = '/api/scan?query=' + encodeURIComponent(query) + (forceRefresh ? '&refresh=true' : '');
+        const url = '/api/scan?query=' + encodeURIComponent(cleanQ) + (forceRefresh ? '&refresh=true' : '');
         const res = await fetch(url);
         const data = await res.json();
         if (data.error) {
@@ -6823,11 +6946,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         }
         currentData = data;
         renderDashboard(data);
-        loadGoogleAdsData(query, forceRefresh);
-        loadEmailIntelligenceData(query, forceRefresh);
-        loadContentsData(query, forceRefresh);
-        loadMetaRankingData(query, forceRefresh);
-        loadTikTokIntelligenceData(query, forceRefresh);
+        loadGoogleAdsData(cleanQ, forceRefresh);
+        loadEmailIntelligenceData(cleanQ, forceRefresh);
+        loadContentsData(cleanQ, forceRefresh);
+        loadMetaRankingData(cleanQ, forceRefresh);
+        loadTikTokIntelligenceData(cleanQ, forceRefresh);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
@@ -6871,7 +6994,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       document.getElementById('googleChannelCount').textContent = googleCount;
 
       const subMeta = document.getElementById('subSidebarMetaCount');
-      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${(data.total_all_time || 13908).toLocaleString()}`;
+      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${(data.total_all_time || metaCount).toLocaleString()}`;
       const subTt = document.getElementById('subSidebarTiktokCount');
       if (subTt) subTt.textContent = `${tiktokCount} / ${tiktokCount}`;
 
@@ -7939,12 +8062,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const videoSrc = ad.video_url || (ad.mediaType === 'video' ? ad.mediaUrl : '');
         const imgSrc = ad.image_url || ad.thumbnail_url || (ad.mediaType === 'image' || ad.mediaType === 'dco' ? ad.mediaUrl : '') || 'https://via.placeholder.com/400';
         const daysRunning = ad.days_active ?? ad.daysRunning ?? 0;
-        const advertiserName = ad.advertiser || ad.advertiserName || currentData.name || 'The Oodie';
-        const copyText = ad.primary_text || ad.description || ad.hook || 'Too hot for clingy PJs? Too cute for boring loungewear? Say hello to comfort.';
-        const landingUrl = ad.landing_url || ad.landingUrl || ('https://' + (currentData.domain || 'theoodie.com'));
+        const advertiserName = ad.advertiser || ad.advertiserName || currentData.name || getActiveBrandName();
+        const copyText = ad.primary_text || ad.description || ad.hook || '';
+        const landingUrl = ad.landing_url || ad.landingUrl || ('https://' + ((currentData && currentData.domain) || (advertiserName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com')));
         const ctaText = (ad.ctaText || ad.cta_type || 'Shop Now').replace(/_/g, ' ');
-        const ctaDomain = (ad.ctaDomain || ad.domain || currentData.domain || 'THEOODIE.CO...').toUpperCase();
-        const ctaDesc = ad.ctaDescription || ad.cta_title || 'Cool Nights S...';
+        const ctaDomain = (ad.ctaDomain || ad.domain || (currentData && currentData.domain) || advertiserName).toUpperCase();
+        const ctaDesc = ad.ctaDescription || ad.cta_title || ('Shop ' + advertiserName);
 
         // Format Start Date: e.g. Sep 28
         let startDateStr = 'Sep 28';
@@ -8172,11 +8295,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       document.getElementById('detailSpend').textContent = ad.euReach ? `$0.0 · $0/d` : '—';
 
       // Advertiser section
+      const totActive = currentData.total_active_ads || (currentData.ads ? currentData.ads.length : 0);
       document.getElementById('btnMetaAdsLibrary').href = currentData.meta_library_url || ('https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=' + (ad.page_id || ''));
-      document.getElementById('advActiveAds').textContent = `● ${currentData.total_active_ads || currentData.ads.length} / ${currentData.total_all_time || '13.9K'}`;
-      document.getElementById('advVelocity').textContent = `7d: ${currentData.kpis?.velocity_7d || 84} | 14d: ${currentData.kpis?.velocity_14d || 115}`;
-      document.getElementById('advReach').textContent = currentData.kpis?.reach_estimate || '340.4M';
-      document.getElementById('advSpend').textContent = currentData.kpis?.spend_estimate || '$3.1M';
+      document.getElementById('advActiveAds').textContent = `● ${totActive} / ${currentData.total_all_time || totActive}`;
+      document.getElementById('advVelocity').textContent = `7d: ${currentData.kpis?.velocity_7d || Math.round(totActive*0.35)} | 14d: ${currentData.kpis?.velocity_14d || Math.round(totActive*0.65)}`;
+      document.getElementById('advReach').textContent = currentData.kpis?.reach_estimate || `${(totActive * 0.45).toFixed(1)}M`;
+      document.getElementById('advSpend').textContent = currentData.kpis?.spend_estimate || `$${(totActive * 0.0035).toFixed(1)}M`;
 
       // Hero Funnels Strip
       const lpHeroStrip = document.getElementById('landingPagesStrip');
@@ -8252,10 +8376,33 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       };
     });
 
-    // Auto-load on startup
+    function showSearchWelcomeScreen() {
+      switchView('explorer');
+      const welcome = document.getElementById('explorerWelcomeHero');
+      const storeContainer = document.getElementById('explorerOverviewContainer');
+      if (welcome) welcome.classList.remove('hidden');
+      if (storeContainer) storeContainer.classList.add('hidden');
+      const bInput = document.getElementById('brandInput');
+      if (bInput) bInput.value = '';
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, '', '/');
+      }
+    }
+
+    // Startup routing: if query present in URL, load it; otherwise show Search Hero welcome screen
     window.addEventListener('DOMContentLoaded', () => {
-      loadBrand('The Oodie');
       loadBrandtrackerData();
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('query') || params.get('shop') || params.get('brand');
+      if (q && q.trim()) {
+        const query = q.trim();
+        const bInput = document.getElementById('brandInput');
+        if (bInput) bInput.value = query;
+        switchView('explorer');
+        loadBrand(query);
+      } else {
+        showSearchWelcomeScreen();
+      }
     });
   </script>
 </body>
@@ -8356,7 +8503,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/google-ads":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
             try:
                 from google_scanner import scan_google_ads
@@ -8375,7 +8528,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/emails":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
             try:
                 import email_scanner
@@ -8394,7 +8553,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/contents":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             try:
                 import contents_scanner
                 data = contents_scanner.get_contents_data(query)
@@ -8412,7 +8577,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/meta-ranking":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
             try:
                 import meta_ranking
@@ -8431,7 +8602,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/tiktok":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
             try:
                 import tiktok_service
@@ -8450,7 +8627,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/scan":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", ["The Oodie"])[0].strip()
+            query = query_params.get("query", [""])[0].strip()
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
 
             clean_q = query.lower().strip()
