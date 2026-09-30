@@ -69,3 +69,20 @@ Mỗi khi chỉnh sửa mã nguồn backend hoặc frontend:
 3. **Commit & Push**:
    - Luôn commit với commit message rõ ràng, theo chuẩn Conventional Commits.
    - Luôn push bằng lệnh: `git push alt main`.
+
+---
+
+## 5. NGUYÊN TẮC BẢO VỆ NGƯỜI DÙNG NO-CODE (NO-CODE USER PROTECTION PROTOCOL)
+
+- **Người dùng không chuyên về lập trình (No-Code)**: 
+  - Tuyệt đối không yêu cầu người dùng tự đọc code, tự debug lỗi terminal hay sửa cấu hình phức tạp.
+  - Mọi lỗi phát sinh trong quá trình phát triển, AI phải tự động bắt lỗi và tự động sửa chữa 100%.
+- **Lá chắn kiểm thử tự động bắt buộc (`verify_system.py`)**:
+  - Sau mỗi lần sửa code hoặc thêm tính năng mới, AI **BẮT BUỘC** phải chạy lệnh:
+    ```bash
+    python3 verify_system.py
+    ```
+  - Nếu kết quả trả về có bất kỳ mục nào **FAIL** (lỗi cú pháp, server bị treo, hoặc lọt dữ liệu giả/Oodie), AI phải tự động sửa cho đến khi đạt **100% PASS** trước khi thông báo cho người dùng.
+- **Bảo toàn tính năng cũ (No Regressions)**:
+  - Khi dự án phình to, cấm sửa đổi ồ ạt hoặc xóa nhầm các hàm đang chạy ổn định.
+  - Luôn kiểm tra đối chiếu kỹ lưỡng trước khi lưu file.
