@@ -1125,7 +1125,21 @@ def get_emails_data(brand_name: str, force_refresh: bool = False) -> dict:
     elif "sea moss" in lower or "seamoss" in lower:
         data = generate_true_sea_moss_dataset()
     else:
-        data = generate_dynamic_dataset(brand_name)
+        # Honest zero-state for arbitrary brands without scraped email archives
+        data = {
+            "brand": brand_name.strip().title(),
+            "domain": f"{slug}.com",
+            "velocity": "0/wk",
+            "total_emails": 0,
+            "has_data": False,
+            "campaigns": [],
+            "flow_triggers": [],
+            "cadence_calendar": [],
+            "insights": {
+                "avg_discount": "0%",
+                "top_subject_keywords": []
+            }
+        }
 
     # Save to cache
     try:
