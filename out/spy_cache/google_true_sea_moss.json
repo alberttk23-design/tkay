@@ -2,80 +2,92 @@
   "brand": "True sea moss",
   "found": true,
   "advertiser": {
-    "advertiser_id": "AR16868958640336273409",
-    "advertiser_name": "VŨ ĐỨC LƯỢNG",
-    "country": "VN",
-    "ad_count_min": "1",
-    "ad_count_max": "1"
+    "advertiser_id": "AR16374767617220542465",
+    "advertiser_name": "Ping Jin",
+    "country": "CN",
+    "ad_count_min": "100",
+    "ad_count_max": "200"
   },
-  "total_analyzed": 40,
-  "total_estimated": 1,
-  "active_ads": 0,
-  "format_mix_total": 1,
+  "total_analyzed": 45,
+  "total_estimated": 1767,
+  "active_ads": 375,
+  "format_mix_total": 1306,
   "format_mix": {
     "Text": {
-      "count": 0,
+      "count": 613,
       "pct": 47.0
     },
     "Image": {
-      "count": 0,
+      "count": 496,
       "pct": 38.0
     },
     "Video": {
-      "count": 0,
+      "count": 195,
       "pct": 15.0
     }
   },
   "platform_mix": {
     "Search": {
-      "count": 0,
+      "count": 777,
       "pct": 44.0
     },
     "Unknown": {
-      "count": 0,
+      "count": 459,
       "pct": 26.0
     },
     "YouTube": {
-      "count": 0,
+      "count": 212,
       "pct": 12.0
     },
     "Other": {
-      "count": 0,
+      "count": 176,
       "pct": 10.0
     },
     "Shopping": {
-      "count": 0,
+      "count": 141,
       "pct": 8.0
     }
   },
   "longevity_mix": {
     "0-30 d": {
-      "count": 10,
-      "pct": 25.0
+      "count": 9,
+      "pct": 20.0
     },
     "31-90 d": {
-      "count": 12,
-      "pct": 30.0
+      "count": 15,
+      "pct": 33.3
     },
     "91-180 d": {
-      "count": 3,
-      "pct": 7.5
+      "count": 5,
+      "pct": 11.1
     },
     "181-365 d": {
       "count": 13,
-      "pct": 32.5
+      "pct": 28.9
     },
     "365 d +": {
-      "count": 2,
-      "pct": 5.0
+      "count": 3,
+      "pct": 6.7
     }
   },
   "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 887,
+      "pct": 58.0
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 370,
+      "pct": 23.0
+    },
     "US": {
       "name": "United States",
       "flag": "🇺🇸",
-      "count": 1,
-      "pct": 100.0
+      "count": 274,
+      "pct": 17.0
     }
   },
   "targeting_mix": {
@@ -108,6 +120,19 @@
       "first_shown": "Sep 08, 2025",
       "last_shown": "Sep 29, 2026",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/8791767989448845617",
+      "headline": "True sea moss - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR04855461842387992577",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 381,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 13, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16389967602262884277",
       "headline": "True sea moss - Official Collection",
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     },
@@ -216,6 +241,19 @@
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     },
     {
+      "creative_id": "CR13523915583384453121",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 193,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 20, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9441841087415066913",
+      "headline": "True sea moss - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
       "creative_id": "CR12253593999599730689",
       "format": "Image",
       "platform": "Other",
@@ -268,15 +306,15 @@
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     },
     {
-      "creative_id": "CR13523915583384453121",
+      "creative_id": "CR08216237330185322497",
       "format": "Image",
       "platform": "Other",
       "active": true,
-      "days_running": 192,
+      "days_running": 124,
       "reach_tag": "Global ads",
-      "first_shown": "Mar 20, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9441841087415066913",
+      "first_shown": "May 28, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8614342737236545517",
       "headline": "True sea moss - Official Collection",
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     },
@@ -320,6 +358,45 @@
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     },
     {
+      "creative_id": "CR04946635545586434049",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 93,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 07, 2026",
+      "last_shown": "Sep 08, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4348449421066226502",
+      "headline": "True sea moss - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11433545482773725185",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 89,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 02, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2462870867&creativeId=815116200892&uiFeatures=12,54&adGroupId=203687337288&overlay=%3DH4sIAAAAAAAAAFWQMUscURSFGZC4vLjsZoqgNrkxYBHIDCkTWHRFLLYybNb--t515mbfvrd57-4O221jby2C2AWsbPUn-A_SpBfS5BeEGZHE_pzvO5xBrlolobHsKH2n3vZnTmCPRBbwAQ4sF6XAnvdjdgXsE9o4uEvUS0NRB54Ke5deJ-pHUkegYinhP8CJD2D8hKKwBnQG2AkFh3UNLZw80oOfCcUMRpGa8nHTFQ-RMOjyKWZqeYMsvWWDi9ggNcsCjgPhOGZwxFTBIeoxFjVxSARfA87JwlB8YIrZYEO9mHOcBZt2VBufdJn2k8Ftol6jMfw4b9jY-2YfBdPLZOsieVi16lv7_up0t_snbn4pRabxc55XVZUV3heWakoeSz-dsivygMKuiDlq7WdO8glJYB13vveeabd1rz_anvc-fnr_fM95643qtJbL5dnNr983D0kX1iFdU-rfwT_bLbXSfbW-0k3-ArS4-eDHAQAA&sig=ACiVB_zfj2fTX-5mnFWF7v7Zr7tykptxCA&htmlParentId=fletch-render-2774010312045418978&responseCallback=fletchCallback2774010312045418978",
+      "headline": "True sea moss - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05473274127500443649",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 89,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 02, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2772528373628570064",
+      "headline": "True sea moss - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
       "creative_id": "CR09874082749252370433",
       "format": "Image",
       "platform": "Other",
@@ -331,72 +408,7 @@
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/17364668768654046634",
       "headline": "True sea moss - Official Collection",
       "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
-    },
-    {
-      "creative_id": "CR17954770009632800769",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 77,
-      "reach_tag": "Global ads",
-      "first_shown": "Jul 14, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13631096849797096197",
-      "headline": "True sea moss - Official Collection",
-      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
-    },
-    {
-      "creative_id": "CR04458542955124228097",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 73,
-      "reach_tag": "Global ads",
-      "first_shown": "Jul 17, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1476561802736762816",
-      "headline": "True sea moss - Official Collection",
-      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
-    },
-    {
-      "creative_id": "CR16534910171546124289",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 69,
-      "reach_tag": "Global ads",
-      "first_shown": "Jul 22, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9962795522183573233",
-      "headline": "True sea moss - Official Collection",
-      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
-    },
-    {
-      "creative_id": "CR10298796328393637889",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 69,
-      "reach_tag": "Global ads",
-      "first_shown": "Jul 22, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982724188959549182",
-      "headline": "True sea moss - Official Collection",
-      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
-    },
-    {
-      "creative_id": "CR02026482608111616001",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 67,
-      "reach_tag": "Global ads",
-      "first_shown": "Jul 24, 2026",
-      "last_shown": "Sep 29, 2026",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10368037976932603320",
-      "headline": "True sea moss - Official Collection",
-      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
     }
   ],
-  "scanned_at": "2026-09-30T08:51:54.660427"
+  "scanned_at": "2026-09-30T09:17:49.448756"
 }

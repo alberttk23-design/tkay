@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="grad_tsm_15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="100%" stop-color="#4c0519"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="url(#grad_tsm_15)" rx="24"/>
+
+  <!-- Subtle grid pattern -->
+  <circle cx="500" cy="120" r="160" fill="#fbcfe8" opacity="0.08" filter="url(#glow)"/>
+  <circle cx="80" cy="650" r="200" fill="#fbcfe8" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- Brand Header -->
+  <g transform="translate(50, 45)">
+    <rect width="36" height="36" rx="18" fill="#ffffff" opacity="0.15"/>
+    <text x="18" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" text-anchor="middle" fill="#ffffff">🌿</text>
+    <text x="48" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="1.5">TRUE SEA MOSS</text>
+    <text x="500" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#fbcfe8" text-anchor="end">Anti-Aging Secret</text>
+  </g>
+
+  <!-- Tag pill -->
+  <g transform="translate(50, 110)">
+    <rect width="170" height="30" rx="15" fill="#db2777"/>
+    <text x="85" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.8">BEAUTY FORMULA</text>
+  </g>
+
+  <!-- Hero Headlines -->
+  <text x="50" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="-0.5">SEA MOSS + COLLAGEN</text>
+  <text x="50" y="230" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#fbcfe8" letter-spacing="-0.5">HAIR, SKIN &amp; NAILS ELIXIR</text>
+
+  <!-- Central Visual Container (Jar &amp; Mineral Mockup) -->
+  <g transform="translate(50, 270)">
+    <rect width="500" height="320" rx="20" fill="#ffffff" opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+    
+    <!-- Decorative Radial Glow behind jar -->
+    <circle cx="250" cy="150" r="90" fill="#fbcfe8" opacity="0.2" filter="url(#glow)"/>
+
+    <!-- Sea Moss Glass Jar Graphic -->
+    <g transform="translate(190, 45)">
+      <!-- Jar Cap -->
+      <rect x="25" y="0" width="70" height="16" rx="6" fill="#d4af37" stroke="#b38f20" stroke-width="1.5"/>
+      <!-- Jar Neck -->
+      <rect x="35" y="14" width="50" height="12" fill="#f8fafc" opacity="0.4"/>
+      <!-- Jar Body -->
+      <rect x="10" y="24" width="100" height="135" rx="16" fill="#ffffff" opacity="0.15" stroke="#ffffff" stroke-width="2"/>
+      <!-- Golden Gel Fill -->
+      <rect x="15" y="45" width="90" height="108" rx="12" fill="#fbcfe8" opacity="0.55"/>
+      <path d="M15 55 Q 60 45, 105 55 L105 153 L15 153 Z" fill="#fbcfe8" opacity="0.7"/>
+      <!-- Jar Label -->
+      <rect x="20" y="65" width="80" height="55" rx="6" fill="#ffffff" opacity="0.95"/>
+      <text x="60" y="82" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="800" fill="#022c22" text-anchor="middle">TRUE SEA MOSS</text>
+      <text x="60" y="94" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="6.5" font-weight="600" fill="#059669" text-anchor="middle">WILDCRAFTED GEL</text>
+      <text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="900" fill="#022c22" text-anchor="middle">16 OZ (454g)</text>
+      <circle cx="60" cy="114" r="1.5" fill="#10b981"/>
+    </g>
+
+    <!-- Side Mineral Badges -->
+    <g transform="translate(35, 70)">
+      <rect width="110" height="44" rx="10" fill="#000000" opacity="0.35" stroke="#ffffff" stroke-opacity="0.1"/>
+      <text x="15" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">🛡️</text>
+      <text x="38" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ffffff">92 Minerals</text>
+      <text x="38" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#fbcfe8">Immunity Boost</text>
+    </g>
+
+    <g transform="translate(355, 70)">
+      <rect width="110" height="44" rx="10" fill="#000000" opacity="0.35" stroke="#ffffff" stroke-opacity="0.1"/>
+      <text x="15" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">✨</text>
+      <text x="38" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ffffff">Gut &amp; Skin</text>
+      <text x="38" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#fbcfe8">Daily Glow</text>
+    </g>
+
+    <g transform="translate(35, 140)">
+      <rect width="110" height="44" rx="10" fill="#000000" opacity="0.35" stroke="#ffffff" stroke-opacity="0.1"/>
+      <text x="15" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">🌊</text>
+      <text x="38" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ffffff">St. Lucia</text>
+      <text x="38" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#fbcfe8">Wild Harvest</text>
+    </g>
+
+    <g transform="translate(355, 140)">
+      <rect width="110" height="44" rx="10" fill="#000000" opacity="0.35" stroke="#ffffff" stroke-opacity="0.1"/>
+      <text x="15" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">⚡</text>
+      <text x="38" y="18" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ffffff">Non-GMO</text>
+      <text x="38" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="500" fill="#fbcfe8">100% Organic</text>
+    </g>
+
+    <!-- Bottom Feature Line -->
+    <text x="250" y="285" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">Marine collagen peptides blended with sea moss for youthful skin elasticity.</text>
+  </g>
+
+  <!-- CTA Button -->
+  <g transform="translate(150, 625)">
+    <rect width="300" height="56" rx="28" fill="#fbcfe8"/>
+    <text x="150" y="34" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#022c22" text-anchor="middle" letter-spacing="1">GLOW FROM WITHIN →</text>
+  </g>
+
+  <!-- Footer Brand Note -->
+  <text x="300" y="725" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#94a3b8" text-anchor="middle">Cold-pack express shipping worldwide • 100% Money-back guarantee</text>
+  <text x="300" y="745" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">trueseamoss.com • Sent via Klaviyo Intelligence</text>
+</svg>

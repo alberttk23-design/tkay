@@ -1281,15 +1281,37 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <!-- (MATCHING media_1790692469660.png)         -->
         <!-- ========================================== -->
         <div id="emailIntelligenceContainer" class="space-y-6 hidden">
-          <!-- Top Header Strip matching media_1790692469660.png -->
+          <!-- Top Header Strip matching media_1790733116755.png -->
           <div class="tt-card p-5">
-            <div class="flex items-center gap-3 mb-4">
-              <img id="emailBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0f172a&color=fff" class="w-8 h-8 rounded-full object-cover" alt="Brand"/>
-              <h1 id="emailBrandTitle" class="text-xl font-black text-slate-900 tracking-tight">The Oodie</h1>
-              <span class="w-16 h-5 rounded-full bg-slate-200/80 inline-block"></span>
+            <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+              <div class="flex items-center gap-3">
+                <img id="emailBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0f172a&color=fff" class="w-9 h-9 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Brand"/>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h1 id="emailBrandTitle" class="text-xl font-black text-slate-900 tracking-tight">The Oodie</h1>
+                  <span class="text-xs font-semibold text-slate-300">•</span>
+                  <span class="text-xs font-bold text-emerald-600 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span id="emailHeaderCount">147</span> emails
+                  </span>
+                  <span class="text-xs font-semibold text-slate-300">•</span>
+                  <span class="text-xs font-medium text-slate-500">
+                    Recent pace ~<span id="emailHeaderPace" class="font-bold text-slate-700">3.5</span> / week
+                  </span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-bold shadow-2xs flex items-center gap-1.5 cursor-pointer transition">
+                  <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                  <span>Share</span>
+                </button>
+                <button class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs flex items-center gap-1.5 cursor-pointer transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                  <span>Add Brandtracker</span>
+                </button>
+              </div>
             </div>
 
-            <!-- 4 Sub-Tabs matching media_1790692469660.png -->
+            <!-- 4 Sub-Tabs matching media_1790733116755.png -->
             <div class="flex items-center gap-8 border-b border-slate-200 text-xs font-bold pt-1">
               <button id="emailSubTab_library" onclick="switchEmailSubTab('library')" class="pb-3 border-b-2 border-slate-900 text-slate-900 flex items-center gap-2 cursor-pointer transition">
                 <svg class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -1310,25 +1332,58 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- SUB-VIEW 1: EMAIL LIBRARY (6-COLUMN GRID matching media_1790692469660.png) -->
+          <!-- SUB-VIEW 1: EMAIL LIBRARY (4-COLUMN GRID matching media_1790733116755.png) -->
           <div id="emailLibraryView" class="space-y-4">
-            <!-- Filter Bar -->
-            <div class="flex items-center justify-between gap-4 flex-wrap">
+            <!-- Filter Bar Row 1 matching media_1790733116755.png -->
+            <div class="tt-card p-3.5 flex items-center gap-2.5 flex-wrap text-xs">
+              <span class="font-extrabold text-slate-800 flex items-center gap-1.5 mr-1">
+                <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Emails
+              </span>
+              <button onclick="toggleEmailFilterDropdown('campaign')" class="px-3 py-1.5 rounded-lg border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition">
+                <span>Campaign</span>
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleEmailFilterDropdown('category')" class="px-3 py-1.5 rounded-lg border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition">
+                <span>Category</span>
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleEmailFilterDropdown('promotion')" class="px-3 py-1.5 rounded-lg border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition">
+                <span>Promotion type</span>
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleEmailFilterDropdown('event')" class="px-3 py-1.5 rounded-lg border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition">
+                <span>Event</span>
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleEmailFilterDropdown('date')" class="px-3 py-1.5 rounded-lg border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1.5 cursor-pointer shadow-2xs transition">
+                <span>Select Date Range</span>
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+
+            <!-- Sort and Search Row 2 matching media_1790733116755.png -->
+            <div class="flex items-center justify-between gap-4 flex-wrap text-xs px-1">
               <div class="flex items-center gap-2">
-                <button onclick="filterEmailCategory('all')" id="emailFilterBtn_all" class="px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-xs cursor-pointer transition">All (<span id="emailCountTotal">18</span>)</button>
-                <button onclick="filterEmailCategory('Marketing')" id="emailFilterBtn_marketing" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold cursor-pointer transition">Promotions</button>
-                <button onclick="filterEmailCategory('VIP Access')" id="emailFilterBtn_vip" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold cursor-pointer transition">VIP & Early Bird</button>
-                <button onclick="filterEmailCategory('Flash Sale')" id="emailFilterBtn_flash" class="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold cursor-pointer transition">Flash Sales</button>
+                <span class="text-slate-500 font-medium">Sort By:</span>
+                <select id="emailSortSelect" onchange="sortEmailCampaigns(this.value)" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-800 focus:outline-none cursor-pointer shadow-2xs">
+                  <option value="newest">Date Sent ⇣</option>
+                  <option value="oldest">Date Sent ⇡</option>
+                  <option value="category">Category</option>
+                </select>
               </div>
-              <div class="flex items-center gap-3 text-xs">
-                <span class="text-slate-500 font-medium">Cadence: <b class="text-slate-800" id="emailCadenceBadge">3.8/wk</b></span>
-                <span class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white text-slate-700 font-semibold shadow-2xs">Newest first ▾</span>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-700" id="emailLibraryCountBadge">147 emails</span>
+                <div class="relative">
+                  <input type="text" id="emailSearchInput" oninput="filterEmailBySearch(this.value)" placeholder="Tìm kiếm email..." class="pl-8 pr-3 py-1 bg-white border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 shadow-2xs w-48"/>
+                  <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
               </div>
             </div>
 
-            <!-- 6-COLUMN GRID OF EMAIL CARDS -->
-            <div id="emailCardsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              <!-- Dynamically populated cards matching media_1790692469660.png -->
+            <!-- 4-COLUMN GRID OF EMAIL CARDS matching media_1790733116755.png -->
+            <div id="emailCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Dynamically populated cards matching media_1790733116755.png -->
             </div>
           </div>
 
@@ -2413,7 +2468,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.remove('hidden');
-        const bName = (currentData && currentData.name) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        const bName = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
         loadEmailIntelligenceView(bName);
       } else if (tab === 'google') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
@@ -2523,13 +2578,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       const titleEl = document.getElementById('emailBrandTitle');
       const avatarEl = document.getElementById('emailBrandAvatar');
-      const cadenceEl = document.getElementById('emailCadenceBadge');
-      const totalEl = document.getElementById('emailCountTotal');
+      const countEl = document.getElementById('emailHeaderCount');
+      const paceEl = document.getElementById('emailHeaderPace');
+      const badgeEl = document.getElementById('emailLibraryCountBadge');
 
       if (titleEl) titleEl.textContent = bName;
       if (avatarEl) avatarEl.src = avatarUrl;
-      if (cadenceEl) cadenceEl.textContent = data.velocity || '3.8/wk';
-      if (totalEl) totalEl.textContent = data.campaigns ? data.campaigns.length : 18;
+      const totalCount = data.total_emails || (data.campaigns ? data.campaigns.length : 147);
+      if (countEl) countEl.textContent = totalCount;
+      if (paceEl) paceEl.textContent = data.velocity ? data.velocity.replace('/wk', '').trim() : '3.5';
+      if (badgeEl) badgeEl.textContent = `${totalCount} emails`;
 
       renderEmailLibrary(data.campaigns || []);
     }
@@ -2541,7 +2599,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       const bName = (currentEmailData && currentEmailData.brand) || (currentData ? currentData.name : 'The Oodie');
       const avatarUrl = getEmailBrandAvatar(bName);
-      const velocity = (currentEmailData && currentEmailData.velocity) || '3.8/wk';
+      const velocity = (currentEmailData && currentEmailData.velocity) || '3.5/wk';
 
       let filtered = campaigns;
       if (currentEmailFilter !== 'all') {
@@ -2550,45 +2608,41 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       filtered.forEach((card, idx) => {
         const cDiv = document.createElement('div');
-        cDiv.className = "bg-white p-3 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer flex flex-col justify-between";
+        cDiv.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer flex flex-col justify-between";
         cDiv.onclick = () => openEmailDetailModal(idx);
 
         const imgSrc = card.image_url || `/static/emails/card_${(idx % 18) + 1}.png`;
-        const creativeContent = `
-          <div class="w-full aspect-[3/4] rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-2xs group-hover:scale-[1.02] transition-transform duration-200">
-            <img src="${imgSrc}" class="w-full h-full object-cover block" alt="${card.subject}" loading="lazy"/>
-          </div>
-        `;
 
         cDiv.innerHTML = `
           <div>
-            <!-- Top badges row matching media_1790692469660.png -->
+            <!-- Top Badges matching media_1790733116755.png -->
             <div class="flex items-center justify-between gap-1 text-[11px] font-bold mb-2">
-              <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 text-[10px] font-bold">
+              <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/70">
                 ${card.badge || 'Marketing'}
               </span>
-              <span class="text-[10px] font-semibold text-slate-400">
+              <span class="text-[10.5px] font-medium text-slate-500 flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 ${card.time_ago ? `${card.time_ago} • ` : ''}${card.date}
               </span>
             </div>
 
-            <!-- Subject Row -->
-            <div class="mb-2">
-              <div class="flex items-center gap-1.5 min-w-0">
-                <img src="${avatarUrl}" class="w-3.5 h-3.5 rounded-full shrink-0 border border-slate-200/60" alt="Brand"/>
-                <div class="text-[11px] font-bold text-slate-800 truncate leading-snug group-hover:text-blue-600 transition" title="${card.subject}">
-                  ${card.subject}
-                </div>
+            <!-- Subject Row with Brand Avatar -->
+            <div class="my-2.5 flex items-start gap-2">
+              <img src="${avatarUrl}" class="w-4 h-4 rounded-full mt-0.5 object-cover shrink-0 border border-slate-200" alt="Brand"/>
+              <div class="text-xs font-bold text-slate-900 group-hover:text-blue-600 transition line-clamp-2 leading-tight" title="${card.subject}">
+                ${card.subject}
               </div>
             </div>
 
             <!-- Creative Body Preview -->
-            ${creativeContent}
+            <div class="w-full aspect-[3/4] rounded-xl overflow-hidden bg-slate-50 border border-slate-200/70 shadow-2xs group-hover:scale-[1.01] transition-transform duration-200 mb-3">
+              <img src="${imgSrc}" class="w-full h-full object-cover block" alt="${card.subject}" loading="lazy"/>
+            </div>
           </div>
 
-          <!-- Footer Row matching media_1790692469660.png -->
-          <div class="pt-2.5 mt-2.5 border-t border-slate-100 flex items-center justify-between">
-            <div class="flex items-center gap-1.5 min-w-0">
+          <!-- Footer Row matching media_1790733116755.png -->
+          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-2 min-w-0">
               <img src="${avatarUrl}" class="w-5 h-5 rounded-full object-cover shrink-0 border border-slate-200/80 shadow-2xs" alt="Brand"/>
               <div class="flex flex-col min-w-0 leading-none">
                 <span class="font-bold text-slate-800 text-[11px] truncate">${bName}</span>
@@ -2598,12 +2652,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 </span>
               </div>
             </div>
-            <div class="flex items-center gap-1 shrink-0">
-              <button onclick="event.stopPropagation();" class="w-5 h-5 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:border-slate-300 transition cursor-pointer" title="Bookmark">
-                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <button onclick="event.stopPropagation();" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Save">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button onclick="event.stopPropagation();" class="w-5 h-5 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:border-slate-300 transition cursor-pointer" title="Options">
-                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+              <button onclick="event.stopPropagation();" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Options">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
               </button>
             </div>
           </div>
@@ -2611,6 +2665,37 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         grid.appendChild(cDiv);
       });
+    }
+
+    function sortEmailCampaigns(sortBy) {
+      if (!currentEmailData || !currentEmailData.campaigns) return;
+      let campaigns = [...currentEmailData.campaigns];
+      if (sortBy === 'oldest') {
+        campaigns.reverse();
+      } else if (sortBy === 'category') {
+        campaigns.sort((a, b) => (a.category || '').localeCompare(b.category || ''));
+      }
+      renderEmailLibrary(campaigns);
+    }
+
+    function filterEmailBySearch(term) {
+      if (!currentEmailData || !currentEmailData.campaigns) return;
+      const t = (term || '').toLowerCase().trim();
+      if (!t) {
+        renderEmailLibrary(currentEmailData.campaigns);
+        return;
+      }
+      const filtered = currentEmailData.campaigns.filter(c => 
+        (c.subject && c.subject.toLowerCase().includes(t)) ||
+        (c.preheader && c.preheader.toLowerCase().includes(t)) ||
+        (c.category && c.category.toLowerCase().includes(t)) ||
+        (c.products && c.products.some(p => p.toLowerCase().includes(t)))
+      );
+      renderEmailLibrary(filtered);
+    }
+
+    function toggleEmailFilterDropdown(filterType) {
+      alert(`Bộ lọc Email [${filterType}]: Đang mở tùy chọn lọc chi tiết theo ${filterType}.`);
     }
 
     function switchEmailSubTab(subTab) {
@@ -4435,6 +4520,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     // Load Brand Data for Explorer
     async function loadBrand(query, forceRefresh = false) {
+      currentEmailData = null;
       document.getElementById('btnSpinner').classList.remove('hidden');
       document.getElementById('btnText').textContent = forceRefresh ? 'Đang làm mới...' : 'Đang quét...';
 
