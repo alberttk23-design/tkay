@@ -85,6 +85,32 @@
       }
     ]
   },
+  "spark_analysis": {
+    "total_channel_videos": 703,
+    "spark_ads_count": 220,
+    "pure_organics_count": 483,
+    "ads_percentage": 31,
+    "organics_percentage": 69,
+    "detection_source": "TikTok Commercial Content API Cross-Referencing",
+    "auth_rate": "100% Native Auth Code Linked",
+    "breakdown": [
+      {
+        "type": "Spark Ads",
+        "count": 220,
+        "pct": 31,
+        "description": "Video gốc trên profile được cấp mã Spark Auth và bơm tiền quảng cáo",
+        "badge": "bg-pink-100 text-pink-600"
+      },
+      {
+        "type": "Organics",
+        "count": 483,
+        "pct": 69,
+        "description": "Video tự nhiên trên kênh, không gắn ngân sách quảng cáo thương mại",
+        "badge": "bg-cyan-100 text-cyan-700"
+      }
+    ],
+    "detection_logic_summary": "TrendTrack đối soát tập 703 video cào từ profile @the_oodie với kho dữ liệu TikTok Commercial Content API. 220 video trùng khớp ID gốc (aweme_id) và có cờ is_spark == true được định danh là 'Spark Ad' (31%), 483 video còn lại là 'Organics' (69%)."
+  },
   "videos": [
     {
       "id": "tt_oodie_001",

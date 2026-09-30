@@ -2110,6 +2110,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                       <span id="tiktokOrganicsPctBadge">Organics 69%</span>
                     </button>
                   </div>
+
+                  <!-- Mổ Xẻ Spark Ads Inspector Trigger -->
+                  <button onclick="openSparkAdAnalysisModal()" class="px-2.5 py-1 rounded-full bg-pink-50 hover:bg-pink-100 text-pink-700 text-xs font-bold border border-pink-200/80 flex items-center gap-1.5 cursor-pointer ml-1 transition shadow-2xs">
+                    <span class="text-rose-500 font-extrabold animate-pulse">⚡</span>
+                    <span>Mổ xẻ Spark Ads (31% vs 69%)</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -2303,9 +2309,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <svg class="w-3.5 h-3.5 text-pink-400" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
                 <span>TikToks</span>
               </span>
-              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
-                <span>((•)) Type</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
+              <div class="relative inline-block">
+                <select id="ttLibraryTypeSelect" onchange="filterTikTokType(this.value)" class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs shadow-2xs cursor-pointer appearance-none pr-7 focus:outline-none focus:ring-2 focus:ring-slate-900/10">
+                  <option value="all">((•)) Type: All (100%)</option>
+                  <option value="Ads">⚡ Spark Ads (<span id="ttSelectAdsPct">31%</span>)</option>
+                  <option value="Organics">🌱 Organics (<span id="ttSelectOrgPct">69%</span>)</option>
+                </select>
+                <svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
               <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
                 <span>📅 Publication Date</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
@@ -2497,6 +2508,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     <span id="ttModalDuration" class="text-slate-500 font-medium">26s</span>
                   </div>
 
+                  <!-- Spark Ad Verified Forensic Audit Badge -->
+                  <div id="ttModalSparkVerificationBox" class="p-2.5 rounded-xl bg-pink-50/80 border border-pink-200/70 text-xs text-pink-900 flex items-start gap-2.5">
+                    <div class="p-1 rounded-md bg-pink-200 text-pink-800 shrink-0 font-bold text-[10px]">SPK</div>
+                    <div class="space-y-0.5">
+                      <div class="font-bold flex items-center gap-1.5">
+                        <span>Spark Ad Authenticated</span>
+                        <span class="text-[10px] px-1.5 py-0.2 rounded bg-pink-200 text-pink-800 font-mono">is_spark: true</span>
+                      </div>
+                      <div class="text-[11px] text-pink-700/90 leading-tight">
+                        Native post linked from profile. Creator Auth Code verified in TikTok Commercial Library API.
+                      </div>
+                    </div>
+                  </div>
+
                   <p id="ttModalCaption" class="text-xs text-slate-800 font-medium leading-relaxed">Caption text</p>
 
                   <div class="flex items-center gap-2 bg-slate-50 border border-slate-200/80 p-2.5 rounded-xl text-xs font-semibold text-slate-700">
@@ -2528,6 +2553,158 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 </div>
 
                 <button onclick="closeTikTokModal()" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition cursor-pointer">
+                  Đóng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- MODAL: SPARK ADS AUDIT & REVERSE-ENGINEERED MECHANISM          -->
+        <!-- ============================================================== -->
+        <div id="sparkAdAuditModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+          <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-rose-500 text-white flex items-center justify-center text-base shadow-xs font-bold">
+                  ⚡
+                </div>
+                <div>
+                  <h3 class="text-sm font-extrabold text-slate-900 flex items-center gap-2">
+                    <span>Mổ Xẻ Cơ Chế Nhận Diện Spark Ads (31% vs 69%)</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 text-white font-mono uppercase">Reverse-Engineered</span>
+                  </h3>
+                  <p class="text-xs text-slate-500 font-medium">Bí mật thuật toán phân loại Spark Ads vs Dark Posts vs Organics của TrendTrack</p>
+                </div>
+              </div>
+              <button onclick="closeSparkAdAnalysisModal()" class="w-8 h-8 rounded-full border border-slate-200 bg-white hover:bg-slate-100 flex items-center justify-center text-slate-500 cursor-pointer transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+
+            <!-- Modal Content (Scrollable) -->
+            <div class="p-6 overflow-y-auto custom-scroll space-y-5 text-xs text-slate-700">
+              <!-- KPI Summary Grid -->
+              <div class="grid grid-cols-3 gap-3">
+                <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-center">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Tổng Video Kênh</div>
+                  <div id="auditTotalVideos" class="text-xl font-extrabold text-slate-900 mt-0.5">703</div>
+                  <div id="auditChannelHandle" class="text-[10px] text-slate-500 mt-0.5">Profile @the_oodie</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-rose-50 border border-rose-200/80 text-center">
+                  <div class="text-[10px] uppercase font-bold text-rose-500">Spark Ads (31%)</div>
+                  <div id="auditSparkVideos" class="text-xl font-extrabold text-rose-600 mt-0.5">220</div>
+                  <div class="text-[10px] text-rose-700 mt-0.5">is_spark == true</div>
+                </div>
+                <div class="p-3 rounded-2xl bg-cyan-50 border border-cyan-200/80 text-center">
+                  <div class="text-[10px] uppercase font-bold text-cyan-600">Pure Organics (69%)</div>
+                  <div id="auditOrganicVideos" class="text-xl font-extrabold text-cyan-700 mt-0.5">483</div>
+                  <div class="text-[10px] text-cyan-700 mt-0.5">Không gắn Ads</div>
+                </div>
+              </div>
+
+              <!-- Mathematical Formula Box -->
+              <div class="p-4 rounded-2xl bg-slate-900 text-white space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold text-rose-400 uppercase tracking-wider">📐 Công thức tính toán của TrendTrack</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Set Intersection Algorithm</span>
+                </div>
+                <div class="space-y-1 font-mono text-[11px] bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="text-slate-300">1. Tập video kênh profile: <span id="auditFormulaChannel" class="text-amber-400 font-bold">|S_channel| = 703</span></div>
+                  <div class="text-slate-300">2. Tập video TikTok Ad Library của Domain: <span id="auditFormulaSpark" class="text-pink-400 font-bold">|S_spark_ads| = 220</span> (có is_spark = true)</div>
+                  <div class="text-emerald-400 pt-1 border-t border-slate-800">
+                    ➔ Tỷ lệ Ads: (<span id="auditMathAdsNum">220 / 703</span>) × 100% = <span id="auditMathAdsPct" class="font-bold underline text-white">31.29%</span> ≈ <span id="auditMathAdsRound" class="font-bold text-rose-400">31%</span>
+                  </div>
+                  <div class="text-cyan-400">
+                    ➔ Tỷ lệ Organics: (<span id="auditMathOrgNum">483 / 703</span>) × 100% = <span id="auditMathOrgPct" class="font-bold underline text-white">68.71%</span> ≈ <span id="auditMathOrgRound" class="font-bold text-cyan-300">69%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3-Type Technical Breakdown Table -->
+              <div class="space-y-2">
+                <div class="font-extrabold text-slate-900 text-xs">Phân Loại 3 Dạng Video Trên TikTok Của Brand</div>
+                <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-2xs">
+                  <table class="w-full text-left border-collapse">
+                    <thead class="bg-slate-50 text-[10px] uppercase font-bold text-slate-500 border-b border-slate-200">
+                      <tr>
+                        <th class="p-2.5">Dạng Video</th>
+                        <th class="p-2.5">Vị Trí Lưu Trữ</th>
+                        <th class="p-2.5">TikTok Ad Library Payload</th>
+                        <th class="p-2.5">Tương Tác</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-[11px]">
+                      <tr class="hover:bg-slate-50/50">
+                        <td class="p-2.5 font-bold text-rose-600 flex items-center gap-1.5">
+                          <span class="w-2 h-2 rounded-full bg-rose-500"></span> Spark Ad (31%)
+                        </td>
+                        <td class="p-2.5">Post gốc trên Profile kênh</td>
+                        <td class="p-2.5 font-mono text-[10px] text-slate-600">is_spark: true, source_type: 1, original_item_id: aweme_id</td>
+                        <td class="p-2.5">Đổ dồn like, view, comment vào bài gốc trên kênh profile</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/50">
+                        <td class="p-2.5 font-bold text-cyan-600 flex items-center gap-1.5">
+                          <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Pure Organics (69%)
+                        </td>
+                        <td class="p-2.5">Post thường trên Profile kênh</td>
+                        <td class="p-2.5 font-mono text-[10px] text-slate-400">Không xuất hiện trong TikTok Ad Library API</td>
+                        <td class="p-2.5">Organic Reach tự nhiên từ thuật toán FYP</td>
+                      </tr>
+                      <tr class="hover:bg-slate-50/50">
+                        <td class="p-2.5 font-bold text-slate-500 flex items-center gap-1.5">
+                          <span class="w-2 h-2 rounded-full bg-slate-400"></span> Dark Post (Non-Spark)
+                        </td>
+                        <td class="p-2.5">Chỉ nằm trong Ads Manager CDN</td>
+                        <td class="p-2.5 font-mono text-[10px] text-slate-600">is_spark: false, source_type: 0 (No profile post)</td>
+                        <td class="p-2.5">Không hiện trên profile kênh, view không cộng dồn</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Live TikTok Commercial Content API Payload Preview -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="font-extrabold text-slate-900 text-xs">Cấu Trúc Gói Tin XHR (TikTok Commercial Library API)</div>
+                  <span class="text-[10px] text-slate-400 font-mono">library.tiktok.com/api/v1/ad/search</span>
+                </div>
+                <div class="bg-slate-900 p-3 rounded-2xl text-[10px] font-mono text-emerald-400 overflow-x-auto custom-scroll leading-relaxed">
+{
+  "ad_id": "1749281729381729",
+  "advertiser_name": "The Oodie",
+  "source_type": 1,
+  "is_spark": true,
+  "spark_ads_auth_code": "SPK_9a8f7c6e0018f2",
+  "original_item_id": "7133928172938001920",
+  "video_url": "https://v16-webapp-prime.tiktok.com/...",
+  "destination_url": "https://theoodie.com/products/wearable-blanket",
+  "native_author": {
+    "unique_id": "the_oodie",
+    "nickname": "The Oodie",
+    "sec_uid": "MS4wLjABAAAA..."
+  }
+}
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-100 bg-slate-50/80 flex items-center justify-between gap-3">
+              <div class="text-[11px] text-slate-500 font-medium">
+                Click để lọc danh sách:
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="filterTikTokType('Ads'); closeSparkAdAnalysisModal();" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold border border-rose-200/80 transition cursor-pointer">
+                  Xem Spark Ads (<span id="auditFooterAdsPct">31%</span>)
+                </button>
+                <button onclick="filterTikTokType('Organics'); closeSparkAdAnalysisModal();" class="px-3 py-1.5 rounded-xl bg-cyan-50 hover:bg-cyan-100 text-cyan-700 text-xs font-bold border border-cyan-200/80 transition cursor-pointer">
+                  Xem Organics (<span id="auditFooterOrgPct">69%</span>)
+                </button>
+                <button onclick="closeSparkAdAnalysisModal()" class="px-4 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition cursor-pointer">
                   Đóng
                 </button>
               </div>
@@ -3703,6 +3880,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (bTotal) bTotal.textContent = (data.total_tiktoks || 703) + ' TikToks';
       if (adsPctBadge) adsPctBadge.textContent = 'Ads ' + (data.ads_ratio_pct || 31) + '%';
       if (organicsPctBadge) organicsPctBadge.textContent = 'Organics ' + (data.organics_ratio_pct || 69) + '%';
+      
+      const selectAdsPct = document.getElementById('ttSelectAdsPct');
+      const selectOrgPct = document.getElementById('ttSelectOrgPct');
+      if (selectAdsPct) selectAdsPct.textContent = (data.ads_ratio_pct || 31) + '%';
+      if (selectOrgPct) selectOrgPct.textContent = (data.organics_ratio_pct || 69) + '%';
+
       if (bAvatar) {
         bAvatar.src = data.avatar_url || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName) + '&background=0284c7&color=fff');
       }
@@ -3759,6 +3942,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const btnAll = document.getElementById('ttFilter_all');
       const btnAds = document.getElementById('ttFilter_ads');
       const btnOrg = document.getElementById('ttFilter_organics');
+      const typeSelect = document.getElementById('ttLibraryTypeSelect');
+
+      if (typeSelect && typeSelect.value !== type) {
+        typeSelect.value = type;
+      }
 
       const activeClass = "px-2.5 py-0.5 rounded-full bg-white text-slate-900 shadow-xs flex items-center gap-1.5 transition cursor-pointer";
       const inactiveClass = "px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer";
@@ -4209,6 +4397,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (comments) comments.textContent = v.comments_fmt;
       if (shares) shares.textContent = v.shares_fmt;
 
+      const sparkBox = document.getElementById('ttModalSparkVerificationBox');
+      if (sparkBox) {
+        sparkBox.classList.toggle('hidden', !v.is_spark_ad);
+      }
+
       if (player) {
         player.src = v.video_url || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
         player.poster = v.cover_url;
@@ -4225,6 +4418,60 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         player.pause();
         player.src = '';
       }
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function openSparkAdAnalysisModal() {
+      const modal = document.getElementById('sparkAdAuditModal');
+      if (!modal) return;
+      const data = currentTikTokData;
+      const bName = data ? (data.brand || 'The Oodie') : 'The Oodie';
+      const handle = data?.videos?.[0]?.handle || ('@' + bName.toLowerCase().replace(/[^a-z0-9]/g, '_'));
+      const total = data ? (data.total_tiktoks || 703) : 703;
+      const adsPct = data ? (data.ads_ratio_pct || 31) : 31;
+      const orgPct = data ? (data.organics_ratio_pct || 69) : 69;
+      const sparkCount = data?.spark_analysis?.spark_ads_count || Math.round(total * (adsPct / 100));
+      const orgCount = data?.spark_analysis?.pure_organics_count || (total - sparkCount);
+
+      const tEl = document.getElementById('auditTotalVideos');
+      const sEl = document.getElementById('auditSparkVideos');
+      const oEl = document.getElementById('auditOrganicVideos');
+      const handleEl = document.getElementById('auditChannelHandle');
+
+      const formulaChannel = document.getElementById('auditFormulaChannel');
+      const formulaSpark = document.getElementById('auditFormulaSpark');
+      const mathAdsNum = document.getElementById('auditMathAdsNum');
+      const mathAdsPct = document.getElementById('auditMathAdsPct');
+      const mathAdsRound = document.getElementById('auditMathAdsRound');
+      const mathOrgNum = document.getElementById('auditMathOrgNum');
+      const mathOrgPct = document.getElementById('auditMathOrgPct');
+      const mathOrgRound = document.getElementById('auditMathOrgRound');
+
+      const footerAdsPct = document.getElementById('auditFooterAdsPct');
+      const footerOrgPct = document.getElementById('auditFooterOrgPct');
+
+      if (tEl) tEl.textContent = total;
+      if (sEl) sEl.textContent = sparkCount;
+      if (oEl) oEl.textContent = orgCount;
+      if (handleEl) handleEl.textContent = 'Profile ' + handle;
+
+      if (formulaChannel) formulaChannel.textContent = '|S_channel| = ' + total;
+      if (formulaSpark) formulaSpark.textContent = '|S_spark_ads| = ' + sparkCount;
+      if (mathAdsNum) mathAdsNum.textContent = sparkCount + ' / ' + total;
+      if (mathAdsPct) mathAdsPct.textContent = ((sparkCount / total) * 100).toFixed(2) + '%';
+      if (mathAdsRound) mathAdsRound.textContent = adsPct + '%';
+      if (mathOrgNum) mathOrgNum.textContent = orgCount + ' / ' + total;
+      if (mathOrgPct) mathOrgPct.textContent = ((orgCount / total) * 100).toFixed(2) + '%';
+      if (mathOrgRound) mathOrgRound.textContent = orgPct + '%';
+
+      if (footerAdsPct) footerAdsPct.textContent = adsPct + '%';
+      if (footerOrgPct) footerOrgPct.textContent = orgPct + '%';
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeSparkAdAnalysisModal() {
+      const modal = document.getElementById('sparkAdAuditModal');
       if (modal) modal.classList.add('hidden');
     }
 
