@@ -3366,6 +3366,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }, 50);
     }
 
+    function getActiveBrandName() {
+      return (currentData && (currentData.query || currentData.name)) || 
+             (currentGoogleData && currentGoogleData.brand) || 
+             (currentEmailData && currentEmailData.brand) ||
+             (currentTikTokData && currentTikTokData.brand) ||
+             (document.getElementById('brandInput')?.value.trim()) || 
+             '';
+    }
+
     // Switch between Sub-Sidebar items (Overview, Google, Meta, TikTok, Contents, Emails, etc.)
     function switchShopSubTab(tab) {
       const navIds = ['subNavItemOverview', 'subNavItemSimilar', 'subNavItemMeta', 'subNavItemGoogle', 'subNavItemTiktok', 'subNavItemContents', 'subNavItemEmails', 'subNavItemBoards'];
@@ -3388,16 +3397,6 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const similarBtn = document.getElementById('subNavItemSimilar');
       const emailsBtn = document.getElementById('subNavItemEmails');
 
-    function getActiveBrandName() {
-      return (currentData && (currentData.query || currentData.name)) || 
-             (currentGoogleData && currentGoogleData.brand) || 
-             (currentEmailData && currentEmailData.brand) ||
-             (currentTikTokData && currentTikTokData.brand) ||
-             (document.getElementById('brandInput')?.value.trim()) || 
-             '';
-    }
-
-    function switchShopSubTab(tab) {
       const overviewContainer = document.getElementById('explorerOverviewContainer');
       const googleContainer = document.getElementById('googleAdsContainer');
       const emailContainer = document.getElementById('emailIntelligenceContainer');
