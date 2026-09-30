@@ -200,7 +200,7 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
                 const url = 'https://adstransparency.google.com/anji/_/rpc/SearchService/SearchCreatives?authuser=';
                 let all = [];
                 let nextToken = null;
-                let estRange = ["1000", "2000"];
+                let estRange = null;
 
                 for (let i = 0; i < 4; i++) {
                     const payload = {"2": 50, "3": filterObj, "7": {"1": 1, "2": 0, "3": 2704}};
@@ -228,6 +228,9 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             if creatives_res.get("estRange"):
                 intercepted["est_min"] = creatives_res["estRange"][0]
                 intercepted["est_max"] = creatives_res["estRange"][1]
+            else:
+                intercepted["est_min"] = None
+                intercepted["est_max"] = None
 
         # If adv_id was not resolved earlier, pull from first creative
         if not adv_id and intercepted["creatives"]:
@@ -488,17 +491,23 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             }
     else:
         # No geo data → derive from est_min/est_max from SearchCreatives RPC
-        try:
-            e_min = int(est_min)
-            e_max = int(est_max)
-            total_estimated = int(round(e_min + (e_max - e_min) * 0.74)) if e_max > e_min else e_min
-        except (ValueError, TypeError):
-            total_estimated = len(unique_creatives) if unique_creatives else 0
-        active_ads = active_sampled if active_sampled > 0 else int(round(total_estimated * 0.212))
-        format_mix_total = int(round(total_estimated * 0.74)) if total_estimated > 0 else 0
-        country_mix = {
-            country: {"name": country, "flag": "🌐", "count": total_estimated, "pct": 100.0}
-        } if total_estimated > 0 else {}
+        if not adv_id and len(unique_creatives) == 0:
+            total_estimated = 0
+            active_ads = 0
+            format_mix_total = 0
+            country_mix = {}
+        else:
+            try:
+                e_min = int(est_min)
+                e_max = int(est_max)
+                total_estimated = int(round(e_min + (e_max - e_min) * 0.74)) if e_max > e_min else e_min
+            except (ValueError, TypeError):
+                total_estimated = len(unique_creatives) if unique_creatives else 0
+            active_ads = active_sampled if active_sampled > 0 else int(round(total_estimated * 0.212))
+            format_mix_total = int(round(total_estimated * 0.74)) if total_estimated > 0 else 0
+            country_mix = {
+                country: {"name": country, "flag": "🌐", "count": total_estimated, "pct": 100.0}
+            } if total_estimated > 0 else {}
 
     # 3. Format Mix — COMPUTED FROM ACTUAL PARSED CREATIVES
     total_fmt = sum(format_counts.values())
@@ -506,12 +515,14 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         format_mix = {}
         for k, v in format_counts.items():
             format_mix[k] = {"count": v, "pct": round(v / total_fmt * 100, 1)}
-    else:
+    elif total_estimated > 0:
         format_mix = {
             "Text": {"count": int(format_mix_total * 0.47), "pct": 47.0},
             "Image": {"count": int(format_mix_total * 0.38), "pct": 38.0},
             "Video": {"count": int(format_mix_total * 0.15), "pct": 15.0},
         }
+    else:
+        format_mix = {}
 
     # 4. Platform Mix — COMPUTED FROM ACTUAL PARSED CREATIVES
     total_plat = sum(platform_counts.values())
@@ -519,7 +530,7 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         platform_mix = {}
         for k, v in platform_counts.items():
             platform_mix[k] = {"count": v, "pct": round(v / total_plat * 100, 1)}
-    else:
+    elif total_estimated > 0:
         platform_mix = {
             "Search": {"count": int(total_estimated * 0.44), "pct": 44.0},
             "Unknown": {"count": int(total_estimated * 0.26), "pct": 26.0},
@@ -527,13 +538,18 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             "Other": {"count": int(total_estimated * 0.10), "pct": 10.0},
             "Shopping": {"count": int(total_estimated * 0.08), "pct": 8.0},
         }
+    else:
+        platform_mix = {}
 
     # 5. Longevity Mix
-    total_parsed = max(1, len(unique_creatives))
-    longevity_mix = {
-        k: {"count": v, "pct": round(v / total_parsed * 100, 1) if total_parsed else 20.0}
-        for k, v in longevity_buckets.items()
-    }
+    total_parsed = len(unique_creatives)
+    if total_parsed > 0:
+        longevity_mix = {
+            k: {"count": v, "pct": round(v / total_parsed * 100, 1)}
+            for k, v in longevity_buckets.items()
+        }
+    else:
+        longevity_mix = {}
 
     has_real_data = bool(adv_id or unique_creatives or geo_results)
 

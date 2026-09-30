@@ -445,18 +445,22 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         print(f"⚠️ Lỗi quét Meta: {e}")
 
     # Parse numeric total
-    total_num = 30
-    m = re.search(r'([\d\.,]+)', total_results_str.replace('.', '').replace(',', ''))
-    if m:
-        try:
-            total_num = int(m.group(1))
-        except:
-            pass
+    total_num = len(raw_dom_cards)
+    # Check if total_results_str actually has a count
+    if total_results_str and any(w in total_results_str.lower() for w in ["kết quả", "result"]):
+        m = re.search(r'([\d\.,]+)', total_results_str.replace('.', '').replace(',', ''))
+        if m:
+            try:
+                parsed_count = int(m.group(1))
+                if parsed_count > 0:
+                    total_num = max(len(raw_dom_cards), parsed_count)
+            except:
+                pass
 
     parsed_ads = []
     seen_ids = set()
     clean_q_slug = re.sub(r'[^a-z0-9]', '', query.lower())
-    first_page_name = query.strip().title()
+    first_page_name = query.replace(".com", "").strip().title()
     first_landing_domain = clean_q_slug + ".com" if clean_q_slug else "brand.com"
 
     # Intelligent brand name selection: pick the pageName that best matches the query
@@ -482,11 +486,14 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
 
     if candidate_names:
         first_page_name = Counter(candidate_names).most_common(1)[0][0]
-    elif raw_dom_cards and raw_dom_cards[0].get("pageName") and raw_dom_cards[0].get("pageName") != "Advertiser":
-        first_page_name = raw_dom_cards[0].get("pageName")
+    else:
+        # Do NOT hijack brand identity to an unrelated advertiser! Keep the user's queried brand!
+        first_page_name = query.replace(".com", "").strip().title()
         
     if candidate_domains:
         first_landing_domain = Counter(candidate_domains).most_common(1)[0][0]
+    elif "." in query:
+        first_landing_domain = query.strip().lower().replace("https://", "").replace("http://", "").split("/")[0]
 
     for idx, c in enumerate(raw_dom_cards[:max_ads]):
         ad_id = c.get("id") or str(idx + 1)

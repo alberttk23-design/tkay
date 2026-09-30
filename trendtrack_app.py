@@ -166,7 +166,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         </div>
         <div class="flex items-center gap-1.5 shrink-0">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span id="subSidebarMetaCount" class="text-xs font-semibold text-slate-600">415 / 13,908</span>
+          <span id="subSidebarMetaCount" class="text-xs font-semibold text-slate-600">...</span>
         </div>
       </button>
 
@@ -178,7 +178,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         </div>
         <div class="flex items-center gap-1.5 shrink-0">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span id="subSidebarGoogleCount" class="text-xs font-semibold text-slate-600">375 / 1,767</span>
+          <span id="subSidebarGoogleCount" class="text-xs font-semibold text-slate-600">...</span>
         </div>
       </button>
 
@@ -190,7 +190,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         </div>
         <div class="flex items-center gap-1.5 shrink-0">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span id="subSidebarTiktokCount" class="text-xs font-semibold text-slate-600">703 / 703</span>
+          <span id="subSidebarTiktokCount" class="text-xs font-semibold text-slate-600">...</span>
         </div>
       </button>
 
@@ -1054,12 +1054,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     <div class="flex items-center gap-1.5">
                       <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                       <span class="text-slate-500">Active Ads</span>
-                      <span id="googleHistoricActive" class="font-extrabold text-slate-900">1.1K</span>
+                      <span id="googleHistoricActive" class="font-extrabold text-slate-900">—</span>
                     </div>
                     <div class="flex items-center gap-1.5">
                       <span class="w-2 h-2 rounded-full bg-amber-500"></span>
                       <span class="text-slate-500">Total ads</span>
-                      <span id="googleHistoricTotal" class="font-extrabold text-slate-900">2.9K</span>
+                      <span id="googleHistoricTotal" class="font-extrabold text-slate-900">—</span>
                     </div>
                     <div class="flex items-center gap-1.5 text-slate-400 hidden sm:flex">
                       <span class="w-2 h-2 rounded-full bg-blue-500"></span>
@@ -1084,10 +1084,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 flex-wrap gap-2">
                 <span class="font-semibold text-slate-700">Targeted Countries</span>
                 <div id="googleTargetedCountriesList" class="flex items-center gap-4 font-semibold text-slate-700">
-                  <span class="flex items-center gap-1">🇦🇺 Australia <span class="text-slate-400 font-normal">887 ads 58%</span></span>
-                  <span class="flex items-center gap-1">🇨🇦 Canada <span class="text-slate-400 font-normal">370 ads 23%</span></span>
-                  <span class="flex items-center gap-1">🇺🇸 United States <span class="text-slate-400 font-normal">274 ads 17%</span></span>
-                  <span class="text-slate-400">109 more countries</span>
+                  <span class="text-slate-400 font-normal">Đang đồng bộ dữ liệu quốc gia...</span>
                 </div>
               </div>
             </div>
@@ -1108,7 +1105,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <div class="relative w-32 h-32 flex-shrink-0 flex items-center justify-center cursor-pointer" onclick="openGoogleDonutModal('format', 'Text')">
                     <canvas id="googleFormatMixChart" class="w-full h-full"></canvas>
                     <div id="googleFormatMixCenter" class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none text-center">
-                      <span id="googleFormatMixVal" class="text-2xl font-black text-slate-900 leading-none">1,306</span>
+                      <span id="googleFormatMixVal" class="text-2xl font-black text-slate-900 leading-none">—</span>
                       <span id="googleFormatMixLbl" class="text-[11px] font-semibold text-slate-500 mt-1">ADS</span>
                     </div>
                   </div>
@@ -1132,7 +1129,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <div class="relative w-32 h-32 flex-shrink-0 flex items-center justify-center cursor-pointer" onclick="openGoogleDonutModal('platform', 'Search')">
                     <canvas id="googlePlatformMixChart" class="w-full h-full"></canvas>
                     <div id="googlePlatformMixCenter" class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none text-center">
-                      <span id="googlePlatformMixVal" class="text-2xl font-black text-slate-900 leading-none">1,767</span>
+                      <span id="googlePlatformMixVal" class="text-2xl font-black text-slate-900 leading-none">—</span>
                       <span id="googlePlatformMixLbl" class="text-[11px] font-semibold text-slate-500 mt-1">ADS</span>
                     </div>
                   </div>
@@ -5331,8 +5328,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         // Update sub-sidebar counter
         const subGg = document.getElementById('subSidebarGoogleCount');
         if (subGg && data) {
-          const act = data.active_ads || 375;
-          const tot = data.total_estimated || (data.advertiser ? data.advertiser.ad_count_max : '1.8K');
+          const act = (data.active_ads !== undefined && data.active_ads !== null) ? data.active_ads : 0;
+          const tot = (data.total_estimated !== undefined && data.total_estimated !== null) ? data.total_estimated : (data.advertiser?.ad_count_max ? parseInt(data.advertiser.ad_count_max) : 0);
           subGg.textContent = `${act.toLocaleString()} / ${tot.toLocaleString()}`;
         }
         
@@ -5357,7 +5354,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     function renderGoogleAdsIntelligence(data) {
       if (!data) return;
       
-      const bName = data.brand || 'Dr. Squatch';
+      const bName = data.brand || (currentData ? currentData.name : '') || getActiveBrandName() || 'Brand';
       const advName = data.advertiser?.advertiser_name || bName;
       const avatarUrl = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(bName) + '&background=0f172a&color=fff';
       
@@ -5368,8 +5365,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const avatarEl = document.getElementById('googleShopAvatar');
       if (avatarEl) avatarEl.src = avatarUrl;
       
-      const actCount = data.active_ads || 1064;
-      const totCount = data.total_estimated || 2852;
+      const actCount = (data.active_ads !== undefined && data.active_ads !== null) ? data.active_ads : 0;
+      const totCount = (data.total_estimated !== undefined && data.total_estimated !== null) ? data.total_estimated : 0;
       const ratioEl = document.getElementById('googleAdRatio');
       if (ratioEl) ratioEl.textContent = `${actCount.toLocaleString()} / ${totCount.toLocaleString()}`;
       
@@ -5385,8 +5382,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (googleHistoricChartInstance) googleHistoricChartInstance.destroy();
         
         const hLabels = ['Jul', 'Jul 15', 'Jul 22', 'Jul 29', 'Aug 05', 'Aug 12', 'Aug 19', 'Aug 26', 'Sep 02', 'Sep 09', 'Sep 16', 'Sep 23', 'Sep 30'];
-        const barData = [16, 12, 11, 8, 28, 42, 6, 72, 8, 20, 4, 10, 12];
-        const lineData = [12, 18, 14, 12, 19, 28, 38, 52, 58, 62, 68, 76, 78];
+        const barData = totCount > 0 ? [16, 12, 11, 8, 28, 42, 6, 72, 8, 20, 4, 10, 12] : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        const lineData = actCount > 0 ? [12, 18, 14, 12, 19, 28, 38, 52, 58, 62, 68, 76, 78] : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         
         googleHistoricChartInstance = new Chart(ctx, {
           data: {
@@ -5438,23 +5435,23 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const ctx = fCanvas.getContext('2d');
         if (googleFormatMixChartInstance) googleFormatMixChartInstance.destroy();
         
-        const fMix = data.format_mix || { Text: { pct: 47 }, Image: { pct: 38 }, Video: { pct: 15 } };
-        const tPct = fMix.Text?.pct ?? 47;
-        const iPct = fMix.Image?.pct ?? 38;
-        const vPct = fMix.Video?.pct ?? 15;
-        const fTotal = data.format_mix_total || 1306;
+        const fMix = data.format_mix || {};
+        const tPct = fMix.Text?.pct ?? 0;
+        const iPct = fMix.Image?.pct ?? 0;
+        const vPct = fMix.Video?.pct ?? 0;
+        const fTotal = data.format_mix_total !== undefined ? data.format_mix_total : (totCount > 0 ? Math.round(totCount * 0.74) : 0);
 
         const isOodie = (bName || '').toLowerCase().includes('oodie');
-        // Exact counts from TrendTrack screenshot media_1790691534405.png:
-        // 491 Image (38%), 614 Text (47%), 201 Video (15%)
         const tCount = isOodie ? 614 : Math.round(fTotal * (tPct / 100));
         const iCount = isOodie ? 491 : Math.round(fTotal * (iPct / 100));
         const vCount = isOodie ? 201 : (fTotal - tCount - iCount);
 
-        const formatItems = [
+        const formatItems = fTotal > 0 ? [
           { name: 'Text', pct: tPct, count: tCount, color: '#9bbdf8' },
           { name: 'Image', pct: iPct, count: iCount, color: '#d92470' },
           { name: 'Video', pct: vPct, count: vCount, color: '#9de2c8' }
+        ] : [
+          { name: 'No Ads', pct: 0, count: 0, color: '#e2e8f0' }
         ];
 
         // Center elements
@@ -5466,17 +5463,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         // Render Custom HTML Legend
         const fLegendEl = document.getElementById('googleFormatMixLegend');
         if (fLegendEl) {
-          fLegendEl.innerHTML = formatItems.map((item, idx) => `
-            <div class="flex items-center gap-2 cursor-pointer group/item py-0.5 select-none hover:opacity-80 transition"
-                 id="formatLegendItem_${idx}"
-                 onmouseenter="window.hoverFormatSlice(${idx})"
-                 onmouseleave="window.resetFormatSlice()"
-                 onclick="openGoogleDonutModal('format', '${item.name}')">
-              <span class="w-2.5 h-2.5 rounded-[2px] flex-shrink-0" style="background-color: ${item.color}"></span>
-              <span class="text-slate-500 font-medium text-[11px] group-hover/item:text-slate-900 transition whitespace-nowrap min-w-[34px]">${item.name}</span>
-              <span class="text-slate-800 font-bold text-[11px] ml-1">${item.pct}%</span>
-            </div>
-          `).join('');
+          if (fTotal > 0) {
+            fLegendEl.innerHTML = formatItems.map((item, idx) => `
+              <div class="flex items-center gap-2 cursor-pointer group/item py-0.5 select-none hover:opacity-80 transition"
+                   id="formatLegendItem_${idx}"
+                   onmouseenter="window.hoverFormatSlice(${idx})"
+                   onmouseleave="window.resetFormatSlice()"
+                   onclick="openGoogleDonutModal('format', '${item.name}')">
+                <span class="w-2.5 h-2.5 rounded-[2px] flex-shrink-0" style="background-color: ${item.color}"></span>
+                <span class="text-slate-500 font-medium text-[11px] group-hover/item:text-slate-900 transition whitespace-nowrap min-w-[34px]">${item.name}</span>
+                <span class="text-slate-800 font-bold text-[11px] ml-1">${item.pct}%</span>
+              </div>
+            `).join('');
+          } else {
+            fLegendEl.innerHTML = '<div class="text-xs text-slate-400 py-2">Không có dữ liệu định dạng</div>';
+          }
         }
 
         window.hoverFormatSlice = (idx, updateChart = true) => {
@@ -5504,12 +5505,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           data: {
             labels: formatItems.map(it => it.name),
             datasets: [{
-              data: formatItems.map(it => it.count),
+              data: fTotal > 0 ? formatItems.map(it => it.count) : [1],
               backgroundColor: formatItems.map(it => it.color),
               borderWidth: 0,
-              spacing: 5,
+              spacing: fTotal > 0 ? 5 : 0,
               borderRadius: 4,
-              hoverOffset: 6
+              hoverOffset: fTotal > 0 ? 6 : 0
             }]
           },
           options: {
@@ -5521,7 +5522,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               tooltip: { enabled: false }
             },
             onHover: (evt, elements) => {
-              if (elements && elements.length > 0) {
+              if (fTotal > 0 && elements && elements.length > 0) {
                 fCanvas.style.cursor = 'pointer';
                 window.hoverFormatSlice(elements[0].index, false);
               } else {
@@ -5530,10 +5531,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               }
             },
             onClick: (evt, elements) => {
-              if (elements && elements.length > 0) {
+              if (fTotal > 0 && elements && elements.length > 0) {
                 const idx = elements[0].index;
                 openGoogleDonutModal('format', formatItems[idx]?.name || 'Text');
-              } else {
+              } else if (fTotal > 0) {
                 openGoogleDonutModal('format', 'Text');
               }
             }
@@ -5547,13 +5548,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const ctx = pCanvas.getContext('2d');
         if (googlePlatformMixChartInstance) googlePlatformMixChartInstance.destroy();
         
-        const pMix = data.platform_mix || { Search: { pct: 44 }, Unknown: { pct: 26 }, YouTube: { pct: 12 }, Other: { pct: 10 }, Shopping: { pct: 8 } };
-        const sPct = pMix.Search?.pct ?? 44;
-        const uPct = pMix.Unknown?.pct ?? 26;
-        const yPct = pMix.YouTube?.pct ?? 12;
-        const oPct = pMix.Other?.pct ?? 10;
-        const shPct = pMix.Shopping?.pct ?? 8;
-        const pTotal = totCount || 1767;
+        const pMix = data.platform_mix || {};
+        const sPct = pMix.Search?.pct ?? 0;
+        const uPct = pMix.Unknown?.pct ?? 0;
+        const yPct = pMix.YouTube?.pct ?? 0;
+        const oPct = pMix.Other?.pct ?? 0;
+        const shPct = pMix.Shopping?.pct ?? 0;
+        const pTotal = totCount || 0;
 
         const isOodie = (bName || '').toLowerCase().includes('oodie');
         const sCount = isOodie ? 777 : Math.round(pTotal * (sPct / 100));
@@ -5562,12 +5563,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const oCount = isOodie ? 177 : Math.round(pTotal * (oPct / 100));
         const shCount = isOodie ? 141 : (pTotal - sCount - uCount - yCount - oCount);
 
-        const platformItems = [
+        const platformItems = pTotal > 0 ? [
           { name: 'Search', pct: sPct, count: sCount, color: '#3b82f6' },
           { name: 'Unknown platform', pct: uPct, count: uCount, color: '#94a3b8' },
           { name: 'YouTube', pct: yPct, count: yCount, color: '#ef4444' },
           { name: 'Other', pct: oPct, count: oCount, color: '#9ca3af' },
           { name: 'Shopping', pct: shPct, count: shCount, color: '#22c55e' }
+        ] : [
+          { name: 'No Ads', pct: 0, count: 0, color: '#e2e8f0' }
         ];
 
         // Center elements
@@ -5579,17 +5582,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         // Render Custom HTML Legend
         const pLegendEl = document.getElementById('googlePlatformMixLegend');
         if (pLegendEl) {
-          pLegendEl.innerHTML = platformItems.map((item, idx) => `
-            <div class="flex items-center gap-2 cursor-pointer group/item py-0.5 select-none hover:opacity-80 transition"
-                 id="platformLegendItem_${idx}"
-                 onmouseenter="window.hoverPlatformSlice(${idx})"
-                 onmouseleave="window.resetPlatformSlice()"
-                 onclick="openGoogleDonutModal('platform', '${item.name}')">
-              <span class="w-2.5 h-2.5 rounded-[2px] flex-shrink-0" style="background-color: ${item.color}"></span>
-              <span class="text-slate-500 font-medium text-[11px] group-hover/item:text-slate-900 transition whitespace-nowrap min-w-[95px]">${item.name}</span>
-              <span class="text-slate-800 font-bold text-[11px] ml-1.5">${item.pct}%</span>
-            </div>
-          `).join('');
+          if (pTotal > 0) {
+            pLegendEl.innerHTML = platformItems.map((item, idx) => `
+              <div class="flex items-center gap-2 cursor-pointer group/item py-0.5 select-none hover:opacity-80 transition"
+                   id="platformLegendItem_${idx}"
+                   onmouseenter="window.hoverPlatformSlice(${idx})"
+                   onmouseleave="window.resetPlatformSlice()"
+                   onclick="openGoogleDonutModal('platform', '${item.name}')">
+                <span class="w-2.5 h-2.5 rounded-[2px] flex-shrink-0" style="background-color: ${item.color}"></span>
+                <span class="text-slate-500 font-medium text-[11px] group-hover/item:text-slate-900 transition whitespace-nowrap min-w-[95px]">${item.name}</span>
+                <span class="text-slate-800 font-bold text-[11px] ml-1.5">${item.pct}%</span>
+              </div>
+            `).join('');
+          } else {
+            pLegendEl.innerHTML = '<div class="text-xs text-slate-400 py-2">Không có dữ liệu nền tảng</div>';
+          }
         }
 
         window.hoverPlatformSlice = (idx, updateChart = true) => {
@@ -5617,12 +5624,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           data: {
             labels: platformItems.map(it => it.name),
             datasets: [{
-              data: platformItems.map(it => it.count),
+              data: pTotal > 0 ? platformItems.map(it => it.count) : [1],
               backgroundColor: platformItems.map(it => it.color),
               borderWidth: 0,
-              spacing: 5,
+              spacing: pTotal > 0 ? 5 : 0,
               borderRadius: 4,
-              hoverOffset: 6
+              hoverOffset: pTotal > 0 ? 6 : 0
             }]
           },
           options: {
@@ -5634,7 +5641,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               tooltip: { enabled: false }
             },
             onHover: (evt, elements) => {
-              if (elements && elements.length > 0) {
+              if (pTotal > 0 && elements && elements.length > 0) {
                 pCanvas.style.cursor = 'pointer';
                 window.hoverPlatformSlice(elements[0].index, false);
               } else {
@@ -5643,10 +5650,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               }
             },
             onClick: (evt, elements) => {
-              if (elements && elements.length > 0) {
+              if (pTotal > 0 && elements && elements.length > 0) {
                 const idx = elements[0].index;
                 openGoogleDonutModal('platform', platformItems[idx]?.name || 'Search');
-              } else {
+              } else if (pTotal > 0) {
                 openGoogleDonutModal('platform', 'Search');
               }
             }
@@ -5656,15 +5663,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Dynamic Targeted Countries Render
       const cListEl = document.getElementById('googleTargetedCountriesList');
-      if (cListEl && data.country_mix) {
-        const countries = Object.values(data.country_mix);
-        if (countries.length > 0) {
+      if (cListEl) {
+        if (data.country_mix && Object.keys(data.country_mix).length > 0) {
+          const countries = Object.values(data.country_mix);
           let html = '';
           countries.slice(0, 3).forEach(c => {
             html += `<span class="flex items-center gap-1.5"><span style="font-family: 'Segoe UI Emoji', sans-serif;">${c.flag || '🌐'}</span> ${c.name} <span class="text-slate-400 font-normal">${(c.count || 0).toLocaleString()} ads ${c.pct}%</span></span>`;
           });
-          html += `<span class="text-slate-400">109 more countries</span>`;
+          if (countries.length > 3) html += `<span class="text-slate-400">${countries.length - 3} more countries</span>`;
           cListEl.innerHTML = html;
+        } else {
+          cListEl.innerHTML = '<span class="text-slate-400 text-xs">Chưa có dữ liệu quốc gia mục tiêu</span>';
         }
       }
 
@@ -6858,7 +6867,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (shopFollowers) shopFollowers.textContent = 'Đang kết nối Meta Ad Library...';
 
       // 4. Reset sub-sidebar & channel badges to skeleton
-      const countsToReset = ['metaChannelCount', 'tiktokChannelCount', 'googleChannelCount', 'subSidebarEmailCount', 'subSidebarTiktokCount'];
+      const countsToReset = ['metaChannelCount', 'tiktokChannelCount', 'googleChannelCount', 'subSidebarMetaCount', 'subSidebarGoogleCount', 'subSidebarTiktokCount', 'subSidebarContentsCount', 'subSidebarEmailCount'];
       countsToReset.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.textContent = '...';

@@ -1,0 +1,28 @@
+{
+  "brand": "guyler",
+  "found": false,
+  "data_source": "no_data",
+  "advertiser": {
+    "advertiser_id": null,
+    "advertiser_name": "guyler",
+    "country": "US",
+    "ad_count_min": null,
+    "ad_count_max": null
+  },
+  "total_analyzed": 0,
+  "total_estimated": 0,
+  "active_ads": 0,
+  "format_mix_total": 0,
+  "format_mix": {},
+  "platform_mix": {},
+  "longevity_mix": {},
+  "country_mix": {},
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [],
+  "scanned_at": "2026-09-30T15:15:20.103182"
+}
