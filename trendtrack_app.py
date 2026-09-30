@@ -754,153 +754,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="p-1 bg-slate-100 rounded-xl flex items-center gap-1 text-xs">
                 <button type="button" id="tabBtnApps" onclick="switchAppsPixelsTab('apps')" class="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-white text-slate-900 font-bold shadow-2xs cursor-pointer">
                   <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                  <span>Apps (10)</span>
+                  <span id="tabLabelApps">Apps (0)</span>
                 </button>
                 <button type="button" id="tabBtnPixels" onclick="switchAppsPixelsTab('pixels')" class="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-slate-500 font-semibold hover:text-slate-800 transition cursor-pointer">
-                  <span>Pixels (2)</span>
+                  <span id="tabLabelPixels">Pixels (0)</span>
                 </button>
               </div>
 
               <!-- APPS LIST CONTAINER -->
               <div id="appsListContainer" class="mt-3 space-y-2 overflow-y-auto max-h-[300px] custom-scroll pr-1">
-                <!-- App 1: Klaviyo -->
-                <a href="https://apps.shopify.com/klaviyo-email-marketing" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-black flex items-center justify-center text-white shrink-0 shadow-2xs font-extrabold text-[11px]">
-                      K
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">Klaviyo: Email Marketing &amp; SMS</div>
-                      <div class="text-[10px] text-slate-400 truncate">Email Marketing · Email Campaigns · Sms Campaigns</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 2: Pandectes GDPR Compliance -->
-                <a href="https://apps.shopify.com/pandectes-rules" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white shrink-0 shadow-2xs">
-                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/></svg>
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">Pandectes GDPR Compliance</div>
-                      <div class="text-[10px] text-slate-400 truncate">Cookie Consent · Policy Link · Custom Css</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 3: Microsoft Clarity: AI Insights -->
-                <a href="https://clarity.microsoft.com" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-sky-500 flex items-center justify-center text-white shrink-0 shadow-2xs font-bold text-[9px]">
-                      MC
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">Microsoft Clarity: AI Insights</div>
-                      <div class="text-[10px] text-slate-400 truncate">Analytics · Real-time Tracking · Activity Tracking</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 4: OptiMonk: AI Popup Builder -->
-                <a href="https://apps.shopify.com/optimonk" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-orange-500 flex items-center justify-center text-white shrink-0 shadow-2xs font-bold text-[10px]">
-                      OM
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">OptiMonk: AI Popup Builder</div>
-                      <div class="text-[10px] text-slate-400 truncate">Pop-ups · Sales Pop-ups · Email Pop-ups</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 5: OrderEditing.com -->
-                <a href="https://orderediting.com" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center text-white shrink-0 shadow-2xs">
-                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">OrderEditing.com</div>
-                      <div class="text-[10px] text-slate-400 truncate">Order Editing · Cancellations · Merging</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 6: AdRoll Marketing & Advertising -->
-                <a href="https://adroll.com" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-cyan-500 flex items-center justify-center text-white shrink-0 shadow-2xs font-extrabold text-[11px]">
-                      d
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">AdRoll Marketing &amp; Advertising</div>
-                      <div class="text-[10px] text-slate-400 truncate">Ads · Audience Segments · Lookalike Audiences</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 7: Cozy Country Redirect -->
-                <a href="https://apps.shopify.com/cozy-country-redirect" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center text-white shrink-0 shadow-2xs font-bold text-[9px]">
-                      Cozy
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">Cozy Country Redirect</div>
-                      <div class="text-[10px] text-slate-400 truncate">Geolocation · Countries · Ip Addresses</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                <!-- App 8: Elevar Conversion Tracking -->
-                <a href="https://getelevar.com" target="_blank" class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group">
-                  <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-7 h-7 rounded-lg bg-purple-600 flex items-center justify-center text-white shrink-0 shadow-2xs font-bold text-[11px]">
-                      E
-                    </div>
-                    <div class="min-w-0">
-                      <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">Elevar Conversion Tracking</div>
-                      <div class="text-[10px] text-slate-400 truncate">Ads · Audience Segments · Lookalike Audiences</div>
-                    </div>
-                  </div>
-                  <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
+                <!-- Rendered dynamically via renderAppsAndPixels() -->
               </div>
 
               <!-- PIXELS LIST CONTAINER (Hidden by default) -->
-              <div id="pixelsListContainer" class="mt-3 space-y-2.5 hidden">
-                <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/50">
-                  <div class="flex items-center justify-between mb-1">
-                    <div class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                      <span class="text-xs font-bold text-slate-900">Meta Pixel</span>
-                    </div>
-                    <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">Active · 100%</span>
-                  </div>
-                  <div class="text-[11px] font-mono text-slate-500">ID: 809230588636735</div>
-                  <div class="text-[10px] text-slate-400 mt-1">PageView · ViewContent · AddToCart · Purchase</div>
-                </div>
-
-                <div class="p-3 rounded-xl border border-slate-200 bg-slate-50/50">
-                  <div class="flex items-center justify-between mb-1">
-                    <div class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                      <span class="text-xs font-bold text-slate-900">Google Tag (GA4)</span>
-                    </div>
-                    <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">Enhanced</span>
-                  </div>
-                  <div class="text-[11px] font-mono text-slate-500">ID: G-479D20SF9</div>
-                  <div class="text-[10px] text-slate-400 mt-1">page_view · view_item · add_to_cart · purchase</div>
-                </div>
+              <div id="pixelsListContainer" class="mt-3 space-y-2.5 hidden overflow-y-auto max-h-[300px] custom-scroll pr-1">
+                <!-- Rendered dynamically via renderAppsAndPixels() -->
               </div>
             </div>
           </div>
@@ -7026,6 +6894,23 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       const contentsGrid = document.getElementById('contentsCardsGrid');
       if (contentsGrid) contentsGrid.innerHTML = loaderHtml('Thư viện Video Creatives', 'blue');
+
+      const prodCarousel = document.getElementById('productsCarousel');
+      if (prodCarousel) prodCarousel.innerHTML = `<div class="w-full py-8 text-center text-xs text-slate-400 flex items-center justify-center gap-2"><div class="w-4 h-4 border-2 border-slate-300 border-t-slate-700 rounded-full animate-spin"></div><span>Đang tải danh mục sản phẩm...</span></div>`;
+      const prodCountEl = document.getElementById('productsCatalogCount');
+      if (prodCountEl) prodCountEl.textContent = '... in the catalog';
+
+      const aList = document.getElementById('appsListContainer');
+      if (aList) aList.innerHTML = `<div class="py-8 text-center text-xs text-slate-400 flex items-center justify-center gap-2"><div class="w-4 h-4 border-2 border-slate-300 border-t-slate-700 rounded-full animate-spin"></div><span>Đang quét Apps...</span></div>`;
+      const pList = document.getElementById('pixelsListContainer');
+      if (pList) pList.innerHTML = `<div class="py-8 text-center text-xs text-slate-400 flex items-center justify-center gap-2"><div class="w-4 h-4 border-2 border-slate-300 border-t-slate-700 rounded-full animate-spin"></div><span>Đang kiểm tra Pixels...</span></div>`;
+      const lblApps = document.getElementById('tabLabelApps');
+      if (lblApps) lblApps.textContent = 'Apps (...)';
+      const lblPixels = document.getElementById('tabLabelPixels');
+      if (lblPixels) lblPixels.textContent = 'Pixels (...)';
+
+      const simGrid = document.getElementById('similarShopsGrid');
+      if (simGrid) simGrid.innerHTML = `<div class="col-span-full py-8 text-center text-xs text-slate-400 flex items-center justify-center gap-2"><div class="w-4 h-4 border-2 border-slate-300 border-t-slate-700 rounded-full animate-spin"></div><span>Đang phân tích đối thủ cạnh tranh...</span></div>`;
     }
 
     // Load Brand Data for Explorer
@@ -7293,6 +7178,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Render Products Catalog (media_1790684540438.png)
       renderProductsCatalog(data.products || data.products_catalog || []);
+
+      // Render Apps & Pixels Tracker (media_1790758424795.png)
+      renderAppsAndPixels(data.apps || [], data.pixels || []);
 
       // Render Top 5 Similar Shops (media_1790684540438.png)
       renderSimilarShops(data.similar_shops || []);
@@ -7830,16 +7718,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     // ==============================================================
-    // PRODUCTS CATALOG LOGIC (MATCHING media_1790684540438.png)
+    // PRODUCTS CATALOG LOGIC (MATCHING media_1790758424795.png)
     // ==============================================================
     const defaultBenchmarkProducts = [
-      { rank: 1, badge: '3y - Aug 16, 2023', title: 'Grey', price: 'A$109.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/GreyGreyOodie_OSFM_4220.jpg?v=1788139078' },
-      { rank: 2, badge: '6mo - Mar 4, 2026', title: 'Black Cat', price: 'A$75.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Oodie2023032800308_53f2264f-4982-4a89-8461-8a2f853af341.jpg?v=1719387102' },
-      { rank: 3, badge: '19mo - Feb 14, 2025', title: 'All Black', price: 'A$99.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/2024080801449.jpg?v=1745377832' },
-      { rank: 4, badge: '3y - Aug 16, 2023', title: 'Blue', price: 'A$109.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Dark_Blue_Oodie_ACO64DBL-DBL_-04425.jpg?v=1775612956' },
-      { rank: 5, badge: '19mo - Feb 7, 2025', title: 'Avocado', price: 'A$99.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/1_4867898a-3f6e-4c2a-ab21-889662af7d17.jpg' },
-      { rank: 6, badge: '3y - May 9, 2023', title: 'Pink', price: 'A$159.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Pink_Swirl_Oodie_ACO64SWI-PIN_-04498.jpg?v=1773366502' },
-      { rank: 7, badge: '3y - Aug 16, 2023', title: 'Love Hearts', price: 'A$49.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/1_81863a4f-55bc-48c6-8e40-5a76462896d0.jpg?v=1728334355' }
+      { rank: 1, badge: '3y - Aug 16, 2023', title: 'Grey', price: 'A$109.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/GreyGreyOodie_OSFM_4220.jpg?v=1788139078', url: 'https://theoodie.com/products/grey-oodie' },
+      { rank: 2, badge: '6mo - Mar 4, 2026', title: 'Black Cat', price: 'A$75.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Oodie2023032800308_53f2264f-4982-4a89-8461-8a2f853af341.jpg?v=1719387102', url: 'https://theoodie.com/products/black-cat-oodie' },
+      { rank: 3, badge: '19mo - Feb 14, 2025', title: 'All Black', price: 'A$99.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/2024080801449.jpg?v=1745377832', url: 'https://theoodie.com/products/all-black-oodie' },
+      { rank: 4, badge: '3y - Aug 16, 2023', title: 'Blue', price: 'A$109.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Dark_Blue_Oodie_ACO64DBL-DBL_-04425.jpg?v=1775612956', url: 'https://theoodie.com/products/blue-oodie' },
+      { rank: 5, badge: '19mo - Feb 7, 2025', title: 'Avocado', price: 'A$99.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/1_4867898a-3f6e-4c2a-ab21-889662af7d17.jpg', url: 'https://theoodie.com/products/avocado-oodie' },
+      { rank: 6, badge: '3y - May 9, 2023', title: 'Pink', price: 'A$159.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/Pink_Swirl_Oodie_ACO64SWI-PIN_-04498.jpg?v=1773366502', url: 'https://theoodie.com/products/pink-oodie' },
+      { rank: 7, badge: '3y - Aug 16, 2023', title: 'Love Hearts', price: 'A$49.00', image: 'https://cdn.shopify.com/s/files/1/0023/7427/1029/files/1_81863a4f-55bc-48c6-8e40-5a76462896d0.jpg?v=1728334355', url: 'https://theoodie.com/products/love-hearts-oodie' }
     ];
 
     let currentProductTab = 'bestsellers';
@@ -7870,20 +7758,56 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!carousel) return;
       carousel.innerHTML = '';
 
-      const list = (prods && prods.length > 0) ? prods : defaultBenchmarkProducts;
+      const isOodie = currentData?.name?.toLowerCase().includes('oodie') || currentData?.domain?.toLowerCase().includes('oodie');
+      const list = (prods && prods.length > 0) ? prods : (isOodie ? defaultBenchmarkProducts : []);
+      
       if (countEl) {
-        countEl.textContent = `${list.length >= 7 ? 473 : list.length} in the catalog`;
+        countEl.textContent = `${list.length} in the catalog`;
       }
 
-      list.forEach((prod, idx) => {
+      if (list.length === 0) {
+        carousel.innerHTML = `
+          <div class="w-full py-10 flex flex-col items-center justify-center text-center text-slate-400">
+            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-slate-700">Chưa tìm thấy danh mục sản phẩm công khai</div>
+            <div class="text-[11px] text-slate-400 mt-0.5 max-w-sm">Website này không sử dụng Shopify catalog endpoint hoặc catalog được bảo vệ.</div>
+          </div>
+        `;
+        return;
+      }
+
+      // Sort according to current tab
+      let displayList = [...list];
+      if (currentProductTab === 'newest') {
+        displayList.sort((a, b) => new Date(b.published_at || b.created_at || 0) - new Date(a.published_at || a.created_at || 0));
+      } else {
+        displayList.sort((a, b) => (a.rank || 0) - (b.rank || 0));
+      }
+
+      displayList.forEach((prod, idx) => {
         const card = document.createElement('div');
         card.className = "w-[155px] min-w-[155px] shrink-0 snap-start bg-white border border-slate-200/90 rounded-2xl p-2.5 flex flex-col justify-between hover:shadow-md transition group cursor-pointer shadow-2xs";
         
         const rank = prod.rank || (idx + 1);
-        const badge = prod.badge || '3y - Aug 16, 2023';
+        const badge = prod.badge || 'Recent';
         const title = prod.title || 'Product';
-        const price = prod.price || 'A$99.00';
-        const image = prod.image || 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&q=80';
+        const price = prod.price || '$0.00';
+        const image = prod.image || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80';
+        const prodUrl = prod.url || '#';
+
+        // Clicking card opens original product page
+        card.onclick = (e) => {
+          if (e.target.closest('button')) return;
+          if (prodUrl && prodUrl !== '#') {
+            window.open(prodUrl, '_blank', 'noopener,noreferrer');
+          }
+        };
+
+        const brandAvatar = currentData?.avatarUrl || 'https://ui-avatars.com/api/?name=Brand';
+        const brandShortName = (currentData?.name || currentData?.domain || 'Store').slice(0, 7);
+        const activeAdsVal = prod.active_ads || currentData?.total_active_ads || 0;
 
         card.innerHTML = `
           <div>
@@ -7894,7 +7818,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
             <!-- Product Image Box with rank badge in top-left -->
             <div class="relative aspect-square rounded-xl overflow-hidden bg-slate-100 border border-slate-100 flex items-center justify-center">
-              <img src="${image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&q=80'"/>
+              <img src="${image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80'"/>
               <!-- Rank Badge -->
               <div class="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-900 border border-amber-500/80 font-black text-[11px] flex items-center justify-center shadow-xs">
                 ${rank}
@@ -7911,15 +7835,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <!-- Card Footer -->
           <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs mt-2.5">
             <div class="flex items-center gap-1.5 truncate">
-              <img src="${currentData?.avatarUrl || 'https://ui-avatars.com/api/?name=Oodie'}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
-              <span class="text-[11px] font-bold text-slate-700 truncate max-w-[60px]">${(currentData?.name || 'The...').slice(0, 6)}...</span>
-              <span class="text-[11px] font-semibold text-emerald-600 shrink-0">• ${currentData?.total_active_ads || 415}</span>
+              <img src="${brandAvatar}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
+              <span class="text-[11px] font-bold text-slate-700 truncate max-w-[55px]">${brandShortName}</span>
+              <span class="text-[11px] font-semibold text-emerald-600 shrink-0">• ${activeAdsVal}</span>
             </div>
             <div class="flex items-center gap-1 text-slate-400">
-              <button type="button" class="hover:text-slate-700 transition" title="Save">
+              <button type="button" class="hover:text-slate-700 transition" title="Save" onclick="event.stopPropagation()">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" class="hover:text-slate-700 transition" title="More">
+              <button type="button" class="hover:text-slate-700 transition" title="More" onclick="event.stopPropagation()">
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
               </button>
             </div>
@@ -7930,7 +7854,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     // ==============================================================
-    // APPS & PIXELS TAB SWITCHER
+    // APPS & PIXELS TAB SWITCHER & RENDERER (media_1790758424795.png)
     // ==============================================================
     function switchAppsPixelsTab(tab) {
       const aBtn = document.getElementById('tabBtnApps');
@@ -7950,128 +7874,128 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
     }
 
-    // ==============================================================
-    // TOP 5 SIMILAR SHOPS (MATCHING media_1790684540438.png)
-    // ==============================================================
-    const defaultSimilarShops = [
-      {
-        name: 'Big Blanket Co',
-        age: '6 yr',
-        category: 'Home & Garden',
-        rating: '3.7',
-        visits: '255K',
-        products: '85',
-        flag: '🇺🇸',
-        banner: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&auto=format&fit=crop&q=80',
-        logo: 'https://ui-avatars.com/api/?name=BB&background=facc15&color=000',
-        adsActive: '556',
-        adsTotal: '10K',
-        marketFlags: '🇺🇸 +3',
-        bestsellers: [
-          'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=150&q=80',
-          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=150&q=80',
-          'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=150&q=80',
-          'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&q=80'
-        ]
-      },
-      {
-        name: 'The Comfy',
-        age: '8 yr',
-        category: 'Fashion',
-        rating: '3.3',
-        visits: '58K',
-        products: '17',
-        flag: '🇺🇸',
-        banner: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&auto=format&fit=crop&q=80',
-        logo: 'https://ui-avatars.com/api/?name=The+Comfy&background=0284c7&color=fff',
-        adsActive: '0',
-        adsTotal: '1',
-        marketFlags: '🇺🇸 +3',
-        bestsellers: [
-          'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=150&q=80',
-          'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&q=80',
-          'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=150&q=80',
-          'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=150&q=80'
-        ]
-      },
-      {
-        name: 'RIALT',
-        age: '2 yr',
-        category: 'Fashion +1',
-        rating: '',
-        visits: '27K',
-        products: '525',
-        flag: '🇯🇵',
-        banner: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop&q=80',
-        logo: 'https://ui-avatars.com/api/?name=Rialt&background=3b82f6&color=fff',
-        adsActive: '0',
-        adsTotal: '',
-        marketFlags: '🇯🇵',
-        bestsellers: [
-          'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=150&q=80',
-          'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=150&q=80',
-          'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=150&q=80',
-          'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=150&q=80'
-        ]
-      },
-      {
-        name: 'Sleepo',
-        age: '3 yr',
-        category: 'Fashion +1',
-        rating: '',
-        visits: '27K',
-        products: '93',
-        flag: '🇧🇷',
-        banner: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
-        logo: 'https://ui-avatars.com/api/?name=Sleepo&background=10b981&color=fff',
-        adsActive: '67',
-        adsTotal: '2,038',
-        marketFlags: '🇧🇷',
-        bestsellers: [
-          'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=150&q=80',
-          'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=150&q=80',
-          'https://images.unsplash.com/photo-1544441893-675973e31985?w=150&q=80',
-          'https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?w=150&q=80'
-        ]
-      },
-      {
-        name: 'Snuggs Egypt',
-        age: '8 yr',
-        category: 'Fashion +1',
-        rating: '',
-        visits: '27K',
-        products: '2,474',
-        flag: '🇪🇬',
-        banner: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&auto=format&fit=crop&q=80',
-        logo: 'https://ui-avatars.com/api/?name=Snuggs&background=1e293b&color=fff',
-        adsActive: '49',
-        adsTotal: '1,695',
-        marketFlags: '🇪🇬',
-        bestsellers: [
-          'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=150&q=80',
-          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=150&q=80',
-          'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=150&q=80',
-          'https://images.unsplash.com/photo-1520975916090-3105956dac38?w=150&q=80'
-        ]
-      }
-    ];
+    function renderAppsAndPixels(apps, pixels) {
+      const appsList = document.getElementById('appsListContainer');
+      const pixelsList = document.getElementById('pixelsListContainer');
+      const tabLabelApps = document.getElementById('tabLabelApps');
+      const tabLabelPixels = document.getElementById('tabLabelPixels');
 
+      const appItems = apps || [];
+      const pixelItems = pixels || [];
+
+      if (tabLabelApps) tabLabelApps.textContent = `Apps (${appItems.length})`;
+      if (tabLabelPixels) tabLabelPixels.textContent = `Pixels (${pixelItems.length})`;
+
+      // 1. Render Apps List
+      if (appsList) {
+        appsList.innerHTML = '';
+        if (appItems.length === 0) {
+          appsList.innerHTML = `
+            <div class="py-8 text-center text-slate-400">
+              <svg class="w-7 h-7 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              <div class="text-xs font-semibold text-slate-600">Chưa phát hiện Shopify App bên ngoài</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Không tìm thấy script ứng dụng bên thứ 3 trong DOM trang chủ</div>
+            </div>
+          `;
+        } else {
+          appItems.forEach(app => {
+            const item = document.createElement('a');
+            item.href = app.url || '#';
+            item.target = '_blank';
+            item.rel = 'noopener noreferrer';
+            item.className = "flex items-center justify-between p-2 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100 group";
+            item.innerHTML = `
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-7 h-7 rounded-lg ${app.icon_bg || 'bg-slate-900'} flex items-center justify-center text-white shrink-0 shadow-2xs font-extrabold text-[11px]">
+                  ${app.icon_text || 'A'}
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-slate-900 truncate group-hover:text-blue-600">${app.name}</div>
+                  <div class="text-[10px] text-slate-400 truncate">${app.category || 'Shopify E-Commerce Tool'}</div>
+                </div>
+              </div>
+              <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            `;
+            appsList.appendChild(item);
+          });
+        }
+      }
+
+      // 2. Render Pixels List
+      if (pixelsList) {
+        pixelsList.innerHTML = '';
+        if (pixelItems.length === 0) {
+          pixelsList.innerHTML = `
+            <div class="py-8 text-center text-slate-400">
+              <svg class="w-7 h-7 mx-auto mb-2 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <div class="text-xs font-semibold text-slate-600">Chưa phát hiện Tracking Pixel công khai</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Trang chủ không nhúng trực tiếp pixel hoặc sử dụng server-side GTM</div>
+            </div>
+          `;
+        } else {
+          pixelItems.forEach(px => {
+            const item = document.createElement('div');
+            item.className = "p-3 rounded-xl border border-slate-200 bg-slate-50/50";
+            let iconSvg = '';
+            if (px.type === 'meta') {
+              iconSvg = `<svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>`;
+            } else if (px.type === 'google') {
+              iconSvg = `<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`;
+            } else if (px.type === 'tiktok') {
+              iconSvg = `<svg class="w-4 h-4 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.32V8.75a8.18 8.18 0 0 0 4.78 1.54V6.85a4.83 4.83 0 0 1-.87-.16z"/></svg>`;
+            } else {
+              iconSvg = `<svg class="w-4 h-4 text-rose-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.18c-.06-.98-.12-2.48.02-3.55l.8-3.4s-.2-.41-.2-1.02c0-.96.56-1.67 1.25-1.67.59 0 .87.44.87.97 0 .59-.38 1.48-.57 2.3-.16.69.34 1.25 1.02 1.25 1.23 0 2.17-1.3 2.17-3.17 0-1.66-1.19-2.82-2.89-2.82-1.97 0-3.12 1.48-3.12 3.01 0 .6.23 1.23.51 1.58.06.07.07.13.05.2l-.19.78c-.03.13-.1.17-.23.11-1.01-.47-1.64-1.94-1.64-3.12 0-2.54 1.85-4.88 5.33-4.88 2.8 0 4.97 2 4.97 4.67 0 2.78-1.75 5.02-4.18 5.02-.82 0-1.58-.42-1.85-.92l-.5 1.93c-.18.7-.68 1.57-1.01 2.11A12.01 12.01 0 1 0 12 0z"/></svg>`;
+            }
+            item.innerHTML = `
+              <div class="flex items-center justify-between mb-1">
+                <div class="flex items-center gap-2">
+                  ${iconSvg}
+                  <span class="text-xs font-bold text-slate-900">${px.name}</span>
+                </div>
+                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">${px.status || 'Active'}</span>
+              </div>
+              <div class="text-[11px] font-mono text-slate-500">ID: ${px.id || 'N/A'}</div>
+              <div class="text-[10px] text-slate-400 mt-1">${px.events || 'PageView · ViewContent · AddToCart · Purchase'}</div>
+            `;
+            pixelsList.appendChild(item);
+          });
+        }
+      }
+    }
+
+    // ==============================================================
+    // TOP 5 SIMILAR SHOPS (MATCHING media_1790758424795.png)
+    // ==============================================================
     function renderSimilarShops(shops) {
       const grid = document.getElementById('similarShopsGrid');
       if (!grid) return;
       grid.innerHTML = '';
 
-      const list = (shops && shops.length > 0) ? shops : defaultSimilarShops;
+      const list = shops || [];
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-8 text-center text-slate-400">
+            <div class="text-xs font-semibold text-slate-600">Chưa xác định được đối thủ tương tự</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Hệ thống đang quét phân tích cụm ngành hàng của thương hiệu này.</div>
+          </div>
+        `;
+        return;
+      }
 
       list.forEach(shop => {
         const card = document.createElement('div');
         card.className = "bg-white border border-slate-200/90 rounded-2xl p-3 flex flex-col justify-between hover:shadow-md transition shadow-2xs group cursor-pointer";
-        card.onclick = () => {
+        
+        // User specification: Click triggers immediate analysis of competitor store!
+        card.onclick = (e) => {
+          if (e.target.closest('button')) return;
+          const targetDomain = shop.domain || shop.name;
           const inp = document.getElementById('brandInput');
           if (inp) {
-            inp.value = shop.name;
+            inp.value = targetDomain;
             switchView('explorer');
-            loadBrand(shop.name);
+            loadBrand(targetDomain);
           }
         };
 
@@ -8102,10 +8026,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- Hero Banner with Flag in bottom right -->
+            <!-- Hero Banner with Flag in top-right corner matching media_1790758424795.png -->
             <div class="relative aspect-video rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100">
               <img src="${shop.banner}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300"/>
-              <div class="absolute bottom-1.5 right-1.5 text-base drop-shadow">
+              <div class="absolute top-2 right-2 px-1.5 py-0.5 rounded-md bg-black/40 backdrop-blur-xs text-xs drop-shadow">
                 ${shop.flag}
               </div>
             </div>
@@ -8138,10 +8062,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
 
             <div class="flex items-center gap-1 text-slate-400 shrink-0 ml-1">
-              <button type="button" class="hover:text-slate-700 p-1 transition" title="Bookmark">
+              <button type="button" class="hover:text-slate-700 p-1 transition" title="Bookmark" onclick="event.stopPropagation()">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" class="hover:text-slate-700 p-1 transition" title="More">
+              <button type="button" class="hover:text-slate-700 p-1 transition" title="More" onclick="event.stopPropagation()">
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
               </button>
             </div>
@@ -8810,6 +8734,23 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                         cached_data = json.loads(f.read())
                     cached_data["_cache_age_seconds"] = int(file_age)
                     cached_data["_cache_status"] = "fresh"
+
+                    # Augment with store intelligence if missing
+                    if not cached_data.get("products") or not cached_data.get("apps") or not cached_data.get("similar_shops"):
+                        try:
+                            import store_intelligence as si
+                            d = cached_data.get("domain") or clean_q
+                            intel_prods = si.fetch_store_products(d)
+                            cached_data["products"] = cached_data.get("products") or intel_prods.get("products", [])
+                            cached_data["products_catalog"] = cached_data["products"]
+                            cached_data["total_in_catalog"] = intel_prods.get("total_in_catalog", len(cached_data["products"]))
+                            tech = si.detect_store_apps_and_pixels(d)
+                            cached_data["apps"] = cached_data.get("apps") or tech.get("apps", [])
+                            cached_data["pixels"] = cached_data.get("pixels") or tech.get("pixels", [])
+                            cached_data["similar_shops"] = cached_data.get("similar_shops") or si.get_top_5_similar_shops(cached_data.get("name") or query, d)
+                        except Exception as _e_aug:
+                            print(f"⚠️ [STORE INTEL AUGMENT] {_e_aug}")
+
                     self.send_response(200)
                     self.send_header("Content-Type", "application/json; charset=utf-8")
                     self.send_header("Access-Control-Allow-Origin", "*")
@@ -8831,6 +8772,42 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.end_headers()
                 self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/store-intel":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            domain = query_params.get("domain", [""])[0].strip() or query_params.get("query", [""])[0].strip()
+            if not domain:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing domain parameter"}).encode("utf-8"))
+                return
+            try:
+                import store_intelligence as si
+                clean_d = si.clean_domain(domain)
+                prods_data = si.fetch_store_products(clean_d, max_products=50)
+                tech_data = si.detect_store_apps_and_pixels(clean_d)
+                similar = si.get_top_5_similar_shops(clean_d, clean_d)
+                out = {
+                    "domain": clean_d,
+                    "products": prods_data.get("products", []),
+                    "products_catalog": prods_data.get("products", []),
+                    "total_in_catalog": prods_data.get("total_in_catalog", 0),
+                    "apps": tech_data.get("apps", []),
+                    "pixels": tech_data.get("pixels", []),
+                    "similar_shops": similar
+                }
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(out, ensure_ascii=False).encode("utf-8"))
             except Exception as e:
                 self.send_response(500)
                 self.send_header("Content-Type", "application/json")

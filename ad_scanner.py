@@ -1009,6 +1009,30 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         "ads": parsed_ads
     }
 
+    # Extract authentic Store Intelligence (Products Catalog, Apps/Pixels, Top 5 Similar Shops)
+    try:
+        import store_intelligence as si
+        intel_domain = first_landing_domain or clean_tag
+        if '.' not in intel_domain:
+            intel_domain = f"{intel_domain}.com"
+        store_prods = si.fetch_store_products(intel_domain, max_products=50)
+        store_tech = si.detect_store_apps_and_pixels(intel_domain)
+        similar_shops = si.get_top_5_similar_shops(first_page_name or query, intel_domain)
+        result["products"] = store_prods.get("products", [])
+        result["products_catalog"] = store_prods.get("products", [])
+        result["total_in_catalog"] = store_prods.get("total_in_catalog", len(store_prods.get("products", [])))
+        result["apps"] = store_tech.get("apps", [])
+        result["pixels"] = store_tech.get("pixels", [])
+        result["similar_shops"] = similar_shops
+    except Exception as _si_err:
+        print(f"⚠️ [STORE INTEL] Warning: {_si_err}")
+        result["products"] = []
+        result["products_catalog"] = []
+        result["total_in_catalog"] = 0
+        result["apps"] = []
+        result["pixels"] = []
+        result["similar_shops"] = []
+
     print(f"✅ [AD SCANNER] Hoàn thành: {total_results_str} ({len(parsed_ads)} thẻ trích xuất, {video_count} video, {image_count} ảnh, {scaling_count} winning ads).")
     return result
 
