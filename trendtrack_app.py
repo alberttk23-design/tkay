@@ -871,7 +871,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   </span>
                   <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span id="metaHeaderAdsCount">• 0 / 0</span>
+                    <span id="metaHeaderAdsCount">0 / 0</span>
                   </div>
                   <!-- Reach & Spend EU/UK Only Toggle Matching media_1790759876556.png -->
                   <div onclick="toggleMetaEuUkOnly()" class="flex items-center gap-2 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold ml-1 cursor-pointer transition select-none">
@@ -3908,7 +3908,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     let currentMetaContentsApiData = null;
 
     async function loadMetaIntelligenceView(brandName) {
-      const bName = brandName || getActiveBrandName();
+      let bName = brandName || getActiveBrandName();
+      if (bName && bName.toLowerCase().replace(/[^a-z0-9]/g, '').includes('squatch')) {
+        bName = 'Dr. Squatch';
+      }
       const bTitle = document.getElementById('metaHeaderBrandName');
       const bAvatar = document.getElementById('metaHeaderBrandAvatar');
       const bAdsCount = document.getElementById('metaHeaderAdsCount');
@@ -3918,12 +3921,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (bTitle) bTitle.textContent = bName;
       if (bAvatar) {
-        bAvatar.src = (currentData && currentData.avatarUrl) || getEmailBrandAvatar(bName);
+        bAvatar.src = (currentData && currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) ? currentData.avatarUrl : getEmailBrandAvatar(bName);
       }
 
       const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : (currentData?.ads?.length || 0);
       const totalAllTime = currentData?.total_all_time || (totalAds > 1000 ? Math.round(totalAds * 30 / 1000) + 'K' : (totalAds * 6) + '');
-      if (bAdsCount) bAdsCount.textContent = `• ${totalAds.toLocaleString()} / ${totalAllTime}`;
+      if (bAdsCount) bAdsCount.textContent = `${totalAds.toLocaleString()} / ${totalAllTime}`;
       if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds.toLocaleString()} Ads`;
       if (subSidebarMetaCount) {
         const metaTot = currentData?.channels?.meta?.total ? currentData.channels.meta.total.toLocaleString() : (currentData?.total_all_time || totalAds).toLocaleString();
@@ -4087,6 +4090,24 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
     }
 
+    function getBrandCardAvatarHtml(bName, aUrl) {
+      const clean = (bName || '').toLowerCase().trim();
+      if (clean.includes('squatch')) {
+        return `<div class="w-6 h-6 rounded-full bg-[#201815] flex items-center justify-center text-orange-500 text-[9.5px] font-black tracking-tight border border-amber-900/30 shrink-0 overflow-hidden select-none">DS</div>`;
+      }
+      if (clean.includes('loop')) {
+        return `<div class="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">loop</div>`;
+      }
+      if (clean.includes('oodie')) {
+        return `<div class="w-6 h-6 rounded-full bg-[#0284c7] flex items-center justify-center text-white text-[8.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">oodie</div>`;
+      }
+      if (aUrl && !aUrl.includes('ui-avatars')) {
+        return `<div class="w-6 h-6 rounded-full bg-slate-100 shrink-0 overflow-hidden border border-slate-200"><img src="${aUrl}" class="w-full h-full object-cover" alt="avatar"/></div>`;
+      }
+      const initials = (bName || 'AD').replace(/[^a-zA-Z0-9]/g, ' ').trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase() || 'AD';
+      return `<div class="w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">${initials}</div>`;
+    }
+
     function renderMetaLibraryCards() {
       const grid = document.getElementById('metaLibraryCardsGrid');
       const pagEl = document.getElementById('metaLibraryPagination');
@@ -4195,7 +4216,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const isVideo = ad.type === 'video' || ad.mediaType === 'video' || (ad.video_url && ad.video_url.length > 5);
         const isCarousel = ad.type === 'carousel' || ad.mediaType === 'carousel' || (duplicates >= 8 && !isVideo);
         const adId = ad.id || `meta_card_${cardIndex}`;
-        const copyText = ad.primary_text || ad.description || ad.hook || 'Total Comfort, All Day Long';
+        const copyText = ad.primary_text || ad.description || ad.hook || (ad.title || `Experience the best from ${brandName}`);
         const brandName = ad.advertiserName || ad.advertiser || (currentData && currentData.name) || getActiveBrandName();
         const avatarUrl = ad.advertiserAvatarUrl || (currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName);
         const headline = ad.cta_title || ad.ctaDescription || (`Shop ${brandName} Online`);
@@ -4204,14 +4225,24 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const platformAdId = ad.platformAdId || ad.ad_archive_id || ('10849204' + rankNum);
         const dateRange = ad.date_range || `${daysRunning}d · ${ad.startDate || 'May 10'} → now`;
         const subBadge = ad.sub_badge;
-        const reachSpend = ad.reach_spend_badge || (ad.euReach ? `12M · $110.1K · $... +23` : 'No targeting data');
+        let reachSpend = 'No targeting data';
+        if (ad.reach_spend_badge) {
+          reachSpend = ad.reach_spend_badge;
+        } else if (ad.euReach && ad.euReach > 50) {
+          const rVal = ad.euReach;
+          const rStr = rVal >= 1000000 ? `${(rVal/1000000).toFixed(1)}M` : (rVal >= 1000 ? `${Math.round(rVal/1000)}K` : `${rVal}`);
+          const sVal = ad.euSpend || Math.round(rVal * 0.009);
+          const sStr = sVal >= 1000 ? `$${(sVal/1000).toFixed(1)}K` : `$${sVal}`;
+          reachSpend = `${rStr} · ${sStr}`;
+        }
         const rankPill = ad.rank_pill || `${rankNum} / ${totalAdsUniverse.toLocaleString()} (1%)`;
         const rankDeltaSym = ad.rank_delta || (ad.rank_trend === 'up' ? '↗' : (ad.rank_trend === 'down' ? '↘' : '-'));
         const rankDeltaClass = rankDeltaSym === '↗' ? 'text-emerald-600' : (rankDeltaSym === '↘' ? 'text-rose-500' : 'text-slate-400');
         const copiesCount = ad.copies_count || ad.duplicates || (rankNum <= 5 ? 5 : 2);
         const isActive = ad.isActive !== false;
-        const ctaDomain = (ad.ctaDomain || currentData?.domain || 'WWW.LOOPEARPLUGS.COM').toUpperCase();
-        const landingUrl = ad.landing_url || ad.landingUrl || ('https://' + (currentData?.domain || 'loopearplugs.com'));
+        const fallbackDomain = (currentData?.domain || (brandName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com')).toLowerCase();
+        const ctaDomain = (ad.ctaDomain || fallbackDomain).toUpperCase();
+        const landingUrl = ad.landing_url || ad.landingUrl || ('https://' + fallbackDomain);
 
         // Slide images setup for carousel
         let slideImages = [];
@@ -4272,11 +4303,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- Profile Header: Avatar + Loop + Sponsored ℹ -->
+            <!-- Profile Header: Avatar + Brand + Sponsored ℹ -->
             <div class="flex items-center gap-2 mb-2">
-              <div class="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden">
-                ${avatarUrl && !avatarUrl.includes('ui-avatars') ? `<img src="${avatarUrl}" class="w-full h-full object-cover"/>` : `<span>loop</span>`}
-              </div>
+              ${getBrandCardAvatarHtml(brandName, avatarUrl)}
               <div class="min-w-0 flex-1 leading-tight">
                 <div class="text-xs font-bold text-slate-900 truncate">${brandName}</div>
                 <div class="text-[9.5px] text-slate-400 flex items-center gap-1">
@@ -6294,10 +6323,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function getEmailBrandAvatar(bName) {
+      if (bName && (bName.toLowerCase().includes('squatch') || bName.toLowerCase().includes('drsquatch'))) {
+        return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23201815' stroke='%23d97706' stroke-width='4'/><text x='50' y='60' font-family='sans-serif' font-size='32' font-weight='900' fill='%23f97316' text-anchor='middle' letter-spacing='-1'>DS</text></svg>";
+      }
       if (bName && bName.toLowerCase().includes('oodie')) {
         return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='4'/><text x='50' y='58' font-family='sans-serif' font-size='26' font-weight='900' fill='%230f172a' text-anchor='middle' letter-spacing='-1'>oodie</text></svg>";
       }
-      if (currentData && currentData.avatarUrl) return currentData.avatarUrl;
+      if (bName && bName.toLowerCase().includes('loop')) {
+        return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23000000'/><text x='50' y='58' font-family='sans-serif' font-size='24' font-weight='900' fill='%23ffffff' text-anchor='middle'>loop</text></svg>";
+      }
+      if (currentData && currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) return currentData.avatarUrl;
       return `https://ui-avatars.com/api/?name=${encodeURIComponent(bName || 'Brand')}&background=0f172a&color=fff`;
     }
 
@@ -10584,7 +10619,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const adLibraryUrl = ad.ad_library_url || ad.metaLibraryUrl || ('https://www.facebook.com/ads/library/?id=' + (ad.ad_archive_id || ad.platformAdId || ''));
 
       // Fill top bar
-      document.getElementById('modalShopAvatar').src = currentData.avatarUrl || '';
+      const modalAvatarUrl = (currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) ? currentData.avatarUrl : getEmailBrandAvatar(currentData.name);
+      document.getElementById('modalShopAvatar').src = modalAvatarUrl;
       document.getElementById('modalShopName').textContent = currentData.name || 'Store';
       document.getElementById('modalShopDomain').textContent = currentData.domain || 'store.com';
       document.getElementById('modalShopLink').href = 'https://' + (currentData.domain || 'store.com');
@@ -10592,7 +10628,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       document.getElementById('modalMetaAnalyticsBtn').href = adLibraryUrl;
 
       // Fill Left Half
-      document.getElementById('cardModalAvatar').src = currentData.avatarUrl || '';
+      document.getElementById('cardModalAvatar').src = modalAvatarUrl;
       document.getElementById('cardModalAdvName').textContent = advertiserName;
       document.getElementById('cardModalAdId').textContent = 'ID: ' + (ad.ad_archive_id || ad.platformAdId || '809230588636735');
       document.getElementById('cardModalCopy').textContent = copyText;
