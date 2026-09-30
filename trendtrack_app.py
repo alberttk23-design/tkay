@@ -6333,24 +6333,100 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       });
     }
 
-    // Load Brand Data for Explorer
-    async function loadBrand(query, forceRefresh = false) {
-      currentEmailData = null;
-      document.getElementById('btnSpinner').classList.remove('hidden');
-      document.getElementById('btnText').textContent = forceRefresh ? 'Đang làm mới...' : 'Đang quét...';
+    function updatePresetButtonsState(query) {
+      const qClean = (query || '').toLowerCase().trim();
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        const bText = btn.textContent.trim().toLowerCase();
+        if (qClean === bText || (qClean.includes(bText) && bText.length > 3) || (bText.includes(qClean) && qClean.length > 3)) {
+          btn.className = "preset-btn px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 hover:bg-blue-100 text-blue-700 text-xs font-bold transition whitespace-nowrap shadow-2xs";
+        } else {
+          btn.className = "preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 border border-transparent text-xs font-semibold transition whitespace-nowrap";
+        }
+      });
+    }
 
-      document.getElementById('shopName').textContent = query;
-      document.getElementById('shopDomain').textContent = 'Đang phân tích tên miền...';
-      document.getElementById('shopFollowers').textContent = 'Đang kết nối Meta Ad Library...';
-      document.getElementById('adGrid').innerHTML = `
-        <div class="col-span-full py-20 flex flex-col items-center justify-center text-center space-y-4">
-          <div class="w-12 h-12 rounded-full border-4 border-blue-500/20 border-t-blue-600 animate-spin"></div>
+    function resetAllBrandViews(query, forceRefresh = false) {
+      // 1. Purge all global memory caches
+      currentData = null;
+      currentEmailData = null;
+      currentGoogleData = null;
+      currentTikTokData = null;
+      currentMetaRankData = null;
+      currentContentsData = null;
+      currentEmailFullList = [];
+      emailCurrentPage = 1;
+
+      // 2. Synchronize preset button highlights
+      updatePresetButtonsState(query);
+
+      // 3. Reset brand identity header immediately
+      const shopName = document.getElementById('shopName');
+      const shopDomain = document.getElementById('shopDomain');
+      const shopFollowers = document.getElementById('shopFollowers');
+      if (shopName) shopName.textContent = query;
+      if (shopDomain) shopDomain.textContent = 'Đang phân tích tên miền...';
+      if (shopFollowers) shopFollowers.textContent = 'Đang kết nối Meta Ad Library...';
+
+      // 4. Reset sub-sidebar & channel badges to skeleton
+      const countsToReset = ['metaChannelCount', 'tiktokChannelCount', 'googleChannelCount', 'subSidebarEmailCount', 'subSidebarTiktokCount'];
+      countsToReset.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = '...';
+      });
+
+      // 5. Reset & show Skeleton Loaders on all modules
+      const loaderHtml = (modName, color = 'blue') => `
+        <div class="col-span-full py-16 flex flex-col items-center justify-center text-center space-y-3">
+          <div class="w-10 h-10 rounded-full border-4 border-${color}-500/20 border-t-${color}-600 animate-spin"></div>
           <div>
-            <div class="text-base font-bold text-slate-900">${forceRefresh ? 'Đang làm mới & quét lại Meta Ad Library cho:' : 'Đang quét Meta Ad Library cho:'} <span class="text-blue-600 font-extrabold">${query}</span>...</div>
-            <div class="text-xs text-slate-500 mt-1">Đang bóc tách video creative, link landing page và ngày chạy...</div>
+            <div class="text-xs font-bold text-slate-800">Đang đồng bộ ${modName} cho <span class="text-${color}-600 font-extrabold">${query}</span>...</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Làm sạch bộ nhớ đệm và nạp dữ liệu chuẩn xác</div>
           </div>
         </div>
       `;
+
+      const adGrid = document.getElementById('adGrid');
+      if (adGrid) {
+        adGrid.innerHTML = `
+          <div class="col-span-full py-20 flex flex-col items-center justify-center text-center space-y-4">
+            <div class="w-12 h-12 rounded-full border-4 border-blue-500/20 border-t-blue-600 animate-spin"></div>
+            <div>
+              <div class="text-base font-bold text-slate-900">${forceRefresh ? 'Đang làm mới & quét lại Meta Ad Library cho:' : 'Đang quét Meta Ad Library cho:'} <span class="text-blue-600 font-extrabold">${query}</span>...</div>
+              <div class="text-xs text-slate-500 mt-1">Đang bóc tách video creative, link landing page và ngày chạy...</div>
+            </div>
+          </div>
+        `;
+      }
+
+      const emailGrid = document.getElementById('emailCardsGrid');
+      if (emailGrid) emailGrid.innerHTML = loaderHtml('Email Marketing & Flows', 'blue');
+
+      const googleGrid = document.getElementById('googleAdsCardsGrid');
+      if (googleGrid) googleGrid.innerHTML = loaderHtml('Google Transparency Center', 'blue');
+
+      const metaRankGrid = document.getElementById('metaRankingCardsGrid');
+      if (metaRankGrid) metaRankGrid.innerHTML = loaderHtml('Meta Ads Ranking Matrix', 'amber');
+
+      const ttLibGrid = document.getElementById('ttLibraryCardsGrid');
+      if (ttLibGrid) ttLibGrid.innerHTML = loaderHtml('TikTok Library & Ads', 'rose');
+
+      const ttRankGrid = document.getElementById('ttRankingCardsGrid');
+      if (ttRankGrid) ttRankGrid.innerHTML = loaderHtml('TikTok Ranking', 'rose');
+
+      const ttContGrid = document.getElementById('ttContentsCardsGrid');
+      if (ttContGrid) ttContGrid.innerHTML = loaderHtml('TikTok Contents Gallery', 'rose');
+
+      const contentsGrid = document.getElementById('contentsCardsGrid');
+      if (contentsGrid) contentsGrid.innerHTML = loaderHtml('Thư viện Video Creatives', 'blue');
+    }
+
+    // Load Brand Data for Explorer
+    async function loadBrand(query, forceRefresh = false) {
+      document.getElementById('btnSpinner').classList.remove('hidden');
+      document.getElementById('btnText').textContent = forceRefresh ? 'Đang làm mới...' : 'Đang quét...';
+
+      // Perform full state and view reset
+      resetAllBrandViews(query, forceRefresh);
 
       try {
         const url = '/api/scan?query=' + encodeURIComponent(query) + (forceRefresh ? '&refresh=true' : '');
