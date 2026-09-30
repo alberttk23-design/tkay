@@ -3751,7 +3751,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function getActiveBrandName() {
-      return (currentData && (currentData.query || currentData.name)) || 
+      return (currentData && (currentData.name || currentData.query)) || 
              (currentGoogleData && currentGoogleData.brand) || 
              (currentEmailData && currentEmailData.brand) ||
              (currentTikTokData && currentTikTokData.brand) ||
@@ -5438,12 +5438,18 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function loadTikTokIntelligenceView(brandName) {
-      const bTitle = document.getElementById('tiktokBrandName');
-      if (bTitle) bTitle.textContent = brandName;
-      if (!currentTikTokData || currentTikTokData.brand.toLowerCase() !== brandName.toLowerCase()) {
-        loadTikTokIntelligenceData(brandName, false);
-      } else {
+      const cleanTarget = (brandName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const cleanLoaded = (currentTikTokData?.brand || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const isMatch = currentTikTokData && (
+        cleanTarget === cleanLoaded ||
+        cleanTarget.includes(cleanLoaded) ||
+        cleanLoaded.includes(cleanTarget) ||
+        (currentData?.domain && currentData.domain.toLowerCase().includes(cleanTarget))
+      );
+      if (isMatch) {
         renderTikTokIntelligence(currentTikTokData);
+      } else {
+        loadTikTokIntelligenceData(brandName, false);
       }
     }
 
@@ -6257,7 +6263,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function loadEmailIntelligenceView(brandName) {
-      if (currentEmailData && currentEmailData.brand.toLowerCase() === brandName.toLowerCase()) {
+      const cleanTarget = (brandName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const cleanLoaded = (currentEmailData?.brand || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const isMatch = currentEmailData && (
+        cleanTarget === cleanLoaded ||
+        cleanTarget.includes(cleanLoaded) ||
+        cleanLoaded.includes(cleanTarget) ||
+        (currentData?.domain && currentData.domain.toLowerCase().includes(cleanTarget))
+      );
+      if (isMatch) {
         renderEmailIntelligence(currentEmailData);
       } else {
         loadEmailIntelligenceData(brandName, false);
@@ -7492,7 +7506,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function loadGoogleAdsView(brandName) {
-      if (currentGoogleData && (currentGoogleData.brand === brandName || currentGoogleData.advertiser?.advertiser_name === brandName)) {
+      const cleanTarget = (brandName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const cleanLoaded = (currentGoogleData?.brand || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const cleanAdv = (currentGoogleData?.advertiser?.advertiser_name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      const isMatch = currentGoogleData && (
+        cleanTarget === cleanLoaded ||
+        cleanTarget === cleanAdv ||
+        cleanTarget.includes(cleanLoaded) ||
+        cleanLoaded.includes(cleanTarget) ||
+        (currentData?.domain && currentData.domain.toLowerCase().includes(cleanTarget))
+      );
+      if (isMatch) {
         renderGoogleAdsIntelligence(currentGoogleData);
       } else {
         loadGoogleAdsData(brandName, false);
