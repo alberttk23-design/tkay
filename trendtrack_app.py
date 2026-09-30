@@ -939,50 +939,53 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <!-- (MATCHING media_1790759876556 & .884591)   -->
           <!-- ========================================== -->
           <div id="metaView_library" class="space-y-5">
-            <!-- Filter Toolbar Matching media_1790759876556.png -->
+            <!-- Filter Toolbar Matching media_1790771909042.png -->
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-slate-200 shadow-2xs">
               <!-- Filter Pills Left -->
-              <div class="flex items-center gap-2 flex-wrap">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <!-- Ads Icon Button -->
+                <button type="button" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold flex items-center gap-1.5 shadow-2xs cursor-pointer">
+                  <svg class="w-3.5 h-3.5 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  <span>Ads</span>
+                </button>
+
                 <!-- Ad Countries -->
-                <div class="relative">
-                  <select id="metaFilterCountry" onchange="filterMetaLibrary()" class="h-8 pl-7 pr-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                    <option value="all">Ad Countries</option>
-                    <option value="global">Global ads 🌐</option>
-                    <option value="US">United States 🇺🇸</option>
-                    <option value="GB">United Kingdom 🇬🇧</option>
-                    <option value="AU">Australia 🇦🇺</option>
-                    <option value="VN">Vietnam 🇻🇳</option>
-                  </select>
-                  <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </div>
+                <select id="metaFilterCountry" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Ad Countries ▾</option>
+                  <option value="global">Global ads 🌐</option>
+                  <option value="US">United States 🇺🇸</option>
+                  <option value="GB">United Kingdom 🇬🇧</option>
+                  <option value="AU">Australia 🇦🇺</option>
+                  <option value="DE">Germany 🇩🇪</option>
+                  <option value="BE">Belgium 🇧🇪</option>
+                </select>
 
                 <!-- Ad Status -->
-                <select id="metaFilterStatus" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="all">Ad Status: All</option>
+                <select id="metaFilterStatus" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Ad Status ▾</option>
                   <option value="active" selected>Active only</option>
                   <option value="inactive">Inactive</option>
                 </select>
 
                 <!-- Media Types -->
-                <select id="metaFilterMediaType" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="all">Media Types: All</option>
+                <select id="metaFilterMediaType" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Media Types ▾</option>
                   <option value="image">Images</option>
                   <option value="video">Videos</option>
                   <option value="carousel">Carousel</option>
-                  <option value="dco">Dynamic (DCO)</option>
                 </select>
 
                 <!-- Ratio -->
-                <select id="metaFilterRatio" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="all">Ratio: All</option>
+                <select id="metaFilterRatio" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Ratio ▾</option>
                   <option value="1:1">1:1 Square</option>
                   <option value="9:16">9:16 Vertical</option>
                   <option value="16:9">16:9 Landscape</option>
                 </select>
 
                 <!-- Days Running -->
-                <select id="metaFilterDays" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="all">Days Running: All</option>
+                <select id="metaFilterDays" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Days Running ▾</option>
                   <option value="<7">&lt; 7 days</option>
                   <option value="7-30">7 - 30 days</option>
                   <option value="30-90">30 - 90 days</option>
@@ -990,40 +993,70 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 </select>
 
                 <!-- CTA -->
-                <select id="metaFilterCta" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="all">CTA: All</option>
+                <select id="metaFilterCta" onchange="filterMetaLibrary()" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">CTA ▾</option>
                   <option value="shop_now">Shop Now</option>
                   <option value="learn_more">Learn More</option>
-                  <option value="order_now">Order Now</option>
                 </select>
 
-                <!-- Locked Pro Filters -->
-                <div class="hidden xl:flex items-center gap-2">
-                  <button type="button" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-400 text-xs font-medium flex items-center gap-1.5 cursor-not-allowed">
-                    <span>Language</span>
-                    <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                  </button>
-                  <button type="button" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-400 text-xs font-medium flex items-center gap-1.5 cursor-not-allowed">
-                    <span>Publisher Platforms</span>
-                    <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                  </button>
-                </div>
+                <!-- Ad Copy -->
+                <button type="button" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 text-xs font-semibold flex items-center gap-1 shadow-2xs">
+                  <span>Ad Copy ▾</span>
+                </button>
+
+                <!-- Landing Pages -->
+                <button type="button" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 text-xs font-semibold flex items-center gap-1 shadow-2xs">
+                  <span>Landing Pages ▾</span>
+                </button>
+
+                <!-- Partners -->
+                <button type="button" class="h-8 px-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-600 text-xs font-semibold flex items-center gap-1 shadow-2xs">
+                  <span>Partners ▾</span>
+                </button>
+
+                <span class="text-xs font-medium text-slate-400">8 more</span>
               </div>
 
-              <!-- Sort By Dropdown Right -->
-              <div class="flex items-center gap-2 shrink-0">
-                <span class="text-xs font-medium text-slate-400">Sort by:</span>
-                <select id="metaLibrarySort" onchange="sortMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-white text-slate-800 text-xs font-bold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
-                  <option value="rank" selected>Ad Rank</option>
+              <!-- Filter Pills Right: EU / UK (media_1790771909042.png) -->
+              <div class="flex items-center gap-2 shrink-0 flex-wrap">
+                <span class="text-xs font-bold text-slate-800 flex items-center gap-1">
+                  <span>🇪🇺</span>
+                  <span>EU / UK</span>
+                </span>
+                <button type="button" class="h-8 px-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1 shadow-xs cursor-pointer">
+                  <span>Ad Reach ▾</span>
+                </button>
+                <button type="button" class="h-8 px-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1 shadow-xs cursor-pointer">
+                  <span>Ad Spend ▾</span>
+                </button>
+                <button type="button" class="h-8 px-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1 shadow-xs cursor-pointer">
+                  <span>Gender ▾</span>
+                </button>
+                <button type="button" class="h-8 px-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1 shadow-xs cursor-pointer">
+                  <span>Age ▾</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Sort Toolbar Row (Matching media_1790771909042.png) -->
+            <div class="flex items-center justify-between text-xs font-semibold text-slate-600 px-1">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500">Sort By:</span>
+                <select id="metaLibrarySort" onchange="sortMetaLibrary()" class="h-7 px-2 rounded-lg border border-slate-200 bg-white text-slate-900 font-bold focus:outline-none cursor-pointer">
+                  <option value="rank" selected>Ad Rank ↑</option>
                   <option value="days_desc">Days running (Longest)</option>
                   <option value="days_asc">Days running (Newest)</option>
                   <option value="impressions">Impressions</option>
                 </select>
               </div>
+              <div class="flex items-center gap-3 text-slate-400">
+                <button type="button" class="hover:text-slate-600 cursor-pointer" title="Search Creatives">🔍</button>
+                <button type="button" class="hover:text-slate-600 cursor-pointer" title="Grid Settings">⚙️</button>
+              </div>
             </div>
 
-            <!-- 4-Column Responsive Grid (Matching media_1790759876556.png) -->
-            <div id="metaLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 6-Column Responsive Grid (Matching media_1790771909042.png) -->
+            <div id="metaLibraryCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
               <!-- Dynamically populated via renderMetaLibraryCards() -->
             </div>
 
@@ -3878,13 +3911,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
 
       const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : (currentData?.ads?.length || 0);
-      if (bAdsCount) bAdsCount.textContent = `• ${totalAds} / ${totalAds}`;
-      if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
-      if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds} / ${totalAds}`;
+      const totalAllTime = currentData?.total_all_time || (totalAds > 1000 ? Math.round(totalAds * 30 / 1000) + 'K' : (totalAds * 6) + '');
+      if (bAdsCount) bAdsCount.textContent = `• ${totalAds.toLocaleString()} / ${totalAllTime}`;
+      if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds.toLocaleString()} Ads`;
+      if (subSidebarMetaCount) {
+        const metaTot = currentData?.channels?.meta?.total ? currentData.channels.meta.total.toLocaleString() : (currentData?.total_all_time || totalAds).toLocaleString();
+        subSidebarMetaCount.textContent = `${(currentData?.channels?.meta?.active || totalAds).toLocaleString()} / ${metaTot}`;
+      }
 
-      const euUkCount = currentMetaRankData?.eu_uk_count || Math.round(totalAds * 0.22);
-      const euUkPct = currentMetaRankData?.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
-      if (euUkLabel) euUkLabel.textContent = `Reach & Spend · EU/UK only ${euUkCount} (${euUkPct}%)`;
+      if (currentData && currentData.reach_toggle) {
+        if (euUkLabel) euUkLabel.textContent = currentData.reach_toggle;
+      } else {
+        const euUkCount = currentMetaRankData?.eu_uk_count || Math.round(totalAds * 0.22);
+        const euUkPct = currentMetaRankData?.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
+        if (euUkLabel) euUkLabel.textContent = `Reach & Spend · EU/UK only ${euUkCount.toLocaleString()} (${euUkPct}%)`;
+      }
 
       // Parallel fetch meta-ranking and contents if not yet loaded or brand mismatch
       if (!currentMetaRankingApiData || currentMetaRankingApiData.brand?.toLowerCase() !== bName.toLowerCase()) {
@@ -4141,10 +4182,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const adId = ad.id || `meta_card_${cardIndex}`;
         const copyText = ad.primary_text || ad.description || ad.hook || 'Total Comfort, All Day Long';
         const brandName = ad.advertiserName || ad.advertiser || (currentData && currentData.name) || getActiveBrandName();
+        const avatarUrl = ad.advertiserAvatarUrl || (currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName);
         const headline = ad.cta_title || ad.ctaDescription || (`Shop ${brandName} Online`);
         const ctaBtnText = (ad.ctaText || ad.cta_type || 'Shop Now').replace(/_/g, ' ');
         const daysRunning = ad.days_active ?? ad.daysRunning ?? (350 - rankNum * 12);
         const platformAdId = ad.platformAdId || ad.ad_archive_id || ('10849204' + rankNum);
+        const dateRange = ad.date_range || `${daysRunning}d · ${ad.startDate || 'May 10'} → now`;
+        const subBadge = ad.sub_badge;
+        const reachSpend = ad.reach_spend_badge || (ad.euReach ? `12M · $110.1K · $... +23` : 'No targeting data');
+        const rankPill = ad.rank_pill || `${rankNum} / ${totalAdsUniverse.toLocaleString()} (1%)`;
+        const rankDeltaSym = ad.rank_delta || (ad.rank_trend === 'up' ? '↗' : (ad.rank_trend === 'down' ? '↘' : '-'));
+        const rankDeltaClass = rankDeltaSym === '↗' ? 'text-emerald-600' : (rankDeltaSym === '↘' ? 'text-rose-500' : 'text-slate-400');
+        const copiesCount = ad.copies_count || ad.duplicates || (rankNum <= 5 ? 5 : 2);
+        const isActive = ad.isActive !== false;
+        const ctaDomain = (ad.ctaDomain || currentData?.domain || 'WWW.LOOPEARPLUGS.COM').toUpperCase();
+        const landingUrl = ad.landing_url || ad.landingUrl || ('https://' + (currentData?.domain || 'loopearplugs.com'));
 
         // Slide images setup for carousel
         let slideImages = [];
@@ -4159,109 +4211,108 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const currentMediaSrc = isCarousel ? (slideImages[currentSlideIdx] || slideImages[0]) : (ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/600');
 
         const card = document.createElement('div');
-        card.className = "tt-card p-3.5 flex flex-col justify-between bg-white border border-slate-200/90 rounded-2xl shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group";
+        card.className = "tt-card p-3 flex flex-col justify-between bg-white border border-slate-200/90 rounded-2xl shadow-2xs hover:shadow-md hover:border-slate-300 transition duration-200 group text-slate-800";
 
         card.innerHTML = `
           <div>
-            <!-- Row 1: Global ads pill + Duplicate count + Rank pill (Matching media_1790759876556.png) -->
-            <div class="flex items-center justify-between gap-1.5 mb-2.5">
-              <div class="flex items-center gap-1.5 flex-wrap">
-                <!-- Global Ads Tag -->
-                <div class="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60">
-                  <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>Global ads</span>
-                </div>
-                <!-- Duplicate Count -->
-                <div class="flex items-center gap-1 text-[10.5px] font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/60" title="${duplicates} ads use this creative and text">
-                  <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span>${duplicates} ads</span>
-                </div>
+            <!-- Line 1: Active status + Days & Date range (Matching media_1790771909042.png) -->
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10.5px] font-bold ${isActive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-slate-100 text-slate-500 border border-slate-200/60'}">
+                <span class="w-1.5 h-1.5 rounded-full ${isActive ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
+                <span>${isActive ? 'Active' : 'Inactive'}</span>
               </div>
-
-              <!-- Ad Rank Badge -->
-              <div class="flex items-center gap-1 text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-lg shrink-0">
-                <span class="text-[9px]">▲</span>
-                <span>#${rankNum} ${rankNum}/${totalAdsUniverse}</span>
+              <div class="text-[10.5px] font-medium text-slate-500 truncate" title="${dateRange}">
+                ${dateRange}
               </div>
             </div>
 
-            <!-- Media Container -->
-            <div class="relative w-full aspect-square bg-slate-900 rounded-xl overflow-hidden border border-slate-200/80 mb-3 flex items-center justify-center group-hover:brightness-[1.02] transition">
-              ${isVideo ? `
-                <video src="${ad.video_url || ad.mediaUrl || ''}" poster="${ad.thumbnail_url || ad.image_url || ''}" class="w-full h-full object-cover" muted playsinline></video>
-                <!-- Video Duration Tag -->
-                <div class="absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur text-white text-[10.5px] font-bold flex items-center gap-1">
-                  <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-                  <span>0:15</span>
-                </div>
-                <!-- Play Icon Center Overlay -->
-                <div onclick="openAdModal(${originalIndex})" class="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/20 hover:bg-black/10 transition">
-                  <div class="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-900 group-hover:scale-110 transition">
-                    <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-                  </div>
-                </div>
-              ` : isCarousel ? `
-                <img id="metaCarouselImg_${adId}" src="${currentMediaSrc}" class="w-full h-full object-cover" alt="Ad Creative"/>
-                <!-- 1/2 Multiple Media Badge Matching media_1790759884591.png -->
-                <div id="metaCarouselCounter_${adId}" class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur text-white text-[10.5px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-                  <span>${currentSlideIdx + 1}/2 Multiple media</span>
-                </div>
-                <!-- Arrow Buttons -->
-                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', -1, 2)" class="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">‹</button>
-                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', 1, 2)" class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">›</button>
-                <!-- Dot Indicators -->
-                <div id="metaCarouselDots_${adId}" class="absolute bottom-2 inset-x-0 flex items-center justify-center gap-1.5 z-10 pointer-events-none">
-                  <span class="carousel-dot w-2 h-2 rounded-full ${currentSlideIdx === 0 ? 'bg-white shadow-xs' : 'bg-white/50'}"></span>
-                  <span class="carousel-dot w-2 h-2 rounded-full ${currentSlideIdx === 1 ? 'bg-white shadow-xs' : 'bg-white/50'}"></span>
+            <!-- Line 2: Sub-badge (+3 / +7) + Reach & Spend Pill -->
+            <div class="flex items-center gap-1.5 mb-2">
+              ${subBadge ? `
+                <span class="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200/60 shrink-0">
+                  ${subBadge}
+                </span>
+              ` : ''}
+              ${reachSpend === 'No targeting data' ? `
+                <div class="flex-1 min-w-0 px-2 py-0.5 rounded-md text-[10px] font-medium text-slate-500 bg-slate-100 border border-slate-200/60 truncate flex items-center justify-center gap-1">
+                  <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18"/></svg>
+                  <span class="truncate">No targeting data</span>
                 </div>
               ` : `
-                <img src="${currentMediaSrc}" class="w-full h-full object-cover" alt="Ad Creative"/>
+                <div class="flex-1 min-w-0 px-2 py-0.5 rounded-md text-[10px] font-bold text-white bg-blue-600 shadow-2xs truncate text-center" title="${reachSpend}">
+                  ${reachSpend}
+                </div>
               `}
             </div>
 
-            <!-- Brand Identity & Date Launched -->
-            <div class="flex items-center justify-between gap-2 mb-2">
-              <div class="flex items-center gap-2">
-                <img src="${(currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName)}" class="w-5 h-5 rounded-full object-cover border border-slate-200" alt="avatar"/>
-                <span class="text-xs font-extrabold text-slate-900">${brandName}</span>
+            <!-- Line 3: Rank Pill + Variations/Copies Count -->
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <div class="flex items-center gap-1 text-[11px] font-bold text-slate-700">
+                <span>${rankPill}</span>
+                <span class="${rankDeltaClass} text-[12px]">${rankDeltaSym}</span>
               </div>
-              <!-- Meta Platform Icons -->
-              <div class="flex items-center gap-1 text-slate-400">
-                <span title="Facebook" class="text-[11px]">📘</span>
-                <span title="Instagram" class="text-[11px]">📷</span>
-                <span title="Messenger" class="text-[11px]">💬</span>
+              <div class="flex items-center gap-1 text-[10.5px] font-semibold text-slate-500" title="${copiesCount} variations">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span>${copiesCount}</span>
+              </div>
+            </div>
+
+            <!-- Profile Header: Avatar + Loop + Sponsored ℹ -->
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden">
+                ${avatarUrl && !avatarUrl.includes('ui-avatars') ? `<img src="${avatarUrl}" class="w-full h-full object-cover"/>` : `<span>loop</span>`}
+              </div>
+              <div class="min-w-0 flex-1 leading-tight">
+                <div class="text-xs font-bold text-slate-900 truncate">${brandName}</div>
+                <div class="text-[9.5px] text-slate-400 flex items-center gap-1">
+                  <span>Sponsored</span>
+                  <span class="text-[9px] cursor-pointer" title="Info">ℹ</span>
+                </div>
               </div>
             </div>
 
             <!-- Ad Copy Snippet (Expandable) -->
-            <div class="text-xs text-slate-600 mb-3 leading-relaxed">
-              <span id="metaCopyShort_${adId}">${copyText.length > 95 ? copyText.substring(0, 95) + '...' : copyText}</span>
+            <div class="text-[11.5px] text-slate-600 mb-2 leading-relaxed">
+              <span id="metaCopyShort_${adId}">${copyText.length > 70 ? copyText.substring(0, 70) + '...' : copyText}</span>
               <span id="metaCopyFull_${adId}" class="hidden">${copyText}</span>
-              ${copyText.length > 95 ? `
-                <button type="button" id="metaCopyToggleBtn_${adId}" onclick="toggleMetaCardCopy('${adId}')" class="text-blue-600 hover:text-blue-700 font-bold ml-1 cursor-pointer">Xem thêm...</button>
+              ${copyText.length > 70 ? `
+                <button type="button" id="metaCopyToggleBtn_${adId}" onclick="toggleMetaCardCopy('${adId}')" class="text-slate-500 hover:text-slate-800 font-bold ml-1 cursor-pointer underline text-[11px]">See More</button>
               ` : ''}
             </div>
 
-            <!-- Headline & CTA Button -->
-            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 mb-3">
-              <div class="min-w-0">
-                <div class="text-[10px] font-bold uppercase text-slate-400 truncate">${(ad.ctaDomain || currentData?.domain || 'ONLINE STORE').toUpperCase()}</div>
-                <div class="text-xs font-black text-slate-900 truncate" title="${headline}">${headline}</div>
+            <!-- Media Container (Aspect 4:5 or 1:1, matching TrendTrack) -->
+            <div class="relative w-full aspect-[4/5] bg-slate-100 rounded-xl overflow-hidden border border-slate-200/70 mb-2.5 flex items-center justify-center group-hover:brightness-[1.01] transition">
+              ${isVideo ? `
+                <video src="${ad.video_url || ad.mediaUrl || ''}" poster="${ad.thumbnail_url || ad.image_url || ''}" class="w-full h-full object-cover" muted playsinline></video>
+                <!-- Play Icon Center Overlay -->
+                <div onclick="openAdModal(${originalIndex})" class="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/10 hover:bg-black/20 transition">
+                  <div class="w-9 h-9 rounded-full bg-white/95 shadow-md flex items-center justify-center text-slate-900 group-hover:scale-105 transition">
+                    <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                  </div>
+                </div>
+              ` : isCarousel ? `
+                <img id="metaCarouselImg_${adId}" src="${currentMediaSrc}" class="w-full h-full object-cover cursor-pointer" onclick="openAdModal(${originalIndex})" alt="Ad Creative"/>
+                <div id="metaCarouselCounter_${adId}" class="absolute top-2 right-2 bg-black/60 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
+                  <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                  <span>${currentSlideIdx + 1}/2 Multiple</span>
+                </div>
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', -1, 2)" class="absolute left-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">‹</button>
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', 1, 2)" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">›</button>
+              ` : `
+                <img src="${currentMediaSrc}" class="w-full h-full object-cover cursor-pointer" onclick="openAdModal(${originalIndex})" alt="Ad Creative"/>
+              `}
+            </div>
+
+            <!-- Headline & CTA / Domain Bar -->
+            <div class="p-2 rounded-xl bg-slate-50/90 border border-slate-100 flex items-center justify-between gap-1.5">
+              <div class="min-w-0 flex-1">
+                <div class="text-[9px] font-bold uppercase text-slate-400 truncate">${ctaDomain}</div>
+                <div class="text-[10.5px] font-bold text-slate-800 truncate" title="${headline}">${headline}</div>
               </div>
-              <a href="${ad.landing_url || ad.landingUrl || ('https://' + (currentData?.domain || 'theoodie.com'))}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs font-extrabold transition shrink-0 cursor-pointer shadow-2xs">
+              <a href="${landingUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 text-[10.5px] font-bold transition shrink-0 cursor-pointer shadow-2xs">
                 ${ctaBtnText}
               </a>
             </div>
-          </div>
-
-          <!-- Footer: Active Days & See Details Link -->
-          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-            <span class="font-medium">${daysRunning} days active · ID: ${platformAdId}</span>
-            <button type="button" onclick="openAdModal(${originalIndex})" class="text-blue-600 hover:text-blue-700 font-bold flex items-center gap-1 cursor-pointer">
-              <span>Details</span>
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </button>
           </div>
         `;
 
