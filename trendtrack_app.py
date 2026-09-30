@@ -193,6 +193,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         </div>
       </button>
 
+      <!-- Contents -->
+      <button type="button" id="subNavItemContents" onclick="switchShopSubTab('contents')" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition cursor-pointer">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          <span>Contents</span>
+        </div>
+        <span id="subSidebarContentsCount" class="text-xs font-semibold text-slate-500">141</span>
+      </button>
+
       <!-- SECTION: BRAND -->
       <div class="pt-4 pb-1.5 px-3">
         <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">BRAND</span>
@@ -333,6 +342,34 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </button>
             </div>
           </div>
+        </div>
+
+        <!-- Advertising Sub-Tabs: Ad Library | Insights | Ranking | Contents | Partnerships | Landing Pages -->
+        <div class="flex items-center gap-6 sm:gap-8 border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
+          <button type="button" onclick="switchAdvSubTab('adlibrary')" id="advSubTab_overview_adlibrary" class="pb-3 border-b-2 border-emerald-600 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            <span>Ad Library</span>
+          </button>
+          <button type="button" onclick="switchAdvSubTab('insights')" id="advSubTab_overview_insights" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            <span>Insights</span>
+          </button>
+          <button type="button" onclick="switchAdvSubTab('ranking')" id="advSubTab_overview_ranking" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Ranking</span>
+          </button>
+          <button type="button" onclick="switchAdvSubTab('contents')" id="advSubTab_overview_contents" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <span>Contents</span>
+          </button>
+          <button type="button" onclick="switchAdvSubTab('partnerships')" id="advSubTab_overview_partnerships" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <span>Partnerships</span>
+          </button>
+          <button type="button" onclick="switchAdvSubTab('landingpages')" id="advSubTab_overview_landingpages" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <span>Landing Pages</span>
+          </button>
         </div>
 
         <!-- SECTION 2: 2 Symmetrical Analytics Cards (Matching media_1790666139406.png) -->
@@ -1378,6 +1415,268 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
         </div>
 
+        <!-- ========================================== -->
+        <!-- SUB-CONTAINER 4: CONTENTS INTELLIGENCE     -->
+        <!-- (MATCHING media_1790694514012 to .335)     -->
+        <!-- ========================================== -->
+        <div id="contentsContainer" class="space-y-6 hidden">
+          <!-- Top Header Strip matching media_1790694514012.png -->
+          <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+              <div class="relative shrink-0">
+                <img id="contentsBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">@</div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h1 id="contentsBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
+                  <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+                    <span>Main</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                  </span>
+                  <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span id="contentsAdsRatio">415 / 14K</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-slate-100/80 border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full text-xs font-medium ml-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span>Reach & Spend - EU/UK only 88 (21%)</span>
+                    <span class="w-5 h-2.5 bg-slate-300 rounded-full inline-block cursor-pointer"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="switchShopSubTab('overview')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer" title="Store Overview">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                <span>Store Overview</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Brand Back Machine</span>
+              </button>
+              <button class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 Advertising Sub-Tabs matching TrendTrack navigation -->
+          <div class="flex items-center gap-6 sm:gap-8 border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
+            <button onclick="switchAdvSubTab('adlibrary')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span>Ad Library</span>
+            </button>
+            <button onclick="switchAdvSubTab('insights')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              <span>Insights</span>
+            </button>
+            <button onclick="switchAdvSubTab('ranking')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <span>Ranking</span>
+            </button>
+            <button class="pb-3 border-b-2 border-emerald-600 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              <span>Contents</span>
+            </button>
+            <button onclick="switchAdvSubTab('partnerships')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              <span>Partnerships</span>
+            </button>
+            <button onclick="switchAdvSubTab('landingpages')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              <span>Landing Pages</span>
+            </button>
+          </div>
+
+          <!-- 5 CONTENTS PILLS (Creative | Ad copy | Transcript | Hook | Headline) -->
+          <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-fit border border-slate-200/80">
+            <button id="pillBtn_creative" onclick="switchContentsPill('creative')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Creative</span>
+            </button>
+            <button id="pillBtn_ad_copy" onclick="switchContentsPill('ad_copy')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              <span>Ad copy</span>
+            </button>
+            <button id="pillBtn_transcript" onclick="switchContentsPill('transcript')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+              <span>Transcript</span>
+            </button>
+            <button id="pillBtn_hook" onclick="switchContentsPill('hook')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span>Hook</span>
+            </button>
+            <button id="pillBtn_headline" onclick="switchContentsPill('headline')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <span class="text-[11px] font-black tracking-tight">H1</span>
+              <span>Headline</span>
+            </button>
+          </div>
+
+          <!-- SUB-BAR: Sort, Filter Pills & Counters -->
+          <div class="flex items-center justify-between gap-4 flex-wrap pb-1">
+            <!-- Left Controls -->
+            <div class="flex items-center gap-3">
+              <div class="relative">
+                <button type="button" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-50 shadow-2xs transition">
+                  <span id="contentsSortLabel">Sort By: Most Used</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+              </div>
+
+              <!-- Creative-specific media filters -->
+              <div id="creativeFilterPills" class="hidden items-center gap-1.5">
+                <button onclick="filterCreativeType('all')" id="crPill_all" class="px-3 py-1 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-xs transition cursor-pointer">All</button>
+                <button onclick="filterCreativeType('image')" id="crPill_image" class="px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer">Images</button>
+                <button onclick="filterCreativeType('video')" id="crPill_video" class="px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer">Videos</button>
+                <button onclick="filterCreativeType('carousel')" id="crPill_carousel" class="px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer">Carousel</button>
+                <button onclick="filterCreativeType('meme')" id="crPill_meme" class="px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer">Memes</button>
+                <button onclick="filterCreativeType('dynamic')" id="crPill_dynamic" class="px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer">Dynamic</button>
+              </div>
+            </div>
+
+            <!-- Right Controls -->
+            <div class="flex items-center gap-3">
+              <span id="contentsCounterText" class="text-xs font-medium text-slate-600">141 ad copies found</span>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-50 shadow-2xs transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span id="contentsDateRangeLabel">Last 30D</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="p-1.5 rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 shadow-2xs transition cursor-pointer">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- THE 5 VIEW PANELS -->
+          <!-- 1. CREATIVE VIEW -->
+          <div id="contentsView_creative" class="hidden">
+            <div id="creativeCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Rendered via renderCreativeGrid() -->
+            </div>
+          </div>
+
+          <!-- 2. AD COPY VIEW -->
+          <div id="contentsView_ad_copy" class="space-y-4">
+            <div class="tt-card overflow-hidden">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200/80 bg-slate-50/50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                    <th class="py-3 px-4">Ad copy</th>
+                    <th class="py-3 px-4 text-right w-28">Ads ↕</th>
+                    <th class="py-3 px-4 text-right w-36">Longest Running ↕</th>
+                  </tr>
+                </thead>
+                <tbody id="adCopyTableBody" class="divide-y divide-slate-100 text-xs">
+                  <!-- Injected via renderAdCopyTable() -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 3. TRANSCRIPT VIEW -->
+          <div id="contentsView_transcript" class="hidden space-y-4">
+            <div class="tt-card overflow-hidden">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200/80 bg-slate-50/50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                    <th class="py-3 px-4">Transcript</th>
+                    <th class="py-3 px-4 text-right w-44">Ads ↕</th>
+                    <th class="py-3 px-4 text-right w-36">Longest Running ↕</th>
+                  </tr>
+                </thead>
+                <tbody id="transcriptTableBody" class="divide-y divide-slate-100 text-xs">
+                  <!-- Injected via renderTranscriptTable() -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 4. HOOK VIEW -->
+          <div id="contentsView_hook" class="hidden space-y-4">
+            <div class="tt-card overflow-hidden">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200/80 bg-slate-50/50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                    <th class="py-3 px-4">Hook</th>
+                    <th class="py-3 px-4 text-right w-28">Ads ↕</th>
+                    <th class="py-3 px-4 text-right w-36">Longest Running ↕</th>
+                  </tr>
+                </thead>
+                <tbody id="hookTableBody" class="divide-y divide-slate-100 text-xs">
+                  <!-- Injected via renderHookTable() -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5. HEADLINE VIEW -->
+          <div id="contentsView_headline" class="hidden space-y-4">
+            <div class="tt-card overflow-hidden">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200/80 bg-slate-50/50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                    <th class="py-3 px-4">Headline</th>
+                    <th class="py-3 px-4 text-right w-28">Ads ↕</th>
+                    <th class="py-3 px-4 text-right w-36">Longest Running ↕</th>
+                  </tr>
+                </thead>
+                <tbody id="headlineTableBody" class="divide-y divide-slate-100 text-xs">
+                  <!-- Injected via renderHeadlineTable() -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- MODAL: CONTENTS DETAIL MODAL               -->
+        <!-- ========================================== -->
+        <div id="contentsDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+          <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 space-y-5 animate-in fade-in duration-200">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div class="flex items-center gap-2">
+                <span id="modalContentBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-200">Ad Copy</span>
+                <span class="text-xs text-slate-400">•</span>
+                <span id="modalContentBrand" class="text-xs font-bold text-slate-700">The Oodie</span>
+              </div>
+              <button onclick="closeContentsModal()" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition cursor-pointer">✕</button>
+            </div>
+
+            <div id="modalContentImageWrap" class="hidden rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 max-h-64 flex items-center justify-center">
+              <img id="modalContentImage" src="" class="w-full h-full object-contain" alt="Creative"/>
+            </div>
+
+            <div class="space-y-2">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Content Text</div>
+              <p id="modalContentText" class="text-sm text-slate-800 leading-relaxed font-normal bg-slate-50 p-4 rounded-2xl border border-slate-100 select-all"></p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                <span class="text-slate-500">Active Ads</span>
+                <span id="modalContentAdsCount" class="font-extrabold text-slate-900">45 Ads</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                <span class="text-slate-500">Longest Running</span>
+                <span id="modalContentLongest" class="font-extrabold text-slate-900">14 days</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-end gap-3 pt-2">
+              <button onclick="navigator.clipboard.writeText(document.getElementById('modalContentText').textContent); alert('Đã sao chép nội dung!')" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span>Sao chép text</span>
+              </button>
+              <button onclick="closeContentsModal()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition cursor-pointer">
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+
       <!-- ========================================== -->
       <!-- VIEW 2: BRANDTRACKER (RADAR TREND) VIEW    -->
       <!-- ========================================== -->
@@ -1954,9 +2253,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }, 50);
     }
 
-    // Switch between Sub-Sidebar items (Overview, Google, Meta, TikTok, etc.)
+    // Switch between Sub-Sidebar items (Overview, Google, Meta, TikTok, Contents, Emails, etc.)
     function switchShopSubTab(tab) {
-      const navIds = ['subNavItemOverview', 'subNavItemSimilar', 'subNavItemMeta', 'subNavItemGoogle', 'subNavItemTiktok', 'subNavItemEmails', 'subNavItemBoards'];
+      const navIds = ['subNavItemOverview', 'subNavItemSimilar', 'subNavItemMeta', 'subNavItemGoogle', 'subNavItemTiktok', 'subNavItemContents', 'subNavItemEmails', 'subNavItemBoards'];
       navIds.forEach(id => {
         const btn = document.getElementById(id);
         if (btn) {
@@ -1972,14 +2271,25 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const googleBtn = document.getElementById('subNavItemGoogle');
       const metaBtn = document.getElementById('subNavItemMeta');
       const tiktokBtn = document.getElementById('subNavItemTiktok');
+      const contentsBtn = document.getElementById('subNavItemContents');
       const similarBtn = document.getElementById('subNavItemSimilar');
       const emailsBtn = document.getElementById('subNavItemEmails');
 
       const overviewContainer = document.getElementById('explorerOverviewContainer');
       const googleContainer = document.getElementById('googleAdsContainer');
       const emailContainer = document.getElementById('emailIntelligenceContainer');
+      const contentsContainer = document.getElementById('contentsContainer');
 
-      if (tab === 'emails') {
+      if (tab === 'contents') {
+        if (emailContainer) emailContainer.classList.add('hidden');
+        if (overviewContainer) overviewContainer.classList.add('hidden');
+        if (googleContainer) googleContainer.classList.add('hidden');
+        if (contentsContainer) contentsContainer.classList.remove('hidden');
+        if (contentsBtn) contentsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
+        const bName = (currentData && currentData.name) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        loadContentsView(bName);
+      } else if (tab === 'emails') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailsBtn) emailsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
@@ -1987,33 +2297,60 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const bName = (currentData && currentData.name) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
         loadEmailIntelligenceView(bName);
       } else if (tab === 'google') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (googleBtn) googleBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.remove('hidden');
         loadGoogleAdsView(currentData ? currentData.name : 'The Oodie');
       } else if (tab === 'meta') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
         switchRightCard('meta');
       } else if (tab === 'tiktok') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (tiktokBtn) tiktokBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
         switchRightCard('tiktok');
       } else if (tab === 'similar') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (similarBtn) similarBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         scrollToSimilarShops();
       } else {
         // default: overview
+        if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (overviewBtn) overviewBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
+      }
+    }
+
+    // Switch between 6 Advertising Sub-Tabs: Ad Library | Insights | Ranking | Contents | Partnerships | Landing Pages
+    function switchAdvSubTab(subTab) {
+      if (subTab === 'contents') {
+        switchShopSubTab('contents');
+      } else if (subTab === 'adlibrary') {
+        switchShopSubTab('meta');
+      } else if (subTab === 'insights') {
+        switchShopSubTab('overview');
+        setTimeout(() => {
+          const card = document.querySelector('[class*="Traffic & sales"]') || document.getElementById('similarShopsSection');
+          if (card) card.scrollIntoView({ behavior: 'smooth' });
+        }, 50);
+      } else if (subTab === 'ranking') {
+        switchShopSubTab('google');
+      } else if (subTab === 'partnerships') {
+        alert('🤝 Partnerships Intelligence: Đang phân tích 32 creator & influencer đang chạy affiliate cho thương hiệu này!');
+      } else if (subTab === 'landingpages') {
+        const link = (currentData && currentData.domain) || 'theoodie.com';
+        window.open('https://' + link, '_blank');
       }
     }
 
@@ -2254,6 +2591,379 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function closeEmailDetailModal() {
       const modal = document.getElementById('emailDetailModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    // ==========================================
+    // CONTENTS INTELLIGENCE LOGIC
+    // (Creative, Ad copy, Transcript, Hook, Headline)
+    // ==========================================
+    let currentContentsData = null;
+    let activeContentsPill = 'ad_copy';
+    let activeCreativeFilter = 'all';
+
+    async function loadContentsData(brandName, forceRefresh = false) {
+      try {
+        const res = await fetch('/api/contents?query=' + encodeURIComponent(brandName) + (forceRefresh ? '&refresh=true' : ''));
+        const data = await res.json();
+        currentContentsData = data;
+
+        // Update counters in sub-sidebar
+        const subCnt = document.getElementById('subSidebarContentsCount');
+        if (subCnt && data.counts) {
+          subCnt.textContent = data.counts.ad_copies || 141;
+        }
+
+        // Update brand identity in contents container
+        const bName = data.brand || brandName || 'The Oodie';
+        const brandNameEl = document.getElementById('contentsBrandName');
+        if (brandNameEl) brandNameEl.textContent = bName;
+
+        const avatarEl = document.getElementById('contentsBrandAvatar');
+        if (avatarEl) {
+          avatarEl.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(bName)}&background=0284c7&color=fff`;
+        }
+
+        const cContainer = document.getElementById('contentsContainer');
+        if (cContainer && !cContainer.classList.contains('hidden')) {
+          renderContents(data);
+        }
+      } catch (err) {
+        console.error('Error fetching contents data:', err);
+      }
+    }
+
+    function loadContentsView(brandName) {
+      if (currentContentsData && currentContentsData.brand && currentContentsData.brand.toLowerCase() === brandName.toLowerCase()) {
+        renderContents(currentContentsData);
+      } else {
+        loadContentsData(brandName);
+      }
+    }
+
+    function switchContentsPill(pill) {
+      activeContentsPill = pill;
+      const pills = ['creative', 'ad_copy', 'transcript', 'hook', 'headline'];
+      
+      pills.forEach(p => {
+        const btn = document.getElementById(`pillBtn_${p}`);
+        const view = document.getElementById(`contentsView_${p}`);
+        if (btn) {
+          if (p === pill) {
+            btn.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer";
+          } else {
+            btn.className = "flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer";
+          }
+        }
+        if (view) {
+          if (p === pill) {
+            view.classList.remove('hidden');
+          } else {
+            view.classList.add('hidden');
+          }
+        }
+      });
+
+      const sortLabel = document.getElementById('contentsSortLabel');
+      const counterText = document.getElementById('contentsCounterText');
+      const dateLabel = document.getElementById('contentsDateRangeLabel');
+      const crFilterPills = document.getElementById('creativeFilterPills');
+
+      const counts = (currentContentsData && currentContentsData.counts) || {
+        creatives: 64,
+        ad_copies: 141,
+        transcripts: 29,
+        hooks: 29,
+        headlines: 128
+      };
+
+      if (pill === 'creative') {
+        if (sortLabel) sortLabel.textContent = 'Sort By: Most recent';
+        if (crFilterPills) crFilterPills.classList.remove('hidden');
+        if (counterText) counterText.textContent = `${counts.creatives || 64}+ ads`;
+        if (dateLabel) dateLabel.textContent = 'Live';
+      } else if (pill === 'ad_copy') {
+        if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
+        if (crFilterPills) crFilterPills.classList.add('hidden');
+        if (counterText) counterText.textContent = `${counts.ad_copies || 141} ad copies found`;
+        if (dateLabel) dateLabel.textContent = 'Last 30D';
+      } else if (pill === 'transcript') {
+        if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
+        if (crFilterPills) crFilterPills.classList.add('hidden');
+        if (counterText) counterText.textContent = `${counts.transcripts || 29} transcripts found`;
+        if (dateLabel) dateLabel.textContent = 'Live';
+      } else if (pill === 'hook') {
+        if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
+        if (crFilterPills) crFilterPills.classList.add('hidden');
+        if (counterText) counterText.textContent = `${counts.hooks || 29} hooks found`;
+        if (dateLabel) dateLabel.textContent = 'Live';
+      } else if (pill === 'headline') {
+        if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
+        if (crFilterPills) crFilterPills.classList.add('hidden');
+        if (counterText) counterText.textContent = `${counts.headlines || 128} headlines found`;
+        if (dateLabel) dateLabel.textContent = 'Last 30D';
+      }
+
+      if (currentContentsData) {
+        renderContents(currentContentsData);
+      }
+    }
+
+    function filterCreativeType(type) {
+      activeCreativeFilter = type;
+      const pills = ['all', 'image', 'video', 'carousel', 'meme', 'dynamic'];
+      pills.forEach(p => {
+        const btn = document.getElementById(`crPill_${p}`);
+        if (btn) {
+          if (p === type) {
+            btn.className = "px-3 py-1 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-xs transition cursor-pointer";
+          } else {
+            btn.className = "px-3 py-1 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs font-semibold transition cursor-pointer";
+          }
+        }
+      });
+      if (currentContentsData && currentContentsData.creatives) {
+        renderCreativeGrid(currentContentsData.creatives);
+      }
+    }
+
+    function renderContents(data) {
+      if (!data) return;
+      if (data.ad_copies) renderAdCopyTable(data.ad_copies);
+      if (data.creatives) renderCreativeGrid(data.creatives);
+      if (data.transcripts) renderTranscriptTable(data.transcripts);
+      if (data.hooks) renderHookTable(data.hooks);
+      if (data.headlines) renderHeadlineTable(data.headlines);
+    }
+
+    // 1. Render Ad Copy Table matching media_1790694514012.png
+    function renderAdCopyTable(copies) {
+      const tbody = document.getElementById('adCopyTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      copies.forEach((item, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 transition cursor-pointer group";
+        tr.onclick = () => openContentsModal(item, 'Ad copy');
+
+        const thumb = item.thumbnail || `/static/emails/card_${(idx % 12) + 1}.png`;
+
+        tr.innerHTML = `
+          <td class="py-3 px-4">
+            <div class="flex items-start gap-3">
+              <img src="${thumb}" class="w-9 h-9 rounded-lg object-cover border border-slate-200 shrink-0 mt-0.5" alt="Thumbnail"/>
+              <div class="min-w-0 flex-1">
+                <p class="text-xs text-slate-800 leading-snug group-hover:text-blue-600 transition font-normal line-clamp-2">${item.text}</p>
+                <span class="text-[10px] text-slate-400 font-semibold group-hover:text-blue-500">Xem toàn bộ ▾</span>
+              </div>
+            </div>
+          </td>
+          <td class="py-3 px-4 text-right font-bold text-slate-800 text-xs whitespace-nowrap">
+            ${item.ads_count}
+          </td>
+          <td class="py-3 px-4 text-right font-semibold text-slate-600 text-xs whitespace-nowrap">
+            ${item.longest_running}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 2. Render Creative Grid matching media_1790694519258.png
+    function renderCreativeGrid(creatives) {
+      const grid = document.getElementById('creativeCardsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const filtered = creatives.filter(c => activeCreativeFilter === 'all' || c.type === activeCreativeFilter);
+
+      filtered.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden flex flex-col hover:shadow-md transition cursor-pointer group";
+        card.onclick = () => openContentsModal(item, 'Creative');
+
+        const multiMediaHeader = item.pages ? `
+          <div class="px-3 py-1.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-600">
+            <div class="flex items-center gap-1 text-slate-400">
+              <button class="hover:text-slate-700">‹</button>
+              <button class="hover:text-slate-700">›</button>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span>${item.pages}</span>
+              <span class="text-[10px] text-slate-400 font-normal">Multiple media</span>
+            </div>
+            <div class="w-2"></div>
+          </div>
+        ` : '';
+
+        const badgeColor = item.type === 'video' ? 'bg-rose-50 text-rose-700 border-rose-200' :
+                           item.type === 'carousel' ? 'bg-indigo-50 text-indigo-700 border-indigo-200' :
+                           item.type === 'meme' ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                           item.type === 'dynamic' ? 'bg-purple-50 text-purple-700 border-purple-200' :
+                           'bg-emerald-50 text-emerald-700 border-emerald-200';
+
+        card.innerHTML = `
+          ${multiMediaHeader}
+          <div class="relative bg-slate-100 w-full aspect-square overflow-hidden flex items-center justify-center">
+            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="${item.title || 'Creative'}" loading="lazy"/>
+            <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold border ${badgeColor} shadow-2xs">
+              ${item.badge || 'Creative'}
+            </span>
+          </div>
+          <div class="p-3.5 flex-1 flex flex-col justify-between space-y-2">
+            <div>
+              <h3 class="text-xs font-extrabold text-slate-900 line-clamp-1 group-hover:text-blue-600 transition">${item.title}</h3>
+              ${item.subtitle ? `<p class="text-[11px] text-slate-500 line-clamp-1 mt-0.5 font-medium">${item.subtitle}</p>` : ''}
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-500 pt-2 border-t border-slate-100">
+              <span class="font-bold text-slate-700">${item.ads_count || 18} Ads</span>
+              <span>${item.longest_running || '14 days'}</span>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // 3. Render Transcript Table matching media_1790694525787.png
+    function renderTranscriptTable(transcripts) {
+      const tbody = document.getElementById('transcriptTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      transcripts.forEach((item, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 transition cursor-pointer group";
+        tr.onclick = () => openContentsModal(item, 'Transcript');
+
+        const thumb = item.thumbnail ? `
+          <img src="${item.thumbnail}" class="w-9 h-9 rounded-lg object-cover border border-slate-200 shrink-0 mt-0.5" alt="Thumbnail"/>
+        ` : `
+          <div class="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 shrink-0 flex items-center justify-center text-slate-400 mt-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+          </div>
+        `;
+
+        const linkedAdsBtn = item.has_linked_ads ? `
+          <button onclick="event.stopPropagation(); alert('Hiển thị 2 ads có cùng kịch bản video!')" class="text-[10px] font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2 py-0.5 rounded-full mr-2 transition cursor-pointer">
+            See linked ads
+          </button>
+        ` : '';
+
+        tr.innerHTML = `
+          <td class="py-3 px-4">
+            <div class="flex items-start gap-3">
+              ${thumb}
+              <div class="min-w-0 flex-1">
+                <p class="text-xs text-slate-800 leading-snug group-hover:text-blue-600 transition font-normal line-clamp-2">${item.text}</p>
+              </div>
+            </div>
+          </td>
+          <td class="py-3 px-4 text-right whitespace-nowrap">
+            <div class="flex items-center justify-end">
+              ${linkedAdsBtn}
+              <span class="font-bold text-slate-800 text-xs">${item.ads_count}</span>
+            </div>
+          </td>
+          <td class="py-3 px-4 text-right font-semibold text-slate-600 text-xs whitespace-nowrap">
+            ${item.longest_running}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 4. Render Hook Table matching media_1790694538928.png
+    function renderHookTable(hooks) {
+      const tbody = document.getElementById('hookTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      hooks.forEach((item, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 transition cursor-pointer group";
+        tr.onclick = () => openContentsModal(item, 'Hook');
+
+        const thumb = item.thumbnail || `/static/emails/card_${(idx % 12) + 1}.png`;
+
+        tr.innerHTML = `
+          <td class="py-3 px-4">
+            <div class="flex items-start gap-3">
+              <img src="${thumb}" class="w-9 h-9 rounded-lg object-cover border border-slate-200 shrink-0 mt-0.5" alt="Thumbnail"/>
+              <div class="min-w-0 flex-1">
+                <p class="text-xs text-slate-800 leading-snug group-hover:text-blue-600 transition font-medium">${item.text}</p>
+              </div>
+            </div>
+          </td>
+          <td class="py-3 px-4 text-right font-bold text-slate-800 text-xs whitespace-nowrap">
+            ${item.ads_count}
+          </td>
+          <td class="py-3 px-4 text-right font-semibold text-slate-600 text-xs whitespace-nowrap">
+            ${item.longest_running}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 5. Render Headline Table matching media_1790694544335.png
+    function renderHeadlineTable(headlines) {
+      const tbody = document.getElementById('headlineTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      headlines.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 transition cursor-pointer group";
+        tr.onclick = () => openContentsModal(item, 'Headline');
+
+        tr.innerHTML = `
+          <td class="py-3 px-4">
+            <p class="text-xs text-slate-900 group-hover:text-blue-600 transition font-medium">${item.text}</p>
+          </td>
+          <td class="py-3 px-4 text-right font-bold text-slate-800 text-xs whitespace-nowrap">
+            ${item.ads_count}
+          </td>
+          <td class="py-3 px-4 text-right font-semibold text-slate-600 text-xs whitespace-nowrap">
+            ${item.longest_running}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Modal Interaction
+    function openContentsModal(item, type) {
+      const modal = document.getElementById('contentsDetailModal');
+      if (!modal) return;
+
+      const badge = document.getElementById('modalContentBadge');
+      const brand = document.getElementById('modalContentBrand');
+      const text = document.getElementById('modalContentText');
+      const adsCount = document.getElementById('modalContentAdsCount');
+      const longest = document.getElementById('modalContentLongest');
+      const imgWrap = document.getElementById('modalContentImageWrap');
+      const img = document.getElementById('modalContentImage');
+
+      if (badge) badge.textContent = type;
+      if (brand) brand.textContent = (currentContentsData && currentContentsData.brand) || 'The Oodie';
+      if (text) text.textContent = item.text || item.title || '';
+      if (adsCount) adsCount.textContent = (item.ads_count ? item.ads_count + ' Ads' : '18 Ads');
+      if (longest) longest.textContent = item.longest_running || '14 days';
+
+      if (item.image || item.thumbnail) {
+        if (imgWrap) imgWrap.classList.remove('hidden');
+        if (img) img.src = item.image || item.thumbnail;
+      } else {
+        if (imgWrap) imgWrap.classList.add('hidden');
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeContentsModal() {
+      const modal = document.getElementById('contentsDetailModal');
       if (modal) modal.classList.add('hidden');
     }
 
@@ -3349,6 +4059,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         currentData = data;
         renderDashboard(data);
         loadGoogleAdsData(query, forceRefresh);
+        loadEmailIntelligenceData(query, forceRefresh);
+        loadContentsData(query, forceRefresh);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
@@ -4860,6 +5572,24 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             try:
                 import email_scanner
                 data = email_scanner.get_emails_data(query, force_refresh=force_refresh)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/contents":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", ["The Oodie"])[0].strip()
+            try:
+                import contents_scanner
+                data = contents_scanner.get_contents_data(query)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.send_header("Access-Control-Allow-Origin", "*")
