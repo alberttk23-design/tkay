@@ -1,0 +1,101 @@
+{
+  "brand": "Migraine Relief Cap",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR07524972952463343617",
+    "advertiser_name": "Migraine Relief Cap",
+    "country": "US",
+    "ad_count_min": "1000",
+    "ad_count_max": "2000"
+  },
+  "total_analyzed": 0,
+  "total_estimated": 1767,
+  "active_ads": 375,
+  "format_mix_total": 1306,
+  "format_mix": {
+    "Text": {
+      "count": 613,
+      "pct": 47.0
+    },
+    "Image": {
+      "count": 496,
+      "pct": 38.0
+    },
+    "Video": {
+      "count": 195,
+      "pct": 15.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 777,
+      "pct": 44.0
+    },
+    "Unknown": {
+      "count": 459,
+      "pct": 26.0
+    },
+    "YouTube": {
+      "count": 212,
+      "pct": 12.0
+    },
+    "Other": {
+      "count": 176,
+      "pct": 10.0
+    },
+    "Shopping": {
+      "count": 141,
+      "pct": 8.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "31-90 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "91-180 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "181-365 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "365 d +": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 887,
+      "pct": 58.0
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 370,
+      "pct": 23.0
+    },
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 274,
+      "pct": 17.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [],
+  "scanned_at": "2026-09-30T10:55:53.309075"
+}

@@ -9,7 +9,7 @@
   <circle cx="500" cy="150" r="180" fill="#3b82f6" opacity="0.1"/>
   <circle cx="100" cy="650" r="160" fill="#10b981" opacity="0.08"/>
   <g transform="translate(50, 45)">
-    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">CRZYOGA</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">VIVATREE</text>
     <text x="500" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">Brand Essentials</text>
   </g>
   <g transform="translate(50, 110)">
@@ -23,12 +23,12 @@
     <circle cx="250" cy="150" r="80" fill="#3b82f6" opacity="0.2"/>
     <text x="250" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" text-anchor="middle">✨</text>
     <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Exclusive Collection</text>
-    <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official crzyoga Campaign</text>
-    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">Never run out of your daily essentials from crzyoga....</text>
+    <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official vivatree Campaign</text>
+    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">Never run out of your daily essentials from vivatree....</text>
   </g>
   <g transform="translate(150, 640)">
     <rect width="300" height="56" rx="28" fill="#3b82f6"/>
     <text x="150" y="34" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">Shop The Drop →</text>
   </g>
-  <text x="300" y="740" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">crzyoga Official Newsletters • Sent via Klaviyo</text>
+  <text x="300" y="740" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">vivatree Official Newsletters • Sent via Klaviyo</text>
 </svg>

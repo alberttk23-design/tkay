@@ -902,45 +902,37 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <!-- (MATCHING media_1790683916662.png)         -->
         <!-- ========================================== -->
         <div id="googleAdsContainer" class="space-y-6 hidden">
-          <!-- Google Header Strip -->
-          <div class="tt-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div class="flex items-center gap-4">
-              <img id="googleShopAvatar" src="https://ui-avatars.com/api/?name=Dr+Squatch" class="w-14 h-14 rounded-2xl object-cover border border-slate-200 shadow-sm" alt="Avatar"/>
+          <!-- Google Header Strip (Matching media_1790738192038.png 1:1) -->
+          <div class="tt-card p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <div class="flex items-center gap-3.5">
+              <div class="relative w-12 h-12 rounded-2xl overflow-hidden border border-slate-200 shadow-2xs flex-shrink-0 bg-white flex items-center justify-center">
+                <img id="googleShopAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0284c7&color=fff" class="w-full h-full object-cover" alt="Avatar"/>
+                <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[9px] text-white font-black">G</span>
+              </div>
               <div>
                 <div class="flex items-center gap-2">
-                  <h1 id="googleShopName" class="text-2xl font-extrabold tracking-tight text-slate-900">Dr. Squatch</h1>
-                  <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Demo shop</span>
-                  <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <div class="flex items-center gap-3 text-xs text-slate-500 mt-1 flex-wrap">
-                  <div class="flex items-center gap-1.5 font-bold text-slate-800">
-                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
-                    <span id="googleAdvName">Dr. Squatch</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="googleAdRatio" class="text-slate-600 font-semibold">1,064 / 2,852</span>
-                  </div>
-                  <span>•</span>
-                  <div class="flex items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-700 px-2.5 py-0.5 rounded-full font-bold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                    <span id="googleReachBadge">Reach 185 (17%)</span>
+                  <h1 id="googleShopName" class="text-xl font-black text-slate-900 tracking-tight">The Oodie</h1>
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="googleAdRatio" class="text-xs font-bold text-slate-700">375 / 1,767</span>
+                  <div class="flex items-center gap-1.5 ml-1 bg-slate-100 px-2.5 py-0.5 rounded-full text-xs font-semibold text-slate-700 border border-slate-200">
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    <span id="googleReachBadge">Reach 1 (0%)</span>
+                    <span class="w-6 h-3.5 rounded-full bg-slate-300 inline-flex items-center p-0.5 cursor-pointer ml-0.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-white shadow-xs"></span>
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Action buttons -->
+            <!-- Action buttons: Brand Back Machine -->
             <div class="flex items-center gap-2">
-              <button onclick="switchShopSubTab('overview')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer" title="Quay lại Store Overview">
-                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-                <span>Store Overview</span>
+              <button type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer shadow-2xs" title="Lịch sử thương hiệu">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Brand Back Machine</span>
               </button>
-              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer">
-                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
-                <span>Share</span>
-              </button>
-              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-xs cursor-pointer">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                <span>Add Brandtracker</span>
+              <button type="button" class="p-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-500 transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
               </button>
             </div>
           </div>
@@ -1165,16 +1157,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div class="tt-card p-4 space-y-3">
               <!-- Row 1: Filters Bar (Matching media_1790732770060.png) -->
               <div class="flex items-center justify-between gap-4 flex-wrap">
-                <!-- Left: Google Ads title + filters -->
+                <!-- Left: Filters row matching media_1790738192038.png 1:1 -->
                 <div class="flex items-center gap-2 flex-wrap text-xs">
-                  <div class="flex items-center gap-1.5 font-bold text-slate-800 pr-2 border-r border-slate-200">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-                    <span>Google Ads</span>
-                  </div>
-
                   <!-- Dropdown: Ad Status -->
                   <div class="relative">
-                    <select id="filterGoogleStatus" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                    <select id="filterGoogleStatus" onchange="filterGoogleLibraryAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
                       <option value="all">Ad Status ▾</option>
                       <option value="active">Active</option>
                       <option value="inactive">Inactive</option>
@@ -1183,7 +1170,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
                   <!-- Dropdown: Publication Date -->
                   <div class="relative">
-                    <select id="filterGooglePubDate" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                    <select id="filterGooglePubDate" onchange="filterGoogleLibraryAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
                       <option value="all">Publication Date ▾</option>
                       <option value="7d">Last 7D</option>
                       <option value="30d">Last 30D</option>
@@ -1193,7 +1180,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
                   <!-- Dropdown: Days Running -->
                   <div class="relative">
-                    <select id="filterGoogleDaysRunning" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                    <select id="filterGoogleDaysRunning" onchange="filterGoogleLibraryAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
                       <option value="all">Days Running ▾</option>
                       <option value="1">1+ days</option>
                       <option value="7">7+ days</option>
@@ -1202,20 +1189,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     </select>
                   </div>
 
-                  <!-- Dropdown: Platform -->
-                  <div class="relative">
-                    <select id="filterGooglePlatform" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
-                      <option value="all">Platform ▾</option>
-                      <option value="Shopping">Shopping</option>
-                      <option value="Other">Other</option>
-                      <option value="Search">Search</option>
-                      <option value="YouTube">YouTube</option>
-                    </select>
-                  </div>
+                  <!-- Button: Platform (Green button with x matching TrendTrack) -->
+                  <button type="button" id="btnGooglePlatform" onclick="togglePlatformFilter()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-xs transition cursor-pointer">
+                    <span>Platform</span>
+                    <span class="text-emerald-200 text-xs font-normal">✕</span>
+                  </button>
+
+                  <!-- Button: Ad Reach (Blue button matching TrendTrack) -->
+                  <button type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span>Ad Reach ▾</span>
+                  </button>
 
                   <!-- Dropdown: Media Types -->
                   <div class="relative">
-                    <select id="filterGoogleMediaType" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                    <select id="filterGoogleMediaType" onchange="filterGoogleLibraryAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
                       <option value="all">Media Types ▾</option>
                       <option value="Image">Image</option>
                       <option value="Video">Video</option>
@@ -1225,7 +1213,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
                   <!-- Dropdown: Ad Countries -->
                   <div class="relative">
-                    <select id="filterGoogleCountry" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                    <select id="filterGoogleCountry" onchange="filterGoogleLibraryAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
                       <option value="all">Ad Countries ▾</option>
                       <option value="CA">🇨🇦 Canada</option>
                       <option value="AU">🇦🇺 Australia</option>
@@ -1235,15 +1223,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     </select>
                   </div>
                 </div>
+              </div>
 
-                <!-- Right: EU / UK Ad Reach Pill (Matching media_1790732770060.png) -->
-                <div class="flex items-center gap-2 text-xs">
-                  <span class="font-bold text-slate-500">EU / UK</span>
-                  <button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-xs transition cursor-pointer">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                    <span>Ad Reach ▾</span>
-                  </button>
+              <!-- Active Filter Tag Row (Matching media_1790738192038.png) -->
+              <div id="googleActiveFiltersRow" class="flex items-center justify-between pt-2 pb-1 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold text-[11px] shadow-2xs">
+                    <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    <span>Search, - Youtube</span>
+                    <button onclick="clearGooglePlatformTag()" class="hover:text-emerald-950 font-bold ml-0.5">✕</button>
+                  </span>
                 </div>
+                <button onclick="clearAllGoogleFilters()" class="text-xs font-medium text-slate-500 hover:text-slate-900 cursor-pointer">
+                  Clear
+                </button>
               </div>
 
               <!-- Row 2: Sort By, Ads Count & Search Controls -->
@@ -5979,8 +5972,24 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const headline = card.headline || `${brandName} - Official Collection`;
 
         let centerMediaHtml = '';
-        if (plat === 'Shopping') {
-          // Google Shopping Tall Card matching Card 2 in media_1790732770060.png
+        if (card.image_type === 'google_error') {
+          // Google 500 Error card matching Card 8 in media_1790738192038.png
+          centerMediaHtml = `
+            <div class="h-72 w-full rounded-xl p-5 bg-white border border-slate-200 flex flex-col justify-center text-left mb-3">
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-2xl font-black text-[#4285F4]">G</span>
+                <span class="text-2xl font-black text-[#EA4335]">o</span>
+                <span class="text-2xl font-black text-[#FBBC05]">o</span>
+                <span class="text-2xl font-black text-[#4285F4]">g</span>
+                <span class="text-2xl font-black text-[#34A853]">l</span>
+                <span class="text-2xl font-black text-[#EA4335]">e</span>
+              </div>
+              <div class="text-xs font-bold text-slate-800 mb-1"><b>500.</b> <span class="font-normal text-slate-600">That's an error.</span></div>
+              <div class="text-[11px] text-slate-500 leading-relaxed">There was an error. Please try again later. That's all we know.</div>
+            </div>
+          `;
+        } else if (plat === 'Shopping') {
+          // Google Shopping Tall Card
           centerMediaHtml = `
             <div class="rounded-xl overflow-hidden bg-slate-50/80 border border-slate-100 flex flex-col p-2 mb-3">
               <div class="h-64 w-full flex items-center justify-center overflow-hidden rounded-lg bg-white mb-2">
@@ -5989,7 +5998,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="px-1 text-left">
                 <div class="text-sm font-bold text-blue-600 leading-snug line-clamp-2">${headline}</div>
                 <div class="text-xs font-black text-slate-900 mt-1">[Price]</div>
-                <div class="text-[11px] font-semibold text-slate-500 mt-0.5">The Oodie CA</div>
+                <div class="text-[11px] font-semibold text-slate-500 mt-0.5">${brandName}</div>
                 <div class="text-[11px] font-semibold text-blue-600 mt-0.5 flex items-center gap-1">
                   <span>★ 4.8</span>
                   <span class="text-slate-400">[Reviews By Google]</span>
@@ -6013,21 +6022,65 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           `;
         } else {
-          // Text Search Ad
+          // 1:1 Authentic Google Search Ad Card matching media_1790738192038.png
+          const dispUrl = card.display_url || card.domain || `${brandName.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
           centerMediaHtml = `
-            <div class="h-72 w-full rounded-xl p-4 bg-slate-50/80 border border-slate-200 flex flex-col justify-between mb-3 text-left">
-              <div>
-                <div class="flex items-center gap-1.5 text-[10px] text-slate-500 font-medium mb-1">
-                  <span class="font-bold text-slate-900">Sponsored</span>
-                  <span>•</span>
-                  <span class="truncate">${domain}</span>
+            <div class="h-72 w-full rounded-xl p-4 bg-white border border-slate-200 flex flex-col justify-between mb-3 text-left shadow-2xs overflow-hidden">
+              <div class="overflow-y-auto custom-scroll pr-1 flex-1">
+                <!-- Favicon + Domain -->
+                <div class="flex items-center gap-2 mb-1.5">
+                  <div class="w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[9px] font-bold shrink-0">
+                    ${dispUrl.charAt(0).toUpperCase()}
+                  </div>
+                  <div class="text-[11px] text-slate-500 font-medium truncate">
+                    ${dispUrl}
+                  </div>
                 </div>
-                <div class="text-sm font-bold text-blue-700 leading-snug line-clamp-2 hover:underline">${headline}</div>
-                <div class="text-xs text-slate-600 mt-2 line-clamp-4 leading-relaxed">${card.snippet || 'Discover bestsellers, exclusive discounts, and express worldwide delivery.'}</div>
-              </div>
-              <div class="pt-2 border-t border-slate-200 text-xs font-semibold text-blue-600 flex items-center justify-between">
-                <span>Shop Online</span>
-                <span>Best Sellers</span>
+
+                <!-- Blue Headline Link -->
+                <a href="#" class="text-[13px] font-bold text-blue-700 leading-snug line-clamp-2 hover:underline block mb-1">
+                  ${headline}
+                </a>
+
+                <!-- Snippet Description -->
+                <div class="text-[11px] text-slate-600 leading-relaxed line-clamp-3 mb-2">
+                  ${card.snippet || 'Explore collection and discover comfort designed for everyday life.'}
+                </div>
+
+                <!-- Ratings & Reviews (Card 2, 5, 7 in TrendTrack) -->
+                ${card.rating ? `
+                  <div class="flex items-center gap-1.5 text-[10px] text-slate-500 mb-2 font-medium flex-wrap">
+                    <span class="text-amber-500">★★★★☆</span>
+                    <span>${card.rating.replace('Rating for theoodie.com', '').trim()}</span>
+                    ${card.return_policy ? `<span class="text-slate-400">· ${card.return_policy}</span>` : ''}
+                  </div>
+                ` : ''}
+
+                <!-- Sitelinks Pills (Card 1, 2 in TrendTrack) -->
+                ${card.sitelinks_type === 'pills' && card.sitelinks ? `
+                  <div class="flex items-center gap-1.5 flex-wrap mt-2 pt-1 border-t border-slate-100">
+                    ${card.sitelinks.map(sl => `
+                      <span class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-blue-700 font-semibold text-[10px] border border-slate-200/80 cursor-pointer shadow-2xs">
+                        ${sl}
+                      </span>
+                    `).join('')}
+                  </div>
+                ` : ''}
+
+                <!-- Sitelinks Rows with right arrow (Card 4 in TrendTrack) -->
+                ${card.sitelinks_type === 'rows' && card.sitelink_rows ? `
+                  <div class="space-y-2 mt-2 border-t border-slate-100 pt-2">
+                    ${card.sitelink_rows.map(row => `
+                      <div class="text-[11px] text-slate-600">
+                        <div class="text-blue-700 font-bold hover:underline cursor-pointer flex items-center justify-between">
+                          <span>${row.title}</span>
+                          <span class="text-slate-400">›</span>
+                        </div>
+                        <div class="text-[10px] text-slate-500 line-clamp-1 mt-0.5">${row.desc}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                ` : ''}
               </div>
             </div>
           `;
