@@ -9226,15 +9226,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const metaCount = data.channels?.meta?.active ?? data.total_active_ads ?? (data.ads ? data.ads.length : 0);
       const tiktokCount = data.channels?.tiktok?.active ?? (data.tiktok?.totalTikToks != null ? data.tiktok.totalTikToks : 0);
       const googleCount = data.channels?.google?.active ?? '-';
+      const googleTotal = data.channels?.google?.total ?? '-';
+      const emailCount = data.channels?.emails?.active ?? 0;
       
       document.getElementById('metaChannelCount').textContent = metaCount;
       document.getElementById('tiktokChannelCount').textContent = tiktokCount;
       document.getElementById('googleChannelCount').textContent = googleCount;
 
       const subMeta = document.getElementById('subSidebarMetaCount');
-      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${(data.total_all_time || metaCount).toLocaleString()}`;
+      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${(data.channels?.meta?.total || data.total_all_time || metaCount).toLocaleString()}`;
       const subTt = document.getElementById('subSidebarTiktokCount');
-      if (subTt) subTt.textContent = `${tiktokCount} / ${tiktokCount}`;
+      if (subTt) subTt.textContent = `${tiktokCount} / ${(data.channels?.tiktok?.total || tiktokCount)}`;
+      const subGg = document.getElementById('subSidebarGoogleCount');
+      if (subGg) subGg.textContent = typeof googleCount === 'number' ? `${googleCount.toLocaleString()} / ${(typeof googleTotal === 'number' ? googleTotal.toLocaleString() : googleTotal)}` : `${googleCount}`;
+      const subEmail = document.getElementById('subSidebarEmailCount');
+      if (subEmail) subEmail.textContent = emailCount > 0 ? emailCount.toLocaleString() : '-';
 
       const advMeta = document.getElementById('advCardMetaCount');
       if (advMeta) advMeta.textContent = metaCount;
@@ -10939,7 +10945,10 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 "tidradio": "tidradio.json",
                 "tidradio.com": "tidradio.json",
                 "ridge": "ridge.json",
-                "ridge.com": "ridge.json"
+                "ridge.com": "ridge.json",
+                "drsquatch": "drsquatch.json",
+                "drsquatch.com": "drsquatch.json",
+                "dr squatch": "drsquatch.json"
             }
 
             cache_file = None
