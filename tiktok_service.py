@@ -569,7 +569,21 @@ class TikTokIntelligenceEngine:
         if "oodie" in slug:
             data = THE_OODIE_TIKTOK_DATA
         else:
-            data = cls._generate_synthetic_brand_tiktok(brand_name)
+            # Honest zero-data state: do not hallucinate fake videos or fake clothes/fashion items
+            data = {
+                "brand": brand_name.strip().title(),
+                "total_tiktoks": 0,
+                "videos": [],
+                "ads_ratio_pct": 0,
+                "organics_ratio_pct": 0,
+                "has_data": False,
+                "avatar_url": f"https://ui-avatars.com/api/?name={urllib.parse.quote(brand_name)}&background=0284c7&color=fff",
+                "insights": {
+                    "categories": [],
+                    "growth": [],
+                    "format_mix": {"video_pct": 0, "carousels_pct": 0}
+                }
+            }
 
         # Cache file
         try:

@@ -10,7 +10,7 @@
       "delta": -21
     },
     "tiktok": {
-      "active": 45,
+      "active": 0,
       "total": 1
     },
     "google": {
@@ -19,312 +19,16 @@
     }
   },
   "tiktok": {
-    "totalTikToks": 45,
-    "views": "4.2M",
-    "viewsExact": 4200000,
-    "likes": "270K",
-    "likesExact": 270000,
-    "peakMonth": "Jul '26: 0.4M views (+0% Summer Scale Spike)",
+    "totalTikToks": 0,
+    "views": "0",
+    "viewsExact": 0,
+    "likes": "0",
+    "likesExact": 0,
+    "peakMonth": "Chưa có dữ liệu",
     "timeframe": "24M (2 Years)",
-    "topHashtags": [
-      "#guyler (1.9M)",
-      "#guylerreview (0.9M)",
-      "#guyleramazon (0.6M)",
-      "#guylerproduct (0.4M)",
-      "#guylerofficial (0.3M)"
-    ],
-    "history": [
-      {
-        "date": "Oct '24",
-        "month": "Oct '24",
-        "views": 0.09,
-        "growth": "+0%"
-      },
-      {
-        "date": "Nov '24",
-        "month": "Nov '24",
-        "views": 0.11,
-        "growth": "+22%"
-      },
-      {
-        "date": "Dec '24",
-        "month": "Dec '24",
-        "views": 0.13,
-        "growth": "+18%"
-      },
-      {
-        "date": "Jan '25",
-        "month": "Jan '25",
-        "views": 0.13,
-        "growth": "+0%"
-      },
-      {
-        "date": "Feb '25",
-        "month": "Feb '25",
-        "views": 0.13,
-        "growth": "+0%"
-      },
-      {
-        "date": "Mar '25",
-        "month": "Mar '25",
-        "views": 0.16,
-        "growth": "+23%"
-      },
-      {
-        "date": "Apr '25",
-        "month": "Apr '25",
-        "views": 0.19,
-        "growth": "+19%"
-      },
-      {
-        "date": "May '25",
-        "month": "May '25",
-        "views": 0.22,
-        "growth": "+16%"
-      },
-      {
-        "date": "Jun '25",
-        "month": "Jun '25",
-        "views": 0.27,
-        "growth": "+23%"
-      },
-      {
-        "date": "Jul '25",
-        "month": "Jul '25",
-        "views": 0.32,
-        "growth": "+19%"
-      },
-      {
-        "date": "Aug '25",
-        "month": "Aug '25",
-        "views": 0.34,
-        "growth": "+6%"
-      },
-      {
-        "date": "Sep '25",
-        "month": "Sep '25",
-        "views": 0.21,
-        "growth": "-38%"
-      },
-      {
-        "date": "Oct '25",
-        "month": "Oct '25",
-        "views": 0.17,
-        "growth": "-19%"
-      },
-      {
-        "date": "Nov '25",
-        "month": "Nov '25",
-        "views": 0.19,
-        "growth": "+12%"
-      },
-      {
-        "date": "Dec '25",
-        "month": "Dec '25",
-        "views": 0.22,
-        "growth": "+16%"
-      },
-      {
-        "date": "Jan '26",
-        "month": "Jan '26",
-        "views": 0.2,
-        "growth": "-9%"
-      },
-      {
-        "date": "Feb '26",
-        "month": "Feb '26",
-        "views": 0.21,
-        "growth": "+5%"
-      },
-      {
-        "date": "Mar '26",
-        "month": "Mar '26",
-        "views": 0.23,
-        "growth": "+10%"
-      },
-      {
-        "date": "Apr '26",
-        "month": "Apr '26",
-        "views": 0.27,
-        "growth": "+17%"
-      },
-      {
-        "date": "May '26",
-        "month": "May '26",
-        "views": 0.32,
-        "growth": "+19%"
-      },
-      {
-        "date": "Jun '26",
-        "month": "Jun '26",
-        "views": 0.36,
-        "growth": "+12%"
-      },
-      {
-        "date": "Jul '26",
-        "month": "Jul '26",
-        "views": 0.4,
-        "growth": "+11%"
-      },
-      {
-        "date": "Aug '26",
-        "month": "Aug '26",
-        "views": 0.29,
-        "growth": "-28%"
-      },
-      {
-        "date": "Sep '26",
-        "month": "Sep '26",
-        "views": 0.26,
-        "growth": "-10%"
-      }
-    ],
-    "history24m": [
-      {
-        "date": "Oct '24",
-        "month": "Oct '24",
-        "views": 0.09,
-        "growth": "+0%"
-      },
-      {
-        "date": "Nov '24",
-        "month": "Nov '24",
-        "views": 0.11,
-        "growth": "+22%"
-      },
-      {
-        "date": "Dec '24",
-        "month": "Dec '24",
-        "views": 0.13,
-        "growth": "+18%"
-      },
-      {
-        "date": "Jan '25",
-        "month": "Jan '25",
-        "views": 0.13,
-        "growth": "+0%"
-      },
-      {
-        "date": "Feb '25",
-        "month": "Feb '25",
-        "views": 0.13,
-        "growth": "+0%"
-      },
-      {
-        "date": "Mar '25",
-        "month": "Mar '25",
-        "views": 0.16,
-        "growth": "+23%"
-      },
-      {
-        "date": "Apr '25",
-        "month": "Apr '25",
-        "views": 0.19,
-        "growth": "+19%"
-      },
-      {
-        "date": "May '25",
-        "month": "May '25",
-        "views": 0.22,
-        "growth": "+16%"
-      },
-      {
-        "date": "Jun '25",
-        "month": "Jun '25",
-        "views": 0.27,
-        "growth": "+23%"
-      },
-      {
-        "date": "Jul '25",
-        "month": "Jul '25",
-        "views": 0.32,
-        "growth": "+19%"
-      },
-      {
-        "date": "Aug '25",
-        "month": "Aug '25",
-        "views": 0.34,
-        "growth": "+6%"
-      },
-      {
-        "date": "Sep '25",
-        "month": "Sep '25",
-        "views": 0.21,
-        "growth": "-38%"
-      },
-      {
-        "date": "Oct '25",
-        "month": "Oct '25",
-        "views": 0.17,
-        "growth": "-19%"
-      },
-      {
-        "date": "Nov '25",
-        "month": "Nov '25",
-        "views": 0.19,
-        "growth": "+12%"
-      },
-      {
-        "date": "Dec '25",
-        "month": "Dec '25",
-        "views": 0.22,
-        "growth": "+16%"
-      },
-      {
-        "date": "Jan '26",
-        "month": "Jan '26",
-        "views": 0.2,
-        "growth": "-9%"
-      },
-      {
-        "date": "Feb '26",
-        "month": "Feb '26",
-        "views": 0.21,
-        "growth": "+5%"
-      },
-      {
-        "date": "Mar '26",
-        "month": "Mar '26",
-        "views": 0.23,
-        "growth": "+10%"
-      },
-      {
-        "date": "Apr '26",
-        "month": "Apr '26",
-        "views": 0.27,
-        "growth": "+17%"
-      },
-      {
-        "date": "May '26",
-        "month": "May '26",
-        "views": 0.32,
-        "growth": "+19%"
-      },
-      {
-        "date": "Jun '26",
-        "month": "Jun '26",
-        "views": 0.36,
-        "growth": "+12%"
-      },
-      {
-        "date": "Jul '26",
-        "month": "Jul '26",
-        "views": 0.4,
-        "growth": "+11%"
-      },
-      {
-        "date": "Aug '26",
-        "month": "Aug '26",
-        "views": 0.29,
-        "growth": "-28%"
-      },
-      {
-        "date": "Sep '26",
-        "month": "Sep '26",
-        "views": 0.26,
-        "growth": "-10%"
-      }
-    ]
+    "topHashtags": [],
+    "history": [],
+    "history24m": []
   },
   "traffic_sales": {
     "visitors": "45.0K",
@@ -1406,11 +1110,11 @@
       "hook": "A kitchen should feel like the heart of a home. Every detail",
       "mediaType": "video",
       "type": "video",
-      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQO1puwWQGBWcPxdnbdWJgGbh789gyJ98KsD3BITTbtHnSgZrgIYhwCliij0MS41xLZxsEZhG2XAUGC8QLE5hEnL.mp4?_nc_cat=108&_nc_oc=Adq-oUTqMxwYSAWYTG4Hc3FlNFXsf2VcYe0BwOFC-Z-Jnj_JXPiKy9U5hPsxLGo2qcg&_nc_sid=b66105&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=u3_s-rB692wQ7kNvwH1d_z0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLmRhc2hfYmFzZWxpbmVfM192MSIsInhwdl9hc3NldF9pZCI6MTgzMjgyMjUyNDYyMjI4MTgsImFzc2V0X2FnZV9kYXlzIjoyMDAsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjoxMSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=24cd362eba11786d&_nc_vs=HBksFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNTYyOTAwMjY0NzkyOTUyXzQ1NTU4MzIxMzE0NDE1Njk5NjYubXA0FQACyAESABUCGFFpZ194cHZfcGxhY2VtZW50X3Blcm1hbmVudF92Mi8wQzQ4RjU5NkIzQTUzRjg4QUFEOTQyMzhGQkYwMzQ5MV9hdWRpb19kYXNoaW5pdC5tcDQVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmxOfQso_bjkEVAigCQzMsF0AmRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzNfdjERAHUAZazBAQA&_nc_gid=MUm2jLmO413vMq9onXx-VA&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQONNrTGLnnRz9fYYvUar12eLKxzSFza57m8bVPU4lmWyg&oe=6ABE9E5A",
-      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQO1puwWQGBWcPxdnbdWJgGbh789gyJ98KsD3BITTbtHnSgZrgIYhwCliij0MS41xLZxsEZhG2XAUGC8QLE5hEnL.mp4?_nc_cat=108&_nc_oc=Adq-oUTqMxwYSAWYTG4Hc3FlNFXsf2VcYe0BwOFC-Z-Jnj_JXPiKy9U5hPsxLGo2qcg&_nc_sid=b66105&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=u3_s-rB692wQ7kNvwH1d_z0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLmRhc2hfYmFzZWxpbmVfM192MSIsInhwdl9hc3NldF9pZCI6MTgzMjgyMjUyNDYyMjI4MTgsImFzc2V0X2FnZV9kYXlzIjoyMDAsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjoxMSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=24cd362eba11786d&_nc_vs=HBksFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNTYyOTAwMjY0NzkyOTUyXzQ1NTU4MzIxMzE0NDE1Njk5NjYubXA0FQACyAESABUCGFFpZ194cHZfcGxhY2VtZW50X3Blcm1hbmVudF92Mi8wQzQ4RjU5NkIzQTUzRjg4QUFEOTQyMzhGQkYwMzQ5MV9hdWRpb19kYXNoaW5pdC5tcDQVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmxOfQso_bjkEVAigCQzMsF0AmRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzNfdjERAHUAZazBAQA&_nc_gid=MUm2jLmO413vMq9onXx-VA&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQONNrTGLnnRz9fYYvUar12eLKxzSFza57m8bVPU4lmWyg&oe=6ABE9E5A",
-      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=MUm2jLmO413vMq9onXx-VA&_nc_ss=78289&oh=00_AQMwhe_1t7TxmM7BpLr4hrqE_Hn5hjeN0ljjc45XUkdFiw&oe=6AC2AB95",
-      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=MUm2jLmO413vMq9onXx-VA&_nc_ss=78289&oh=00_AQMwhe_1t7TxmM7BpLr4hrqE_Hn5hjeN0ljjc45XUkdFiw&oe=6AC2AB95",
-      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=MUm2jLmO413vMq9onXx-VA&_nc_ss=78289&oh=00_AQMwhe_1t7TxmM7BpLr4hrqE_Hn5hjeN0ljjc45XUkdFiw&oe=6AC2AB95",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQO1puwWQGBWcPxdnbdWJgGbh789gyJ98KsD3BITTbtHnSgZrgIYhwCliij0MS41xLZxsEZhG2XAUGC8QLE5hEnL.mp4?_nc_cat=108&_nc_oc=Adq-oUTqMxwYSAWYTG4Hc3FlNFXsf2VcYe0BwOFC-Z-Jnj_JXPiKy9U5hPsxLGo2qcg&_nc_sid=b66105&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=u3_s-rB692wQ7kNvwH1d_z0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLmRhc2hfYmFzZWxpbmVfM192MSIsInhwdl9hc3NldF9pZCI6MTgzMjgyMjUyNDYyMjI4MTgsImFzc2V0X2FnZV9kYXlzIjoyMDAsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjoxMSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=24cd362eba11786d&_nc_vs=HBksFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNTYyOTAwMjY0NzkyOTUyXzQ1NTU4MzIxMzE0NDE1Njk5NjYubXA0FQACyAESABUCGFFpZ194cHZfcGxhY2VtZW50X3Blcm1hbmVudF92Mi8wQzQ4RjU5NkIzQTUzRjg4QUFEOTQyMzhGQkYwMzQ5MV9hdWRpb19kYXNoaW5pdC5tcDQVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmxOfQso_bjkEVAigCQzMsF0AmRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzNfdjERAHUAZazBAQA&_nc_gid=nwJy6eJBx54gJIt8CO1LzQ&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOqh8TPeAPQJF25Y-cdY5wrDftzK6jjCRKF3aW2Qo11dQ&oe=6ABE9E5A",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m86/AQO1puwWQGBWcPxdnbdWJgGbh789gyJ98KsD3BITTbtHnSgZrgIYhwCliij0MS41xLZxsEZhG2XAUGC8QLE5hEnL.mp4?_nc_cat=108&_nc_oc=Adq-oUTqMxwYSAWYTG4Hc3FlNFXsf2VcYe0BwOFC-Z-Jnj_JXPiKy9U5hPsxLGo2qcg&_nc_sid=b66105&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=u3_s-rB692wQ7kNvwH1d_z0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLmRhc2hfYmFzZWxpbmVfM192MSIsInhwdl9hc3NldF9pZCI6MTgzMjgyMjUyNDYyMjI4MTgsImFzc2V0X2FnZV9kYXlzIjoyMDAsInZpX3VzZWNhc2VfaWQiOjEyMzc0LCJkdXJhdGlvbl9zIjoxMSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=24cd362eba11786d&_nc_vs=HBksFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNTYyOTAwMjY0NzkyOTUyXzQ1NTU4MzIxMzE0NDE1Njk5NjYubXA0FQACyAESABUCGFFpZ194cHZfcGxhY2VtZW50X3Blcm1hbmVudF92Mi8wQzQ4RjU5NkIzQTUzRjg4QUFEOTQyMzhGQkYwMzQ5MV9hdWRpb19kYXNoaW5pdC5tcDQVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmxOfQso_bjkEVAigCQzMsF0AmRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzNfdjERAHUAZazBAQA&_nc_gid=nwJy6eJBx54gJIt8CO1LzQ&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOqh8TPeAPQJF25Y-cdY5wrDftzK6jjCRKF3aW2Qo11dQ&oe=6ABE9E5A",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=nwJy6eJBx54gJIt8CO1LzQ&_nc_ss=78289&oh=00_AQNvJHDsKvSJvgUkfMwDNCUvltRjzZT5rnDAfpg4FoaR4A&oe=6AC2AB95",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=nwJy6eJBx54gJIt8CO1LzQ&_nc_ss=78289&oh=00_AQNvJHDsKvSJvgUkfMwDNCUvltRjzZT5rnDAfpg4FoaR4A&oe=6AC2AB95",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/670217813_1475688390867762_9135036166674555534_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=HYq2-e_04bwQ7kNvwGDjnSL&_nc_oc=Ado2A818mVdE7lVXEBzUv-bVBM909pTCmeK8gMyUdAQaQ-AfGqZOzT4K3jSTWcj2AQA&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=nwJy6eJBx54gJIt8CO1LzQ&_nc_ss=78289&oh=00_AQNvJHDsKvSJvgUkfMwDNCUvltRjzZT5rnDAfpg4FoaR4A&oe=6AC2AB95",
       "isActive": true,
       "daysRunning": 43,
       "days_active": 43,

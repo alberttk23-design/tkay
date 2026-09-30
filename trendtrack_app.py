@@ -558,15 +558,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <button type="button" id="pillBtnMeta" onclick="switchRightCard('meta')" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80 cursor-pointer transition">
                     <svg class="w-3.5 h-3.5 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                    <span id="advCardMetaCount">415</span>
+                    <span id="advCardMetaCount">—</span>
                   </button>
                   <button type="button" id="pillBtnTiktok" onclick="switchRightCard('tiktok')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full">
                     <svg class="w-3 h-3 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
-                    <span id="advCardTiktokCount">703</span>
+                    <span id="advCardTiktokCount">—</span>
                   </button>
                   <button type="button" id="pillBtnGoogle" onclick="switchRightCard('google')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer rounded-full">
                     <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                    <span id="advCardGoogleCount">373</span>
+                    <span id="advCardGoogleCount">—</span>
                   </button>
                 </div>
               </div>
@@ -950,15 +950,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="flex items-center p-0.5 rounded-full bg-slate-100 border border-slate-200 gap-1 text-xs">
                 <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white text-slate-900 font-extrabold text-[11px] shadow-xs border border-slate-200/80">
                   <svg class="w-3.5 h-3.5 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                  <span id="feedMetaCount">415</span>
+                  <span id="feedMetaCount">—</span>
                 </div>
                 <button type="button" onclick="switchShopSubTab('tiktok')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer">
                   <svg class="w-3 h-3 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 00-.88-.06A6.34 6.34 0 003.15 15.7a6.34 6.34 0 0010.82 4.45V12.1a8.27 8.27 0 005.62 2.21v-3.43a4.85 4.85 0 01-3.77-1.4 4.8 4.8 0 01-1.23-2.79z"/></svg>
-                  <span id="feedTiktokCount">703</span>
+                  <span id="feedTiktokCount">—</span>
                 </button>
                 <button type="button" onclick="switchShopSubTab('google')" class="px-2 py-0.5 text-slate-500 hover:text-slate-800 transition flex items-center gap-1 font-semibold cursor-pointer">
                   <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                  <span>1.8K</span>
+                  <span id="feedGoogleCount">—</span>
                 </button>
               </div>
 
@@ -2170,7 +2170,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <h1 id="tiktokBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
                   <span id="tiktokTotalBadge" class="text-xs font-bold text-slate-500">—</span>
                   
-                  <!-- Segmented Filter Pill: All, Ads 31%, Organics 69% -->
+                  <!-- Segmented Filter Pill: All, Ads, Organics -->
                   <div class="flex items-center bg-slate-100/90 p-1 rounded-full text-xs font-bold border border-slate-200/80 ml-1">
                     <button id="ttFilter_all" onclick="filterTikTokType('all')" class="px-2.5 py-0.5 rounded-full bg-white text-slate-900 shadow-xs flex items-center gap-1.5 transition cursor-pointer">
                       <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
@@ -2178,18 +2178,18 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     </button>
                     <button id="ttFilter_ads" onclick="filterTikTokType('Ads')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
                       <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                      <span id="tiktokAdsPctBadge">Ads 31%</span>
+                      <span id="tiktokAdsPctBadge">Ads 0%</span>
                     </button>
                     <button id="ttFilter_organics" onclick="filterTikTokType('Organics')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
                       <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-                      <span id="tiktokOrganicsPctBadge">Organics 69%</span>
+                      <span id="tiktokOrganicsPctBadge">Organics 0%</span>
                     </button>
                   </div>
 
                   <!-- Mổ Xẻ Spark Ads Inspector Trigger -->
                   <button onclick="openSparkAdAnalysisModal()" class="px-2.5 py-1 rounded-full bg-pink-50 hover:bg-pink-100 text-pink-700 text-xs font-bold border border-pink-200/80 flex items-center gap-1.5 cursor-pointer ml-1 transition shadow-2xs">
                     <span class="text-rose-500 font-extrabold animate-pulse">⚡</span>
-                    <span>Mổ xẻ Spark Ads (31% vs 69%)</span>
+                    <span id="sparkAdBtnLabel">Mổ xẻ Spark Ads</span>
                   </button>
                 </div>
               </div>
@@ -2253,7 +2253,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                         <div class="flex items-center gap-1.5">
                           <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
                           <span class="text-xs font-semibold text-slate-500">Views</span>
-                          <span id="ttInsightsViewsVal" class="text-sm font-extrabold text-slate-900">233K</span>
+                          <span id="ttInsightsViewsVal" class="text-sm font-extrabold text-slate-900">—</span>
                         </div>
                         <div class="flex items-center gap-1.5">
                           <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
@@ -2263,8 +2263,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                         <div class="flex items-center gap-1.5">
                           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                           <span class="text-xs font-semibold text-slate-500">Active TikToks</span>
-                          <span id="ttInsightsActiveVal" class="text-sm font-extrabold text-slate-900">703</span>
-                          <span class="text-[11px] font-bold text-emerald-600">+0.9%</span>
+                          <span id="ttInsightsActiveVal" class="text-sm font-extrabold text-slate-900">—</span>
                         </div>
                       </div>
                     </div>
@@ -2302,7 +2301,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     <div class="relative w-28 h-28 shrink-0">
                       <canvas id="ttFormatMixChart"></canvas>
                       <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                        <span id="ttFormatMixCenterCount" class="text-base font-extrabold text-slate-900 leading-none">220</span>
+                        <span id="ttFormatMixCenterCount" class="text-base font-extrabold text-slate-900 leading-none">0</span>
                         <span class="text-[9px] font-bold text-slate-400 uppercase mt-0.5">TikToks</span>
                       </div>
                     </div>
@@ -2423,7 +2422,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
 
               <div class="flex items-center gap-3">
-                <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+                <span id="ttSubToolbarCount_library" class="text-xs font-bold text-slate-500">—</span>
                 <button class="p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-500 cursor-pointer">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 </button>
@@ -2486,7 +2485,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
 
             <div class="flex items-center justify-between text-xs">
-              <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+              <span id="ttSubToolbarCount_ranking" class="text-xs font-bold text-slate-500">—</span>
             </div>
 
             <!-- 4-Column Grid for TikTok Ranking Cards -->
@@ -2532,7 +2531,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
 
               <div class="flex items-center gap-2">
-                <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+                <span id="ttSubToolbarCount_contents" class="text-xs font-bold text-slate-500">—</span>
                 <button class="px-2.5 py-1 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 font-bold shadow-2xs cursor-pointer">
                   <span>📅 All</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
@@ -3961,24 +3960,44 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const adsPctBadge = document.getElementById('tiktokAdsPctBadge');
       const organicsPctBadge = document.getElementById('tiktokOrganicsPctBadge');
 
+      const totTt = (data.total_tiktoks != null) ? data.total_tiktoks : (data.videos ? data.videos.length : 0);
+      const adsPct = (data.ads_ratio_pct != null) ? data.ads_ratio_pct : 0;
+      const orgPct = (data.organics_ratio_pct != null) ? data.organics_ratio_pct : 0;
+
       if (bTitle) bTitle.textContent = bName;
-      if (bTotal) bTotal.textContent = (data.total_tiktoks || (data.videos ? data.videos.length : 0)) + ' TikToks';
-      if (adsPctBadge) adsPctBadge.textContent = 'Ads ' + (data.ads_ratio_pct || 31) + '%';
-      if (organicsPctBadge) organicsPctBadge.textContent = 'Organics ' + (data.organics_ratio_pct || 69) + '%';
+      if (bTotal) bTotal.textContent = totTt + ' TikToks';
+      if (adsPctBadge) adsPctBadge.textContent = 'Ads ' + adsPct + '%';
+      if (organicsPctBadge) organicsPctBadge.textContent = 'Organics ' + orgPct + '%';
       
       const selectAdsPct = document.getElementById('ttSelectAdsPct');
       const selectOrgPct = document.getElementById('ttSelectOrgPct');
-      if (selectAdsPct) selectAdsPct.textContent = (data.ads_ratio_pct || 31) + '%';
-      if (selectOrgPct) selectOrgPct.textContent = (data.organics_ratio_pct || 69) + '%';
+      if (selectAdsPct) selectAdsPct.textContent = adsPct + '%';
+      if (selectOrgPct) selectOrgPct.textContent = orgPct + '%';
 
       if (bAvatar) {
         bAvatar.src = data.avatar_url || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName) + '&background=0284c7&color=fff');
       }
 
       const subSidebarCount = document.getElementById('subSidebarTiktokCount');
-      if (subSidebarCount) subSidebarCount.textContent = (data.total_tiktoks || 703) + ' / ' + (data.total_tiktoks || 703);
+      if (subSidebarCount) subSidebarCount.textContent = totTt + ' / ' + totTt;
       const ttChannelCount = document.getElementById('tiktokChannelCount');
-      if (ttChannelCount) ttChannelCount.textContent = data.total_tiktoks || 703;
+      if (ttChannelCount) ttChannelCount.textContent = totTt;
+      const advTt = document.getElementById('advCardTiktokCount');
+      if (advTt) advTt.textContent = totTt;
+      const feedTt = document.getElementById('feedTiktokCount');
+      if (feedTt) feedTt.textContent = totTt;
+
+      const subToolbarLibrary = document.getElementById('ttSubToolbarCount_library');
+      if (subToolbarLibrary) subToolbarLibrary.textContent = totTt + ' TikToks';
+      const subToolbarRanking = document.getElementById('ttSubToolbarCount_ranking');
+      if (subToolbarRanking) subToolbarRanking.textContent = totTt + ' TikToks';
+      const subToolbarContents = document.getElementById('ttSubToolbarCount_contents');
+      if (subToolbarContents) subToolbarContents.textContent = totTt + ' TikToks';
+
+      const sparkBtnLabel = document.getElementById('sparkAdBtnLabel');
+      if (sparkBtnLabel) {
+        sparkBtnLabel.textContent = totTt > 0 ? `Mổ xẻ Spark Ads (${adsPct}% vs ${orgPct}%)` : 'Mổ xẻ Spark Ads (0%)';
+      }
 
       switchTikTokView(currentTikTokSubTab);
     }
@@ -4055,105 +4074,110 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const postsVal = document.getElementById('ttInsightsPostsVal');
       const activeVal = document.getElementById('ttInsightsActiveVal');
 
-      if (viewsVal) viewsVal.textContent = insights.views || '233K';
+      const activeCount = insights.active_tiktoks != null ? insights.active_tiktoks : (currentTikTokData ? (currentTikTokData.total_tiktoks || 0) : 0);
+      if (viewsVal) viewsVal.textContent = insights.views || '0';
       if (postsVal) postsVal.textContent = insights.posts || '0';
-      if (activeVal) activeVal.textContent = (insights.active_tiktoks || 703) + ' ';
+      if (activeVal) activeVal.textContent = activeCount + ' ';
 
       // Render Historic area chart
       const chartCanvas = document.getElementById('ttHistoricChart');
-      if (chartCanvas && typeof Chart !== 'undefined' && insights.history_chart) {
+      if (chartCanvas && typeof Chart !== 'undefined') {
         if (ttHistoricChartInstance) {
           ttHistoricChartInstance.destroy();
+          ttHistoricChartInstance = null;
         }
-        const ctx = chartCanvas.getContext('2d');
-        const gradient = ctx.createLinearGradient(0, 0, 0, 260);
-        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.25)');
-        gradient.addColorStop(1, 'rgba(37, 99, 235, 0.01)');
+        if (insights.history_chart && insights.history_chart.labels && insights.history_chart.labels.length > 0 && activeCount > 0) {
+          const ctx = chartCanvas.getContext('2d');
+          const gradient = ctx.createLinearGradient(0, 0, 0, 260);
+          gradient.addColorStop(0, 'rgba(37, 99, 235, 0.25)');
+          gradient.addColorStop(1, 'rgba(37, 99, 235, 0.01)');
 
-        ttHistoricChartInstance = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: insights.history_chart.labels || ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-            datasets: [
-              {
-                label: 'Views',
-                data: insights.history_chart.views || [0, 42000, 68000, 142000, 185000, 233000],
-                borderColor: '#2563eb',
-                borderWidth: 2.5,
-                backgroundColor: gradient,
-                fill: true,
-                tension: 0.35,
-                pointRadius: 3,
-                pointBackgroundColor: '#2563eb',
-                pointHoverRadius: 6
-              },
-              {
-                label: 'Active TikToks',
-                data: insights.history_chart.active_cumulative || [20, 80, 190, 410, 580, 703],
-                borderColor: 'rgba(148, 163, 184, 0.4)',
-                borderWidth: 1.5,
-                borderDash: [4, 4],
-                fill: false,
-                stepped: true,
-                pointRadius: 0
-              }
-            ]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                backgroundColor: '#0f172a',
-                titleFont: { size: 12, weight: 'bold' },
-                bodyFont: { size: 11 },
-                padding: 10,
-                cornerRadius: 8,
-                callbacks: {
-                  label: function(ctx) {
-                    return ctx.dataset.label + ': ' + (ctx.parsed.y >= 1000 ? (ctx.parsed.y/1000).toFixed(0) + 'K' : ctx.parsed.y);
+          ttHistoricChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: insights.history_chart.labels,
+              datasets: [
+                {
+                  label: 'Views',
+                  data: insights.history_chart.views || [],
+                  borderColor: '#2563eb',
+                  borderWidth: 2.5,
+                  backgroundColor: gradient,
+                  fill: true,
+                  tension: 0.35,
+                  pointRadius: 3,
+                  pointBackgroundColor: '#2563eb',
+                  pointHoverRadius: 6
+                },
+                {
+                  label: 'Active TikToks',
+                  data: insights.history_chart.active_cumulative || [],
+                  borderColor: 'rgba(148, 163, 184, 0.4)',
+                  borderWidth: 1.5,
+                  borderDash: [4, 4],
+                  fill: false,
+                  stepped: true,
+                  pointRadius: 0
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: '#0f172a',
+                  titleFont: { size: 12, weight: 'bold' },
+                  bodyFont: { size: 11 },
+                  padding: 10,
+                  cornerRadius: 8,
+                  callbacks: {
+                    label: function(ctx) {
+                      return ctx.dataset.label + ': ' + (ctx.parsed.y >= 1000 ? (ctx.parsed.y/1000).toFixed(0) + 'K' : ctx.parsed.y);
+                    }
                   }
                 }
-              }
-            },
-            scales: {
-              x: {
-                grid: { display: false },
-                ticks: { color: '#64748b', font: { size: 11, weight: '600' } }
               },
-              y: {
-                grid: { color: 'rgba(226, 232, 240, 0.6)' },
-                ticks: {
-                  color: '#64748b',
-                  font: { size: 10 },
-                  callback: function(v) {
-                    return v >= 1000 ? (v / 1000) + 'K' : v;
+              scales: {
+                x: {
+                  grid: { display: false },
+                  ticks: { color: '#64748b', font: { size: 11, weight: '600' } }
+                },
+                y: {
+                  grid: { color: 'rgba(226, 232, 240, 0.6)' },
+                  ticks: {
+                    color: '#64748b',
+                    font: { size: 10 },
+                    callback: function(v) {
+                      return v >= 1000 ? (v / 1000) + 'K' : v;
+                    }
                   }
                 }
               }
             }
-          }
-        });
+          });
+        }
       }
 
       // Render Format Mix Donut
       const donutCanvas = document.getElementById('ttFormatMixChart');
-      if (donutCanvas && typeof Chart !== 'undefined' && insights.format_mix) {
+      if (donutCanvas && typeof Chart !== 'undefined') {
         if (ttFormatMixChartInstance) {
           ttFormatMixChartInstance.destroy();
+          ttFormatMixChartInstance = null;
         }
-        const ctxDonut = donutCanvas.getContext('2d');
-        const mix = insights.format_mix;
+        const mix = insights.format_mix || { total: 0, video_pct: 0, carousels_pct: 0 };
         const centerCount = document.getElementById('ttFormatMixCenterCount');
-        if (centerCount) centerCount.textContent = mix.total || 220;
+        if (centerCount) centerCount.textContent = mix.total || 0;
 
+        const ctxDonut = donutCanvas.getContext('2d');
         ttFormatMixChartInstance = new Chart(ctxDonut, {
           type: 'doughnut',
           data: {
             labels: ['Video', 'Carousels'],
             datasets: [{
-              data: [mix.video_pct || 100, mix.carousels_pct || 0],
+              data: (mix.total > 0) ? [mix.video_pct || 0, mix.carousels_pct || 0] : [0, 0],
               backgroundColor: ['#2563eb', '#ec4899'],
               borderWidth: 2,
               borderColor: '#ffffff',
@@ -4166,7 +4190,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             cutout: '72%',
             plugins: {
               legend: { display: false },
-              tooltip: { enabled: true }
+              tooltip: { enabled: (mix.total > 0) }
             }
           }
         });
@@ -4174,19 +4198,23 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Render Category Breakdown list
       const catContainer = document.getElementById('ttCategoryList');
-      if (catContainer && insights.categories) {
-        catContainer.innerHTML = insights.categories.map((c, idx) => `
-          <div class="relative overflow-hidden rounded-lg p-1.5 flex items-center justify-between text-xs transition ${idx === 0 ? 'bg-slate-100/90 font-bold' : 'hover:bg-slate-50'}">
-            <div class="absolute inset-0 bg-slate-200/40 rounded-lg pointer-events-none" style="width: ${c.pct}%;"></div>
-            <div class="relative z-10 flex items-center gap-2">
-              <span class="text-sm">${c.icon}</span>
-              <span class="text-slate-800 font-bold">${c.name}</span>
+      if (catContainer) {
+        if (insights.categories && insights.categories.length > 0) {
+          catContainer.innerHTML = insights.categories.map((c, idx) => `
+            <div class="relative overflow-hidden rounded-lg p-1.5 flex items-center justify-between text-xs transition ${idx === 0 ? 'bg-slate-100/90 font-bold' : 'hover:bg-slate-50'}">
+              <div class="absolute inset-0 bg-slate-200/40 rounded-lg pointer-events-none" style="width: ${c.pct}%;"></div>
+              <div class="relative z-10 flex items-center gap-2">
+                <span class="text-sm">${c.icon}</span>
+                <span class="text-slate-800 font-bold">${c.name}</span>
+              </div>
+              <div class="relative z-10 text-slate-500 font-extrabold text-[11px]">
+                <span>${c.count}</span> <span class="text-slate-400 font-normal">·</span> <span>${c.pct}%</span>
+              </div>
             </div>
-            <div class="relative z-10 text-slate-500 font-extrabold text-[11px]">
-              <span>${c.count}</span> <span class="text-slate-400 font-normal">·</span> <span>${c.pct}%</span>
-            </div>
-          </div>
-        `).join('');
+          `).join('');
+        } else {
+          catContainer.innerHTML = '<div class="py-6 text-center text-xs text-slate-400">Chưa có phân loại danh mục TikTok cho thương hiệu này</div>';
+        }
       }
 
       renderTTInsightsCarousel();
@@ -4214,7 +4242,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderTTInsightsCarousel() {
       const carousel = document.getElementById('ttInsightsCarousel');
-      if (!carousel || !currentTikTokData || !currentTikTokData.videos) return;
+      if (!carousel) return;
+      if (!currentTikTokData || !currentTikTokData.videos || currentTikTokData.videos.length === 0) {
+        carousel.innerHTML = '<div class="w-full py-8 text-center text-xs text-slate-400">Chưa có video TikTok để hiển thị</div>';
+        return;
+      }
       let vids = [...currentTikTokData.videos];
 
       if (currentTTInsightsCarouselTab === 'views') {
@@ -4237,11 +4269,33 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderTTLibraryCards() {
       const grid = document.getElementById('ttLibraryCardsGrid');
-      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      if (!grid) return;
+      const bName = (currentTikTokData && currentTikTokData.brand) || getActiveBrandName();
+      if (!currentTikTokData || !currentTikTokData.videos || currentTikTokData.videos.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Chưa tìm thấy video hoặc quảng cáo TikTok</div>
+            <div class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">Thương hiệu ${bName} hiện chưa có dữ liệu video hoặc chiến dịch quảng cáo được ghi nhận trên TikTok.</div>
+          </div>
+        `;
+        return;
+      }
       let vids = [...currentTikTokData.videos];
 
       if (currentTikTokFilterType !== 'all') {
         vids = vids.filter(v => v.type === currentTikTokFilterType);
+      }
+
+      if (vids.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400 text-xs">
+            Không có video TikTok nào thuộc bộ lọc "${currentTikTokFilterType}".
+          </div>
+        `;
+        return;
       }
 
       grid.innerHTML = vids.map(v => createTikTokCardHtml(v, true)).join('');
@@ -4265,7 +4319,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderTTRankingCards() {
       const grid = document.getElementById('ttRankingCardsGrid');
-      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      if (!grid) return;
+      const bName = (currentTikTokData && currentTikTokData.brand) || getActiveBrandName();
+      if (!currentTikTokData || !currentTikTokData.videos || currentTikTokData.videos.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Chưa có bảng xếp hạng TikTok</div>
+            <div class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">Thương hiệu ${bName} chưa có video nào để xếp hạng theo lượt xem, tương tác hoặc thời gian chạy.</div>
+          </div>
+        `;
+        return;
+      }
       let vids = [...currentTikTokData.videos];
 
       if (currentTikTokFilterType !== 'all') {
@@ -4302,7 +4369,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function renderTTContentsCards() {
       const grid = document.getElementById('ttContentsCardsGrid');
-      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      if (!grid) return;
+      const bName = (currentTikTokData && currentTikTokData.brand) || getActiveBrandName();
+      if (!currentTikTokData || !currentTikTokData.videos || currentTikTokData.videos.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Chưa có nội dung TikTok</div>
+            <div class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">Thương hiệu ${bName} chưa có nội dung dạng video hoặc carousel trên TikTok.</div>
+          </div>
+        `;
+        return;
+      }
       let vids = [...currentTikTokData.videos];
 
       if (currentTTContentsFormat !== 'all') {
@@ -4310,6 +4390,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
       if (currentTikTokFilterType !== 'all') {
         vids = vids.filter(v => v.type === currentTikTokFilterType);
+      }
+
+      if (vids.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400 text-xs">
+            Không tìm thấy video dạng ${currentTTContentsFormat}.
+          </div>
+        `;
+        return;
       }
 
       grid.innerHTML = vids.map(v => `
@@ -4325,7 +4414,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
           <div class="absolute bottom-3 left-3 right-3 text-white">
             ${v.is_spark_ad ? '<span class="px-2 py-0.5 rounded-sm bg-black/60 backdrop-blur-xs text-[10px] font-bold border border-white/20 mb-1 inline-block">Spark Ad</span>' : ''}
-            <div class="text-xs font-bold truncate">${v.handle || '@the_oodie'}</div>
+            <div class="text-xs font-bold truncate">${v.handle || ('@' + bName.toLowerCase().replace(/[^a-z0-9]/g, '_'))}</div>
             <div class="text-[10px] text-white/80 line-clamp-1 mt-0.5">${v.caption}</div>
           </div>
         </div>
@@ -4335,10 +4424,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     // Helper to generate full rich TikTok Card matching screenshots
     function createTikTokCardHtml(v, fullWidth = true) {
       const isAd = (v.type === 'Ads');
-      const bName = currentTikTokData ? currentTikTokData.brand : 'The Oodie';
+      const bName = currentTikTokData ? (currentTikTokData.brand || getActiveBrandName()) : getActiveBrandName();
       const bAvatar = (currentTikTokData && currentTikTokData.avatar_url) || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName));
-      const channelStats = (currentTikTokData && currentTikTokData.channel_stats_str) || '🎵 703 · 👤 341K · 👁 62M';
-      const flag = (currentTikTokData && currentTikTokData.country_flag) || '🇦🇺';
+      const channelStats = (currentTikTokData && currentTikTokData.channel_stats_str) || `🎵 ${currentTikTokData?.total_tiktoks || 0}`;
+      const flag = (currentTikTokData && currentTikTokData.country_flag) || '🌐';
 
       const widthClass = fullWidth ? 'w-full' : 'w-72 shrink-0';
 
@@ -4512,11 +4601,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const data = currentTikTokData;
       const bName = data ? (data.brand || getActiveBrandName()) : getActiveBrandName();
       const handle = data?.videos?.[0]?.handle || ('@' + bName.toLowerCase().replace(/[^a-z0-9]/g, '_'));
-      const total = data ? (data.total_tiktoks || (data.videos ? data.videos.length : 0)) : 0;
-      const adsPct = data ? (data.ads_ratio_pct || 31) : 31;
-      const orgPct = data ? (data.organics_ratio_pct || 69) : 69;
-      const sparkCount = data?.spark_analysis?.spark_ads_count || Math.round(total * (adsPct / 100));
-      const orgCount = data?.spark_analysis?.pure_organics_count || (total - sparkCount);
+      const total = data ? ((data.total_tiktoks != null) ? data.total_tiktoks : (data.videos ? data.videos.length : 0)) : 0;
+      const adsPct = data ? ((data.ads_ratio_pct != null) ? data.ads_ratio_pct : 0) : 0;
+      const orgPct = data ? ((data.organics_ratio_pct != null) ? data.organics_ratio_pct : 0) : 0;
+      const sparkCount = data?.spark_analysis?.spark_ads_count != null ? data.spark_analysis.spark_ads_count : Math.round(total * (adsPct / 100));
+      const orgCount = data?.spark_analysis?.pure_organics_count != null ? data.spark_analysis.pure_organics_count : Math.max(0, total - sparkCount);
 
       const tEl = document.getElementById('auditTotalVideos');
       const sEl = document.getElementById('auditSparkVideos');
@@ -4543,10 +4632,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (formulaChannel) formulaChannel.textContent = '|S_channel| = ' + total;
       if (formulaSpark) formulaSpark.textContent = '|S_spark_ads| = ' + sparkCount;
       if (mathAdsNum) mathAdsNum.textContent = sparkCount + ' / ' + total;
-      if (mathAdsPct) mathAdsPct.textContent = ((sparkCount / total) * 100).toFixed(2) + '%';
+      if (mathAdsPct) mathAdsPct.textContent = total > 0 ? ((sparkCount / total) * 100).toFixed(2) + '%' : '0.00%';
       if (mathAdsRound) mathAdsRound.textContent = adsPct + '%';
       if (mathOrgNum) mathOrgNum.textContent = orgCount + ' / ' + total;
-      if (mathOrgPct) mathOrgPct.textContent = ((orgCount / total) * 100).toFixed(2) + '%';
+      if (mathOrgPct) mathOrgPct.textContent = total > 0 ? ((orgCount / total) * 100).toFixed(2) + '%' : '0.00%';
       if (mathOrgRound) mathOrgRound.textContent = orgPct + '%';
 
       if (footerAdsPct) footerAdsPct.textContent = adsPct + '%';
@@ -6867,7 +6956,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (shopFollowers) shopFollowers.textContent = 'Đang kết nối Meta Ad Library...';
 
       // 4. Reset sub-sidebar & channel badges to skeleton
-      const countsToReset = ['metaChannelCount', 'tiktokChannelCount', 'googleChannelCount', 'subSidebarMetaCount', 'subSidebarGoogleCount', 'subSidebarTiktokCount', 'subSidebarContentsCount', 'subSidebarEmailCount'];
+      const countsToReset = [
+        'metaChannelCount', 'tiktokChannelCount', 'googleChannelCount',
+        'subSidebarMetaCount', 'subSidebarGoogleCount', 'subSidebarTiktokCount', 'subSidebarContentsCount', 'subSidebarEmailCount',
+        'advCardMetaCount', 'advCardTiktokCount', 'advCardGoogleCount',
+        'feedMetaCount', 'feedTiktokCount', 'feedGoogleCount',
+        'tiktokTotalBadge', 'tiktokAdsPctBadge', 'tiktokOrganicsPctBadge',
+        'ttSubToolbarCount_library', 'ttSubToolbarCount_ranking', 'ttSubToolbarCount_contents'
+      ];
       countsToReset.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.textContent = '...';
@@ -6994,7 +7090,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
       // Channel counts
       const metaCount = data.channels?.meta?.active ?? data.total_active_ads ?? (data.ads ? data.ads.length : 0);
-      const tiktokCount = data.channels?.tiktok?.active ?? (data.tiktok?.totalTikToks || '-');
+      const tiktokCount = data.channels?.tiktok?.active ?? (data.tiktok?.totalTikToks != null ? data.tiktok.totalTikToks : 0);
       const googleCount = data.channels?.google?.active ?? '-';
       
       document.getElementById('metaChannelCount').textContent = metaCount;
