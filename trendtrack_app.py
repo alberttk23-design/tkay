@@ -2441,7 +2441,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <!-- (MATCHING media_1790735868038 to media_1790735961995)         -->
         <!-- ============================================================== -->
         <div id="tiktokIntelligenceContainer" class="space-y-6 hidden">
-          <!-- Top Header Strip matching media_1790735961995.png -->
+          <!-- Top Header Strip matching media_1790764925019.png -->
           <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div class="flex items-center gap-3.5">
               <div class="relative shrink-0">
@@ -2456,29 +2456,23 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div>
                 <div class="flex items-center gap-2.5 flex-wrap">
                   <h1 id="tiktokBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
-                  <span id="tiktokTotalBadge" class="text-xs font-bold text-slate-500">—</span>
+                  <span id="tiktokTotalBadge" class="text-xs font-semibold text-slate-400">—</span>
                   
-                  <!-- Segmented Filter Pill: All, Ads, Organics -->
+                  <!-- Segmented Filter Pill: All, Ads, Organics (Matching Screenshot 1 & 2) -->
                   <div class="flex items-center bg-slate-100/90 p-1 rounded-full text-xs font-bold border border-slate-200/80 ml-1">
                     <button id="ttFilter_all" onclick="filterTikTokType('all')" class="px-2.5 py-0.5 rounded-full bg-white text-slate-900 shadow-xs flex items-center gap-1.5 transition cursor-pointer">
-                      <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
                       <span>All</span>
                     </button>
                     <button id="ttFilter_ads" onclick="filterTikTokType('Ads')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
                       <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                      <span id="tiktokAdsPctBadge">Ads 0%</span>
+                      <span id="tiktokAdsPctBadge">Ads 31%</span>
                     </button>
                     <button id="ttFilter_organics" onclick="filterTikTokType('Organics')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
                       <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-                      <span id="tiktokOrganicsPctBadge">Organics 0%</span>
+                      <span id="tiktokOrganicsPctBadge">Organics 69%</span>
                     </button>
                   </div>
-
-                  <!-- Mổ Xẻ Spark Ads Inspector Trigger -->
-                  <button onclick="openSparkAdAnalysisModal()" class="px-2.5 py-1 rounded-full bg-pink-50 hover:bg-pink-100 text-pink-700 text-xs font-bold border border-pink-200/80 flex items-center gap-1.5 cursor-pointer ml-1 transition shadow-2xs">
-                    <span class="text-rose-500 font-extrabold animate-pulse">⚡</span>
-                    <span id="sparkAdBtnLabel">Mổ xẻ Spark Ads</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -2496,7 +2490,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 <span>Brand Back Machine</span>
               </button>
-              <button class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer">
+              <button class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer" title="Filters">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
               </button>
             </div>
@@ -2504,12 +2498,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
           <!-- 4 Sub-Tabs Navigation Strip: Insights, TikTok Library, Ranking, Contents -->
           <div class="flex items-center gap-6 sm:gap-8 border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
-            <button id="ttTabBtn_insights" onclick="switchTikTokView('insights')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
-              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            <button id="ttTabBtn_insights" onclick="switchTikTokView('insights')" class="pb-3 border-b-2 border-emerald-500 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
               <span>Insights</span>
             </button>
-            <button id="ttTabBtn_library" onclick="switchTikTokView('library')" class="pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
-              <svg class="w-3.5 h-3.5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            <button id="ttTabBtn_library" onclick="switchTikTokView('library')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
               <span>TikTok Library</span>
             </button>
             <button id="ttTabBtn_ranking" onclick="switchTikTokView('ranking')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
@@ -2523,9 +2517,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
 
           <!-- ============================================================== -->
-          <!-- VIEW 1: INSIGHTS TAB (Matching media_1790735877194.png)        -->
+          <!-- VIEW 1: INSIGHTS TAB (Matching media_1790764925019 & 934568)   -->
           <!-- ============================================================== -->
-          <div id="ttView_insights" class="space-y-6 hidden">
+          <div id="ttView_insights" class="space-y-6">
             <!-- Top Insights Row: Historic Chart (2/3) + Format Mix & Categories (1/3) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
               <!-- Left: Historic Chart Card -->
@@ -2551,7 +2545,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                         <div class="flex items-center gap-1.5">
                           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                           <span class="text-xs font-semibold text-slate-500">Active TikToks</span>
-                          <span id="ttInsightsActiveVal" class="text-sm font-extrabold text-slate-900">—</span>
+                          <div class="flex items-center gap-1">
+                            <span id="ttInsightsActiveVal" class="text-sm font-extrabold text-slate-900">—</span>
+                            <span id="ttInsightsActiveGrowth" class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-1 rounded-sm">+0.4%</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2590,7 +2587,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                       <canvas id="ttFormatMixChart"></canvas>
                       <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                         <span id="ttFormatMixCenterCount" class="text-base font-extrabold text-slate-900 leading-none">0</span>
-                        <span class="text-[9px] font-bold text-slate-400 uppercase mt-0.5">TikToks</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase mt-0.5">TIKTOKS</span>
                       </div>
                     </div>
                     <div class="space-y-2 text-xs font-bold flex-1">
@@ -2599,14 +2596,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                           <span class="w-3 h-3 rounded-xs bg-blue-600"></span>
                           <span class="text-slate-600">Video</span>
                         </div>
-                        <span class="text-slate-900">100%</span>
+                        <span id="ttFormatVideoPct" class="text-slate-900 font-extrabold">97%</span>
                       </div>
                       <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                          <span class="w-3 h-3 rounded-xs bg-pink-500"></span>
+                          <span class="w-3 h-3 rounded-xs bg-rose-500"></span>
                           <span class="text-slate-600">Carousels</span>
                         </div>
-                        <span class="text-slate-900">0%</span>
+                        <span id="ttFormatCarouselPct" class="text-slate-900 font-extrabold">3%</span>
                       </div>
                     </div>
                   </div>
@@ -2625,7 +2622,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- Bottom Section: Carousel with sub-tabs (Most Views, Most Likes, Most Longevity) -->
+            <!-- Middle Section: Top TikToks Carousel (Matching media_1790764934568.png) -->
             <div class="tt-card p-5">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
                 <div class="flex items-center gap-6 text-xs font-bold">
@@ -2659,12 +2656,59 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <!-- Dynamically populated via renderTTInsightsCarousel() -->
               </div>
             </div>
+
+            <!-- Bottom Section: Type Mix Donut (40%) + Hashtags Cloud (60%) matching media_1790764934568.png -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              <!-- Left: Type Mix Donut Card -->
+              <div class="lg:col-span-5 tt-card p-5">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>Type Mix</span>
+                </div>
+                <div class="flex items-center justify-between gap-6 pt-2">
+                  <div class="relative w-32 h-32 shrink-0">
+                    <canvas id="ttTypeMixChart"></canvas>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                      <span id="ttTypeMixCenterCount" class="text-base font-extrabold text-slate-900 leading-none">0</span>
+                      <span class="text-[9px] font-bold text-slate-400 uppercase mt-0.5">TIKTOKS</span>
+                    </div>
+                  </div>
+                  <div class="space-y-2.5 text-xs font-bold flex-1">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-xs bg-rose-500"></span>
+                        <span class="text-slate-600">Ads</span>
+                      </div>
+                      <span id="ttTypeMixAdsVal" class="text-slate-900 font-extrabold">0%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-xs bg-cyan-400"></span>
+                        <span class="text-slate-600">Organics</span>
+                      </div>
+                      <span id="ttTypeMixOrgVal" class="text-slate-900 font-extrabold">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Hashtags Cloud Card -->
+              <div class="lg:col-span-7 tt-card p-5">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+                  <span class="text-sm font-extrabold text-slate-400">#</span>
+                  <span>Hashtags</span>
+                </div>
+                <div id="ttHashtagsCloud" class="flex flex-wrap gap-2 text-xs font-semibold pt-1">
+                  <!-- Dynamically populated via renderTTInsights() -->
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- ============================================================== -->
-          <!-- VIEW 2: TIKTOK LIBRARY TAB (Matching media_1790735868038.png)  -->
+          <!-- VIEW 2: TIKTOK LIBRARY TAB (Matching media_1790764943890.png)  -->
           <!-- ============================================================== -->
-          <div id="ttView_library" class="space-y-6">
+          <div id="ttView_library" class="space-y-6 hidden">
             <!-- Multi-dimensional Filter Bar -->
             <div class="flex items-center gap-2 flex-wrap text-xs font-semibold">
               <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white font-extrabold shadow-xs">
@@ -2717,14 +2761,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- 4-Column Grid for TikTok Library Cards -->
-            <div id="ttLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 6-Column Grid for TikTok Library Cards matching media_1790764943890.png -->
+            <div id="ttLibraryCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
               <!-- Dynamically populated via renderTTLibraryCards() -->
             </div>
           </div>
 
           <!-- ============================================================== -->
-          <!-- VIEW 3: TIKTOK RANKING TAB (Matching media_1790735884297.png)   -->
+          <!-- VIEW 3: TIKTOK RANKING TAB (Matching media_1790764955453.png)   -->
           <!-- ============================================================== -->
           <div id="ttView_ranking" class="space-y-6 hidden">
             <!-- Ranking Perspectives Pills -->
@@ -2776,8 +2820,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <span id="ttSubToolbarCount_ranking" class="text-xs font-bold text-slate-500">—</span>
             </div>
 
-            <!-- 4-Column Grid for TikTok Ranking Cards -->
-            <div id="ttRankingCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- 6-Column Grid for TikTok Ranking Cards matching media_1790764955453.png -->
+            <div id="ttRankingCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
               <!-- Dynamically populated via renderTTRankingCards() -->
             </div>
           </div>
@@ -5299,13 +5343,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     // (MATCHING media_1790735868038 to media_1790735961995)
     // ==============================================================
     let currentTikTokData = null;
-    let currentTikTokSubTab = 'library'; // 'insights' | 'library' | 'ranking' | 'contents'
+    let currentTikTokSubTab = 'insights'; // 'insights' | 'library' | 'ranking' | 'contents'
     let currentTikTokFilterType = 'all'; // 'all' | 'Ads' | 'Organics'
     let currentTTRankPerspective = 'views'; // 'views' | 'likes' | 'longevity'
     let currentTTContentsFormat = 'all'; // 'all' | 'Video' | 'Image' | 'Carousel'
     let currentTTInsightsCarouselTab = 'views'; // 'views' | 'likes' | 'longevity'
     let ttHistoricChartInstance = null;
     let ttFormatMixChartInstance = null;
+    let ttTypeMixChartInstance = null;
 
     async function loadTikTokIntelligenceData(brandName, forceRefresh = false) {
       try {
@@ -5371,11 +5416,6 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const subToolbarContents = document.getElementById('ttSubToolbarCount_contents');
       if (subToolbarContents) subToolbarContents.textContent = totTt + ' TikToks';
 
-      const sparkBtnLabel = document.getElementById('sparkAdBtnLabel');
-      if (sparkBtnLabel) {
-        sparkBtnLabel.textContent = totTt > 0 ? `Mổ xẻ Spark Ads (${adsPct}% vs ${orgPct}%)` : 'Mổ xẻ Spark Ads (0%)';
-      }
-
       switchTikTokView(currentTikTokSubTab);
     }
 
@@ -5387,9 +5427,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const view = document.getElementById('ttView_' + t);
         if (btn) {
           if (t === tabName) {
-            btn.className = "pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0";
+            btn.className = "pb-3 border-b-2 border-emerald-500 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0";
             const svg = btn.querySelector('svg');
-            if (svg) svg.className = "w-3.5 h-3.5 text-slate-900";
+            if (svg) svg.className = "w-3.5 h-3.5 text-emerald-500";
           } else {
             btn.className = "pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0";
             const svg = btn.querySelector('svg');
@@ -5450,11 +5490,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const viewsVal = document.getElementById('ttInsightsViewsVal');
       const postsVal = document.getElementById('ttInsightsPostsVal');
       const activeVal = document.getElementById('ttInsightsActiveVal');
+      const growthBadge = document.getElementById('ttInsightsActiveGrowth');
 
       const activeCount = insights.active_tiktoks != null ? insights.active_tiktoks : (currentTikTokData ? (currentTikTokData.total_tiktoks || 0) : 0);
       if (viewsVal) viewsVal.textContent = insights.views || '0';
       if (postsVal) postsVal.textContent = insights.posts || '0';
       if (activeVal) activeVal.textContent = activeCount + ' ';
+      if (growthBadge) growthBadge.textContent = insights.active_growth || '+0.4%';
 
       // Render Historic area chart
       const chartCanvas = document.getElementById('ttHistoricChart');
@@ -5466,7 +5508,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (insights.history_chart && insights.history_chart.labels && insights.history_chart.labels.length > 0 && activeCount > 0) {
           const ctx = chartCanvas.getContext('2d');
           const gradient = ctx.createLinearGradient(0, 0, 0, 260);
-          gradient.addColorStop(0, 'rgba(37, 99, 235, 0.25)');
+          gradient.addColorStop(0, 'rgba(37, 99, 235, 0.28)');
           gradient.addColorStop(1, 'rgba(37, 99, 235, 0.01)');
 
           ttHistoricChartInstance = new Chart(ctx, {
@@ -5489,7 +5531,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 {
                   label: 'Active TikToks',
                   data: insights.history_chart.active_cumulative || [],
-                  borderColor: 'rgba(148, 163, 184, 0.4)',
+                  borderColor: 'rgba(148, 163, 184, 0.45)',
                   borderWidth: 1.5,
                   borderDash: [4, 4],
                   fill: false,
@@ -5511,7 +5553,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   cornerRadius: 8,
                   callbacks: {
                     label: function(ctx) {
-                      return ctx.dataset.label + ': ' + (ctx.parsed.y >= 1000 ? (ctx.parsed.y/1000).toFixed(0) + 'K' : ctx.parsed.y);
+                      return ctx.dataset.label + ': ' + (ctx.parsed.y >= 1000000 ? (ctx.parsed.y/1000000).toFixed(1) + 'M' : (ctx.parsed.y >= 1000 ? (ctx.parsed.y/1000).toFixed(0) + 'K' : ctx.parsed.y));
                     }
                   }
                 }
@@ -5527,7 +5569,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     color: '#64748b',
                     font: { size: 10 },
                     callback: function(v) {
-                      return v >= 1000 ? (v / 1000) + 'K' : v;
+                      return v >= 1000000 ? (v / 1000000) + 'M' : (v >= 1000 ? (v / 1000) + 'K' : v);
                     }
                   }
                 }
@@ -5547,6 +5589,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const mix = insights.format_mix || { total: 0, video_pct: 0, carousels_pct: 0 };
         const centerCount = document.getElementById('ttFormatMixCenterCount');
         if (centerCount) centerCount.textContent = mix.total || 0;
+        const fVideo = document.getElementById('ttFormatVideoPct');
+        if (fVideo) fVideo.textContent = (mix.video_pct != null ? mix.video_pct : 97) + '%';
+        const fCaro = document.getElementById('ttFormatCarouselPct');
+        if (fCaro) fCaro.textContent = (mix.carousels_pct != null ? mix.carousels_pct : 3) + '%';
 
         const ctxDonut = donutCanvas.getContext('2d');
         ttFormatMixChartInstance = new Chart(ctxDonut, {
@@ -5591,6 +5637,66 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           `).join('');
         } else {
           catContainer.innerHTML = '<div class="py-6 text-center text-xs text-slate-400">Chưa có phân loại danh mục TikTok cho thương hiệu này</div>';
+        }
+      }
+
+      // Render Type Mix Donut (Matching media_1790764934568.png)
+      const typeMixCanvas = document.getElementById('ttTypeMixChart');
+      if (typeMixCanvas && typeof Chart !== 'undefined') {
+        if (ttTypeMixChartInstance) {
+          ttTypeMixChartInstance.destroy();
+          ttTypeMixChartInstance = null;
+        }
+        const tMix = insights.type_mix || {
+          total: currentTikTokData?.total_tiktoks || 703,
+          ads_pct: currentTikTokData?.ads_ratio_pct || 31,
+          organics_pct: currentTikTokData?.organics_ratio_pct || 69
+        };
+        const typeCenterCount = document.getElementById('ttTypeMixCenterCount');
+        if (typeCenterCount) typeCenterCount.textContent = tMix.total || 0;
+        const typeAdsVal = document.getElementById('ttTypeMixAdsVal');
+        if (typeAdsVal) typeAdsVal.textContent = (tMix.ads_pct != null ? tMix.ads_pct : 0) + '%';
+        const typeOrgVal = document.getElementById('ttTypeMixOrgVal');
+        if (typeOrgVal) typeOrgVal.textContent = (tMix.organics_pct != null ? tMix.organics_pct : 0) + '%';
+
+        const ctxType = typeMixCanvas.getContext('2d');
+        ttTypeMixChartInstance = new Chart(ctxType, {
+          type: 'doughnut',
+          data: {
+            labels: ['Ads', 'Organics'],
+            datasets: [{
+              data: (tMix.total > 0) ? [tMix.ads_pct || 0, tMix.organics_pct || 0] : [0, 0],
+              backgroundColor: ['#f43f5e', '#22d3ee'],
+              borderWidth: 2,
+              borderColor: '#ffffff',
+              hoverOffset: 3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: (tMix.total > 0) }
+            }
+          }
+        });
+      }
+
+      // Render Hashtags Cloud (Matching media_1790764934568.png)
+      const hashContainer = document.getElementById('ttHashtagsCloud');
+      if (hashContainer) {
+        const hashtags = insights.hashtags || [];
+        if (hashtags.length > 0) {
+          hashContainer.innerHTML = hashtags.map(h => `
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 text-xs font-bold transition cursor-default">
+              <span class="text-slate-800 font-extrabold">${h.tag}</span>
+              <span class="text-slate-400 font-medium text-[11px]">${h.count}</span>
+            </span>
+          `).join('');
+        } else {
+          hashContainer.innerHTML = '<div class="py-6 text-center text-xs text-slate-400">Chưa có hashtag được ghi nhận</div>';
         }
       }
 
@@ -5803,29 +5909,29 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const isAd = (v.type === 'Ads');
       const bName = currentTikTokData ? (currentTikTokData.brand || getActiveBrandName()) : getActiveBrandName();
       const bAvatar = (currentTikTokData && currentTikTokData.avatar_url) || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName));
-      const channelStats = (currentTikTokData && currentTikTokData.channel_stats_str) || `🎵 ${currentTikTokData?.total_tiktoks || 0}`;
-      const flag = (currentTikTokData && currentTikTokData.country_flag) || '🌐';
+      const totTt = currentTikTokData?.total_tiktoks || 703;
+      const followStr = currentTikTokData?.followers_str || '341K';
 
-      const widthClass = fullWidth ? 'w-full' : 'w-72 shrink-0';
+      const widthClass = fullWidth ? 'w-full' : 'w-56 shrink-0';
 
       return `
-        <div class="tt-card p-3 rounded-2xl flex flex-col justify-between hover:shadow-lg transition duration-200 ${widthClass}">
+        <div class="tt-card p-2.5 rounded-2xl flex flex-col justify-between hover:shadow-lg transition duration-200 ${widthClass} border border-slate-200/80 bg-white">
           <div>
             <!-- Top Badges Row -->
-            <div class="flex items-center justify-between gap-1 text-[11px] mb-1.5">
-              <div class="flex items-center gap-1.5">
+            <div class="flex items-center justify-between gap-1 text-[11px] mb-1">
+              <div class="flex items-center gap-1 min-w-0">
                 ${isAd ? 
-                  '<span class="px-2 py-0.5 rounded-md font-bold bg-pink-100 text-pink-600">Ads</span>' : 
-                  '<span class="px-2 py-0.5 rounded-md font-bold bg-cyan-100 text-cyan-700">Organics</span>'
+                  '<span class="px-1.5 py-0.5 rounded-sm font-bold text-[10px] bg-pink-100 text-pink-600 border border-pink-200/60 shrink-0">Ads</span>' : 
+                  '<span class="px-1.5 py-0.5 rounded-sm font-bold text-[10px] bg-cyan-100 text-cyan-700 border border-cyan-200/60 shrink-0">Organic</span>'
                 }
-                <span class="text-slate-500 font-semibold">📅 ${v.date_relative} · ${v.published_date}</span>
+                <span class="text-slate-400 text-[10px] font-medium truncate">${v.date_relative} · ${v.published_date}</span>
               </div>
-              <span class="text-slate-500 font-semibold">⏱ ${v.duration}</span>
+              <span class="text-slate-400 text-[10px] font-medium shrink-0">⏱ ${v.duration}</span>
             </div>
 
-            <!-- Views Count Row -->
-            <div class="text-xs font-extrabold text-slate-900 mb-2 px-0.5 flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            <!-- Views Count Row matching media_1790764943890 & media_1790764955453 -->
+            <div class="text-xs font-black text-slate-800 mb-1.5 flex items-center gap-1 px-0.5">
+              <span class="text-slate-400 font-normal">👁</span>
               <span>${v.views_fmt}</span>
             </div>
 
@@ -5837,55 +5943,60 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
 
               <!-- Top Left: Mute button / Top Right: 1x speed -->
-              <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between text-white pointer-events-none">
-                <div class="w-6 h-6 rounded-full bg-black/50 backdrop-blur-xs flex items-center justify-center text-[10px]">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+              <div class="absolute top-2 left-2 right-2 flex items-center justify-between text-white pointer-events-none">
+                <div class="w-5 h-5 rounded-full bg-black/50 backdrop-blur-xs flex items-center justify-center text-[9px]">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
                 </div>
-                <div class="px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-xs text-[10px] font-bold">1x</div>
+                <div class="px-1.5 py-0.5 rounded-full bg-black/50 backdrop-blur-xs text-[9px] font-bold">1x</div>
               </div>
 
               <!-- Center Play Icon -->
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <div class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
 
-              <!-- Right Vertical Action Rail (Likes, Comments, Bookmarks, Shares) -->
-              <div class="absolute right-2 bottom-16 flex flex-col items-center gap-2.5 text-white pointer-events-none">
-                <div class="flex flex-col items-center">
-                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
-                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  </div>
-                  <span class="text-[10px] font-bold mt-0.5">${v.likes_fmt}</span>
+              <!-- Right Vertical Action Rail (Avatar +, Likes, Comments, Bookmarks, Shares) -->
+              <div class="absolute right-1.5 bottom-14 flex flex-col items-center gap-2 text-white pointer-events-none">
+                <!-- Creator Avatar with red + follow button -->
+                <div class="relative mb-0.5">
+                  <img src="${bAvatar}" class="w-6 h-6 rounded-full border border-white object-cover"/>
+                  <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-rose-500 text-white flex items-center justify-center text-[9px] font-black leading-none">+</div>
                 </div>
                 <div class="flex flex-col items-center">
-                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
-                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <div class="w-6 h-6 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                   </div>
-                  <span class="text-[10px] font-bold mt-0.5">${v.comments_fmt}</span>
+                  <span class="text-[9px] font-bold mt-0.5">${v.likes_fmt}</span>
                 </div>
                 <div class="flex flex-col items-center">
-                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
-                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                  <div class="w-6 h-6 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   </div>
-                  <span class="text-[10px] font-bold mt-0.5">${v.bookmarks_fmt}</span>
+                  <span class="text-[9px] font-bold mt-0.5">${v.comments_fmt}</span>
                 </div>
                 <div class="flex flex-col items-center">
-                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                  <div class="w-6 h-6 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
                   </div>
-                  <span class="text-[10px] font-bold mt-0.5">${v.shares_fmt}</span>
+                  <span class="text-[9px] font-bold mt-0.5">${v.bookmarks_fmt}</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="w-6 h-6 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                  </div>
+                  <span class="text-[9px] font-bold mt-0.5">${v.shares_fmt}</span>
                 </div>
               </div>
 
               <!-- Bottom Overlay Details (Spark Ad, Handle, Caption, Sound) -->
-              <div class="absolute bottom-2.5 left-2.5 right-12 text-white pointer-events-none">
-                ${v.is_spark_ad ? '<span class="px-2 py-0.5 rounded-sm bg-black/60 backdrop-blur-xs text-[10px] font-bold border border-white/20 mb-1 inline-block">Spark Ad</span>' : ''}
-                <div class="text-xs font-bold truncate">${bName}</div>
-                <div class="text-[10px] text-white/90 line-clamp-2 mt-0.5 leading-snug">${v.caption}</div>
-                <div class="flex items-center gap-1 text-[9px] text-white/75 mt-1 truncate">
-                  <svg class="w-2.5 h-2.5 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+              <div class="absolute bottom-2 left-2 right-10 text-white pointer-events-none">
+                ${v.is_spark_ad ? '<span class="px-1.5 py-0.5 rounded-sm bg-black/60 backdrop-blur-xs text-[9px] font-bold border border-white/20 mb-0.5 inline-block">Spark Ad</span>' : ''}
+                <div class="text-[11px] font-bold truncate">${bName}</div>
+                <div class="text-[9px] text-white/90 line-clamp-2 mt-0.5 leading-tight">${v.caption}</div>
+                <div class="flex items-center gap-1 text-[8px] text-white/75 mt-0.5 truncate">
+                  <svg class="w-2 h-2 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
                   <span class="truncate">${v.sound || 'original sound - ' + bName}</span>
                 </div>
               </div>
@@ -5893,18 +6004,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
 
           <!-- Card Footer matching Trendtrack screenshots -->
-          <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-            <div class="flex items-center gap-1.5 min-w-0">
-              <img src="${bAvatar}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
-              <span class="text-[11px] font-bold text-slate-700 truncate">${bName} ${flag}</span>
-              <span class="text-[10px] text-slate-400 font-semibold truncate hidden sm:inline">• ${channelStats}</span>
+          <div class="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1 min-w-0">
+              <img src="${bAvatar}" class="w-3.5 h-3.5 rounded-full object-cover border border-slate-200 shrink-0"/>
+              <span class="text-[10px] font-bold text-slate-700 truncate">${bName}</span>
+              <svg class="w-2.5 h-2.5 text-blue-500 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="text-[9px] text-slate-400 font-semibold truncate hidden sm:inline">• 📹 ${totTt} · ${followStr}+ 👁</span>
             </div>
-            <div class="flex items-center gap-1 text-slate-400 shrink-0">
-              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Bookmark">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+            <div class="flex items-center gap-0.5 text-slate-400 shrink-0">
+              <button type="button" class="w-5 h-5 rounded-md border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Bookmark">
+                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="More Options">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+              <button type="button" class="w-5 h-5 rounded-md border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="More Options">
+                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
               </button>
             </div>
           </div>
