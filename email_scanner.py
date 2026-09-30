@@ -104,7 +104,7 @@ def generate_oodie_dataset() -> dict:
         },
         {
             "id": "oodie_002",
-            "subject": "🎁 FREEBIES* inside 🎁",
+            "subject": "🎉 FREEBIES* inside 🎉",
             "preheader": "LAST CHANCE: Buy one, get one FREE on Sleep Tees*. It's now or never...",
             "badge": "Marketing",
             "date": "Sep 27, 2026",
@@ -125,7 +125,7 @@ def generate_oodie_dataset() -> dict:
         },
         {
             "id": "oodie_003",
-            "subject": "How to get a FREE Sleep Tee Nightie* 👀",
+            "subject": "How to get a FREE Sleep Tee Nightie* 💤",
             "preheader": "BUY ONE GET ONE FREE: Don't Sleep On This Deal. Add two, pay for one.",
             "badge": "Marketing",
             "date": "Sep 25, 2026",
@@ -188,7 +188,7 @@ def generate_oodie_dataset() -> dict:
         },
         {
             "id": "oodie_006",
-            "subject": "🎁 Spring Sale: Save Up To $40",
+            "subject": "🎉 Spring Sale: Save Up To $40 🎉",
             "preheader": "SPRING SALE: SAVE UP TO $40* - Prices down. Comfort up.",
             "badge": "Marketing",
             "date": "Sep 20, 2026",
@@ -496,18 +496,158 @@ def generate_oodie_dataset() -> dict:
         "domain": "theoodie.com",
         "total_emails": total_emails,
         "velocity": velocity,
+        "recent_pace": "~3.5 / week",
         "provider": "Klaviyo",
         "sub_tabs": ["Email Library", "Insights", "Calendar", "Flows"],
         "campaigns": all_campaigns,
         "insights": {
-            "avg_weekly_sends": 3.5,
-            "best_send_day": "Tuesday & Thursday",
-            "best_send_time": "10:00 AM AEST",
-            "promo_ratio": 72,
-            "educational_ratio": 28,
-            "avg_discount": "30% - 40% OFF",
-            "top_subject_keywords": ["Save", "Free", "Sale", "Cooling", "Last Chance", "Drop"]
-        }
+            "historic": {
+                "emails_per_week": 4,
+                "emails_per_week_change": "0%",
+                "total_sent": 130,
+                "total_sent_change": "+3.2%",
+                "weeks": [
+                    {"label": "Mar 2", "month": "Mar", "count": 7},
+                    {"label": "Mar 9", "month": "", "count": 4},
+                    {"label": "Mar 16", "month": "", "count": 3},
+                    {"label": "Mar 23", "month": "", "count": 3},
+                    {"label": "Mar 30", "month": "", "count": 2},
+                    {"label": "Apr 6", "month": "Apr", "count": 3},
+                    {"label": "Apr 13", "month": "", "count": 3},
+                    {"label": "Apr 20", "month": "", "count": 4},
+                    {"label": "Apr 27", "month": "", "count": 3},
+                    {"label": "May 4", "month": "May", "count": 4},
+                    {"label": "May 11", "month": "", "count": 5},
+                    {"label": "May 18", "month": "", "count": 4},
+                    {"label": "May 25", "month": "", "count": 5},
+                    {"label": "Jun 1", "month": "Jun", "count": 4},
+                    {"label": "Jun 8", "month": "", "count": 5},
+                    {"label": "Jun 15", "month": "", "count": 3},
+                    {"label": "Jun 22", "month": "", "count": 4},
+                    {"label": "Jun 29", "month": "", "count": 4},
+                    {"label": "Jul 6", "month": "Jul", "count": 4},
+                    {"label": "Jul 13", "month": "", "count": 5},
+                    {"label": "Jul 20", "month": "", "count": 3},
+                    {"label": "Jul 27", "month": "", "count": 4},
+                    {"label": "Aug 3", "month": "Aug", "count": 5},
+                    {"label": "Aug 10", "month": "", "count": 4},
+                    {"label": "Aug 17", "month": "", "count": 4, "is_active": True},
+                    {"label": "Aug 24", "month": "", "count": 3},
+                    {"label": "Aug 31", "month": "", "count": 2},
+                    {"label": "Sep 7", "month": "Sep", "count": 4},
+                    {"label": "Sep 14", "month": "", "count": 3},
+                    {"label": "Sep 21", "month": "", "count": 4}
+                ]
+            },
+            "category_mix": {
+                "total": 139,
+                "categories": [
+                    {"name": "Promotional", "count": 88, "percentage": 63, "color": "#3b82f6"},
+                    {"name": "Launch", "count": 31, "percentage": 22, "color": "#ef4444"},
+                    {"name": "Product", "count": 15, "percentage": 11, "color": "#10b981"},
+                    {"name": "Event", "count": 7, "percentage": 5, "color": "#f59e0b"}
+                ]
+            },
+            "sending_pattern": {
+                "days": [
+                    {"day": "Mon", "count": 4, "percentage": 9},
+                    {"day": "Tue", "count": 10, "percentage": 21},
+                    {"day": "Wed", "count": 3, "percentage": 6},
+                    {"day": "Thu", "count": 8, "percentage": 17},
+                    {"day": "Fri", "count": 10, "percentage": 21},
+                    {"day": "Sat", "count": 1, "percentage": 2},
+                    {"day": "Sun", "count": 11, "percentage": 23}
+                ]
+            },
+            "offer_mix": {
+                "total": 98,
+                "offers": [
+                    {"name": "Discount %", "count": 81, "percentage": 83, "color": "#8b5cf6"},
+                    {"name": "BOGO", "count": 12, "percentage": 12, "color": "#f97316"},
+                    {"name": "Discount % With Threshold", "count": 3, "percentage": 3, "color": "#06b6d4"},
+                    {"name": "Bundle Deal", "count": 1, "percentage": 1, "color": "#ec4899"},
+                    {"name": "Free Delivery With Threshold", "count": 1, "percentage": 1, "color": "#10b981"}
+                ]
+            },
+            "events": {
+                "total": 48,
+                "not_shown": 4,
+                "items": [
+                    {"name": "Seasonal Sale", "percentage": 50, "color": "#3b82f6"},
+                    {"name": "Flash Sale", "percentage": 19, "color": "#ec4899"},
+                    {"name": "Father's Day", "percentage": 15, "color": "#10b981"},
+                    {"name": "Valentine's Day", "percentage": 10, "color": "#f59e0b"},
+                    {"name": "Easter", "percentage": 6, "color": "#8b5cf6"}
+                ]
+            }
+        },
+        "calendar": {
+            "week_range": "September 28 – October 4",
+            "days": [
+                {"day_name": "MON", "date_num": 28, "is_today": False, "emails": []},
+                {
+                    "day_name": "TUE",
+                    "date_num": 29,
+                    "is_today": False,
+                    "emails": [
+                        {
+                            "id": "oodie_001",
+                            "subject": "Summon him: One name. Three times...",
+                            "badge": "Marketing",
+                            "image_url": "/static/emails/card_1.png",
+                            "time": "10:14 AM"
+                        }
+                    ]
+                },
+                {"day_name": "WED", "date_num": 30, "is_today": True, "emails": []},
+                {"day_name": "THU", "date_num": 1, "is_today": False, "emails": []},
+                {"day_name": "FRI", "date_num": 2, "is_today": False, "emails": []},
+                {"day_name": "SAT", "date_num": 3, "is_today": False, "emails": []},
+                {"day_name": "SUN", "date_num": 4, "is_today": False, "emails": []}
+            ]
+        },
+        "flows": [
+            {
+                "id": "welcome",
+                "name": "Welcome",
+                "count": 1,
+                "meta": "1 emails · Uploaded 8 months ago",
+                "steps": [
+                    {
+                        "step": 1,
+                        "title": "Start - Created account",
+                        "subject": "Here's your discount code 🎉",
+                        "preview_url": "/static/emails/card_1.png",
+                        "body": "Welcome to The Oodie Club! Here's your exclusive 10% discount code for your first order.",
+                        "zoom": "100%"
+                    }
+                ]
+            },
+            {
+                "id": "abandoned_cart",
+                "name": "Abandoned Cart",
+                "count": 2,
+                "meta": "2 emails · Uploaded 8 months ago",
+                "steps": [
+                    {
+                        "step": 1,
+                        "title": "1h After Cart Abandonment",
+                        "subject": "Did you forget something comfy in your cart? 🛒",
+                        "preview_url": "/static/emails/card_2.png",
+                        "body": "Your cart is waiting for you! Finish checkout before your items sell out.",
+                        "zoom": "100%"
+                    },
+                    {
+                        "step": 2,
+                        "title": "24h After Cart Abandonment",
+                        "subject": "Take an extra 10% off your cart today only!",
+                        "preview_url": "/static/emails/card_3.png",
+                        "body": "Here is an extra sweet treat to help you complete your order. Use code COMEBACK10.",
+                        "zoom": "100%"
+                    }
+                ]
+            }
+        ]
     }
 
 def generate_true_sea_moss_dataset() -> dict:

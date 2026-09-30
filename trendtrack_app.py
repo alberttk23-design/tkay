@@ -1744,9 +1744,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- 4-COLUMN GRID OF EMAIL CARDS matching media_1790733116755.png -->
-            <div id="emailCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              <!-- Dynamically populated cards matching media_1790733116755.png -->
+            <!-- 6-COLUMN GRID OF EMAIL CARDS matching media_1790766356063.png -->
+            <div id="emailCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+              <!-- Dynamically populated cards matching media_1790766356063.png -->
             </div>
 
             <!-- INFINITE SCROLL / LAZY LOAD SENTINEL -->
@@ -1762,201 +1762,216 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- SUB-VIEW 2: INSIGHTS -->
+          <!-- SUB-VIEW 2: INSIGHTS (MATCHING media_1790766362086.png) -->
           <div id="emailInsightsView" class="hidden space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div class="tt-card p-4">
-                <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Email Cadence</div>
-                <div class="text-2xl font-black text-slate-900">3.8 <span class="text-xs font-bold text-slate-400">/ week</span></div>
-                <div class="text-[11px] text-emerald-600 font-semibold mt-1">● Highly consistent schedule</div>
-              </div>
-              <div class="tt-card p-4">
-                <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Best Send Days</div>
-                <div class="text-base font-extrabold text-slate-900">Tuesday & Thursday</div>
-                <div class="text-[11px] text-slate-500 mt-1">Peak opens between 10 AM - 12 PM</div>
-              </div>
-              <div class="tt-card p-4">
-                <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Promo vs Storytelling</div>
-                <div class="text-2xl font-black text-slate-900">72% <span class="text-xs font-bold text-slate-400">Promo</span></div>
-                <div class="text-[11px] text-slate-500 mt-1">28% Educational & Product Guides</div>
-              </div>
-              <div class="tt-card p-4">
-                <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Email Service Provider</div>
-                <div class="text-base font-extrabold text-slate-900 flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Klaviyo</div>
-                <div class="text-[11px] text-slate-500 mt-1">Dedicated IP & DMARC Verified</div>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div class="tt-card p-5">
-                <h3 class="text-xs font-bold text-slate-900 mb-3 flex items-center gap-1.5">
-                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-                  <span>Top Subject Line Keywords</span>
-                </h3>
-                <div class="flex flex-wrap gap-2 text-xs">
-                  <span class="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 font-bold border border-blue-200">Save (38%)</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 font-bold border border-emerald-200">FREE / BOGO (32%)</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold border border-rose-200">Sale (28%)</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-700 font-bold border border-amber-200">Cooling (24%)</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700 font-bold border border-purple-200">Last Chance (21%)</span>
-                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold border border-slate-200">Collab Drop (15%)</span>
+            <!-- Row 1: Historic (Left) + Category Mix (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              <!-- Historic Bar Chart Card -->
+              <div class="lg:col-span-8 tt-card p-5 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">Historic</span>
+                      </div>
+                      <div class="flex items-center gap-4 text-xs font-bold mt-2">
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                          <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+                          Emails / week <span id="historicEmailsPerWeek" class="text-slate-900 font-black">4</span> <span class="text-slate-400 font-medium">0%</span>
+                        </span>
+                        <span class="flex items-center gap-1.5 text-slate-700">
+                          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                          Total Sent <span id="historicTotalSent" class="text-slate-900 font-black">130</span> <span class="text-emerald-600 font-semibold">+3.2%</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <select class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-700 focus:outline-none cursor-pointer shadow-2xs">
+                        <option>📅 Last 6M</option>
+                        <option>📅 Last 3M</option>
+                        <option>📅 Last 1Y</option>
+                        <option>📅 All Time</option>
+                      </select>
+                      <select class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-700 focus:outline-none cursor-pointer shadow-2xs">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative h-64 w-full">
+                  <canvas id="emailHistoricChartCanvas"></canvas>
                 </div>
               </div>
 
-              <div class="tt-card p-5">
-                <h3 class="text-xs font-bold text-slate-900 mb-3 flex items-center gap-1.5">
-                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                  <span>Discount & Offer Cadence</span>
-                </h3>
-                <div class="space-y-2 text-xs">
-                  <div>
-                    <div class="flex justify-between font-semibold text-slate-700 mb-1">
-                      <span>BOGO Free (Sleep Tees)</span>
-                      <span>42% of campaigns</span>
+              <!-- Category Mix Donut Card -->
+              <div class="lg:col-span-4 tt-card p-5 flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">Category Mix</span>
+                </div>
+                <div class="flex items-center justify-between gap-4 my-auto">
+                  <div class="relative w-40 h-40 shrink-0">
+                    <canvas id="emailCategoryMixChartCanvas"></canvas>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                      <span id="categoryMixTotal" class="text-xl font-black text-slate-900 leading-none">139</span>
+                      <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">EMAILS</span>
                     </div>
-                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-blue-600 h-1.5 rounded-full" style="width: 42%"></div></div>
                   </div>
-                  <div>
-                    <div class="flex justify-between font-semibold text-slate-700 mb-1">
-                      <span>Fixed Markdown ($40 OFF)</span>
-                      <span>31% of campaigns</span>
-                    </div>
-                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-emerald-600 h-1.5 rounded-full" style="width: 31%"></div></div>
+                  <div id="emailCategoryMixLegend" class="space-y-2 text-xs flex-1">
+                    <!-- Populated dynamically -->
                   </div>
-                  <div>
-                    <div class="flex justify-between font-semibold text-slate-700 mb-1">
-                      <span>Free Express Shipping</span>
-                      <span>18% of campaigns</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: % Offer Mix (Left) + Sending Pattern & Events (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              <!-- % Offer Mix Donut Card -->
+              <div class="lg:col-span-6 tt-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">% Offer Mix</span>
+                </div>
+                <div class="flex items-center justify-between gap-6">
+                  <div class="relative w-44 h-44 shrink-0">
+                    <canvas id="emailOfferMixChartCanvas"></canvas>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                      <span id="offerMixTotal" class="text-xl font-black text-slate-900 leading-none">98</span>
+                      <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">EMAILS</span>
                     </div>
-                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-amber-500 h-1.5 rounded-full" style="width: 18%"></div></div>
+                  </div>
+                  <div id="emailOfferMixLegend" class="space-y-2 text-xs flex-1">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sending Pattern Bar Chart Card -->
+              <div class="lg:col-span-6 tt-card p-5">
+                <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                  <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">Sending Pattern</span>
+                  <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-slate-50 text-[11px] font-bold">
+                    <button class="px-2.5 py-0.5 rounded-md hover:text-slate-900 text-slate-500">3M</button>
+                    <button class="px-2.5 py-0.5 rounded-md hover:text-slate-900 text-slate-500">6M</button>
+                    <button class="px-2.5 py-0.5 rounded-md hover:text-slate-900 text-slate-500">1Y</button>
+                    <button class="px-2.5 py-0.5 rounded-md bg-white text-slate-900 shadow-2xs font-extrabold">All</button>
+                  </div>
+                </div>
+                <div class="relative h-44 w-full">
+                  <canvas id="emailSendingPatternChartCanvas"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Events Donut Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              <div class="lg:col-span-6 tt-card p-5">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">Events</span>
+                  </div>
+                  <span class="text-[11px] font-semibold text-slate-400">+4 not shown</span>
+                </div>
+                <div class="flex items-center justify-between gap-6">
+                  <div class="relative w-44 h-44 shrink-0">
+                    <canvas id="emailEventsChartCanvas"></canvas>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                      <span id="eventsTotal" class="text-xl font-black text-slate-900 leading-none">48</span>
+                      <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">EMAILS</span>
+                    </div>
+                  </div>
+                  <div id="emailEventsLegend" class="space-y-2 text-xs flex-1">
+                    <!-- Populated dynamically -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SUB-VIEW 3: CALENDAR -->
-          <div id="emailCalendarView" class="hidden space-y-6">
+          <!-- SUB-VIEW 3: CALENDAR (MATCHING media_1790766368185.png) -->
+          <div id="emailCalendarView" class="hidden space-y-4">
             <div class="tt-card p-5">
+              <!-- Calendar Navigation Header -->
               <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-                <span class="font-extrabold text-sm text-slate-900">September 2026 Send Schedule</span>
-                <span class="text-xs text-slate-500">14 newsletters tracked this month</span>
+                <span id="emailCalendarRangeTitle" class="font-extrabold text-sm text-slate-900">September 28 – October 4</span>
+                <div class="flex items-center gap-1.5">
+                  <button class="w-7 h-7 rounded-lg border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                  </button>
+                  <button class="w-7 h-7 rounded-lg border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
               </div>
-              <div class="grid grid-cols-7 gap-2 text-center text-xs">
-                <div class="font-bold text-slate-400 py-1">Mon</div>
-                <div class="font-bold text-slate-400 py-1">Tue</div>
-                <div class="font-bold text-slate-400 py-1">Wed</div>
-                <div class="font-bold text-slate-400 py-1">Thu</div>
-                <div class="font-bold text-slate-400 py-1">Fri</div>
-                <div class="font-bold text-slate-400 py-1">Sat</div>
-                <div class="font-bold text-slate-400 py-1">Sun</div>
 
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-slate-50/50 text-slate-300">31</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-blue-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-blue-400 transition" onclick="openEmailDetailModal(13)">
-                  <span class="font-bold text-slate-700 text-[10px]">1</span>
-                  <span class="text-[9px] bg-purple-600 text-white px-1 py-0.5 rounded truncate">VIP Drop</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">2</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-emerald-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-emerald-400 transition" onclick="openEmailDetailModal(12)">
-                  <span class="font-bold text-slate-700 text-[10px]">3</span>
-                  <span class="text-[9px] bg-emerald-600 text-white px-1 py-0.5 rounded truncate">Avocado</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">4</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">5</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-rose-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-rose-400 transition" onclick="openEmailDetailModal(11)">
-                  <span class="font-bold text-slate-700 text-[10px]">7</span>
-                  <span class="text-[9px] bg-rose-600 text-white px-1 py-0.5 rounded truncate">Spring $40</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">8</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-blue-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-blue-400 transition" onclick="openEmailDetailModal(10)">
-                  <span class="font-bold text-slate-700 text-[10px]">9</span>
-                  <span class="text-[9px] bg-blue-600 text-white px-1 py-0.5 rounded truncate">Hot Sleep</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">10</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-amber-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-amber-400 transition" onclick="openEmailDetailModal(9)">
-                  <span class="font-bold text-slate-700 text-[10px]">11</span>
-                  <span class="text-[9px] bg-amber-600 text-white px-1 py-0.5 rounded truncate">Summer Robes</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">12</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-emerald-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-emerald-400 transition" onclick="openEmailDetailModal(8)">
-                  <span class="font-bold text-slate-700 text-[10px]">13</span>
-                  <span class="text-[9px] bg-emerald-600 text-white px-1 py-0.5 rounded truncate">Full Price?</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">14</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-sky-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-sky-400 transition" onclick="openEmailDetailModal(7)">
-                  <span class="font-bold text-slate-700 text-[10px]">15</span>
-                  <span class="text-[9px] bg-sky-600 text-white px-1 py-0.5 rounded truncate">Bedtime</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">16</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-cyan-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-cyan-400 transition" onclick="openEmailDetailModal(6)">
-                  <span class="font-bold text-slate-700 text-[10px]">17</span>
-                  <span class="text-[9px] bg-cyan-600 text-white px-1 py-0.5 rounded truncate">Cooling</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-teal-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-teal-400 transition" onclick="openEmailDetailModal(1)">
-                  <span class="font-bold text-slate-700 text-[10px]">18</span>
-                  <span class="text-[9px] bg-teal-600 text-white px-1 py-0.5 rounded truncate">BOGO Tees</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">19</div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl bg-lime-50/50 flex flex-col justify-between text-left cursor-pointer hover:border-lime-400 transition" onclick="openEmailDetailModal(0)">
-                  <span class="font-bold text-slate-700 text-[10px]">20</span>
-                  <span class="text-[9px] bg-lime-600 text-white px-1 py-0.5 rounded truncate">Beetlejuice™</span>
-                </div>
-                <div class="h-20 p-1 border border-slate-100 rounded-xl">21</div>
+              <!-- 7-Column Weekly Strip Calendar -->
+              <div id="emailWeeklyCalendarGrid" class="grid grid-cols-7 gap-3">
+                <!-- Dynamically populated days -->
               </div>
             </div>
           </div>
 
-          <!-- SUB-VIEW 4: FLOWS -->
-          <div id="emailFlowsView" class="hidden space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="tt-card p-5">
-                <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-                    <span class="font-bold text-slate-900 text-sm">Welcome Sequence</span>
-                  </div>
-                  <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">4 Emails</span>
+          <!-- SUB-VIEW 4: FLOWS (MATCHING media_1790766373613.png) -->
+          <div id="emailFlowsView" class="hidden space-y-4">
+            <div class="tt-card p-5">
+              <!-- Flows Category Pills Header -->
+              <div class="flex items-center justify-between gap-4 flex-wrap border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center gap-2">
+                  <button id="emailFlowPill_welcome" onclick="selectEmailFlow('welcome')" class="px-3.5 py-1.5 rounded-full bg-slate-900 text-white font-extrabold text-xs shadow-xs flex items-center gap-2 cursor-pointer transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>Welcome</span>
+                    <span class="w-4 h-4 rounded-full bg-white text-slate-900 text-[10px] font-black flex items-center justify-center">1</span>
+                  </button>
+                  <button id="emailFlowPill_abandoned_cart" onclick="selectEmailFlow('abandoned_cart')" class="px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 cursor-pointer transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    <span>Abandoned Cart</span>
+                    <span class="w-4 h-4 rounded-full bg-slate-300 text-slate-700 text-[10px] font-black flex items-center justify-center">2</span>
+                  </button>
                 </div>
-                <div class="space-y-3 text-xs text-slate-600">
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>1. Welcome to The Oodie Club + 10% Discount Code</span>
-                    <span class="text-[10px] text-slate-400">Trigger: Immediate</span>
-                  </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>2. Our Story: How 1 Blanket Changed The Game</span>
-                    <span class="text-[10px] text-slate-400">Delay: 2 Days</span>
-                  </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>3. Best-Seller Showcase: Which Oodie Are You?</span>
-                    <span class="text-[10px] text-slate-400">Delay: 4 Days</span>
-                  </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>4. Reminder: Your 10% Code Expires Soon!</span>
-                    <span class="text-[10px] text-slate-400">Delay: 7 Days</span>
-                  </div>
+                <div id="emailFlowMetaText" class="text-xs font-semibold text-slate-400">
+                  1 emails · Uploaded 8 months ago
                 </div>
               </div>
 
-              <div class="tt-card p-5">
-                <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-                    <span class="font-bold text-slate-900 text-sm">Abandoned Checkout Recovery</span>
-                  </div>
-                  <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">3 Emails</span>
+              <!-- Flow Step & Visualizer Split -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Left: Step Sequence List -->
+                <div id="emailFlowStepsList" class="lg:col-span-4 space-y-2.5">
+                  <!-- Dynamically rendered steps -->
                 </div>
-                <div class="space-y-3 text-xs text-slate-600">
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>1. Did you forget something comfy in your cart?</span>
-                    <span class="text-[10px] text-slate-400">Delay: 1 Hour</span>
+
+                <!-- Right: Visualizer & Mockup Preview -->
+                <div class="lg:col-span-8 bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4 space-y-3">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200/80">
+                    <div>
+                      <div id="flowActiveStepTitle" class="text-xs font-extrabold text-slate-900">1 Start - Created account</div>
+                      <div id="flowActiveStepSubject" class="text-[11px] font-semibold text-slate-500 mt-0.5">Here's your discount code 🎉</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <button onclick="openCurrentFlowEmailModal()" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-bold shadow-2xs flex items-center gap-1.5 cursor-pointer transition">
+                        <span>↗ Open email</span>
+                      </button>
+                      <div class="inline-flex rounded-lg border border-slate-200 p-0.5 bg-white text-xs font-bold text-slate-600">
+                        <button class="px-2 py-0.5 hover:text-slate-900">-</button>
+                        <span class="px-2 py-0.5 text-slate-800 font-extrabold">100%</span>
+                        <button class="px-2 py-0.5 hover:text-slate-900">+</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>2. Take $10 OFF your pending cart</span>
-                    <span class="text-[10px] text-slate-400">Delay: 12 Hours</span>
-                  </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-center">
-                    <span>3. Final Notice: Releasing your reserved items</span>
-                    <span class="text-[10px] text-slate-400">Delay: 24 Hours</span>
+                  <!-- Email Graphic Mockup Viewport -->
+                  <div class="w-full max-w-xl mx-auto rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white p-3 space-y-3">
+                    <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+                      <img id="flowBrandMiniAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0f172a&color=fff" class="w-5 h-5 rounded-full object-cover border border-slate-200" alt="Brand"/>
+                      <span id="flowBrandMiniName" class="text-xs font-bold text-slate-900">The Oodie</span>
+                      <span class="text-[10px] text-slate-400">official newsletter</span>
+                    </div>
+                    <div class="w-full aspect-[9/13] rounded-lg overflow-hidden border border-slate-100 bg-slate-50">
+                      <img id="flowActivePreviewImg" src="/static/emails/card_1.png" class="w-full h-full object-cover block" alt="Flow Email Preview"/>
+                    </div>
+                    <div id="flowActiveBodyText" class="text-xs text-slate-600 leading-relaxed p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+                      Welcome to The Oodie Club! Here's your exclusive 10% discount code for your first order.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6213,9 +6228,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (avatarEl) avatarEl.src = avatarUrl;
       const totalCount = (data.total_emails != null) ? data.total_emails : (data.campaigns ? data.campaigns.length : 0);
       if (countEl) countEl.textContent = totalCount;
-      if (paceEl) paceEl.textContent = data.velocity ? data.velocity.replace('/wk', '').trim() : '0';
+      if (paceEl) paceEl.textContent = (data.velocity ? data.velocity.replace('/wk', '').trim() : '3.5') + ' / week';
 
       renderEmailLibrary(data.campaigns || [], true);
+      renderEmailInsights(data);
+      renderEmailCalendar(data);
+      renderEmailFlows(data);
     }
 
     function setupEmailInfiniteScroll() {
@@ -6304,55 +6322,52 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       batch.forEach((card, batchIdx) => {
         const globalIdx = start + batchIdx;
         const cDiv = document.createElement('div');
-        cDiv.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer flex flex-col justify-between";
+        cDiv.className = "bg-white p-3 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-slate-300 transition duration-200 group cursor-pointer flex flex-col justify-between";
         cDiv.onclick = () => openEmailDetailModal(card);
 
         const imgSrc = card.image_url || `/static/emails/card_${(globalIdx % 18) + 1}.png`;
 
         cDiv.innerHTML = `
           <div>
-            <!-- Top Badges matching media_1790733116755.png -->
+            <!-- Top Badges matching media_1790766356063.png -->
             <div class="flex items-center justify-between gap-1 text-[11px] font-bold mb-2">
               <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/70">
                 ${card.badge || 'Marketing'}
               </span>
-              <span class="text-[10.5px] font-medium text-slate-500 flex items-center gap-1">
-                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                ${card.time_ago ? `${card.time_ago} • ` : ''}${card.date}
+              <span class="text-[10px] font-medium text-slate-500 whitespace-nowrap">
+                ${card.time_ago ? `${card.time_ago} · ` : ''}${card.date}
               </span>
+              <span class="w-3.5 h-3.5 rounded-full border border-slate-300 ml-auto shrink-0"></span>
             </div>
 
-            <!-- Subject Row with Brand Avatar -->
-            <div class="my-2.5 flex items-start gap-2">
-              <img src="${avatarUrl}" class="w-4 h-4 rounded-full mt-0.5 object-cover shrink-0 border border-slate-200" alt="Brand"/>
-              <div class="text-xs font-bold text-slate-900 group-hover:text-blue-600 transition line-clamp-2 leading-tight" title="${card.subject}">
-                ${card.subject}
-              </div>
+            <!-- Subject Line -->
+            <div class="my-2 text-[11.5px] font-bold text-slate-900 group-hover:text-blue-600 transition line-clamp-2 leading-tight min-h-[32px]" title="${card.subject}">
+              ${card.subject}
             </div>
 
-            <!-- Creative Body Preview -->
-            <div class="w-full aspect-[3/4] rounded-xl overflow-hidden bg-slate-50 border border-slate-200/70 shadow-2xs group-hover:scale-[1.01] transition-transform duration-200 mb-3">
+            <!-- Creative Body Preview matching 6-col aspect -->
+            <div class="w-full aspect-[9/13] rounded-xl overflow-hidden bg-slate-50 border border-slate-200/80 shadow-2xs group-hover:scale-[1.01] transition-transform duration-200 mb-2.5 relative">
               <img src="${imgSrc}" class="w-full h-full object-cover block" alt="${card.subject}" loading="lazy" onerror="this.onerror=null; this.src='/static/emails/card_' + ((globalIdx % 18) + 1) + '.png';"/>
             </div>
           </div>
 
-          <!-- Footer Row matching media_1790733116755.png -->
-          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between">
-            <div class="flex items-center gap-2 min-w-0">
-              <img src="${avatarUrl}" class="w-5 h-5 rounded-full object-cover shrink-0 border border-slate-200/80 shadow-2xs" alt="Brand"/>
+          <!-- Footer Row matching media_1790766356063.png -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <img src="${avatarUrl}" class="w-4 h-4 rounded-full object-cover shrink-0 border border-slate-200/80" alt="Brand"/>
               <div class="flex flex-col min-w-0 leading-none">
-                <span class="font-bold text-slate-800 text-[11px] truncate">${bName}</span>
-                <span class="text-[9.5px] text-slate-400 font-medium flex items-center gap-0.5 mt-0.5 whitespace-nowrap">
+                <span class="font-bold text-slate-800 text-[10.5px] truncate">${bName}</span>
+                <span class="text-[9px] text-slate-400 font-medium flex items-center gap-0.5 mt-0.5 whitespace-nowrap">
                   <svg class="w-2.5 h-2.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   <span>${velocity}</span>
                 </span>
               </div>
             </div>
-            <div class="flex items-center gap-1.5 shrink-0">
-              <button onclick="event.stopPropagation();" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Save">
+            <div class="flex items-center gap-1 shrink-0">
+              <button onclick="event.stopPropagation();" class="w-5 h-5 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Save">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button onclick="event.stopPropagation();" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Options">
+              <button onclick="event.stopPropagation();" class="w-5 h-5 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Options">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
               </button>
             </div>
@@ -6365,7 +6380,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Update badge count
       if (badgeEl) {
-        badgeEl.textContent = `Hiển thị ${end} / ${totalItems} emails`;
+        badgeEl.textContent = `${totalItems} emails`;
       }
 
       // Check if all items loaded
@@ -6434,6 +6449,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           }
         }
       });
+      if (subTab === 'insights' && currentEmailData) {
+        renderEmailInsights(currentEmailData);
+      } else if (subTab === 'calendar' && currentEmailData) {
+        renderEmailCalendar(currentEmailData);
+      } else if (subTab === 'flows' && currentEmailData) {
+        renderEmailFlows(currentEmailData);
+      }
     }
 
     function filterEmailCategory(cat) {
@@ -6451,6 +6473,496 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       });
       if (currentEmailData && currentEmailData.campaigns) {
         renderEmailLibrary(currentEmailData.campaigns, true);
+      }
+    }
+
+    // Chart.js instances for Email Insights
+    let emailHistoricChartInstance = null;
+    let emailCategoryMixChartInstance = null;
+    let emailSendingPatternChartInstance = null;
+    let emailOfferMixChartInstance = null;
+    let emailEventsChartInstance = null;
+
+    function renderEmailInsights(data) {
+      if (!data) return;
+      const ins = data.insights || {};
+
+      // 1. Historic Bar Chart
+      const historic = ins.historic || {};
+      const elEmailsPerWeek = document.getElementById('historicEmailsPerWeek');
+      const elTotalSent = document.getElementById('historicTotalSent');
+      if (elEmailsPerWeek) elEmailsPerWeek.textContent = historic.emails_per_week || 4;
+      if (elTotalSent) elTotalSent.textContent = historic.total_sent || 130;
+
+      const histCanvas = document.getElementById('emailHistoricChartCanvas');
+      if (histCanvas && typeof Chart !== 'undefined') {
+        const weeks = historic.weeks || [];
+        const labels = weeks.map(w => w.label || '');
+        const counts = weeks.map(w => w.count || 0);
+        const bgColors = weeks.map(w => w.is_active ? '#db2777' : '#f472b6');
+
+        if (emailHistoricChartInstance) {
+          emailHistoricChartInstance.destroy();
+        }
+
+        emailHistoricChartInstance = new Chart(histCanvas, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              data: counts,
+              backgroundColor: bgColors,
+              borderRadius: 4,
+              borderSkipped: false,
+              barPercentage: 0.65
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                titleFont: { size: 11, weight: 'bold' },
+                bodyFont: { size: 11 },
+                padding: 8,
+                cornerRadius: 8,
+                callbacks: {
+                  title: function(items) {
+                    const idx = items[0].dataIndex;
+                    return weeks[idx]?.label ? `${weeks[idx].label}, 2026` : '';
+                  },
+                  label: function(item) {
+                    return ` ${item.parsed.y} emails`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: {
+                  color: '#94a3b8',
+                  font: { size: 10, weight: 'bold' },
+                  maxRotation: 0,
+                  callback: function(val, index) {
+                    return weeks[index]?.month || '';
+                  }
+                }
+              },
+              y: {
+                min: 0,
+                max: 8,
+                ticks: {
+                  stepSize: 2,
+                  color: '#94a3b8',
+                  font: { size: 10, weight: 'bold' }
+                },
+                grid: {
+                  color: '#f1f5f9',
+                  borderDash: [3, 3]
+                },
+                border: { dash: [3, 3] }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Category Mix Donut Chart
+      const catMix = ins.category_mix || {};
+      const catTotalEl = document.getElementById('categoryMixTotal');
+      if (catTotalEl) catTotalEl.textContent = catMix.total || 139;
+
+      const catCanvas = document.getElementById('emailCategoryMixChartCanvas');
+      const catLegendEl = document.getElementById('emailCategoryMixLegend');
+      if (catCanvas && typeof Chart !== 'undefined') {
+        const categories = catMix.categories || [
+          { name: "Promotional", count: 88, percentage: 63, color: "#3b82f6" },
+          { name: "Launch", count: 31, percentage: 22, color: "#ef4444" },
+          { name: "Product", count: 15, percentage: 11, color: "#10b981" },
+          { name: "Event", count: 7, percentage: 5, color: "#f59e0b" }
+        ];
+
+        if (emailCategoryMixChartInstance) {
+          emailCategoryMixChartInstance.destroy();
+        }
+
+        emailCategoryMixChartInstance = new Chart(catCanvas, {
+          type: 'doughnut',
+          data: {
+            labels: categories.map(c => c.name),
+            datasets: [{
+              data: categories.map(c => c.percentage),
+              backgroundColor: categories.map(c => c.color),
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            cutout: '72%',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                cornerRadius: 8,
+                callbacks: {
+                  label: function(item) {
+                    return ` ${item.label}: ${item.parsed}%`;
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        if (catLegendEl) {
+          catLegendEl.innerHTML = categories.map(c => `
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${c.color}"></span>
+                <span class="font-medium text-slate-700">${c.name}</span>
+              </div>
+              <span class="font-black text-slate-900">${c.percentage}%</span>
+            </div>
+          `).join('');
+        }
+      }
+
+      // 3. Sending Pattern Bar Chart
+      const sendPat = ins.sending_pattern || {};
+      const sendCanvas = document.getElementById('emailSendingPatternChartCanvas');
+      if (sendCanvas && typeof Chart !== 'undefined') {
+        const days = sendPat.days || [
+          { day: "Mon", count: 4, percentage: 9 },
+          { day: "Tue", count: 10, percentage: 21 },
+          { day: "Wed", count: 3, percentage: 6 },
+          { day: "Thu", count: 8, percentage: 17 },
+          { day: "Fri", count: 10, percentage: 21 },
+          { day: "Sat", count: 1, percentage: 2 },
+          { day: "Sun", count: 11, percentage: 23 }
+        ];
+
+        if (emailSendingPatternChartInstance) {
+          emailSendingPatternChartInstance.destroy();
+        }
+
+        emailSendingPatternChartInstance = new Chart(sendCanvas, {
+          type: 'bar',
+          data: {
+            labels: days.map(d => `${d.day}`),
+            datasets: [{
+              data: days.map(d => d.percentage),
+              backgroundColor: '#3b82f6',
+              borderRadius: 4,
+              borderSkipped: false,
+              barPercentage: 0.5
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                cornerRadius: 8,
+                callbacks: {
+                  title: function(items) {
+                    const idx = items[0].dataIndex;
+                    return `${days[idx].day} (${days[idx].count} emails)`;
+                  },
+                  label: function(item) {
+                    return ` ${item.parsed.y}% of weekly volume`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: {
+                  color: '#64748b',
+                  font: { size: 10, weight: 'bold' }
+                }
+              },
+              y: {
+                display: false
+              }
+            }
+          }
+        });
+      }
+
+      // 4. % Offer Mix Donut Chart
+      const offerMix = ins.offer_mix || {};
+      const offerTotalEl = document.getElementById('offerMixTotal');
+      if (offerTotalEl) offerTotalEl.textContent = offerMix.total || 98;
+
+      const offerCanvas = document.getElementById('emailOfferMixChartCanvas');
+      const offerLegendEl = document.getElementById('emailOfferMixLegend');
+      if (offerCanvas && typeof Chart !== 'undefined') {
+        const offers = offerMix.offers || [
+          { name: "Discount %", percentage: 83, color: "#8b5cf6" },
+          { name: "BOGO", percentage: 12, color: "#f97316" },
+          { name: "Discount % With Threshold", percentage: 3, color: "#06b6d4" },
+          { name: "Bundle Deal", percentage: 1, color: "#ec4899" },
+          { name: "Free Delivery With Threshold", percentage: 1, color: "#10b981" }
+        ];
+
+        if (emailOfferMixChartInstance) {
+          emailOfferMixChartInstance.destroy();
+        }
+
+        emailOfferMixChartInstance = new Chart(offerCanvas, {
+          type: 'doughnut',
+          data: {
+            labels: offers.map(o => o.name),
+            datasets: [{
+              data: offers.map(o => o.percentage),
+              backgroundColor: offers.map(o => o.color),
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            cutout: '72%',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                cornerRadius: 8,
+                callbacks: {
+                  label: function(item) {
+                    return ` ${item.label}: ${item.parsed}%`;
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        if (offerLegendEl) {
+          offerLegendEl.innerHTML = offers.map(o => `
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${o.color}"></span>
+                <span class="font-medium text-slate-700">${o.name}</span>
+              </div>
+              <span class="font-black text-slate-900">${o.percentage}%</span>
+            </div>
+          `).join('');
+        }
+      }
+
+      // 5. Events Donut Chart
+      const eventsData = ins.events || {};
+      const eventsTotalEl = document.getElementById('eventsTotal');
+      if (eventsTotalEl) eventsTotalEl.textContent = eventsData.total || 48;
+
+      const eventsCanvas = document.getElementById('emailEventsChartCanvas');
+      const eventsLegendEl = document.getElementById('emailEventsLegend');
+      if (eventsCanvas && typeof Chart !== 'undefined') {
+        const eventItems = eventsData.items || [
+          { name: "Seasonal Sale", percentage: 50, color: "#3b82f6" },
+          { name: "Flash Sale", percentage: 19, color: "#ec4899" },
+          { name: "Father's Day", percentage: 15, color: "#10b981" },
+          { name: "Valentine's Day", percentage: 10, color: "#f59e0b" },
+          { name: "Easter", percentage: 6, color: "#8b5cf6" }
+        ];
+
+        if (emailEventsChartInstance) {
+          emailEventsChartInstance.destroy();
+        }
+
+        emailEventsChartInstance = new Chart(eventsCanvas, {
+          type: 'doughnut',
+          data: {
+            labels: eventItems.map(e => e.name),
+            datasets: [{
+              data: eventItems.map(e => e.percentage),
+              backgroundColor: eventItems.map(e => e.color),
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            cutout: '72%',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                cornerRadius: 8,
+                callbacks: {
+                  label: function(item) {
+                    return ` ${item.label}: ${item.parsed}%`;
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        if (eventsLegendEl) {
+          eventsLegendEl.innerHTML = eventItems.map(e => `
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${e.color}"></span>
+                <span class="font-medium text-slate-700">${e.name}</span>
+              </div>
+              <span class="font-black text-slate-900">${e.percentage}%</span>
+            </div>
+          `).join('');
+        }
+      }
+    }
+
+    // Weekly Strip Calendar Renderer matching media_1790766368185.png
+    function renderEmailCalendar(data) {
+      const grid = document.getElementById('emailWeeklyCalendarGrid');
+      if (!grid) return;
+      const cal = data?.calendar || {};
+      const rangeTitle = document.getElementById('emailCalendarRangeTitle');
+      if (rangeTitle && cal.week_range) rangeTitle.textContent = cal.week_range;
+
+      const days = cal.days || [
+        { day_name: "MON", date_num: 28, is_today: false, emails: [] },
+        { day_name: "TUE", date_num: 29, is_today: false, emails: [
+          { id: "oodie_001", subject: "Summon him: One name. Three times...", badge: "Marketing", image_url: "/static/emails/card_1.png" }
+        ]},
+        { day_name: "WED", date_num: 30, is_today: true, emails: [] },
+        { day_name: "THU", date_num: 1, is_today: false, emails: [] },
+        { day_name: "FRI", date_num: 2, is_today: false, emails: [] },
+        { day_name: "SAT", date_num: 3, is_today: false, emails: [] },
+        { day_name: "SUN", date_num: 4, is_today: false, emails: [] }
+      ];
+
+      grid.innerHTML = days.map(d => {
+        const isTodayBadge = d.is_today
+          ? `<span class="w-5 h-5 rounded-full bg-lime-400 text-slate-900 font-black text-[11px] flex items-center justify-center">${d.date_num}</span>`
+          : `<span class="text-slate-800 font-extrabold">${d.date_num}</span>`;
+
+        let cardsHtml = '';
+        if (d.emails && d.emails.length > 0) {
+          cardsHtml = d.emails.map(em => `
+            <div class="border border-slate-200/90 rounded-2xl overflow-hidden bg-white shadow-2xs hover:shadow-md transition cursor-pointer flex flex-col group mb-2" onclick="openEmailDetailModal(0)">
+              <div class="w-full aspect-[4/3] overflow-hidden bg-slate-900 relative">
+                <img src="${em.image_url || '/static/emails/card_1.png'}" class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-200" alt="${em.subject}"/>
+              </div>
+              <div class="p-2.5">
+                <div class="text-[11px] font-bold text-slate-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition">${em.subject}</div>
+              </div>
+            </div>
+            <div class="border-2 border-dashed border-slate-200/60 rounded-2xl flex-1 min-h-[220px]"></div>
+          `).join('');
+        } else {
+          cardsHtml = `<div class="border-2 border-dashed border-slate-200/90 rounded-2xl min-h-[380px] bg-slate-50/30"></div>`;
+        }
+
+        return `
+          <div class="flex flex-col">
+            <div class="text-[11px] font-bold text-slate-500 uppercase mb-2.5 flex items-center gap-1.5 px-1">
+              <span>${d.day_name}</span>
+              ${isTodayBadge}
+            </div>
+            ${cardsHtml}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Flows Automation Visualizer matching media_1790766373613.png
+    let currentActiveFlowId = 'welcome';
+    let currentFlowDataList = [];
+
+    function renderEmailFlows(data) {
+      const flows = data?.flows || [];
+      currentFlowDataList = flows;
+      selectEmailFlow(currentActiveFlowId);
+    }
+
+    function selectEmailFlow(flowId) {
+      currentActiveFlowId = flowId;
+      const bWelcome = document.getElementById('emailFlowPill_welcome');
+      const bCart = document.getElementById('emailFlowPill_abandoned_cart');
+      const metaEl = document.getElementById('emailFlowMetaText');
+
+      if (bWelcome && bCart) {
+        if (flowId === 'welcome') {
+          bWelcome.className = "px-3.5 py-1.5 rounded-full bg-slate-900 text-white font-extrabold text-xs shadow-xs flex items-center gap-2 cursor-pointer transition";
+          bCart.className = "px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 cursor-pointer transition";
+          if (metaEl) metaEl.textContent = "1 emails · Uploaded 8 months ago";
+        } else {
+          bCart.className = "px-3.5 py-1.5 rounded-full bg-slate-900 text-white font-extrabold text-xs shadow-xs flex items-center gap-2 cursor-pointer transition";
+          bWelcome.className = "px-3.5 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 cursor-pointer transition";
+          if (metaEl) metaEl.textContent = "2 emails · Uploaded 8 months ago";
+        }
+      }
+
+      const flow = currentFlowDataList.find(f => f.id === flowId) || currentFlowDataList[0];
+      const stepsListEl = document.getElementById('emailFlowStepsList');
+      if (stepsListEl && flow) {
+        stepsListEl.innerHTML = (flow.steps || []).map((step, idx) => `
+          <div onclick="selectFlowStep(${idx})" class="p-3.5 rounded-2xl border ${idx === 0 ? 'border-slate-900 bg-slate-50/90 shadow-2xs' : 'border-slate-200 bg-white hover:bg-slate-50'} cursor-pointer transition">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full ${idx === 0 ? 'bg-slate-900 text-white' : 'bg-slate-200 text-slate-700'} font-black text-[10px] flex items-center justify-center">${step.step}</span>
+              <span class="text-xs font-black text-slate-900">${step.title}</span>
+            </div>
+            <div class="text-[11px] font-semibold text-slate-600 mt-1 pl-7">${step.subject}</div>
+          </div>
+        `).join('');
+
+        if (flow.steps && flow.steps[0]) {
+          updateFlowPreview(flow.steps[0]);
+        }
+      }
+    }
+
+    function selectFlowStep(stepIdx) {
+      const flow = currentFlowDataList.find(f => f.id === currentActiveFlowId) || currentFlowDataList[0];
+      if (flow && flow.steps && flow.steps[stepIdx]) {
+        updateFlowPreview(flow.steps[stepIdx]);
+      }
+    }
+
+    function updateFlowPreview(step) {
+      const titleEl = document.getElementById('flowActiveStepTitle');
+      const subjEl = document.getElementById('flowActiveStepSubject');
+      const imgEl = document.getElementById('flowActivePreviewImg');
+      const bodyEl = document.getElementById('flowActiveBodyText');
+      const brandMiniAvatar = document.getElementById('flowBrandMiniAvatar');
+      const brandMiniName = document.getElementById('flowBrandMiniName');
+
+      const bName = (currentEmailData && currentEmailData.brand) || (currentData ? currentData.name : 'The Oodie');
+      if (brandMiniAvatar) brandMiniAvatar.src = getEmailBrandAvatar(bName);
+      if (brandMiniName) brandMiniName.textContent = bName;
+
+      if (titleEl) titleEl.textContent = step.title;
+      if (subjEl) subjEl.textContent = step.subject;
+      if (imgEl) imgEl.src = step.preview_url || '/static/emails/card_1.png';
+      if (bodyEl) bodyEl.textContent = step.body || '';
+    }
+
+    function openCurrentFlowEmailModal() {
+      const flow = currentFlowDataList.find(f => f.id === currentActiveFlowId);
+      if (flow && flow.steps && flow.steps[0]) {
+        openEmailDetailModal({
+          subject: flow.steps[0].subject,
+          badge: "Automated Flow",
+          category: flow.name,
+          discount: "Welcome Offer",
+          image_url: flow.steps[0].preview_url,
+          body: flow.steps[0].body,
+          cta: "Claim Welcome Offer",
+          products: ["The Oodie Original Fleece", "Sleep Tee"]
+        });
       }
     }
 
