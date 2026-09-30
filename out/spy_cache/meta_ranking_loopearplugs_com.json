@@ -16,5 +16,21 @@
   "charts": {
     "biggest_gain": [],
     "top_ranked": []
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=loopearplugs_com.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=loopearplugs_com.com&sz=128",
+  "brand_name": "Loopearplugscom",
+  "name": "Loopearplugscom",
+  "tiktok_slug": "loopearplugscom",
+  "tiktok_handle": "@loopearplugscom",
+  "tiktok_hashtag": "#loopearplugscom",
+  "verified_domain": "loopearplugs_com.com",
+  "ground_truth": {
+    "brand_name": "Loopearplugscom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=loopearplugs_com.com&sz=128",
+    "tiktok_slug": "loopearplugscom",
+    "canonical_domain": "loopearplugs_com.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:55Z"
   }
 }

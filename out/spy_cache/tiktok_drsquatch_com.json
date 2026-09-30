@@ -369,5 +369,21 @@
       "language": "English",
       "days_running": 193
     }
-  ]
+  ],
+  "logo_url": "https://www.drsquatch.com/svgs/logos/drsquatch-horizontal-logo-reversed.svg",
+  "brand_logo": "https://www.drsquatch.com/svgs/logos/drsquatch-horizontal-logo-reversed.svg",
+  "brand_name": "Dr. Squatch",
+  "name": "Dr. Squatch",
+  "tiktok_slug": "drsquatch",
+  "tiktok_handle": "@drsquatch",
+  "tiktok_hashtag": "#drsquatch",
+  "verified_domain": "drsquatch.com",
+  "ground_truth": {
+    "brand_name": "Dr. Squatch",
+    "logo_url": "https://www.drsquatch.com/svgs/logos/drsquatch-horizontal-logo-reversed.svg",
+    "tiktok_slug": "drsquatch",
+    "canonical_domain": "drsquatch.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-09-30T17:18:58Z"
+  }
 }

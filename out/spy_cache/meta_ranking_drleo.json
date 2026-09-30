@@ -3151,5 +3151,21 @@
       }
     ]
   },
-  "data_source": "live_ads_ranking"
+  "data_source": "live_ads_ranking",
+  "logo_url": "https://drleo.com/cdn/shop/files/logo.png?v=1773905176&width=180",
+  "brand_logo": "https://drleo.com/cdn/shop/files/logo.png?v=1773905176&width=180",
+  "brand_name": "DrLeo",
+  "name": "DrLeo",
+  "tiktok_slug": "drleo",
+  "tiktok_handle": "@drleo",
+  "tiktok_hashtag": "#drleo",
+  "verified_domain": "drleo.com",
+  "ground_truth": {
+    "brand_name": "DrLeo",
+    "logo_url": "https://drleo.com/cdn/shop/files/logo.png?v=1773905176&width=180",
+    "tiktok_slug": "drleo",
+    "canonical_domain": "drleo.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-09-30T17:18:49Z"
+  }
 }

@@ -557,5 +557,21 @@
       "return_policy": null
     }
   ],
-  "scanned_at": "2026-09-30T17:37:32.141029"
+  "scanned_at": "2026-09-30T17:37:32.141029",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googletheoodie.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googletheoodie.com&sz=128",
+  "brand_name": "Googletheoodie",
+  "name": "Googletheoodie",
+  "tiktok_slug": "googletheoodie",
+  "tiktok_handle": "@googletheoodie",
+  "tiktok_hashtag": "#googletheoodie",
+  "verified_domain": "googletheoodie.com",
+  "ground_truth": {
+    "brand_name": "Googletheoodie",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googletheoodie.com&sz=128",
+    "tiktok_slug": "googletheoodie",
+    "canonical_domain": "googletheoodie.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:43Z"
+  }
 }

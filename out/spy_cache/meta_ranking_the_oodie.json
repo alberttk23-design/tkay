@@ -1289,5 +1289,21 @@
         ]
       }
     ]
+  },
+  "logo_url": "http://theoodie.com/cdn/shop/files/Social_Sharing_Image_Preview.png?v=1739850051",
+  "brand_logo": "http://theoodie.com/cdn/shop/files/Social_Sharing_Image_Preview.png?v=1739850051",
+  "brand_name": "The Oodie",
+  "name": "The Oodie",
+  "tiktok_slug": "theoodie",
+  "tiktok_handle": "@theoodie",
+  "tiktok_hashtag": "#theoodie",
+  "verified_domain": "theoodie.com",
+  "ground_truth": {
+    "brand_name": "The Oodie",
+    "logo_url": "http://theoodie.com/cdn/shop/files/Social_Sharing_Image_Preview.png?v=1739850051",
+    "tiktok_slug": "theoodie",
+    "canonical_domain": "theoodie.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-09-30T17:18:56Z"
   }
 }

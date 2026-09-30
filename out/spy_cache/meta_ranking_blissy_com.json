@@ -3151,5 +3151,21 @@
       }
     ]
   },
-  "data_source": "live_ads_ranking"
+  "data_source": "live_ads_ranking",
+  "logo_url": "https://www.google.com/s2/favicons?domain=latest.blissy.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=latest.blissy.com&sz=128",
+  "brand_name": "Latestblissy",
+  "name": "Latestblissy",
+  "tiktok_slug": "latestblissy",
+  "tiktok_handle": "@latestblissy",
+  "tiktok_hashtag": "#latestblissy",
+  "verified_domain": "latest.blissy.com",
+  "ground_truth": {
+    "brand_name": "Latestblissy",
+    "logo_url": "https://www.google.com/s2/favicons?domain=latest.blissy.com&sz=128",
+    "tiktok_slug": "latestblissy",
+    "canonical_domain": "latest.blissy.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:47Z"
+  }
 }

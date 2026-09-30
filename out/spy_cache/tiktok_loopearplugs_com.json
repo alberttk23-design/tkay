@@ -280,5 +280,21 @@
       "language": "English",
       "days_running": 82
     }
-  ]
+  ],
+  "logo_url": "http://www.loopearplugs.com/cdn/shop/files/New_thumbnail.png?v=1790062121",
+  "brand_logo": "http://www.loopearplugs.com/cdn/shop/files/New_thumbnail.png?v=1790062121",
+  "brand_name": "Loop Earplugs",
+  "name": "Loop Earplugs",
+  "tiktok_slug": "loopearplugs",
+  "tiktok_handle": "@loopearplugs",
+  "tiktok_hashtag": "#loopearplugs",
+  "verified_domain": "loopearplugs.com",
+  "ground_truth": {
+    "brand_name": "Loop Earplugs",
+    "logo_url": "http://www.loopearplugs.com/cdn/shop/files/New_thumbnail.png?v=1790062121",
+    "tiktok_slug": "loopearplugs",
+    "canonical_domain": "loopearplugs.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-09-30T17:18:59Z"
+  }
 }

@@ -1251,5 +1251,20 @@
         "https://images.unsplash.com/photo-1520975916090-3105956dac38?w=150&q=80"
       ]
     }
-  ]
+  ],
+  "logo_url": "https://www.google.com/s2/favicons?domain=guyler.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=guyler.com&sz=128",
+  "brand_name": "Home",
+  "tiktok_slug": "guyler",
+  "tiktok_handle": "@guyler",
+  "tiktok_hashtag": "#guyler",
+  "verified_domain": "guyler.com",
+  "ground_truth": {
+    "brand_name": "Home",
+    "logo_url": "https://www.google.com/s2/favicons?domain=guyler.com&sz=128",
+    "tiktok_slug": "guyler",
+    "canonical_domain": "guyler.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-09-30T17:18:44Z"
+  }
 }

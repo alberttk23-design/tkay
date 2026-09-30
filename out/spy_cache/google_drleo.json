@@ -396,5 +396,21 @@
       "return_policy": null
     }
   ],
-  "scanned_at": "2026-09-30T18:24:32.704735"
+  "scanned_at": "2026-09-30T18:24:32.704735",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googledrleo.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googledrleo.com&sz=128",
+  "brand_name": "Googledrleo",
+  "name": "Googledrleo",
+  "tiktok_slug": "googledrleo",
+  "tiktok_handle": "@googledrleo",
+  "tiktok_hashtag": "#googledrleo",
+  "verified_domain": "googledrleo.com",
+  "ground_truth": {
+    "brand_name": "Googledrleo",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googledrleo.com&sz=128",
+    "tiktok_slug": "googledrleo",
+    "canonical_domain": "googledrleo.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:42Z"
+  }
 }
