@@ -381,17 +381,28 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         flag, card_domain = country_flag_map.get(card_country, ("🇺🇸", f"www.{b_domain}"))
         
         # Varied headlines & snippets
+        # Varied headlines & snippets tailored to brand or clean ecommerce
+        is_oodie = "oodie" in slug
         brand_headlines = [
-            f"{brand_name} Official Site – Oversized Wearable Blankets" if "oodie" in slug else f"{brand_name} Official Site – Premium Quality Gear",
-            f"{brand_name}™ – Official Site – Buy Now Pay Later",
-            f"New Arrivals Have Arrived – Made For Everyday Comfort" if "oodie" in slug else f"New Season Arrivals – Free Worldwide Express Shipping",
-            f"{brand_name} – On Sale Now – Limited Time Specials",
-            f"Cool Comfort, No Sweat – Our Famous Bestseller Collection",
-            f"Bye-Bye Sleepless Nights – {brand_name}™ Comfort Guaranteed",
-            f"Signature Sleep Tees – Shop Now – One Size Fits Most",
-            f"{brand_name} Bestsellers – Up to 40% Off Select Styles"
+            f"{brand_name} Official Site – Oversized Wearable Blankets" if is_oodie else f"{brand_name}™ – Official Store",
+            f"Shop {brand_name} – Top Rated Bestsellers",
+            f"Official {brand_name} – Fast Worldwide Shipping",
+            f"{brand_name} – On Sale Now – Limited Time Offers",
+            f"Discover {brand_name} – Premium Quality Guaranteed",
+            f"New Arrivals From {brand_name} – Shop Online Today",
+            f"Customer Favorites – Shop {brand_name} Deals",
+            f"{brand_name} Official Collection – Up to 40% Off"
         ]
         brand_snippets = [
+            f"Explore the official {brand_name} collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+            f"Shop top-rated favorites and new arrivals from {brand_name}. 100% satisfaction guarantee with easy returns.",
+            f"Discover why thousands of customers trust {brand_name}. Premium quality, verified standards, and exceptional customer care.",
+            f"Direct from the official {brand_name} store. Unlock special bundles, seasonal promotions, and free express delivery.",
+            f"Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied {brand_name} customers worldwide.",
+            f"Upgrade your daily wellness with {brand_name}. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+            f"Limited time offers on selected {brand_name} essentials. Save big when you shop direct today.",
+            f"Experience the authentic {brand_name} difference. Certified high-grade standards and hassle-free 30-day money-back guarantee."
+        ] if not is_oodie else [
             f"Explore {brand_name} Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
             f"Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
             f"Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
@@ -402,8 +413,8 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             f"Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers."
         ]
         
-        headline = raw_h if (raw_h and len(raw_h) > 8 and "Official Collection" not in raw_h) else brand_headlines[idx % len(brand_headlines)]
-        snippet = raw_s if (raw_s and len(raw_s) > 20 and "exclusive discounts" not in raw_s) else brand_snippets[idx % len(brand_snippets)]
+        headline = raw_h if (raw_h and len(raw_h) > 8 and "Official Collection" not in raw_h and ("oodie" in slug or "Oodie" not in raw_h)) else brand_headlines[idx % len(brand_headlines)]
+        snippet = raw_s if (raw_s and len(raw_s) > 20 and "exclusive discounts" not in raw_s and ("oodie" in slug or "Oodie" not in raw_s)) else brand_snippets[idx % len(brand_snippets)]
         
         # Sitelinks and reviews for search ads
         sitelinks = None
@@ -413,24 +424,30 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             sitelinks = [
                 {"title": f"{brand_name} Wearable Blankets", "snippet": ""},
                 {"title": f"Shop {brand_name}", "snippet": ""}
+            ] if is_oodie else [
+                {"title": f"Shop {brand_name}", "snippet": ""},
+                {"title": "Best Sellers", "snippet": ""}
             ]
         elif idx == 1:
-            reviews = {"rating": 4.1, "stars": "★★★★☆", "count": "34"}
-            return_policy = "Most items 30+ days"
+            reviews = {"rating": 4.8, "stars": "★★★★★", "count": "1,420"}
+            return_policy = "30-day return policy"
             sitelinks = [
                 {"title": "Robes", "snippet": ""},
                 {"title": "New ONE PIECE Collection", "snippet": ""}
+            ] if is_oodie else [
+                {"title": "New Arrivals", "snippet": ""},
+                {"title": "Special Bundles", "snippet": ""}
             ]
         elif idx == 3:
             sitelinks = [
-                {"title": f"Shop {brand_name} >", "snippet": "Feels like a giant cloud hug..."},
-                {"title": "Up To 30% Off Labour Day >", "snippet": "Shop our Labour Day sale and save..."}
+                {"title": f"Shop {brand_name} >", "snippet": f"Explore official products direct from {brand_name}..."},
+                {"title": "Special Deals >", "snippet": "Save on bestsellers and bundles today..."}
             ]
         elif idx == 4:
-            reviews = {"rating": 4.0, "stars": "★★★★☆", "count": "1,511"}
+            reviews = {"rating": 4.7, "stars": "★★★★☆", "count": "892"}
         elif idx == 6:
-            reviews = {"rating": 4.0, "stars": "★★★★☆", "count": "1,437"}
-            return_policy = "Most items 30+ days"
+            reviews = {"rating": 4.8, "stars": "★★★★★", "count": "1,437"}
+            return_policy = "30-day return policy"
 
         ad_cards.append({
             "creative_id": c_id,
