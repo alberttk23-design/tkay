@@ -34,7 +34,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_002",
@@ -59,7 +59,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_003",
@@ -84,7 +84,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_004",
@@ -109,7 +109,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_005",
@@ -134,7 +134,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_006",
@@ -159,7 +159,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_007",
@@ -184,7 +184,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_07.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_008",
@@ -209,207 +209,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_08.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_009",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "Sep 09, 2026",
       "time_ago": "2w",
       "full_date": "September 09, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_09.svg"
-    },
-    {
-      "id": "hykolity_010",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "Sep 06, 2026",
-      "time_ago": "3w",
-      "full_date": "September 06, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_10.svg"
-    },
-    {
-      "id": "hykolity_011",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "Sep 04, 2026",
-      "time_ago": "3w",
-      "full_date": "September 04, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_11.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_012",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "Sep 02, 2026",
+      "id": "hykolity_010",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "Sep 06, 2026",
       "time_ago": "3w",
-      "full_date": "September 02, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_12.svg"
-    },
-    {
-      "id": "hykolity_013",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "Aug 31, 2026",
-      "time_ago": "4w",
-      "full_date": "August 31, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "full_date": "September 06, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_13.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_014",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "Aug 28, 2026",
-      "time_ago": "1mo",
-      "full_date": "August 28, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "id": "hykolity_011",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "Sep 04, 2026",
+      "time_ago": "3w",
+      "full_date": "September 04, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_012",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "Sep 02, 2026",
+      "time_ago": "3w",
+      "full_date": "September 02, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_013",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "Aug 31, 2026",
+      "time_ago": "4w",
+      "full_date": "August 31, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_14.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_014",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "Aug 28, 2026",
+      "time_ago": "1mo",
+      "full_date": "August 28, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_015",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "Aug 26, 2026",
       "time_ago": "1mo",
       "full_date": "August 26, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_15.svg"
-    },
-    {
-      "id": "hykolity_016",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "Aug 24, 2026",
-      "time_ago": "1mo",
-      "full_date": "August 24, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_16.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_016",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "Aug 24, 2026",
+      "time_ago": "1mo",
+      "full_date": "August 24, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     },
     {
       "id": "hykolity_017",
@@ -434,7 +429,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_17.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_018",
@@ -459,7 +454,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_18.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_019",
@@ -484,7 +479,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_020",
@@ -509,7 +504,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_021",
@@ -534,7 +529,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_022",
@@ -559,7 +554,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_023",
@@ -584,7 +579,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_024",
@@ -609,207 +604,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_025",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "Aug 03, 2026",
       "time_ago": "1mo",
       "full_date": "August 03, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_07.svg"
-    },
-    {
-      "id": "hykolity_026",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "Aug 01, 2026",
-      "time_ago": "1mo",
-      "full_date": "August 01, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_08.svg"
-    },
-    {
-      "id": "hykolity_027",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "Jul 29, 2026",
-      "time_ago": "2mo",
-      "full_date": "July 29, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_09.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_028",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "Jul 27, 2026",
-      "time_ago": "2mo",
-      "full_date": "July 27, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_10.svg"
-    },
-    {
-      "id": "hykolity_029",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "Jul 25, 2026",
-      "time_ago": "2mo",
-      "full_date": "July 25, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "id": "hykolity_026",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "Aug 01, 2026",
+      "time_ago": "1mo",
+      "full_date": "August 01, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_11.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_030",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "Jul 22, 2026",
+      "id": "hykolity_027",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "Jul 29, 2026",
       "time_ago": "2mo",
-      "full_date": "July 22, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "full_date": "July 29, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_028",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "Jul 27, 2026",
+      "time_ago": "2mo",
+      "full_date": "July 27, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_029",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "Jul 25, 2026",
+      "time_ago": "2mo",
+      "full_date": "July 25, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_12.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_030",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "Jul 22, 2026",
+      "time_ago": "2mo",
+      "full_date": "July 22, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_031",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "Jul 20, 2026",
       "time_ago": "2mo",
       "full_date": "July 20, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_13.svg"
-    },
-    {
-      "id": "hykolity_032",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "Jul 18, 2026",
-      "time_ago": "2mo",
-      "full_date": "July 18, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_14.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_032",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "Jul 18, 2026",
+      "time_ago": "2mo",
+      "full_date": "July 18, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     },
     {
       "id": "hykolity_033",
@@ -834,7 +824,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_15.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_034",
@@ -859,7 +849,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_16.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_035",
@@ -884,7 +874,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_17.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_036",
@@ -909,7 +899,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_18.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_037",
@@ -934,7 +924,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_038",
@@ -959,7 +949,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_039",
@@ -984,7 +974,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_040",
@@ -1009,207 +999,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_041",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "Jun 27, 2026",
       "time_ago": "3mo",
       "full_date": "June 27, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
-    },
-    {
-      "id": "hykolity_042",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "Jun 25, 2026",
-      "time_ago": "3mo",
-      "full_date": "June 25, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
-    },
-    {
-      "id": "hykolity_043",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "Jun 23, 2026",
-      "time_ago": "3mo",
-      "full_date": "June 23, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_07.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_044",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "Jun 20, 2026",
+      "id": "hykolity_042",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "Jun 25, 2026",
       "time_ago": "3mo",
-      "full_date": "June 20, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_08.svg"
-    },
-    {
-      "id": "hykolity_045",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "Jun 18, 2026",
-      "time_ago": "3mo",
-      "full_date": "June 18, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "full_date": "June 25, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_09.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_046",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "Jun 16, 2026",
+      "id": "hykolity_043",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "Jun 23, 2026",
       "time_ago": "3mo",
-      "full_date": "June 16, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "full_date": "June 23, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_044",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "Jun 20, 2026",
+      "time_ago": "3mo",
+      "full_date": "June 20, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_045",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "Jun 18, 2026",
+      "time_ago": "3mo",
+      "full_date": "June 18, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_10.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_046",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "Jun 16, 2026",
+      "time_ago": "3mo",
+      "full_date": "June 16, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_047",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "Jun 13, 2026",
       "time_ago": "3mo",
       "full_date": "June 13, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_11.svg"
-    },
-    {
-      "id": "hykolity_048",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "Jun 11, 2026",
-      "time_ago": "3mo",
-      "full_date": "June 11, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_12.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_048",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "Jun 11, 2026",
+      "time_ago": "3mo",
+      "full_date": "June 11, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     },
     {
       "id": "hykolity_049",
@@ -1234,7 +1219,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_13.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_050",
@@ -1259,7 +1244,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_14.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_051",
@@ -1284,7 +1269,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_15.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_052",
@@ -1309,7 +1294,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_16.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_053",
@@ -1334,7 +1319,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_17.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_054",
@@ -1359,7 +1344,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_18.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_055",
@@ -1384,7 +1369,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_056",
@@ -1409,207 +1394,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_057",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "May 21, 2026",
       "time_ago": "4mo",
       "full_date": "May 21, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
-    },
-    {
-      "id": "hykolity_058",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "May 19, 2026",
-      "time_ago": "4mo",
-      "full_date": "May 19, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
-    },
-    {
-      "id": "hykolity_059",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "May 17, 2026",
-      "time_ago": "4mo",
-      "full_date": "May 17, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_060",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "May 14, 2026",
+      "id": "hykolity_058",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "May 19, 2026",
       "time_ago": "4mo",
-      "full_date": "May 14, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
-    },
-    {
-      "id": "hykolity_061",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "May 12, 2026",
-      "time_ago": "4mo",
-      "full_date": "May 12, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "full_date": "May 19, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_07.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_062",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "May 10, 2026",
+      "id": "hykolity_059",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "May 17, 2026",
       "time_ago": "4mo",
-      "full_date": "May 10, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "full_date": "May 17, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_060",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "May 14, 2026",
+      "time_ago": "4mo",
+      "full_date": "May 14, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_061",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "May 12, 2026",
+      "time_ago": "4mo",
+      "full_date": "May 12, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_08.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_062",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "May 10, 2026",
+      "time_ago": "4mo",
+      "full_date": "May 10, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_063",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "May 08, 2026",
       "time_ago": "4mo",
       "full_date": "May 08, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_09.svg"
-    },
-    {
-      "id": "hykolity_064",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "May 05, 2026",
-      "time_ago": "4mo",
-      "full_date": "May 05, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_10.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_064",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "May 05, 2026",
+      "time_ago": "4mo",
+      "full_date": "May 05, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     },
     {
       "id": "hykolity_065",
@@ -1634,7 +1614,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_11.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_066",
@@ -1659,7 +1639,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_12.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_067",
@@ -1684,7 +1664,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_13.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_068",
@@ -1709,7 +1689,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_14.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_069",
@@ -1734,7 +1714,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_15.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_070",
@@ -1759,7 +1739,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_16.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_071",
@@ -1784,7 +1764,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_17.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_072",
@@ -1809,207 +1789,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_18.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_073",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "Apr 15, 2026",
       "time_ago": "5mo",
       "full_date": "April 15, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
-    },
-    {
-      "id": "hykolity_074",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "Apr 12, 2026",
-      "time_ago": "5mo",
-      "full_date": "April 12, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
-    },
-    {
-      "id": "hykolity_075",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "Apr 10, 2026",
-      "time_ago": "5mo",
-      "full_date": "April 10, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_076",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "Apr 08, 2026",
+      "id": "hykolity_074",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "Apr 12, 2026",
       "time_ago": "5mo",
-      "full_date": "April 08, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
-    },
-    {
-      "id": "hykolity_077",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "Apr 05, 2026",
-      "time_ago": "5mo",
-      "full_date": "April 05, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "full_date": "April 12, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_078",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "Apr 03, 2026",
+      "id": "hykolity_075",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "Apr 10, 2026",
       "time_ago": "5mo",
-      "full_date": "April 03, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "full_date": "April 10, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_076",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "Apr 08, 2026",
+      "time_ago": "5mo",
+      "full_date": "April 08, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_077",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "Apr 05, 2026",
+      "time_ago": "5mo",
+      "full_date": "April 05, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_078",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "Apr 03, 2026",
+      "time_ago": "5mo",
+      "full_date": "April 03, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_079",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "Apr 01, 2026",
       "time_ago": "6mo",
       "full_date": "April 01, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_07.svg"
-    },
-    {
-      "id": "hykolity_080",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "Mar 29, 2026",
-      "time_ago": "6mo",
-      "full_date": "March 29, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_08.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_080",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "Mar 29, 2026",
+      "time_ago": "6mo",
+      "full_date": "March 29, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     },
     {
       "id": "hykolity_081",
@@ -2034,7 +2009,7 @@
         "Hykolity Pro Bundle",
         "Hykolity Travel Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_09.svg"
+      "image_url": "/static/emails/hykolity/hykolity_01.svg"
     },
     {
       "id": "hykolity_082",
@@ -2059,7 +2034,7 @@
         "Hykolity Deluxe Set",
         "Hykolity Gift Card"
       ],
-      "image_url": "/static/emails/hykolity/tsm_10.svg"
+      "image_url": "/static/emails/hykolity/hykolity_02.svg"
     },
     {
       "id": "hykolity_083",
@@ -2084,7 +2059,7 @@
         "Hykolity Top Rated Pack",
         "Hykolity Starter Set"
       ],
-      "image_url": "/static/emails/hykolity/tsm_11.svg"
+      "image_url": "/static/emails/hykolity/hykolity_03.svg"
     },
     {
       "id": "hykolity_084",
@@ -2109,7 +2084,7 @@
         "Hykolity Limited Edition",
         "Hykolity Pro Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_12.svg"
+      "image_url": "/static/emails/hykolity/hykolity_04.svg"
     },
     {
       "id": "hykolity_085",
@@ -2134,7 +2109,7 @@
         "Hykolity Bi-Weekly Pack",
         "Hykolity Family Bundle"
       ],
-      "image_url": "/static/emails/hykolity/tsm_13.svg"
+      "image_url": "/static/emails/hykolity/hykolity_05.svg"
     },
     {
       "id": "hykolity_086",
@@ -2159,7 +2134,7 @@
         "Hykolity Classic Pack",
         "Hykolity Gift Duo"
       ],
-      "image_url": "/static/emails/hykolity/tsm_14.svg"
+      "image_url": "/static/emails/hykolity/hykolity_06.svg"
     },
     {
       "id": "hykolity_087",
@@ -2184,7 +2159,7 @@
         "Hykolity Carry Bag",
         "Hykolity Accessories"
       ],
-      "image_url": "/static/emails/hykolity/tsm_15.svg"
+      "image_url": "/static/emails/hykolity/hykolity_07.svg"
     },
     {
       "id": "hykolity_088",
@@ -2209,207 +2184,202 @@
         "Hykolity Signature Edition",
         "Hykolity Lifetime Warranty"
       ],
-      "image_url": "/static/emails/hykolity/tsm_16.svg"
+      "image_url": "/static/emails/hykolity/hykolity_08.svg"
     },
     {
       "id": "hykolity_089",
-      "subject": "🔥 New Release: The Hykolity Exclusive Collection is here",
-      "preheader": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "badge": "Product Launch",
+      "subject": "🏆 Best of 2026: The Top Rated Hykolity Picks",
+      "preheader": "Voted by thousands of loyal community members this season.",
+      "badge": "Best Sellers",
       "date": "Mar 09, 2026",
       "time_ago": "6mo",
       "full_date": "March 09, 2026 at 10:14 AM",
-      "category": "Product Launch",
-      "discount": "New Release",
-      "velocity": "3.5/wk",
-      "theme": "slate",
-      "hero_headline": "🔥 New Release",
-      "hero_subheadline": "New Release",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "slate",
-      "body": "Crafted with premium materials. Experience innovation from Hykolity.",
-      "products": [
-        "Hykolity Exclusive Collection",
-        "Hykolity Pro Bundle",
-        "Hykolity Travel Kit"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_17.svg"
-    },
-    {
-      "id": "hykolity_090",
-      "subject": "⚡ FLASH SALE: Buy 1 Get 1 50% Off Everything!",
-      "preheader": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "badge": "Flash Sale",
-      "date": "Mar 07, 2026",
-      "time_ago": "6mo",
-      "full_date": "March 07, 2026 at 10:14 AM",
-      "category": "Flash Sale",
-      "discount": "BOGO 50% Off",
-      "velocity": "3.5/wk",
-      "theme": "indigo",
-      "hero_headline": "⚡ FLASH SALE",
-      "hero_subheadline": "BOGO 50% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "indigo",
-      "body": "48 hours only. Mix & match across all Hykolity bestsellers.",
-      "products": [
-        "Hykolity Essential Pack",
-        "Hykolity Deluxe Set",
-        "Hykolity Gift Card"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_18.svg"
-    },
-    {
-      "id": "hykolity_091",
-      "subject": "⭐ Over 25,000 5-Star Reviews: Why customers love us",
-      "preheader": "Real feedback from verified Hykolity buyers worldwide.",
-      "badge": "Social Proof",
-      "date": "Mar 04, 2026",
-      "time_ago": "6mo",
-      "full_date": "March 04, 2026 at 10:14 AM",
-      "category": "Social Proof",
-      "discount": "Free Shipping",
+      "category": "Best Sellers",
+      "discount": "Top Sellers",
       "velocity": "3.5/wk",
       "theme": "emerald",
-      "hero_headline": "⭐ Over 25,000 5-Star Reviews",
-      "hero_subheadline": "Free Shipping",
+      "hero_headline": "🏆 Best of 2026",
+      "hero_subheadline": "Top Sellers",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "emerald",
-      "body": "Real feedback from verified Hykolity buyers worldwide.",
+      "body": "Voted by thousands of loyal community members this season.",
       "products": [
-        "Hykolity Bestseller #1",
-        "Hykolity Top Rated Pack",
-        "Hykolity Starter Set"
+        "Hykolity Award Winner",
+        "Hykolity Deluxe Pack",
+        "Hykolity Starter Kit"
       ],
-      "image_url": "/static/emails/hykolity/tsm_01.svg"
+      "image_url": "/static/emails/hykolity/hykolity_09.svg"
     },
     {
-      "id": "hykolity_092",
-      "subject": "🖤 VIP Early Access: Secret Fall Vault Unlocked",
-      "preheader": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "badge": "VIP Access",
-      "date": "Mar 02, 2026",
-      "time_ago": "7mo",
-      "full_date": "March 02, 2026 at 10:14 AM",
-      "category": "VIP Access",
-      "discount": "VIP 30% Off",
-      "velocity": "3.5/wk",
-      "theme": "purple",
-      "hero_headline": "🖤 VIP Early Access",
-      "hero_subheadline": "VIP 30% Off",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "purple",
-      "body": "Shhh! You're on our VIP list. Enjoy exclusive 30% savings.",
-      "products": [
-        "Hykolity VIP Mystery Box",
-        "Hykolity Limited Edition",
-        "Hykolity Pro Bundle"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_02.svg"
-    },
-    {
-      "id": "hykolity_093",
-      "subject": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "preheader": "Never run out of your daily essentials from Hykolity.",
-      "badge": "Subscription",
-      "date": "Feb 28, 2026",
-      "time_ago": "7mo",
-      "full_date": "February 28, 2026 at 10:14 AM",
-      "category": "Subscription",
-      "discount": "20% Off Monthly",
+      "id": "hykolity_090",
+      "subject": "💡 How To Get The Most Out Of Your Hykolity",
+      "preheader": "3 expert tips from our team to maximize your daily results.",
+      "badge": "Educational",
+      "date": "Mar 07, 2026",
+      "time_ago": "6mo",
+      "full_date": "March 07, 2026 at 10:14 AM",
+      "category": "Educational",
+      "discount": "Pro Guide",
       "velocity": "3.5/wk",
       "theme": "sky",
-      "hero_headline": "📦 Subscribe & Save 20% + Free Express Shipping Every Month",
-      "hero_subheadline": "20% Off Monthly",
+      "hero_headline": "💡 How To Get The Most Out Of Your Hykolity",
+      "hero_subheadline": "Pro Guide",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "sky",
-      "body": "Never run out of your daily essentials from Hykolity.",
+      "body": "3 expert tips from our team to maximize your daily results.",
       "products": [
-        "Hykolity Monthly Refill",
-        "Hykolity Bi-Weekly Pack",
-        "Hykolity Family Bundle"
+        "Hykolity Maintenance Kit",
+        "Hykolity Replacement Parts",
+        "Hykolity User Manual"
       ],
-      "image_url": "/static/emails/hykolity/tsm_03.svg"
+      "image_url": "/static/emails/hykolity/hykolity_10.svg"
     },
     {
-      "id": "hykolity_094",
-      "subject": "🎁 Seasonal Markdown: Save Up To $40 Today",
-      "preheader": "Our biggest seasonal price drop is officially live. Limited quantities.",
-      "badge": "Seasonal Event",
-      "date": "Feb 25, 2026",
+      "id": "hykolity_091",
+      "subject": "🎉 Restock Alert: Back By Popular Demand",
+      "preheader": "The item you've been waiting for is finally back in stock in limited units.",
+      "badge": "Marketing",
+      "date": "Mar 04, 2026",
+      "time_ago": "6mo",
+      "full_date": "March 04, 2026 at 10:14 AM",
+      "category": "Restock",
+      "discount": "Restock Live",
+      "velocity": "3.5/wk",
+      "theme": "indigo",
+      "hero_headline": "🎉 Restock Alert",
+      "hero_subheadline": "Restock Live",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "indigo",
+      "body": "The item you've been waiting for is finally back in stock in limited units.",
+      "products": [
+        "Hykolity Iconic Batch",
+        "Hykolity Reserve Edition",
+        "Hykolity Bundle"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_11.svg"
+    },
+    {
+      "id": "hykolity_092",
+      "subject": "💌 A Special Thank You From The Hykolity Founder",
+      "preheader": "A personal note on our mission, milestones, and what's next.",
+      "badge": "Founder Note",
+      "date": "Mar 02, 2026",
       "time_ago": "7mo",
-      "full_date": "February 25, 2026 at 10:14 AM",
-      "category": "Seasonal Event",
-      "discount": "Up to $40 Off",
+      "full_date": "March 02, 2026 at 10:14 AM",
+      "category": "Founder Note",
+      "discount": "Community Love",
+      "velocity": "3.5/wk",
+      "theme": "pink",
+      "hero_headline": "💌 A Special Thank You From The Hykolity Founder",
+      "hero_subheadline": "Community Love",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "pink",
+      "body": "A personal note on our mission, milestones, and what's next.",
+      "products": [
+        "Hykolity Founder's Choice",
+        "Hykolity Heritage Collection"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_12.svg"
+    },
+    {
+      "id": "hykolity_093",
+      "subject": "🍂 Autumn Must-Haves: Upgrade Your Routine",
+      "preheader": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
+      "badge": "Seasonal Launch",
+      "date": "Feb 28, 2026",
+      "time_ago": "7mo",
+      "full_date": "February 28, 2026 at 10:14 AM",
+      "category": "Seasonal Launch",
+      "discount": "Fall Edit",
       "velocity": "3.5/wk",
       "theme": "amber",
-      "hero_headline": "🎁 Seasonal Markdown",
-      "hero_subheadline": "Up to $40 Off",
+      "hero_headline": "🍂 Autumn Must-Haves",
+      "hero_subheadline": "Fall Edit",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "amber",
-      "body": "Our biggest seasonal price drop is officially live. Limited quantities.",
+      "body": "Crisp mornings, new routines. Gear up with essential Hykolity items.",
       "products": [
-        "Hykolity Seasonal Stack",
-        "Hykolity Classic Pack",
-        "Hykolity Gift Duo"
+        "Hykolity Fall Capsule",
+        "Hykolity Warm Palette"
       ],
-      "image_url": "/static/emails/hykolity/tsm_04.svg"
+      "image_url": "/static/emails/hykolity/hykolity_13.svg"
+    },
+    {
+      "id": "hykolity_094",
+      "subject": "⚡ 2-Hour Flash Drop: Secret Link Inside",
+      "preheader": "Only sent to our most engaged subscribers. Don't share this link!",
+      "badge": "Flash Drop",
+      "date": "Feb 25, 2026",
+      "time_ago": "7mo",
+      "full_date": "February 25, 2026 at 10:14 AM",
+      "category": "Flash Drop",
+      "discount": "Secret 40% Off",
+      "velocity": "3.5/wk",
+      "theme": "rose",
+      "hero_headline": "⚡ 2-Hour Flash Drop",
+      "hero_subheadline": "Secret 40% Off",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "rose",
+      "body": "Only sent to our most engaged subscribers. Don't share this link!",
+      "products": [
+        "Hykolity Stealth Edition",
+        "Hykolity Collector's Box"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_14.svg"
     },
     {
       "id": "hykolity_095",
-      "subject": "⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight",
-      "preheader": "Order before midnight to receive guaranteed priority courier delivery.",
-      "badge": "Shipping Promo",
+      "subject": "🌍 Sustainable & Built To Last: Behind The Design",
+      "preheader": "Zero compromises on quality. Why we engineer every piece with care.",
+      "badge": "Brand Mission",
       "date": "Feb 23, 2026",
       "time_ago": "7mo",
       "full_date": "February 23, 2026 at 10:14 AM",
-      "category": "Shipping Promo",
-      "discount": "Free Express Shipping",
-      "velocity": "3.5/wk",
-      "theme": "violet",
-      "hero_headline": "⏰ FINAL HOURS",
-      "hero_subheadline": "Free Express Shipping",
-      "cta": "Shop The Drop",
-      "bg_gradient": "from-slate-800 to-slate-950",
-      "card_accent": "violet",
-      "body": "Order before midnight to receive guaranteed priority courier delivery.",
-      "products": [
-        "Hykolity Core Kit",
-        "Hykolity Carry Bag",
-        "Hykolity Accessories"
-      ],
-      "image_url": "/static/emails/hykolity/tsm_05.svg"
-    },
-    {
-      "id": "hykolity_096",
-      "subject": "🌿 Why Quality Matters: The Hykolity Difference",
-      "preheader": "Behind the scenes of our ethical manufacturing and design philosophy.",
-      "badge": "Brand Story",
-      "date": "Feb 21, 2026",
-      "time_ago": "7mo",
-      "full_date": "February 21, 2026 at 10:14 AM",
-      "category": "Brand Story",
-      "discount": "Sustainable Sourcing",
+      "category": "Brand Mission",
+      "discount": "Eco Certified",
       "velocity": "3.5/wk",
       "theme": "teal",
-      "hero_headline": "🌿 Why Quality Matters",
-      "hero_subheadline": "Sustainable Sourcing",
+      "hero_headline": "🌍 Sustainable & Built To Last",
+      "hero_subheadline": "Eco Certified",
       "cta": "Shop The Drop",
       "bg_gradient": "from-slate-800 to-slate-950",
       "card_accent": "teal",
-      "body": "Behind the scenes of our ethical manufacturing and design philosophy.",
+      "body": "Zero compromises on quality. Why we engineer every piece with care.",
       "products": [
-        "Hykolity Eco Collection",
-        "Hykolity Signature Edition",
-        "Hykolity Lifetime Warranty"
+        "Hykolity Eco Series",
+        "Hykolity Clean Line"
       ],
-      "image_url": "/static/emails/hykolity/tsm_06.svg"
+      "image_url": "/static/emails/hykolity/hykolity_15.svg"
+    },
+    {
+      "id": "hykolity_096",
+      "subject": "🎁 Don't Forget: Your Welcome Credit Expires Tomorrow",
+      "preheader": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "badge": "Account Notice",
+      "date": "Feb 21, 2026",
+      "time_ago": "7mo",
+      "full_date": "February 21, 2026 at 10:14 AM",
+      "category": "Account Notice",
+      "discount": "$15 Voucher",
+      "velocity": "3.5/wk",
+      "theme": "violet",
+      "hero_headline": "🎁 Don't Forget",
+      "hero_subheadline": "$15 Voucher",
+      "cta": "Shop The Drop",
+      "bg_gradient": "from-slate-800 to-slate-950",
+      "card_accent": "violet",
+      "body": "Use code WELCOME at checkout before your exclusive discount expires.",
+      "products": [
+        "Hykolity Starter Set",
+        "Hykolity Gift Card"
+      ],
+      "image_url": "/static/emails/hykolity/hykolity_16.svg"
     }
   ],
   "insights": {

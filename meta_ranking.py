@@ -544,30 +544,93 @@ def generate_dynamic_ranking_dataset(brand_name: str) -> dict:
     total_ads = 248 if "sea moss" in clean.lower() else 185
     eu_uk = int(total_ads * 0.28)
 
-    # Dynamic creative templates
-    templates = [
-        {"title": f"{clean} Essential Core Formula", "days": 180, "copies": 12, "reach": "640K", "spend": "$5.2K", "burn": "$45.2/d", "flag": "🇬🇧", "rank": 1, "best": 1, "gain": 0},
-        {"title": f"Why 50,000+ Customers Switched To {clean}", "days": 145, "copies": 8, "reach": "410K", "spend": "$3.8K", "burn": "$32.1/d", "flag": "🇺🇸", "rank": 2, "best": 2, "gain": 0},
-        {"title": f"Flash Weekend BOGO: Buy 1 Get 1 Free {clean}", "days": 14, "copies": 4, "reach": "280K", "spend": "$2.4K", "burn": "$171.4/d", "flag": "🇪🇺", "rank": 18, "best": 18, "gain": 184},
-        {"title": f"Viral TikTok Sensation: Official {clean}", "days": 9, "copies": 3, "reach": "190K", "spend": "$1.8K", "burn": "$200.0/d", "flag": "🇬🇧", "rank": 26, "best": 26, "gain": 210},
-        {"title": f"Doctor Recommended & Lab Tested {clean}", "days": 210, "copies": 16, "reach": "890K", "spend": "$7.9K", "burn": "$37.6/d", "flag": "🇨🇦", "rank": 5, "best": 3, "gain": -2},
-        {"title": f"New Formula Launch: Upgraded Strength", "days": 6, "copies": 2, "reach": "115K", "spend": "$950", "burn": "$158.3/d", "flag": "🇺🇸", "rank": 42, "best": 42, "gain": 240},
-        {"title": f"Limited Edition Mystery Bundle Deal", "days": 22, "copies": 14, "reach": "1.1M", "spend": "$9.4K", "burn": "$427.2/d", "flag": "🇬🇧", "rank": 35, "best": 35, "gain": 45},
-        {"title": f"Real Customer Transformation Stories", "days": 160, "copies": 5, "reach": "320K", "spend": "$2.7K", "burn": "$16.8/d", "flag": "🇦🇺", "rank": 12, "best": 10, "gain": 4}
-    ]
+    lower = clean.lower()
+    if any(w in lower for w in ["sea moss", "seamoss", "creatine", "vital", "supp", "tea", "herb", "keto", "wellness", "gut", "nutrition", "glow", "mineral"]):
+        sample_images = [
+            "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
+            "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
+            "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+            "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
+            "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80",
+            "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&q=80",
+            "https://images.unsplash.com/photo-1577401239170-897942555fb3?w=600&q=80",
+            "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
+        ]
+        templates = [
+            {"title": f"Raw Wildcrafted {clean} Gel (102 Minerals)", "days": 180, "copies": 12, "reach": "640K", "spend": "$5.2K", "burn": "$45.2/d", "flag": "🇬🇧", "rank": 1, "best": 1, "gain": 0},
+            {"title": f"Why 50,000+ Customers Switched To {clean} Daily", "days": 145, "copies": 8, "reach": "410K", "spend": "$3.8K", "burn": "$32.1/d", "flag": "🇺🇸", "rank": 2, "best": 2, "gain": 0},
+            {"title": f"Flash Weekend BOGO: Buy 1 Sea Moss Jar, Get 1 FREE", "days": 14, "copies": 4, "reach": "280K", "spend": "$2.4K", "burn": "$171.4/d", "flag": "🇪🇺", "rank": 18, "best": 18, "gain": 184},
+            {"title": f"Viral TikTok Gut Health Sensation: Official {clean}", "days": 9, "copies": 3, "reach": "190K", "spend": "$1.8K", "burn": "$200.0/d", "flag": "🇬🇧", "rank": 26, "best": 26, "gain": 210},
+            {"title": f"Doctor Recommended & Third-Party Lab Tested {clean}", "days": 210, "copies": 16, "reach": "890K", "spend": "$7.9K", "burn": "$37.6/d", "flag": "🇨🇦", "rank": 5, "best": 3, "gain": -2},
+            {"title": f"Elderberry Immunity Blend Drop: Extra Strength Formula", "days": 6, "copies": 2, "reach": "115K", "spend": "$950", "burn": "$158.3/d", "flag": "🇺🇸", "rank": 42, "best": 42, "gain": 240},
+            {"title": f"Limited Edition Superfood Detox Bundle Deal", "days": 22, "copies": 14, "reach": "1.1M", "spend": "$9.4K", "burn": "$427.2/d", "flag": "🇬🇧", "rank": 35, "best": 35, "gain": 45},
+            {"title": f"Real 30-Day Gut Transformation Customer Reviews", "days": 160, "copies": 5, "reach": "320K", "spend": "$2.7K", "burn": "$16.8/d", "flag": "🇦🇺", "rank": 12, "best": 10, "gain": 4}
+        ]
+    elif any(w in lower for w in ["momcozy", "baby", "mom", "nurse", "pump", "infant", "maternity", "postpartum", "nursery"]):
+        sample_images = [
+            "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80",
+            "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80",
+            "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80",
+            "https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=80",
+            "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80",
+            "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80",
+            "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=600&q=80",
+            "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=600&q=80"
+        ]
+        templates = [
+            {"title": f"Hands-Free Wearable Breast Pump: Quiet & Cordless", "days": 190, "copies": 15, "reach": "720K", "spend": "$6.1K", "burn": "$51.2/d", "flag": "🇬🇧", "rank": 1, "best": 1, "gain": 0},
+            {"title": f"Over 100,000 Mothers Trust {clean} for Postpartum Comfort", "days": 130, "copies": 9, "reach": "480K", "spend": "$4.2K", "burn": "$35.4/d", "flag": "🇺🇸", "rank": 2, "best": 2, "gain": 0},
+            {"title": f"Baby Sleep Breakthrough: Breathable Swaddle & White Noise", "days": 12, "copies": 4, "reach": "240K", "spend": "$2.1K", "burn": "$175.0/d", "flag": "🇪🇺", "rank": 14, "best": 14, "gain": 190},
+            {"title": f"Hospital Bag Must-Haves Checklist from {clean}", "days": 8, "copies": 3, "reach": "160K", "spend": "$1.5K", "burn": "$187.5/d", "flag": "🇬🇧", "rank": 22, "best": 22, "gain": 225},
+            {"title": f"Lactation Consultant Approved: Pain-Free Gentle Suction", "days": 225, "copies": 18, "reach": "950K", "spend": "$8.4K", "burn": "$37.3/d", "flag": "🇨🇦", "rank": 4, "best": 2, "gain": -1},
+            {"title": f"New Dual-Motor Mobile Pumping Kit Launch Deal", "days": 5, "copies": 2, "reach": "98K", "spend": "$890", "burn": "$178.0/d", "flag": "🇺🇸", "rank": 39, "best": 39, "gain": 260},
+            {"title": f"Complete Nursery Essentials Bundle: Save Up To 40%", "days": 25, "copies": 11, "reach": "820K", "spend": "$7.2K", "burn": "$288.0/d", "flag": "🇬🇧", "rank": 28, "best": 28, "gain": 55},
+            {"title": f"Real Postpartum Mom Stories: Getting Freedom Back", "days": 150, "copies": 6, "reach": "380K", "spend": "$3.1K", "burn": "$20.6/d", "flag": "🇦🇺", "rank": 9, "best": 8, "gain": 3}
+        ]
+    elif any(w in lower for w in ["ridge", "wallet", "tactical", "knife", "edc", "gear", "tool", "ekster", "bellroy"]):
+        sample_images = [
+            "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80",
+            "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
+            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80",
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80",
+            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
+            "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=80",
+            "https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?w=600&q=80",
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"
+        ]
+        templates = [
+            {"title": f"The Original Minimalist RFID Blocking Wallet", "days": 210, "copies": 18, "reach": "920K", "spend": "$8.2K", "burn": "$39.0/d", "flag": "🇬🇧", "rank": 1, "best": 1, "gain": 0},
+            {"title": f"Why 4 Million Men Upgraded Their Bulky Leather Wallet", "days": 160, "copies": 11, "reach": "540K", "spend": "$4.8K", "burn": "$30.0/d", "flag": "🇺🇸", "rank": 2, "best": 2, "gain": 0},
+            {"title": f"Grade 5 Titanium vs Carbon Fiber: Which is Tougher?", "days": 15, "copies": 5, "reach": "310K", "spend": "$2.8K", "burn": "$186.6/d", "flag": "🇪🇺", "rank": 16, "best": 16, "gain": 175},
+            {"title": f"Truck Run-Over Durability Test: Aerospace Plates", "days": 7, "copies": 3, "reach": "180K", "spend": "$1.7K", "burn": "$242.8/d", "flag": "🇬🇧", "rank": 24, "best": 24, "gain": 230},
+            {"title": f"Lifetime Guarantee: The Last Wallet You'll Ever Buy", "days": 240, "copies": 20, "reach": "1.2M", "spend": "$10.5K", "burn": "$43.7/d", "flag": "🇨🇦", "rank": 3, "best": 1, "gain": -1},
+            {"title": f"Limited Edition Forged Pacific Blue Series Dropped", "days": 4, "copies": 2, "reach": "120K", "spend": "$1.1K", "burn": "$275.0/d", "flag": "🇺🇸", "rank": 38, "best": 38, "gain": 270},
+            {"title": f"Father's Day / Holiday EDC Gift Bundle: Cash Strap + Key Case", "days": 20, "copies": 13, "reach": "890K", "spend": "$7.8K", "burn": "$390.0/d", "flag": "🇬🇧", "rank": 30, "best": 30, "gain": 60},
+            {"title": f"Daily Pocket Dump: Streamlined Front-Pocket Carry", "days": 135, "copies": 6, "reach": "340K", "spend": "$2.9K", "burn": "$21.4/d", "flag": "🇦🇺", "rank": 10, "best": 9, "gain": 5}
+        ]
+    else:
+        sample_images = [
+            "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
+            "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&q=80",
+            "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80",
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80",
+            "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80",
+            "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80",
+            "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80"
+        ]
+        templates = [
+            {"title": f"{clean} Essential Core Collection", "days": 180, "copies": 12, "reach": "640K", "spend": "$5.2K", "burn": "$45.2/d", "flag": "🇬🇧", "rank": 1, "best": 1, "gain": 0},
+            {"title": f"Why 50,000+ Customers Switched To {clean}", "days": 145, "copies": 8, "reach": "410K", "spend": "$3.8K", "burn": "$32.1/d", "flag": "🇺🇸", "rank": 2, "best": 2, "gain": 0},
+            {"title": f"Flash Weekend Sale: Buy 1 Get 1 50% Off Everything", "days": 14, "copies": 4, "reach": "280K", "spend": "$2.4K", "burn": "$171.4/d", "flag": "🇪🇺", "rank": 18, "best": 18, "gain": 184},
+            {"title": f"Viral Social Media Sensation: Official {clean}", "days": 9, "copies": 3, "reach": "190K", "spend": "$1.8K", "burn": "$200.0/d", "flag": "🇬🇧", "rank": 26, "best": 26, "gain": 210},
+            {"title": f"Premium Quality Guarantee & 30-Day Free Returns", "days": 210, "copies": 16, "reach": "890K", "spend": "$7.9K", "burn": "$37.6/d", "flag": "🇨🇦", "rank": 5, "best": 3, "gain": -2},
+            {"title": f"New Seasonal Capsule Launch: Limited Units", "days": 6, "copies": 2, "reach": "115K", "spend": "$950", "burn": "$158.3/d", "flag": "🇺🇸", "rank": 42, "best": 42, "gain": 240},
+            {"title": f"Mystery Bundle Deal: Save Up To $60 Today", "days": 22, "copies": 14, "reach": "1.1M", "spend": "$9.4K", "burn": "$427.2/d", "flag": "🇬🇧", "rank": 35, "best": 35, "gain": 45},
+            {"title": f"Real Customer Reviews: Experience The {clean} Difference", "days": 160, "copies": 5, "reach": "320K", "spend": "$2.7K", "burn": "$16.8/d", "flag": "🇦🇺", "rank": 12, "best": 10, "gain": 4}
+        ]
 
     cards = []
-    sample_images = [
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
-        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80",
-        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80",
-        "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80",
-        "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80",
-        "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80",
-        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80",
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80"
-    ]
-
     for idx, t in enumerate(templates):
         is_gain = t["gain"] > 0
         cards.append({

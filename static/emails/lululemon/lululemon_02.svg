@@ -24,7 +24,7 @@
     <text x="250" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" text-anchor="middle">✨</text>
     <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Exclusive Collection</text>
     <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official Lululemon Campaign</text>
-    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">48 hours only. Mix & match across all Lululemon bestsellers....</text>
+    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">48 hours only. Mix &amp; match across all Lululemon bestsellers....</text>
   </g>
   <g transform="translate(150, 640)">
     <rect width="300" height="56" rx="28" fill="#3b82f6"/>

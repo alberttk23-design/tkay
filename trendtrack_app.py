@@ -4669,7 +4669,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
             <!-- Creative Body Preview -->
             <div class="w-full aspect-[3/4] rounded-xl overflow-hidden bg-slate-50 border border-slate-200/70 shadow-2xs group-hover:scale-[1.01] transition-transform duration-200 mb-3">
-              <img src="${imgSrc}" class="w-full h-full object-cover block" alt="${card.subject}" loading="lazy"/>
+              <img src="${imgSrc}" class="w-full h-full object-cover block" alt="${card.subject}" loading="lazy" onerror="this.onerror=null; this.src='/static/emails/card_' + ((globalIdx % 18) + 1) + '.png';"/>
             </div>
           </div>
 
@@ -4839,7 +4839,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <span class="text-xs uppercase font-extrabold tracking-wider text-slate-500">${bName} Official Newsletter</span>
           </div>
           <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-200/90 my-2">
-            <img src="${modalImgSrc}" class="w-full h-auto object-cover block" alt="${card.subject}"/>
+            <img src="${modalImgSrc}" class="w-full h-auto object-cover block" alt="${card.subject}" onerror="this.onerror=null; this.src='/static/emails/card_1.png';"/>
           </div>
           <div class="text-xs text-slate-600 leading-relaxed text-left p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
             ${card.body || ''}
@@ -8157,6 +8157,33 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                     self.wfile.write(f.read())
                 return
             else:
+                if rel_path.endswith(".svg"):
+                    import html
+                    fname = os.path.basename(file_path).replace(".svg", "")
+                    brand_tag = html.escape(fname.split("_")[0].replace("-", " ").title())
+                    svg_fallback = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="fallbackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#fallbackGrad)" rx="24"/>
+  <circle cx="300" cy="300" r="140" fill="#3b82f6" opacity="0.12"/>
+  <text x="300" y="270" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" text-anchor="middle">✉️</text>
+  <text x="300" y="330" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle">{brand_tag}</text>
+  <text x="300" y="365" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" text-anchor="middle">Official Campaign Newsletter • Klaviyo</text>
+  <g transform="translate(180, 560)">
+    <rect width="240" height="48" rx="24" fill="#2563eb"/>
+    <text x="120" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">Shop The Drop →</text>
+  </g>
+</svg>"""
+                    self.send_response(200)
+                    self.send_header("Content-Type", "image/svg+xml")
+                    self.send_header("Cache-Control", "public, max-age=86400")
+                    self.end_headers()
+                    self.wfile.write(svg_fallback.encode("utf-8"))
+                    return
                 self.send_response(404)
                 self.end_headers()
                 return

@@ -21,11 +21,14 @@ def slugify(text: str) -> str:
     s = re.sub(r"[^\w\s-]", "", text.strip().lower())
     return re.sub(r"[-\s]+", "_", s)
 
-def extend_campaigns_to_target(base_campaigns, target_count, themes, brand_name, img_pattern, is_svg=False):
+def extend_campaigns_to_target(base_campaigns, target_count, themes, brand_name, img_pattern, is_svg=False, svg_prefix=None, num_svgs=16):
     """Extend authentic campaigns backward in time to reach the full target count."""
     campaigns = list(base_campaigns)
     if len(campaigns) >= target_count:
         return campaigns[:target_count]
+
+    slug = slugify(brand_name)
+    actual_prefix = svg_prefix or slug
 
     start_date = datetime(2026, 9, 29, 10, 14)
     for i in range(len(base_campaigns), target_count):
@@ -43,11 +46,11 @@ def extend_campaigns_to_target(base_campaigns, target_count, themes, brand_name,
         theme = themes[idx % len(themes)]
         subj, pre, cat, disc, accent, products = theme
 
-        img_idx = (i % 18) + 1
+        img_idx = (i % num_svgs) + 1
         if is_svg:
-            img_url = f"{img_pattern}/tsm_{img_idx:02d}.svg"
+            img_url = f"{img_pattern}/{actual_prefix}_{img_idx:02d}.svg"
         else:
-            img_url = f"{img_pattern}/card_{img_idx}.png"
+            img_url = f"{img_pattern}/card_{(i % 18) + 1}.png"
 
         campaigns.append({
             "id": f"{brand_name.lower().replace(' ', '_')}_{i+1:03d}",
@@ -912,7 +915,9 @@ def generate_true_sea_moss_dataset() -> dict:
         tsm_historical_themes,
         "True Sea Moss",
         "/static/emails/true_sea_moss",
-        is_svg=True
+        is_svg=True,
+        svg_prefix="tsm",
+        num_svgs=18
     )
 
     return {
@@ -980,14 +985,45 @@ def generate_dynamic_dataset(brand_name: str) -> dict:
         (f"📦 Subscribe & Save 20% + Free Express Shipping Every Month", f"Never run out of your daily essentials from {brand_name}.", "Subscription", "20% Off Monthly", "sky", [f"{brand_name} Monthly Refill", f"{brand_name} Bi-Weekly Pack", f"{brand_name} Family Bundle"]),
         (f"🎁 Seasonal Markdown: Save Up To $40 Today", f"Our biggest seasonal price drop is officially live. Limited quantities.", "Seasonal Event", "Up to $40 Off", "amber", [f"{brand_name} Seasonal Stack", f"{brand_name} Classic Pack", f"{brand_name} Gift Duo"]),
         (f"⏰ FINAL HOURS: Free Worldwide Express Shipping Ends Tonight", f"Order before midnight to receive guaranteed priority courier delivery.", "Shipping Promo", "Free Express Shipping", "violet", [f"{brand_name} Core Kit", f"{brand_name} Carry Bag", f"{brand_name} Accessories"]),
-        (f"🌿 Why Quality Matters: The {brand_name} Difference", f"Behind the scenes of our ethical manufacturing and design philosophy.", "Brand Story", "Sustainable Sourcing", "teal", [f"{brand_name} Eco Collection", f"{brand_name} Signature Edition", f"{brand_name} Lifetime Warranty"])
+        (f"🌿 Why Quality Matters: The {brand_name} Difference", f"Behind the scenes of our ethical manufacturing and design philosophy.", "Brand Story", "Sustainable Sourcing", "teal", [f"{brand_name} Eco Collection", f"{brand_name} Signature Edition", f"{brand_name} Lifetime Warranty"]),
+        (f"🏆 Best of 2026: The Top Rated {brand_name} Picks", f"Voted by thousands of loyal community members this season.", "Best Sellers", "Top Sellers", "emerald", [f"{brand_name} Award Winner", f"{brand_name} Deluxe Pack", f"{brand_name} Starter Kit"]),
+        (f"💡 How To Get The Most Out Of Your {brand_name}", f"3 expert tips from our team to maximize your daily results.", "Educational", "Pro Guide", "sky", [f"{brand_name} Maintenance Kit", f"{brand_name} Replacement Parts", f"{brand_name} User Manual"]),
+        (f"🎉 Restock Alert: Back By Popular Demand", f"The item you've been waiting for is finally back in stock in limited units.", "Restock", "Restock Live", "indigo", [f"{brand_name} Iconic Batch", f"{brand_name} Reserve Edition", f"{brand_name} Bundle"]),
+        (f"💌 A Special Thank You From The {brand_name} Founder", f"A personal note on our mission, milestones, and what's next.", "Founder Note", "Community Love", "pink", [f"{brand_name} Founder's Choice", f"{brand_name} Heritage Collection"]),
+        (f"🍂 Autumn Must-Haves: Upgrade Your Routine", f"Crisp mornings, new routines. Gear up with essential {brand_name} items.", "Seasonal Launch", "Fall Edit", "amber", [f"{brand_name} Fall Capsule", f"{brand_name} Warm Palette"]),
+        (f"⚡ 2-Hour Flash Drop: Secret Link Inside", f"Only sent to our most engaged subscribers. Don't share this link!", "Flash Drop", "Secret 40% Off", "rose", [f"{brand_name} Stealth Edition", f"{brand_name} Collector's Box"]),
+        (f"🌍 Sustainable & Built To Last: Behind The Design", f"Zero compromises on quality. Why we engineer every piece with care.", "Brand Mission", "Eco Certified", "teal", [f"{brand_name} Eco Series", f"{brand_name} Clean Line"]),
+        (f"🎁 Don't Forget: Your Welcome Credit Expires Tomorrow", f"Use code WELCOME at checkout before your exclusive discount expires.", "Account Notice", "$15 Voucher", "violet", [f"{brand_name} Starter Set", f"{brand_name} Gift Card"])
     ]
 
-    # Generate 8 SVGs if missing
+    # Generate 16 SVGs if missing
+    import html
+    def xml_esc(val):
+        return html.escape(str(val), quote=True)
+
     for idx, t in enumerate(dynamic_themes):
         svg_filename = f"{slug}_{idx+1:02d}.svg"
         svg_path = os.path.join(brand_dir, svg_filename)
-        if not os.path.exists(svg_path):
+        # Always regenerate if missing or contains unescaped ampersand
+        needs_write = not os.path.exists(svg_path)
+        if not needs_write:
+            try:
+                with open(svg_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    if "& " in content or " &" in content:
+                        needs_write = True
+            except Exception:
+                needs_write = True
+
+        if needs_write:
+            brand_esc = xml_esc(brand_name)
+            cat_esc = xml_esc(category)
+            badge_esc = xml_esc(t[2])
+            title_esc = xml_esc(t[0][:32])
+            disc_esc = xml_esc(t[3])
+            hero_esc = xml_esc(hero_item)
+            body_esc = xml_esc(f"{t[1][:80]}...")
+
             svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
   <defs>
     <linearGradient id="grad_{idx}" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -999,28 +1035,28 @@ def generate_dynamic_dataset(brand_name: str) -> dict:
   <circle cx="500" cy="150" r="180" fill="#3b82f6" opacity="0.1"/>
   <circle cx="100" cy="650" r="160" fill="#10b981" opacity="0.08"/>
   <g transform="translate(50, 45)">
-    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">{brand_name.upper()}</text>
-    <text x="500" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">{category}</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">{brand_esc.upper()}</text>
+    <text x="500" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">{cat_esc}</text>
   </g>
   <g transform="translate(50, 110)">
     <rect width="140" height="28" rx="14" fill="#2563eb"/>
-    <text x="70" y="19" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">{t[2]}</text>
+    <text x="70" y="19" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">{badge_esc}</text>
   </g>
-  <text x="50" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="30" font-weight="900" fill="#ffffff">{t[0][:32]}</text>
-  <text x="50" y="225" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800" fill="#60a5fa">{t[3]}</text>
+  <text x="50" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="900" fill="#ffffff">{title_esc}</text>
+  <text x="50" y="225" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800" fill="#60a5fa">{disc_esc}</text>
   <g transform="translate(50, 260)">
     <rect width="500" height="340" rx="20" fill="#ffffff" opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
     <circle cx="250" cy="150" r="80" fill="#3b82f6" opacity="0.2"/>
     <text x="250" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" text-anchor="middle">✨</text>
-    <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">{hero_item}</text>
-    <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official {brand_name} Campaign</text>
-    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">{t[1][:80]}...</text>
+    <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">{hero_esc}</text>
+    <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official {brand_esc} Campaign</text>
+    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">{body_esc}</text>
   </g>
   <g transform="translate(150, 640)">
     <rect width="300" height="56" rx="28" fill="#3b82f6"/>
     <text x="150" y="34" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">Shop The Drop →</text>
   </g>
-  <text x="300" y="740" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">{brand_name} Official Newsletters • Sent via Klaviyo</text>
+  <text x="300" y="740" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">{brand_esc} Official Newsletters • Sent via Klaviyo</text>
 </svg>'''
             try:
                 with open(svg_path, "w", encoding="utf-8") as f:
@@ -1034,7 +1070,9 @@ def generate_dynamic_dataset(brand_name: str) -> dict:
         dynamic_themes,
         brand_name,
         f"/static/emails/{slug}",
-        is_svg=True
+        is_svg=True,
+        svg_prefix=slug,
+        num_svgs=len(dynamic_themes)
     )
 
     return {

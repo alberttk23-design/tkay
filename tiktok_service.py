@@ -581,8 +581,168 @@ class TikTokIntelligenceEngine:
         return data
 
     @classmethod
+    def _detect_niche(cls, clean_name: str) -> dict:
+        """Determines brand industry niche, selecting authentic photos, captions, and category mix."""
+        lower = clean_name.lower()
+        if any(w in lower for w in ["sea moss", "seamoss", "creatine", "vital", "supp", "tea", "herb", "keto", "wellness", "gut", "nutrition", "glow", "mineral"]):
+            return {
+                "niche": "superfood",
+                "photos": [
+                    "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
+                    "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
+                    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+                    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80",
+                    "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80",
+                    "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&q=80",
+                    "https://images.unsplash.com/photo-1577401239170-897942555fb3?w=600&q=80",
+                    "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
+                ],
+                "cat_configs": [
+                    ("Health & Gut", "🌿", 60),
+                    ("Daily Routine", "☕", 18),
+                    ("Doctor Review", "🩺", 10),
+                    ("Smoothie Recipes", "🥤", 7),
+                    ("Customer Reviews", "⭐", 5)
+                ],
+                "captions": [
+                    f"Took 2 spoonfuls of our fresh {clean_name} gel every morning for 30 days... look at my skin! 🌿 #guthealth",
+                    f"Doctor breaks down why 90% of adults are mineral deficient and how {clean_name} helps 🧪✨",
+                    f"POV: Ditching synthetic multivitamins for 92 raw bioavailable minerals from St. Lucia 🌊 #{cls._slugify(clean_name)}",
+                    f"Morning antioxidant smoothie recipe: 1 tbsp {clean_name} gold gel + mango + coconut water 🥭🔥",
+                    f"Restocking our cold-press warehouse with fresh organic batches! Order before sold out 📦",
+                    f"Customer transformation: How daily {clean_name} completely reset my digestion in 3 weeks ⭐",
+                    f"Wild ocean harvest straight from protected marine reserves in St. Lucia 🏝️ #superfood",
+                    f"Team blind taste test: Elderberry vs Gold Sea Moss Gel! Which flavor won? 🥄😋"
+                ]
+            }
+        elif any(w in lower for w in ["momcozy", "baby", "mom", "nurse", "pump", "infant", "maternity", "postpartum", "nursery"]):
+            return {
+                "niche": "baby_maternity",
+                "photos": [
+                    "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&q=80",
+                    "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80",
+                    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80",
+                    "https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=80",
+                    "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80",
+                    "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80",
+                    "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=600&q=80",
+                    "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=600&q=80"
+                ],
+                "cat_configs": [
+                    ("Mom Life & Hacks", "👶", 62),
+                    ("Hands-Free Pumping", "🍼", 18),
+                    ("Hospital Bag Tips", "👜", 10),
+                    ("Baby Sleep", "🌙", 6),
+                    ("Product Demo", "⚙️", 4)
+                ],
+                "captions": [
+                    f"Pumping while driving with zero cords and zero leaks 🍼 Hands-free freedom! #momlife #{cls._slugify(clean_name)}",
+                    f"Hospital bag must-haves that actually saved my sanity postpartum 👶👜 #firsttimemom",
+                    f"Whisper quiet test: Can baby sleep right next to our {clean_name} wearable breast pump? 🤫🤍",
+                    f"POV: You're no longer trapped next to a wall plug 4 times a day 🎉 #{cls._slugify(clean_name)}",
+                    f"First-time mom vs second-time mom: Things I stopped stressing about after week 2 🤍",
+                    f"Restocking our nursery cart with breathable swaddles and soothing sound machine 🧸",
+                    f"Lactation consultant demonstrates how to measure correct flange size in 30 seconds ✨",
+                    f"Late night pumping check-in for all the 3AM superhero mamas out there 🌙☕"
+                ]
+            }
+        elif any(w in lower for w in ["ridge", "wallet", "tactical", "knife", "edc", "gear", "tool", "ekster", "bellroy"]):
+            return {
+                "niche": "edc_gear",
+                "photos": [
+                    "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80",
+                    "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
+                    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80",
+                    "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80",
+                    "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
+                    "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=80",
+                    "https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?w=600&q=80",
+                    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"
+                ],
+                "cat_configs": [
+                    ("EDC Pocket Dump", "💳", 58),
+                    ("Durability Tests", "🔨", 20),
+                    ("RFID Protection", "🛡️", 12),
+                    ("Travel & TSA", "✈️", 6),
+                    ("Product Demo", "⚙️", 4)
+                ],
+                "captions": [
+                    f"Why are people still carrying a 3-inch thick leather costanza wallet in 2026? 🤦‍♂️ Ditch the bulk #edc #{cls._slugify(clean_name)}",
+                    f"Running over our Grade 5 Titanium plates with an off-road truck... will it bend? 🛞💥",
+                    f"Live RFID skimming scanner test at airport security: {clean_name} aerospace plates vs scanners 💳🛡️",
+                    f"Daily pocket dump: Titanium keycase, brass pen, and our {clean_name} matte gunmetal wallet 🔥",
+                    f"5-year durability check: Scratched up but elastic band still holds 12 cards tight 🦾",
+                    f"Unboxing the limited forged carbon fiber series. Matte weave in sunlight is unreal ✨",
+                    f"From thick back-pocket nerve pain to slim front-pocket carry. Your spine will thank you 🙏",
+                    f"Assembling the modular cash strap and coin tray in under 60 seconds ⏱️"
+                ]
+            }
+        elif any(w in lower for w in ["crzyoga", "lululemon", "gymshark", "alo", "gym", "fit", "active", "legging", "sport", "yoga", "athletic"]):
+            return {
+                "niche": "fitness_apparel",
+                "photos": [
+                    "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80",
+                    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80",
+                    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+                    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+                    "https://images.unsplash.com/photo-1483721074577-838b975e536f?w=600&q=80",
+                    "https://images.unsplash.com/photo-1486218119243-13883505764c?w=600&q=80",
+                    "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=600&q=80",
+                    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80"
+                ],
+                "cat_configs": [
+                    ("Activewear Sets", "🧘", 62),
+                    ("Squat Proof Tests", "🏋️", 18),
+                    ("Try-On Haul", "👗", 11),
+                    ("Fabric Review", "✨", 6),
+                    ("Gym Routine", "💪", 3)
+                ],
+                "captions": [
+                    f"Testing if these butter-soft {clean_name} leggings pass the strict 200lb gym squat test 🏋️‍♀️ #activewear",
+                    f"Honest try-on haul: Which colorway is your favorite for autumn workout sessions? 🍂 #{cls._slugify(clean_name)}",
+                    f"The seamless high-waist band that stays completely locked in during sprints 🏃‍♀️💨",
+                    f"Blind fabric touch test: Can our team tell the difference between $120 luxury and {clean_name}? 🤫",
+                    f"Gym-to-street styling: 3 outfits with our four-way stretch athletic flare pants ✨",
+                    f"Restocking the core compression collection! Grab yours before popular sizes sell out 📦",
+                    f"Zero front seam, sweat-wicking tech, and pocket deep enough for iPhone Pro Max 📱",
+                    f"Behind the design: How we engineer breathable matte fabrics without polyester shine 🔬"
+                ]
+            }
+        else:
+            return {
+                "niche": "general_apparel",
+                "photos": [
+                    "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
+                    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80",
+                    "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&q=80",
+                    "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80",
+                    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80",
+                    "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80",
+                    "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80",
+                    "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80"
+                ],
+                "cat_configs": [
+                    ("Best Sellers", "✨", 60),
+                    ("Product Unboxing", "📦", 20),
+                    ("Behind The Scenes", "🎬", 10),
+                    ("Customer Reviews", "⭐", 6),
+                    ("Daily Life", "☕", 4)
+                ],
+                "captions": [
+                    f"Behind the scenes at {clean_name} headquarters! Which design is your favorite? ✨ #{cls._slugify(clean_name)}",
+                    f"Unboxing our newly restocked customer favorites! Watch till the end for a surprise 🎁",
+                    f"Why 40,000+ customers switched to {clean_name} this year. Real feedback inside ⭐",
+                    f"POV: Opening your {clean_name} package on a Friday afternoon 🎉 Shop link in bio!",
+                    f"Restocking day! The team packing hundreds of orders with love and fast shipping 📦💨",
+                    f"Quality check: How we test every single batch before it leaves our facility 🔬",
+                    f"Limited weekend drop is officially live! Grab yours before inventory runs out 🔥",
+                    f"Drop your questions below! Our product designers are replying in the comments 👇"
+                ]
+            }
+
+    @classmethod
     def _generate_synthetic_brand_tiktok(cls, brand_name: str) -> dict:
-        """Generates realistic TikTok workspace data for any queried brand."""
+        """Generates realistic, niche-tailored TikTok workspace data for any queried brand."""
         clean_name = brand_name.strip().title()
         hash_seed = sum(ord(c) for c in clean_name)
         total_tiktoks = 180 + (hash_seed % 450)
@@ -591,14 +751,14 @@ class TikTokIntelligenceEngine:
         ads_pct = 25 + (hash_seed % 20)
         organics_pct = 100 - ads_pct
 
-        # Categories
+        niche_data = cls._detect_niche(clean_name)
+        cat_configs_raw = niche_data["cat_configs"]
+        photos = niche_data["photos"]
+        captions = niche_data["captions"]
+
         cat_configs = [
-            ("Outfit", "👕", int(total_tiktoks * 0.65), 65),
-            ("Daily Life", "☕", int(total_tiktoks * 0.18), 18),
-            ("Lipsync", "🎤", int(total_tiktoks * 0.08), 8),
-            ("Others", "···", int(total_tiktoks * 0.04), 4),
-            ("Singing & Dancing", "💃", int(total_tiktoks * 0.03), 3),
-            ("Comedy", "😂", int(total_tiktoks * 0.02), 2)
+            (c[0], c[1], int(total_tiktoks * (c[2] / 100.0)), c[2])
+            for c in cat_configs_raw
         ]
 
         # Growth line
@@ -609,18 +769,6 @@ class TikTokIntelligenceEngine:
         aug_v = int(views_m * 1000 * 0.88)
         sep_v = int(views_m * 1000 * 1.0)
 
-        # Videos pool
-        photos = [
-            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
-            "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80",
-            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80",
-            "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80",
-            "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=600&q=80",
-            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-            "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80"
-        ]
-
         videos = []
         for i in range(12):
             is_ad = (i % 3 != 0)
@@ -629,6 +777,9 @@ class TikTokIntelligenceEngine:
             v_comments = int(v_likes * 0.02)
             v_bookmarks = int(v_likes * 0.03)
             v_shares = int(v_likes * 0.01)
+
+            main_cat = cat_configs_raw[i % len(cat_configs_raw)][0]
+            cap_text = captions[i % len(captions)]
 
             videos.append({
                 "id": f"tt_{cls._slugify(clean_name)}_{i+1:03d}",
@@ -647,7 +798,7 @@ class TikTokIntelligenceEngine:
                 "bookmarks_fmt": f"{v_bookmarks:,}",
                 "shares": v_shares,
                 "shares_fmt": f"{v_shares:,}",
-                "caption": f"Behind the scenes at {clean_name} ✨ Drop your questions below! #fyp #{cls._slugify(clean_name)}",
+                "caption": cap_text,
                 "handle": f"@{cls._slugify(clean_name)}",
                 "author_name": clean_name,
                 "country_flag": "🇺🇸",
@@ -655,7 +806,7 @@ class TikTokIntelligenceEngine:
                 "sound": f"original sound - {clean_name}",
                 "cover_url": photos[i % len(photos)],
                 "video_url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                "category": "Outfit" if i % 2 == 0 else "Daily Life",
+                "category": main_cat,
                 "language": "English",
                 "days_running": 14 + i * 22
             })
