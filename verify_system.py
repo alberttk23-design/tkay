@@ -124,6 +124,18 @@ def verify_zero_hallucination():
             log_fail("Meta Ranking API: Phát hiện thẻ xếp hạng giả mạo lấy từ Unsplash!")
             all_ok = False
 
+    # 4. Test Google Ads API
+    ok, gg_data = check_api_endpoint("/api/google-ads")
+    if ok and gg_data:
+        g_active = gg_data.get("active_ads", -1)
+        g_total = gg_data.get("total_ads", gg_data.get("total_estimated", -1))
+        g_cards = len(gg_data.get("ad_cards", gg_data.get("library_cards", [])))
+        if g_active == 0 and g_total == 0 and g_cards == 0:
+            log_pass("Google Ads API: Trả về chính xác 0 ads cho brand lạ (Zero-Hallucination chuẩn xác)")
+        else:
+            log_fail(f"Google Ads API bị dính dữ liệu giả! active={g_active}, total={g_total}, cards={g_cards}")
+            all_ok = False
+
     return all_ok
 
 def main():

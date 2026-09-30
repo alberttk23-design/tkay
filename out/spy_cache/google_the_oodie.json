@@ -1,0 +1,561 @@
+{
+  "brand": "The Oodie",
+  "found": true,
+  "data_source": "live_rpc",
+  "advertiser": {
+    "advertiser_id": "AR07524972952463343617",
+    "advertiser_name": "Davie Group Trading (Australia) Pty Ltd",
+    "country": "AU",
+    "ad_count_min": "46",
+    "ad_count_max": "46"
+  },
+  "total_analyzed": 44,
+  "total_estimated": 2555,
+  "active_ads": 542,
+  "format_mix_total": 1891,
+  "format_mix": {
+    "Video": {
+      "count": 2,
+      "pct": 4.5
+    },
+    "Text": {
+      "count": 23,
+      "pct": 52.3
+    },
+    "Image": {
+      "count": 19,
+      "pct": 43.2
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 23,
+      "pct": 52.3
+    },
+    "Other": {
+      "count": 19,
+      "pct": 43.2
+    },
+    "YouTube": {
+      "count": 2,
+      "pct": 4.5
+    },
+    "Shopping": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 8,
+      "pct": 18.2
+    },
+    "31-90 d": {
+      "count": 8,
+      "pct": 18.2
+    },
+    "91-180 d": {
+      "count": 11,
+      "pct": 25.0
+    },
+    "181-365 d": {
+      "count": 13,
+      "pct": 29.5
+    },
+    "365 d +": {
+      "count": 4,
+      "pct": 9.1
+    }
+  },
+  "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 874,
+      "pct": 39.3
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "count": 874,
+      "pct": 39.3
+    },
+    "NZ": {
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "count": 474,
+      "pct": 21.3
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR02776462195247022081",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1092,
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 04, 2023",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16554349975288460105",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR05093928210597412865",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 849,
+      "reach_tag": "350K-400K",
+      "first_shown": "Jun 03, 2024",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8618993767203543068",
+      "domain": "ca.theoodie.com",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR07449520083698712577",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 768,
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 23, 2024",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13909984466849792826",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR11917040714472488961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 587,
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 20, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=733871318768&uiFeatures=12,54&adGroupId=180483394972&itemIds=6616189457536058052&sig=ACiVB_yydn0eMAsEh6Mwc5H7fUh1OhFHPA&htmlParentId=fletch-render-10834676648669648487&responseCallback=fletchCallback10834676648669648487",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR00553042236963553281",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 300,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/237346350068266837",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR18117883976952578049",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 300,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3097378147&creativeId=786880713341&uiFeatures=12,54&adGroupId=190366346860&itemIds=1759278417338131254&sig=ACiVB_yVeBuE8VTl0ve1rllwrUkpWnk0nA&htmlParentId=fletch-render-15028716243691280246&responseCallback=fletchCallback15028716243691280246",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR01880634108674048001",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 222,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=1462291200&creativeId=797858150329&uiFeatures=12,54&adGroupId=196211246849&itemIds=9355086779278744828&sig=ACiVB_wwL7pXj4C_QSHGor-DnOrJSwKlLg&htmlParentId=fletch-render-4104776569432584201&responseCallback=fletchCallback4104776569432584201",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR06537457690761756673",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 221,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6290662769352556723",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,437"
+      },
+      "return_policy": "30-day return policy"
+    },
+    {
+      "creative_id": "CR14832370910480039937",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 218,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/406530992943791055",
+      "domain": "ca.theoodie.com",
+      "country_flag": "🇨🇦",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR11173266581985689601",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 217,
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 25, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=7232773999&creativeId=797855169979&uiFeatures=12,54&adGroupId=197320713590&itemIds=9951935041778086363&sig=ACiVB_wnvtsjGICL5TAibHELwiT2VMni5Q&htmlParentId=fletch-render-17335336092542284020&responseCallback=fletchCallback17335336092542284020",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR08641858075138981889",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 202,
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 12, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=799889858793&uiFeatures=12,54&adGroupId=193386574719&itemIds=6983572065987779204&sig=ACiVB_yAfWSw63xe3sSHwuSxyFjaqhZmeQ&htmlParentId=fletch-render-15058698435156758652&responseCallback=fletchCallback15058698435156758652",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR15412572613658017793",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 199,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 15, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=798885965241&uiFeatures=12,54&adGroupId=193319772946&assets=%3DH4sIAAAAAAAAAOPS4eLk-DX975WnnAKsXJwc_x8fXvmUU4CRi5OjddqHvnYWATYuTo4pT8CizAAEbZ4QLgAAAA&sig=ACiVB_xU0bIBNr6JE8c91SVzUJW1YlwCbA&htmlParentId=fletch-render-13004550313055584798&responseCallback=fletchCallback13004550313055584798",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR09868574333436166145",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16273118395217097348",
+      "domain": "ca.theoodie.com",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR12516406690574237697",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8764671239590627643",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR09697906558024810497",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5426133746685023408",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR11408884570834075649",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13751821622916573550",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR01303880748838682625",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 190,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=801689286840&uiFeatures=12,54&adGroupId=194288091283&itemIds=11204114346087404782&sig=ACiVB_x8K8_f39QGlWrV-y1sMEr4rWBkXQ&htmlParentId=fletch-render-14472882800105020021&responseCallback=fletchCallback14472882800105020021",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR07700943577966182401",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 165,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 18, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11470191245508561454",
+      "domain": "ca.theoodie.com",
+      "country_flag": "🇨🇦",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR08459954046805999617",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 163,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 20, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=805199144845&uiFeatures=12,54&adGroupId=196149981780&assets=%3DH4sIAAAAAAAAAAFCAL3_CkAKCQjbla36lQoQAgoICO27oI4-EAEKCQiM2tKZiQQQKQoJCJjqopydChAMCggIlKiXt0YQKAoJCK28ipipBBAGAPvgOEIAAAA&allowedVariations=46&sig=ACiVB_yI8R0VBpIoy4JrSvSfdGRTda5bbw&htmlParentId=fletch-render-8254831547206385610&responseCallback=fletchCallback8254831547206385610",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR11474891002628538369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 161,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 22, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2464619614294561420",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR06091998182630227969",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 148,
+      "reach_tag": "Global ads",
+      "first_shown": "May 05, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=807739071109&uiFeatures=12,54&adGroupId=196528644695&itemIds=7019005456294304496&sig=ACiVB_xUH9J6hWAg_5e2z8Z-hswZ1sPMOw&htmlParentId=fletch-render-16390736445287576887&responseCallback=fletchCallback16390736445287576887",
+      "domain": "us.theoodie.com",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": [
+        {
+          "title": "Shop The Oodie >",
+          "snippet": "Explore official products direct from The Oodie..."
+        },
+        {
+          "title": "Special Deals >",
+          "snippet": "Save on bestsellers and bundles today..."
+        }
+      ],
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR07228009748157693953",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 147,
+      "reach_tag": "Global ads",
+      "first_shown": "May 05, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9929724084310122333",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR03024142213199167489",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 136,
+      "reach_tag": "Global ads",
+      "first_shown": "May 17, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=807819491507&uiFeatures=12,54&adGroupId=195866630869&versionId=1&assets=%3DH4sIAAAAAAAAAOPS4eLkOPt90ZnNXAKsXJwcfbfXz9jCJcDMxcnROu1DXzuLABsXJ8f_W2BRRgAB5finLgAAAA&sig=ACiVB_wkjYX9aYI_z853yYTdhnjv1EC_zw&htmlParentId=fletch-render-16090520957440747813&responseCallback=fletchCallback16090520957440747813",
+      "domain": "ca.theoodie.com",
+      "country_flag": "🇨🇦",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": [
+        {
+          "title": "Robes",
+          "snippet": ""
+        },
+        {
+          "title": "New ONE PIECE Collection",
+          "snippet": ""
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy"
+    },
+    {
+      "creative_id": "CR00660264506370293761",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 134,
+      "reach_tag": "Global ads",
+      "first_shown": "May 19, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=809286365245&uiFeatures=12,54&adGroupId=197094749416&itemIds=2951097581296720345&sig=ACiVB_ymm9PIN3XWvHXnJIjANCcMTjtfSw&htmlParentId=fletch-render-4304923017334340854&responseCallback=fletchCallback4304923017334340854",
+      "domain": "www.theoodie.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    }
+  ],
+  "scanned_at": "2026-09-30T17:37:32.141029"
+}
