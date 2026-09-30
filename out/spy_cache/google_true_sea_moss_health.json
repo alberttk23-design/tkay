@@ -1,10 +1,10 @@
 {
-  "brand": "Creatine Guru",
+  "brand": "True Sea Moss Health",
   "found": false,
   "data_source": "no_data",
   "advertiser": {
     "advertiser_id": null,
-    "advertiser_name": "Creatine Guru",
+    "advertiser_name": "True Sea Moss Health",
     "country": "US",
     "ad_count_min": "1000",
     "ad_count_max": "2000"
@@ -86,5 +86,5 @@
     "User interest": 0.0
   },
   "ad_cards": [],
-  "scanned_at": "2026-09-30T11:42:54.868416"
+  "scanned_at": "2026-09-30T11:48:36.701539"
 }

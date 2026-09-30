@@ -3350,7 +3350,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (googleBtn) googleBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.remove('hidden');
-        loadGoogleAdsView(currentData ? currentData.name : 'The Oodie');
+        const gBrand = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        loadGoogleAdsView(gBrand);
       } else if (tab === 'meta') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
@@ -5904,57 +5905,74 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
 
       let cards = customCards || (currentGoogleData && currentGoogleData.ad_cards) || [];
+      const isOodie = brandName.toLowerCase().includes('oodie');
+
       if (!cards || cards.length === 0) {
-        cards = [
-          {
-            id: 'gad_1',
-            active: true,
-            days_running: 6,
-            date_range: '6d · Sep 23 → now',
-            country: 'CA',
-            flag: '🇨🇦',
-            platform: 'Other',
-            format: 'Image',
-            headline: 'Naruto Itachi Akatsuki Blanket Hoodie',
-            image_url: '/static/google_creatives/naruto_itachi.svg'
-          },
-          {
-            id: 'gad_2',
-            active: true,
-            days_running: 6,
-            date_range: '6d · Sep 23 → now',
-            country: 'CA',
-            flag: '🇨🇦',
-            platform: 'Shopping',
-            format: 'Image',
-            headline: 'Miffy Oodie Original Wearabl',
-            image_url: '/static/google_creatives/miffy_shopping.svg'
-          },
-          {
-            id: 'gad_3',
-            active: true,
-            days_running: 7,
-            date_range: '7d · Sep 22 → now',
-            country: 'AU',
-            flag: '🇦🇺',
-            platform: 'Other',
-            format: 'Image',
-            headline: 'Moss Green Sherpa Fleece...',
-            image_url: '/static/google_creatives/moss_green.svg'
-          },
-          {
-            id: 'gad_4',
-            active: true,
-            days_running: 7,
-            date_range: '7d · Sep 22 → now',
-            country: 'AU',
-            flag: '🇦🇺',
-            platform: 'Other',
-            format: 'Image',
-            headline: 'Pastel Wave Sherpa Fleece...',
-            image_url: '/static/google_creatives/pastel_wave.svg'
-          }
-        ];
+        if (isOodie) {
+          cards = [
+            {
+              id: 'gad_1',
+              active: true,
+              days_running: 6,
+              date_range: '6d · Sep 23 → now',
+              country: 'CA',
+              flag: '🇨🇦',
+              platform: 'Other',
+              format: 'Image',
+              headline: 'Naruto Itachi Akatsuki Blanket Hoodie',
+              image_url: '/static/google_creatives/naruto_itachi.svg'
+            },
+            {
+              id: 'gad_2',
+              active: true,
+              days_running: 6,
+              date_range: '6d · Sep 23 → now',
+              country: 'CA',
+              flag: '🇨🇦',
+              platform: 'Shopping',
+              format: 'Image',
+              headline: 'Miffy Oodie Original Wearabl',
+              image_url: '/static/google_creatives/miffy_shopping.svg'
+            },
+            {
+              id: 'gad_3',
+              active: true,
+              days_running: 7,
+              date_range: '7d · Sep 22 → now',
+              country: 'AU',
+              flag: '🇦🇺',
+              platform: 'Other',
+              format: 'Image',
+              headline: 'Moss Green Sherpa Fleece...',
+              image_url: '/static/google_creatives/moss_green.svg'
+            },
+            {
+              id: 'gad_4',
+              active: true,
+              days_running: 7,
+              date_range: '7d · Sep 22 → now',
+              country: 'AU',
+              flag: '🇦🇺',
+              platform: 'Other',
+              format: 'Image',
+              headline: 'Pastel Wave Sherpa Fleece...',
+              image_url: '/static/google_creatives/pastel_wave.svg'
+            }
+          ];
+        } else {
+          grid.innerHTML = `
+            <div class="col-span-full py-16 text-center text-slate-500">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo Google nào cho "${brandName}"</div>
+              <div class="text-xs text-slate-400 mt-1">Thương hiệu này hiện không có chiến dịch Google Search hoặc Shopping Ads hoạt động.</div>
+            </div>
+          `;
+          const countEl = document.getElementById('googleLibraryAdsCount');
+          if (countEl) countEl.textContent = '0 ads';
+          return;
+        }
       }
 
       const countEl = document.getElementById('googleLibraryAdsCount');
