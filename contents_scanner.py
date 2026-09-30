@@ -576,10 +576,25 @@ def get_contents_data(brand_name: str = "The Oodie") -> dict:
         return _get_oodie_contents_data(brand_name)
 
     # Search in spy_cache for real scanned ads
-    cache_candidates = [
+    alias_map = {
+        "true sea moss": "true_sea_moss.json",
+        "trueseamoss": "true_sea_moss.json",
+        "trueseamoss.com": "true_sea_moss.json",
+        "seamoss": "true_sea_moss.json",
+        "crz yoga": "crzyoga.json",
+        "crzyoga": "crzyoga.json",
+        "momcozy": "momcozy.json",
+        "ridge": "ridge.json",
+        "gymshark": "gymshark.json"
+    }
+    cache_candidates = []
+    if clean in alias_map:
+        cache_candidates.append(os.path.join(CACHE_DIR, alias_map[clean]))
+    cache_candidates.extend([
         os.path.join(CACHE_DIR, f"{slug}.json"),
-        os.path.join(CACHE_DIR, f"{clean.replace(' ', '')}.json")
-    ]
+        os.path.join(CACHE_DIR, f"{clean.replace(' ', '')}.json"),
+        os.path.join(CACHE_DIR, f"{clean.replace(' ', '_')}.json")
+    ])
     for c_path in cache_candidates:
         if os.path.exists(c_path):
             try:

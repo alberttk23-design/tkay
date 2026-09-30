@@ -848,15 +848,37 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
         data = generate_ranking_dataset_for_oodie()
     else:
         # Check if real scanned brand ads exist
-        real_ads_file = os.path.join(CACHE_DIR, f"{slug}.json")
+        alias_map = {
+            "true sea moss": "true_sea_moss.json",
+            "trueseamoss": "true_sea_moss.json",
+            "trueseamoss.com": "true_sea_moss.json",
+            "seamoss": "true_sea_moss.json",
+            "crz yoga": "crzyoga.json",
+            "crzyoga": "crzyoga.json",
+            "momcozy": "momcozy.json",
+            "ridge": "ridge.json",
+            "gymshark": "gymshark.json"
+        }
+        candidates = []
+        if lower in alias_map:
+            candidates.append(os.path.join(CACHE_DIR, alias_map[lower]))
+        candidates.extend([
+            os.path.join(CACHE_DIR, f"{slug}.json"),
+            os.path.join(CACHE_DIR, f"{lower.replace(' ', '')}.json"),
+            os.path.join(CACHE_DIR, f"{lower.replace(' ', '_')}.json")
+        ])
         data = None
-        if os.path.exists(real_ads_file):
-            try:
-                with open(real_ads_file, "r", encoding="utf-8") as f:
-                    b_data = json.load(f)
-                    data = _generate_ranking_from_scanned_ads(brand_name, slug, b_data)
-            except Exception:
-                pass
+        for real_ads_file in candidates:
+            if os.path.exists(real_ads_file):
+                try:
+                    with open(real_ads_file, "r", encoding="utf-8") as f:
+                        b_data = json.load(f)
+                        if b_data.get("ads"):
+                            data = _generate_ranking_from_scanned_ads(brand_name, slug, b_data)
+                            if data:
+                                break
+                except Exception:
+                    pass
         if not data:
             data = generate_dynamic_ranking_dataset(brand_name)
 
