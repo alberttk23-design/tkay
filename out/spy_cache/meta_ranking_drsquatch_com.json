@@ -1,0 +1,20 @@
+{
+  "brand": "Drsquatch.Com",
+  "domain": "drsquatch_com.com",
+  "total_active_ads": 0,
+  "total_historical_ads": 0,
+  "eu_uk_count": 0,
+  "eu_uk_pct": 0,
+  "has_data": false,
+  "dates": [],
+  "modes": {
+    "biggest_gain": [],
+    "top_ranked": [],
+    "longest_active": [],
+    "most_reused": []
+  },
+  "charts": {
+    "biggest_gain": [],
+    "top_ranked": []
+  }
+}

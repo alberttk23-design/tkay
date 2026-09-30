@@ -40,7 +40,8 @@ def check_syntax():
         "google_scanner.py",
         "tiktok_service.py",
         "email_scanner.py",
-        "meta_ranking.py"
+        "meta_ranking.py",
+        "contents_scanner.py"
     ]
     all_ok = True
     for f in files:
@@ -134,6 +135,17 @@ def verify_zero_hallucination():
             log_pass("Google Ads API: Trả về chính xác 0 ads cho brand lạ (Zero-Hallucination chuẩn xác)")
         else:
             log_fail(f"Google Ads API bị dính dữ liệu giả! active={g_active}, total={g_total}, cards={g_cards}")
+            all_ok = False
+
+    # 5. Test Contents API
+    ok, ct_data = check_api_endpoint("/api/contents")
+    if ok and ct_data:
+        c_counts = ct_data.get("counts", {})
+        c_total = sum(c_counts.values()) if isinstance(c_counts, dict) else -1
+        if c_total == 0:
+            log_pass("Contents API: Trả về chính xác 0 contents cho brand lạ (Zero-Hallucination chuẩn xác)")
+        else:
+            log_fail(f"Contents API bị dính dữ liệu giả! counts={c_counts}")
             all_ok = False
 
     return all_ok

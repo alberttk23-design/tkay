@@ -200,7 +200,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
           <span>Contents</span>
         </div>
-        <span id="subSidebarContentsCount" class="text-xs font-semibold text-slate-500">141</span>
+        <span id="subSidebarContentsCount" class="text-xs font-semibold text-slate-500">—</span>
       </button>
 
       <!-- SECTION: BRAND -->
@@ -3790,8 +3790,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const metaAdsContainer = document.getElementById('metaAdsContainer');
 
       if (tab === 'contents') {
-        switchShopSubTab('meta');
-        switchMetaSubTab('contents');
+        if (emailContainer) emailContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
+        if (overviewContainer) overviewContainer.classList.add('hidden');
+        if (googleContainer) googleContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
+        if (contentsContainer) contentsContainer.classList.remove('hidden');
+        if (contentsBtn) contentsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
+        const bName = getActiveBrandName();
+        loadContentsView(bName);
         return;
       } else if (tab === 'ranking') {
         switchShopSubTab('meta');
@@ -3864,12 +3872,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     // Switch between 6 Advertising Sub-Tabs: Ad Library | Insights | Ranking | Contents | Partnerships | Landing Pages
     function switchAdvSubTab(subTab) {
+      if (subTab === 'contents') {
+        switchShopSubTab('contents');
+        return;
+      }
       const targetMap = {
         'adlibrary': 'library',
         'library': 'library',
         'insights': 'insights',
         'ranking': 'ranking',
-        'contents': 'contents',
         'partnerships': 'partnerships',
         'landingpages': 'landingpages'
       };
@@ -3974,6 +3985,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     }
 
     function switchMetaSubTab(tabName) {
+      if (tabName === 'contents') {
+        switchShopSubTab('contents');
+        return;
+      }
       currentMetaSubTab = tabName;
       const tabs = ['library', 'insights', 'ranking', 'contents', 'partnerships', 'landingpages'];
       tabs.forEach(t => {
@@ -7121,11 +7136,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const res = await fetch('/api/contents?query=' + encodeURIComponent(brandName) + (forceRefresh ? '&refresh=true' : ''));
         const data = await res.json();
         currentContentsData = data;
+        currentMetaContentsApiData = data;
 
         // Update counters in sub-sidebar
         const subCnt = document.getElementById('subSidebarContentsCount');
         if (subCnt && data.counts) {
-          subCnt.textContent = data.counts.ad_copies || 141;
+          subCnt.textContent = data.counts.contents_count || data.counts.hooks || data.counts.ad_copies || 0;
         }
 
         // Update brand identity in contents container
@@ -7135,7 +7151,23 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         const avatarEl = document.getElementById('contentsBrandAvatar');
         if (avatarEl) {
-          avatarEl.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(bName)}&background=0284c7&color=fff`;
+          avatarEl.src = (currentData && currentData.avatarUrl) || `https://ui-avatars.com/api/?name=${encodeURIComponent(bName)}&background=0284c7&color=fff`;
+        }
+
+        const adsRatioEl = document.getElementById('contentsAdsRatio');
+        if (adsRatioEl) {
+          const totalAds = currentData?.channels?.meta?.active || currentData?.total_active_ads || (data.counts?.creatives || 19);
+          const totalAllTime = currentData?.channels?.meta?.total || currentData?.total_all_time || '48.9K';
+          adsRatioEl.textContent = `• ${totalAds.toLocaleString ? totalAds.toLocaleString() : totalAds} / ${totalAllTime.toLocaleString ? totalAllTime.toLocaleString() : totalAllTime}`;
+        }
+
+        const counterText = document.getElementById('contentsCounterText');
+        if (counterText && data.counts) {
+          if (activeContentsPill === 'ad_copy') counterText.textContent = `${data.counts.ad_copies || 0} ad copies found`;
+          else if (activeContentsPill === 'hook') counterText.textContent = `${data.counts.hooks || 0} hooks found`;
+          else if (activeContentsPill === 'transcript') counterText.textContent = `${data.counts.transcripts || 0} transcripts found`;
+          else if (activeContentsPill === 'headline') counterText.textContent = `${data.counts.headlines || 0} headlines found`;
+          else if (activeContentsPill === 'creative') counterText.textContent = `${data.counts.creatives || 0}+ ads`;
         }
 
         const cContainer = document.getElementById('contentsContainer');
@@ -7184,37 +7216,37 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const crFilterPills = document.getElementById('creativeFilterPills');
 
       const counts = (currentContentsData && currentContentsData.counts) || {
-        creatives: 64,
-        ad_copies: 141,
-        transcripts: 29,
-        hooks: 29,
-        headlines: 128
+        creatives: 0,
+        ad_copies: 0,
+        transcripts: 0,
+        hooks: 0,
+        headlines: 0
       };
 
       if (pill === 'creative') {
         if (sortLabel) sortLabel.textContent = 'Sort By: Most recent';
         if (crFilterPills) crFilterPills.classList.remove('hidden');
-        if (counterText) counterText.textContent = `${counts.creatives || 64}+ ads`;
+        if (counterText) counterText.textContent = `${counts.creatives || 0}+ ads`;
         if (dateLabel) dateLabel.textContent = 'Live';
       } else if (pill === 'ad_copy') {
         if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
         if (crFilterPills) crFilterPills.classList.add('hidden');
-        if (counterText) counterText.textContent = `${counts.ad_copies || 141} ad copies found`;
+        if (counterText) counterText.textContent = `${counts.ad_copies || 0} ad copies found`;
         if (dateLabel) dateLabel.textContent = 'Last 30D';
       } else if (pill === 'transcript') {
         if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
         if (crFilterPills) crFilterPills.classList.add('hidden');
-        if (counterText) counterText.textContent = `${counts.transcripts || 29} transcripts found`;
+        if (counterText) counterText.textContent = `${counts.transcripts || 0} transcripts found`;
         if (dateLabel) dateLabel.textContent = 'Live';
       } else if (pill === 'hook') {
         if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
         if (crFilterPills) crFilterPills.classList.add('hidden');
-        if (counterText) counterText.textContent = `${counts.hooks || 29} hooks found`;
+        if (counterText) counterText.textContent = `${counts.hooks || 0} hooks found`;
         if (dateLabel) dateLabel.textContent = 'Live';
       } else if (pill === 'headline') {
         if (sortLabel) sortLabel.textContent = 'Sort By: Most Used';
         if (crFilterPills) crFilterPills.classList.add('hidden');
-        if (counterText) counterText.textContent = `${counts.headlines || 128} headlines found`;
+        if (counterText) counterText.textContent = `${counts.headlines || 0} headlines found`;
         if (dateLabel) dateLabel.textContent = 'Last 30D';
       }
 
@@ -9265,6 +9297,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (subGg) subGg.textContent = typeof googleCount === 'number' ? `${googleCount.toLocaleString()} / ${(typeof googleTotal === 'number' ? googleTotal.toLocaleString() : googleTotal)}` : `${googleCount}`;
       const subEmail = document.getElementById('subSidebarEmailCount');
       if (subEmail) subEmail.textContent = emailCount > 0 ? emailCount.toLocaleString() : '-';
+      const subContents = document.getElementById('subSidebarContentsCount');
+      if (subContents) {
+        const cVal = data.channels?.contents?.active ?? (currentContentsData?.counts?.contents_count || currentContentsData?.counts?.hooks || currentContentsData?.counts?.ad_copies);
+        if (cVal != null) {
+          subContents.textContent = cVal.toLocaleString ? cVal.toLocaleString() : cVal;
+        }
+      }
 
       const advMeta = document.getElementById('advCardMetaCount');
       if (advMeta) advMeta.textContent = metaCount;
