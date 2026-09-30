@@ -945,24 +945,26 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Sub Tabs: Insights | Ad Library | Ranking -->
+          <!-- Sub Tabs: Insights | Ad Library | Ranking (Matching media_1790732770060.png) -->
           <div class="flex items-center gap-6 border-b border-slate-200 text-xs font-bold px-2">
-            <button onclick="document.getElementById('googleAdsContainer').scrollIntoView({behavior: 'smooth'})" class="pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer">
+            <button id="googleSubTab_insights" onclick="switchGoogleSubTab('insights')" class="pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
               <span>Insights</span>
             </button>
-            <button onclick="document.getElementById('googleAdCardsGrid').scrollIntoView({behavior: 'smooth'})" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+            <button id="googleSubTab_library" onclick="switchGoogleSubTab('library')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
               <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
               <span>Ad Library</span>
             </button>
-            <button class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+            <button id="googleSubTab_ranking" onclick="switchGoogleSubTab('ranking')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
               <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
               <span>Ranking</span>
             </button>
           </div>
 
-          <!-- ROW 1: Historic Chart (Left) + Donut Mix (Right) (Matching media_1790691534405.png) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- SUB-VIEW A: INSIGHTS (Charts & Breakdown) -->
+          <div id="googleInsightsView" class="space-y-6">
+            <!-- ROW 1: Historic Chart (Left) + Donut Mix (Right) (Matching media_1790691534405.png) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <!-- Historic Card -->
             <div class="lg:col-span-7 tt-card p-5 flex flex-col justify-between">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
@@ -1153,6 +1155,123 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div class="h-44 w-full relative">
                 <canvas id="googleLongevityChart"></canvas>
               </div>
+            </div>
+          </div> <!-- Close ROW 3 grid -->
+        </div> <!-- Close #googleInsightsView -->
+
+          <!-- SUB-VIEW B: AD LIBRARY (Matching 100% media_1790732770060.png) -->
+          <div id="googleAdLibraryView" class="space-y-4 hidden">
+            <!-- Filter Bar Card -->
+            <div class="tt-card p-4 space-y-3">
+              <!-- Row 1: Filters Bar (Matching media_1790732770060.png) -->
+              <div class="flex items-center justify-between gap-4 flex-wrap">
+                <!-- Left: Google Ads title + filters -->
+                <div class="flex items-center gap-2 flex-wrap text-xs">
+                  <div class="flex items-center gap-1.5 font-bold text-slate-800 pr-2 border-r border-slate-200">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                    <span>Google Ads</span>
+                  </div>
+
+                  <!-- Dropdown: Ad Status -->
+                  <div class="relative">
+                    <select id="filterGoogleStatus" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Ad Status ▾</option>
+                      <option value="active">Active</option>
+                      <option value="inactive">Inactive</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Publication Date -->
+                  <div class="relative">
+                    <select id="filterGooglePubDate" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Publication Date ▾</option>
+                      <option value="7d">Last 7D</option>
+                      <option value="30d">Last 30D</option>
+                      <option value="90d">Last 90D</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Days Running -->
+                  <div class="relative">
+                    <select id="filterGoogleDaysRunning" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Days Running ▾</option>
+                      <option value="1">1+ days</option>
+                      <option value="7">7+ days</option>
+                      <option value="30">30+ days</option>
+                      <option value="90">90+ days</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Platform -->
+                  <div class="relative">
+                    <select id="filterGooglePlatform" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Platform ▾</option>
+                      <option value="Shopping">Shopping</option>
+                      <option value="Other">Other</option>
+                      <option value="Search">Search</option>
+                      <option value="YouTube">YouTube</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Media Types -->
+                  <div class="relative">
+                    <select id="filterGoogleMediaType" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Media Types ▾</option>
+                      <option value="Image">Image</option>
+                      <option value="Video">Video</option>
+                      <option value="Text">Text</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Ad Countries -->
+                  <div class="relative">
+                    <select id="filterGoogleCountry" onchange="filterGoogleLibraryAds()" class="appearance-none bg-slate-50 border border-slate-200 hover:bg-slate-100 rounded-lg px-3 py-1.5 pr-6 font-semibold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Ad Countries ▾</option>
+                      <option value="CA">🇨🇦 Canada</option>
+                      <option value="AU">🇦🇺 Australia</option>
+                      <option value="US">🇺🇸 United States</option>
+                      <option value="GB">🇬🇧 United Kingdom</option>
+                      <option value="DE">🇩🇪 Germany</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Right: EU / UK Ad Reach Pill (Matching media_1790732770060.png) -->
+                <div class="flex items-center gap-2 text-xs">
+                  <span class="font-bold text-slate-500">EU / UK</span>
+                  <button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-xs transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span>Ad Reach ▾</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Row 2: Sort By, Ads Count & Search Controls -->
+              <div class="flex items-center justify-between gap-4 pt-2 border-t border-slate-100 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-500 font-semibold">Sort By:</span>
+                  <select id="googleLibrarySort" onchange="sortGoogleLibraryAds()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 font-bold text-slate-800 shadow-2xs cursor-pointer focus:outline-none">
+                    <option value="newest">Newest ⇣</option>
+                    <option value="oldest">Oldest ⇡</option>
+                    <option value="longest">Longest Running</option>
+                    <option value="reach">Most Seen (Reach)</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center gap-3 text-slate-500">
+                  <span id="googleLibraryAdsCount" class="font-bold text-slate-700">32+ ads</span>
+                  <div class="relative">
+                    <input type="text" id="googleLibrarySearchInput" oninput="filterGoogleLibraryAds()" placeholder="Tìm kiếm creative..." class="w-36 md:w-48 pl-7 pr-2 py-1 rounded-lg border border-slate-200 text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-blue-500"/>
+                    <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                  </div>
+                  <button class="p-1 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-500"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4-Column Large Ad Cards Grid (Matching media_1790732770060.png) -->
+            <div id="googleLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Populated via JavaScript renderGoogleLibraryCards() -->
             </div>
           </div>
         </div>
@@ -3380,6 +3499,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // 5. Render Ad Cards
       renderGoogleAdCards(data.ad_cards || []);
+      renderGoogleLibraryCards(data.ad_cards || []);
     }
 
     let currentGoogleCards = [];
@@ -3591,6 +3711,289 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         grid.appendChild(cDiv);
       });
+    }
+
+    // Switch between Google Ads Sub-Tabs: Insights | Ad Library | Ranking (Matching media_1790732770060.png)
+    function switchGoogleSubTab(tab) {
+      const insightsView = document.getElementById('googleInsightsView');
+      const libraryView = document.getElementById('googleAdLibraryView');
+      const tabInsights = document.getElementById('googleSubTab_insights');
+      const tabLibrary = document.getElementById('googleSubTab_library');
+      const tabRanking = document.getElementById('googleSubTab_ranking');
+
+      const tabs = [tabInsights, tabLibrary, tabRanking];
+      tabs.forEach(t => {
+        if (t) {
+          t.className = "pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer font-bold";
+        }
+      });
+
+      if (tab === 'library') {
+        if (insightsView) insightsView.classList.add('hidden');
+        if (libraryView) libraryView.classList.remove('hidden');
+        if (tabLibrary) {
+          tabLibrary.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
+        }
+        renderGoogleLibraryCards();
+      } else if (tab === 'ranking') {
+        if (insightsView) insightsView.classList.remove('hidden');
+        if (libraryView) libraryView.classList.add('hidden');
+        if (tabRanking) {
+          tabRanking.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
+        }
+      } else {
+        // default insights
+        if (insightsView) insightsView.classList.remove('hidden');
+        if (libraryView) libraryView.classList.add('hidden');
+        if (tabInsights) {
+          tabInsights.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
+        }
+      }
+    }
+
+    // Render Google Ad Library 4-Column Cards Grid (Matching media_1790732770060.png 1:1)
+    function renderGoogleLibraryCards(customCards) {
+      const grid = document.getElementById('googleLibraryCardsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
+      const domain = (currentData && currentData.domain) || 'theoodie.com';
+      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
+
+      let cards = customCards || (currentGoogleData && currentGoogleData.ad_cards) || [];
+      if (!cards || cards.length === 0) {
+        cards = [
+          {
+            id: 'gad_1',
+            active: true,
+            days_running: 6,
+            date_range: '6d · Sep 23 → now',
+            country: 'CA',
+            flag: '🇨🇦',
+            platform: 'Other',
+            format: 'Image',
+            headline: 'Naruto Itachi Akatsuki Blanket Hoodie',
+            image_url: '/static/google_creatives/naruto_itachi.svg'
+          },
+          {
+            id: 'gad_2',
+            active: true,
+            days_running: 6,
+            date_range: '6d · Sep 23 → now',
+            country: 'CA',
+            flag: '🇨🇦',
+            platform: 'Shopping',
+            format: 'Image',
+            headline: 'Miffy Oodie Original Wearabl',
+            image_url: '/static/google_creatives/miffy_shopping.svg'
+          },
+          {
+            id: 'gad_3',
+            active: true,
+            days_running: 7,
+            date_range: '7d · Sep 22 → now',
+            country: 'AU',
+            flag: '🇦🇺',
+            platform: 'Other',
+            format: 'Image',
+            headline: 'Moss Green Sherpa Fleece...',
+            image_url: '/static/google_creatives/moss_green.svg'
+          },
+          {
+            id: 'gad_4',
+            active: true,
+            days_running: 7,
+            date_range: '7d · Sep 22 → now',
+            country: 'AU',
+            flag: '🇦🇺',
+            platform: 'Other',
+            format: 'Image',
+            headline: 'Pastel Wave Sherpa Fleece...',
+            image_url: '/static/google_creatives/pastel_wave.svg'
+          }
+        ];
+      }
+
+      const countEl = document.getElementById('googleLibraryAdsCount');
+      if (countEl) countEl.textContent = `${cards.length}+ ads`;
+
+      cards.forEach((card, idx) => {
+        const cDiv = document.createElement('div');
+        cDiv.className = "tt-card p-3 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer shadow-xs bg-white rounded-2xl border border-slate-200";
+        cDiv.onclick = () => openGoogleAdModal(idx);
+
+        const isActive = card.active !== false;
+        const days = card.days_running || 6;
+        const dateRange = card.date_range || `${days}d · ${card.first_shown || 'Sep 23'} → now`;
+        const flag = card.flag || (card.country === 'CA' ? '🇨🇦' : card.country === 'AU' ? '🇦🇺' : card.country === 'US' ? '🇺🇸' : '🌐');
+        const plat = card.platform || 'Other';
+        const fmt = card.format || 'Image';
+        const headline = card.headline || `${brandName} - Official Collection`;
+
+        let centerMediaHtml = '';
+        if (plat === 'Shopping') {
+          // Google Shopping Tall Card matching Card 2 in media_1790732770060.png
+          centerMediaHtml = `
+            <div class="rounded-xl overflow-hidden bg-slate-50/80 border border-slate-100 flex flex-col p-2 mb-3">
+              <div class="h-64 w-full flex items-center justify-center overflow-hidden rounded-lg bg-white mb-2">
+                <img src="${card.image_url || '/static/google_creatives/miffy_shopping.svg'}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Creative"/>
+              </div>
+              <div class="px-1 text-left">
+                <div class="text-sm font-bold text-blue-600 leading-snug line-clamp-2">${headline}</div>
+                <div class="text-xs font-black text-slate-900 mt-1">[Price]</div>
+                <div class="text-[11px] font-semibold text-slate-500 mt-0.5">The Oodie CA</div>
+                <div class="text-[11px] font-semibold text-blue-600 mt-0.5 flex items-center gap-1">
+                  <span>★ 4.8</span>
+                  <span class="text-slate-400">[Reviews By Google]</span>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (fmt === 'Image' && card.image_url) {
+          centerMediaHtml = `
+            <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200">
+              <img src="${card.image_url}" class="max-h-full max-w-full object-contain rounded-lg" alt="Creative"/>
+            </div>
+          `;
+        } else if (fmt === 'Video' || plat === 'YouTube') {
+          centerMediaHtml = `
+            <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200 relative">
+              <img src="${card.image_url || '/static/emails/card_1.png'}" class="max-h-full max-w-full object-cover opacity-80 rounded-lg"/>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg"><svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              </div>
+            </div>
+          `;
+        } else {
+          // Text Search Ad
+          centerMediaHtml = `
+            <div class="h-72 w-full rounded-xl p-4 bg-slate-50/80 border border-slate-200 flex flex-col justify-between mb-3 text-left">
+              <div>
+                <div class="flex items-center gap-1.5 text-[10px] text-slate-500 font-medium mb-1">
+                  <span class="font-bold text-slate-900">Sponsored</span>
+                  <span>•</span>
+                  <span class="truncate">${domain}</span>
+                </div>
+                <div class="text-sm font-bold text-blue-700 leading-snug line-clamp-2 hover:underline">${headline}</div>
+                <div class="text-xs text-slate-600 mt-2 line-clamp-4 leading-relaxed">${card.snippet || 'Discover bestsellers, exclusive discounts, and express worldwide delivery.'}</div>
+              </div>
+              <div class="pt-2 border-t border-slate-200 text-xs font-semibold text-blue-600 flex items-center justify-between">
+                <span>Shop Online</span>
+                <span>Best Sellers</span>
+              </div>
+            </div>
+          `;
+        }
+
+        cDiv.innerHTML = `
+          <div>
+            <!-- Top Row 1: Badges -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-full ${isActive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-slate-100 text-slate-500'} text-[11px] font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full ${isActive ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
+                <span>${isActive ? 'Active' : 'Inactive'}</span>
+              </span>
+              <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[11px] font-medium flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>${dateRange}</span>
+              </span>
+            </div>
+
+            <!-- Top Row 2: Targeting Strip (Matching media_1790732770060.png) -->
+            <div class="mb-2">
+              <div class="bg-slate-100 text-slate-700 px-3 py-1 rounded-lg text-xs font-semibold flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-width="2"/></svg>
+                  <span>Global ads</span>
+                </div>
+                <span class="text-sm">${flag}</span>
+              </div>
+            </div>
+
+            <!-- Top Row 3: Platform & Format Row (Matching media_1790732770060.png) -->
+            <div class="flex items-center justify-between px-1 mb-2.5 text-xs font-semibold text-slate-600">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span>${plat}</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>${fmt}</span>
+              </div>
+            </div>
+
+            <!-- Center Visual Preview -->
+            ${centerMediaHtml}
+          </div>
+
+          <!-- Card Footer (Matching media_1790732770060.png) -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <div class="relative w-6 h-6 rounded-full overflow-hidden border border-slate-200 flex-shrink-0 bg-white">
+                <img src="${avatarSrc}" class="w-full h-full object-cover"/>
+                <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-blue-500 border border-white flex items-center justify-center text-[7px] text-white font-bold">G</span>
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-slate-900 leading-tight truncate max-w-[120px]">${brandName}</div>
+                <div class="text-[10px] text-slate-400 font-medium">Google • 375 / 1,767 • ${flag}</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-1 text-slate-400">
+              <button onclick="event.stopPropagation();" class="p-1 hover:text-slate-800 transition" title="Save ad"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+              <button onclick="event.stopPropagation();" class="p-1 hover:text-slate-800 transition" title="More options"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/></svg></button>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(cDiv);
+      });
+    }
+
+    function filterGoogleLibraryAds() {
+      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
+      const status = document.getElementById('filterGoogleStatus')?.value || 'all';
+      const daysRunning = document.getElementById('filterGoogleDaysRunning')?.value || 'all';
+      const platform = document.getElementById('filterGooglePlatform')?.value || 'all';
+      const mediaType = document.getElementById('filterGoogleMediaType')?.value || 'all';
+      const country = document.getElementById('filterGoogleCountry')?.value || 'all';
+      const search = (document.getElementById('googleLibrarySearchInput')?.value || '').toLowerCase().trim();
+
+      let filtered = currentGoogleData.ad_cards.filter(ad => {
+        if (status === 'active' && ad.active === false) return false;
+        if (status === 'inactive' && ad.active !== false) return false;
+        
+        if (daysRunning !== 'all') {
+          const minDays = parseInt(daysRunning);
+          if ((ad.days_running || 0) < minDays) return false;
+        }
+
+        if (platform !== 'all' && ad.platform !== platform) return false;
+        if (mediaType !== 'all' && ad.format !== mediaType) return false;
+        if (country !== 'all' && ad.country !== country) return false;
+
+        if (search) {
+          const text = `${ad.headline || ''} ${ad.snippet || ''} ${ad.platform || ''} ${ad.format || ''}`.toLowerCase();
+          if (!text.includes(search)) return false;
+        }
+        return true;
+      });
+
+      renderGoogleLibraryCards(filtered);
+    }
+
+    function sortGoogleLibraryAds() {
+      const sortVal = document.getElementById('googleLibrarySort')?.value || 'newest';
+      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
+      let sorted = [...currentGoogleData.ad_cards];
+      if (sortVal === 'newest') {
+        sorted.sort((a, b) => (a.days_running || 0) - (b.days_running || 0));
+      } else if (sortVal === 'oldest' || sortVal === 'longest') {
+        sorted.sort((a, b) => (b.days_running || 0) - (a.days_running || 0));
+      } else if (sortVal === 'reach') {
+        sorted.sort((a, b) => (b.reach_tag || '').localeCompare(a.reach_tag || ''));
+      }
+      renderGoogleLibraryCards(sorted);
     }
 
     // ========================================================
@@ -5519,7 +5922,7 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             file_path = os.path.join(BASE_DIR, rel_path)
             if os.path.exists(file_path) and os.path.isfile(file_path):
                 ext = os.path.splitext(file_path)[1].lower()
-                mime = "image/png" if ext == ".png" else "image/jpeg" if ext in [".jpg", ".jpeg"] else "application/octet-stream"
+                mime = "image/svg+xml" if ext == ".svg" else ("image/png" if ext == ".png" else "image/jpeg" if ext in [".jpg", ".jpeg"] else "application/octet-stream")
                 self.send_response(200)
                 self.send_header("Content-Type", mime)
                 self.send_header("Cache-Control", "public, max-age=86400")

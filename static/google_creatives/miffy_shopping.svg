@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 580" width="100%" height="100%">
+  <rect width="360" height="580" fill="#f8fafc" rx="12"/>
+  <!-- Top Image Card -->
+  <g transform="translate(16, 16)">
+    <rect width="328" height="340" rx="12" fill="#fef3c7"/>
+    <!-- Decorative floral doodles -->
+    <circle cx="40" cy="40" r="12" fill="#cbd5e1" opacity="0.6"/>
+    <circle cx="48" cy="48" r="8" fill="#93c5fd" opacity="0.6"/>
+    <circle cx="280" cy="280" r="14" fill="#93c5fd" opacity="0.5"/>
+    <!-- Model wearing Miffy hooded blanket -->
+    <path d="M164 90 Q140 120 130 180 L110 320 L218 320 L198 180 Q188 120 164 90 Z" fill="#e2e8f0"/>
+    <!-- Miffy patterns -->
+    <circle cx="150" cy="180" r="4" fill="#3b82f6"/>
+    <circle cx="178" cy="200" r="4" fill="#f59e0b"/>
+    <circle cx="160" cy="240" r="5" fill="#ef4444"/>
+    <circle cx="164" cy="75" r="18" fill="#fed7aa"/>
+    <!-- Legs & shoes -->
+    <rect x="146" y="320" width="12" height="40" fill="#0f172a" rx="4"/>
+    <rect x="170" y="320" width="12" height="40" fill="#0f172a" rx="4"/>
+  </g>
+  <!-- Shopping Details -->
+  <g transform="translate(24, 395)">
+    <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#1d4ed8" letter-spacing="-0.3">
+      Miffy Oodie
+    </text>
+    <text x="0" y="52" font-family="-apple-system, sans-serif" font-size="20" font-weight="600" fill="#1d4ed8" letter-spacing="-0.3">
+      Original Wearabl
+    </text>
+    <text x="0" y="90" font-family="-apple-system, sans-serif" font-size="18" font-weight="800" fill="#0f172a">
+      [Price]
+    </text>
+    <text x="0" y="122" font-family="-apple-system, sans-serif" font-size="17" font-weight="600" fill="#475569">
+      The Oodie CA
+    </text>
+    <text x="0" y="152" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#2563eb">
+      [Rating (Reviews
+    </text>
+    <text x="0" y="174" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#2563eb">
+      By Google
+    </text>
+  </g>
+</svg>

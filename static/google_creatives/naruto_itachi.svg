@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <rect width="400" height="320" fill="#f8fafc" rx="12"/>
+  <g transform="translate(20, 24)">
+    <!-- Image Box -->
+    <rect width="160" height="220" rx="8" fill="#1e3a8a"/>
+    <!-- Cloud pattern -->
+    <path d="M40 180 Q60 160 80 180 T120 180" fill="none" stroke="#60a5fa" stroke-width="4" opacity="0.6"/>
+    <!-- Model silhouette in Akatsuki robe -->
+    <path d="M80 50 Q70 70 65 110 L50 200 L110 200 L95 110 Q90 70 80 50 Z" fill="#0f172a"/>
+    <circle cx="80" cy="45" r="14" fill="#fca5a5"/>
+    <!-- Red cloud emblem on robe -->
+    <ellipse cx="80" cy="120" rx="14" ry="9" fill="#dc2626"/>
+    <ellipse cx="75" cy="118" rx="8" ry="6" fill="#ef4444"/>
+    <!-- -15% badge -->
+    <rect x="8" y="8" width="46" height="20" rx="4" fill="#3b82f6"/>
+    <text x="31" y="22" font-family="-apple-system, sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">-15%</text>
+  </g>
+  <!-- Text Content Right -->
+  <text x="200" y="90" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#1e293b" width="180">
+    <tspan x="200" dy="0">Naruto</tspan>
+    <tspan x="200" dy="24">Itachi</tspan>
+    <tspan x="200" dy="24">Akatsuki...</tspan>
+  </text>
+  <!-- The Oodie Logo at bottom -->
+  <g transform="translate(200, 215)">
+    <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7" letter-spacing="-0.5">the oodie</text>
+  </g>
+</svg>

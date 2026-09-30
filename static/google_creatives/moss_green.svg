@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <rect width="400" height="320" fill="#f8fafc" rx="12"/>
+  <!-- Folded Blanket Left -->
+  <g transform="translate(24, 40)">
+    <rect width="150" height="180" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <!-- Folded emerald sherpa -->
+    <rect x="25" y="45" width="100" height="90" rx="14" fill="#064e3b"/>
+    <path d="M30 65 Q75 55 120 65 L115 120 Q75 110 35 120 Z" fill="#047857" opacity="0.9"/>
+    <path d="M35 75 Q75 68 115 75" stroke="#a7f3d0" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+  </g>
+  <!-- Text Content Right -->
+  <text x="195" y="105" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#1e293b" width="180">
+    <tspan x="195" dy="0">Moss Green</tspan>
+    <tspan x="195" dy="24">Sherpa</tspan>
+    <tspan x="195" dy="24">Fleece...</tspan>
+  </text>
+  <!-- The Oodie Logo at bottom -->
+  <g transform="translate(195, 215)">
+    <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7" letter-spacing="-0.5">the oodie</text>
+  </g>
+</svg>

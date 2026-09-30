@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <rect width="400" height="320" fill="#f8fafc" rx="12"/>
+  <!-- Folded Blanket Left -->
+  <g transform="translate(24, 40)">
+    <rect width="150" height="180" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <!-- Pastel colorful blanket -->
+    <rect x="25" y="45" width="100" height="90" rx="14" fill="#fbcfe8"/>
+    <!-- Wavy pastel stripes -->
+    <path d="M25 55 Q75 35 125 65 L125 90 Q75 60 25 80 Z" fill="#fde047"/>
+    <path d="M25 80 Q75 60 125 90 L125 115 Q75 85 25 105 Z" fill="#93c5fd"/>
+    <path d="M25 105 Q75 85 125 115 L125 135 L25 135 Z" fill="#f472b6"/>
+  </g>
+  <!-- Text Content Right -->
+  <text x="195" y="105" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#1e293b" width="180">
+    <tspan x="195" dy="0">Pastel Wave</tspan>
+    <tspan x="195" dy="24">Sherpa</tspan>
+    <tspan x="195" dy="24">Fleece...</tspan>
+  </text>
+  <!-- The Oodie Logo at bottom -->
+  <g transform="translate(195, 215)">
+    <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7" letter-spacing="-0.5">the oodie</text>
+  </g>
+</svg>
