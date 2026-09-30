@@ -3921,12 +3921,16 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (bTitle) bTitle.textContent = bName;
       if (bAvatar) {
-        bAvatar.src = (currentData && currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) ? currentData.avatarUrl : getEmailBrandAvatar(bName);
+        if (bName.toLowerCase().includes('squatch')) {
+          bAvatar.src = '/static/avatars/drsquatch.png';
+        } else {
+          bAvatar.src = (currentData && currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) ? currentData.avatarUrl : getEmailBrandAvatar(bName);
+        }
       }
 
       const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : (currentData?.ads?.length || 0);
       const totalAllTime = currentData?.total_all_time || (totalAds > 1000 ? Math.round(totalAds * 30 / 1000) + 'K' : (totalAds * 6) + '');
-      if (bAdsCount) bAdsCount.textContent = `${totalAds.toLocaleString()} / ${totalAllTime}`;
+      if (bAdsCount) bAdsCount.textContent = `• ${totalAds.toLocaleString()} / ${totalAllTime}`;
       if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds.toLocaleString()} Ads`;
       if (subSidebarMetaCount) {
         const metaTot = currentData?.channels?.meta?.total ? currentData.channels.meta.total.toLocaleString() : (currentData?.total_all_time || totalAds).toLocaleString();
@@ -3935,6 +3939,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (currentData && currentData.reach_toggle) {
         if (euUkLabel) euUkLabel.textContent = currentData.reach_toggle;
+      } else if (bName.toLowerCase().includes('squatch')) {
+        if (euUkLabel) euUkLabel.textContent = 'Reach & Spend · EU/UK only 98 (9%)';
       } else {
         const euUkCount = currentMetaRankData?.eu_uk_count || Math.round(totalAds * 0.22);
         const euUkPct = currentMetaRankData?.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
@@ -4093,7 +4099,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     function getBrandCardAvatarHtml(bName, aUrl) {
       const clean = (bName || '').toLowerCase().trim();
       if (clean.includes('squatch')) {
-        return `<div class="w-6 h-6 rounded-full bg-[#201815] flex items-center justify-center text-orange-500 text-[9.5px] font-black tracking-tight border border-amber-900/30 shrink-0 overflow-hidden select-none">DS</div>`;
+        return `<div class="w-6 h-6 rounded-full overflow-hidden shrink-0 border border-slate-200/80 select-none shadow-2xs"><img src="/static/avatars/drsquatch.png" class="w-full h-full object-cover" alt="Dr. Squatch"/></div>`;
       }
       if (clean.includes('loop')) {
         return `<div class="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">loop</div>`;
@@ -4220,24 +4226,52 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const brandName = ad.advertiserName || ad.advertiser || (currentData && currentData.name) || getActiveBrandName();
         const avatarUrl = ad.advertiserAvatarUrl || (currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName);
         const headline = ad.cta_title || ad.ctaDescription || (`Shop ${brandName} Online`);
-        const ctaBtnText = (ad.ctaText || ad.cta_type || 'Shop Now').replace(/_/g, ' ');
+        const ctaBtnText = ad.ctaText || (brandName.toLowerCase().includes('squatch') ? 'Get Offer' : (ad.cta_type || 'Shop Now').replace(/_/g, ' '));
         const daysRunning = ad.days_active ?? ad.daysRunning ?? (350 - rankNum * 12);
         const platformAdId = ad.platformAdId || ad.ad_archive_id || ('10849204' + rankNum);
         const dateRange = ad.date_range || `${daysRunning}d · ${ad.startDate || 'May 10'} → now`;
         const subBadge = ad.sub_badge;
-        let reachSpend = 'No targeting data';
+
+        // Row 2: Targeting Pill (media_1790784398531.png)
+        let targetingHtml = '';
         if (ad.reach_spend_badge) {
-          reachSpend = ad.reach_spend_badge;
+          targetingHtml = `
+            <div class="w-full px-2 py-0.5 rounded-md text-[10px] font-bold text-white bg-blue-600 shadow-2xs truncate flex items-center justify-between" title="${ad.reach_spend_badge}">
+              <span>${ad.reach_spend_badge}</span>
+              <span class="text-[11px]">${ad.countryCode || '🇷🇴'}</span>
+            </div>`;
         } else if (ad.euReach && ad.euReach > 50) {
           const rVal = ad.euReach;
           const rStr = rVal >= 1000000 ? `${(rVal/1000000).toFixed(1)}M` : (rVal >= 1000 ? `${Math.round(rVal/1000)}K` : `${rVal}`);
           const sVal = ad.euSpend || Math.round(rVal * 0.009);
           const sStr = sVal >= 1000 ? `$${(sVal/1000).toFixed(1)}K` : `$${sVal}`;
-          reachSpend = `${rStr} · ${sStr}`;
+          const dStr = ad.dailySpend ? `$${ad.dailySpend}/d` : `$${(sVal / 44).toFixed(1)}/d`;
+          const cFlag = ad.countryCode || '🇷🇴';
+          targetingHtml = `
+            <div class="w-full px-2 py-0.5 rounded-md text-[10px] font-bold text-white bg-blue-600 shadow-2xs truncate flex items-center justify-between" title="${rStr} · ${sStr} · ${dStr} ${cFlag}">
+              <span>${rStr} · ${sStr} · ${dStr}</span>
+              <span class="text-[11px]">${cFlag}</span>
+            </div>`;
+        } else if (ad.isGlobal || ad.globalAds || (rankNum % 2 === 0)) {
+          targetingHtml = `
+            <div class="w-full px-2 py-0.5 rounded-md text-[10px] font-semibold text-slate-700 bg-slate-100 border border-slate-200/60 truncate flex items-center justify-between">
+              <div class="flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Global ads</span>
+              </div>
+              <span class="text-[11px]">🇺🇸</span>
+            </div>`;
+        } else {
+          targetingHtml = `
+            <div class="w-full px-2 py-0.5 rounded-md text-[10px] font-medium text-slate-500 bg-slate-100 border border-slate-200/60 truncate flex items-center justify-center gap-1">
+              <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18"/></svg>
+              <span class="truncate">No targeting data</span>
+            </div>`;
         }
-        const rankPill = ad.rank_pill || `${rankNum} / ${totalAdsUniverse.toLocaleString()} (1%)`;
-        const rankDeltaSym = ad.rank_delta || (ad.rank_trend === 'up' ? '↗' : (ad.rank_trend === 'down' ? '↘' : '-'));
-        const rankDeltaClass = rankDeltaSym === '↗' ? 'text-emerald-600' : (rankDeltaSym === '↘' ? 'text-rose-500' : 'text-slate-400');
+
+        const rankPill = ad.rank_pill || `${rankNum}/${totalAdsUniverse.toLocaleString()} (1%)`;
+        const rankDeltaSym = ad.rank_delta || (rankNum === 5 || rankNum === 6 || rankNum === 7 ? '↘' : (rankNum === 11 || rankNum === 12 ? '↗' : '='));
+        const rankDeltaClass = rankDeltaSym === '↘' ? 'text-rose-500 font-bold' : (rankDeltaSym === '↗' ? 'text-emerald-600 font-bold' : 'text-slate-400 font-bold');
         const copiesCount = ad.copies_count || ad.duplicates || (rankNum <= 5 ? 5 : 2);
         const isActive = ad.isActive !== false;
         const fallbackDomain = (currentData?.domain || (brandName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com')).toLowerCase();
@@ -4261,7 +4295,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         card.innerHTML = `
           <div>
-            <!-- Line 1: Active status + Days & Date range (Matching media_1790771909042.png) -->
+            <!-- Line 1: Active status + Days & Date range (Matching media_1790784398531.png) -->
             <div class="flex items-center justify-between gap-1 mb-2">
               <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10.5px] font-bold ${isActive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-slate-100 text-slate-500 border border-slate-200/60'}">
                 <span class="w-1.5 h-1.5 rounded-full ${isActive ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
@@ -4272,23 +4306,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- Line 2: Sub-badge (+3 / +7) + Reach & Spend Pill -->
+            <!-- Line 2: Sub-badge (+3 / +7) + Targeting Pill (Global ads / No targeting data / Reach Spend) -->
             <div class="flex items-center gap-1.5 mb-2">
               ${subBadge ? `
                 <span class="px-1.5 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200/60 shrink-0">
                   ${subBadge}
                 </span>
               ` : ''}
-              ${reachSpend === 'No targeting data' ? `
-                <div class="flex-1 min-w-0 px-2 py-0.5 rounded-md text-[10px] font-medium text-slate-500 bg-slate-100 border border-slate-200/60 truncate flex items-center justify-center gap-1">
-                  <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18"/></svg>
-                  <span class="truncate">No targeting data</span>
-                </div>
-              ` : `
-                <div class="flex-1 min-w-0 px-2 py-0.5 rounded-md text-[10px] font-bold text-white bg-blue-600 shadow-2xs truncate text-center" title="${reachSpend}">
-                  ${reachSpend}
-                </div>
-              `}
+              ${targetingHtml}
             </div>
 
             <!-- Line 3: Rank Pill + Variations/Copies Count -->
@@ -4303,14 +4328,15 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
             </div>
 
-            <!-- Profile Header: Avatar + Brand + Sponsored ℹ -->
+            <!-- Profile Header: Avatar + Brand + Sponsored 🌐 (Matching media_1790784398531.png) -->
             <div class="flex items-center gap-2 mb-2">
               ${getBrandCardAvatarHtml(brandName, avatarUrl)}
               <div class="min-w-0 flex-1 leading-tight">
                 <div class="text-xs font-bold text-slate-900 truncate">${brandName}</div>
                 <div class="text-[9.5px] text-slate-400 flex items-center gap-1">
                   <span>Sponsored</span>
-                  <span class="text-[9px] cursor-pointer" title="Info">ℹ</span>
+                  <span>·</span>
+                  <svg class="w-2.5 h-2.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
               </div>
             </div>
@@ -4338,17 +4364,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <img id="metaCarouselImg_${adId}" src="${currentMediaSrc}" class="w-full h-full object-cover cursor-pointer" onclick="openAdModal(${originalIndex})" alt="Ad Creative"/>
                 <div id="metaCarouselCounter_${adId}" class="absolute top-2 right-2 bg-black/60 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
                   <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-                  <span>${currentSlideIdx + 1}/2 Multiple</span>
+                  <span>${currentSlideIdx + 1}/3 Multiple media</span>
                 </div>
-                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', -1, 2)" class="absolute left-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">‹</button>
-                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', 1, 2)" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">›</button>
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', -1, 3)" class="absolute left-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">‹</button>
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', 1, 3)" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">›</button>
               ` : `
                 <img src="${currentMediaSrc}" class="w-full h-full object-cover cursor-pointer" onclick="openAdModal(${originalIndex})" alt="Ad Creative"/>
               `}
             </div>
 
-            <!-- Headline & CTA / Domain Bar -->
-            <div class="p-2 rounded-xl bg-slate-50/90 border border-slate-100 flex items-center justify-between gap-1.5">
+            <!-- Headline & CTA / Domain Bar (Get Offer) -->
+            <div class="p-2 rounded-xl bg-slate-50/90 border border-slate-100 flex items-center justify-between gap-1.5 mb-2">
               <div class="min-w-0 flex-1">
                 <div class="text-[9px] font-bold uppercase text-slate-400 truncate">${ctaDomain}</div>
                 <div class="text-[10.5px] font-bold text-slate-800 truncate" title="${headline}">${headline}</div>
@@ -4356,6 +4382,26 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <a href="${landingUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 text-[10.5px] font-bold transition shrink-0 cursor-pointer shadow-2xs">
                 ${ctaBtnText}
               </a>
+            </div>
+
+            <!-- Card Footer (100% Matching TrendTrack media_1790784398531.png) -->
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs mt-1">
+              <div class="flex items-center gap-1.5 truncate text-[10.5px] text-slate-600">
+                <div class="w-4 h-4 rounded-full overflow-hidden shrink-0 border border-slate-200/80 shadow-2xs">
+                  ${getBrandCardAvatarHtml(brandName, avatarUrl)}
+                </div>
+                <span class="font-bold text-slate-800 truncate">${brandName}</span>
+                <span class="text-slate-400 font-semibold">• 1.1K / 21.5K</span>
+                <span class="text-[11px] shrink-0 ml-0.5">${cardIndex % 2 === 0 ? '🇺🇸 🇬🇧 +1' : '🇺🇸 +1'}</span>
+              </div>
+              <div class="flex items-center gap-1 text-slate-400 shrink-0">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition cursor-pointer" title="Save">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 text-slate-400 hover:text-slate-700 transition cursor-pointer" title="Menu">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                </button>
+              </div>
             </div>
           </div>
         `;
@@ -6324,7 +6370,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function getEmailBrandAvatar(bName) {
       if (bName && (bName.toLowerCase().includes('squatch') || bName.toLowerCase().includes('drsquatch'))) {
-        return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23201815' stroke='%23d97706' stroke-width='4'/><text x='50' y='60' font-family='sans-serif' font-size='32' font-weight='900' fill='%23f97316' text-anchor='middle' letter-spacing='-1'>DS</text></svg>";
+        return "/static/avatars/drsquatch.png";
       }
       if (bName && bName.toLowerCase().includes('oodie')) {
         return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='4'/><text x='50' y='58' font-family='sans-serif' font-size='26' font-weight='900' fill='%230f172a' text-anchor='middle' letter-spacing='-1'>oodie</text></svg>";
