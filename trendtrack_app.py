@@ -1385,6 +1385,18 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div id="emailCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               <!-- Dynamically populated cards matching media_1790733116755.png -->
             </div>
+
+            <!-- INFINITE SCROLL / LAZY LOAD SENTINEL -->
+            <div id="emailInfiniteScrollTrigger" class="py-10 flex flex-col items-center justify-center">
+              <div id="emailLoadingSpinner" class="flex items-center gap-3 text-slate-500 text-xs font-semibold bg-white border border-slate-200/90 shadow-2xs px-4 py-2.5 rounded-full">
+                <svg class="animate-spin h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <span>Đang tải thêm email lịch sử...</span>
+              </div>
+              <div id="emailEndNotice" class="hidden text-slate-500 text-xs font-semibold py-3 px-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Đã hiển thị toàn bộ <strong id="emailEndTotalCount" class="text-slate-900 font-extrabold">147</strong> emails</span>
+              </div>
+            </div>
           </div>
 
           <!-- SUB-VIEW 2: INSIGHTS -->
@@ -2528,13 +2540,31 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
     }
 
-    // ==========================================
-    // EMAIL INTELLIGENCE LOGIC
-    // ==========================================
     let currentEmailData = null;
     let currentEmailFilter = 'all';
+    let currentEmailFullList = [];
+    let emailCurrentPage = 1;
+    const EMAIL_PAGE_SIZE = 16;
+    let emailIntersectionObserver = null;
+    let emailIsLoadingMore = false;
 
     async function loadEmailIntelligenceData(brandName, forceRefresh = false) {
+      const eContainer = document.getElementById('emailIntelligenceContainer');
+      const grid = document.getElementById('emailCardsGrid');
+      const spinner = document.getElementById('emailLoadingSpinner');
+      const endNotice = document.getElementById('emailEndNotice');
+
+      if (eContainer && !eContainer.classList.contains('hidden') && grid && (!currentEmailData || currentEmailData.brand.toLowerCase() !== brandName.toLowerCase())) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 flex flex-col items-center justify-center text-center space-y-3">
+            <div class="w-10 h-10 rounded-full border-4 border-blue-500/20 border-t-blue-600 animate-spin"></div>
+            <div class="text-xs font-bold text-slate-700">Đang quét thư viện Email Intelligence cho <span class="text-blue-600">${brandName}</span>...</div>
+          </div>
+        `;
+        if (spinner) spinner.classList.add('hidden');
+        if (endNotice) endNotice.classList.add('hidden');
+      }
+
       try {
         const res = await fetch('/api/emails?query=' + encodeURIComponent(brandName) + (forceRefresh ? '&refresh=true' : ''));
         const data = await res.json();
@@ -2546,7 +2576,6 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           subEmail.textContent = data.total_emails || (data.campaigns ? data.campaigns.length : 147);
         }
 
-        const eContainer = document.getElementById('emailIntelligenceContainer');
         if (eContainer && !eContainer.classList.contains('hidden')) {
           renderEmailIntelligence(data);
         }
@@ -2587,31 +2616,100 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const totalCount = data.total_emails || (data.campaigns ? data.campaigns.length : 147);
       if (countEl) countEl.textContent = totalCount;
       if (paceEl) paceEl.textContent = data.velocity ? data.velocity.replace('/wk', '').trim() : '3.5';
-      if (badgeEl) badgeEl.textContent = `${totalCount} emails`;
 
-      renderEmailLibrary(data.campaigns || []);
+      renderEmailLibrary(data.campaigns || [], true);
     }
 
-    function renderEmailLibrary(campaigns) {
+    function setupEmailInfiniteScroll() {
+      const trigger = document.getElementById('emailInfiniteScrollTrigger');
+      if (!trigger) return;
+
+      if (emailIntersectionObserver) {
+        emailIntersectionObserver.disconnect();
+      }
+
+      emailIntersectionObserver = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting && !emailIsLoadingMore) {
+          const maxLoaded = emailCurrentPage * EMAIL_PAGE_SIZE;
+          if (maxLoaded < currentEmailFullList.length) {
+            emailIsLoadingMore = true;
+            const spinner = document.getElementById('emailLoadingSpinner');
+            if (spinner) spinner.classList.remove('hidden');
+
+            setTimeout(() => {
+              emailCurrentPage++;
+              renderEmailBatch(emailCurrentPage);
+              emailIsLoadingMore = false;
+            }, 180);
+          }
+        }
+      }, {
+        root: null,
+        rootMargin: '250px',
+        threshold: 0.05
+      });
+
+      emailIntersectionObserver.observe(trigger);
+    }
+
+    function renderEmailLibrary(campaigns, reset = true) {
       const grid = document.getElementById('emailCardsGrid');
       if (!grid) return;
-      grid.innerHTML = '';
+
+      if (reset) {
+        let filtered = campaigns;
+        if (currentEmailFilter !== 'all') {
+          filtered = campaigns.filter(c => c.badge === currentEmailFilter || (c.category && c.category.toLowerCase().includes(currentEmailFilter.toLowerCase())));
+        }
+        currentEmailFullList = filtered;
+        emailCurrentPage = 1;
+        grid.innerHTML = '';
+      }
+
+      renderEmailBatch(emailCurrentPage);
+      setupEmailInfiniteScroll();
+    }
+
+    function renderEmailBatch(page) {
+      const grid = document.getElementById('emailCardsGrid');
+      if (!grid) return;
 
       const bName = (currentEmailData && currentEmailData.brand) || (currentData ? currentData.name : 'The Oodie');
       const avatarUrl = getEmailBrandAvatar(bName);
       const velocity = (currentEmailData && currentEmailData.velocity) || '3.5/wk';
 
-      let filtered = campaigns;
-      if (currentEmailFilter !== 'all') {
-        filtered = campaigns.filter(c => c.badge === currentEmailFilter || c.category?.toLowerCase().includes(currentEmailFilter.toLowerCase()));
+      const totalItems = currentEmailFullList.length;
+      const start = (page - 1) * EMAIL_PAGE_SIZE;
+      const end = Math.min(start + EMAIL_PAGE_SIZE, totalItems);
+
+      const spinner = document.getElementById('emailLoadingSpinner');
+      const endNotice = document.getElementById('emailEndNotice');
+      const endCountEl = document.getElementById('emailEndTotalCount');
+      const badgeEl = document.getElementById('emailLibraryCountBadge');
+
+      if (totalItems === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-400 text-xs">
+            Không tìm thấy email nào phù hợp với bộ lọc hiện tại.
+          </div>
+        `;
+        if (spinner) spinner.classList.add('hidden');
+        if (endNotice) endNotice.classList.add('hidden');
+        if (badgeEl) badgeEl.textContent = '0 emails';
+        return;
       }
 
-      filtered.forEach((card, idx) => {
+      const batch = currentEmailFullList.slice(start, end);
+      const frag = document.createDocumentFragment();
+
+      batch.forEach((card, batchIdx) => {
+        const globalIdx = start + batchIdx;
         const cDiv = document.createElement('div');
         cDiv.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer flex flex-col justify-between";
-        cDiv.onclick = () => openEmailDetailModal(idx);
+        cDiv.onclick = () => openEmailDetailModal(card);
 
-        const imgSrc = card.image_url || `/static/emails/card_${(idx % 18) + 1}.png`;
+        const imgSrc = card.image_url || `/static/emails/card_${(globalIdx % 18) + 1}.png`;
 
         cDiv.innerHTML = `
           <div>
@@ -2662,9 +2760,30 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           </div>
         `;
-
-        grid.appendChild(cDiv);
+        frag.appendChild(cDiv);
       });
+
+      grid.appendChild(frag);
+
+      // Update badge count
+      if (badgeEl) {
+        badgeEl.textContent = `Hiển thị ${end} / ${totalItems} emails`;
+      }
+
+      // Check if all items loaded
+      if (end >= totalItems) {
+        if (spinner) spinner.classList.add('hidden');
+        if (endNotice) {
+          endNotice.classList.remove('hidden');
+          if (endCountEl) endCountEl.textContent = totalItems;
+        }
+        if (emailIntersectionObserver) {
+          emailIntersectionObserver.disconnect();
+        }
+      } else {
+        if (spinner) spinner.classList.remove('hidden');
+        if (endNotice) endNotice.classList.add('hidden');
+      }
     }
 
     function sortEmailCampaigns(sortBy) {
@@ -2675,23 +2794,22 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       } else if (sortBy === 'category') {
         campaigns.sort((a, b) => (a.category || '').localeCompare(b.category || ''));
       }
-      renderEmailLibrary(campaigns);
+      renderEmailLibrary(campaigns, true);
     }
 
     function filterEmailBySearch(term) {
       if (!currentEmailData || !currentEmailData.campaigns) return;
       const t = (term || '').toLowerCase().trim();
-      if (!t) {
-        renderEmailLibrary(currentEmailData.campaigns);
-        return;
+      let list = currentEmailData.campaigns;
+      if (t) {
+        list = list.filter(c => 
+          (c.subject && c.subject.toLowerCase().includes(t)) ||
+          (c.preheader && c.preheader.toLowerCase().includes(t)) ||
+          (c.category && c.category.toLowerCase().includes(t)) ||
+          (c.products && c.products.some(p => p.toLowerCase().includes(t)))
+        );
       }
-      const filtered = currentEmailData.campaigns.filter(c => 
-        (c.subject && c.subject.toLowerCase().includes(t)) ||
-        (c.preheader && c.preheader.toLowerCase().includes(t)) ||
-        (c.category && c.category.toLowerCase().includes(t)) ||
-        (c.products && c.products.some(p => p.toLowerCase().includes(t)))
-      );
-      renderEmailLibrary(filtered);
+      renderEmailLibrary(list, true);
     }
 
     function toggleEmailFilterDropdown(filterType) {
@@ -2734,42 +2852,51 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         }
       });
       if (currentEmailData && currentEmailData.campaigns) {
-        renderEmailLibrary(currentEmailData.campaigns);
+        renderEmailLibrary(currentEmailData.campaigns, true);
       }
     }
 
-    function openEmailDetailModal(idx) {
-      if (!currentEmailData || !currentEmailData.campaigns || !currentEmailData.campaigns[idx]) return;
-      const card = currentEmailData.campaigns[idx];
+    function openEmailDetailModal(cardOrIdx) {
+      let card = null;
+      if (typeof cardOrIdx === 'object' && cardOrIdx !== null) {
+        card = cardOrIdx;
+      } else if (currentEmailData && currentEmailData.campaigns && currentEmailData.campaigns[cardOrIdx]) {
+        card = currentEmailData.campaigns[cardOrIdx];
+      }
+      if (!card) return;
       const modal = document.getElementById('emailDetailModal');
       if (!modal) return;
 
-      const bName = currentEmailData.brand || 'The Oodie';
+      const bName = currentEmailData?.brand || currentData?.name || 'The Oodie';
       const avatarUrl = getEmailBrandAvatar(bName);
 
       document.getElementById('modalEmailAvatar').src = avatarUrl;
-      document.getElementById('modalEmailSubject').textContent = card.subject;
+      document.getElementById('modalEmailSubject').textContent = card.subject || 'Email Campaign';
       document.getElementById('modalEmailSender').textContent = bName;
-      document.getElementById('modalEmailDate').textContent = card.full_date || card.date;
+      document.getElementById('modalEmailDate').textContent = card.full_date || card.date || '';
       document.getElementById('modalEmailBadge').textContent = card.badge || 'Marketing';
       document.getElementById('modalMetaCategory').textContent = card.category || 'Promotional Campaign';
       document.getElementById('modalMetaDiscount').textContent = card.discount || 'Standard Promotion';
-      document.getElementById('modalMetaVelocity').textContent = `${card.velocity || '3.8/wk'} (${currentEmailData.total_emails || 147} Total Tracked)`;
+      document.getElementById('modalMetaVelocity').textContent = `${card.velocity || currentEmailData?.velocity || '3.5/wk'} (${currentEmailData?.total_emails || currentEmailFullList.length} Total Tracked)`;
 
       // Products
       const prodEl = document.getElementById('modalMetaProducts');
-      if (prodEl && card.products) {
-        prodEl.innerHTML = card.products.map(p => `
-          <div class="p-2 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center justify-between text-xs font-semibold text-slate-700">
-            <span>${p}</span>
-            <span class="text-blue-600 font-bold hover:underline cursor-pointer">Shop item →</span>
-          </div>
-        `).join('');
+      if (prodEl) {
+        if (card.products && card.products.length > 0) {
+          prodEl.innerHTML = card.products.map(p => `
+            <div class="p-2 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center justify-between text-xs font-semibold text-slate-700">
+              <span>${p}</span>
+              <span class="text-blue-600 font-bold hover:underline cursor-pointer">Shop item →</span>
+            </div>
+          `).join('');
+        } else {
+          prodEl.innerHTML = `<div class="text-xs text-slate-400">Không có sản phẩm nổi bật</div>`;
+        }
       }
 
       // Email client newsletter render
       const contentEl = document.getElementById('modalEmailBodyContent');
-      const modalImgSrc = card.image_url || `/static/emails/card_${(idx % 18) + 1}.png`;
+      const modalImgSrc = card.image_url || `/static/emails/card_1.png`;
       if (contentEl) {
         contentEl.innerHTML = `
           <div class="py-2 flex items-center justify-center gap-2">
