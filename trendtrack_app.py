@@ -1863,6 +1863,678 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
         </div>
 
+        <!-- ============================================================== -->
+        <!-- SUB-CONTAINER 5: META ADS RANKING INTELLIGENCE                 -->
+        <!-- (MATCHING media_1790734080267 to media_1790734116372)         -->
+        <!-- ============================================================== -->
+        <div id="metaRankingContainer" class="space-y-6 hidden">
+          <!-- Top Header Strip matching media_1790734080267.png -->
+          <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+              <div class="relative shrink-0">
+                <img id="metaRankingBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">♾️</div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h1 id="metaRankingBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
+                  <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full flex items-center gap-1 cursor-pointer">
+                    <span>Main</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                  </span>
+                  <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span id="metaRankingActiveCount">387 / 14K</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-slate-100/80 border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full text-xs font-medium ml-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span id="metaRankingEuUkBadge">Reach & Spend · EU/UK only 84 (22%)</span>
+                    <div class="w-7 h-3.5 bg-blue-600 rounded-full relative cursor-pointer flex items-center p-0.5 justify-end">
+                      <div class="w-2.5 h-2.5 bg-white rounded-full shadow-xs"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="switchAdvSubTab('adlibrary')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer" title="Store Overview">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                <span>Store Overview</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Brand Back Machine</span>
+              </button>
+              <button class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 Advertising Sub-Tabs matching TrendTrack navigation -->
+          <div class="flex items-center gap-6 sm:gap-8 border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
+            <button onclick="switchAdvSubTab('adlibrary')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span>Ad Library</span>
+            </button>
+            <button onclick="switchAdvSubTab('insights')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              <span>Insights</span>
+            </button>
+            <button class="pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <span>Ranking</span>
+            </button>
+            <button onclick="switchAdvSubTab('contents')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              <span>Contents</span>
+            </button>
+            <button onclick="switchAdvSubTab('partnerships')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              <span>Partnerships</span>
+            </button>
+            <button onclick="switchAdvSubTab('landingpages')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              <span>Landing Pages</span>
+            </button>
+          </div>
+
+          <!-- 4 RANKING PERSPECTIVES PILLS matching media_1790734080267.png -->
+          <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-fit border border-slate-200/80 flex-wrap">
+            <button id="metaRankPill_biggest_gain" onclick="switchMetaRankMode('biggest_gain')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+              <span>Biggest Rank Gain</span>
+            </button>
+            <button id="metaRankPill_top_ranked" onclick="switchMetaRankMode('top_ranked')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <span class="text-sm">🏆</span>
+              <span>Top Ranked</span>
+            </button>
+            <button id="metaRankPill_longest_active" onclick="switchMetaRankMode('longest_active')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Longest Active</span>
+            </button>
+            <button id="metaRankPill_most_reused" onclick="switchMetaRankMode('most_reused')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
+              <span>Most reused creatives</span>
+            </button>
+          </div>
+
+          <!-- FILTERS TOOLBAR: ADS FILTERS + EU/UK FILTERS matching media_1790734080267.png -->
+          <div class="flex items-center justify-between gap-4 flex-wrap text-xs">
+            <!-- Left: Ads General Filters -->
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-blue-600 font-extrabold flex items-center gap-1 text-[11px] mr-1">
+                <span class="text-xs">♾️</span> Ads
+              </span>
+              <button onclick="toggleMetaRankFilter('countries')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Ad Countries</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('status')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Ad Status</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('mediatypes')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Media Types</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('ratio')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Ratio</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('days')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Days Running</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('cta')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>CTA</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('adcopy')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Ad Copy</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('landing')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Landing Pages</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('partners')" class="px-2.5 py-1 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Partners</span>
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <span class="text-slate-400 text-xs font-semibold cursor-pointer hover:text-slate-700">10 more</span>
+            </div>
+
+            <!-- Right: EU / UK Blue Buttons Group matching media_1790734080267.png -->
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-blue-600 font-extrabold flex items-center gap-1 text-[11px] mr-1">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span> EU / UK
+              </span>
+              <button onclick="toggleMetaRankFilter('reach')" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center gap-1.5 shadow-xs transition cursor-pointer">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <span>Ad Reach</span>
+                <svg class="w-2.5 h-2.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('spend')" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center gap-1.5 shadow-xs transition cursor-pointer">
+                <span>$ Ad Spend</span>
+                <svg class="w-2.5 h-2.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('gender')" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center gap-1.5 shadow-xs transition cursor-pointer">
+                <span>🚻 Gender</span>
+                <svg class="w-2.5 h-2.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button onclick="toggleMetaRankFilter('age')" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center gap-1.5 shadow-xs transition cursor-pointer">
+                <span>🎂 Age</span>
+                <svg class="w-2.5 h-2.5 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE INVERTED RANKING CHART SECTION (matching media_1790734080267.png) -->
+          <div class="tt-card p-5 space-y-4">
+            <!-- Chart Controls Header -->
+            <div class="flex items-center justify-between">
+              <button type="button" id="toggleMetaRankChartBtn" onclick="toggleMetaRankingChart()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold transition shadow-2xs cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <span id="toggleMetaRankChartText">Hide chart</span>
+                <svg id="toggleMetaRankChartIcon" class="w-3 h-3 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+              </button>
+
+              <div class="flex items-center gap-2 text-xs">
+                <select id="metaRankTopCountSelect" onchange="changeMetaRankTopCount(this.value)" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-800 shadow-2xs focus:outline-none cursor-pointer">
+                  <option value="5">Top 5</option>
+                  <option value="10">Top 10</option>
+                </select>
+                <select id="metaRankTimeframeSelect" onchange="changeMetaRankTimeframe(this.value)" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-800 shadow-2xs focus:outline-none cursor-pointer">
+                  <option value="7">Last 7D</option>
+                  <option value="14">Last 14D</option>
+                  <option value="30">Last 30D</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Chart Canvas Container -->
+            <div id="metaRankingChartWrapper" class="space-y-4 transition-all duration-300">
+              <div class="h-64 sm:h-72 w-full relative">
+                <canvas id="metaRankingChart"></canvas>
+              </div>
+
+              <!-- Legend row with thumbnail avatars matching media_1790734080267.png -->
+              <div id="metaRankingChartLegend" class="flex items-center justify-center gap-4 flex-wrap text-xs pt-1 border-t border-slate-100">
+                <!-- Dynamically populated via renderMetaRankingLegend() -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-COLUMN GRID OF RANKED ADS CARDS (matching media_1790734080267 - .372) -->
+          <div id="metaRankingCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Dynamically populated via renderMetaRankingCards() -->
+          </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- SUB-CONTAINER 6: TIKTOK INTELLIGENCE & LIBRARY MODULE           -->
+        <!-- (MATCHING media_1790735868038 to media_1790735961995)         -->
+        <!-- ============================================================== -->
+        <div id="tiktokIntelligenceContainer" class="space-y-6 hidden">
+          <!-- Top Header Strip matching media_1790735961995.png -->
+          <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5">
+              <div class="relative shrink-0">
+                <img id="tiktokBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0284c7&color=fff" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <!-- TikTok badge at 5 o'clock -->
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-black border-2 border-white flex items-center justify-center">
+                  <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2.5 flex-wrap">
+                  <h1 id="tiktokBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">The Oodie</h1>
+                  <span id="tiktokTotalBadge" class="text-xs font-bold text-slate-500">703 TikToks</span>
+                  
+                  <!-- Segmented Filter Pill: All, Ads 31%, Organics 69% -->
+                  <div class="flex items-center bg-slate-100/90 p-1 rounded-full text-xs font-bold border border-slate-200/80 ml-1">
+                    <button id="ttFilter_all" onclick="filterTikTokType('all')" class="px-2.5 py-0.5 rounded-full bg-white text-slate-900 shadow-xs flex items-center gap-1.5 transition cursor-pointer">
+                      <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                      <span>All</span>
+                    </button>
+                    <button id="ttFilter_ads" onclick="filterTikTokType('Ads')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
+                      <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                      <span id="tiktokAdsPctBadge">Ads 31%</span>
+                    </button>
+                    <button id="ttFilter_organics" onclick="filterTikTokType('Organics')" class="px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer">
+                      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                      <span id="tiktokOrganicsPctBadge">Organics 69%</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                <span>Share</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-emerald-600 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shadow-xs cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                <span>Add Brandtracker</span>
+              </button>
+              <button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Brand Back Machine</span>
+              </button>
+              <button class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Sub-Tabs Navigation Strip: Insights, TikTok Library, Ranking, Contents -->
+          <div class="flex items-center gap-6 sm:gap-8 border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
+            <button id="ttTabBtn_insights" onclick="switchTikTokView('insights')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              <span>Insights</span>
+            </button>
+            <button id="ttTabBtn_library" onclick="switchTikTokView('library')" class="pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span>TikTok Library</span>
+            </button>
+            <button id="ttTabBtn_ranking" onclick="switchTikTokView('ranking')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <span>Ranking</span>
+            </button>
+            <button id="ttTabBtn_contents" onclick="switchTikTokView('contents')" class="pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span>Contents</span>
+            </button>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- VIEW 1: INSIGHTS TAB (Matching media_1790735877194.png)        -->
+          <!-- ============================================================== -->
+          <div id="ttView_insights" class="space-y-6 hidden">
+            <!-- Top Insights Row: Historic Chart (2/3) + Format Mix & Categories (1/3) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+              <!-- Left: Historic Chart Card -->
+              <div class="lg:col-span-8 tt-card p-5 flex flex-col justify-between">
+                <div>
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                    <div>
+                      <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-2">
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Historic</span>
+                      </div>
+                      <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                          <span class="text-xs font-semibold text-slate-500">Views</span>
+                          <span id="ttInsightsViewsVal" class="text-sm font-extrabold text-slate-900">233K</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                          <span class="text-xs font-semibold text-slate-500">Posts</span>
+                          <span id="ttInsightsPostsVal" class="text-sm font-extrabold text-slate-900">0</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                          <span class="text-xs font-semibold text-slate-500">Active TikToks</span>
+                          <span id="ttInsightsActiveVal" class="text-sm font-extrabold text-slate-900">703</span>
+                          <span class="text-[11px] font-bold text-emerald-600">+0.9%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <select class="px-2.5 py-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-bold shadow-2xs focus:outline-none cursor-pointer">
+                        <option>All time</option>
+                        <option>Last 30 days</option>
+                        <option>Last 90 days</option>
+                        <option>Last 1 year</option>
+                      </select>
+                      <select class="px-2.5 py-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-bold shadow-2xs focus:outline-none cursor-pointer">
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="h-64 sm:h-72 w-full pt-4">
+                    <canvas id="ttHistoricChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Format Mix & Category List -->
+              <div class="lg:col-span-4 space-y-5 flex flex-col justify-between">
+                <!-- Card 1: Format Mix Donut -->
+                <div class="tt-card p-5">
+                  <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                    <span>Format Mix</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-4">
+                    <div class="relative w-28 h-28 shrink-0">
+                      <canvas id="ttFormatMixChart"></canvas>
+                      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                        <span id="ttFormatMixCenterCount" class="text-base font-extrabold text-slate-900 leading-none">220</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase mt-0.5">TikToks</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2 text-xs font-bold flex-1">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                          <span class="w-3 h-3 rounded-xs bg-blue-600"></span>
+                          <span class="text-slate-600">Video</span>
+                        </div>
+                        <span class="text-slate-900">100%</span>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                          <span class="w-3 h-3 rounded-xs bg-pink-500"></span>
+                          <span class="text-slate-600">Carousels</span>
+                        </div>
+                        <span class="text-slate-900">0%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: TikTok Category breakdown -->
+                <div class="tt-card p-5">
+                  <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-3">
+                    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    <span>TikTok Category</span>
+                  </div>
+                  <div id="ttCategoryList" class="space-y-2 text-xs font-semibold">
+                    <!-- Dynamically populated categories -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Section: Carousel with sub-tabs (Most Views, Most Likes, Most Longevity) -->
+            <div class="tt-card p-5">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-6 text-xs font-bold">
+                  <button id="ttCarouselTab_views" onclick="switchTTInsightsCarousel('views')" class="pb-2 border-b-2 border-emerald-500 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    <span>Most Views</span>
+                  </button>
+                  <button id="ttCarouselTab_likes" onclick="switchTTInsightsCarousel('likes')" class="pb-2 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    <span>Most Likes</span>
+                  </button>
+                  <button id="ttCarouselTab_longevity" onclick="switchTTInsightsCarousel('longevity')" class="pb-2 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>Most Longevity</span>
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button onclick="switchTikTokView('library')" class="text-xs font-bold text-slate-600 hover:text-slate-900 hover:underline mr-2 cursor-pointer">See more</button>
+                  <button onclick="scrollTTCarousel(-1)" class="w-7 h-7 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 cursor-pointer shadow-2xs">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                  </button>
+                  <button onclick="scrollTTCarousel(1)" class="w-7 h-7 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 cursor-pointer shadow-2xs">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Horizontal Carousel -->
+              <div id="ttInsightsCarousel" class="flex gap-4 overflow-x-auto custom-scroll pt-4 pb-2">
+                <!-- Dynamically populated via renderTTInsightsCarousel() -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- VIEW 2: TIKTOK LIBRARY TAB (Matching media_1790735868038.png)  -->
+          <!-- ============================================================== -->
+          <div id="ttView_library" class="space-y-6">
+            <!-- Multi-dimensional Filter Bar -->
+            <div class="flex items-center gap-2 flex-wrap text-xs font-semibold">
+              <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white font-extrabold shadow-xs">
+                <svg class="w-3.5 h-3.5 text-pink-400" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+                <span>TikToks</span>
+              </span>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>((•)) Type</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>📅 Publication Date</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>⏳ Days Running</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>👁 Views</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>📷 Media Types</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>文A Language</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>⏱ Video Duration</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+
+            <!-- Sort and Total count line -->
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 font-medium">Sort By:</span>
+                <button class="font-extrabold text-slate-900 flex items-center gap-1 cursor-pointer">
+                  <span>Newest</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+                <button class="p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-500 cursor-pointer">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- 4-Column Grid for TikTok Library Cards -->
+            <div id="ttLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Dynamically populated via renderTTLibraryCards() -->
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- VIEW 3: TIKTOK RANKING TAB (Matching media_1790735884297.png)   -->
+          <!-- ============================================================== -->
+          <div id="ttView_ranking" class="space-y-6 hidden">
+            <!-- Ranking Perspectives Pills -->
+            <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-fit border border-slate-200/80 flex-wrap">
+              <button id="ttRankPill_views" onclick="switchTTRankPerspective('views')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span>Most Views</span>
+              </button>
+              <button id="ttRankPill_likes" onclick="switchTTRankPerspective('likes')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                <span>Most Likes</span>
+              </button>
+              <button id="ttRankPill_longevity" onclick="switchTTRankPerspective('longevity')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Most Longevity</span>
+              </button>
+            </div>
+
+            <!-- Filters Bar -->
+            <div class="flex items-center gap-2 flex-wrap text-xs font-semibold">
+              <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white font-extrabold shadow-xs">
+                <svg class="w-3.5 h-3.5 text-pink-400" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+                <span>TikToks</span>
+              </span>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Type</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Publication Date</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Days Running</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Views</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Media Types</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Language</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <button class="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 shadow-2xs cursor-pointer">
+                <span>Video Duration</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+            </div>
+
+            <!-- 4-Column Grid for TikTok Ranking Cards -->
+            <div id="ttRankingCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Dynamically populated via renderTTRankingCards() -->
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- VIEW 4: TIKTOK CONTENTS TAB (Matching media_1790735890823.jpg)  -->
+          <!-- ============================================================== -->
+          <div id="ttView_contents" class="space-y-6 hidden">
+            <!-- Controls Bar: Sort, Pills (All, Video, Image, Carousel), Status -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-3 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-500 font-medium">Sort By:</span>
+                  <button class="font-extrabold text-slate-900 flex items-center gap-1 cursor-pointer">
+                    <span>Most Recent</span>
+                    <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200/80">
+                  <button id="ttFormatPill_all" onclick="filterTTContentsFormat('all')" class="px-2.5 py-1 rounded-lg text-xs font-extrabold bg-white text-slate-900 shadow-xs transition cursor-pointer">
+                    <span>⊞ All</span>
+                  </button>
+                  <button id="ttFormatPill_video" onclick="filterTTContentsFormat('Video')" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">
+                    <span>▶ Video</span>
+                  </button>
+                  <button id="ttFormatPill_image" onclick="filterTTContentsFormat('Image')" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">
+                    <span>🖼 Image</span>
+                  </button>
+                  <button id="ttFormatPill_carousel" onclick="filterTTContentsFormat('Carousel')" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">
+                    <span>📑 Carousel</span>
+                  </button>
+                </div>
+
+                <div class="flex items-center gap-1.5 text-slate-400 font-semibold text-[11px]">
+                  <span class="animate-spin text-slate-500">⟳</span>
+                  <span>Refreshing...</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-slate-500">32+ TikToks</span>
+                <button class="px-2.5 py-1 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 flex items-center gap-1 font-bold shadow-2xs cursor-pointer">
+                  <span>📅 All</span> <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- 4-Column Minimal Gallery Grid -->
+            <div id="ttContentsCardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              <!-- Dynamically populated via renderTTContentsCards() -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- MODAL: TIKTOK VIDEO PLAYER MODAL                               -->
+        <!-- ============================================================== -->
+        <div id="tiktokVideoModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+          <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-3xl w-full max-h-[92vh] flex flex-col md:flex-row overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <!-- Left: Video Area -->
+            <div class="md:w-1/2 bg-black flex items-center justify-center relative min-h-[380px] md:min-h-[520px]">
+              <video id="ttModalVideoPlayer" class="w-full h-full object-contain max-h-[520px]" controls playsinline></video>
+              <button onclick="closeTikTokModal()" class="absolute top-4 left-4 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition cursor-pointer md:hidden">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+
+            <!-- Right: Details & Meta -->
+            <div class="md:w-1/2 p-6 flex flex-col justify-between bg-white overflow-y-auto custom-scroll">
+              <div>
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div class="flex items-center gap-3">
+                    <img id="ttModalAvatar" src="" class="w-10 h-10 rounded-full object-cover border border-slate-200" alt="Author"/>
+                    <div>
+                      <h3 id="ttModalAuthor" class="text-sm font-extrabold text-slate-900">The Oodie</h3>
+                      <div class="text-[11px] font-semibold text-slate-500" id="ttModalHandle">@the_oodie</div>
+                    </div>
+                  </div>
+                  <button onclick="closeTikTokModal()" class="w-8 h-8 rounded-full border border-slate-200 bg-white hover:bg-slate-100 flex items-center justify-center text-slate-500 cursor-pointer transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                  </button>
+                </div>
+
+                <div class="py-4 space-y-3">
+                  <div class="flex items-center gap-2 flex-wrap text-xs">
+                    <span id="ttModalTypeBadge" class="px-2.5 py-0.5 rounded-full font-bold bg-pink-100 text-pink-700">Spark Ad</span>
+                    <span id="ttModalDateBadge" class="text-slate-500 font-medium">Aug 20, 2022</span>
+                    <span class="text-slate-300">•</span>
+                    <span id="ttModalDuration" class="text-slate-500 font-medium">26s</span>
+                  </div>
+
+                  <p id="ttModalCaption" class="text-xs text-slate-800 font-medium leading-relaxed">Caption text</p>
+
+                  <div class="flex items-center gap-2 bg-slate-50 border border-slate-200/80 p-2.5 rounded-xl text-xs font-semibold text-slate-700">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                    <span id="ttModalSound" class="truncate">original sound - The Oodie</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Engagement Stats -->
+              <div class="pt-4 border-t border-slate-100 space-y-3">
+                <div class="grid grid-cols-4 gap-2 text-center">
+                  <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                    <div class="text-[10px] text-slate-400 font-bold uppercase">Views</div>
+                    <div id="ttModalViews" class="text-xs font-extrabold text-slate-900 mt-0.5">1.8M</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                    <div class="text-[10px] text-slate-400 font-bold uppercase">Likes</div>
+                    <div id="ttModalLikes" class="text-xs font-extrabold text-rose-600 mt-0.5">4,941</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                    <div class="text-[10px] text-slate-400 font-bold uppercase">Comments</div>
+                    <div id="ttModalComments" class="text-xs font-extrabold text-slate-900 mt-0.5">107</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded-xl border border-slate-100">
+                    <div class="text-[10px] text-slate-400 font-bold uppercase">Shares</div>
+                    <div id="ttModalShares" class="text-xs font-extrabold text-slate-900 mt-0.5">164</div>
+                  </div>
+                </div>
+
+                <button onclick="closeTikTokModal()" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition cursor-pointer">
+                  Đóng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <!-- ========================================== -->
       <!-- VIEW 2: BRANDTRACKER (RADAR TREND) VIEW    -->
       <!-- ========================================== -->
@@ -2465,17 +3137,33 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const googleContainer = document.getElementById('googleAdsContainer');
       const emailContainer = document.getElementById('emailIntelligenceContainer');
       const contentsContainer = document.getElementById('contentsContainer');
+      const metaRankingContainer = document.getElementById('metaRankingContainer');
+      const tiktokContainer = document.getElementById('tiktokIntelligenceContainer');
 
       if (tab === 'contents') {
         if (emailContainer) emailContainer.classList.add('hidden');
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (contentsContainer) contentsContainer.classList.remove('hidden');
         if (contentsBtn) contentsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         const bName = (currentData && currentData.name) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
         loadContentsView(bName);
+      } else if (tab === 'ranking') {
+        if (contentsContainer) contentsContainer.classList.add('hidden');
+        if (emailContainer) emailContainer.classList.add('hidden');
+        if (overviewContainer) overviewContainer.classList.add('hidden');
+        if (googleContainer) googleContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.remove('hidden');
+        if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
+        const bName = (currentData && (currentData.query || currentData.name)) || 'The Oodie';
+        loadMetaRankingView(bName);
       } else if (tab === 'emails') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (emailsBtn) emailsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
@@ -2485,6 +3173,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       } else if (tab === 'google') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (googleBtn) googleBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.remove('hidden');
@@ -2492,6 +3182,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       } else if (tab === 'meta') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
@@ -2499,19 +3191,26 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       } else if (tab === 'tiktok') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
-        if (tiktokBtn) tiktokBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        if (overviewContainer) overviewContainer.classList.remove('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
-        switchRightCard('tiktok');
+        if (tiktokContainer) tiktokContainer.classList.remove('hidden');
+        if (tiktokBtn) tiktokBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
+        const bName = (currentData && (currentData.query || currentData.name)) || (currentGoogleData && currentGoogleData.brand) || 'The Oodie';
+        loadTikTokIntelligenceView(bName);
       } else if (tab === 'similar') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (similarBtn) similarBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         scrollToSimilarShops();
       } else {
         // default: overview
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
+        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (overviewBtn) overviewBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
@@ -2522,6 +3221,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     function switchAdvSubTab(subTab) {
       if (subTab === 'contents') {
         switchShopSubTab('contents');
+      } else if (subTab === 'ranking') {
+        switchShopSubTab('ranking');
       } else if (subTab === 'adlibrary') {
         switchShopSubTab('meta');
       } else if (subTab === 'insights') {
@@ -2530,14 +3231,1001 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           const card = document.querySelector('[class*="Traffic & sales"]') || document.getElementById('similarShopsSection');
           if (card) card.scrollIntoView({ behavior: 'smooth' });
         }, 50);
-      } else if (subTab === 'ranking') {
-        switchShopSubTab('google');
       } else if (subTab === 'partnerships') {
         alert('🤝 Partnerships Intelligence: Đang phân tích 32 creator & influencer đang chạy affiliate cho thương hiệu này!');
       } else if (subTab === 'landingpages') {
         const link = (currentData && currentData.domain) || 'theoodie.com';
         window.open('https://' + link, '_blank');
       }
+    }
+
+    // ==========================================
+    // META ADS RANKING INTELLIGENCE ENGINE
+    // ==========================================
+    let currentMetaRankData = null;
+    let currentMetaRankMode = 'biggest_gain'; // 'biggest_gain' | 'top_ranked' | 'longest_active' | 'most_reused'
+    let metaRankingChartInstance = null;
+    let isMetaRankChartHidden = false;
+
+    async function loadMetaRankingData(brandName, forceRefresh = false) {
+      try {
+        const res = await fetch('/api/meta-ranking?query=' + encodeURIComponent(brandName) + (forceRefresh ? '&refresh=true' : ''));
+        const data = await res.json();
+        currentMetaRankData = data;
+        renderMetaRanking(data);
+      } catch (err) {
+        console.error('Error fetching meta ranking data:', err);
+      }
+    }
+
+    function loadMetaRankingView(brandName) {
+      if (currentMetaRankData && currentMetaRankData.brand && currentMetaRankData.brand.toLowerCase() === brandName.toLowerCase()) {
+        renderMetaRanking(currentMetaRankData);
+      } else {
+        loadMetaRankingData(brandName, false);
+      }
+    }
+
+    function renderMetaRanking(data) {
+      if (!data) return;
+      const bName = data.brand || 'The Oodie';
+      const avatarUrl = getEmailBrandAvatar(bName);
+
+      const avatarEl = document.getElementById('metaRankingBrandAvatar');
+      const nameEl = document.getElementById('metaRankingBrandName');
+      const countEl = document.getElementById('metaRankingActiveCount');
+      const euUkBadge = document.getElementById('metaRankingEuUkBadge');
+
+      if (avatarEl) avatarEl.src = avatarUrl;
+      if (nameEl) nameEl.textContent = bName;
+      if (countEl) countEl.textContent = `${data.total_active_ads || 387} / ${Math.round((data.total_historical_ads || 14000) / 1000)}K`;
+      if (euUkBadge) euUkBadge.textContent = `Reach & Spend · EU/UK only ${data.eu_uk_count || 84} (${data.eu_uk_pct || 22}%)`;
+
+      renderMetaRankingChart();
+      renderMetaRankingCards();
+    }
+
+    function switchMetaRankMode(mode) {
+      currentMetaRankMode = mode;
+      const modes = ['biggest_gain', 'top_ranked', 'longest_active', 'most_reused'];
+      modes.forEach(m => {
+        const btn = document.getElementById(`metaRankPill_${m}`);
+        if (btn) {
+          if (m === mode) {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer";
+          } else {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer";
+          }
+        }
+      });
+
+      renderMetaRankingChart();
+      renderMetaRankingCards();
+    }
+
+    function toggleMetaRankingChart() {
+      isMetaRankChartHidden = !isMetaRankChartHidden;
+      const wrapper = document.getElementById('metaRankingChartWrapper');
+      const textEl = document.getElementById('toggleMetaRankChartText');
+      const iconEl = document.getElementById('toggleMetaRankChartIcon');
+
+      if (isMetaRankChartHidden) {
+        if (wrapper) wrapper.classList.add('hidden');
+        if (textEl) textEl.textContent = 'Show chart';
+        if (iconEl) iconEl.style.transform = 'rotate(180deg)';
+      } else {
+        if (wrapper) wrapper.classList.remove('hidden');
+        if (textEl) textEl.textContent = 'Hide chart';
+        if (iconEl) iconEl.style.transform = 'rotate(0deg)';
+        renderMetaRankingChart();
+      }
+    }
+
+    function changeMetaRankTopCount(val) {
+      renderMetaRankingChart();
+    }
+
+    function changeMetaRankTimeframe(val) {
+      renderMetaRankingChart();
+    }
+
+    function toggleMetaRankFilter(filterType) {
+      alert(`Bộ lọc Meta Ads [${filterType}]: Đang mở tùy chọn lọc chi tiết.`);
+    }
+
+    function renderMetaRankingChart() {
+      const canvas = document.getElementById('metaRankingChart');
+      if (!canvas || isMetaRankChartHidden) return;
+      if (!currentMetaRankData || !currentMetaRankData.charts) return;
+
+      if (metaRankingChartInstance) {
+        metaRankingChartInstance.destroy();
+      }
+
+      const isGain = currentMetaRankMode === 'biggest_gain';
+      const lines = isGain ? (currentMetaRankData.charts.biggest_gain || []) : (currentMetaRankData.charts.top_ranked || []);
+      const labels = currentMetaRankData.dates || ["Sep 22", "Sep 23", "Sep 24", "Sep 25", "Sep 26", "Sep 27", "Sep 28", "Sep 29"];
+
+      const topLimit = parseInt(document.getElementById('metaRankTopCountSelect')?.value || '5');
+      const activeLines = lines.slice(0, topLimit);
+
+      const datasets = activeLines.map((line, idx) => ({
+        label: line.label,
+        data: line.points,
+        borderColor: line.color,
+        backgroundColor: line.color,
+        borderWidth: 2.2,
+        tension: 0.25,
+        pointRadius: 4,
+        pointHoverRadius: 6.5,
+        pointBackgroundColor: line.color
+      }));
+
+      const ctx = canvas.getContext('2d');
+      metaRankingChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return ` ${context.dataset.label}: Rank #${context.parsed.y}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { font: { size: 10, weight: 'bold' }, color: '#94a3b8' }
+            },
+            y: {
+              reverse: true, // Inverted Rank: Rank 1 is on top!
+              min: 1,
+              max: isGain ? 401 : (currentMetaRankMode === 'top_ranked' ? 5 : 100),
+              ticks: {
+                stepSize: isGain ? 100 : 1,
+                font: { size: 10, weight: 'bold' },
+                color: '#94a3b8',
+                callback: function(val) {
+                  return val;
+                }
+              },
+              grid: { color: '#f1f5f9' }
+            }
+          }
+        }
+      });
+
+      // Render chart legend row below
+      const legendContainer = document.getElementById('metaRankingChartLegend');
+      if (legendContainer) {
+        legendContainer.innerHTML = activeLines.map(line => `
+          <div class="flex items-center gap-1.5 cursor-pointer hover:opacity-80 transition">
+            <span class="w-2.5 h-2.5 rounded-sm shrink-0" style="background-color: ${line.color}"></span>
+            <span class="font-extrabold text-slate-800 text-[11px]">${line.rank}</span>
+            <img src="${line.image}" class="w-5 h-5 rounded-md object-cover border border-slate-200 shrink-0" alt="thumb"/>
+          </div>
+        `).join('');
+      }
+    }
+
+    function renderMetaRankingCards() {
+      const grid = document.getElementById('metaRankingCardsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      if (!currentMetaRankData || !currentMetaRankData.modes) return;
+      const cards = currentMetaRankData.modes[currentMetaRankMode] || [];
+      const bName = currentMetaRankData.brand || 'The Oodie';
+      const avatarUrl = getEmailBrandAvatar(bName);
+
+      cards.forEach((card, idx) => {
+        const cDiv = document.createElement('div');
+        cDiv.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group flex flex-col justify-between";
+
+        let topHeaderHtml = '';
+        let bigMetricHtml = '';
+        let statusRowHtml = '';
+        let spendBarHtml = '';
+
+        if (currentMetaRankMode === 'biggest_gain') {
+          topHeaderHtml = `
+            <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1">
+              <span><strong class="text-slate-900">${idx + 1}</strong> Ad Rank</span>
+              <span class="text-slate-400">Best #${card.best_rank} / ${card.total_ads}</span>
+            </div>
+          `;
+          bigMetricHtml = `
+            <div class="flex items-center justify-between my-2">
+              <div class="text-sm font-extrabold text-slate-900">
+                #${card.rank} <span class="text-xs font-normal text-slate-400">/ ${card.total_ads} · Top ${card.top_percent}%</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg width="40" height="18" viewBox="0 0 40 18" fill="none">
+                  <path d="M 0 16 Q 20 14 40 2" stroke="#10b981" stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="text-[11px] font-extrabold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md border border-emerald-200/70">
+                  +${card.gain_pos} pos
+                </span>
+              </div>
+            </div>
+          `;
+          statusRowHtml = `
+            <div class="flex items-center gap-1.5 text-[10.5px] font-semibold text-slate-600 mb-2 flex-wrap">
+              <span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/70">
+                ● Active
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>${card.days_running}d · ${card.start_date}</span>
+              </span>
+              ${card.copies_count > 1 ? `
+                <span class="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center gap-1 text-slate-500">
+                  <span>📑</span> <span>${card.copies_count}</span>
+                </span>
+              ` : ''}
+            </div>
+          `;
+        } else if (currentMetaRankMode === 'top_ranked') {
+          topHeaderHtml = `
+            <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1">
+              <span><strong class="text-slate-900">${idx + 1}</strong> Ad Rank</span>
+              <span class="text-slate-400">Best #${card.best_rank} / ${card.total_ads}</span>
+            </div>
+          `;
+          bigMetricHtml = `
+            <div class="flex items-center justify-between my-2">
+              <div class="text-sm font-extrabold text-slate-900">
+                #${card.rank} <span class="text-xs font-normal text-slate-400">/ ${card.total_ads} · Top ${card.top_percent}%</span>
+              </div>
+              <div class="w-16 h-1.5 bg-slate-800 rounded-full"></div>
+            </div>
+          `;
+          statusRowHtml = `
+            <div class="flex items-center gap-1.5 text-[10.5px] font-semibold text-slate-600 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/70">
+                ● Active
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>${card.days_running}d · ${card.start_date}</span>
+              </span>
+            </div>
+          `;
+        } else if (currentMetaRankMode === 'longest_active') {
+          statusRowHtml = `
+            <div class="flex items-center gap-1.5 text-[10.5px] font-semibold text-slate-600 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/70">
+                ● Active
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>${card.days_running}d · ${card.start_date}</span>
+              </span>
+            </div>
+          `;
+        } else if (currentMetaRankMode === 'most_reused') {
+          statusRowHtml = `
+            <div class="flex items-center gap-1.5 text-[10.5px] font-semibold text-slate-600 mb-2">
+              <span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/70">
+                ● Active
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 flex items-center gap-1">
+                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>${card.days_running}d · ${card.start_date}</span>
+              </span>
+            </div>
+          `;
+        }
+
+        // Spend bar row
+        if (card.spend_info) {
+          spendBarHtml = `
+            <div class="mb-2.5 px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[10.5px] flex items-center justify-between shadow-2xs">
+              <span class="flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                <span>${card.spend_info.reach} · ${card.spend_info.spend} · ${card.spend_info.daily_burn}</span>
+              </span>
+              <span class="text-xs">${card.spend_info.flag}</span>
+            </div>
+          `;
+        } else {
+          spendBarHtml = `
+            <div class="mb-2.5 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200 text-slate-600 font-semibold text-[10px] flex items-center justify-between">
+              <span class="flex items-center gap-1 truncate">
+                <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="truncate">${card.targeting || 'Global ads'}</span>
+              </span>
+              <span class="text-xs">${card.countries_flag || '🌐'}</span>
+            </div>
+          `;
+        }
+
+        // Rank indicator row for Longest Active & Most Reused
+        let rankRowHtml = '';
+        if (currentMetaRankMode === 'longest_active') {
+          const arrow = card.delta_trend === 'down' ? '↘' : '↗';
+          const colorClass = card.delta_trend === 'down' ? 'text-rose-600 font-extrabold' : 'text-emerald-600 font-extrabold';
+          rankRowHtml = `
+            <div class="flex items-center justify-between text-xs mb-2 px-0.5">
+              <span class="${colorClass}">${card.rank} / ${card.total_ads} (${card.top_percent}%) ${arrow}</span>
+              <span class="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
+                <span>📑</span> <span>${card.copies_count}</span>
+              </span>
+            </div>
+          `;
+        } else if (currentMetaRankMode === 'most_reused') {
+          rankRowHtml = `
+            <div class="flex items-center justify-between text-xs mb-2 px-0.5">
+              <span class="text-slate-700 font-bold">${card.rank} / ${card.total_ads} (${card.top_percent}%)</span>
+              <span class="text-[11px] font-extrabold text-slate-800 flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200">
+                <span>📑</span> <span>${card.copies_count}</span>
+              </span>
+            </div>
+          `;
+        }
+
+        cDiv.innerHTML = `
+          <div>
+            ${topHeaderHtml}
+            ${bigMetricHtml}
+            ${statusRowHtml}
+            ${spendBarHtml}
+            ${rankRowHtml}
+
+            <!-- Meta Ad Creative Box matching screenshots -->
+            <div class="rounded-xl border border-slate-200/90 overflow-hidden bg-slate-50/50 mb-3 shadow-2xs">
+              <!-- Meta Page Identity Row -->
+              <div class="p-2.5 pb-1 flex items-center gap-2">
+                <img src="${avatarUrl}" class="w-5 h-5 rounded-full object-cover border border-slate-200" alt="Brand"/>
+                <div class="leading-none">
+                  <div class="text-[11px] font-bold text-slate-900">${bName}</div>
+                  <div class="text-[9px] text-slate-400 mt-0.5 flex items-center gap-1">
+                    <span>Sponsored</span>
+                    <span>•</span>
+                    <svg class="w-2.5 h-2.5 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Primary Text Copy with See More -->
+              <div class="px-2.5 py-1.5 text-[11px] text-slate-700 leading-snug line-clamp-2" title="${card.primary_text}">
+                ${card.primary_text}
+              </div>
+
+              <!-- Image / Video Creative Container -->
+              <div class="relative w-full aspect-square bg-slate-100 overflow-hidden flex items-center justify-center cursor-pointer">
+                <img src="${card.image_url}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Creative" loading="lazy"/>
+                ${card.is_video ? `
+                  <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                      <svg class="w-5 h-5 text-slate-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- Bottom CTA Bar -->
+              <div class="p-2.5 bg-white border-t border-slate-100 flex items-center justify-between gap-2">
+                <div class="min-w-0">
+                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider truncate">${card.cta_domain || 'theoodie.com'}</div>
+                  <div class="text-[11px] font-bold text-slate-800 truncate">${card.cta_title || 'Shop The Oodie'}</div>
+                </div>
+                <button type="button" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[10px] font-bold shrink-0 transition">
+                  ${card.cta_text || 'Shop Now'}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer matching Trendtrack media_1790734080267.png -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <img src="${avatarUrl}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
+              <span class="text-[11px] font-bold text-slate-700 truncate">${bName}</span>
+              <span class="text-[10px] text-slate-400 font-semibold shrink-0">• ${card.total_ads} / 14K</span>
+              <span class="text-[10px] text-slate-400 shrink-0">${card.countries_flag || '🌐'}</span>
+            </div>
+            <div class="flex items-center gap-1 text-slate-400 shrink-0">
+              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Bookmark">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              </button>
+              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="More Options">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+              </button>
+            </div>
+          </div>
+        `;
+
+        // Click card opens detail modal!
+        cDiv.onclick = (e) => {
+          if (!e.target.closest('button')) {
+            openAdDetailModal(idx);
+          }
+        };
+
+        grid.appendChild(cDiv);
+      });
+    }
+
+    // ==============================================================
+    // TIKTOK INTELLIGENCE & LIBRARY MODULE JAVASCRIPT ENGINE
+    // (MATCHING media_1790735868038 to media_1790735961995)
+    // ==============================================================
+    let currentTikTokData = null;
+    let currentTikTokSubTab = 'library'; // 'insights' | 'library' | 'ranking' | 'contents'
+    let currentTikTokFilterType = 'all'; // 'all' | 'Ads' | 'Organics'
+    let currentTTRankPerspective = 'views'; // 'views' | 'likes' | 'longevity'
+    let currentTTContentsFormat = 'all'; // 'all' | 'Video' | 'Image' | 'Carousel'
+    let currentTTInsightsCarouselTab = 'views'; // 'views' | 'likes' | 'longevity'
+    let ttHistoricChartInstance = null;
+    let ttFormatMixChartInstance = null;
+
+    async function loadTikTokIntelligenceData(brandName, forceRefresh = false) {
+      try {
+        const res = await fetch('/api/tiktok?query=' + encodeURIComponent(brandName) + (forceRefresh ? '&refresh=true' : ''));
+        const data = await res.json();
+        currentTikTokData = data;
+        renderTikTokIntelligence(data);
+      } catch (err) {
+        console.error('Error fetching TikTok data:', err);
+      }
+    }
+
+    function loadTikTokIntelligenceView(brandName) {
+      const bTitle = document.getElementById('tiktokBrandName');
+      if (bTitle) bTitle.textContent = brandName;
+      if (!currentTikTokData || currentTikTokData.brand.toLowerCase() !== brandName.toLowerCase()) {
+        loadTikTokIntelligenceData(brandName, false);
+      } else {
+        renderTikTokIntelligence(currentTikTokData);
+      }
+    }
+
+    function renderTikTokIntelligence(data) {
+      if (!data) return;
+      const bName = data.brand || 'The Oodie';
+      const bTitle = document.getElementById('tiktokBrandName');
+      const bAvatar = document.getElementById('tiktokBrandAvatar');
+      const bTotal = document.getElementById('tiktokTotalBadge');
+      const adsPctBadge = document.getElementById('tiktokAdsPctBadge');
+      const organicsPctBadge = document.getElementById('tiktokOrganicsPctBadge');
+
+      if (bTitle) bTitle.textContent = bName;
+      if (bTotal) bTotal.textContent = (data.total_tiktoks || 703) + ' TikToks';
+      if (adsPctBadge) adsPctBadge.textContent = 'Ads ' + (data.ads_ratio_pct || 31) + '%';
+      if (organicsPctBadge) organicsPctBadge.textContent = 'Organics ' + (data.organics_ratio_pct || 69) + '%';
+      if (bAvatar) {
+        bAvatar.src = data.avatar_url || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName) + '&background=0284c7&color=fff');
+      }
+
+      const subSidebarCount = document.getElementById('subSidebarTiktokCount');
+      if (subSidebarCount) subSidebarCount.textContent = (data.total_tiktoks || 703) + ' / ' + (data.total_tiktoks || 703);
+      const ttChannelCount = document.getElementById('tiktokChannelCount');
+      if (ttChannelCount) ttChannelCount.textContent = data.total_tiktoks || 703;
+
+      switchTikTokView(currentTikTokSubTab);
+    }
+
+    function switchTikTokView(tabName) {
+      currentTikTokSubTab = tabName;
+      const tabs = ['insights', 'library', 'ranking', 'contents'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('ttTabBtn_' + t);
+        const view = document.getElementById('ttView_' + t);
+        if (btn) {
+          if (t === tabName) {
+            btn.className = "pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-slate-900";
+          } else {
+            btn.className = "pb-3 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-slate-400";
+          }
+        }
+        if (view) {
+          if (t === tabName) {
+            view.classList.remove('hidden');
+          } else {
+            view.classList.add('hidden');
+          }
+        }
+      });
+
+      if (!currentTikTokData) return;
+
+      if (tabName === 'insights') {
+        renderTTInsights(currentTikTokData.insights);
+      } else if (tabName === 'library') {
+        renderTTLibraryCards();
+      } else if (tabName === 'ranking') {
+        renderTTRankingCards();
+      } else if (tabName === 'contents') {
+        renderTTContentsCards();
+      }
+    }
+
+    function filterTikTokType(type) {
+      currentTikTokFilterType = type;
+      const btnAll = document.getElementById('ttFilter_all');
+      const btnAds = document.getElementById('ttFilter_ads');
+      const btnOrg = document.getElementById('ttFilter_organics');
+
+      const activeClass = "px-2.5 py-0.5 rounded-full bg-white text-slate-900 shadow-xs flex items-center gap-1.5 transition cursor-pointer";
+      const inactiveClass = "px-2.5 py-0.5 rounded-full text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition cursor-pointer";
+
+      if (btnAll) btnAll.className = (type === 'all') ? activeClass : inactiveClass;
+      if (btnAds) btnAds.className = (type === 'Ads') ? activeClass : inactiveClass;
+      if (btnOrg) btnOrg.className = (type === 'Organics') ? activeClass : inactiveClass;
+
+      if (currentTikTokSubTab === 'library') {
+        renderTTLibraryCards();
+      } else if (currentTikTokSubTab === 'ranking') {
+        renderTTRankingCards();
+      } else if (currentTikTokSubTab === 'contents') {
+        renderTTContentsCards();
+      }
+    }
+
+    function renderTTInsights(insights) {
+      if (!insights) return;
+      const viewsVal = document.getElementById('ttInsightsViewsVal');
+      const postsVal = document.getElementById('ttInsightsPostsVal');
+      const activeVal = document.getElementById('ttInsightsActiveVal');
+
+      if (viewsVal) viewsVal.textContent = insights.views || '233K';
+      if (postsVal) postsVal.textContent = insights.posts || '0';
+      if (activeVal) activeVal.textContent = (insights.active_tiktoks || 703) + ' ';
+
+      // Render Historic area chart
+      const chartCanvas = document.getElementById('ttHistoricChart');
+      if (chartCanvas && typeof Chart !== 'undefined' && insights.history_chart) {
+        if (ttHistoricChartInstance) {
+          ttHistoricChartInstance.destroy();
+        }
+        const ctx = chartCanvas.getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 260);
+        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.25)');
+        gradient.addColorStop(1, 'rgba(37, 99, 235, 0.01)');
+
+        ttHistoricChartInstance = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: insights.history_chart.labels || ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            datasets: [
+              {
+                label: 'Views',
+                data: insights.history_chart.views || [0, 42000, 68000, 142000, 185000, 233000],
+                borderColor: '#2563eb',
+                borderWidth: 2.5,
+                backgroundColor: gradient,
+                fill: true,
+                tension: 0.35,
+                pointRadius: 3,
+                pointBackgroundColor: '#2563eb',
+                pointHoverRadius: 6
+              },
+              {
+                label: 'Active TikToks',
+                data: insights.history_chart.active_cumulative || [20, 80, 190, 410, 580, 703],
+                borderColor: 'rgba(148, 163, 184, 0.4)',
+                borderWidth: 1.5,
+                borderDash: [4, 4],
+                fill: false,
+                stepped: true,
+                pointRadius: 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: '#0f172a',
+                titleFont: { size: 12, weight: 'bold' },
+                bodyFont: { size: 11 },
+                padding: 10,
+                cornerRadius: 8,
+                callbacks: {
+                  label: function(ctx) {
+                    return ctx.dataset.label + ': ' + (ctx.parsed.y >= 1000 ? (ctx.parsed.y/1000).toFixed(0) + 'K' : ctx.parsed.y);
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { color: '#64748b', font: { size: 11, weight: '600' } }
+              },
+              y: {
+                grid: { color: 'rgba(226, 232, 240, 0.6)' },
+                ticks: {
+                  color: '#64748b',
+                  font: { size: 10 },
+                  callback: function(v) {
+                    return v >= 1000 ? (v / 1000) + 'K' : v;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Render Format Mix Donut
+      const donutCanvas = document.getElementById('ttFormatMixChart');
+      if (donutCanvas && typeof Chart !== 'undefined' && insights.format_mix) {
+        if (ttFormatMixChartInstance) {
+          ttFormatMixChartInstance.destroy();
+        }
+        const ctxDonut = donutCanvas.getContext('2d');
+        const mix = insights.format_mix;
+        const centerCount = document.getElementById('ttFormatMixCenterCount');
+        if (centerCount) centerCount.textContent = mix.total || 220;
+
+        ttFormatMixChartInstance = new Chart(ctxDonut, {
+          type: 'doughnut',
+          data: {
+            labels: ['Video', 'Carousels'],
+            datasets: [{
+              data: [mix.video_pct || 100, mix.carousels_pct || 0],
+              backgroundColor: ['#2563eb', '#ec4899'],
+              borderWidth: 2,
+              borderColor: '#ffffff',
+              hoverOffset: 3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: { enabled: true }
+            }
+          }
+        });
+      }
+
+      // Render Category Breakdown list
+      const catContainer = document.getElementById('ttCategoryList');
+      if (catContainer && insights.categories) {
+        catContainer.innerHTML = insights.categories.map((c, idx) => `
+          <div class="relative overflow-hidden rounded-lg p-1.5 flex items-center justify-between text-xs transition ${idx === 0 ? 'bg-slate-100/90 font-bold' : 'hover:bg-slate-50'}">
+            <div class="absolute inset-0 bg-slate-200/40 rounded-lg pointer-events-none" style="width: ${c.pct}%;"></div>
+            <div class="relative z-10 flex items-center gap-2">
+              <span class="text-sm">${c.icon}</span>
+              <span class="text-slate-800 font-bold">${c.name}</span>
+            </div>
+            <div class="relative z-10 text-slate-500 font-extrabold text-[11px]">
+              <span>${c.count}</span> <span class="text-slate-400 font-normal">·</span> <span>${c.pct}%</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      renderTTInsightsCarousel();
+    }
+
+    function switchTTInsightsCarousel(type) {
+      currentTTInsightsCarouselTab = type;
+      const tabs = ['views', 'likes', 'longevity'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('ttCarouselTab_' + t);
+        if (btn) {
+          if (t === type) {
+            btn.className = "pb-2 border-b-2 border-emerald-500 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-emerald-500";
+          } else {
+            btn.className = "pb-2 text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-slate-400";
+          }
+        }
+      });
+      renderTTInsightsCarousel();
+    }
+
+    function renderTTInsightsCarousel() {
+      const carousel = document.getElementById('ttInsightsCarousel');
+      if (!carousel || !currentTikTokData || !currentTikTokData.videos) return;
+      let vids = [...currentTikTokData.videos];
+
+      if (currentTTInsightsCarouselTab === 'views') {
+        vids.sort((a, b) => b.views - a.views);
+      } else if (currentTTInsightsCarouselTab === 'likes') {
+        vids.sort((a, b) => b.likes - a.likes);
+      } else if (currentTTInsightsCarouselTab === 'longevity') {
+        vids.sort((a, b) => b.days_running - a.days_running);
+      }
+
+      carousel.innerHTML = vids.slice(0, 8).map(v => createTikTokCardHtml(v, false)).join('');
+    }
+
+    function scrollTTCarousel(direction) {
+      const carousel = document.getElementById('ttInsightsCarousel');
+      if (carousel) {
+        carousel.scrollBy({ left: direction * 320, behavior: 'smooth' });
+      }
+    }
+
+    function renderTTLibraryCards() {
+      const grid = document.getElementById('ttLibraryCardsGrid');
+      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      let vids = [...currentTikTokData.videos];
+
+      if (currentTikTokFilterType !== 'all') {
+        vids = vids.filter(v => v.type === currentTikTokFilterType);
+      }
+
+      grid.innerHTML = vids.map(v => createTikTokCardHtml(v, true)).join('');
+    }
+
+    function switchTTRankPerspective(type) {
+      currentTTRankPerspective = type;
+      const pills = ['views', 'likes', 'longevity'];
+      pills.forEach(p => {
+        const btn = document.getElementById('ttRankPill_' + p);
+        if (btn) {
+          if (p === type) {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer";
+          } else {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer";
+          }
+        }
+      });
+      renderTTRankingCards();
+    }
+
+    function renderTTRankingCards() {
+      const grid = document.getElementById('ttRankingCardsGrid');
+      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      let vids = [...currentTikTokData.videos];
+
+      if (currentTikTokFilterType !== 'all') {
+        vids = vids.filter(v => v.type === currentTikTokFilterType);
+      }
+
+      if (currentTTRankPerspective === 'views') {
+        vids.sort((a, b) => b.views - a.views);
+      } else if (currentTTRankPerspective === 'likes') {
+        vids.sort((a, b) => b.likes - a.likes);
+      } else if (currentTTRankPerspective === 'longevity') {
+        vids.sort((a, b) => b.days_running - a.days_running);
+      }
+
+      grid.innerHTML = vids.map(v => createTikTokCardHtml(v, true)).join('');
+    }
+
+    function filterTTContentsFormat(format) {
+      currentTTContentsFormat = format;
+      const pills = ['all', 'video', 'image', 'carousel'];
+      pills.forEach(p => {
+        const btn = document.getElementById('ttFormatPill_' + p);
+        if (btn) {
+          const match = (p === 'all' && format === 'all') || (p.toLowerCase() === format.toLowerCase());
+          if (match) {
+            btn.className = "px-2.5 py-1 rounded-lg text-xs font-extrabold bg-white text-slate-900 shadow-xs transition cursor-pointer";
+          } else {
+            btn.className = "px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer";
+          }
+        }
+      });
+      renderTTContentsCards();
+    }
+
+    function renderTTContentsCards() {
+      const grid = document.getElementById('ttContentsCardsGrid');
+      if (!grid || !currentTikTokData || !currentTikTokData.videos) return;
+      let vids = [...currentTikTokData.videos];
+
+      if (currentTTContentsFormat !== 'all') {
+        vids = vids.filter(v => v.format.toLowerCase() === currentTTContentsFormat.toLowerCase());
+      }
+      if (currentTikTokFilterType !== 'all') {
+        vids = vids.filter(v => v.type === currentTikTokFilterType);
+      }
+
+      grid.innerHTML = vids.map(v => `
+        <div onclick='openTikTokModalById("${v.id}")' class="aspect-[9/16] rounded-2xl overflow-hidden relative group bg-black cursor-pointer shadow-2xs hover:shadow-xl transition duration-300">
+          <img src="${v.cover_url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Video" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+          
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            ${v.is_spark_ad ? '<span class="px-2 py-0.5 rounded-sm bg-black/60 backdrop-blur-xs text-[10px] font-bold border border-white/20 mb-1 inline-block">Spark Ad</span>' : ''}
+            <div class="text-xs font-bold truncate">${v.handle || '@the_oodie'}</div>
+            <div class="text-[10px] text-white/80 line-clamp-1 mt-0.5">${v.caption}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Helper to generate full rich TikTok Card matching screenshots
+    function createTikTokCardHtml(v, fullWidth = true) {
+      const isAd = (v.type === 'Ads');
+      const bName = currentTikTokData ? currentTikTokData.brand : 'The Oodie';
+      const bAvatar = (currentTikTokData && currentTikTokData.avatar_url) || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(bName));
+      const channelStats = (currentTikTokData && currentTikTokData.channel_stats_str) || '🎵 703 · 👤 341K · 👁 62M';
+      const flag = (currentTikTokData && currentTikTokData.country_flag) || '🇦🇺';
+
+      const widthClass = fullWidth ? 'w-full' : 'w-72 shrink-0';
+
+      return `
+        <div class="tt-card p-3 rounded-2xl flex flex-col justify-between hover:shadow-lg transition duration-200 ${widthClass}">
+          <div>
+            <!-- Top Badges Row -->
+            <div class="flex items-center justify-between gap-1 text-[11px] mb-1.5">
+              <div class="flex items-center gap-1.5">
+                ${isAd ? 
+                  '<span class="px-2 py-0.5 rounded-md font-bold bg-pink-100 text-pink-600">Ads</span>' : 
+                  '<span class="px-2 py-0.5 rounded-md font-bold bg-cyan-100 text-cyan-700">Organics</span>'
+                }
+                <span class="text-slate-500 font-semibold">📅 ${v.date_relative} · ${v.published_date}</span>
+              </div>
+              <span class="text-slate-500 font-semibold">⏱ ${v.duration}</span>
+            </div>
+
+            <!-- Views Count Row -->
+            <div class="text-xs font-extrabold text-slate-900 mb-2 px-0.5 flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              <span>${v.views_fmt}</span>
+            </div>
+
+            <!-- Video Container (9:16 vertical ratio) -->
+            <div onclick='openTikTokModalById("${v.id}")' class="aspect-[9/16] rounded-xl overflow-hidden relative group bg-black cursor-pointer shadow-inner">
+              <img src="${v.cover_url}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Video" loading="lazy"/>
+              
+              <!-- Video controls overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
+
+              <!-- Top Left: Mute button / Top Right: 1x speed -->
+              <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between text-white pointer-events-none">
+                <div class="w-6 h-6 rounded-full bg-black/50 backdrop-blur-xs flex items-center justify-center text-[10px]">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                </div>
+                <div class="px-2 py-0.5 rounded-full bg-black/50 backdrop-blur-xs text-[10px] font-bold">1x</div>
+              </div>
+
+              <!-- Center Play Icon -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-900 shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+
+              <!-- Right Vertical Action Rail (Likes, Comments, Bookmarks, Shares) -->
+              <div class="absolute right-2 bottom-16 flex flex-col items-center gap-2.5 text-white pointer-events-none">
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                  </div>
+                  <span class="text-[10px] font-bold mt-0.5">${v.likes_fmt}</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <span class="text-[10px] font-bold mt-0.5">${v.comments_fmt}</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <span class="text-[10px] font-bold mt-0.5">${v.bookmarks_fmt}</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-8 rounded-full bg-black/40 backdrop-blur-xs flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                  </div>
+                  <span class="text-[10px] font-bold mt-0.5">${v.shares_fmt}</span>
+                </div>
+              </div>
+
+              <!-- Bottom Overlay Details (Spark Ad, Handle, Caption, Sound) -->
+              <div class="absolute bottom-2.5 left-2.5 right-12 text-white pointer-events-none">
+                ${v.is_spark_ad ? '<span class="px-2 py-0.5 rounded-sm bg-black/60 backdrop-blur-xs text-[10px] font-bold border border-white/20 mb-1 inline-block">Spark Ad</span>' : ''}
+                <div class="text-xs font-bold truncate">${bName}</div>
+                <div class="text-[10px] text-white/90 line-clamp-2 mt-0.5 leading-snug">${v.caption}</div>
+                <div class="flex items-center gap-1 text-[9px] text-white/75 mt-1 truncate">
+                  <svg class="w-2.5 h-2.5 text-white/80" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                  <span class="truncate">${v.sound || 'original sound - ' + bName}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer matching Trendtrack screenshots -->
+          <div class="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <img src="${bAvatar}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
+              <span class="text-[11px] font-bold text-slate-700 truncate">${bName} ${flag}</span>
+              <span class="text-[10px] text-slate-400 font-semibold truncate hidden sm:inline">• ${channelStats}</span>
+            </div>
+            <div class="flex items-center gap-1 text-slate-400 shrink-0">
+              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="Bookmark">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              </button>
+              <button type="button" class="w-6 h-6 rounded-lg border border-slate-200 flex items-center justify-center hover:text-slate-700 hover:bg-slate-50 transition cursor-pointer" title="More Options">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function openTikTokModalById(videoId) {
+      if (!currentTikTokData || !currentTikTokData.videos) return;
+      const v = currentTikTokData.videos.find(x => x.id === videoId);
+      if (!v) return;
+
+      const modal = document.getElementById('tiktokVideoModal');
+      const player = document.getElementById('ttModalVideoPlayer');
+      const author = document.getElementById('ttModalAuthor');
+      const handle = document.getElementById('ttModalHandle');
+      const avatar = document.getElementById('ttModalAvatar');
+      const typeBadge = document.getElementById('ttModalTypeBadge');
+      const dateBadge = document.getElementById('ttModalDateBadge');
+      const dur = document.getElementById('ttModalDuration');
+      const caption = document.getElementById('ttModalCaption');
+      const sound = document.getElementById('ttModalSound');
+      const views = document.getElementById('ttModalViews');
+      const likes = document.getElementById('ttModalLikes');
+      const comments = document.getElementById('ttModalComments');
+      const shares = document.getElementById('ttModalShares');
+
+      if (author) author.textContent = v.author_name || (currentTikTokData ? currentTikTokData.brand : 'The Oodie');
+      if (handle) handle.textContent = v.handle || '@the_oodie';
+      if (avatar) avatar.src = (currentTikTokData && currentTikTokData.avatar_url) || 'https://ui-avatars.com/api/?name=The+Oodie';
+      if (typeBadge) {
+        typeBadge.textContent = v.is_spark_ad ? 'Spark Ad' : v.type;
+        typeBadge.className = v.is_spark_ad ? 'px-2.5 py-0.5 rounded-full font-bold bg-pink-100 text-pink-700' : 'px-2.5 py-0.5 rounded-full font-bold bg-cyan-100 text-cyan-700';
+      }
+      if (dateBadge) dateBadge.textContent = v.published_date;
+      if (dur) dur.textContent = v.duration;
+      if (caption) caption.textContent = v.caption;
+      if (sound) sound.textContent = v.sound || 'original sound - The Oodie';
+      if (views) views.textContent = v.views_fmt;
+      if (likes) likes.textContent = v.likes_fmt;
+      if (comments) comments.textContent = v.comments_fmt;
+      if (shares) shares.textContent = v.shares_fmt;
+
+      if (player) {
+        player.src = v.video_url || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
+        player.poster = v.cover_url;
+        player.play().catch(() => {});
+      }
+
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeTikTokModal() {
+      const modal = document.getElementById('tiktokVideoModal');
+      const player = document.getElementById('ttModalVideoPlayer');
+      if (player) {
+        player.pause();
+        player.src = '';
+      }
+      if (modal) modal.classList.add('hidden');
     }
 
     let currentEmailData = null;
@@ -4677,6 +6365,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         loadGoogleAdsData(query, forceRefresh);
         loadEmailIntelligenceData(query, forceRefresh);
         loadContentsData(query, forceRefresh);
+        loadMetaRankingData(query, forceRefresh);
+        loadTikTokIntelligenceData(query, forceRefresh);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
@@ -6206,6 +7896,44 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             try:
                 import contents_scanner
                 data = contents_scanner.get_contents_data(query)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/meta-ranking":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", ["The Oodie"])[0].strip()
+            force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
+            try:
+                import meta_ranking
+                data = meta_ranking.get_meta_ranking_data(query, force_refresh=force_refresh)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/tiktok":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", ["The Oodie"])[0].strip()
+            force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
+            try:
+                import tiktok_service
+                data = tiktok_service.get_tiktok_brand_data(query, force_refresh=force_refresh)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.send_header("Access-Control-Allow-Origin", "*")

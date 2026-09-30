@@ -1,0 +1,414 @@
+{
+  "brand": "momcozy",
+  "found": true,
+  "advertiser": {
+    "advertiser_id": "AR18238803489771749377",
+    "advertiser_name": "ROOT INNOVATION TECHNOLOGY CO.,LTD",
+    "country": "HK",
+    "ad_count_min": "1000",
+    "ad_count_max": "2000"
+  },
+  "total_analyzed": 42,
+  "total_estimated": 1767,
+  "active_ads": 375,
+  "format_mix_total": 1306,
+  "format_mix": {
+    "Text": {
+      "count": 613,
+      "pct": 47.0
+    },
+    "Image": {
+      "count": 496,
+      "pct": 38.0
+    },
+    "Video": {
+      "count": 195,
+      "pct": 15.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 777,
+      "pct": 44.0
+    },
+    "Unknown": {
+      "count": 459,
+      "pct": 26.0
+    },
+    "YouTube": {
+      "count": 212,
+      "pct": 12.0
+    },
+    "Other": {
+      "count": 176,
+      "pct": 10.0
+    },
+    "Shopping": {
+      "count": 141,
+      "pct": 8.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 12,
+      "pct": 28.6
+    },
+    "31-90 d": {
+      "count": 10,
+      "pct": 23.8
+    },
+    "91-180 d": {
+      "count": 14,
+      "pct": 33.3
+    },
+    "181-365 d": {
+      "count": 3,
+      "pct": 7.1
+    },
+    "365 d +": {
+      "count": 3,
+      "pct": 7.1
+    }
+  },
+  "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 887,
+      "pct": 58.0
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 370,
+      "pct": 23.0
+    },
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 274,
+      "pct": 17.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR03194383610027180033",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 866,
+      "reach_tag": "350K-400K",
+      "first_shown": "May 16, 2024",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5444971040142321271",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10632933419538972673",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 413,
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 12, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3346158677&creativeId=769089461427&uiFeatures=12,54&adGroupId=182510469783&versionId=3&assets=%3DH4sIAAAAAAAAAAFDALz_CkEKCQj7opCykwkQBgoJCI7djI_-BxADCgkIn7uzyPwDECgKCQiwm-2ZhAcQAQoJCPHEzISZCRAECggI27StrjoQKUHjjGZDAAAA&sig=ACiVB_xYQsWzjaMuIeVNrIenHBMwWRcCow&htmlParentId=fletch-render-15442452832397968252&responseCallback=fletchCallback15442452832397968252",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR18298261333390393345",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 366,
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 29, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10551082647965718064",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR13538825897359966209",
+      "format": "Text",
+      "platform": "Search",
+      "active": false,
+      "days_running": 322,
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 24, 2025",
+      "last_shown": "Jun 12, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=7549967361&creativeId=765628295988&uiFeatures=12,54&adGroupId=181300823725&itemIds=2526467853953380552&sig=ACiVB_xzSHKIyk8TG68S3JxLhXat5ytb6A&htmlParentId=fletch-render-54932912637341478&responseCallback=fletchCallback54932912637341478",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR03022583835855421441",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 285,
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 19, 2025",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11254813459489851039",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR00312208328161755137",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 182,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 01, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2049815203546315724",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR09758146875965308929",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 153,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 29, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2828066799&creativeId=807177409328&uiFeatures=12,54&adGroupId=184897847469&sig=ACiVB_yNONbdWL5qlc6NmpkZfvKR2InPnA&htmlParentId=fletch-render-8234324240849546777&responseCallback=fletchCallback8234324240849546777",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR08719408554391371777",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 152,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 30, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8317587929&creativeId=806703216426&uiFeatures=12,54&adGroupId=195164269639&assets=%3DH4sIAAAAAAAAAOPy5eLkmHxn-vFZXAKaXJwcuy6cPbqES4CZi5PjGITJxMXJsWLJ7GVLuAR4uDg5lrU9mLCES0CDi5Nj_6Z5hxZzCTBycXLcnLrq6CwuATYAnZ4qe08AAAA&allowedVariations=55&sig=ACiVB_xj1IUOl0bucrf3VxyYBOGkv9T4WA&htmlParentId=fletch-render-4122193409188773827&responseCallback=fletchCallback4122193409188773827",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR18348796356681793537",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 141,
+      "reach_tag": "Global ads",
+      "first_shown": "May 11, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11162798784812375110",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR04874911653327536129",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 137,
+      "reach_tag": "Global ads",
+      "first_shown": "May 16, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8317587929&creativeId=808886722686&uiFeatures=12,54&adGroupId=193494549741&itemIds=11459161203494912037&assets=%3DH4sIAAAAAAAAAOPy5eLkuDnp5bSDXAKMXJwcy9oeTFjCJaABEp266ugsLgE2Lk6O7xAFzFycHG2TwUwmLk6OnuOHjh3kEuDh4uSYfGf68VlcApoA-A3pd08AAAA&allowedVariations=45&sig=ACiVB_wed7U7MU9653d4b-a9642vZ8tBeg&htmlParentId=fletch-render-14037886297252214940&responseCallback=fletchCallback14037886297252214940",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16121849903830794241",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 136,
+      "reach_tag": "Global ads",
+      "first_shown": "May 16, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6693214354784295384",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR01978702643131842561",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 128,
+      "reach_tag": "Global ads",
+      "first_shown": "May 24, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4393946841681773892",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14059807655157825537",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 126,
+      "reach_tag": "Global ads",
+      "first_shown": "May 26, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2828066799&creativeId=810279922999&uiFeatures=12,54&adGroupId=196959439436&itemIds=3102360026357221957&overlay=%3DH4sIAAAAAAAAALMSMxLhEuJ0PZVygvEMr7agSOwqjYN_Z8h7yXAJJBcXu2QWF-QkVgaXFGXmpQtxcLG55-en56R6qXBJFGfkFxRk5qU7pvinpaUWORelJpZklqUaCHFYsXF8ZxJiZMWjyhCsag4zSJUiTlVGQqxWzBzruL06WbjEC4ryU0qTSxxTioNS81JSQQ5ySSxJFHrL7PWKuevK7Uv8c5m5-IKYOISyODjYBRgkGBUYucThbIYuRi6ODWdb5ISYXUODuGqyODi4IRKHmPJh_hJglNj4z0zJLqOkpKDYSl-_vLxcLx0so5ecn6tfnJpYlJxhX5KUawtysVqhrW9-bnJ-VaWqkYFTUWpqVaVzTmpikYaRlayAgYSBA4MHQ4BBhEHilDd_V1lE6vQWMXEwFzFxsAixcjE7e7hJRXAFQA1QQNKuYKSbmadrqOCak5pdUpRZnJyRWqTgl1icmlecWJqeWqSQm1miEFxQdHhPhq5CaV6KQnBiaXpaaV52SWZ-ngCThIQGk5IYx7eNO2UEQP6VAvlXAcSyYNOy5uKC2qjr4irwes-Gp8JS6iC_ZKZVxqekxluYWJiZGZuamZmbmZrEm5iYGlsYGRtZGhuYGhgZmXNpC2zglLjF7fCSyaOdMeADc8QCzsTkebO3bjERrSti4mCEebCIiYNLgFGCUWEGo8YMxiSGSYxMAoyTQHHkwGXKwSikzMjEzMLKxs7BycXNw8vHLyAoJCwiKiYuISklLSMrJ6-gqKSsxcPBKAHSXsC8gVFZgEWKdRcjEwcjAFHapWixAgAA&sig=ACiVB_wfWCxwuBdsMWvv9pPoZCy7el-a3Q&htmlParentId=fletch-render-1356005348175735698&responseCallback=fletchCallback1356005348175735698",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR11655039110891962369",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 125,
+      "reach_tag": "Global ads",
+      "first_shown": "May 28, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8317587929&creativeId=810451772617&uiFeatures=12,54&adGroupId=196815426653&itemIds=9266623668006848,3145891466695683837&sig=ACiVB_yF8ZhFOANqa99YgSVtseDXBH3Jiw&htmlParentId=fletch-render-6864494729254614804&responseCallback=fletchCallback6864494729254614804",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR05642776764183740417",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 123,
+      "reach_tag": "Global ads",
+      "first_shown": "May 29, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7374779346399043617",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR02046648338559795201",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 119,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 02, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=8653565008&creativeId=811407173517&uiFeatures=12,54&adGroupId=202720442568&assets=%3DH4sIAAAAAAAAAONy4uLk6Fz6ZOMdLgFWLk6OPR9u3bvJJcDMxclx_e_Ef0e4BDS4ODke7J0-9zyXABsXJ8dyiAJGLk6OA5O-LDvDJaAJACam5cFEAAAA&sig=ACiVB_xgYIUQuVsc3oSN_eQ5ZB0PZTyZFg&htmlParentId=fletch-render-8553863818072750799&responseCallback=fletchCallback8553863818072750799",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR01431467734528425985",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 114,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 07, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=4356469284&creativeId=811839596800&uiFeatures=12,54&adGroupId=195877452654&itemIds=4247550207573828259&sig=ACiVB_xSzx9E-57QuqJkp8nHbPyboHPECQ&htmlParentId=fletch-render-2282497115363571542&responseCallback=fletchCallback2282497115363571542",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR14734344569780961281",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 113,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 08, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2783875777920674272",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR06525367667061161985",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 112,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 09, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5786981278032994383",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR16745466235948367873",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 106,
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 16, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13686402204438720078",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR07597516711029374977",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 90,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 01, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13837309643811604007",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR15777020105055010817",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 83,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 09, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9997321828400009341",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR10460791224804573185",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 74,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 17, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13421636818352940542",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    },
+    {
+      "creative_id": "CR13433845377543438337",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 64,
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 28, 2026",
+      "last_shown": "Sep 30, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2828066799&creativeId=818558974451&uiFeatures=12,54&adGroupId=197410370854&versionId=1&assets=%3DH4sIAAAAAAAAAAFEALv_CkIKCQikgZH1igwQAQoJCLLKk-KmBBAoCgkIgqvy8ooMEAwKCQi8vq_wogQQKQoJCPSc4aOWCRAGCgkI08fnvPMEEAJJEWmyRAAAAA&allowedVariations=44&sig=ACiVB_zWEm5hlammyFTDKtCsaGViRMci-w&htmlParentId=fletch-render-2451940281186837470&responseCallback=fletchCallback2451940281186837470",
+      "headline": "momcozy - Official Collection",
+      "snippet": "Discover bestsellers, exclusive discounts, and express worldwide delivery."
+    }
+  ],
+  "scanned_at": "2026-09-30T09:40:52.160823"
+}
