@@ -563,17 +563,23 @@ def generate_loop_meta_dataset(query: str = "loopearplugs.com") -> Dict[str, Any
     }
 
 
-def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
+def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -> Dict[str, Any]:
+    """
+    Scan Meta Ad Library for a brand.
+    - query          : Brand name to search (e.g. "Dr. Squatch") — use verified brand_name NOT raw domain
+    - official_domain: If provided, only keep ads whose landing URL matches this domain (filters affiliates)
+    """
     clean_q = re.sub(r'[^a-z0-9]', '', query.lower())
     if clean_q in ["loopearplugs", "loopearplug", "loopearplugscom", "loopearplugsofficial"]:
         return generate_loop_meta_dataset(query)
     encoded_q = urllib.parse.quote(query)
     ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={encoded_q}&search_type=keyword_unordered&media_type=all"
 
-    print(f"🔍 [AD SCANNER] Bắt đầu quét Meta Ad Library cho: '{query}'...")
+    print(f"🔍 [AD SCANNER] Bắt đầu quét Meta Ad Library cho: '{query}'{' (domain filter: ' + official_domain + ')' if official_domain else ''}...")
     
     total_results_str = "~30"
     raw_dom_cards = []
+
 
     try:
         from proxy_manager import proxy_manager
@@ -880,6 +886,32 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
         print(f"⚠️ [AD SCANNER] Meta live returned 0 cards for '{query}'. Returning honest empty result (NO FAKE DATA).")
         # DO NOT generate fake ads. Return empty with status flag.
         total_num = 0
+
+    # ── Domain Filter: Remove affiliate/reseller ads ──────────────────────────
+    # When official_domain is known, keep only ads whose landing URL belongs to
+    # the brand's own domain (drops affiliates like "Cam..." resellers, etc.)
+    if official_domain and parsed_ads:
+        clean_official = official_domain.lower().replace("www.", "")
+        # Core domain name for partial matching (e.g. "drsquatch" from "drsquatch.com")
+        core_brand = re.sub(r'\.(com|co|io|org|net|vn|shop|store|us|uk|de|fr|ca|au)$', '', clean_official)
+        filtered_ads = []
+        dropped_count = 0
+        for ad in parsed_ads:
+            lp = (ad.get("landingUrl") or ad.get("landing_url") or "").lower()
+            if not lp or "http" not in lp:
+                filtered_ads.append(ad)  # no landing page — keep (can't verify)
+                continue
+            try:
+                netloc = urllib.parse.urlparse(lp).netloc.lower().replace("www.", "")
+                if clean_official in netloc or core_brand in netloc:
+                    filtered_ads.append(ad)
+                else:
+                    dropped_count += 1
+            except Exception:
+                filtered_ads.append(ad)
+        if dropped_count > 0:
+            print(f"🚫 [DOMAIN FILTER] Dropped {dropped_count} affiliate/reseller ads (kept {len(filtered_ads)} official '{clean_official}' ads)")
+        parsed_ads = filtered_ads
 
     video_count = sum(1 for a in parsed_ads if a["mediaType"] == "video")
     image_count = sum(1 for a in parsed_ads if a["mediaType"] == "image")

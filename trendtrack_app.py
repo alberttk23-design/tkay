@@ -9332,11 +9332,30 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         }
         currentData = data;
         renderDashboard(data);
-        loadGoogleAdsData(cleanQ, forceRefresh);
-        loadEmailIntelligenceData(cleanQ, forceRefresh);
-        loadContentsData(cleanQ, forceRefresh);
-        loadMetaRankingData(cleanQ, forceRefresh);
-        loadTikTokIntelligenceData(cleanQ, forceRefresh);
+
+        // ── Smart Query Normalizer using Ground Truth ────────────────────────
+        // /api/scan now returns ground_truth: { brand_name, tiktok_slug, canonical_domain }
+        // Each channel gets the RIGHT query format:
+        //  - Meta Ranking / Google Ads → verified brand_name (e.g. "Dr. Squatch")
+        //  - TikTok                    → tiktok_slug (e.g. "drsquatch", no .com)
+        //  - Store Intel               → canonical_domain (e.g. "drsquatch.com")
+        const gt = data.ground_truth || {};
+        const gtBrandName  = gt.brand_name || data.brand_name || data.name || cleanQ;
+        const gtTikTokSlug = gt.tiktok_slug || data.tiktok_slug || (function() {
+          // Fallback: strip TLD from cleanQ
+          return cleanQ.replace(/[.](com|co|io|org|net|vn|shop|store|us|uk|de|fr|ca|au)$/, '')
+                       .replace(/[^a-z0-9]/g, '');
+        })();
+        const gtDomain     = gt.canonical_domain || data.verified_domain || data.domain || cleanQ;
+
+        console.log('[GROUND TRUTH] brand="' + gtBrandName + '" tiktok="#' + gtTikTokSlug + '" domain=' + gtDomain);
+
+        loadGoogleAdsData(gtBrandName, forceRefresh);
+        loadEmailIntelligenceData(gtDomain, forceRefresh);
+        loadContentsData(gtBrandName, forceRefresh);
+        loadMetaRankingData(gtBrandName, forceRefresh);
+        loadTikTokIntelligenceData(gtTikTokSlug, forceRefresh);
+
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
@@ -11208,8 +11227,40 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
             print(f"🔍 [LIVE SCAN / REFRESH] Quét Meta Ad Library cho: query='{query}' (force_refresh={force_refresh})...")
             try:
-                data = scan_brand_ads(query, max_ads=30)
+                # ── STEP 0: Extract Website Ground Truth ──────────────────────────
+                # Crawl the brand's actual homepage to get verified brand_name + logo
+                # This ensures Meta gets the right brand name, TikTok gets clean slug
+                import store_intelligence as _si_gt
+                _gt_domain = norm_q if '.' in norm_q else (clean_brand_slug + '.com')
+                ground_truth = _si_gt.extract_website_ground_truth(_gt_domain)
+                verified_brand_name = ground_truth.get("brand_name") or query
+                verified_logo_url   = ground_truth.get("logo_url") or ""
+                verified_tiktok_slug = ground_truth.get("tiktok_slug") or clean_brand_slug
+                verified_domain     = ground_truth.get("canonical_domain") or _gt_domain
+                print(f"🌐 [GROUND TRUTH] brand='{verified_brand_name}' logo='{verified_logo_url[:60]}...' tiktok='#{verified_tiktok_slug}'")
+
+                # ── STEP 1: Scan Meta with verified brand name (not raw domain) ──
+                data = scan_brand_ads(verified_brand_name, max_ads=30, official_domain=verified_domain)
                 data = sanitize_brand_dataset(data, query)
+
+                # ── STEP 2: Inject ground truth into result ──────────────────────
+                if verified_logo_url and not verified_logo_url.startswith("https://ui-avatars"):
+                    data["logo_url"]   = verified_logo_url
+                    data["brand_logo"] = verified_logo_url
+                data["brand_name"]     = verified_brand_name
+                data["name"]           = data.get("name") or verified_brand_name
+                data["tiktok_slug"]    = verified_tiktok_slug
+                data["tiktok_handle"]  = f"@{verified_tiktok_slug}"
+                data["tiktok_hashtag"] = f"#{verified_tiktok_slug}"
+                data["verified_domain"] = verified_domain
+                data["ground_truth"]   = {
+                    "brand_name": verified_brand_name,
+                    "logo_url":   verified_logo_url,
+                    "tiktok_slug": verified_tiktok_slug,
+                    "canonical_domain": verified_domain,
+                    "_source": ground_truth.get("_source", "unknown")
+                }
+
                 with open(cache_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -11224,6 +11275,7 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
             return
+
 
         if parsed.path == "/api/store-intel":
             query_params = urllib.parse.parse_qs(parsed.query)

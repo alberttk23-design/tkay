@@ -1019,7 +1019,206 @@ def get_top_5_similar_shops(brand_name: str, domain: str) -> List[Dict[str, Any]
     
     return filtered[:5]
 
+
+# ═══════════════════════════════════════════════════════════════════════════
+# WEBSITE-FIRST GROUND TRUTH EXTRACTOR
+# Crawls the brand's official homepage to get verified brand_name + logo_url
+# Used by /api/scan before dispatching to Meta/TikTok/Google scrapers
+# ═══════════════════════════════════════════════════════════════════════════
+
+_GROUND_TRUTH_CACHE: Dict[str, Any] = {}
+_GROUND_TRUTH_CACHE_TTL = 3600  # 1 hour cache in-memory
+
+def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
+    """
+    Fetches the brand's homepage and extracts verified identity:
+    - brand_name  : from og:site_name → <title> → domain fallback
+    - logo_url    : apple-touch-icon 512px → apple-touch-icon any → og:image → favicon 128px
+    - canonical_domain : cleaned domain (no www prefix)
+    - tiktok_slug : cleaned handle for #hashtag and @handle (stripped TLD)
+
+    Returns a dict. Never raises — always returns something usable.
+    """
+    raw_domain = domain.strip().lower()
+    raw_domain = re.sub(r'^https?://', '', raw_domain)
+    raw_domain = re.sub(r'^(www|us|uk|au|shop|store)\.', '', raw_domain)
+    raw_domain = raw_domain.split('/')[0].split('?')[0]
+
+    if not raw_domain or '.' not in raw_domain:
+        slug = re.sub(r'[^a-z0-9]', '', raw_domain or 'brand')
+        return {
+            "brand_name": slug.title(),
+            "logo_url": f"https://www.google.com/s2/favicons?domain={raw_domain}&sz=128",
+            "canonical_domain": raw_domain or "brand.com",
+            "tiktok_slug": slug or "brand",
+            "_source": "fallback_no_domain"
+        }
+
+    # Check in-memory cache
+    cache_key = raw_domain
+    now = time.time()
+    if cache_key in _GROUND_TRUTH_CACHE:
+        entry = _GROUND_TRUTH_CACHE[cache_key]
+        if now - entry.get("_ts", 0) < _GROUND_TRUTH_CACHE_TTL:
+            return entry
+
+    # Canonical domain (no www) and TikTok slug (strip TLD)
+    canonical_domain = raw_domain
+    tld_pattern = (
+        r'\.(com\.vn|co\.uk|com\.au|co\.nz|co\.jp|com\.br'
+        r'|com|co|vn|shop|store|org|net|io|app|us|uk|de|fr|ca|au|eu|se|nl|dk|no|fi|jp|cn|it|es|pl|pt|cz)$'
+    )
+    tiktok_slug = re.sub(tld_pattern, '', raw_domain, flags=re.IGNORECASE)
+    tiktok_slug = re.sub(r'[^a-z0-9]', '', tiktok_slug.lower())
+    if not tiktok_slug:
+        tiktok_slug = re.sub(r'[^a-z0-9]', '', raw_domain.lower())
+
+    # Default fallback values (used if HTTP fails)
+    fallback_title = tiktok_slug.title() if tiktok_slug else raw_domain
+    fallback_logo = f"https://www.google.com/s2/favicons?domain={raw_domain}&sz=128"
+
+    logo_url = None
+    brand_name = None
+
+    try:
+        url = f"https://{raw_domain}/"
+        req = urllib.request.Request(url, headers=HEADERS)
+        req.add_unredirected_header('Referer', 'https://www.google.com/')
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            raw_html = resp.read(200_000).decode('utf-8', errors='replace')
+
+        # ── 0. BEST: Parse all JSON-LD blocks first (Organization name + logo) ──
+        # This is the most reliable source — brands define this for SEO
+        jsonld_blocks = re.findall(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            raw_html, re.IGNORECASE | re.DOTALL
+        )
+        jsonld_org_name = None
+        jsonld_logo = None
+        for block_text in jsonld_blocks:
+            try:
+                import json as _json
+                ld = _json.loads(block_text.strip())
+                items = ld if isinstance(ld, list) else [ld]
+                for item in items:
+                    if not isinstance(item, dict):
+                        continue
+                    item_type = item.get("@type", "")
+                    if item_type in ("Organization", "Store", "LocalBusiness", "Corporation", "Brand"):
+                        name_cand = item.get("name", "").strip()
+                        if name_cand and len(name_cand) < 80:
+                            jsonld_org_name = name_cand
+                        logo_obj = item.get("logo")
+                        if isinstance(logo_obj, str) and logo_obj.startswith("http"):
+                            jsonld_logo = logo_obj
+                        elif isinstance(logo_obj, dict):
+                            lurl = logo_obj.get("url") or logo_obj.get("contentUrl") or ""
+                            if lurl.startswith("http"):
+                                jsonld_logo = lurl
+                    elif item_type == "WebSite" and not jsonld_org_name:
+                        name_cand = item.get("name", "").strip()
+                        if name_cand and len(name_cand) < 80:
+                            jsonld_org_name = name_cand
+            except Exception:
+                pass
+
+        if jsonld_org_name:
+            brand_name = jsonld_org_name
+
+        # ── 1. og:site_name (both property= and name= attribute variants) ─────
+        if not brand_name:
+            m = re.search(r'property=["\']og:site_name["\'][^>]+content=["\'](.*?)["\']', raw_html, re.IGNORECASE)
+            if not m:
+                m = re.search(r'content=["\'](.*?)["\'][^>]+property=["\']og:site_name["\']', raw_html, re.IGNORECASE)
+            if not m:
+                m = re.search(r'name=["\']og:site_name["\'][^>]+content=["\'](.*?)["\']', raw_html, re.IGNORECASE)
+            if not m:
+                m = re.search(r'content=["\'](.*?)["\'][^>]+name=["\']og:site_name["\']', raw_html, re.IGNORECASE)
+            if m:
+                brand_name = m.group(1).strip()
+
+        # ── 2. Fallback: <title> tag ─────────────────────────────────────────
+        if not brand_name:
+            m_title = re.search(r'<title[^>]*>(.*?)</title>', raw_html, re.IGNORECASE | re.DOTALL)
+            if m_title:
+                title_text = re.sub(r'<[^>]+>', '', m_title.group(1)).strip()
+                title_text = re.split(r'[\|\u2013\u2014\-]', title_text)[0].strip()
+                if title_text:
+                    brand_name = title_text
+
+        if not brand_name:
+            brand_name = fallback_title
+
+        # ── 3. Logo: JSON-LD Organization logo (highest quality) ─────────────
+        if jsonld_logo:
+            logo_url = jsonld_logo
+
+        # ── 4. Logo: apple-touch-icon (prefer 512px) ─────────────────────────
+        if not logo_url:
+            m_icon = re.search(
+                r'apple-touch-icon[^>]+sizes=["\']512x512["\'][^>]+href=["\'](.*?)["\']',
+                raw_html, re.IGNORECASE
+            )
+            if not m_icon:
+                m_icon = re.search(
+                    r'sizes=["\']512x512["\'][^>]+apple-touch-icon[^>]+href=["\'](.*?)["\']',
+                    raw_html, re.IGNORECASE
+                )
+            if not m_icon:
+                m_icon = re.search(
+                    r'apple-touch-icon(?:-precomposed)?["\'][^>]+href=["\'](.*?)["\']',
+                    raw_html, re.IGNORECASE
+                )
+            if not m_icon:
+                m_icon = re.search(
+                    r'href=["\'](.*?)["\'][^>]+apple-touch-icon',
+                    raw_html, re.IGNORECASE
+                )
+            if m_icon:
+                href = m_icon.group(1).strip()
+                if href.startswith("//"):
+                    href = "https:" + href
+                elif href.startswith("/"):
+                    href = f"https://{raw_domain}{href}"
+                logo_url = href
+
+        # ── 5. Fallback: og:image (only if it is an actual URL) ──────────────
+        if not logo_url:
+            m_og = re.search(
+                r'og:image[^>]+content=["\'](https?://[^"\'> ]+)["\']',
+                raw_html, re.IGNORECASE
+            )
+            if not m_og:
+                m_og = re.search(
+                    r'content=["\'](https?://[^"\'> ]+)["\'][^>]+og:image',
+                    raw_html, re.IGNORECASE
+                )
+            if m_og:
+                logo_url = m_og.group(1).strip()
+
+    except Exception as e:
+        print(f"⚠️ [GROUND TRUTH] Failed to fetch {raw_domain}: {e}")
+
+    if not logo_url:
+        logo_url = fallback_logo
+
+    result = {
+        "brand_name": brand_name or fallback_title,
+        "logo_url": logo_url,
+        "canonical_domain": canonical_domain,
+        "tiktok_slug": tiktok_slug or "brand",
+        "_source": "website_crawl" if brand_name else "fallback_parse_fail"
+    }
+
+    # Cache result
+    result["_ts"] = now
+    _GROUND_TRUTH_CACHE[cache_key] = result
+    print(f"✅ [GROUND TRUTH] {raw_domain} → brand='{result['brand_name']}' logo_source={'website_crawl' if 'apple' in logo_url or 'cdn' in logo_url else 'favicon'} tiktok=#{result['tiktok_slug']}")
+    return result
+
+
 if __name__ == "__main__":
+
     # Test Guyker
     print("Testing Guyker:")
     res_guyker = fetch_store_products("guyker.com", max_products=5)
