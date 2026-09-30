@@ -324,7 +324,7 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         seen_creatives.add(c_id)
         unique_creatives.append(c)
 
-    for c in unique_creatives:
+    for idx, c in enumerate(unique_creatives):
         c_id = c.get("2", "")
         fmt_code = c.get("4", 1)  # 1: Image, 2: Text, 3: Video
 
