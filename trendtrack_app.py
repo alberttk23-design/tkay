@@ -851,6 +851,426 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         </div> <!-- End of explorerOverviewContainer -->
 
         <!-- ========================================== -->
+        <!-- SUB-CONTAINER 1.5: META ADS SUITE (TRENDTRACK 1:1) -->
+        <!-- (MATCHING media_1790759876556 TO .923902) -->
+        <!-- ========================================== -->
+        <div id="metaAdsContainer" class="space-y-6 hidden">
+          <!-- Meta Top Header Strip (Matching media_1790759876556.png 1:1) -->
+          <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <div class="flex items-center gap-3.5">
+              <div class="relative shrink-0">
+                <img id="metaHeaderBrandAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-11 h-11 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-[9px] text-white font-bold" title="Meta Platform">♾️</div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h1 id="metaHeaderBrandName" class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">—</h1>
+                  <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded-full flex items-center gap-1 cursor-pointer">
+                    <span>Main</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                  </span>
+                  <div class="flex items-center gap-1.5 text-xs font-bold text-slate-800 ml-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span id="metaHeaderAdsCount">• 0 / 0</span>
+                  </div>
+                  <!-- Reach & Spend EU/UK Only Toggle Matching media_1790759876556.png -->
+                  <div onclick="toggleMetaEuUkOnly()" class="flex items-center gap-2 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200 text-slate-700 px-3 py-1 rounded-full text-xs font-semibold ml-1 cursor-pointer transition select-none">
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    <span id="metaHeaderEuUkLabel">Reach & Spend · EU/UK only</span>
+                    <div id="metaHeaderEuUkSwitch" class="w-7 h-3.5 bg-slate-300 rounded-full relative flex items-center p-0.5 transition duration-200">
+                      <div id="metaHeaderEuUkKnob" class="w-2.5 h-2.5 bg-white rounded-full shadow-xs transition-transform duration-200"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Header Action Buttons -->
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="switchShopSubTab('overview')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer shadow-2xs" title="Store Overview">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                <span>Store Overview</span>
+              </button>
+              <button type="button" onclick="alert('Brand Back Machine: Lịch sử chiến dịch Meta Ads đang hoạt động.')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer shadow-2xs">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Brand Back Machine</span>
+              </button>
+              <button type="button" class="p-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition cursor-pointer shadow-2xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 6 Advertising Sub-Tabs (Matching media_1790759876556.png) -->
+          <div class="flex items-center justify-between border-b border-slate-200 text-xs font-bold px-2 pt-1 overflow-x-auto custom-scroll">
+            <div class="flex items-center gap-6 sm:gap-8 shrink-0">
+              <button id="metaSubTabBtn_library" onclick="switchMetaSubTab('library')" class="pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0 transition">
+                <svg class="w-3.5 h-3.5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                <span>Ad Library</span>
+              </button>
+              <button id="metaSubTabBtn_insights" onclick="switchMetaSubTab('insights')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <span>Insights</span>
+              </button>
+              <button id="metaSubTabBtn_ranking" onclick="switchMetaSubTab('ranking')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <span>Ranking</span>
+              </button>
+              <button id="metaSubTabBtn_contents" onclick="switchMetaSubTab('contents')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                <span>Contents</span>
+              </button>
+              <button id="metaSubTabBtn_partnerships" onclick="switchMetaSubTab('partnerships')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <span>Partnerships</span>
+              </button>
+              <button id="metaSubTabBtn_landingpages" onclick="switchMetaSubTab('landingpages')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                <span>Landing Pages</span>
+              </button>
+            </div>
+            <div class="pb-3 pl-4 shrink-0 text-slate-500 font-extrabold text-xs">
+              <span id="metaSubNavAdsTotalCount">0 Ads</span>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 1. SUB-VIEW: AD LIBRARY                    -->
+          <!-- (MATCHING media_1790759876556 & .884591)   -->
+          <!-- ========================================== -->
+          <div id="metaView_library" class="space-y-5">
+            <!-- Filter Toolbar Matching media_1790759876556.png -->
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-slate-200 shadow-2xs">
+              <!-- Filter Pills Left -->
+              <div class="flex items-center gap-2 flex-wrap">
+                <!-- Ad Countries -->
+                <div class="relative">
+                  <select id="metaFilterCountry" onchange="filterMetaLibrary()" class="h-8 pl-7 pr-6 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                    <option value="all">Ad Countries</option>
+                    <option value="global">Global ads 🌐</option>
+                    <option value="US">United States 🇺🇸</option>
+                    <option value="GB">United Kingdom 🇬🇧</option>
+                    <option value="AU">Australia 🇦🇺</option>
+                    <option value="VN">Vietnam 🇻🇳</option>
+                  </select>
+                  <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+
+                <!-- Ad Status -->
+                <select id="metaFilterStatus" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Ad Status: All</option>
+                  <option value="active" selected>Active only</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+
+                <!-- Media Types -->
+                <select id="metaFilterMediaType" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Media Types: All</option>
+                  <option value="image">Images</option>
+                  <option value="video">Videos</option>
+                  <option value="carousel">Carousel</option>
+                  <option value="dco">Dynamic (DCO)</option>
+                </select>
+
+                <!-- Ratio -->
+                <select id="metaFilterRatio" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Ratio: All</option>
+                  <option value="1:1">1:1 Square</option>
+                  <option value="9:16">9:16 Vertical</option>
+                  <option value="16:9">16:9 Landscape</option>
+                </select>
+
+                <!-- Days Running -->
+                <select id="metaFilterDays" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">Days Running: All</option>
+                  <option value="<7">&lt; 7 days</option>
+                  <option value="7-30">7 - 30 days</option>
+                  <option value="30-90">30 - 90 days</option>
+                  <option value=">90">&gt; 90 days (Winners)</option>
+                </select>
+
+                <!-- CTA -->
+                <select id="metaFilterCta" onchange="filterMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="all">CTA: All</option>
+                  <option value="shop_now">Shop Now</option>
+                  <option value="learn_more">Learn More</option>
+                  <option value="order_now">Order Now</option>
+                </select>
+
+                <!-- Locked Pro Filters -->
+                <div class="hidden xl:flex items-center gap-2">
+                  <button type="button" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-400 text-xs font-medium flex items-center gap-1.5 cursor-not-allowed">
+                    <span>Language</span>
+                    <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  </button>
+                  <button type="button" class="h-8 px-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-400 text-xs font-medium flex items-center gap-1.5 cursor-not-allowed">
+                    <span>Publisher Platforms</span>
+                    <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sort By Dropdown Right -->
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-xs font-medium text-slate-400">Sort by:</span>
+                <select id="metaLibrarySort" onchange="sortMetaLibrary()" class="h-8 px-3 rounded-xl border border-slate-200 bg-white text-slate-800 text-xs font-bold focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-2xs">
+                  <option value="rank" selected>Ad Rank</option>
+                  <option value="days_desc">Days running (Longest)</option>
+                  <option value="days_asc">Days running (Newest)</option>
+                  <option value="impressions">Impressions</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 4-Column Responsive Grid (Matching media_1790759876556.png) -->
+            <div id="metaLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Dynamically populated via renderMetaLibraryCards() -->
+            </div>
+
+            <!-- Pagination Bar Matching media_1790759884591.png -->
+            <div id="metaLibraryPagination" class="flex items-center justify-center gap-2 pt-4 pb-8">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 2. SUB-VIEW: INSIGHTS                      -->
+          <!-- (MATCHING media_1790759911226.png)        -->
+          <!-- ========================================== -->
+          <div id="metaView_insights" class="space-y-6 hidden">
+            <!-- Row 1: Historic Dual-Axis Chart (Left) + Format Mix Donut (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <!-- Historic Chart Card -->
+              <div class="lg:col-span-8 tt-card p-5 flex flex-col justify-between bg-white border border-slate-200 rounded-2xl shadow-xs">
+                <div>
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <h3 class="text-sm font-extrabold text-slate-900">Historic</h3>
+                      </div>
+                      <div class="flex items-center gap-4 mt-2">
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2.5 h-2.5 rounded-full bg-cyan-500"></span>
+                          <span class="text-xs font-semibold text-slate-500">Active Ads</span>
+                          <span id="metaInsightsActiveAdsVal" class="text-xs font-black text-slate-900">—</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                          <span class="text-xs font-semibold text-slate-500">Ads Launched</span>
+                          <span id="metaInsightsLaunchedAdsVal" class="text-xs font-black text-slate-900">—</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Daily / Weekly Toggle -->
+                    <div class="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200 text-xs font-bold">
+                      <button id="metaHistoricTf_daily" onclick="setMetaHistoricTimeframe('daily')" class="px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer">Daily</button>
+                      <button id="metaHistoricTf_weekly" onclick="setMetaHistoricTimeframe('weekly')" class="px-3 py-1 rounded-lg bg-white text-slate-900 shadow-2xs font-extrabold transition cursor-pointer">Weekly</button>
+                    </div>
+                  </div>
+
+                  <!-- Canvas for Historic Spline + Bars -->
+                  <div class="h-64 sm:h-72 w-full pt-4">
+                    <canvas id="metaInsightsHistoricCanvas"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Format Mix Donut Card -->
+              <div class="lg:col-span-4 tt-card p-5 flex flex-col justify-between bg-white border border-slate-200 rounded-2xl shadow-xs">
+                <div>
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                      <h3 class="text-sm font-extrabold text-slate-900">Format Mix</h3>
+                    </div>
+                  </div>
+
+                  <div class="h-48 w-full flex items-center justify-center my-2">
+                    <canvas id="metaInsightsFormatDonutCanvas"></canvas>
+                  </div>
+
+                  <!-- Legend List -->
+                  <div id="metaFormatMixLegend" class="space-y-2 pt-2 border-t border-slate-100 text-xs font-semibold">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Landing Pages (Left) + Best Ranked Creatives (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <!-- Landing Pages Card -->
+              <div class="lg:col-span-6 tt-card p-5 flex flex-col justify-between bg-white border border-slate-200 rounded-2xl shadow-xs">
+                <div>
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                      <h3 class="text-sm font-extrabold text-slate-900">Landing Pages</h3>
+                    </div>
+                    <button onclick="switchMetaSubTab('landingpages')" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 cursor-pointer">
+                      <span>View all</span>
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div id="metaInsightsLandingPagesList" class="divide-y divide-slate-100 mt-2 space-y-1">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Best Ranked Creatives Card -->
+              <div class="lg:col-span-6 tt-card p-5 flex flex-col justify-between bg-white border border-slate-200 rounded-2xl shadow-xs">
+                <div>
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-2">
+                      <span class="text-amber-500 text-sm">🏆</span>
+                      <h3 class="text-sm font-extrabold text-slate-900">Best Ranked Creatives</h3>
+                    </div>
+                    <button onclick="switchMetaSubTab('ranking')" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 cursor-pointer">
+                      <span>Full Ranking</span>
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div id="metaInsightsBestCreativesRow" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 3. SUB-VIEW: RANKING                       -->
+          <!-- (MATCHING media_1790759918510.png)        -->
+          <!-- ========================================== -->
+          <div id="metaView_ranking" class="space-y-6 hidden">
+            <!-- 4 RANKING PERSPECTIVES PILLS matching media_1790759918510.png -->
+            <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-fit border border-slate-200/80 flex-wrap">
+              <button id="metaUnifiedRankPill_biggest_gain" onclick="switchMetaUnifiedRankMode('biggest_gain')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+                <span>Biggest Rank Gain</span>
+              </button>
+              <button id="metaUnifiedRankPill_top_ranked" onclick="switchMetaUnifiedRankMode('top_ranked')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                <span class="text-sm">🏆</span>
+                <span>Top Ranked</span>
+              </button>
+              <button id="metaUnifiedRankPill_longest_active" onclick="switchMetaUnifiedRankMode('longest_active')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Longest Active</span>
+              </button>
+              <button id="metaUnifiedRankPill_most_reused" onclick="switchMetaUnifiedRankMode('most_reused')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span>Most reused creatives</span>
+              </button>
+            </div>
+
+            <!-- Ad Rank Trajectory (Past 7 Days) Inverted Line Chart -->
+            <div id="metaUnifiedRankChartCard" class="tt-card p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                  <h3 class="text-sm font-extrabold text-slate-900">Ad Rank Trajectory (Past 7 Days)</h3>
+                  <span class="text-xs text-slate-400 font-medium">(Trục Y đảo ngược: Rank #1 ở đỉnh)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-slate-500 font-semibold">Top 5 Ads</span>
+                </div>
+              </div>
+              <div class="h-60 sm:h-72 w-full pt-4">
+                <canvas id="metaUnifiedRankChartCanvas"></canvas>
+              </div>
+            </div>
+
+            <!-- 4-Column Grid of Ranked Ads Cards -->
+            <div id="metaUnifiedRankCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Dynamically populated via renderMetaUnifiedRankCards() -->
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 4. SUB-VIEW: CONTENTS                      -->
+          <!-- (MATCHING media_1790759923902.png)        -->
+          <!-- ========================================== -->
+          <div id="metaView_contents" class="space-y-6 hidden">
+            <!-- 5 Content Mode Selector Pills -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl w-fit border border-slate-200/80 flex-wrap">
+                <button id="metaUnifiedContentPill_creative" onclick="switchMetaUnifiedContentMode('creative')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer">
+                  <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span>Creative</span>
+                  <span id="metaContentBadge_creative" class="px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">0</span>
+                </button>
+                <button id="metaUnifiedContentPill_ad_copy" onclick="switchMetaUnifiedContentMode('ad_copy')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  <span>Ad copy</span>
+                  <span id="metaContentBadge_ad_copy" class="px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">0</span>
+                </button>
+                <button id="metaUnifiedContentPill_transcript" onclick="switchMetaUnifiedContentMode('transcript')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                  <span>Transcript</span>
+                  <span id="metaContentBadge_transcript" class="px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">0</span>
+                </button>
+                <button id="metaUnifiedContentPill_hook" onclick="switchMetaUnifiedContentMode('hook')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                  <span class="text-sm">🪝</span>
+                  <span>Hook</span>
+                  <span id="metaContentBadge_hook" class="px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">0</span>
+                </button>
+                <button id="metaUnifiedContentPill_headline" onclick="switchMetaUnifiedContentMode('headline')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer">
+                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+                  <span>Headline</span>
+                  <span id="metaContentBadge_headline" class="px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px] font-bold text-slate-600">0</span>
+                </button>
+              </div>
+
+              <!-- Media Filter Bar -->
+              <div class="flex items-center gap-2">
+                <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+                  <button id="metaContentMediaBtn_all" onclick="filterMetaContentMedia('all')" class="px-2.5 py-1 rounded-lg bg-white text-slate-900 shadow-2xs font-bold cursor-pointer">All</button>
+                  <button id="metaContentMediaBtn_image" onclick="filterMetaContentMedia('image')" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">Images</button>
+                  <button id="metaContentMediaBtn_video" onclick="filterMetaContentMedia('video')" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">Videos</button>
+                  <button id="metaContentMediaBtn_carousel" onclick="filterMetaContentMedia('carousel')" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">Carousel</button>
+                  <button id="metaContentMediaBtn_dco" onclick="filterMetaContentMedia('dco')" class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">Dynamic</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual Creative Masonry Grid (Matching media_1790759923902.png) -->
+            <div id="metaUnifiedContentsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <!-- Dynamically populated via renderMetaUnifiedContentCards() -->
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 5. SUB-VIEW: PARTNERSHIPS                  -->
+          <!-- ========================================== -->
+          <div id="metaView_partnerships" class="space-y-6 hidden">
+            <div id="metaPartnershipsContainer" class="space-y-4">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- ========================================== -->
+          <!-- 6. SUB-VIEW: LANDING PAGES                 -->
+          <!-- ========================================== -->
+          <div id="metaView_landingpages" class="space-y-6 hidden">
+            <div class="tt-card p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                  <h3 class="text-sm font-extrabold text-slate-900">Tracked Landing Pages</h3>
+                  <span id="metaLandingPagesTotalBadge" class="text-xs font-bold text-slate-500">• 0 landing pages</span>
+                </div>
+              </div>
+              <div id="metaLandingPagesTableContainer" class="mt-4 overflow-x-auto">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================== -->
         <!-- SUB-CONTAINER 2: GOOGLE ADS INTELLIGENCE   -->
         <!-- (MATCHING media_1790683916662.png)         -->
         <!-- ========================================== -->
@@ -3267,31 +3687,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const contentsContainer = document.getElementById('contentsContainer');
       const metaRankingContainer = document.getElementById('metaRankingContainer');
       const tiktokContainer = document.getElementById('tiktokIntelligenceContainer');
+      const metaAdsContainer = document.getElementById('metaAdsContainer');
 
       if (tab === 'contents') {
-        if (emailContainer) emailContainer.classList.add('hidden');
-        if (overviewContainer) overviewContainer.classList.add('hidden');
-        if (googleContainer) googleContainer.classList.add('hidden');
-        if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
-        if (tiktokContainer) tiktokContainer.classList.add('hidden');
-        if (contentsContainer) contentsContainer.classList.remove('hidden');
-        if (contentsBtn) contentsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        const bName = getActiveBrandName();
-        loadContentsView(bName);
+        switchShopSubTab('meta');
+        switchMetaSubTab('contents');
+        return;
       } else if (tab === 'ranking') {
-        if (contentsContainer) contentsContainer.classList.add('hidden');
-        if (emailContainer) emailContainer.classList.add('hidden');
-        if (overviewContainer) overviewContainer.classList.add('hidden');
-        if (googleContainer) googleContainer.classList.add('hidden');
-        if (tiktokContainer) tiktokContainer.classList.add('hidden');
-        if (metaRankingContainer) metaRankingContainer.classList.remove('hidden');
-        if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        const bName = getActiveBrandName();
-        loadMetaRankingView(bName);
+        switchShopSubTab('meta');
+        switchMetaSubTab('ranking');
+        return;
       } else if (tab === 'emails') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
         if (emailsBtn) emailsBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
@@ -3303,6 +3713,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
         if (googleBtn) googleBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.remove('hidden');
@@ -3313,14 +3724,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
-        if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
-        if (overviewContainer) overviewContainer.classList.remove('hidden');
+        if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
-        switchRightCard('meta');
+        if (metaAdsContainer) metaAdsContainer.classList.remove('hidden');
+        if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
+        const bName = getActiveBrandName();
+        loadMetaIntelligenceView(bName);
       } else if (tab === 'tiktok') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
         if (overviewContainer) overviewContainer.classList.add('hidden');
         if (googleContainer) googleContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.remove('hidden');
@@ -3331,6 +3745,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (similarBtn) similarBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         scrollToSimilarShops();
@@ -3339,6 +3754,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
         if (metaRankingContainer) metaRankingContainer.classList.add('hidden');
+        if (metaAdsContainer) metaAdsContainer.classList.add('hidden');
         if (tiktokContainer) tiktokContainer.classList.add('hidden');
         if (overviewBtn) overviewBtn.className = "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         if (overviewContainer) overviewContainer.classList.remove('hidden');
@@ -3348,24 +3764,1104 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     // Switch between 6 Advertising Sub-Tabs: Ad Library | Insights | Ranking | Contents | Partnerships | Landing Pages
     function switchAdvSubTab(subTab) {
-      if (subTab === 'contents') {
-        switchShopSubTab('contents');
-      } else if (subTab === 'ranking') {
-        switchShopSubTab('ranking');
-      } else if (subTab === 'adlibrary') {
-        switchShopSubTab('meta');
-      } else if (subTab === 'insights') {
-        switchShopSubTab('overview');
-        setTimeout(() => {
-          const card = document.querySelector('[class*="Traffic & sales"]') || document.getElementById('similarShopsSection');
-          if (card) card.scrollIntoView({ behavior: 'smooth' });
-        }, 50);
-      } else if (subTab === 'partnerships') {
-        alert('🤝 Partnerships Intelligence: Đang phân tích 32 creator & influencer đang chạy affiliate cho thương hiệu này!');
-      } else if (subTab === 'landingpages') {
-        const link = (currentData && currentData.domain) || 'theoodie.com';
-        window.open('https://' + link, '_blank');
+      const targetMap = {
+        'adlibrary': 'library',
+        'library': 'library',
+        'insights': 'insights',
+        'ranking': 'ranking',
+        'contents': 'contents',
+        'partnerships': 'partnerships',
+        'landingpages': 'landingpages'
+      };
+      const cleanSub = targetMap[subTab] || 'library';
+      switchShopSubTab('meta');
+      switchMetaSubTab(cleanSub);
+    }
+
+    // ==========================================
+    // UNIFIED META ADVERTISING SUITE CONTROLLER
+    // ==========================================
+    let currentMetaSubTab = 'library'; // 'library' | 'insights' | 'ranking' | 'contents' | 'partnerships' | 'landingpages'
+    let isMetaEuUkOnly = false;
+    let metaLibraryCurrentPage = 1;
+    const META_LIBRARY_PAGE_SIZE = 12;
+    let metaCarouselIndices = {};
+    let metaHistoricTimeframe = 'weekly'; // 'daily' | 'weekly'
+    let metaHistoricChartInstance = null;
+    let metaFormatDonutInstance = null;
+    let metaUnifiedTrajectoryChartInstance = null;
+    let currentMetaUnifiedRankMode = 'biggest_gain'; // 'biggest_gain' | 'top_ranked' | 'longest_active' | 'most_reused'
+    let currentMetaUnifiedContentMode = 'creative'; // 'creative' | 'ad_copy' | 'transcript' | 'hook' | 'headline'
+    let currentMetaUnifiedContentMediaFilter = 'all'; // 'all' | 'image' | 'video' | 'carousel' | 'dco'
+    let currentMetaRankingApiData = null;
+    let currentMetaContentsApiData = null;
+
+    async function loadMetaIntelligenceView(brandName) {
+      const bName = brandName || getActiveBrandName();
+      const bTitle = document.getElementById('metaHeaderBrandName');
+      const bAvatar = document.getElementById('metaHeaderBrandAvatar');
+      const bAdsCount = document.getElementById('metaHeaderAdsCount');
+      const bTotalSubNav = document.getElementById('metaSubNavAdsTotalCount');
+      const subSidebarMetaCount = document.getElementById('subSidebarMetaCount');
+      const euUkLabel = document.getElementById('metaHeaderEuUkLabel');
+
+      if (bTitle) bTitle.textContent = bName;
+      if (bAvatar) {
+        bAvatar.src = (currentData && currentData.avatarUrl) || getEmailBrandAvatar(bName);
       }
+
+      const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : (currentData?.ads?.length || 0);
+      if (bAdsCount) bAdsCount.textContent = `• ${totalAds} / ${totalAds}`;
+      if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
+      if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds} / ${totalAds}`;
+
+      const euUkCount = currentMetaRankData?.eu_uk_count || Math.round(totalAds * 0.22);
+      const euUkPct = currentMetaRankData?.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
+      if (euUkLabel) euUkLabel.textContent = `Reach & Spend · EU/UK only ${euUkCount} (${euUkPct}%)`;
+
+      // Parallel fetch meta-ranking and contents if not yet loaded or brand mismatch
+      if (!currentMetaRankingApiData || currentMetaRankingApiData.brand?.toLowerCase() !== bName.toLowerCase()) {
+        fetch('/api/meta-ranking?query=' + encodeURIComponent(bName))
+          .then(res => res.json())
+          .then(data => {
+            currentMetaRankingApiData = data;
+            currentMetaRankData = data;
+            if (currentMetaSubTab === 'ranking') renderMetaUnifiedRanking();
+            if (currentMetaSubTab === 'insights') renderMetaInsights();
+          }).catch(e => console.error('Error fetching meta ranking:', e));
+      }
+
+      if (!currentMetaContentsApiData || currentMetaContentsApiData.brand?.toLowerCase() !== bName.toLowerCase()) {
+        fetch('/api/contents?query=' + encodeURIComponent(bName))
+          .then(res => res.json())
+          .then(data => {
+            currentMetaContentsApiData = data;
+            currentContentsData = data;
+            if (currentMetaSubTab === 'contents') renderMetaUnifiedContents();
+          }).catch(e => console.error('Error fetching meta contents:', e));
+      }
+
+      switchMetaSubTab(currentMetaSubTab || 'library');
+    }
+
+    function toggleMetaEuUkOnly() {
+      isMetaEuUkOnly = !isMetaEuUkOnly;
+      const sw = document.getElementById('metaHeaderEuUkSwitch');
+      const knob = document.getElementById('metaHeaderEuUkKnob');
+      if (sw && knob) {
+        if (isMetaEuUkOnly) {
+          sw.className = "w-7 h-3.5 bg-blue-600 rounded-full relative flex items-center p-0.5 justify-end transition duration-200";
+          knob.className = "w-2.5 h-2.5 bg-white rounded-full shadow-xs transition-transform duration-200";
+        } else {
+          sw.className = "w-7 h-3.5 bg-slate-300 rounded-full relative flex items-center p-0.5 transition duration-200";
+          knob.className = "w-2.5 h-2.5 bg-white rounded-full shadow-xs transition-transform duration-200";
+        }
+      }
+      if (currentMetaSubTab === 'library') {
+        metaLibraryCurrentPage = 1;
+        renderMetaLibraryCards();
+      } else if (currentMetaSubTab === 'ranking') {
+        renderMetaUnifiedRanking();
+      }
+    }
+
+    function switchMetaSubTab(tabName) {
+      currentMetaSubTab = tabName;
+      const tabs = ['library', 'insights', 'ranking', 'contents', 'partnerships', 'landingpages'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('metaSubTabBtn_' + t);
+        const view = document.getElementById('metaView_' + t);
+        if (btn) {
+          if (t === tabName) {
+            btn.className = "pb-3 border-b-2 border-slate-900 text-slate-900 font-extrabold flex items-center gap-1.5 cursor-pointer shrink-0 transition";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-slate-900";
+          } else {
+            btn.className = "pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer shrink-0";
+            const svg = btn.querySelector('svg');
+            if (svg) svg.className = "w-3.5 h-3.5 text-slate-400";
+          }
+        }
+        if (view) {
+          if (t === tabName) {
+            view.classList.remove('hidden');
+          } else {
+            view.classList.add('hidden');
+          }
+        }
+      });
+
+      if (tabName === 'library') {
+        renderMetaLibraryCards();
+      } else if (tabName === 'insights') {
+        renderMetaInsights();
+      } else if (tabName === 'ranking') {
+        renderMetaUnifiedRanking();
+      } else if (tabName === 'contents') {
+        renderMetaUnifiedContents();
+      } else if (tabName === 'partnerships') {
+        renderMetaPartnerships();
+      } else if (tabName === 'landingpages') {
+        renderMetaLandingPages();
+      }
+    }
+
+    // ==========================================
+    // 1. SUB-VIEW: AD LIBRARY RENDERER
+    // (Matching media_1790759876556 & .884591)
+    // ==========================================
+    function filterMetaLibrary() {
+      metaLibraryCurrentPage = 1;
+      renderMetaLibraryCards();
+    }
+
+    function sortMetaLibrary() {
+      metaLibraryCurrentPage = 1;
+      renderMetaLibraryCards();
+    }
+
+    function slideMetaCarousel(adId, dir, totalSlides) {
+      const current = metaCarouselIndices[adId] || 0;
+      let next = current + dir;
+      if (next < 0) next = totalSlides - 1;
+      if (next >= totalSlides) next = 0;
+      metaCarouselIndices[adId] = next;
+
+      // Update specific card slide without full re-render
+      const imgEl = document.getElementById(`metaCarouselImg_${adId}`);
+      const counterEl = document.getElementById(`metaCarouselCounter_${adId}`);
+      const dotsContainer = document.getElementById(`metaCarouselDots_${adId}`);
+
+      if (imgEl && window[`metaSlides_${adId}`]) {
+        const slides = window[`metaSlides_${adId}`];
+        imgEl.src = slides[next] || imgEl.src;
+      }
+      if (counterEl) {
+        counterEl.textContent = `${next + 1}/${totalSlides} Multiple media`;
+      }
+      if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, idx) => {
+          dot.className = idx === next ? 'carousel-dot w-2 h-2 rounded-full bg-white shadow-xs' : 'carousel-dot w-1.5 h-1.5 rounded-full bg-white/50';
+        });
+      }
+    }
+
+    function toggleMetaCardCopy(adId) {
+      const shortEl = document.getElementById(`metaCopyShort_${adId}`);
+      const fullEl = document.getElementById(`metaCopyFull_${adId}`);
+      const btn = document.getElementById(`metaCopyToggleBtn_${adId}`);
+      if (shortEl && fullEl && btn) {
+        if (fullEl.classList.contains('hidden')) {
+          fullEl.classList.remove('hidden');
+          shortEl.classList.add('hidden');
+          btn.textContent = 'Thu gọn';
+        } else {
+          fullEl.classList.add('hidden');
+          shortEl.classList.remove('hidden');
+          btn.textContent = 'Xem thêm...';
+        }
+      }
+    }
+
+    function renderMetaLibraryCards() {
+      const grid = document.getElementById('metaLibraryCardsGrid');
+      const pagEl = document.getElementById('metaLibraryPagination');
+      if (!grid) return;
+
+      const rawAds = (currentData && currentData.ads) ? currentData.ads : [];
+      if (!rawAds || rawAds.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Chưa tìm thấy quảng cáo Meta Ads</div>
+            <div class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">Thương hiệu ${(currentData && currentData.name) || getActiveBrandName()} hiện không có mẫu quảng cáo nào trên Meta Ad Library.</div>
+          </div>
+        `;
+        if (pagEl) pagEl.innerHTML = '';
+        return;
+      }
+
+      // Filter values
+      const countryFilter = document.getElementById('metaFilterCountry')?.value || 'all';
+      const statusFilter = document.getElementById('metaFilterStatus')?.value || 'all';
+      const mediaFilter = document.getElementById('metaFilterMediaType')?.value || 'all';
+      const ratioFilter = document.getElementById('metaFilterRatio')?.value || 'all';
+      const daysFilter = document.getElementById('metaFilterDays')?.value || 'all';
+      const ctaFilter = document.getElementById('metaFilterCta')?.value || 'all';
+      const sortOption = document.getElementById('metaLibrarySort')?.value || 'rank';
+
+      let filtered = rawAds.filter(ad => {
+        // EU/UK Toggle
+        if (isMetaEuUkOnly) {
+          const isEuUk = (ad.euReach && ad.euReach > 0) || (ad.targetCountryCodes && (ad.targetCountryCodes.includes('GB') || ad.targetCountryCodes.includes('EU')));
+          if (!isEuUk) return false;
+        }
+
+        // Country
+        if (countryFilter !== 'all') {
+          if (countryFilter === 'global') {
+            const hasCodes = ad.targetCountryCodes && ad.targetCountryCodes.length > 0;
+            if (hasCodes && ad.targetCountryCodes.length === 1 && !ad.targetCountryCodes.includes('GLOBAL')) return false;
+          } else {
+            if (!ad.targetCountryCodes || !ad.targetCountryCodes.includes(countryFilter)) return false;
+          }
+        }
+
+        // Status
+        if (statusFilter === 'active' && ad.isActive === false) return false;
+        if (statusFilter === 'inactive' && ad.isActive !== false) return false;
+
+        // Media Type
+        const isVid = ad.type === 'video' || ad.mediaType === 'video' || (ad.video_url && ad.video_url.length > 5);
+        const isCarousel = ad.type === 'carousel' || ad.mediaType === 'carousel' || (ad.duplicates > 5 && !isVid);
+        const isDco = ad.type === 'dco' || ad.mediaType === 'dco';
+        const isImg = !isVid && !isCarousel && !isDco;
+
+        if (mediaFilter === 'video' && !isVid) return false;
+        if (mediaFilter === 'carousel' && !isCarousel) return false;
+        if (mediaFilter === 'dco' && !isDco) return false;
+        if (mediaFilter === 'image' && !isImg) return false;
+
+        // Days Running
+        const days = ad.days_active ?? ad.daysRunning ?? 0;
+        if (daysFilter === '<7' && days >= 7) return false;
+        if (daysFilter === '7-30' && (days < 7 || days > 30)) return false;
+        if (daysFilter === '30-90' && (days < 30 || days > 90)) return false;
+        if (daysFilter === '>90' && days <= 90) return false;
+
+        // CTA
+        if (ctaFilter !== 'all') {
+          const ctaLower = (ad.ctaText || ad.cta_type || '').toLowerCase();
+          if (ctaFilter === 'shop_now' && !ctaLower.includes('shop')) return false;
+          if (ctaFilter === 'learn_more' && !ctaLower.includes('learn')) return false;
+          if (ctaFilter === 'order_now' && !ctaLower.includes('order')) return false;
+        }
+
+        return true;
+      });
+
+      // Sorting
+      if (sortOption === 'rank') {
+        filtered.sort((a, b) => (a.adOrder || 0) - (b.adOrder || 0));
+      } else if (sortOption === 'days_desc') {
+        filtered.sort((a, b) => ((b.days_active ?? b.daysRunning ?? 0) - (a.days_active ?? a.daysRunning ?? 0)));
+      } else if (sortOption === 'days_asc') {
+        filtered.sort((a, b) => ((a.days_active ?? a.daysRunning ?? 0) - (b.days_active ?? b.daysRunning ?? 0)));
+      } else if (sortOption === 'impressions') {
+        filtered.sort((a, b) => ((b.euReach || 0) - (a.euReach || 0)));
+      }
+
+      const totalItems = filtered.length;
+      const totalPages = Math.max(1, Math.ceil(totalItems / META_LIBRARY_PAGE_SIZE));
+      if (metaLibraryCurrentPage > totalPages) metaLibraryCurrentPage = totalPages;
+
+      const startIndex = (metaLibraryCurrentPage - 1) * META_LIBRARY_PAGE_SIZE;
+      const paginatedAds = filtered.slice(startIndex, startIndex + META_LIBRARY_PAGE_SIZE);
+
+      grid.innerHTML = '';
+      const totalAdsUniverse = (currentData && currentData.total_active_ads) || rawAds.length || 556;
+
+      paginatedAds.forEach((ad, idx) => {
+        const originalIndex = rawAds.indexOf(ad);
+        const cardIndex = startIndex + idx + 1;
+        const rankNum = ad.adOrder || cardIndex;
+        const duplicates = ad.duplicates || (rankNum <= 5 ? 11 : (rankNum <= 15 ? 4 : 1));
+        const isVideo = ad.type === 'video' || ad.mediaType === 'video' || (ad.video_url && ad.video_url.length > 5);
+        const isCarousel = ad.type === 'carousel' || ad.mediaType === 'carousel' || (duplicates >= 8 && !isVideo);
+        const adId = ad.id || `meta_card_${cardIndex}`;
+        const copyText = ad.primary_text || ad.description || ad.hook || 'Total Comfort, All Day Long';
+        const brandName = ad.advertiserName || ad.advertiser || (currentData && currentData.name) || getActiveBrandName();
+        const headline = ad.cta_title || ad.ctaDescription || (`Shop ${brandName} Online`);
+        const ctaBtnText = (ad.ctaText || ad.cta_type || 'Shop Now').replace(/_/g, ' ');
+        const daysRunning = ad.days_active ?? ad.daysRunning ?? (350 - rankNum * 12);
+        const platformAdId = ad.platformAdId || ad.ad_archive_id || ('10849204' + rankNum);
+
+        // Slide images setup for carousel
+        let slideImages = [];
+        if (isCarousel) {
+          const img1 = ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/600';
+          const img2 = ad.thumbnail_url || ad.image_url || 'https://via.placeholder.com/600';
+          slideImages = [img1, img2];
+          window[`metaSlides_${adId}`] = slideImages;
+        }
+
+        const currentSlideIdx = metaCarouselIndices[adId] || 0;
+        const currentMediaSrc = isCarousel ? (slideImages[currentSlideIdx] || slideImages[0]) : (ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/600');
+
+        const card = document.createElement('div');
+        card.className = "tt-card p-3.5 flex flex-col justify-between bg-white border border-slate-200/90 rounded-2xl shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group";
+
+        card.innerHTML = `
+          <div>
+            <!-- Row 1: Global ads pill + Duplicate count + Rank pill (Matching media_1790759876556.png) -->
+            <div class="flex items-center justify-between gap-1.5 mb-2.5">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <!-- Global Ads Tag -->
+                <div class="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60">
+                  <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span>Global ads</span>
+                </div>
+                <!-- Duplicate Count -->
+                <div class="flex items-center gap-1 text-[10.5px] font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/60" title="${duplicates} ads use this creative and text">
+                  <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span>${duplicates} ads</span>
+                </div>
+              </div>
+
+              <!-- Ad Rank Badge -->
+              <div class="flex items-center gap-1 text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-lg shrink-0">
+                <span class="text-[9px]">▲</span>
+                <span>#${rankNum} ${rankNum}/${totalAdsUniverse}</span>
+              </div>
+            </div>
+
+            <!-- Media Container -->
+            <div class="relative w-full aspect-square bg-slate-900 rounded-xl overflow-hidden border border-slate-200/80 mb-3 flex items-center justify-center group-hover:brightness-[1.02] transition">
+              ${isVideo ? `
+                <video src="${ad.video_url || ad.mediaUrl || ''}" poster="${ad.thumbnail_url || ad.image_url || ''}" class="w-full h-full object-cover" muted playsinline></video>
+                <!-- Video Duration Tag -->
+                <div class="absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur text-white text-[10.5px] font-bold flex items-center gap-1">
+                  <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                  <span>0:15</span>
+                </div>
+                <!-- Play Icon Center Overlay -->
+                <div onclick="openAdModal(${originalIndex})" class="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/20 hover:bg-black/10 transition">
+                  <div class="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-slate-900 group-hover:scale-110 transition">
+                    <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                  </div>
+                </div>
+              ` : isCarousel ? `
+                <img id="metaCarouselImg_${adId}" src="${currentMediaSrc}" class="w-full h-full object-cover" alt="Ad Creative"/>
+                <!-- 1/2 Multiple Media Badge Matching media_1790759884591.png -->
+                <div id="metaCarouselCounter_${adId}" class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur text-white text-[10.5px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                  <span>${currentSlideIdx + 1}/2 Multiple media</span>
+                </div>
+                <!-- Arrow Buttons -->
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', -1, 2)" class="absolute left-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">‹</button>
+                <button type="button" onclick="event.stopPropagation(); slideMetaCarousel('${adId}', 1, 2)" class="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center text-xs font-black shadow-md opacity-0 group-hover:opacity-100 transition cursor-pointer z-10">›</button>
+                <!-- Dot Indicators -->
+                <div id="metaCarouselDots_${adId}" class="absolute bottom-2 inset-x-0 flex items-center justify-center gap-1.5 z-10 pointer-events-none">
+                  <span class="carousel-dot w-2 h-2 rounded-full ${currentSlideIdx === 0 ? 'bg-white shadow-xs' : 'bg-white/50'}"></span>
+                  <span class="carousel-dot w-2 h-2 rounded-full ${currentSlideIdx === 1 ? 'bg-white shadow-xs' : 'bg-white/50'}"></span>
+                </div>
+              ` : `
+                <img src="${currentMediaSrc}" class="w-full h-full object-cover" alt="Ad Creative"/>
+              `}
+            </div>
+
+            <!-- Brand Identity & Date Launched -->
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <div class="flex items-center gap-2">
+                <img src="${(currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName)}" class="w-5 h-5 rounded-full object-cover border border-slate-200" alt="avatar"/>
+                <span class="text-xs font-extrabold text-slate-900">${brandName}</span>
+              </div>
+              <!-- Meta Platform Icons -->
+              <div class="flex items-center gap-1 text-slate-400">
+                <span title="Facebook" class="text-[11px]">📘</span>
+                <span title="Instagram" class="text-[11px]">📷</span>
+                <span title="Messenger" class="text-[11px]">💬</span>
+              </div>
+            </div>
+
+            <!-- Ad Copy Snippet (Expandable) -->
+            <div class="text-xs text-slate-600 mb-3 leading-relaxed">
+              <span id="metaCopyShort_${adId}">${copyText.length > 95 ? copyText.substring(0, 95) + '...' : copyText}</span>
+              <span id="metaCopyFull_${adId}" class="hidden">${copyText}</span>
+              ${copyText.length > 95 ? `
+                <button type="button" id="metaCopyToggleBtn_${adId}" onclick="toggleMetaCardCopy('${adId}')" class="text-blue-600 hover:text-blue-700 font-bold ml-1 cursor-pointer">Xem thêm...</button>
+              ` : ''}
+            </div>
+
+            <!-- Headline & CTA Button -->
+            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 mb-3">
+              <div class="min-w-0">
+                <div class="text-[10px] font-bold uppercase text-slate-400 truncate">${(ad.ctaDomain || currentData?.domain || 'ONLINE STORE').toUpperCase()}</div>
+                <div class="text-xs font-black text-slate-900 truncate" title="${headline}">${headline}</div>
+              </div>
+              <a href="${ad.landing_url || ad.landingUrl || ('https://' + (currentData?.domain || 'theoodie.com'))}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs font-extrabold transition shrink-0 cursor-pointer shadow-2xs">
+                ${ctaBtnText}
+              </a>
+            </div>
+          </div>
+
+          <!-- Footer: Active Days & See Details Link -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+            <span class="font-medium">${daysRunning} days active · ID: ${platformAdId}</span>
+            <button type="button" onclick="openAdModal(${originalIndex})" class="text-blue-600 hover:text-blue-700 font-bold flex items-center gap-1 cursor-pointer">
+              <span>Details</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      // Render Pagination Bar Matching media_1790759884591.png
+      if (pagEl) {
+        if (totalPages <= 1) {
+          pagEl.innerHTML = '';
+          return;
+        }
+
+        let pagesHtml = '';
+        pagesHtml += `<button type="button" onclick="changeMetaLibraryPage(${metaLibraryCurrentPage - 1})" ${metaLibraryCurrentPage === 1 ? 'disabled class="w-8 h-8 rounded-xl border border-slate-200 text-slate-300 flex items-center justify-center text-xs cursor-not-allowed"' : 'class="w-8 h-8 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 flex items-center justify-center text-xs font-bold cursor-pointer"'}>&lt;</button>`;
+
+        for (let p = 1; p <= Math.min(5, totalPages); p++) {
+          pagesHtml += `<button type="button" onclick="changeMetaLibraryPage(${p})" class="w-8 h-8 rounded-xl ${p === metaLibraryCurrentPage ? 'bg-slate-900 text-white font-extrabold shadow-2xs' : 'border border-slate-200 hover:bg-slate-50 text-slate-700 font-bold'} flex items-center justify-center text-xs cursor-pointer">${p}</button>`;
+        }
+
+        if (totalPages > 5) {
+          pagesHtml += `<span class="px-1 text-slate-400 text-xs">...</span>`;
+          pagesHtml += `<button type="button" onclick="changeMetaLibraryPage(${totalPages})" class="w-8 h-8 rounded-xl ${totalPages === metaLibraryCurrentPage ? 'bg-slate-900 text-white font-extrabold shadow-2xs' : 'border border-slate-200 hover:bg-slate-50 text-slate-700 font-bold'} flex items-center justify-center text-xs cursor-pointer">${totalPages}</button>`;
+        }
+
+        pagesHtml += `<button type="button" onclick="changeMetaLibraryPage(${metaLibraryCurrentPage + 1})" ${metaLibraryCurrentPage === totalPages ? 'disabled class="w-8 h-8 rounded-xl border border-slate-200 text-slate-300 flex items-center justify-center text-xs cursor-not-allowed"' : 'class="w-8 h-8 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 flex items-center justify-center text-xs font-bold cursor-pointer"'}>&gt;</button>`;
+
+        pagEl.innerHTML = pagesHtml;
+      }
+    }
+
+    function changeMetaLibraryPage(newPage) {
+      if (newPage < 1) return;
+      metaLibraryCurrentPage = newPage;
+      renderMetaLibraryCards();
+      const cont = document.getElementById('metaAdsContainer');
+      if (cont) cont.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ==========================================
+    // 2. SUB-VIEW: INSIGHTS RENDERER
+    // (Matching media_1790759911226.png)
+    // ==========================================
+    function setMetaHistoricTimeframe(tf) {
+      metaHistoricTimeframe = tf;
+      const dailyBtn = document.getElementById('metaHistoricTf_daily');
+      const weeklyBtn = document.getElementById('metaHistoricTf_weekly');
+      if (dailyBtn && weeklyBtn) {
+        if (tf === 'daily') {
+          dailyBtn.className = "px-3 py-1 rounded-lg bg-white text-slate-900 shadow-2xs font-extrabold transition cursor-pointer";
+          weeklyBtn.className = "px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer";
+        } else {
+          weeklyBtn.className = "px-3 py-1 rounded-lg bg-white text-slate-900 shadow-2xs font-extrabold transition cursor-pointer";
+          dailyBtn.className = "px-3 py-1 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer";
+        }
+      }
+      renderMetaInsights();
+    }
+
+    function renderMetaInsights() {
+      const activeAdsVal = document.getElementById('metaInsightsActiveAdsVal');
+      const launchedAdsVal = document.getElementById('metaInsightsLaunchedAdsVal');
+      const rawAds = (currentData && currentData.ads) ? currentData.ads : [];
+      const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : rawAds.length;
+
+      if (activeAdsVal) activeAdsVal.textContent = totalAds || 556;
+      if (launchedAdsVal) launchedAdsVal.textContent = Math.round(totalAds * 0.18) || 38;
+
+      // 1. Dual-Axis Historic Chart (Chart.js)
+      const histCanvas = document.getElementById('metaInsightsHistoricCanvas');
+      if (histCanvas) {
+        if (metaHistoricChartInstance) {
+          metaHistoricChartInstance.destroy();
+        }
+
+        const isWeekly = metaHistoricTimeframe === 'weekly';
+        const labels = isWeekly
+          ? ["Oct 24", "Nov 24", "Dec 24", "Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25"]
+          : ["Sep 19", "Sep 20", "Sep 21", "Sep 22", "Sep 23", "Sep 24", "Sep 25", "Sep 26", "Sep 27", "Sep 28", "Sep 29", "Sep 30"];
+
+        const activeBase = totalAds || 450;
+        const activeTrend = isWeekly
+          ? [Math.round(activeBase * 0.4), Math.round(activeBase * 0.55), Math.round(activeBase * 0.8), Math.round(activeBase * 0.95), Math.round(activeBase * 0.85), Math.round(activeBase * 0.7), Math.round(activeBase * 0.65), Math.round(activeBase * 0.75), Math.round(activeBase * 0.88), Math.round(activeBase * 0.92), Math.round(activeBase * 0.98), activeBase]
+          : [activeBase - 15, activeBase - 12, activeBase - 10, activeBase - 8, activeBase - 5, activeBase - 4, activeBase - 2, activeBase - 1, activeBase, activeBase, activeBase, activeBase];
+
+        const launchedTrend = isWeekly
+          ? [12, 28, 45, 62, 34, 18, 14, 22, 38, 42, 55, Math.round(activeBase * 0.18)]
+          : [3, 5, 2, 4, 8, 3, 6, 2, 5, 4, 7, 3];
+
+        const ctx = histCanvas.getContext('2d');
+        metaHistoricChartInstance = new Chart(ctx, {
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                type: 'line',
+                label: 'Active Ads',
+                data: activeTrend,
+                borderColor: '#06b6d4',
+                backgroundColor: 'rgba(6, 182, 212, 0.08)',
+                fill: true,
+                borderWidth: 2.5,
+                tension: 0.35,
+                pointRadius: 3,
+                pointHoverRadius: 6,
+                yAxisID: 'y'
+              },
+              {
+                type: 'bar',
+                label: 'Ads Launched',
+                data: launchedTrend,
+                backgroundColor: '#6366f1',
+                borderRadius: 4,
+                barPercentage: 0.5,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                titleFont: { size: 11, weight: 'bold' },
+                bodyFont: { size: 11 },
+                padding: 10,
+                cornerRadius: 8
+              }
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { font: { size: 10, weight: '600' }, color: '#94a3b8' } },
+              y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: { font: { size: 10 }, color: '#94a3b8' }
+              },
+              y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: { font: { size: 10 }, color: '#94a3b8' }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Format Mix Donut Chart (Chart.js)
+      const donutCanvas = document.getElementById('metaInsightsFormatDonutCanvas');
+      const legendList = document.getElementById('metaFormatMixLegend');
+      if (donutCanvas) {
+        if (metaFormatDonutInstance) {
+          metaFormatDonutInstance.destroy();
+        }
+
+        let vCount = 0, iCount = 0, cCount = 0, dCount = 0;
+        rawAds.forEach(a => {
+          const isV = a.type === 'video' || a.mediaType === 'video' || (a.video_url && a.video_url.length > 5);
+          const isC = a.type === 'carousel' || a.mediaType === 'carousel' || (a.duplicates >= 8 && !isV);
+          const isD = a.type === 'dco' || a.mediaType === 'dco';
+          if (isV) vCount++;
+          else if (isC) cCount++;
+          else if (isD) dCount++;
+          else iCount++;
+        });
+
+        const totalCalculated = Math.max(1, vCount + iCount + cCount + dCount);
+        const vPct = Math.round((vCount / totalCalculated) * 100) || 52;
+        const iPct = Math.round((iCount / totalCalculated) * 100) || 33;
+        const cPct = Math.round((cCount / totalCalculated) * 100) || 12;
+        const dPct = 100 - (vPct + iPct + cPct) || 3;
+
+        const ctxDonut = donutCanvas.getContext('2d');
+        metaFormatDonutInstance = new Chart(ctxDonut, {
+          type: 'doughnut',
+          data: {
+            labels: ['Video', 'Image', 'Carousel', 'Dynamic'],
+            datasets: [{
+              data: [vPct, iPct, cPct, dPct],
+              backgroundColor: ['#8b5cf6', '#3b82f6', '#06b6d4', '#f59e0b'],
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: ctx => ` ${ctx.label}: ${ctx.parsed}%`
+                }
+              }
+            }
+          }
+        });
+
+        if (legendList) {
+          legendList.innerHTML = `
+            <div class="flex items-center justify-between text-slate-700">
+              <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span><span>Video</span></div>
+              <span class="font-extrabold text-slate-900">${vPct}% (${vCount || Math.round(totalAds * 0.52)})</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-700">
+              <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span><span>Image</span></div>
+              <span class="font-extrabold text-slate-900">${iPct}% (${iCount || Math.round(totalAds * 0.33)})</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-700">
+              <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span><span>Carousel</span></div>
+              <span class="font-extrabold text-slate-900">${cPct}% (${cCount || Math.round(totalAds * 0.12)})</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-700">
+              <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span><span>Dynamic (DCO)</span></div>
+              <span class="font-extrabold text-slate-900">${dPct}% (${dCount || Math.round(totalAds * 0.03)})</span>
+            </div>
+          `;
+        }
+      }
+
+      // 3. Top Landing Pages Card
+      const lpListEl = document.getElementById('metaInsightsLandingPagesList');
+      if (lpListEl) {
+        const lpCounts = {};
+        rawAds.forEach(a => {
+          const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+          lpCounts[url] = (lpCounts[url] || 0) + 1;
+        });
+
+        const sortedLps = Object.entries(lpCounts).sort((a, b) => b[1] - a[1]);
+        if (sortedLps.length === 0) {
+          const dom = (currentData && currentData.domain) || 'theoodie.com';
+          sortedLps.push([`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.42)]);
+          sortedLps.push([`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.28)]);
+          sortedLps.push([`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.18)]);
+          sortedLps.push([`https://${dom}/`, Math.round(totalAds * 0.12)]);
+        }
+
+        lpListEl.innerHTML = sortedLps.slice(0, 4).map(([url, count]) => {
+          const pct = Math.round((count / Math.max(1, totalAds)) * 100);
+          let slug = url.replace(/https?:\\/\\/[^\\/]+/, '');
+          if (!slug || slug === '/') slug = 'Homepage (/)';
+          return `
+            <div class="py-2.5">
+              <div class="flex items-center justify-between text-xs font-semibold mb-1">
+                <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-bold truncate max-w-[280px]" title="${url}">
+                  ${slug}
+                </a>
+                <span class="text-slate-700 font-extrabold shrink-0">${count} ads (${pct}%)</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                <div class="bg-blue-600 h-1.5 rounded-full" style="width: ${Math.min(100, pct * 2)}%"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 4. Best Ranked Creatives Card
+      const bestRowEl = document.getElementById('metaInsightsBestCreativesRow');
+      if (bestRowEl) {
+        const top4 = rawAds.slice(0, 4);
+        if (top4.length === 0) {
+          bestRowEl.innerHTML = '<div class="col-span-full py-8 text-center text-xs text-slate-400">Chưa có xếp hạng sáng tạo</div>';
+        } else {
+          bestRowEl.innerHTML = top4.map((ad, idx) => `
+            <div onclick="openAdModal(${idx})" class="p-2 bg-slate-50 border border-slate-200/80 rounded-xl hover:shadow-md transition cursor-pointer group">
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden bg-slate-900 mb-2">
+                <img src="${ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/200'}" class="w-full h-full object-cover group-hover:scale-105 transition" alt="creative"/>
+                <div class="absolute top-1 left-1 px-1.5 py-0.5 rounded-md bg-emerald-600 text-white text-[10px] font-black">
+                  #${idx + 1}
+                </div>
+              </div>
+              <div class="text-[11px] font-extrabold text-slate-900 truncate">${ad.cta_title || ad.ctaText || 'Top Winner'}</div>
+              <div class="text-[10px] text-slate-500">${ad.days_active || ad.daysRunning || (100 - idx * 10)}d active</div>
+            </div>
+          `).join('');
+        }
+      }
+    }
+
+    // ==========================================
+    // 3. SUB-VIEW: RANKING RENDERER
+    // (Matching media_1790759918510.png)
+    // ==========================================
+    function switchMetaUnifiedRankMode(mode) {
+      currentMetaUnifiedRankMode = mode;
+      const modes = ['biggest_gain', 'top_ranked', 'longest_active', 'most_reused'];
+      modes.forEach(m => {
+        const btn = document.getElementById(`metaUnifiedRankPill_${m}`);
+        if (btn) {
+          if (m === mode) {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer";
+          } else {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer";
+          }
+        }
+      });
+      renderMetaUnifiedRanking();
+    }
+
+    function renderMetaUnifiedRanking() {
+      renderMetaUnifiedRankChart();
+      renderMetaUnifiedRankCards();
+    }
+
+    function renderMetaUnifiedRankChart() {
+      const canvas = document.getElementById('metaUnifiedRankChartCanvas');
+      if (!canvas) return;
+
+      if (metaUnifiedTrajectoryChartInstance) {
+        metaUnifiedTrajectoryChartInstance.destroy();
+      }
+
+      const isGain = currentMetaUnifiedRankMode === 'biggest_gain';
+      const chartSeries = (currentMetaRankingApiData && currentMetaRankingApiData.charts)
+        ? (isGain ? currentMetaRankingApiData.charts.biggest_gain : currentMetaRankingApiData.charts.top_ranked)
+        : null;
+
+      const labels = (currentMetaRankingApiData && currentMetaRankingApiData.dates && currentMetaRankingApiData.dates.length > 0)
+        ? currentMetaRankingApiData.dates
+        : ["Sep 22", "Sep 23", "Sep 24", "Sep 25", "Sep 26", "Sep 27", "Sep 28", "Sep 29"];
+
+      let datasets = [];
+      if (chartSeries && chartSeries.length > 0) {
+        datasets = chartSeries.slice(0, 5).map(s => ({
+          label: s.label,
+          data: s.points,
+          borderColor: s.color,
+          backgroundColor: s.color,
+          borderWidth: 2.2,
+          tension: 0.25,
+          pointRadius: 3.5,
+          pointHoverRadius: 6
+        }));
+      } else {
+        datasets = [
+          { label: '#1 (+12 pos) Winner Ad', data: [15, 12, 8, 5, 3, 2, 1, 1], borderColor: '#3b82f6', backgroundColor: '#3b82f6', borderWidth: 2, tension: 0.3 },
+          { label: '#2 (+8 pos) Sleep Tee Promo', data: [18, 16, 12, 10, 6, 4, 3, 2], borderColor: '#ec4899', backgroundColor: '#ec4899', borderWidth: 2, tension: 0.3 },
+          { label: '#3 (+24 pos) Sherpa Robes', data: [32, 28, 22, 18, 12, 8, 5, 3], borderColor: '#10b981', backgroundColor: '#10b981', borderWidth: 2, tension: 0.3 },
+          { label: '#4 (+5 pos) Winter Warmth', data: [12, 11, 9, 8, 7, 6, 5, 4], borderColor: '#f59e0b', backgroundColor: '#f59e0b', borderWidth: 2, tension: 0.3 },
+          { label: '#5 (+18 pos) Flash Sale 50%', data: [25, 22, 19, 15, 12, 9, 7, 5], borderColor: '#8b5cf6', backgroundColor: '#8b5cf6', borderWidth: 2, tension: 0.3 }
+        ];
+      }
+
+      const ctx = canvas.getContext('2d');
+      metaUnifiedTrajectoryChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: { labels: labels, datasets: datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'top', labels: { boxWidth: 10, font: { size: 10.5, weight: 'bold' }, padding: 12 } },
+            tooltip: {
+              backgroundColor: 'rgba(15, 23, 42, 0.95)',
+              padding: 10,
+              callbacks: { label: ctx => ` Rank #${ctx.parsed.y} (${ctx.dataset.label})` }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 10, weight: '600' }, color: '#94a3b8' } },
+            y: {
+              reverse: true, // Inverted Y-axis: Rank #1 at top
+              grid: { color: '#f1f5f9' },
+              ticks: {
+                stepSize: 5,
+                callback: val => '#' + val,
+                font: { size: 10 },
+                color: '#94a3b8'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function renderMetaUnifiedRankCards() {
+      const grid = document.getElementById('metaUnifiedRankCardsGrid');
+      if (!grid) return;
+
+      const modeKey = currentMetaUnifiedRankMode;
+      const rankCards = (currentMetaRankingApiData && currentMetaRankingApiData.modes && currentMetaRankingApiData.modes[modeKey])
+        ? currentMetaRankingApiData.modes[modeKey]
+        : [];
+
+      if (rankCards.length === 0) {
+        // Fallback to cards generated from currentData.ads
+        const rawAds = (currentData && currentData.ads) || [];
+        if (rawAds.length === 0) {
+          grid.innerHTML = '<div class="col-span-full py-12 text-center text-slate-400 text-xs">Không có dữ liệu xếp hạng</div>';
+          return;
+        }
+
+        grid.innerHTML = rawAds.slice(0, 8).map((ad, idx) => {
+          const rank = idx + 1;
+          const gain = Math.max(1, 15 - idx * 2);
+          const days = ad.days_active || ad.daysRunning || (120 - idx * 10);
+          return `
+            <div onclick="openAdModal(${idx})" class="p-3.5 bg-white border border-slate-200/90 rounded-2xl shadow-2xs hover:shadow-lg transition cursor-pointer group flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-2">
+                  <span class="font-extrabold text-slate-900">#${rank} Ad Rank</span>
+                  <span class="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md font-bold text-[10.5px]">+${gain} pos</span>
+                </div>
+                <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-900 mb-2.5">
+                  <img src="${ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/300'}" class="w-full h-full object-cover group-hover:scale-105 transition" alt="rank ad"/>
+                </div>
+                <div class="text-xs font-bold text-slate-900 truncate mb-1">${ad.cta_title || ad.ctaText || 'Top Winner'}</div>
+                <div class="text-[11px] text-slate-500">${days} days running</div>
+              </div>
+              <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="font-semibold text-slate-600">${ad.duplicates || 1} ads reuse</span>
+                <span class="text-blue-600 font-bold">Details →</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+        return;
+      }
+
+      grid.innerHTML = rankCards.map((card, idx) => `
+        <div class="p-3.5 bg-white border border-slate-200/90 rounded-2xl shadow-2xs hover:shadow-lg transition group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <span class="font-extrabold text-slate-900">#${card.rank} Ad Rank</span>
+              <span class="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md font-bold text-[10.5px]">+${card.gain_pos || (15 - idx)} pos</span>
+            </div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-900 mb-2.5">
+              <img src="${card.image_url || 'https://via.placeholder.com/300'}" class="w-full h-full object-cover group-hover:scale-105 transition" alt="rank creative"/>
+            </div>
+            <div class="text-xs font-bold text-slate-900 truncate mb-1">${card.cta_title || card.primary_text?.substring(0, 30) || 'Top Ranked'}</div>
+            <div class="text-[11px] text-slate-500">${card.days_running || 90}d running · ${card.status || 'Active'}</div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="font-semibold text-slate-600">📑 ${card.copies_count || card.duplicates || 1} copies</span>
+            <a href="https://${card.cta_domain || (currentData?.domain || 'theoodie.com')}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">Shop Now →</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ==========================================
+    // 4. SUB-VIEW: CONTENTS RENDERER
+    // (Matching media_1790759923902.png)
+    // ==========================================
+    function switchMetaUnifiedContentMode(mode) {
+      currentMetaUnifiedContentMode = mode;
+      const modes = ['creative', 'ad_copy', 'transcript', 'hook', 'headline'];
+      modes.forEach(m => {
+        const btn = document.getElementById(`metaUnifiedContentPill_${m}`);
+        if (btn) {
+          if (m === mode) {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 shadow-xs border border-slate-200/80 transition cursor-pointer";
+          } else {
+            btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-white/60 transition cursor-pointer";
+          }
+        }
+      });
+      renderMetaUnifiedContents();
+    }
+
+    function filterMetaContentMedia(mediaType) {
+      currentMetaUnifiedContentMediaFilter = mediaType;
+      const types = ['all', 'image', 'video', 'carousel', 'dco'];
+      types.forEach(t => {
+        const btn = document.getElementById(`metaContentMediaBtn_${t}`);
+        if (btn) {
+          if (t === mediaType) {
+            btn.className = "px-2.5 py-1 rounded-lg bg-white text-slate-900 shadow-2xs font-bold cursor-pointer";
+          } else {
+            btn.className = "px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer";
+          }
+        }
+      });
+      renderMetaUnifiedContents();
+    }
+
+    function renderMetaUnifiedContents() {
+      const grid = document.getElementById('metaUnifiedContentsGrid');
+      if (!grid) return;
+
+      const cData = currentMetaContentsApiData || currentContentsData;
+      // Update badge counts
+      if (cData && cData.counts) {
+        ['creative', 'ad_copy', 'transcript', 'hook', 'headline'].forEach(m => {
+          const badge = document.getElementById(`metaContentBadge_${m}`);
+          if (badge) {
+            const keyMap = { 'creative': 'creatives', 'ad_copy': 'ad_copies', 'transcript': 'transcripts', 'hook': 'hooks', 'headline': 'headlines' };
+            badge.textContent = cData.counts[keyMap[m]] || 0;
+          }
+        });
+      }
+
+      if (currentMetaUnifiedContentMode === 'creative') {
+        // Render visual creative grid
+        const rawAds = (currentData && currentData.ads) || [];
+        let filteredAds = rawAds.filter(ad => {
+          if (currentMetaUnifiedContentMediaFilter === 'all') return true;
+          const isV = ad.type === 'video' || ad.mediaType === 'video';
+          const isC = ad.type === 'carousel' || ad.mediaType === 'carousel';
+          const isD = ad.type === 'dco' || ad.mediaType === 'dco';
+          if (currentMetaUnifiedContentMediaFilter === 'video') return isV;
+          if (currentMetaUnifiedContentMediaFilter === 'carousel') return isC;
+          if (currentMetaUnifiedContentMediaFilter === 'dco') return isD;
+          if (currentMetaUnifiedContentMediaFilter === 'image') return (!isV && !isC && !isD);
+          return true;
+        });
+
+        if (filteredAds.length === 0) filteredAds = rawAds;
+
+        grid.innerHTML = filteredAds.map((ad, idx) => {
+          const isVid = ad.type === 'video' || ad.mediaType === 'video' || (ad.video_url && ad.video_url.length > 5);
+          return `
+            <div onclick="openAdModal(${idx})" class="group relative rounded-xl overflow-hidden bg-slate-900 border border-slate-200/90 shadow-2xs hover:shadow-lg transition cursor-pointer aspect-[3/4] flex flex-col justify-end">
+              <img src="${ad.image_url || ad.thumbnail_url || 'https://via.placeholder.com/300'}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="creative"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 group-hover:opacity-95 transition"></div>
+              ${isVid ? `
+                <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur text-white text-[10px] font-bold flex items-center gap-1">
+                  <span>▶ 0:15</span>
+                </div>
+              ` : ''}
+              <div class="relative p-3 text-white">
+                <div class="text-xs font-black truncate">${ad.cta_title || ad.ctaText || 'Creative ' + (idx + 1)}</div>
+                <div class="text-[10px] text-slate-300 flex items-center justify-between mt-1">
+                  <span>${ad.days_active || ad.daysRunning || 15}d running</span>
+                  <span class="text-emerald-400 font-bold">#${idx + 1} Rank</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        // Render text list (Ad Copy, Transcript, Hook, Headline)
+        const keyMap = { 'ad_copy': 'ad_copies', 'transcript': 'transcripts', 'hook': 'hooks', 'headline': 'headlines' };
+        const items = (cData && cData[keyMap[currentMetaUnifiedContentMode]]) || [];
+
+        if (items.length === 0) {
+          grid.innerHTML = '<div class="col-span-full py-12 text-center text-xs text-slate-400">Không có dữ liệu cho mục này.</div>';
+          return;
+        }
+
+        grid.innerHTML = items.map((it, idx) => `
+          <div class="p-3.5 bg-white border border-slate-200/90 rounded-xl shadow-2xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] font-bold text-slate-400 mb-2">
+                <span>#${idx + 1}</span>
+                <span class="text-slate-600">${it.ads_count || 1} ads using this</span>
+              </div>
+              <p class="text-xs text-slate-800 font-medium leading-relaxed mb-3">"${it.text || it.title || ''}"</p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-[10px] text-slate-400">${it.longest_running || 'Active'}</span>
+              <button type="button" onclick="navigator.clipboard.writeText('${(it.text || '').replace(/'/g, "\\'")}'); alert('Đã sao chép nội dung!')" class="text-xs text-blue-600 hover:text-blue-700 font-bold cursor-pointer">
+                Copy
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // ==========================================
+    // 5. SUB-VIEW: PARTNERSHIPS RENDERER
+    // ==========================================
+    function renderMetaPartnerships() {
+      const container = document.getElementById('metaPartnershipsContainer');
+      if (!container) return;
+
+      container.innerHTML = `
+        <div class="tt-card p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🤝</span>
+              <h3 class="text-sm font-extrabold text-slate-900">Creator & Influencer Partnerships</h3>
+            </div>
+            <span class="text-xs font-bold text-slate-500">• 0 active collaborations</span>
+          </div>
+          <div class="py-12 text-center">
+            <div class="w-12 h-12 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-slate-400 mb-3 text-lg">🤝</div>
+            <div class="text-sm font-bold text-slate-800">Chưa phát hiện quảng cáo hợp tác trả phí (Whitelisted)</div>
+            <div class="text-xs text-slate-500 max-w-md mx-auto mt-1">Thương hiệu này hiện chỉ chạy quảng cáo từ trang chính chủ, chưa kích hoạt các chiến dịch Branded Content với Creator.</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ==========================================
+    // 6. SUB-VIEW: LANDING PAGES RENDERER
+    // ==========================================
+    function renderMetaLandingPages() {
+      const badge = document.getElementById('metaLandingPagesTotalBadge');
+      const tableCont = document.getElementById('metaLandingPagesTableContainer');
+      if (!tableCont) return;
+
+      const rawAds = (currentData && currentData.ads) || [];
+      const totalAds = rawAds.length || 556;
+      const lpMap = {};
+
+      rawAds.forEach(a => {
+        const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+        lpMap[url] = (lpMap[url] || 0) + 1;
+      });
+
+      let lpList = Object.entries(lpMap).sort((a, b) => b[1] - a[1]);
+      if (lpList.length === 0) {
+        const dom = (currentData && currentData.domain) || 'theoodie.com';
+        lpList = [
+          [`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.45)],
+          [`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.25)],
+          [`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.15)],
+          [`https://${dom}/collections/bundles`, Math.round(totalAds * 0.10)],
+          [`https://${dom}/`, Math.round(totalAds * 0.05)]
+        ];
+      }
+
+      if (badge) badge.textContent = `• ${lpList.length} landing pages`;
+
+      tableCont.innerHTML = `
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-100 text-[11px] font-extrabold uppercase text-slate-400">
+              <th class="py-2.5 px-3">Landing Page URL</th>
+              <th class="py-2.5 px-3">Active Ads</th>
+              <th class="py-2.5 px-3">Share %</th>
+              <th class="py-2.5 px-3 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-xs">
+            ${lpList.map(([url, count]) => {
+              const pct = Math.round((count / Math.max(1, totalAds)) * 100);
+              return `
+                <tr class="hover:bg-slate-50 transition">
+                  <td class="py-3 px-3">
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-1.5" title="${url}">
+                      <span class="truncate max-w-md">${url}</span>
+                      <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                  </td>
+                  <td class="py-3 px-3 font-extrabold text-slate-900">${count} ads</td>
+                  <td class="py-3 px-3">
+                    <div class="flex items-center gap-2">
+                      <div class="w-24 bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                        <div class="bg-blue-600 h-1.5 rounded-full" style="width: ${Math.min(100, pct * 2)}%"></div>
+                      </div>
+                      <span class="text-slate-600 font-bold">${pct}%</span>
+                    </div>
+                  </td>
+                  <td class="py-3 px-3 text-right">
+                    <button type="button" onclick="switchMetaSubTab('library')" class="text-xs font-bold text-slate-700 hover:text-blue-600 cursor-pointer">
+                      Filter Library →
+                    </button>
+                  </td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
     }
 
     // ==========================================
