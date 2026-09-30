@@ -3688,6 +3688,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const bName = currentMetaRankData.brand || getActiveBrandName();
       const avatarUrl = getEmailBrandAvatar(bName);
 
+      if (!cards || cards.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Chưa có bảng xếp hạng Meta Ads</div>
+            <div class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">Thương hiệu ${bName} hiện chưa có dữ liệu quảng cáo để xếp hạng hiệu suất.</div>
+          </div>
+        `;
+        return;
+      }
+
       cards.forEach((card, idx) => {
         const cDiv = document.createElement('div');
         cDiv.className = "bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-slate-300 transition duration-200 group flex flex-col justify-between";

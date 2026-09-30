@@ -880,7 +880,26 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
                 except Exception:
                     pass
         if not data:
-            data = generate_dynamic_ranking_dataset(brand_name)
+            data = {
+                "brand": brand_name.strip().title(),
+                "domain": f"{slug}.com",
+                "total_active_ads": 0,
+                "total_historical_ads": 0,
+                "eu_uk_count": 0,
+                "eu_uk_pct": 0,
+                "has_data": False,
+                "dates": [],
+                "modes": {
+                    "biggest_gain": [],
+                    "top_ranked": [],
+                    "longest_active": [],
+                    "most_reused": []
+                },
+                "charts": {
+                    "biggest_gain": [],
+                    "top_ranked": []
+                }
+            }
 
     try:
         with open(cache_path, "w", encoding="utf-8") as f:

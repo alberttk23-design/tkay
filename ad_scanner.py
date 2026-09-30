@@ -916,27 +916,35 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
             {"countryCode": "AU", "percentage": 6.2}
         ]
     else:
-        est_vis = max(45000, total_num * 650)
-        vis_k = round(est_vis / 1000.0, 1)
-        visitors_str = f"{vis_k}K" if vis_k < 1000 else f"{round(vis_k/1000.0, 1)}M"
-        visitors_delta = "+15%"
-        aov = 48.0
-        cr = 0.019
-        m_sales = est_vis * cr * aov
-        d_sales = m_sales / 30.0
-        sales_mo_str = f"${round(m_sales/1000.0, 1)}K" if m_sales < 1000000 else f"${round(m_sales/1000000.0, 2)}M"
-        sales_day_str = f"${round(d_sales/1000.0, 1)}K/day"
-        traffic_history_all = []
-        for m, y, r in all_season_ratios:
-            v = round(vis_k * r, 1)
-            d_str = f"{round(v/1000.0, 1)}M" if v >= 1000 else f"{round(v)}K"
-            traffic_history_all.append({"month": m, "year": y, "visitors": v, "display": d_str})
-        visitors_countries = [
-            {"countryCode": "US", "percentage": 48.0},
-            {"countryCode": "GB", "percentage": 22.0},
-            {"countryCode": "AU", "percentage": 15.0},
-            {"countryCode": "CA", "percentage": 10.0}
-        ]
+        if total_num == 0:
+            visitors_str = "0"
+            visitors_delta = "0%"
+            sales_mo_str = "$0"
+            sales_day_str = "$0/day"
+            traffic_history_all = []
+            visitors_countries = []
+        else:
+            est_vis = max(45000, total_num * 650)
+            vis_k = round(est_vis / 1000.0, 1)
+            visitors_str = f"{vis_k}K" if vis_k < 1000 else f"{round(vis_k/1000.0, 1)}M"
+            visitors_delta = "+15%"
+            aov = 48.0
+            cr = 0.019
+            m_sales = est_vis * cr * aov
+            d_sales = m_sales / 30.0
+            sales_mo_str = f"${round(m_sales/1000.0, 1)}K" if m_sales < 1000000 else f"${round(m_sales/1000000.0, 2)}M"
+            sales_day_str = f"${round(d_sales/1000.0, 1)}K/day"
+            traffic_history_all = []
+            for m, y, r in all_season_ratios:
+                v = round(vis_k * r, 1)
+                d_str = f"{round(v/1000.0, 1)}M" if v >= 1000 else f"{round(v)}K"
+                traffic_history_all.append({"month": m, "year": y, "visitors": v, "display": d_str})
+            visitors_countries = [
+                {"countryCode": "US", "percentage": 48.0},
+                {"countryCode": "GB", "percentage": 22.0},
+                {"countryCode": "AU", "percentage": 15.0},
+                {"countryCode": "CA", "percentage": 10.0}
+            ]
 
     traffic_sales = {
         "visitors": visitors_str,
