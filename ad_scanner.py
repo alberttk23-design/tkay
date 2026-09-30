@@ -565,7 +565,7 @@ def generate_loop_meta_dataset(query: str = "loopearplugs.com") -> Dict[str, Any
 
 def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
     clean_q = re.sub(r'[^a-z0-9]', '', query.lower())
-    if "loopearplug" in clean_q or "loop" == clean_q or "loopearplugscom" in clean_q:
+    if clean_q in ["loopearplugs", "loopearplug", "loopearplugscom", "loopearplugsofficial"]:
         return generate_loop_meta_dataset(query)
     encoded_q = urllib.parse.quote(query)
     ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={encoded_q}&search_type=keyword_unordered&media_type=all"
@@ -771,8 +771,15 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
 
     parsed_ads = []
     seen_ids = set()
-    first_page_name = "Dr. Squatch" if "squatch" in clean_q_slug else query.replace(".com", "").strip().title()
-    first_landing_domain = "www.drsquatch.com" if "squatch" in clean_q_slug else (clean_q_slug + ".com" if clean_q_slug else "brand.com")
+
+    # Dynamic extraction of clean domain and fallback page name
+    extracted_domain = query.strip().lower().replace("https://", "").replace("http://", "").split("/")[0].split("?")[0]
+    if not "." in extracted_domain:
+        extracted_domain = f"{clean_q_slug}.com" if clean_q_slug else "brand.com"
+
+    clean_brand_title = re.sub(r'\.(com|co|io|org|net|vn|us|uk|de|fr|ca|au)$', '', extracted_domain).replace("-", " ").replace("_", " ").title()
+    first_page_name = "Dr. Squatch" if "squatch" in clean_q_slug else clean_brand_title
+    first_landing_domain = "www.drsquatch.com" if "squatch" in clean_q_slug else extracted_domain
 
     # Intelligent brand name selection: pick the pageName that best matches the query
     from collections import Counter
@@ -797,17 +804,17 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
 
     if candidate_names:
         first_page_name = Counter(candidate_names).most_common(1)[0][0]
+    elif "squatch" in clean_q_slug:
+        first_page_name = "Dr. Squatch"
     else:
-        # Do NOT hijack brand identity to an unrelated advertiser! Keep the user's queried brand!
-        if "squatch" in clean_q_slug:
-            first_page_name = "Dr. Squatch"
-        else:
-            first_page_name = query.replace(".com", "").strip().title()
+        first_page_name = clean_brand_title
         
     if candidate_domains:
         first_landing_domain = Counter(candidate_domains).most_common(1)[0][0]
-    elif "." in query:
-        first_landing_domain = "www.drsquatch.com" if "squatch" in clean_q_slug else query.strip().lower().replace("https://", "").replace("http://", "").split("/")[0]
+    elif "squatch" in clean_q_slug:
+        first_landing_domain = "www.drsquatch.com"
+    else:
+        first_landing_domain = extracted_domain
 
     for idx, c in enumerate(raw_dom_cards[:max_ads]):
         ad_id = c.get("id") or str(idx + 1)

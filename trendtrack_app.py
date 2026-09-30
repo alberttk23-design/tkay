@@ -2953,8 +2953,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <div class="flex items-center gap-3">
                     <img id="ttModalAvatar" src="" class="w-10 h-10 rounded-full object-cover border border-slate-200" alt="Author"/>
                     <div>
-                      <h3 id="ttModalAuthor" class="text-sm font-extrabold text-slate-900">The Oodie</h3>
-                      <div class="text-[11px] font-semibold text-slate-500" id="ttModalHandle">@the_oodie</div>
+                      <h3 id="ttModalAuthor" class="text-sm font-extrabold text-slate-900">Brand</h3>
+                      <div class="text-[11px] font-semibold text-slate-500" id="ttModalHandle">@channel</div>
                     </div>
                   </div>
                   <button onclick="closeTikTokModal()" class="w-8 h-8 rounded-full border border-slate-200 bg-white hover:bg-slate-100 flex items-center justify-center text-slate-500 cursor-pointer transition">
@@ -3426,7 +3426,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <div>
                 <span class="text-slate-400 block text-[10px] uppercase font-bold">Landing Page</span>
                 <a id="detailLandingUrl" href="#" target="_blank" class="text-blue-600 hover:underline truncate block font-medium mt-0.5">
-                  theoodie.co.uk/collections/...
+                  https://...
                 </a>
               </div>
               <div>
@@ -3757,6 +3757,18 @@ HTML_DASHBOARD = """<!DOCTYPE html>
              (currentTikTokData && currentTikTokData.brand) ||
              (document.getElementById('brandInput')?.value.trim()) || 
              '';
+    }
+
+    function getActiveBrandDomain() {
+      if (currentData && currentData.domain) return currentData.domain.toLowerCase().trim();
+      if (currentGoogleData && currentGoogleData.domain) return currentGoogleData.domain.toLowerCase().trim();
+      if (window.currentActiveDomain) return window.currentActiveDomain.toLowerCase().trim();
+      const raw = (currentData && (currentData.name || currentData.query)) ||
+                  (document.getElementById('brandInput')?.value.trim()) || '';
+      if (!raw) return 'brand.com';
+      let dom = raw.toLowerCase().replace(/^https?:\\/\\//, '').replace(/^www\\./, '').split('/')[0].trim();
+      if (!dom.includes('.')) dom += '.com';
+      return dom;
     }
 
     // Switch between Sub-Sidebar items (Overview, Google, Meta, TikTok, Contents, Emails, etc.)
@@ -4098,19 +4110,18 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     function getBrandCardAvatarHtml(bName, aUrl) {
       const clean = (bName || '').toLowerCase().trim();
-      if (clean.includes('squatch')) {
+      const domain = getActiveBrandDomain();
+      if (clean.includes('squatch') || domain.includes('drsquatch')) {
         return `<div class="w-6 h-6 rounded-full overflow-hidden shrink-0 border border-slate-200/80 select-none shadow-2xs"><img src="/static/avatars/drsquatch.png" class="w-full h-full object-cover" alt="Dr. Squatch"/></div>`;
       }
-      if (clean.includes('loop')) {
-        return `<div class="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">loop</div>`;
-      }
-      if (clean.includes('oodie')) {
-        return `<div class="w-6 h-6 rounded-full bg-[#0284c7] flex items-center justify-center text-white text-[8.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">oodie</div>`;
-      }
       if (aUrl && !aUrl.includes('ui-avatars')) {
-        return `<div class="w-6 h-6 rounded-full bg-slate-100 shrink-0 overflow-hidden border border-slate-200"><img src="${aUrl}" class="w-full h-full object-cover" alt="avatar"/></div>`;
+        return `<div class="w-6 h-6 rounded-full bg-slate-100 shrink-0 overflow-hidden border border-slate-200"><img src="${aUrl}" class="w-full h-full object-cover" alt="avatar" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=${domain}&sz=64';"/></div>`;
       }
-      const initials = (bName || 'AD').replace(/[^a-zA-Z0-9]/g, ' ').trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase() || 'AD';
+      if (domain && domain !== 'brand.com') {
+        const initials = (bName || 'AD').replace(/[^a-zA-Z0-9]/g, ' ').trim().split(/\\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase() || 'AD';
+        return `<div class="w-6 h-6 rounded-full bg-white shrink-0 overflow-hidden border border-slate-200 p-0.5 flex items-center justify-center shadow-2xs"><img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64" class="w-full h-full object-contain" alt="logo" onerror="this.parentElement.innerHTML='<div class=\\'w-full h-full rounded-full bg-slate-900 text-white font-black text-[9px] flex items-center justify-center\\'>${initials}</div>';"/></div>`;
+      }
+      const initials = (bName || 'AD').replace(/[^a-zA-Z0-9]/g, ' ').trim().split(/\\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase() || 'AD';
       return `<div class="w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-white text-[9.5px] font-black shrink-0 overflow-hidden tracking-tight select-none">${initials}</div>`;
     }
 
@@ -4633,19 +4644,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       // 3. Top Landing Pages Card
       const lpListEl = document.getElementById('metaInsightsLandingPagesList');
       if (lpListEl) {
+        const activeDom = getActiveBrandDomain();
         const lpCounts = {};
         rawAds.forEach(a => {
-          const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+          const url = a.landing_url || a.landingUrl || `https://${activeDom}/products`;
           lpCounts[url] = (lpCounts[url] || 0) + 1;
         });
 
         const sortedLps = Object.entries(lpCounts).sort((a, b) => b[1] - a[1]);
         if (sortedLps.length === 0) {
-          const dom = (currentData && currentData.domain) || 'theoodie.com';
-          sortedLps.push([`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.42)]);
-          sortedLps.push([`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.28)]);
-          sortedLps.push([`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.18)]);
-          sortedLps.push([`https://${dom}/`, Math.round(totalAds * 0.12)]);
+          sortedLps.push([`https://${activeDom}/collections/all`, Math.round(totalAds * 0.42)]);
+          sortedLps.push([`https://${activeDom}/collections/best-sellers`, Math.round(totalAds * 0.28)]);
+          sortedLps.push([`https://${activeDom}/collections/new-arrivals`, Math.round(totalAds * 0.18)]);
+          sortedLps.push([`https://${activeDom}/`, Math.round(totalAds * 0.12)]);
         }
 
         lpListEl.innerHTML = sortedLps.slice(0, 4).map(([url, count]) => {
@@ -4847,7 +4858,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
           <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
             <span class="font-semibold text-slate-600">📑 ${card.copies_count || card.duplicates || 1} copies</span>
-            <a href="https://${card.cta_domain || (currentData?.domain || 'theoodie.com')}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">Shop Now →</a>
+            <a href="https://${card.cta_domain || getActiveBrandDomain()}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">Shop Now →</a>
           </div>
         </div>
       `).join('');
@@ -5010,20 +5021,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const totalAds = rawAds.length || 556;
       const lpMap = {};
 
+      const activeDom = getActiveBrandDomain();
       rawAds.forEach(a => {
-        const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+        const url = a.landing_url || a.landingUrl || `https://${activeDom}/products`;
         lpMap[url] = (lpMap[url] || 0) + 1;
       });
 
       let lpList = Object.entries(lpMap).sort((a, b) => b[1] - a[1]);
       if (lpList.length === 0) {
-        const dom = (currentData && currentData.domain) || 'theoodie.com';
         lpList = [
-          [`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.45)],
-          [`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.25)],
-          [`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.15)],
-          [`https://${dom}/collections/bundles`, Math.round(totalAds * 0.10)],
-          [`https://${dom}/`, Math.round(totalAds * 0.05)]
+          [`https://${activeDom}/collections/all`, Math.round(totalAds * 0.45)],
+          [`https://${activeDom}/collections/best-sellers`, Math.round(totalAds * 0.25)],
+          [`https://${activeDom}/collections/new-arrivals`, Math.round(totalAds * 0.15)],
+          [`https://${activeDom}/collections/bundles`, Math.round(totalAds * 0.10)],
+          [`https://${activeDom}/`, Math.round(totalAds * 0.05)]
         ];
       }
 
@@ -5462,8 +5473,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <!-- Bottom CTA Bar -->
               <div class="p-2.5 bg-white border-t border-slate-100 flex items-center justify-between gap-2">
                 <div class="min-w-0">
-                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider truncate">${card.cta_domain || 'theoodie.com'}</div>
-                  <div class="text-[11px] font-bold text-slate-800 truncate">${card.cta_title || 'Shop The Oodie'}</div>
+                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider truncate">${card.cta_domain || getActiveBrandDomain()}</div>
+                  <div class="text-[11px] font-bold text-slate-800 truncate">${card.cta_title || ('Shop ' + getActiveBrandName())}</div>
                 </div>
                 <button type="button" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[10px] font-bold shrink-0 transition">
                   ${card.cta_text || 'Shop Now'}
@@ -6214,9 +6225,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const comments = document.getElementById('ttModalComments');
       const shares = document.getElementById('ttModalShares');
 
-      if (author) author.textContent = v.author_name || (currentTikTokData ? currentTikTokData.brand : 'The Oodie');
-      if (handle) handle.textContent = v.handle || '@the_oodie';
-      if (avatar) avatar.src = (currentTikTokData && currentTikTokData.avatar_url) || 'https://ui-avatars.com/api/?name=The+Oodie';
+      const activeBrand = (currentTikTokData ? currentTikTokData.brand : getActiveBrandName()) || 'Brand';
+      const cleanSlug = activeBrand.toLowerCase().replace(/[^a-z0-9]/g, '_');
+      if (author) author.textContent = v.author_name || activeBrand;
+      if (handle) handle.textContent = v.handle || ('@' + cleanSlug);
+      if (avatar) avatar.src = (currentTikTokData && currentTikTokData.avatar_url) || getEmailBrandAvatar(activeBrand);
       if (typeBadge) {
         typeBadge.textContent = v.is_spark_ad ? 'Spark Ad' : v.type;
         typeBadge.className = v.is_spark_ad ? 'px-2.5 py-0.5 rounded-full font-bold bg-pink-100 text-pink-700' : 'px-2.5 py-0.5 rounded-full font-bold bg-cyan-100 text-cyan-700';
@@ -6224,7 +6237,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (dateBadge) dateBadge.textContent = v.published_date;
       if (dur) dur.textContent = v.duration;
       if (caption) caption.textContent = v.caption;
-      if (sound) sound.textContent = v.sound || 'original sound - The Oodie';
+      if (sound) sound.textContent = v.sound || `original sound - ${activeBrand}`;
       if (views) views.textContent = v.views_fmt;
       if (likes) likes.textContent = v.likes_fmt;
       if (comments) comments.textContent = v.comments_fmt;
@@ -6372,13 +6385,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (bName && (bName.toLowerCase().includes('squatch') || bName.toLowerCase().includes('drsquatch'))) {
         return "/static/avatars/drsquatch.png";
       }
-      if (bName && bName.toLowerCase().includes('oodie')) {
-        return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='4'/><text x='50' y='58' font-family='sans-serif' font-size='26' font-weight='900' fill='%230f172a' text-anchor='middle' letter-spacing='-1'>oodie</text></svg>";
-      }
-      if (bName && bName.toLowerCase().includes('loop')) {
-        return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23000000'/><text x='50' y='58' font-family='sans-serif' font-size='24' font-weight='900' fill='%23ffffff' text-anchor='middle'>loop</text></svg>";
-      }
       if (currentData && currentData.avatarUrl && !currentData.avatarUrl.includes('ui-avatars')) return currentData.avatarUrl;
+      const domain = getActiveBrandDomain();
+      if (domain && domain !== 'brand.com') {
+        return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+      }
       return `https://ui-avatars.com/api/?name=${encodeURIComponent(bName || 'Brand')}&background=0f172a&color=fff`;
     }
 
@@ -8327,9 +8338,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!grid) return;
       grid.innerHTML = '';
 
-      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (currentGoogleData && currentGoogleData.domain) || (currentData && currentData.domain) || 'theoodie.com';
-      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
+      const brandName = (currentGoogleData && currentGoogleData.brand) || getActiveBrandName();
+      const domain = (currentGoogleData && currentGoogleData.domain) || getActiveBrandDomain();
+      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : getEmailBrandAvatar(brandName);
 
       let cards = customCards || (currentGoogleData && currentGoogleData.ad_cards) || [];
 
@@ -8491,9 +8502,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!grid) return;
       grid.innerHTML = '';
 
-      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (currentGoogleData && currentGoogleData.domain) || (currentData && currentData.domain) || 'theoodie.com';
-      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
+      const brandName = (currentGoogleData && currentGoogleData.brand) || getActiveBrandName();
+      const domain = (currentGoogleData && currentGoogleData.domain) || getActiveBrandDomain();
+      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : getEmailBrandAvatar(brandName);
 
       let cards = customCards || (currentGoogleData && currentGoogleData.ranking_cards) || (currentGoogleData && currentGoogleData.ad_cards) || [];
 
@@ -8690,9 +8701,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!grid) return;
       grid.innerHTML = '';
 
-      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (currentData && currentData.domain) || 'theoodie.com';
-      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
+      const brandName = (currentGoogleData && currentGoogleData.brand) || getActiveBrandName();
+      const domain = (currentGoogleData && currentGoogleData.domain) || getActiveBrandDomain();
+      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : getEmailBrandAvatar(brandName);
 
       // Filter from authentic Google cards first
       let cards = [];
@@ -10144,8 +10155,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (!carousel) return;
       carousel.innerHTML = '';
 
-      const isOodie = currentData?.name?.toLowerCase().includes('oodie') || currentData?.domain?.toLowerCase().includes('oodie');
-      const list = (prods && prods.length > 0) ? prods : (isOodie ? defaultBenchmarkProducts : []);
+      const isStrictOodie = (currentData?.domain === 'theoodie.com') || (currentData?.name?.toLowerCase() === 'the oodie');
+      const list = (prods && prods.length > 0) ? prods : (isStrictOodie ? defaultBenchmarkProducts : []);
       
       if (countEl) {
         countEl.textContent = `${list.length} in the catalog`;
@@ -10837,6 +10848,50 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 </html>
 """
 
+def sanitize_brand_dataset(data: dict, query: str) -> dict:
+    """
+    Zero-Hardcode Sanitization Guard:
+    Scans brand dataset before saving to cache disk.
+    Ensures that ads, domains, and URLs belong exclusively to the queried brand,
+    preventing cross-brand data contamination (e.g. from Oodie, Loop, etc.).
+    """
+    if not isinstance(data, dict):
+        return data
+
+    clean_dom = query.strip().lower().replace("https://", "").replace("http://", "").split("/")[0].split("?")[0]
+    if not "." in clean_dom:
+        clean_slug = re.sub(r'[^a-z0-9]', '', clean_dom)
+        clean_dom = f"{clean_slug}.com" if clean_slug else "brand.com"
+
+    SHOWCASE_DOMAINS = ["theoodie.com", "loopearplugs.com"]
+    target_is_showcase = any(sd in clean_dom.lower() for sd in SHOWCASE_DOMAINS)
+    current_dom = (data.get("domain") or "").lower().strip()
+
+    # Set authoritative brand domain if missing, generic, or leaked from showcase
+    if not current_dom or current_dom == "brand.com" or (not target_is_showcase and any(sd in current_dom for sd in SHOWCASE_DOMAINS)):
+        data["domain"] = clean_dom
+
+    active_dom = data.get("domain", clean_dom)
+    is_showcase = any(sd in active_dom.lower() for sd in SHOWCASE_DOMAINS)
+
+    if not is_showcase and "ads" in data and isinstance(data["ads"], list):
+        for ad in data["ads"]:
+            if not isinstance(ad, dict):
+                continue
+            # Correct domain / ctaDomain
+            for d_key in ["domain", "ctaDomain"]:
+                v = str(ad.get(d_key, ""))
+                if any(sd in v.lower() for sd in SHOWCASE_DOMAINS):
+                    ad[d_key] = active_dom.upper() if d_key == "ctaDomain" else active_dom
+
+            # Correct landing URLs
+            for url_key in ["landingUrl", "landing_url"]:
+                v = str(ad.get(url_key, ""))
+                if any(sd in v.lower() for sd in SHOWCASE_DOMAINS) or "hooded-blankets" in v:
+                    ad[url_key] = f"https://{active_dom}/products"
+
+    return data
+
 class TrendTrackHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         sys.stderr.write(f"[{self.log_date_time_string()}] {format%args}\n")
@@ -11154,6 +11209,7 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             print(f"🔍 [LIVE SCAN / REFRESH] Quét Meta Ad Library cho: query='{query}' (force_refresh={force_refresh})...")
             try:
                 data = scan_brand_ads(query, max_ads=30)
+                data = sanitize_brand_dataset(data, query)
                 with open(cache_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
 

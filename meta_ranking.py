@@ -844,7 +844,7 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
             pass
 
     lower = brand_name.lower().strip()
-    if "oodie" in lower:
+    if lower in ["the oodie", "theoodie", "theoodie.com", "oodie"]:
         data = generate_ranking_dataset_for_oodie()
     else:
         # Check if real scanned brand ads exist
@@ -857,16 +857,24 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
             "crzyoga": "crzyoga.json",
             "momcozy": "momcozy.json",
             "ridge": "ridge.json",
-            "gymshark": "gymshark.json"
+            "gymshark": "gymshark.json",
+            "dr squatch": "drsquatch.json",
+            "drsquatch": "drsquatch.json",
+            "drsquatch.com": "drsquatch.json"
         }
+        clean_slug = re.sub(r'[^a-z0-9]', '', lower)
+        clean_under = re.sub(r'[^a-z0-9]+', '_', lower).strip('_')
         candidates = []
         if lower in alias_map:
             candidates.append(os.path.join(CACHE_DIR, alias_map[lower]))
         candidates.extend([
             os.path.join(CACHE_DIR, f"{slug}.json"),
-            os.path.join(CACHE_DIR, f"{lower.replace(' ', '')}.json"),
-            os.path.join(CACHE_DIR, f"{lower.replace(' ', '_')}.json")
+            os.path.join(CACHE_DIR, f"{clean_slug}.json"),
+            os.path.join(CACHE_DIR, f"{clean_under}.json"),
+            os.path.join(CACHE_DIR, f"{lower}.json")
         ])
+        bare_slug = re.sub(r'_(com|co|io|org|net)$', '', clean_under)
+        candidates.append(os.path.join(CACHE_DIR, f"{bare_slug}.json"))
         data = None
         for real_ads_file in candidates:
             if os.path.exists(real_ads_file):
