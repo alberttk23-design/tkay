@@ -10,6 +10,7 @@ import os
 import sys
 import re
 import json
+import time
 import urllib.parse
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
@@ -311,6 +312,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                   <svg class="w-3 h-3 text-slate-400 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                   <span>Làm mới dữ liệu</span>
                 </button>
+                <span id="dataStatusBadge"></span>
               </div>
             </div>
           </div>
@@ -6762,6 +6764,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       document.getElementById('shopAge').textContent = data.advertiserAge || 'Verified Store';
       document.getElementById('shopFollowers').textContent = (data.total_active_ads || data.ads?.length || 0) + ' active ads on Meta';
       
+      // Data freshness badge
+      const statusBadge = document.getElementById('dataStatusBadge');
+      if (statusBadge) {
+        const cacheAge = data._cache_age_seconds || 0;
+        const dataSource = data.data_source || data.data_status || 'unknown';
+        if (dataSource === 'no_data' || dataSource === 'empty') {
+          statusBadge.innerHTML = '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">🔴 No Data Found</span>';
+        } else if (cacheAge > 0) {
+          const ageStr = cacheAge < 3600 ? `${Math.round(cacheAge/60)}m ago` : `${Math.round(cacheAge/3600)}h ago`;
+          statusBadge.innerHTML = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold">🟡 Cached ${ageStr}</span>`;
+        } else {
+          statusBadge.innerHTML = '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold">🟢 Live Data</span>';
+        }
+      }
       // Channel counts
       const metaCount = data.channels?.meta?.active ?? data.total_active_ads ?? (data.ads ? data.ads.length : 0);
       const tiktokCount = data.channels?.tiktok?.active ?? (data.tiktok?.totalTikToks || '-');
@@ -8401,17 +8417,25 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 else:
                     cache_file = c2
 
-            # Check cache first if not force_refresh
+            # Check cache first if not force_refresh (with 2-hour TTL)
+            SCAN_CACHE_TTL = 2 * 3600  # 2 hours TTL for Meta scan cache
             if not force_refresh and os.path.exists(cache_file):
-                print(f"⚡ [CACHE HIT] Tải ngay dữ liệu từ: {cache_file}")
-                with open(cache_file, "r", encoding="utf-8") as f:
-                    cached_data = f.read()
-                self.send_response(200)
-                self.send_header("Content-Type", "application/json; charset=utf-8")
-                self.send_header("Access-Control-Allow-Origin", "*")
-                self.end_headers()
-                self.wfile.write(cached_data.encode("utf-8"))
-                return
+                file_age = time.time() - os.path.getmtime(cache_file)
+                if file_age < SCAN_CACHE_TTL:
+                    print(f"⚡ [CACHE HIT] Tải dữ liệu từ: {cache_file} (age: {int(file_age/60)}m)")
+                    with open(cache_file, "r", encoding="utf-8") as f:
+                        cached_data = json.loads(f.read())
+                    cached_data["_cache_age_seconds"] = int(file_age)
+                    cached_data["_cache_status"] = "fresh"
+                    self.send_response(200)
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                    self.send_header("Access-Control-Allow-Origin", "*")
+                    self.send_header("X-Data-Age", str(int(file_age)))
+                    self.end_headers()
+                    self.wfile.write(json.dumps(cached_data, ensure_ascii=False).encode("utf-8"))
+                    return
+                else:
+                    print(f"⏰ [CACHE STALE] {cache_file} is {int(file_age/3600)}h old, re-scanning...")
 
             print(f"🔍 [LIVE SCAN / REFRESH] Quét Meta Ad Library cho: query='{query}' (force_refresh={force_refresh})...")
             try:

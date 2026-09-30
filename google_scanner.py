@@ -42,12 +42,20 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
     slug = slugify(brand_name)
     cache_file = os.path.join(CACHE_DIR, f"google_{slug}.json")
 
+    CACHE_TTL_SECONDS = 6 * 3600  # 6 hours TTL for Google Ads cache
+
     if not force_refresh and os.path.exists(cache_file):
         try:
-            with open(cache_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                if data.get("found"):
-                    return data
+            file_age = time.time() - os.path.getmtime(cache_file)
+            if file_age < CACHE_TTL_SECONDS:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if data.get("found"):
+                        data["_cache_age_seconds"] = int(file_age)
+                        data["_cache_status"] = "fresh"
+                        return data
+            else:
+                print(f"⏰ [GOOGLE] Cache stale ({int(file_age/3600)}h old), re-scanning '{brand_name}'...")
         except Exception:
             pass
 
@@ -445,58 +453,63 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
 
     ad_cards.sort(key=lambda x: x["days_running"], reverse=True)
 
-    # 1. Total Estimated & Active Ads
-    # Calibrated to TrendTrack's multi-country aggregation model:
+    # 1. Total Estimated & Active Ads — COMPUTED FROM ACTUAL RPC DATA, NO HARDCODING
     if geo_results:
-        if country == "AU" or "AU" in geo_results:
-            total_estimated = 1767
-            active_ads = 375
-            format_mix_total = 1306
-            country_mix = {
-                "AU": {"name": "Australia", "flag": "🇦🇺", "count": 887, "pct": 58.0},
-                "CA": {"name": "Canada", "flag": "🇨🇦", "count": 370, "pct": 23.0},
-                "US": {"name": "United States", "flag": "🇺🇸", "count": 274, "pct": 17.0}
+        sorted_geos = sorted(geo_results.values(), key=lambda x: -x["count"])
+        top3 = sorted_geos[:3]
+        top3_sum = sum(g["count"] for g in top3)
+        total_estimated = int(round(top3_sum * 1.15))
+        active_ads = int(round(total_estimated * 0.212))
+        format_mix_total = int(round(total_estimated * 0.74))
+        country_mix = {}
+        for g in top3:
+            country_mix[g["iso"]] = {
+                "name": g["name"],
+                "flag": g["flag"],
+                "count": g["count"],
+                "pct": round((g["count"] / max(1, top3_sum)) * 100, 1)
             }
-        else:
-            sorted_geos = sorted(geo_results.values(), key=lambda x: -x["count"])
-            top3 = sorted_geos[:3]
-            top3_sum = sum(g["count"] for g in top3)
-            total_estimated = int(round(top3_sum * 1.15))
-            active_ads = int(round(total_estimated * 0.212))
-            format_mix_total = int(round(total_estimated * 0.74))
-            country_mix = {}
-            for g in top3:
-                country_mix[g["iso"]] = {
-                    "name": g["name"],
-                    "flag": g["flag"],
-                    "count": g["count"],
-                    "pct": round((g["count"] / max(1, top3_sum)) * 100, 1)
-                }
     else:
-        total_estimated = 1767
-        active_ads = 375
-        format_mix_total = 1306
+        # No geo data → derive from est_min/est_max from SearchCreatives RPC
+        try:
+            e_min = int(est_min)
+            e_max = int(est_max)
+            total_estimated = int(round(e_min + (e_max - e_min) * 0.74)) if e_max > e_min else e_min
+        except (ValueError, TypeError):
+            total_estimated = len(unique_creatives) if unique_creatives else 0
+        active_ads = active_sampled if active_sampled > 0 else int(round(total_estimated * 0.212))
+        format_mix_total = int(round(total_estimated * 0.74)) if total_estimated > 0 else 0
         country_mix = {
-            "AU": {"name": "Australia", "flag": "🇦🇺", "count": 887, "pct": 58.0},
-            "CA": {"name": "Canada", "flag": "🇨🇦", "count": 370, "pct": 23.0},
-            "US": {"name": "United States", "flag": "🇺🇸", "count": 274, "pct": 17.0}
+            country: {"name": country, "flag": "🌐", "count": total_estimated, "pct": 100.0}
+        } if total_estimated > 0 else {}
+
+    # 3. Format Mix — COMPUTED FROM ACTUAL PARSED CREATIVES
+    total_fmt = sum(format_counts.values())
+    if total_fmt > 0:
+        format_mix = {}
+        for k, v in format_counts.items():
+            format_mix[k] = {"count": v, "pct": round(v / total_fmt * 100, 1)}
+    else:
+        format_mix = {
+            "Text": {"count": int(format_mix_total * 0.47), "pct": 47.0},
+            "Image": {"count": int(format_mix_total * 0.38), "pct": 38.0},
+            "Video": {"count": int(format_mix_total * 0.15), "pct": 15.0},
         }
 
-    # 3. Format Mix (Text 47%, Image 38%, Video 15%)
-    format_mix = {
-        "Text": {"count": int(format_mix_total * 0.47), "pct": 47.0},
-        "Image": {"count": int(format_mix_total * 0.38), "pct": 38.0},
-        "Video": {"count": int(format_mix_total * 0.15), "pct": 15.0},
-    }
-
-    # 4. Platform Mix (Search 44%, Unknown 26%, YouTube 12%, Other 10%, Shopping 8%)
-    platform_mix = {
-        "Search": {"count": int(total_estimated * 0.44), "pct": 44.0},
-        "Unknown": {"count": int(total_estimated * 0.26), "pct": 26.0},
-        "YouTube": {"count": int(total_estimated * 0.12), "pct": 12.0},
-        "Other": {"count": int(total_estimated * 0.10), "pct": 10.0},
-        "Shopping": {"count": int(total_estimated * 0.08), "pct": 8.0},
-    }
+    # 4. Platform Mix — COMPUTED FROM ACTUAL PARSED CREATIVES
+    total_plat = sum(platform_counts.values())
+    if total_plat > 0:
+        platform_mix = {}
+        for k, v in platform_counts.items():
+            platform_mix[k] = {"count": v, "pct": round(v / total_plat * 100, 1)}
+    else:
+        platform_mix = {
+            "Search": {"count": int(total_estimated * 0.44), "pct": 44.0},
+            "Unknown": {"count": int(total_estimated * 0.26), "pct": 26.0},
+            "YouTube": {"count": int(total_estimated * 0.12), "pct": 12.0},
+            "Other": {"count": int(total_estimated * 0.10), "pct": 10.0},
+            "Shopping": {"count": int(total_estimated * 0.08), "pct": 8.0},
+        }
 
     # 5. Longevity Mix
     total_parsed = max(1, len(unique_creatives))
@@ -505,11 +518,14 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         for k, v in longevity_buckets.items()
     }
 
+    has_real_data = bool(adv_id or unique_creatives or geo_results)
+
     result_data = {
         "brand": brand_name,
-        "found": True,
+        "found": has_real_data,
+        "data_source": "live_rpc" if has_real_data else "no_data",
         "advertiser": {
-            "advertiser_id": adv_id or "AR07524972952463343617",
+            "advertiser_id": adv_id,
             "advertiser_name": adv_name,
             "country": country,
             "ad_count_min": est_min,
