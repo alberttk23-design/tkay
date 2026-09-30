@@ -5657,11 +5657,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const domain = (currentData && currentData.domain) || 'theoodie.com';
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
 
-      // Authentic Google Ads Cards matching media_1790690821250.png
+      // Use authentic Google Ad cards if provided
       let sampleCards = [];
-      if (cards && cards.length >= 6 && !isOodie) {
+      if (cards && cards.length > 0) {
         sampleCards = cards;
-      } else {
+      } else if (isOodie) {
         sampleCards = [
           {
             rank: 1,
@@ -6138,7 +6138,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               </div>
               <div class="text-left">
                 <div class="text-xs font-bold text-slate-900 leading-tight truncate max-w-[120px]">${brandName}</div>
-                <div class="text-[10px] text-slate-400 font-medium">Google • 375 / 1,767 • ${flag}</div>
+                <div class="text-[10px] text-slate-400 font-medium">Google • ${(currentGoogleData?.active_ads || 0).toLocaleString()} / ${(currentGoogleData?.total_estimated || 0).toLocaleString()} • ${flag}</div>
               </div>
             </div>
             <div class="flex items-center gap-1 text-slate-400">
@@ -6219,38 +6219,47 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const domain = (currentData && currentData.domain) || 'theoodie.com';
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
 
-      // Filter or generate 6 realistic cards matching Image 2
+      // Filter from authentic Google cards first
       let cards = [];
       const catLower = (category || 'text').toLowerCase();
+      const pool = (currentGoogleCards && currentGoogleCards.length > 0) ? currentGoogleCards : (currentGoogleData?.ad_cards || []);
 
-      if (catLower === 'text' || catLower === 'search') {
-        cards = [
-          { headline: `${brandName} Official Site - Oversized Wearable Blankets`, snippet: `Explore ${brandName} Originals, sleep tees, robes and blankets designed for everyday comfort. Discover The Oodie today!`, days: 12, active: true, flag: '🇺🇸', reach: 'Global ads', platform: 'Search', format: 'Text' },
-          { headline: `${brandName}™ - Official Site - Buy Now Pay Later`, snippet: `Restocked favourites plus fresh colours in matching sets designed for everyday wear. Soft ToastyTek™ outer with warm sherpa fleece lining.`, days: 14, active: true, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Text' },
-          { headline: `New Cooling PJs Have Arrived - Made For Hot Sleepers`, snippet: `Shop Cooling PJs in personality-filled prints including Cheetah, Cherry and Wildwest. Own your comfort and secure a cool night sleep.`, days: 21, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' },
-          { headline: `${brandName} - On Sale Now - Oodie Originals & Robes`, snippet: `Beat The Chill With ${brandName}™. The Softest, Comfiest Wearable Blanket. Shop Today & Save With Free Express Worldwide Delivery.`, days: 13, active: false, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Text' },
-          { headline: `${brandName}™ - Sleep Tees - One Size Fits Most`, snippet: `Enjoy A Cool Night Sleep In A Sleep Tee, breathable bamboo & elastane fabric. Shop Now, Our Sleep Tee Is Soft 'N' Stretchy And On-Go Deliciously Comfy.`, days: 28, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' },
-          { headline: `Shop Now - Extra Large For Extra Snuggles`, snippet: `The Oodie™ Weighted Blanket Feels Like A Big Warm Hug - Take Your Sleep To The Next Level! Wake Up Feeling Truly Rested, After A Night...`, days: 28, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' }
-        ];
-      } else if (catLower === 'image' || catLower === 'other' || catLower === 'shopping') {
-        cards = [
-          { headline: `${brandName} Retriever Original - 30% Off`, days: 25, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/4421747471758750853' },
-          { headline: `8+ Million Oodies Sold Worldwide`, days: 45, active: true, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/16554349975288460105' },
-          { headline: `${brandName} Sherpa Fleece Wearable Blankets`, days: 60, active: true, flag: '🇺🇸', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/12643408508466811704' },
-          { headline: `Cooling PJs & Sleepwear Collection`, days: 18, active: false, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/13804526251487094179' },
-          { headline: `Kids Oodie - Pokémon & Disney Edition`, days: 32, active: true, flag: '🇬🇧', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/16697374268417026102' },
-          { headline: `Buy 1 Get 1 50% Off - Official Store`, days: 15, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/4421747471758750853' }
-        ];
-      } else {
-        // Video / YouTube
-        cards = [
-          { headline: `${brandName} Official Wearable Blanket Showcase`, days: 90, active: true, flag: '🇦🇺', reach: '350K-400K', platform: 'YouTube', format: 'Video' },
-          { headline: `Behind The Scenes: How We Make The Softest ToastyTek™`, days: 45, active: true, flag: '🇺🇸', reach: '125K-150K', platform: 'YouTube', format: 'Video' },
-          { headline: `Winter Essential: Try The Viral Wearable Blanket`, days: 22, active: true, flag: '🇬🇧', reach: '50K-100K', platform: 'YouTube', format: 'Video' },
-          { headline: `Cooling PJs Drop: Summer Sleep Revolution`, days: 14, active: false, flag: '🇨🇦', reach: 'Global ads', platform: 'YouTube', format: 'Video' },
-          { headline: `The Oodie vs Cold Morning: Ultimate Test`, days: 30, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'YouTube', format: 'Video' },
-          { headline: `Exclusive Bundle Discount - Limited Stock`, days: 10, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'YouTube', format: 'Video' }
-        ];
+      if (pool.length > 0 && !brandName.toLowerCase().includes('oodie')) {
+        cards = pool.filter(c => {
+          const f = (c.format || '').toLowerCase();
+          const p = (c.platform || '').toLowerCase();
+          return f.includes(catLower) || p.includes(catLower);
+        });
+        if (cards.length === 0) cards = pool.slice(0, 6);
+      } else if (brandName.toLowerCase().includes('oodie')) {
+        if (catLower === 'text' || catLower === 'search') {
+          cards = [
+            { headline: `${brandName} Official Site - Oversized Wearable Blankets`, snippet: `Explore ${brandName} Originals, sleep tees, robes and blankets designed for everyday comfort. Discover The Oodie today!`, days: 12, active: true, flag: '🇺🇸', reach: 'Global ads', platform: 'Search', format: 'Text' },
+            { headline: `${brandName}™ - Official Site - Buy Now Pay Later`, snippet: `Restocked favourites plus fresh colours in matching sets designed for everyday wear. Soft ToastyTek™ outer with warm sherpa fleece lining.`, days: 14, active: true, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Text' },
+            { headline: `New Cooling PJs Have Arrived - Made For Hot Sleepers`, snippet: `Shop Cooling PJs in personality-filled prints including Cheetah, Cherry and Wildwest. Own your comfort and secure a cool night sleep.`, days: 21, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' },
+            { headline: `${brandName} - On Sale Now - Oodie Originals & Robes`, snippet: `Beat The Chill With ${brandName}™. The Softest, Comfiest Wearable Blanket. Shop Today & Save With Free Express Worldwide Delivery.`, days: 13, active: false, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Text' },
+            { headline: `${brandName}™ - Sleep Tees - One Size Fits Most`, snippet: `Enjoy A Cool Night Sleep In A Sleep Tee, breathable bamboo & elastane fabric. Shop Now, Our Sleep Tee Is Soft 'N' Stretchy And On-Go Deliciously Comfy.`, days: 28, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' },
+            { headline: `Shop Now - Extra Large For Extra Snuggles`, snippet: `The Oodie™ Weighted Blanket Feels Like A Big Warm Hug - Take Your Sleep To The Next Level! Wake Up Feeling Truly Rested, After A Night...`, days: 28, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Search', format: 'Text' }
+          ];
+        } else if (catLower === 'image' || catLower === 'other' || catLower === 'shopping') {
+          cards = [
+            { headline: `${brandName} Retriever Original - 30% Off`, days: 25, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/4421747471758750853' },
+            { headline: `8+ Million Oodies Sold Worldwide`, days: 45, active: true, flag: '🇨🇦', reach: 'Global ads', platform: 'Search', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/16554349975288460105' },
+            { headline: `${brandName} Sherpa Fleece Wearable Blankets`, days: 60, active: true, flag: '🇺🇸', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/12643408508466811704' },
+            { headline: `Cooling PJs & Sleepwear Collection`, days: 18, active: false, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/13804526251487094179' },
+            { headline: `Kids Oodie - Pokémon & Disney Edition`, days: 32, active: true, flag: '🇬🇧', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/16697374268417026102' },
+            { headline: `Buy 1 Get 1 50% Off - Official Store`, days: 15, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'Other', format: 'Image', image_url: 'https://tpc.googlesyndication.com/archive/simgad/4421747471758750853' }
+          ];
+        } else {
+          cards = [
+            { headline: `${brandName} Official Wearable Blanket Showcase`, days: 90, active: true, flag: '🇦🇺', reach: '350K-400K', platform: 'YouTube', format: 'Video' },
+            { headline: `Behind The Scenes: How We Make The Softest ToastyTek™`, days: 45, active: true, flag: '🇺🇸', reach: '125K-150K', platform: 'YouTube', format: 'Video' },
+            { headline: `Winter Essential: Try The Viral Wearable Blanket`, days: 22, active: true, flag: '🇬🇧', reach: '50K-100K', platform: 'YouTube', format: 'Video' },
+            { headline: `Cooling PJs Drop: Summer Sleep Revolution`, days: 14, active: false, flag: '🇨🇦', reach: 'Global ads', platform: 'YouTube', format: 'Video' },
+            { headline: `The Oodie vs Cold Morning: Ultimate Test`, days: 30, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'YouTube', format: 'Video' },
+            { headline: `Exclusive Bundle Discount - Limited Stock`, days: 10, active: true, flag: '🇦🇺', reach: 'Global ads', platform: 'YouTube', format: 'Video' }
+          ];
+        }
       }
 
       currentDrilldownCards = cards;

@@ -157,6 +157,107 @@ def reconstruct_weekly_meta_trend(total_num: int, parsed_ads: List[Dict[str, Any
         "total_all_time_num": total_all_time
     }
 
+def _extract_ads_from_meta_response(data: Any, out_ads: List[Dict[str, Any]], out_total: Dict[str, Any]):
+    """Recursively parses Meta Ad Library async / GraphQL JSON responses to extract clean ad objects."""
+    if not isinstance(data, (dict, list)):
+        return
+
+    # Check for total count
+    if isinstance(data, dict):
+        total = data.get("totalCount") or data.get("total_count") or data.get("count")
+        if total and isinstance(total, (int, str)):
+            try:
+                cnt = int(str(total).replace(",", ""))
+                out_total["count"] = max(out_total.get("count", 0), cnt)
+                out_total["str"] = f"~{cnt:,} results"
+            except Exception:
+                pass
+
+        # Check for results list inside payload
+        payload = data.get("payload")
+        if isinstance(payload, dict):
+            _extract_ads_from_meta_response(payload, out_ads, out_total)
+            return
+
+        # Check if this dict itself looks like an ad item
+        if "adArchiveID" in data or "ad_archive_id" in data or "snapshot" in data:
+            ad_id = str(data.get("adArchiveID") or data.get("ad_archive_id") or "")
+            snapshot = data.get("snapshot") or {}
+            
+            body_text = ""
+            body = snapshot.get("body")
+            if isinstance(body, dict):
+                body_text = body.get("text", "")
+            elif isinstance(body, str):
+                body_text = body
+            elif data.get("body"):
+                body_text = str(data.get("body"))
+
+            page_name = snapshot.get("page_name") or data.get("page_name") or data.get("pageName") or "Advertiser"
+            start_date = snapshot.get("start_date") or data.get("startDate") or ""
+            if isinstance(start_date, (int, float)) and start_date > 1000000:
+                import datetime
+                start_date = datetime.datetime.fromtimestamp(start_date).strftime("%b %d, %Y")
+
+            cards = snapshot.get("cards") or []
+            media_type = "image"
+            media_url = ""
+            poster_url = ""
+            cta_text = "Shop Now"
+            landing_page = ""
+
+            if cards and isinstance(cards, list) and isinstance(cards[0], dict):
+                first_card = cards[0]
+                media_url = first_card.get("video_hd_url") or first_card.get("video_sd_url") or first_card.get("resized_image_url") or first_card.get("original_image_url") or ""
+                if first_card.get("video_hd_url") or first_card.get("video_sd_url"):
+                    media_type = "video"
+                    poster_url = first_card.get("video_preview_image_url") or ""
+                cta_text = first_card.get("cta_type") or first_card.get("cta_text") or cta_text
+                landing_page = first_card.get("link_url") or ""
+
+            if not media_url:
+                videos = snapshot.get("videos") or []
+                images = snapshot.get("images") or []
+                if videos and isinstance(videos, list) and isinstance(videos[0], dict):
+                    media_type = "video"
+                    media_url = videos[0].get("video_hd_url") or videos[0].get("video_sd_url") or ""
+                    poster_url = videos[0].get("video_preview_image_url") or ""
+                elif images and isinstance(images, list) and isinstance(images[0], dict):
+                    media_type = "image"
+                    media_url = images[0].get("resized_image_url") or images[0].get("original_image_url") or ""
+
+            if not landing_page:
+                landing_page = snapshot.get("link_url") or ""
+
+            if ad_id and (media_url or body_text):
+                # Avoid duplicate IDs
+                if not any(x.get("id") == ad_id for x in out_ads):
+                    out_ads.append({
+                        "id": ad_id,
+                        "pageName": page_name,
+                        "startDate": str(start_date),
+                        "description": body_text,
+                        "mediaType": media_type,
+                        "mediaUrl": media_url,
+                        "posterUrl": poster_url,
+                        "ctaText": cta_text,
+                        "landingPage": landing_page,
+                        "utmSource": "",
+                        "utmCampaign": "",
+                        "utmContent": ""
+                    })
+                return
+
+    # Traverse lists and dicts
+    if isinstance(data, list):
+        for item in data:
+            _extract_ads_from_meta_response(item, out_ads, out_total)
+    elif isinstance(data, dict):
+        for k, v in data.items():
+            if isinstance(v, (dict, list)):
+                _extract_ads_from_meta_response(v, out_ads, out_total)
+
+
 def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
     encoded_q = urllib.parse.quote(query)
     ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={encoded_q}&search_type=keyword_unordered&media_type=all"
@@ -174,16 +275,69 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
 
     try:
         with sync_playwright() as p:
-            launch_args = {"headless": True}
+            launch_args = {
+                "headless": True,
+                "args": [
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                ]
+            }
             if active_proxy:
                 launch_args["proxy"] = active_proxy.to_playwright_dict()
                 print(f"🛡️ [AD SCANNER] Routing via proxy: {active_proxy.host}:{active_proxy.port}")
 
             browser = p.chromium.launch(**launch_args)
-            page = browser.new_page(viewport={"width": 1280, "height": 800})
+            context = browser.new_context(
+                viewport={"width": 1280, "height": 900},
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                locale="en-US",
+                timezone_id="America/New_York",
+            )
+            page = context.new_page()
 
-            page.goto(ad_lib_url, timeout=10000)
-            page.wait_for_timeout(3000)
+            # ═══════════════════════════════════════════════════════════════
+            # NETWORK INTERCEPTION: Capture Meta's internal API responses
+            # instead of fragile DOM scraping
+            # ═══════════════════════════════════════════════════════════════
+            intercepted_ads = []
+            intercepted_total = {"count": 0, "str": "~30"}
+
+            def intercept_meta_response(response):
+                """Capture XHR/fetch JSON payloads from Meta Ad Library API"""
+                url = response.url
+                try:
+                    content_type = response.headers.get("content-type", "")
+                    if response.status != 200:
+                        return
+                    # Meta Ad Library sends ad data via these patterns:
+                    # 1. /ads/library/async/search_ads/ (main search endpoint)
+                    # 2. /api/graphql/ (GraphQL mutations for ad details)
+                    # 3. /ads_archive/ or /ad_library/ endpoints
+                    if any(p in url for p in [
+                        "search_ads", "ads_archive", "ad_library",
+                        "api/graphql", "AdLibrarySearch"
+                    ]):
+                        if "json" in content_type or "text" in content_type:
+                            try:
+                                body_text = response.text()
+                                # Meta sometimes returns for(;;); prefix
+                                clean = body_text.replace("for (;;);", "").strip()
+                                if clean.startswith("{") or clean.startswith("["):
+                                    import json as _json
+                                    data = _json.loads(clean)
+                                    # Extract ads from various response shapes
+                                    _extract_ads_from_meta_response(data, intercepted_ads, intercepted_total)
+                            except Exception:
+                                pass
+                except Exception:
+                    pass
+
+            page.on("response", intercept_meta_response)
+            print(f"🔌 [AD SCANNER] Network Interception armed. Navigating to Meta Ad Library...")
+
+            page.goto(ad_lib_url, timeout=15000, wait_until="domcontentloaded")
+            page.wait_for_timeout(4000)
             
             # 1. Extract total count text (Multi-language: VN & EN)
             for sel in ["text=kết quả", "text=results", "div:has-text('kết quả')", "div:has-text('results')"]:
@@ -197,114 +351,95 @@ def scan_brand_ads(query: str, max_ads: int = 30) -> Dict[str, Any]:
                 except Exception:
                     continue
 
-            # Auto-scroll to load multiple batches of cards
-            print(f"🔄 [AD SCANNER] Đang cuộn trang bóc tách sâu dữ liệu Meta Ads...")
-            for _ in range(5):
-                page.evaluate("window.scrollBy(0, 1600)")
-                page.wait_for_timeout(900)
-                
-            # 2. Extract cards directly from DOM
-            dom_extractor_js = """() => {
-                const cards = [];
-                const spans = Array.from(document.querySelectorAll("span, div"));
-                const idElements = spans.filter(el => el.children.length === 0 && (el.textContent.includes("ID thư viện:") || el.textContent.includes("Library ID:")));
-                
-                idElements.forEach((idEl, index) => {
-                    let container = idEl.parentElement;
-                    for (let i = 0; i < 7; i++) {
-                        if (container && container.innerText && (container.innerText.includes("Xem chi tiết") || container.innerText.includes("See ad details"))) break;
-                        if (container && container.parentElement) container = container.parentElement;
-                    }
-                    if (!container) return;
+            # Auto-scroll to trigger lazy-load API calls
+            print(f"🔄 [AD SCANNER] Scrolling to trigger API calls...")
+            for i in range(6):
+                page.evaluate("window.scrollBy(0, 2000)")
+                page.wait_for_timeout(1500)
+
+            # Use intercepted ads if available; fallback to DOM extraction
+            if intercepted_ads:
+                print(f"🎯 [AD SCANNER] Network Interception captured {len(intercepted_ads)} ads from Meta API!")
+                raw_dom_cards = intercepted_ads
+                if intercepted_total["count"] > 0:
+                    total_results_str = f"~{intercepted_total['count']:,} results"
+            else:
+                print(f"⚠️ [AD SCANNER] Network interception empty. Falling back to DOM extraction...")
+                # Fallback DOM extractor (existing code preserved as backup)
+                dom_extractor_js = """() => {
+                    const cards = [];
+                    const spans = Array.from(document.querySelectorAll("span, div"));
+                    const idElements = spans.filter(el => el.children.length === 0 && (el.textContent.includes("Library ID:") || el.textContent.includes("ID thư viện:")));
                     
-                    const raw = container.innerText || "";
-                    const lines = raw.split("\\n").map(s => s.trim()).filter(Boolean);
-                    
-                    const idMatch = (idEl.textContent || "").match(/\\d+/);
-                    const adId = idMatch ? idMatch[0] : ("ad_" + index);
-                    
-                    let startDateStr = "";
-                    const dateLine = lines.find(l => l.includes("Ngày bắt đầu chạy:") || l.includes("Started running on"));
-                    if (dateLine) {
-                        startDateStr = dateLine.replace(/Ngày bắt đầu chạy:|Started running on:/i, "").trim();
-                    }
-                    
-                    let pageName = "";
-                    const sponsoredIdx = lines.findIndex(l => l.includes("Được tài trợ") || l.includes("Sponsored"));
-                    if (sponsoredIdx > 0) {
-                        pageName = lines[sponsoredIdx - 1];
-                    }
-                    
-                    let copyText = "";
-                    if (sponsoredIdx >= 0 && sponsoredIdx + 1 < lines.length) {
-                        const candidates = lines.slice(sponsoredIdx + 1).filter(l => 
-                            !l.includes("Xem chi tiết") && 
-                            !l.includes("ID thư viện") && 
-                            !l.includes("Hoạt động") && 
-                            !l.includes("quảng cáo") &&
-                            !l.includes("Được tài trợ")
-                        );
-                        copyText = candidates.slice(0, 3).join(" ");
-                    }
-                    
-                    let mediaType = "image";
-                    let mediaUrl = "";
-                    let posterUrl = "";
-                    
-                    const video = container.querySelector("video");
-                    const img = container.querySelector("img[src*='fbcdn.net']") || container.querySelector("img");
-                    
-                    if (video && (video.src || video.querySelector("source"))) {
-                        mediaType = "video";
-                        mediaUrl = video.src || (video.querySelector("source") ? video.querySelector("source").src : "");
-                        posterUrl = video.poster || "";
-                    } else if (img && img.src) {
-                        mediaType = "image";
-                        mediaUrl = img.src;
-                    }
-                    
-                    const ctaBtn = container.querySelector("a[href*='http'], div[role='button']");
-                    const ctaText = ctaBtn ? ctaBtn.innerText : "Shop Now";
-                    
-                    // Outbound destination link & UTM extraction
-                    const allLinks = Array.from(container.querySelectorAll("a[href*='http']"));
-                    let landingPage = "";
-                    let utmSource = "";
-                    let utmCampaign = "";
-                    let utmContent = "";
-                    for (const a of allLinks) {
-                        if (!a.href.includes("facebook.com") && !a.href.includes("fb.me") && !a.href.includes("instagram.com")) {
-                            landingPage = a.href;
-                            try {
-                                const uObj = new URL(landingPage);
-                                utmSource = uObj.searchParams.get("utm_source") || "";
-                                utmCampaign = uObj.searchParams.get("utm_campaign") || "";
-                                utmContent = uObj.searchParams.get("utm_content") || "";
-                            } catch(e){}
-                            break;
+                    idElements.forEach((idEl, index) => {
+                        let container = idEl.parentElement;
+                        for (let i = 0; i < 7; i++) {
+                            if (container && container.innerText && (container.innerText.includes("See ad details") || container.innerText.includes("Xem chi tiết"))) break;
+                            if (container && container.parentElement) container = container.parentElement;
                         }
-                    }
-                    
-                    cards.push({
-                        id: adId,
-                        pageName: pageName || "Advertiser",
-                        startDate: startDateStr,
-                        description: copyText,
-                        mediaType: mediaType,
-                        mediaUrl: mediaUrl,
-                        posterUrl: posterUrl,
-                        ctaText: ctaText,
-                        landingPage: landingPage,
-                        utmSource: utmSource,
-                        utmCampaign: utmCampaign,
-                        utmContent: utmContent
+                        if (!container) return;
+                        
+                        const raw = container.innerText || "";
+                        const lines = raw.split("\\n").map(s => s.trim()).filter(Boolean);
+                        const idMatch = (idEl.textContent || "").match(/\\d+/);
+                        const adId = idMatch ? idMatch[0] : ("ad_" + index);
+                        
+                        let startDateStr = "";
+                        const dateLine = lines.find(l => l.includes("Started running on") || l.includes("Ngày bắt đầu chạy:"));
+                        if (dateLine) startDateStr = dateLine.replace(/Started running on:|Ngày bắt đầu chạy:/i, "").trim();
+                        
+                        let pageName = "";
+                        const sponsoredIdx = lines.findIndex(l => l.includes("Sponsored") || l.includes("Được tài trợ"));
+                        if (sponsoredIdx > 0) pageName = lines[sponsoredIdx - 1];
+                        
+                        let copyText = "";
+                        if (sponsoredIdx >= 0 && sponsoredIdx + 1 < lines.length) {
+                            const candidates = lines.slice(sponsoredIdx + 1).filter(l => 
+                                !l.includes("See ad details") && !l.includes("Library ID") && 
+                                !l.includes("Active") && !l.includes("Sponsored")
+                            );
+                            copyText = candidates.slice(0, 3).join(" ");
+                        }
+                        
+                        let mediaType = "image", mediaUrl = "", posterUrl = "";
+                        const video = container.querySelector("video");
+                        const img = container.querySelector("img[src*='fbcdn.net']") || container.querySelector("img");
+                        if (video && (video.src || video.querySelector("source"))) {
+                            mediaType = "video";
+                            mediaUrl = video.src || (video.querySelector("source") ? video.querySelector("source").src : "");
+                            posterUrl = video.poster || "";
+                        } else if (img && img.src) {
+                            mediaUrl = img.src;
+                        }
+                        
+                        const allLinks = Array.from(container.querySelectorAll("a[href*='http']"));
+                        let landingPage = "", utmSource = "", utmCampaign = "", utmContent = "";
+                        for (const a of allLinks) {
+                            if (!a.href.includes("facebook.com") && !a.href.includes("fb.me") && !a.href.includes("instagram.com")) {
+                                landingPage = a.href;
+                                try {
+                                    const u = new URL(landingPage);
+                                    utmSource = u.searchParams.get("utm_source") || "";
+                                    utmCampaign = u.searchParams.get("utm_campaign") || "";
+                                    utmContent = u.searchParams.get("utm_content") || "";
+                                } catch(e){}
+                                break;
+                            }
+                        }
+                        
+                        cards.push({
+                            id: adId, pageName: pageName || "Advertiser", startDate: startDateStr,
+                            description: copyText, mediaType, mediaUrl, posterUrl,
+                            ctaText: (container.querySelector("a[href*='http'], div[role='button']") || {}).innerText || "Shop Now",
+                            landingPage, utmSource, utmCampaign, utmContent
+                        });
                     });
-                });
-                return cards;
-            }"""
-            
-            raw_dom_cards = page.evaluate(dom_extractor_js)
-            print(f"📦 [AD SCANNER] Trích xuất thành công {len(raw_dom_cards)} ad cards từ DOM Meta.")
+                    return cards;
+                }"""
+                raw_dom_cards = page.evaluate(dom_extractor_js)
+                print(f"📦 [AD SCANNER] DOM extraction got {len(raw_dom_cards)} ad cards.")
+
+            browser.close()
 
     except Exception as e:
         print(f"⚠️ Lỗi quét Meta: {e}")

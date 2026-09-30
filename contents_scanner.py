@@ -11,7 +11,7 @@ import json
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(BASE_DIR, "out", "spy_cache")
 
-def get_contents_data(brand_name: str = "The Oodie") -> dict:
+def _get_oodie_contents_data(brand_name: str = "The Oodie") -> dict:
     # 1. Authentic datasets for The Oodie matching media_1790694514012.png - media_1790694544335.png
     ad_copies = [
         {
@@ -422,6 +422,176 @@ def get_contents_data(brand_name: str = "The Oodie") -> dict:
         "headlines": headlines,
         "creatives": creatives
     }
+
+
+def _extract_contents_from_brand_ads(brand_name: str, ads: list) -> dict:
+    """Dynamically extracts Ad Copies, Hooks, Headlines, Creatives, and Transcripts from real scanned brand ads."""
+    if not ads:
+        return {
+            "brand": brand_name,
+            "counts": {"ad_copies": 0, "transcripts": 0, "hooks": 0, "headlines": 0, "creatives": 0},
+            "ad_copies": [],
+            "transcripts": [],
+            "hooks": [],
+            "headlines": [],
+            "creatives": [],
+            "data_source": "no_data"
+        }
+
+    # 1. Ad Copies
+    copy_map = {}
+    for a in ads:
+        txt = (a.get("description") or a.get("primary_text") or "").strip()
+        if not txt or len(txt) < 5:
+            continue
+        days = a.get("daysRunning") or a.get("days_active") or 1
+        thumb = a.get("thumbnailUrl") or a.get("image_url") or a.get("mediaUrl") or "/static/emails/card_1.png"
+        if txt not in copy_map:
+            copy_map[txt] = {"text": txt, "thumb": thumb, "count": 0, "max_days": 0}
+        copy_map[txt]["count"] += 1
+        copy_map[txt]["max_days"] = max(copy_map[txt]["max_days"], days)
+
+    ad_copies = []
+    for i, (txt, info) in enumerate(sorted(copy_map.items(), key=lambda x: -x[1]["count"])):
+        ad_copies.append({
+            "id": f"cp_{i+1}",
+            "thumbnail": info["thumb"],
+            "text": txt,
+            "ads_count": info["count"],
+            "longest_running": f"{info['max_days']} days"
+        })
+
+    # 2. Hooks (First sentence or first 70 chars)
+    hooks_map = {}
+    for a in ads:
+        txt = (a.get("hook") or a.get("description") or "").strip()
+        if not txt:
+            continue
+        first_line = txt.split("\n")[0].split(". ")[0].strip()
+        if len(first_line) > 80:
+            first_line = first_line[:77] + "..."
+        days = a.get("daysRunning") or 1
+        thumb = a.get("thumbnailUrl") or a.get("image_url") or "/static/emails/card_1.png"
+        if first_line not in hooks_map:
+            hooks_map[first_line] = {"text": first_line, "thumb": thumb, "count": 0, "max_days": 0}
+        hooks_map[first_line]["count"] += 1
+        hooks_map[first_line]["max_days"] = max(hooks_map[first_line]["max_days"], days)
+
+    hooks = []
+    for i, (txt, info) in enumerate(sorted(hooks_map.items(), key=lambda x: -x[1]["count"])):
+        hooks.append({
+            "id": f"hk_{i+1}",
+            "thumbnail": info["thumb"],
+            "text": txt,
+            "ads_count": info["count"],
+            "longest_running": f"{info['max_days']} days",
+            "has_linked_ads": False
+        })
+
+    # 3. Headlines
+    hl_map = {}
+    for a in ads:
+        hl = (a.get("cta_title") or a.get("headline") or a.get("ctaText") or f"{brand_name} Official Drop").strip()
+        if not hl:
+            continue
+        days = a.get("daysRunning") or 1
+        thumb = a.get("thumbnailUrl") or a.get("image_url") or "/static/emails/card_1.png"
+        if hl not in hl_map:
+            hl_map[hl] = {"title": hl, "thumb": thumb, "count": 0, "max_days": 0}
+        hl_map[hl]["count"] += 1
+        hl_map[hl]["max_days"] = max(hl_map[hl]["max_days"], days)
+
+    headlines = []
+    for i, (hl, info) in enumerate(sorted(hl_map.items(), key=lambda x: -x[1]["count"])):
+        headlines.append({
+            "id": f"hl_{i+1}",
+            "thumbnail": info["thumb"],
+            "title": hl,
+            "ads_count": info["count"],
+            "longest_running": f"{info['max_days']} days",
+            "has_linked_ads": False
+        })
+
+    # 4. Creatives
+    creatives = []
+    seen_media = set()
+    for a in ads:
+        m_url = a.get("mediaUrl") or a.get("image_url") or ""
+        if not m_url or m_url in seen_media:
+            continue
+        seen_media.add(m_url)
+        m_type = a.get("mediaType") or "image"
+        days = a.get("daysRunning") or 1
+        title = a.get("cta_title") or a.get("hook") or f"{brand_name} Creative"
+        creatives.append({
+            "id": f"cr_{len(creatives)+1}",
+            "type": m_type,
+            "title": title[:35],
+            "subtitle": (a.get("description") or "")[:45],
+            "image": a.get("thumbnailUrl") or m_url,
+            "badge": m_type.capitalize(),
+            "ads_count": 1,
+            "longest_running": f"{days} days"
+        })
+
+    # 5. Transcripts from video ads
+    transcripts = []
+    for a in ads:
+        if a.get("mediaType") == "video":
+            desc = a.get("description") or ""
+            if desc and len(desc) > 25:
+                transcripts.append({
+                    "id": f"tr_{len(transcripts)+1}",
+                    "thumbnail": a.get("thumbnailUrl") or a.get("mediaUrl") or "",
+                    "text": desc,
+                    "ads_count": 1,
+                    "longest_running": f"{a.get('daysRunning', 1)} days",
+                    "has_linked_ads": False
+                })
+
+    return {
+        "brand": brand_name,
+        "counts": {
+            "ad_copies": len(ad_copies),
+            "transcripts": len(transcripts),
+            "hooks": len(hooks),
+            "headlines": len(headlines),
+            "creatives": len(creatives)
+        },
+        "ad_copies": ad_copies,
+        "transcripts": transcripts,
+        "hooks": hooks,
+        "headlines": headlines,
+        "creatives": creatives,
+        "data_source": "live_ads_extraction"
+    }
+
+
+def get_contents_data(brand_name: str = "The Oodie") -> dict:
+    """Main entry point. Checks brand cache or serves authentic Oodie benchmark."""
+    clean = (brand_name or "").lower().strip()
+    slug = clean.replace(" ", "_").replace("-", "_")
+
+    if "oodie" in clean:
+        return _get_oodie_contents_data(brand_name)
+
+    # Search in spy_cache for real scanned ads
+    cache_candidates = [
+        os.path.join(CACHE_DIR, f"{slug}.json"),
+        os.path.join(CACHE_DIR, f"{clean.replace(' ', '')}.json")
+    ]
+    for c_path in cache_candidates:
+        if os.path.exists(c_path):
+            try:
+                with open(c_path, "r", encoding="utf-8") as f:
+                    b_data = json.load(f)
+                    ads = b_data.get("ads", [])
+                    if ads:
+                        return _extract_contents_from_brand_ads(brand_name, ads)
+            except Exception:
+                pass
+
+    return _extract_contents_from_brand_ads(brand_name, [])
 
 if __name__ == "__main__":
     data = get_contents_data("The Oodie")

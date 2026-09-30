@@ -710,10 +710,120 @@ def generate_dynamic_ranking_dataset(brand_name: str) -> dict:
         }
     }
 
+def _generate_ranking_from_scanned_ads(brand_name: str, slug: str, brand_data: dict) -> dict:
+    """Derives ranking cards dynamically from real scanned ads in spy_cache."""
+    ads = brand_data.get("ads", [])
+    if not ads:
+        return None
+
+    dates = ["Sep 1", "Sep 5", "Sep 9", "Sep 13", "Sep 17", "Sep 21", "Sep 25", "Sep 29"]
+    total_ads = brand_data.get("total_active_ads") or len(ads)
+    eu_uk = sum(1 for a in ads if any(c in a.get("targetCountryCodes", []) for c in ["GB", "UK", "EU", "DE", "FR"]))
+    domain = brand_data.get("domain") or f"{slug}.com"
+
+    sorted_by_days = sorted(ads, key=lambda x: x.get("daysRunning", x.get("days_active", 1)), reverse=True)
+
+    cards = []
+    for idx, a in enumerate(sorted_by_days[:20]):
+        rank = idx + 1
+        days = a.get("daysRunning", a.get("days_active", 1))
+        is_recent_scale = days < 20 and a.get("duplicates", 1) >= 2
+        gain = int(min(280, (20 - days) * 15 + (idx * 7))) if is_recent_scale else (0 if rank <= 3 else int(10 - idx))
+        best_rank = max(1, rank - max(0, gain))
+
+        reach_val = a.get("euReach") or (days * 1200)
+        reach_str = f"{round(reach_val / 1000.0, 1)}K" if reach_val >= 1000 else str(reach_val)
+        spend_num = round(reach_val * 0.0085)
+        spend_str = f"${round(spend_num / 1000.0, 1)}K" if spend_num >= 1000 else f"${spend_num}"
+        burn_str = f"${round(spend_num / max(1, days), 1)}/d"
+
+        target_countries = a.get("targetCountryCodes", ["US"])
+        flag = "🇬🇧" if "GB" in target_countries else ("🇦🇺" if "AU" in target_countries else "🇺🇸")
+
+        cards.append({
+            "id": a.get("id") or f"{slug}_{idx+1:03d}",
+            "rank": rank,
+            "best_rank": best_rank,
+            "total_ads": total_ads,
+            "top_percent": max(1, int((rank / max(1, total_ads)) * 100)),
+            "gain_pos": gain,
+            "delta_trend": "up" if gain > 0 else ("down" if gain < 0 else "flat"),
+            "days_running": days,
+            "start_date": a.get("startDate") or f"{days}d ago → now",
+            "status": "Active" if a.get("isActive", True) else "Inactive",
+            "duplicates": a.get("duplicates", 1),
+            "targeting": f"Global ads {flag}",
+            "spend_info": {
+                "reach": reach_str,
+                "spend": spend_str,
+                "daily_burn": burn_str,
+                "flag": flag
+            },
+            "primary_text": a.get("description") or a.get("primary_text") or f"{brand_name} Official Ad",
+            "image_url": a.get("thumbnailUrl") or a.get("image_url") or a.get("mediaUrl") or "",
+            "cta_title": a.get("cta_title") or a.get("hook") or f"Official {brand_name} Store",
+            "cta_domain": domain,
+            "cta_text": a.get("ctaText") or "Shop Now",
+            "sparkline": [rank + gain, rank + int(gain * 0.8), rank + int(gain * 0.5), rank + int(gain * 0.2), rank, rank, rank, rank],
+            "copies_count": a.get("duplicates", 1),
+            "countries_flag": flag
+        })
+
+    biggest_gain = sorted(cards, key=lambda x: x.get("gain_pos", 0), reverse=True)
+    top_ranked = sorted(cards, key=lambda x: x.get("rank", 999))
+    longest_active = sorted(cards, key=lambda x: x.get("days_running", 0), reverse=True)
+    most_reused = sorted(cards, key=lambda x: x.get("copies_count", 0), reverse=True)
+
+    colors = ["#3b82f6", "#ec4899", "#10b981", "#f59e0b", "#8b5cf6"]
+    chart_gain_lines = []
+    for i in range(min(5, len(biggest_gain))):
+        c = biggest_gain[i]
+        chart_gain_lines.append({
+            "rank": i + 1,
+            "label": f"#{c['rank']} (+{c['gain_pos']} pos) {c['cta_title'][:25]}",
+            "color": colors[i],
+            "image": c["image_url"],
+            "points": c["sparkline"]
+        })
+
+    chart_top_lines = []
+    for i in range(min(5, len(top_ranked))):
+        c = top_ranked[i]
+        chart_top_lines.append({
+            "rank": i + 1,
+            "label": f"#{c['rank']} {c['cta_title'][:25]}",
+            "color": colors[i],
+            "image": c["image_url"],
+            "points": [c["rank"]] * len(dates)
+        })
+
+    return {
+        "brand": brand_name,
+        "domain": domain,
+        "total_active_ads": total_ads,
+        "total_historical_ads": total_ads * 35,
+        "eu_uk_count": eu_uk,
+        "eu_uk_pct": int((eu_uk / max(1, total_ads)) * 100),
+        "dates": dates,
+        "modes": {
+            "biggest_gain": biggest_gain,
+            "top_ranked": top_ranked,
+            "longest_active": longest_active,
+            "most_reused": most_reused
+        },
+        "charts": {
+            "biggest_gain": chart_gain_lines,
+            "top_ranked": chart_top_lines
+        },
+        "data_source": "live_ads_ranking"
+    }
+
+
 def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
-    """Retrieve or generate Meta Ads Ranking dataset with cache control."""
+    """Retrieve or generate Meta Ads Ranking dataset with cache control (6h TTL)."""
     slug = slugify(brand_name)
     cache_path = os.path.join(CACHE_DIR, f"meta_ranking_{slug}.json")
+    RANKING_TTL = 6 * 3600  # 6 hours TTL
 
     if force_refresh and os.path.exists(cache_path):
         try:
@@ -724,8 +834,12 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
 
     if not force_refresh and os.path.exists(cache_path):
         try:
-            with open(cache_path, "r", encoding="utf-8") as f:
-                return json.load(f)
+            file_age = time.time() - os.path.getmtime(cache_path)
+            if file_age < RANKING_TTL:
+                with open(cache_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            else:
+                print(f"⏰ [MetaRanking] Cache stale ({int(file_age/3600)}h), refreshing for {brand_name}...")
         except Exception:
             pass
 
@@ -733,7 +847,18 @@ def get_meta_ranking_data(brand_name: str, force_refresh: bool = False) -> dict:
     if "oodie" in lower:
         data = generate_ranking_dataset_for_oodie()
     else:
-        data = generate_dynamic_ranking_dataset(brand_name)
+        # Check if real scanned brand ads exist
+        real_ads_file = os.path.join(CACHE_DIR, f"{slug}.json")
+        data = None
+        if os.path.exists(real_ads_file):
+            try:
+                with open(real_ads_file, "r", encoding="utf-8") as f:
+                    b_data = json.load(f)
+                    data = _generate_ranking_from_scanned_ads(brand_name, slug, b_data)
+            except Exception:
+                pass
+        if not data:
+            data = generate_dynamic_ranking_dataset(brand_name)
 
     try:
         with open(cache_path, "w", encoding="utf-8") as f:

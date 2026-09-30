@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="grad_2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#grad_2)" rx="24"/>
+  <circle cx="500" cy="150" r="180" fill="#3b82f6" opacity="0.1"/>
+  <circle cx="100" cy="650" r="160" fill="#10b981" opacity="0.08"/>
+  <g transform="translate(50, 45)">
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">THERAICE</text>
+    <text x="500" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">Brand Essentials</text>
+  </g>
+  <g transform="translate(50, 110)">
+    <rect width="140" height="28" rx="14" fill="#2563eb"/>
+    <text x="70" y="19" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Social Proof</text>
+  </g>
+  <text x="50" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="900" fill="#ffffff">⭐ Over 25,000 5-Star Reviews: Wh</text>
+  <text x="50" y="225" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800" fill="#60a5fa">Free Shipping</text>
+  <g transform="translate(50, 260)">
+    <rect width="500" height="340" rx="20" fill="#ffffff" opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+    <circle cx="250" cy="150" r="80" fill="#3b82f6" opacity="0.2"/>
+    <text x="250" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="48" text-anchor="middle">✨</text>
+    <text x="250" y="180" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Exclusive Collection</text>
+    <text x="250" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle">Official TheraICE Campaign</text>
+    <text x="250" y="280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#cbd5e1" text-anchor="middle">Real feedback from verified TheraICE buyers worldwide....</text>
+  </g>
+  <g transform="translate(150, 640)">
+    <rect width="300" height="56" rx="28" fill="#3b82f6"/>
+    <text x="150" y="34" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">Shop The Drop →</text>
+  </g>
+  <text x="300" y="740" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">TheraICE Official Newsletters • Sent via Klaviyo</text>
+</svg>
