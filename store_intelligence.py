@@ -1085,14 +1085,21 @@ def detect_brand_niche(query: str, domain: str) -> str:
     return "loungewear"  # Default fallback benchmark cluster
 
 def get_top_5_similar_shops(brand_name: str, domain: str) -> List[Dict[str, Any]]:
-    """Returns exactly 5 relevant competitor stores with full metrics, banner, and 4 product preview thumbnails."""
+    """Returns exactly 5 relevant authentic competitor stores from Board Agent & SERP."""
+    clean_d = clean_domain(domain)
+    try:
+        import board_database_agent as _bda
+        serp_comps = _bda.find_competitors_via_gemini_and_serp(brand_name, clean_d)
+        if serp_comps and len(serp_comps) >= 3:
+            return serp_comps[:5]
+    except Exception as _e_comp:
+        print(f"⚠️ [SIMILAR SHOPS AGENT] {_e_comp}")
+
     niche = detect_brand_niche(brand_name, domain)
     competitors = NICHE_COMPETITOR_DATABASE.get(niche, NICHE_COMPETITOR_DATABASE["loungewear"])
     
     # Filter out self if the scanned domain is in the competitor list
-    clean_d = clean_domain(domain)
     filtered = [c for c in competitors if clean_d not in c["domain"]]
-    
     return filtered[:5]
 
 

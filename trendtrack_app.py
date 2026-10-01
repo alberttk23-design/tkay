@@ -265,6 +265,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">ridge</button>
         <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">momcozy</button>
         <button type="button" class="preset-btn px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition whitespace-nowrap">The Oodie</button>
+        <button type="button" onclick="openAiSettingsModal()" title="Cài đặt Google Gemini AI & Model" class="px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold transition whitespace-nowrap flex items-center gap-1.5 ml-1 shadow-2xs cursor-pointer">
+          <svg class="w-3.5 h-3.5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <span>⚙️ AI Settings</span>
+        </button>
       </div>
     </header>
 
@@ -3293,6 +3297,126 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     </main>
   </div>
 
+  <!-- AI SETTINGS MODAL (Gemini Main Orchestrator Agent Configuration) -->
+  <div id="aiSettingsModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl w-full max-w-xl flex flex-col overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+      <!-- Header -->
+      <div class="h-16 px-6 border-b border-slate-200 flex items-center justify-between bg-slate-50/80">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-sm font-black text-lg">
+            🤖
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-slate-900 leading-tight">Cài đặt AI & Gemini Models</h3>
+            <p class="text-xs text-slate-500">TrendTrack Main Orchestrator Agent</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeAiSettingsModal()" class="p-2 rounded-xl hover:bg-slate-200/60 text-slate-400 hover:text-slate-700 transition cursor-pointer" title="Đóng">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-6 space-y-5 overflow-y-auto max-h-[75vh]">
+        <!-- Gemini API Key -->
+        <div class="space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <span>Google Gemini API Key</span>
+              <span id="aiKeyBadge" class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Đã cấu hình</span>
+            </label>
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-[11px] text-indigo-600 hover:underline flex items-center gap-1 font-semibold">
+              <span>Lấy API Key Google AI Studio</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+          <div class="relative">
+            <input type="password" id="aiApiKeyInput" placeholder="AQ.Ab8RN6JbU9W7O8xPGzBU27h..." class="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition" />
+            <button type="button" onclick="toggleApiKeyVisibility()" class="absolute right-2.5 top-2.5 text-slate-400 hover:text-slate-600 transition cursor-pointer" title="Ẩn/Hiện API Key">
+              <svg id="eyeIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-500">API Key dùng để phân tích từ khoá, nhận diện Brand, Domain và điều phối Subagents.</p>
+        </div>
+
+        <!-- Model Selection -->
+        <div class="space-y-2">
+          <label class="text-xs font-bold text-slate-800">Lựa chọn Gemini Model</label>
+          <div class="space-y-2" id="aiModelList">
+            <label class="flex items-start gap-3 p-3 rounded-xl border border-indigo-200 bg-indigo-50/40 cursor-pointer hover:bg-indigo-50 transition">
+              <input type="radio" name="aiModelRadio" value="models/gemini-3.1-flash-lite" class="mt-0.5 text-indigo-600 focus:ring-indigo-500" checked />
+              <div class="flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-slate-900">Gemini 3.1 Flash Lite</span>
+                  <span class="text-[10px] font-bold text-white bg-indigo-600 px-1.5 py-0.5 rounded">Khuyến nghị</span>
+                  <span class="text-[10px] text-slate-500">~250ms</span>
+                </div>
+                <p class="text-[11px] text-slate-600 mt-0.5">Tốc độ cực nhanh, ổn định 100%, không bị nghẽn tải hay lỗi 503.</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer transition">
+              <input type="radio" name="aiModelRadio" value="models/gemini-3.8-flash" class="mt-0.5 text-indigo-600 focus:ring-indigo-500" />
+              <div class="flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-slate-900">Gemini 3.8 Flash</span>
+                  <span class="text-[10px] text-slate-500">Tiêu chuẩn</span>
+                </div>
+                <p class="text-[11px] text-slate-600 mt-0.5">Mô hình thế hệ mới với khả năng suy luận mở rộng và hiểu ngữ cảnh sâu.</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer transition">
+              <input type="radio" name="aiModelRadio" value="models/gemini-3.5-flash" class="mt-0.5 text-indigo-600 focus:ring-indigo-500" />
+              <div class="flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-slate-900">Gemini 3.5 Flash</span>
+                </div>
+                <p class="text-[11px] text-slate-600 mt-0.5">Mô hình cân bằng chi phí và chất lượng bóc tách sản phẩm.</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer transition">
+              <input type="radio" name="aiModelRadio" value="models/gemini-pro-latest" class="mt-0.5 text-indigo-600 focus:ring-indigo-500" />
+              <div class="flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold text-slate-900">Gemini Pro Latest</span>
+                  <span class="text-[10px] text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">Chuyên sâu</span>
+                </div>
+                <p class="text-[11px] text-slate-600 mt-0.5">Suy luận đa bước mạnh nhất cho các sản phẩm phức tạp hoặc tên shop khó tra.</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Custom Model Input Option -->
+        <div class="space-y-1.5 pt-1">
+          <label class="text-[11px] font-semibold text-slate-600">Hoặc nhập mã Model tùy chỉnh (Google Model ID):</label>
+          <input type="text" id="aiCustomModelInput" placeholder="Ví dụ: models/gemini-1.5-flash hoặc gemini-2.0-flash" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono text-slate-700 focus:bg-white focus:outline-none focus:ring-1 focus:ring-indigo-500 transition" />
+        </div>
+
+        <!-- Connection Test Feedback Alert Container -->
+        <div id="aiTestFeedback" class="hidden rounded-xl p-3.5 text-xs transition"></div>
+      </div>
+
+      <!-- Footer Actions -->
+      <div class="h-16 px-6 border-t border-slate-200 bg-slate-50/60 flex items-center justify-between">
+        <button type="button" id="btnTestAi" onclick="testAiConnection()" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition cursor-pointer flex items-center gap-1.5 border border-slate-200">
+          <span id="testAiIcon">⚡</span>
+          <span id="testAiText">Kiểm tra kết nối</span>
+        </button>
+        <div class="flex items-center gap-2.5">
+          <button type="button" onclick="closeAiSettingsModal()" class="px-4 py-2 rounded-xl text-slate-600 hover:text-slate-800 hover:bg-slate-100 font-semibold text-xs transition cursor-pointer">
+            Đóng
+          </button>
+          <button type="button" id="btnSaveAi" onclick="saveAiSettings()" class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs transition cursor-pointer shadow-sm flex items-center gap-1.5">
+            <span id="saveAiText">Lưu cấu hình</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SPLIT MODAL DRAWER (Matching TrendTrack media_1790645855191.png & media_1790650473166.png) -->
   <div id="adModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4 lg:p-8">
     <div class="bg-white border border-slate-200 rounded-3xl w-full max-w-6xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl relative">
@@ -4865,8 +4989,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         lpListEl.innerHTML = sortedLps.slice(0, 4).map(([url, count]) => {
           const pct = Math.round((count / Math.max(1, totalAds)) * 100);
-          let slug = url.replace(/https?:\\/\\/[^\\/]+/, '');
-          if (!slug || slug === '/') slug = 'Homepage (/)';
+          let slug = 'Homepage (/)';
+          try {
+            const parsedUrl = new URL(url);
+            if (parsedUrl.pathname && parsedUrl.pathname !== '/') slug = parsedUrl.pathname;
+          } catch (e) {
+            slug = url;
+          }
           return `
             <div class="py-2.5">
               <div class="flex items-center justify-between text-xs font-semibold mb-1">
@@ -10741,6 +10870,182 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
     }
 
+    // ── AI SETTINGS MODAL & MODEL SWITCHER ──────────────────────────────
+    let activeAiConfig = null;
+
+    async function openAiSettingsModal() {
+      const modal = document.getElementById('aiSettingsModal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+
+      // Clear feedback
+      const fb = document.getElementById('aiTestFeedback');
+      if (fb) {
+        fb.className = 'hidden rounded-xl p-3.5 text-xs transition';
+        fb.innerHTML = '';
+      }
+
+      try {
+        const res = await fetch('/api/settings/ai-config');
+        if (res.ok) {
+          const cfg = await res.json();
+          activeAiConfig = cfg;
+          const keyInput = document.getElementById('aiApiKeyInput');
+          if (keyInput && cfg.api_key) {
+            keyInput.value = cfg.api_key;
+          }
+
+          // Select active model
+          const modelRadios = document.querySelectorAll('input[name="aiModelRadio"]');
+          let matched = false;
+          modelRadios.forEach(r => {
+            if (r.value === cfg.active_model) {
+              r.checked = true;
+              matched = true;
+            }
+          });
+
+          const customInput = document.getElementById('aiCustomModelInput');
+          if (!matched && customInput && cfg.active_model) {
+            customInput.value = cfg.active_model;
+          }
+        }
+      } catch (e) {
+        console.error('Failed to load AI config:', e);
+      }
+    }
+
+    function closeAiSettingsModal() {
+      const modal = document.getElementById('aiSettingsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function toggleApiKeyVisibility() {
+      const input = document.getElementById('aiApiKeyInput');
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    }
+
+    function getSelectedModelId() {
+      const customInput = document.getElementById('aiCustomModelInput');
+      if (customInput && customInput.value.trim()) {
+        return customInput.value.trim();
+      }
+      const checkedRadio = document.querySelector('input[name="aiModelRadio"]:checked');
+      return checkedRadio ? checkedRadio.value : 'models/gemini-3.1-flash-lite';
+    }
+
+    async function testAiConnection() {
+      const btn = document.getElementById('btnTestAi');
+      const icon = document.getElementById('testAiIcon');
+      const text = document.getElementById('testAiText');
+      const fb = document.getElementById('aiTestFeedback');
+      const keyInput = document.getElementById('aiApiKeyInput');
+      const key = keyInput ? keyInput.value.trim() : '';
+      const model = getSelectedModelId();
+
+      if (btn) btn.disabled = true;
+      if (icon) icon.innerHTML = '<svg class="animate-spin h-3.5 w-3.5 text-slate-600 inline" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+      if (text) text.innerText = 'Đang kiểm tra...';
+
+      const startTime = Date.now();
+      try {
+        const res = await fetch('/api/settings/test-ai', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: key, model_id: model })
+        });
+        const latency = Date.now() - startTime;
+        const data = await res.json();
+
+        if (fb) {
+          fb.classList.remove('hidden');
+          if (data.success) {
+            fb.className = 'rounded-xl p-3.5 text-xs bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-2.5';
+            fb.innerHTML = `
+              <span class="text-base">✅</span>
+              <div>
+                <p class="font-bold">Kết nối Google Gemini thành công! (${latency}ms)</p>
+                <p class="text-[11px] text-emerald-700 mt-0.5">Model: <strong>${data.model}</strong> phản hồi chuẩn xác. Main Agent sẵn sàng điều phối.</p>
+              </div>
+            `;
+          } else {
+            fb.className = 'rounded-xl p-3.5 text-xs bg-rose-50 border border-rose-200 text-rose-800 flex items-start gap-2.5';
+            fb.innerHTML = `
+              <span class="text-base">⚠️</span>
+              <div>
+                <p class="font-bold">Kết nối thất bại</p>
+                <p class="text-[11px] text-rose-700 mt-0.5">${data.error || 'Vui lòng kiểm tra lại API Key hoặc chọn model khác.'}</p>
+              </div>
+            `;
+          }
+        }
+      } catch (err) {
+        if (fb) {
+          fb.classList.remove('hidden');
+          fb.className = 'rounded-xl p-3.5 text-xs bg-rose-50 border border-rose-200 text-rose-800 flex items-start gap-2.5';
+          fb.innerHTML = `<span class="text-base">⚠️</span><div><p class="font-bold">Lỗi mạng hoặc server</p><p class="text-[11px] text-rose-700 mt-0.5">${err.message}</p></div>`;
+        }
+      } finally {
+        if (btn) btn.disabled = false;
+        if (icon) icon.innerText = '⚡';
+        if (text) text.innerText = 'Kiểm tra kết nối';
+      }
+    }
+
+    async function saveAiSettings() {
+      const btn = document.getElementById('btnSaveAi');
+      const text = document.getElementById('saveAiText');
+      const fb = document.getElementById('aiTestFeedback');
+      const keyInput = document.getElementById('aiApiKeyInput');
+      const key = keyInput ? keyInput.value.trim() : '';
+      const model = getSelectedModelId();
+
+      if (btn) btn.disabled = true;
+      if (text) text.innerText = 'Đang lưu...';
+
+      try {
+        const res = await fetch('/api/settings/ai-config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: key, active_model: model })
+        });
+        const data = await res.json();
+        if (fb) {
+          fb.classList.remove('hidden');
+          if (res.ok && data.success !== false) {
+            fb.className = 'rounded-xl p-3.5 text-xs bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-2.5';
+            fb.innerHTML = `
+              <span class="text-base">🎉</span>
+              <div>
+                <p class="font-bold">Đã lưu cấu hình AI thành công!</p>
+                <p class="text-[11px] text-emerald-700 mt-0.5">Model active: <strong>${data.config?.active_model || model}</strong>. Các truy vấn tìm kiếm mới sẽ được xử lý bằng model này.</p>
+              </div>
+            `;
+            setTimeout(() => {
+              closeAiSettingsModal();
+            }, 1200);
+          } else {
+            fb.className = 'rounded-xl p-3.5 text-xs bg-rose-50 border border-rose-200 text-rose-800 flex items-start gap-2.5';
+            fb.innerHTML = `<span class="text-base">⚠️</span><div><p class="font-bold">Lưu thất bại</p><p class="text-[11px] text-rose-700 mt-0.5">${data.error || 'Không thể lưu cài đặt.'}</p></div>`;
+          }
+        }
+      } catch (err) {
+        if (fb) {
+          fb.classList.remove('hidden');
+          fb.className = 'rounded-xl p-3.5 text-xs bg-rose-50 border border-rose-200 text-rose-800 flex items-start gap-2.5';
+          fb.innerHTML = `<span class="text-base">⚠️</span><div><p class="font-bold">Lỗi kết nối server</p><p class="text-[11px] text-rose-700 mt-0.5">${err.message}</p></div>`;
+        }
+      } finally {
+        if (btn) btn.disabled = false;
+        if (text) text.innerText = 'Lưu cấu hình';
+      }
+    }
+
     // Startup routing: if query present in URL, load it; otherwise show Search Hero welcome screen
     window.addEventListener('DOMContentLoaded', () => {
       loadBrandtrackerData();
@@ -11276,6 +11581,79 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.send_header("Content-Type", "application/json")
                 self.end_headers()
                 self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/settings/ai-config":
+            try:
+                import gemini_main_agent as _gma
+                cfg = _gma.load_ai_config()
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(cfg, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        self.send_response(404)
+        self.end_headers()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.end_headers()
+
+    def do_POST(self):
+        parsed = urllib.parse.urlparse(self.path)
+        content_length = int(self.headers.get("Content-Length", 0))
+        body = self.rfile.read(content_length).decode("utf-8") if content_length > 0 else "{}"
+        try:
+            payload = json.loads(body) if body else {}
+        except Exception:
+            payload = {}
+
+        if parsed.path == "/api/settings/ai-config":
+            try:
+                import gemini_main_agent as _gma
+                api_key = payload.get("api_key", "").strip()
+                active_model = payload.get("active_model", "").strip()
+                updated_cfg = _gma.save_ai_config(api_key, active_model)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": True, "config": updated_cfg}, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/settings/test-ai":
+            try:
+                import gemini_main_agent as _gma
+                api_key = payload.get("api_key", "").strip() or None
+                model_id = payload.get("model_id", "").strip() or None
+                test_result = _gma.test_ai_connection(api_key, model_id)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(test_result, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode("utf-8"))
             return
 
         self.send_response(404)

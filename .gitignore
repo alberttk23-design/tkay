@@ -19,3 +19,4 @@ out/*.json
 !static/**
 
 whisper.cpp
+data_cache/ai_config.json
