@@ -11984,8 +11984,9 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 verified_domain     = ground_truth.get("canonical_domain") or _gt_domain
                 print(f"🌐 [GROUND TRUTH] brand='{verified_brand_name}' logo='{verified_logo_url[:60]}...' tiktok='#{verified_tiktok_slug}'")
 
-                # ── STEP 1: Scan Meta with verified brand name ──
-                data = scan_brand_ads(verified_brand_name, max_ads=30, official_domain=verified_domain)
+                # ── STEP 1: Scan Meta with verified brand name or targeted Facebook search term ──
+                meta_search_term = (dispatched.get("facebook_search_term") if dispatched else None) or verified_brand_name
+                data = scan_brand_ads(meta_search_term, max_ads=30, official_domain=verified_domain)
 
                 # ── STEP 2: Inject ground truth into result ──────────────────────
                 if verified_logo_url and not verified_logo_url.startswith("https://ui-avatars"):
@@ -11994,10 +11995,11 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                     data["avatarUrl"]  = verified_logo_url
                 data["brand_name"]     = verified_brand_name
                 data["name"]           = data.get("name") or verified_brand_name
+                data["domain"]         = verified_domain
+                data["verified_domain"] = verified_domain
                 data["tiktok_slug"]    = verified_tiktok_slug
                 data["tiktok_handle"]  = f"@{verified_tiktok_slug}"
                 data["tiktok_hashtag"] = f"#{verified_tiktok_slug}"
-                data["verified_domain"] = verified_domain
                 data["ground_truth"]   = {
                     "brand_name": verified_brand_name,
                     "logo_url":   verified_logo_url,

@@ -974,38 +974,63 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
         extracted_domain = f"{clean_q_slug}.com" if clean_q_slug else "brand.com"
 
     clean_brand_title = re.sub(r'\.(com|co|io|org|net|vn|us|uk|de|fr|ca|au)$', '', extracted_domain).replace("-", " ").replace("_", " ").title()
+    clean_official = official_domain.lower().replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0].strip() if official_domain else ""
     first_page_name = "Dr. Squatch" if "squatch" in clean_q_slug else clean_brand_title
-    first_landing_domain = "www.drsquatch.com" if "squatch" in clean_q_slug else extracted_domain
+    first_landing_domain = clean_official or ("www.drsquatch.com" if "squatch" in clean_q_slug else extracted_domain)
+
+    def _is_official_domain_match(url_or_netloc: str, target: str) -> bool:
+        if not url_or_netloc or not target:
+            return False
+        try:
+            if "://" in url_or_netloc:
+                nl = urllib.parse.urlparse(url_or_netloc).netloc.lower()
+            else:
+                nl = url_or_netloc.lower().split("/")[0]
+            nl = nl.replace("www.", "").strip()
+            tgt = target.lower().replace("https://", "").replace("http://", "").replace("www.", "").split("/")[0].strip()
+            return nl == tgt or nl.endswith("." + tgt)
+        except Exception:
+            return False
 
     # Intelligent brand name selection: pick the pageName that best matches the query
     from collections import Counter
     query_words = [w.lower() for w in re.findall(r'[a-zA-Z0-9]+', query) if len(w) > 2]
     candidate_names = []
+    official_matching_names = []
     candidate_domains = []
     
     for c in raw_dom_cards:
         pn = (c.get("pageName") or "").strip()
+        lp = c.get("landingPage") or ""
         if pn and pn.lower() != "advertiser":
             pn_lower = pn.lower()
-            if any(w in pn_lower for w in query_words) or clean_q_slug in pn_lower.replace(" ", ""):
+            if clean_official and _is_official_domain_match(lp, clean_official):
+                official_matching_names.append(pn)
+            elif any(w in pn_lower for w in query_words) or clean_q_slug in pn_lower.replace(" ", ""):
                 candidate_names.append(pn)
-        lp = c.get("landingPage") or ""
         if lp and "http" in lp:
             try:
                 nl = urllib.parse.urlparse(lp).netloc.lower()
-                if nl and (any(w in nl for w in query_words) or clean_q_slug in nl):
+                if clean_official:
+                    if _is_official_domain_match(nl, clean_official):
+                        candidate_domains.append(nl)
+                elif nl and (any(w in nl for w in query_words) or clean_q_slug in nl):
                     candidate_domains.append(nl)
             except:
                 pass
 
-    if candidate_names:
+    if official_matching_names:
+        first_page_name = Counter(official_matching_names).most_common(1)[0][0]
+    elif candidate_names:
         first_page_name = Counter(candidate_names).most_common(1)[0][0]
     elif "squatch" in clean_q_slug:
         first_page_name = "Dr. Squatch"
     else:
         first_page_name = clean_brand_title
         
-    if candidate_domains:
+    if clean_official:
+        first_landing_domain = clean_official
+    elif candidate_domains:
         first_landing_domain = Counter(candidate_domains).most_common(1)[0][0]
     elif "squatch" in clean_q_slug:
         first_landing_domain = "www.drsquatch.com"
@@ -1080,30 +1105,23 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
         # DO NOT generate fake ads. Return empty with status flag.
         total_num = 0
 
-    # ── Domain Filter: Remove affiliate/reseller ads ──────────────────────────
-    # When official_domain is known, keep only ads whose landing URL belongs to
-    # the brand's own domain (drops affiliates like "Cam..." resellers, etc.)
-    if official_domain and parsed_ads:
-        clean_official = official_domain.lower().replace("www.", "")
-        # Core domain name for partial matching (e.g. "drsquatch" from "drsquatch.com")
-        core_brand = re.sub(r'\.(com|co|io|org|net|vn|shop|store|us|uk|de|fr|ca|au)$', '', clean_official)
+    # ── Domain Filter: Remove affiliate/reseller/unrelated ads ─────────────────
+    # When official_domain is known, keep only ads whose landing URL strictly belongs to
+    # the brand's own domain or subdomains (drops unrelated advertisers like blueridgemountains.com)
+    if clean_official and parsed_ads:
         filtered_ads = []
         dropped_count = 0
         for ad in parsed_ads:
             lp = (ad.get("landingUrl") or ad.get("landing_url") or "").lower()
             if not lp or "http" not in lp:
-                filtered_ads.append(ad)  # no landing page — keep (can't verify)
+                filtered_ads.append(ad)  # keep ads without explicit link
                 continue
-            try:
-                netloc = urllib.parse.urlparse(lp).netloc.lower().replace("www.", "")
-                if clean_official in netloc or core_brand in netloc:
-                    filtered_ads.append(ad)
-                else:
-                    dropped_count += 1
-            except Exception:
+            if _is_official_domain_match(lp, clean_official):
                 filtered_ads.append(ad)
+            else:
+                dropped_count += 1
         if dropped_count > 0:
-            print(f"🚫 [DOMAIN FILTER] Dropped {dropped_count} affiliate/reseller ads (kept {len(filtered_ads)} official '{clean_official}' ads)")
+            print(f"🚫 [DOMAIN FILTER] Dropped {dropped_count} unrelated/affiliate ads (kept {len(filtered_ads)} official '{clean_official}' ads)")
         parsed_ads = filtered_ads
 
     video_count = sum(1 for a in parsed_ads if a["mediaType"] == "video")
@@ -1448,9 +1466,10 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
     # Extract authentic Store Intelligence (Products Catalog, Apps/Pixels, Top 5 Similar Shops)
     try:
         import store_intelligence as si
-        intel_domain = first_landing_domain or clean_tag
+        intel_domain = clean_official or first_landing_domain or clean_tag
         if '.' not in intel_domain:
             intel_domain = f"{intel_domain}.com"
+        intel_domain = intel_domain.lower().replace("https://", "").replace("http://", "").replace("www.", "").strip()
         store_prods = si.fetch_store_products(intel_domain, max_products=50)
         store_tech = si.detect_store_apps_and_pixels(intel_domain)
         similar_shops = si.get_top_5_similar_shops(first_page_name or query, intel_domain)
