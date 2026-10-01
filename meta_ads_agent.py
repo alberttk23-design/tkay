@@ -790,41 +790,52 @@ class MetaAdsAgent:
         clean_d = clean_domain(domain) if domain else clean_domain(clean_b)
 
         # 1. Special Case: The Oodie Ground Truth
-        if "oodie" in clean_b.lower() or "oodie" in clean_d.lower():
+        if not force_refresh and ("oodie" in clean_b.lower() or "oodie" in clean_d.lower()):
             return get_oodie_benchmark_suite()
 
-        # 2. Check Store Metrics Truth Engine (Authentic captures like True Sea Moss)
-        try:
-            import store_metrics_truth as _smt
-            truth = _smt.get_store_metrics_truth(clean_d or clean_b)
-            if truth and truth.get("meta_cards"):
-                meta_ch = truth.get("channels", {}).get("meta", {})
-                raw_scanned = {
-                    "name": truth.get("brand_name") or clean_b,
-                    "domain": truth.get("domain") or clean_d,
-                    "avatarUrl": truth.get("avatarUrl") or truth.get("logo_url"),
-                    "logo_url": truth.get("logo_url"),
-                    "ads": truth["meta_cards"],
-                    "total_active_ads": meta_ch.get("active", 911),
-                    "main_page_active": meta_ch.get("main_page_active", 731),
-                    "main_page_total": meta_ch.get("main_page_total", 17400),
-                    "main_page_total_display": meta_ch.get("main_page_total_display", "17K"),
-                    "footer_display": meta_ch.get("footer_display", "731 / 17.4K · 🇺🇸 🇨🇦"),
-                    "total_all_time": meta_ch.get("total", 25104),
-                    "monthly_cohorts": truth.get("monthly_cohorts")
-                }
-                return build_dynamic_meta_suite(
-                    brand_name=raw_scanned["name"],
-                    domain=raw_scanned["domain"],
-                    raw_scanned=raw_scanned
-                )
-        except Exception as _e_truth:
-            print(f"⚠️ [META AGENT] Truth engine check: {_e_truth}")
+        # 2. Check Store Metrics Truth Engine (Only if not force_refresh)
+        if not force_refresh:
+            try:
+                import store_metrics_truth as _smt
+                truth = _smt.get_store_metrics_truth(clean_d or clean_b)
+                if truth and truth.get("meta_cards"):
+                    meta_ch = truth.get("channels", {}).get("meta", {})
+                    raw_scanned = {
+                        "name": truth.get("brand_name") or clean_b,
+                        "domain": truth.get("domain") or clean_d,
+                        "avatarUrl": truth.get("avatarUrl") or truth.get("logo_url"),
+                        "logo_url": truth.get("logo_url"),
+                        "ads": truth["meta_cards"],
+                        "total_active_ads": meta_ch.get("active", 911),
+                        "main_page_active": meta_ch.get("main_page_active", 731),
+                        "main_page_total": meta_ch.get("main_page_total", 17400),
+                        "main_page_total_display": meta_ch.get("main_page_total_display", "17K"),
+                        "footer_display": meta_ch.get("footer_display", "731 / 17.4K · 🇺🇸 🇨🇦"),
+                        "total_all_time": meta_ch.get("total", 25104),
+                        "monthly_cohorts": truth.get("monthly_cohorts")
+                    }
+                    return build_dynamic_meta_suite(
+                        brand_name=raw_scanned["name"],
+                        domain=raw_scanned["domain"],
+                        raw_scanned=raw_scanned
+                    )
+            except Exception as _e_truth:
+                print(f"⚠️ [META AGENT] Truth engine check: {_e_truth}")
 
-        # 3. Check Unified Cache
+        # 3. Check Unified Cache or Purge if Force Refresh
         slug = slugify(clean_d or clean_b)
         suite_cache_file = os.path.join(self.cache_dir, f"meta_suite_{slug}.json")
-        if not force_refresh and os.path.exists(suite_cache_file):
+        if force_refresh:
+            try:
+                if os.path.exists(suite_cache_file):
+                    os.remove(suite_cache_file)
+                raw_cache = os.path.join(self.cache_dir, f"{slug}.json")
+                if os.path.exists(raw_cache):
+                    os.remove(raw_cache)
+                print(f"🧹 [META AGENT] Cleared cache for {slug} (force_refresh=True)")
+            except Exception as _e_rm:
+                print(f"⚠️ [META AGENT] Error purging cache: {_e_rm}")
+        elif os.path.exists(suite_cache_file):
             try:
                 with open(suite_cache_file, "r", encoding="utf-8") as f:
                     cached_suite = json.load(f)

@@ -891,6 +891,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
             <!-- Header Action Buttons -->
             <div class="flex items-center gap-2">
+              <button type="button" id="btnMetaResetRescrape" onclick="handleMetaResetAndRescrape()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-bold transition cursor-pointer shadow-2xs" title="Reset cache và cào lại Meta Ad Library trực tiếp">
+                <svg id="metaRescrapeIcon" class="w-3.5 h-3.5 text-blue-600 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                <span id="metaRescrapeText">Reset & Cào lại Ads</span>
+              </button>
               <button type="button" onclick="switchShopSubTab('overview')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold transition cursor-pointer shadow-2xs" title="Store Overview">
                 <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
                 <span>Store Overview</span>
@@ -4370,7 +4374,27 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     let currentMetaContentsApiData = null;
     let metaLibraryCustomFilteredAds = null;
 
-    async function loadMetaIntelligenceView(brandName) {
+    async function handleMetaResetAndRescrape() {
+      const bName = getActiveBrandName();
+      if (!bName) return;
+      const icon = document.getElementById('metaRescrapeIcon');
+      const text = document.getElementById('metaRescrapeText');
+      if (icon) icon.classList.add('animate-spin');
+      if (text) text.textContent = 'Đang cào lại Meta...';
+      try {
+        await loadMetaIntelligenceView(bName, true);
+        const q = document.getElementById('brandInput')?.value?.trim() || bName;
+        // Also synchronize main brand cache
+        await loadBrand(q, true);
+      } catch (e) {
+        console.error('Meta refresh error:', e);
+      } finally {
+        if (icon) icon.classList.remove('animate-spin');
+        if (text) text.textContent = 'Reset & Cào lại Ads';
+      }
+    }
+
+    async function loadMetaIntelligenceView(brandName, forceRefresh = false) {
       const bName = brandName || getActiveBrandName();
       const bTitle = document.getElementById('metaHeaderBrandName');
       const bAvatar = document.getElementById('metaHeaderBrandAvatar');
@@ -4384,9 +4408,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         bAvatar.src = (currentData && currentData.avatarUrl) || getEmailBrandAvatar(bName);
       }
 
-      // Fetch unified Meta Suite from meta_ads_agent
+      // Fetch unified Meta Suite from meta_ads_agent (supports forceRefresh to bypass cache)
       try {
-        const suiteRes = await fetch('/api/meta/suite?query=' + encodeURIComponent(bName));
+        const suiteUrl = '/api/meta/suite?query=' + encodeURIComponent(bName) + (forceRefresh ? '&refresh=true' : '');
+        const suiteRes = await fetch(suiteUrl);
         if (suiteRes.ok) {
           const suite = await suiteRes.json();
           currentMetaSuiteData = suite;
@@ -9758,6 +9783,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         loadContentsData(gtBrandName, forceRefresh);
         loadMetaRankingData(gtBrandName, forceRefresh);
         loadTikTokIntelligenceData(gtTikTokSlug, forceRefresh);
+        loadMetaIntelligenceView(gtBrandName, forceRefresh);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
