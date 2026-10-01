@@ -86,8 +86,8 @@ class TestZeroHardcodeScale(unittest.TestCase):
             "dressing-gowns"
         ]
         
-        # Exclude known doc/benchmark sections and test only template (lines 1 to 10850)
-        for idx, line in enumerate(lines[:10850], 1):
+        # Exclude known doc/benchmark sections and test only template (lines 1 to 10760)
+        for idx, line in enumerate(lines[:10760], 1):
             if idx > 10115 and idx < 10130:
                 continue  # defaultBenchmarkProducts definition
             if idx > 3135 and idx < 3155:

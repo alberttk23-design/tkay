@@ -10,5 +10,21 @@
   "insights": {
     "avg_discount": "0%",
     "top_subject_keywords": []
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=httpsglovbeautycom.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=httpsglovbeautycom.com&sz=128",
+  "brand_name": "Httpsglovbeautycom",
+  "name": "Httpsglovbeautycom",
+  "tiktok_slug": "httpsglovbeautycom",
+  "tiktok_handle": "@httpsglovbeautycom",
+  "tiktok_hashtag": "#httpsglovbeautycom",
+  "verified_domain": "httpsglovbeautycom.com",
+  "ground_truth": {
+    "brand_name": "Httpsglovbeautycom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=httpsglovbeautycom.com&sz=128",
+    "tiktok_slug": "httpsglovbeautycom",
+    "canonical_domain": "httpsglovbeautycom.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:34Z"
   }
 }

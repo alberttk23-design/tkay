@@ -7,7 +7,32 @@
     "advertiser_name": "guyler",
     "country": "US",
     "ad_count_min": null,
-    "ad_count_max": null
+    "ad_count_max": null,
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "2020",
+    "monthly_visitors": "~ 250K / mo",
+    "google_ads_count": "0 ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 65
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 20
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 15
+      }
+    ],
+    "best_sellers": []
   },
   "total_analyzed": 0,
   "total_estimated": 0,
@@ -24,21 +49,5 @@
     "User interest": 0.0
   },
   "ad_cards": [],
-  "scanned_at": "2026-09-30T18:28:47.319386",
-  "logo_url": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
-  "brand_logo": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
-  "brand_name": "Googleguyler",
-  "name": "Googleguyler",
-  "tiktok_slug": "googleguyler",
-  "tiktok_handle": "@googleguyler",
-  "tiktok_hashtag": "#googleguyler",
-  "verified_domain": "googleguyler.com",
-  "ground_truth": {
-    "brand_name": "Googleguyler",
-    "logo_url": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
-    "tiktok_slug": "googleguyler",
-    "canonical_domain": "googleguyler.com",
-    "_source": "fallback_parse_fail",
-    "_healed_at": "2026-09-30T17:18:43Z"
-  }
+  "scanned_at": "2026-10-01T08:41:20.849348"
 }

@@ -454,5 +454,21 @@
       "language": "English",
       "days_running": 256
     }
-  ]
+  ],
+  "logo_url": "http://glovbeauty.com/cdn/shop/files/GLOV_LOGO.png?v=1691206276",
+  "brand_logo": "http://glovbeauty.com/cdn/shop/files/GLOV_LOGO.png?v=1691206276",
+  "brand_name": "Glov Beauty",
+  "name": "Glov Beauty",
+  "tiktok_slug": "glovbeauty",
+  "tiktok_handle": "@glovbeauty",
+  "tiktok_hashtag": "#glovbeauty",
+  "verified_domain": "glovbeauty.com",
+  "ground_truth": {
+    "brand_name": "Glov Beauty",
+    "logo_url": "http://glovbeauty.com/cdn/shop/files/GLOV_LOGO.png?v=1691206276",
+    "tiktok_slug": "glovbeauty",
+    "canonical_domain": "glovbeauty.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-10-01T01:36:51Z"
+  }
 }

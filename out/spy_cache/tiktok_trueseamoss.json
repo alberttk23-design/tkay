@@ -1,0 +1,33 @@
+{
+  "brand": "Trueseamoss",
+  "total_tiktoks": 0,
+  "videos": [],
+  "ads_ratio_pct": 0,
+  "organics_ratio_pct": 0,
+  "has_data": false,
+  "avatar_url": "https://ui-avatars.com/api/?name=trueseamoss&background=0284c7&color=fff",
+  "insights": {
+    "categories": [],
+    "growth": [],
+    "format_mix": {
+      "video_pct": 0,
+      "carousels_pct": 0
+    }
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=tiktoktrueseamoss.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=tiktoktrueseamoss.com&sz=128",
+  "brand_name": "Tiktoktrueseamoss",
+  "name": "Tiktoktrueseamoss",
+  "tiktok_slug": "tiktoktrueseamoss",
+  "tiktok_handle": "@tiktoktrueseamoss",
+  "tiktok_hashtag": "#tiktoktrueseamoss",
+  "verified_domain": "tiktoktrueseamoss.com",
+  "ground_truth": {
+    "brand_name": "Tiktoktrueseamoss",
+    "logo_url": "https://www.google.com/s2/favicons?domain=tiktoktrueseamoss.com&sz=128",
+    "tiktok_slug": "tiktoktrueseamoss",
+    "canonical_domain": "tiktoktrueseamoss.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:53Z"
+  }
+}

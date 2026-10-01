@@ -198,7 +198,6 @@ def _extract_contents_from_brand_ads(brand_name: str, ads: list) -> dict:
     }
 
 
-<<<<<<< HEAD
 # ---------------------------------------------------------------------------
 # Demo data cho The Oodie — CHỈ dùng cho brand demo, 3-4 items mỗi loại
 # ---------------------------------------------------------------------------
@@ -385,7 +384,16 @@ def _empty_contents(brand_name: str) -> dict:
     return {
         "brand": brand_name,
         "counts": {"ad_copies": 0, "transcripts": 0, "hooks": 0, "headlines": 0, "creatives": 0},
-=======
+        "ad_copies": [],
+        "transcripts": [],
+        "hooks": [],
+        "headlines": [],
+        "creatives": [],
+        "data_source": "empty",
+        "last_updated": datetime.now(timezone.utc).isoformat()
+    }
+
+
 def _get_squatch_contents_data(brand_name: str = "Dr. Squatch") -> dict:
     """Returns authentic Dr. Squatch contents dataset with exactly 19 contents items matching TrendTrack."""
     c_path = os.path.join(CACHE_DIR, "drsquatch.json")

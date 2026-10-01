@@ -50,10 +50,9 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             if file_age < CACHE_TTL_SECONDS:
                 with open(cache_file, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                    if data.get("found"):
-                        data["_cache_age_seconds"] = int(file_age)
-                        data["_cache_status"] = "fresh"
-                        return data
+                    data["_cache_age_seconds"] = int(file_age)
+                    data["_cache_status"] = "fresh"
+                    return data
             else:
                 print(f"⏰ [GOOGLE] Cache stale ({int(file_age/3600)}h old), re-scanning '{brand_name}'...")
         except Exception:

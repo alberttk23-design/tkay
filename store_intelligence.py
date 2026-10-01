@@ -1079,6 +1079,9 @@ def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
 
     logo_url = None
     brand_name = None
+    facebook_handle = None
+    instagram_handle = None
+    tiktok_handle = None
 
     try:
         url = f"https://{raw_domain}/"
@@ -1196,24 +1199,55 @@ def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
             if m_og:
                 logo_url = m_og.group(1).strip()
 
+        # ── 6. Official Social Profiles (Facebook Page, Instagram, TikTok) ──
+        facebook_handle = None
+        instagram_handle = None
+        tiktok_handle = None
+
+        fb_matches = re.findall(r'href=["\'](?:https?:)?//(?:www\.)?facebook\.com/([a-zA-Z0-9\.\-_]+)["\'/?]', raw_html, re.IGNORECASE)
+        for m_fb in fb_matches:
+            m_clean = m_fb.strip("/").split("?")[0].lower()
+            if m_clean and m_clean not in ("sharer", "share", "dialog", "pages", "groups", "events", "hashtag", "login", "policies"):
+                facebook_handle = m_clean
+                break
+
+        ig_matches = re.findall(r'href=["\'](?:https?:)?//(?:www\.)?instagram\.com/([a-zA-Z0-9\.\-_]+)["\'/?]', raw_html, re.IGNORECASE)
+        for m_ig in ig_matches:
+            m_clean = m_ig.strip("/").split("?")[0].lower()
+            if m_clean and m_clean not in ("p", "reel", "explore", "stories", "accounts"):
+                instagram_handle = m_clean
+                break
+
+        tt_matches = re.findall(r'href=["\'](?:https?:)?//(?:www\.)?tiktok\.com/@?([a-zA-Z0-9\.\-_]+)["\'/?]', raw_html, re.IGNORECASE)
+        for m_tt in tt_matches:
+            m_clean = m_tt.strip("/").split("?")[0].replace("@", "").lower()
+            if m_clean and m_clean not in ("explore", "live", "tag"):
+                tiktok_handle = m_clean
+                break
+
     except Exception as e:
         print(f"⚠️ [GROUND TRUTH] Failed to fetch {raw_domain}: {e}")
 
     if not logo_url:
         logo_url = fallback_logo
 
+    final_tt_slug = tiktok_handle or tiktok_slug or "brand"
+
     result = {
         "brand_name": brand_name or fallback_title,
         "logo_url": logo_url,
         "canonical_domain": canonical_domain,
-        "tiktok_slug": tiktok_slug or "brand",
+        "tiktok_slug": final_tt_slug,
+        "facebook_handle": facebook_handle,
+        "facebook_url": f"https://www.facebook.com/{facebook_handle}" if facebook_handle else None,
+        "instagram_handle": instagram_handle,
         "_source": "website_crawl" if brand_name else "fallback_parse_fail"
     }
 
     # Cache result
     result["_ts"] = now
     _GROUND_TRUTH_CACHE[cache_key] = result
-    print(f"✅ [GROUND TRUTH] {raw_domain} → brand='{result['brand_name']}' logo_source={'website_crawl' if 'apple' in logo_url or 'cdn' in logo_url else 'favicon'} tiktok=#{result['tiktok_slug']}")
+    print(f"✅ [GROUND TRUTH] {raw_domain} → brand='{result['brand_name']}' fb='{facebook_handle}' tiktok=#{final_tt_slug}")
     return result
 
 

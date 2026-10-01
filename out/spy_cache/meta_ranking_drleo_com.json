@@ -1,0 +1,36 @@
+{
+  "brand": "Drleo.Com",
+  "domain": "drleo_com.com",
+  "total_active_ads": 0,
+  "total_historical_ads": 0,
+  "eu_uk_count": 0,
+  "eu_uk_pct": 0,
+  "has_data": false,
+  "dates": [],
+  "modes": {
+    "biggest_gain": [],
+    "top_ranked": [],
+    "longest_active": [],
+    "most_reused": []
+  },
+  "charts": {
+    "biggest_gain": [],
+    "top_ranked": []
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=drleo_com.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=drleo_com.com&sz=128",
+  "brand_name": "Drleocom",
+  "name": "Drleocom",
+  "tiktok_slug": "drleocom",
+  "tiktok_handle": "@drleocom",
+  "tiktok_hashtag": "#drleocom",
+  "verified_domain": "drleo_com.com",
+  "ground_truth": {
+    "brand_name": "Drleocom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=drleo_com.com&sz=128",
+    "tiktok_slug": "drleocom",
+    "canonical_domain": "drleo_com.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:43Z"
+  }
+}

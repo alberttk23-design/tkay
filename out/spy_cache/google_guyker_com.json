@@ -1,0 +1,1520 @@
+{
+  "brand": "guyker.com",
+  "found": true,
+  "data_source": "live_rpc",
+  "advertiser": {
+    "advertiser_id": "AR15581800501283389441",
+    "advertiser_name": "Lovead Limited",
+    "country": "HK",
+    "ad_count_min": "2000",
+    "ad_count_max": "3000",
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR15581800501283389441?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "2020",
+    "monthly_visitors": "~ 250K / mo",
+    "google_ads_count": "27.5K ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 65
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 20
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 15
+      }
+    ],
+    "best_sellers": []
+  },
+  "total_analyzed": 45,
+  "total_estimated": 27462,
+  "active_ads": 5822,
+  "format_mix_total": 20322,
+  "format_mix": {
+    "Video": {
+      "count": 16,
+      "pct": 35.6
+    },
+    "Text": {
+      "count": 18,
+      "pct": 40.0
+    },
+    "Image": {
+      "count": 11,
+      "pct": 24.4
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 18,
+      "pct": 40.0
+    },
+    "Other": {
+      "count": 9,
+      "pct": 20.0
+    },
+    "YouTube": {
+      "count": 16,
+      "pct": 35.6
+    },
+    "Shopping": {
+      "count": 2,
+      "pct": 4.4
+    },
+    "Unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "31-90 d": {
+      "count": 6,
+      "pct": 13.3
+    },
+    "91-180 d": {
+      "count": 10,
+      "pct": 22.2
+    },
+    "181-365 d": {
+      "count": 3,
+      "pct": 6.7
+    },
+    "365 d +": {
+      "count": 26,
+      "pct": 57.8
+    }
+  },
+  "country_mix": {
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 17400,
+      "pct": 72.9
+    },
+    "DE": {
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "count": 3740,
+      "pct": 15.7
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "count": 2740,
+      "pct": 11.5
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR12075771762155978753",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1253,
+      "date_range": "1253d · Apr 27, 2023 → now",
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 27, 2023",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=1715995333&creativeId=656417203084&uiFeatures=12,54&adGroupId=148476247437&itemIds=10539541223824005017&sig=ACiVB_z2JKPPoiampQrTu5BeLmPmfeY-og&htmlParentId=fletch-render-3841913941170232370&responseCallback=fletchCallback3841913941170232370",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10141028031989284865",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 714,
+      "date_range": "714d · Oct 16, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Oct 16, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12132388084623425898",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15427758664533934081",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 714,
+      "date_range": "714d · Oct 16, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Oct 16, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2036375003092679548",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17168292683769184257",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 572,
+      "date_range": "572d · Mar 07, 2025 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 07, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=732930498702&uiFeatures=12,54&adGroupId=177971450627&sig=ACiVB_xx22GoZ4lYukQ-vx5RulkSYNl0Jg&htmlParentId=fletch-render-18029446370918589559&responseCallback=fletchCallback18029446370918589559",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Customer Favorites – Shop guyker.com Deals",
+      "snippet": "Limited time offers on selected guyker.com essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR17343996359874707457",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 570,
+      "date_range": "570d · Mar 09, 2025 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 09, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9885804270518757186",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "guyker.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic guyker.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02929518491620868097",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 499,
+      "date_range": "499d · May 19, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "May 19, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=753132131201&uiFeatures=12,54&adGroupId=179404616763&itemIds=16038919488698508210&sig=ACiVB_ylLyIUHjCfudOxAvzTXzTOCXbg4A&htmlParentId=fletch-render-4984296211062140676&responseCallback=fletchCallback4984296211062140676",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10377091013809274881",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 485,
+      "date_range": "485d · Jun 02, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jun 02, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=755799228157&uiFeatures=12,54&adGroupId=184167094047&itemIds=2882782242655933337&sig=ACiVB_xYrkwCjnjanENSV2pPb259TWExag&htmlParentId=fletch-render-4262827000068385345&responseCallback=fletchCallback4262827000068385345",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR15626226388862763009",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 401,
+      "date_range": "401d · Aug 25, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 25, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=770984811096&uiFeatures=12,54&adGroupId=190120911011&itemIds=16716483258987153443&sig=ACiVB_ytYUJgc80JvZjaklkjBLUCYhiukA&htmlParentId=fletch-render-15237728684343137031&responseCallback=fletchCallback15237728684343137031",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07971152108135120897",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 401,
+      "date_range": "401d · Aug 25, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 25, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=770984739786&uiFeatures=12,54&adGroupId=187470758107&itemIds=8244140629142414981,16716483258987153443,12500863588033704754,2913177404129845892,14593950509148295058,13995127910137728775,13259009800156414923,8394777153320585106,2077847448030697973&assets=%3DH4sIAAAAAAAAAONy4uLkWHfv8vydLAKaXJwcH5f9W9jDJcAIYh44dnoiqwArFyfH3JbFB2azCmhwcXLc6W87u5hVgJmLk-P3jf6N-1gE2ADbeAK9RAAAAA&sig=ACiVB_wfQwTPPIeKJaz6ttF0MFwu4GvXJA&htmlParentId=fletch-render-15012059561873852090&responseCallback=fletchCallback15012059561873852090",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR10480944216379752449",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 400,
+      "date_range": "400d · Aug 25, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 25, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8271726177307700382",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "guyker.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic guyker.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR17216582547266338817",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 387,
+      "date_range": "387d · Sep 08, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 08, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=773017349167&uiFeatures=12,54&adGroupId=185150638556&assets=%3DH4sIAAAAAAAAAAFPALD_Ck0KCQiu3tOfuQQQKQoJCI6Yit-jBRACCgkIufCxtr8FEAYKCQidhKPAmwUQKAoJCL3Jz6KMChADCgkI9a3k2JEFEAwKCQjFzquzuQQQATnND0BPAAAA&allowedVariations=45&sig=ACiVB_znmmUHjO7-EktHK8ONMrzSrS8bdA&htmlParentId=fletch-render-127890729433431940&responseCallback=fletchCallback127890729433431940",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR02443566306700558337",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 387,
+      "date_range": "387d · Sep 08, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 08, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=773017490302&uiFeatures=12,54&adGroupId=187820355009&itemIds=2489683934690047299&sig=ACiVB_zo0ou20BVHHs48ThU2y2T6cqNp8w&htmlParentId=fletch-render-510830821902688255&responseCallback=fletchCallback510830821902688255",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14234107778900688897",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 387,
+      "date_range": "387d · Sep 08, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 08, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4936914265470679460",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop guyker.com Deals",
+      "snippet": "Limited time offers on selected guyker.com essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00695123191089070081",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 387,
+      "date_range": "387d · Sep 08, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 08, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=772975665984&uiFeatures=12,54&adGroupId=184628434706&versionId=2&assets=%3DH4sIAAAAAAAAAAEuANH_CiwKCQis-pCeuQQQAQoJCL3Jz6KMChADCgkIi8GzrZUIEAQKCQiDis2WkQUQBshqpv0uAAAA&sig=ACiVB_xHRj2DFLKNctcO7_m1zv1a8j6gwQ&htmlParentId=fletch-render-13268238803601614009&responseCallback=fletchCallback13268238803601614009",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "guyker.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic guyker.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16793493110008053761",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 374,
+      "date_range": "374d · Sep 21, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 21, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17518727698109266677",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16301247638357934081",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=775147834012&uiFeatures=12,54&adGroupId=187217580913&assets=%3DH4sIAAAAAAAAAAE5AMb_CjcKCQiLv6D5-wkQAQoJCLnwsba_BRAGCgkInYSjwJsFECgKCQiu3tOfuQQQKQoJCLqgnYnSBRAM21dGszkAAAA&allowedVariations=44&sig=ACiVB_znUTTfa52gTDS_zGSnOxCscUYT8A&htmlParentId=fletch-render-5773247517850173994&responseCallback=fletchCallback5773247517850173994",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR02603354620713500673",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=775104782535&uiFeatures=12,54&adGroupId=185291491666&sig=ACiVB_wY057TJVDezWPegoFBVoUhszjjfA&htmlParentId=fletch-render-6760577037396821001&responseCallback=fletchCallback6760577037396821001",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR01489330676401438721",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=775235507417&uiFeatures=12,54&adGroupId=191456121491&itemIds=18344732356253375813&sig=ACiVB_z0IbqbIPChPx5_8gt_thzYgR-adQ&htmlParentId=fletch-render-1582226377237816627&responseCallback=fletchCallback1582226377237816627",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "guyker.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic guyker.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12008318836915830785",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=775235657231&uiFeatures=12,54&adGroupId=191423698288&versionId=3&assets=%3DH4sIAAAAAAAAAOPS4eLkaOzZevUGiwAjFyfHz9729hesAqxcnBzNXWenTWQVYOPi5Hj8uaPrBasAMwAdUxWiLgAAAA&sig=ACiVB_xMR3n4_kmbOwznINZJ_mZU74Q7JA&htmlParentId=fletch-render-9566511638398235547&responseCallback=fletchCallback9566511638398235547",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "guyker.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic guyker.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR04166217628303491073",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/964379564492949717",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "New Arrivals From guyker.com – Shop Online Today",
+      "snippet": "Shop the official guyker.com catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR15066664305644535809",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 373,
+      "date_range": "373d · Sep 22, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 22, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10495058192206635830",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Customer Favorites – Shop guyker.com Deals",
+      "snippet": "Limited time offers on selected guyker.com essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12476590393825165313",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 372,
+      "date_range": "372d · Sep 23, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 23, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9303639789002397312",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR08624711990167732225",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 371,
+      "date_range": "371d · Sep 24, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 24, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15773055462941289963",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR12775216102661685249",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 370,
+      "date_range": "370d · Sep 25, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 25, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1213351070373082713",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "guyker.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official guyker.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11358703590286819329",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 370,
+      "date_range": "370d · Sep 25, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 25, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3165482502153433308",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18150860392253882369",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 369,
+      "date_range": "369d · Sep 26, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 26, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3472727214223014654",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05707832986003570689",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 349,
+      "date_range": "349d · Oct 16, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Oct 16, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=1715995333&creativeId=779352370482&uiFeatures=12,54&adGroupId=187762402035&itemIds=13861574736837339753&sig=ACiVB_xq0FUwu6Q0cTFsBahUNKInmMnflw&htmlParentId=fletch-render-956038152030191551&responseCallback=fletchCallback956038152030191551",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12935652329671098369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 248,
+      "date_range": "248d · Jan 25, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jan 25, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12223445679167508742",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18443249490749030401",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 199,
+      "date_range": "199d · Mar 15, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17992030060884773102",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02446374210289795073",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 177,
+      "date_range": "177d · Apr 06, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7047354212679083940",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From guyker.com – Shop Online Today",
+      "snippet": "Shop the official guyker.com catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10450481310429347841",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 169,
+      "date_range": "169d · Apr 14, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/886914297760777841",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR15121459799054614529",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 166,
+      "date_range": "166d · Apr 16, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 16, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=805566839730&uiFeatures=12,54&adGroupId=198404701107&sig=ACiVB_yI8r0rH09EMdfpTWq0jzUgEjbvWQ&htmlParentId=fletch-render-15864730165833994063&responseCallback=fletchCallback15864730165833994063",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR01845977845763932161",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 132,
+      "date_range": "132d · May 21, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11418619894619328842",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04765909231645753345",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 111,
+      "date_range": "111d · Jun 12, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 12, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3940908991336116002",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop guyker.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from guyker.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04857520815349956609",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 98,
+      "date_range": "98d · Jun 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4862738037083673406",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14020117759296274433",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 93,
+      "date_range": "93d · Jun 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=814623284876&uiFeatures=12,54&adGroupId=198244270735&assets=%3DH4sIAAAAAAAAAOPy5eLkWLXm3JlfXAJMXJwc6-5dnr-TRUCTi5Oj88GdhbO5BBi5ODnmtiw-MJtVQAOkFiLKzMXJsfPDxm37WQXYQNoWvPk5g0uABwBakJ-6TwAAAA&allowedVariations=45&sig=ACiVB_zG4QWw1APO6F8Ch2a2PUq2Iovjxw&htmlParentId=fletch-render-1690192456808573339&responseCallback=fletchCallback1690192456808573339",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR04298277727942737921",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 93,
+      "date_range": "93d · Jun 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=814623284825&uiFeatures=12,54&adGroupId=197997653196&itemIds=4951081386710576903&sig=ACiVB_zeG-jvKfyo5yQRRpfbz6eOhOFkxQ&htmlParentId=fletch-render-9394116155659861579&responseCallback=fletchCallback9394116155659861579",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Customer Favorites – Shop guyker.com Deals",
+      "snippet": "Limited time offers on selected guyker.com essentials. Save big when you shop direct today.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10578739822845755393",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 92,
+      "date_range": "92d · Jun 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6907024309854277606",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "New Arrivals From guyker.com – Shop Online Today",
+      "snippet": "Shop the official guyker.com catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00446674202192248833",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 91,
+      "date_range": "91d · Jun 30, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 30, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=814623282176&uiFeatures=12,54&adGroupId=197997700516&assets=%3DH4sIAAAAAAAAAAE5AMb_CjcKCQiz4NyhmwoQAwoJCK7e05-5BBApCgkIxfrvp5UKEAQKCQi58LG2vwUQBgoJCMOhlL_5CRAB5qNy1jkAAAA&sig=ACiVB_zdD5HjBT8xT4iaJXDVCdZ5BwoeBw&htmlParentId=fletch-render-346346697936074489&responseCallback=fletchCallback346346697936074489",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05741006308375527425",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 90,
+      "date_range": "90d · Jul 02, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 02, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17786352493923271507",
+      "domain": "us.guyker.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Official guyker.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust guyker.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11894949661854662657",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 51,
+      "date_range": "51d · Aug 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=820352318041&uiFeatures=12,54&adGroupId=207545070708&itemIds=511591880702059232&sig=ACiVB_yJLmmZcEE0XQxWr_9cLxEtATlLXg&htmlParentId=fletch-render-15214252146903744537&responseCallback=fletchCallback15214252146903744537",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Discover guyker.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied guyker.com customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07017195848278736897",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 51,
+      "date_range": "51d · Aug 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=820352318065&uiFeatures=12,54&adGroupId=199540752136&itemIds=10554917087387300526,209898443239900269,4240285905374698378,3666214679775033996,7640686262682223199,10755927675296479615&assets=%3DH4sIAAAAAAAAAOPy5eLkmLDy0_eN3AJMXJwc6-5dnr-TRUCTi5NjcseZ37e4BZhBzH0vTm7iFmDk4uSY1HCs8xKrAA8XJ8fclsUHZrMKaHBxctx4uW_1Rw4BNgCXr4CsTwAAAA&allowedVariations=55&sig=ACiVB_xY8XUSF9FbHpZ-tuvbl6_82bC0ig&htmlParentId=fletch-render-17604249257670041009&responseCallback=fletchCallback17604249257670041009",
+      "domain": "www.guyker.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "New Arrivals From guyker.com – Shop Online Today",
+      "snippet": "Shop the official guyker.com catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR08721645029761744897",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 51,
+      "date_range": "51d · Aug 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=820352318062&uiFeatures=12,54&adGroupId=199540751976&itemIds=13817545022919406704,14512059416276952479,12141549610041673502,1858832847006176051,3236912031257420377,5481453978443171144&assets=%3DH4sIAAAAAAAAAOPy5eLkWHB9xuOJXALMXJwc5zdfvHKES4CHi5Pj5zWwKCMXJ8eNl_tWf-QQYOPi5FgJUcvExcmx7t7l-TtZBDS5ODn-9E58NZFVQAMAiIIdYE8AAAA&allowedVariations=55&sig=ACiVB_zJPJYbCDk5l6DBCfQwp2sTg7lgiQ&htmlParentId=fletch-render-2123795596377084046&responseCallback=fletchCallback2123795596377084046",
+      "domain": "nz.guyker.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Customer Favorites – Shop guyker.com Deals",
+      "snippet": "Limited time offers on selected guyker.com essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR18440368770284257281",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 51,
+      "date_range": "51d · Aug 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=820352317915&uiFeatures=12,54&adGroupId=207545070668&itemIds=12292494438092169072&sig=ACiVB_x62pMF_vAzyjHZdl56OOCQUJkc6w&htmlParentId=fletch-render-8738081854823156546&responseCallback=fletchCallback8738081854823156546",
+      "domain": "ca.guyker.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "guyker.com™ – Official Store",
+      "snippet": "Explore the official guyker.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09274262872416845825",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 43,
+      "date_range": "43d · Aug 18, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=5759822352&creativeId=820312028124&uiFeatures=12,54&adGroupId=199540751896&itemIds=17535619278705928552,7607318970731628554,9682010851078412863,2644952968032997389,18170647279796705605,3858953010536671529,8863593493499295168,12395170723531632229,13767276100262011700,15850009755049664691&assets=%3DH4sIAAAAAAAAAOMy5-LkeLXlwMkprALsXJwcs67PeDyRS4CZi5NjJYTJxMXJ0dx1dtpEVgE2Lk6ODogoIwD28nkvOQAAAA&sig=ACiVB_zmGYES8HH7gZqR6jFLERVfRo80oA&htmlParentId=fletch-render-10109289138505087454&responseCallback=fletchCallback10109289138505087454",
+      "domain": "uk.guyker.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "New Arrivals From guyker.com – Shop Online Today",
+      "snippet": "Shop the official guyker.com catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": [
+        {
+          "title": "Shop guyker.com Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    }
+  ],
+  "scanned_at": "2026-10-01T08:29:42.703856",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googleguykercom.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googleguykercom.com&sz=128",
+  "brand_name": "Googleguykercom",
+  "name": "Googleguykercom",
+  "tiktok_slug": "googleguykercom",
+  "tiktok_handle": "@googleguykercom",
+  "tiktok_hashtag": "#googleguykercom",
+  "verified_domain": "googleguykercom.com",
+  "ground_truth": {
+    "brand_name": "Googleguykercom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googleguykercom.com&sz=128",
+    "tiktok_slug": "googleguykercom",
+    "canonical_domain": "googleguykercom.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:39Z"
+  }
+}

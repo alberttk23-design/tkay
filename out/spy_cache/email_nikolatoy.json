@@ -1,0 +1,30 @@
+{
+  "brand": "Nikolatoy",
+  "domain": "nikolatoy.com",
+  "velocity": "0/wk",
+  "total_emails": 0,
+  "has_data": false,
+  "campaigns": [],
+  "flow_triggers": [],
+  "cadence_calendar": [],
+  "insights": {
+    "avg_discount": "0%",
+    "top_subject_keywords": []
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+  "brand_name": "NIKOLATOY",
+  "name": "NIKOLATOY",
+  "tiktok_slug": "nikolamodel8",
+  "tiktok_handle": "@nikolamodel8",
+  "tiktok_hashtag": "#nikolamodel8",
+  "verified_domain": "nikolatoy.com",
+  "ground_truth": {
+    "brand_name": "NIKOLATOY",
+    "logo_url": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+    "tiktok_slug": "nikolamodel8",
+    "canonical_domain": "nikolatoy.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-10-01T01:36:35Z"
+  }
+}

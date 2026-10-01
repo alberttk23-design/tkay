@@ -1,0 +1,33 @@
+{
+  "brand": "Guyker",
+  "total_tiktoks": 0,
+  "videos": [],
+  "ads_ratio_pct": 0,
+  "organics_ratio_pct": 0,
+  "has_data": false,
+  "avatar_url": "https://ui-avatars.com/api/?name=Guyker&background=0284c7&color=fff",
+  "insights": {
+    "categories": [],
+    "growth": [],
+    "format_mix": {
+      "video_pct": 0,
+      "carousels_pct": 0
+    }
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=tiktokguyker.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=tiktokguyker.com&sz=128",
+  "brand_name": "Tiktokguyker",
+  "name": "Tiktokguyker",
+  "tiktok_slug": "tiktokguyker",
+  "tiktok_handle": "@tiktokguyker",
+  "tiktok_hashtag": "#tiktokguyker",
+  "verified_domain": "tiktokguyker.com",
+  "ground_truth": {
+    "brand_name": "Tiktokguyker",
+    "logo_url": "https://www.google.com/s2/favicons?domain=tiktokguyker.com&sz=128",
+    "tiktok_slug": "tiktokguyker",
+    "canonical_domain": "tiktokguyker.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:51Z"
+  }
+}

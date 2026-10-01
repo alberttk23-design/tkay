@@ -1,0 +1,1408 @@
+{
+  "query": "nikolatoy",
+  "name": "Nikolatoy",
+  "domain": "nikolatoy.com",
+  "avatarUrl": "https://ui-avatars.com/api/?name=Nikolatoy&background=0284c7&color=fff",
+  "channels": {
+    "meta": {
+      "active": 6,
+      "total": 202,
+      "delta": -21
+    },
+    "tiktok": {
+      "active": 0,
+      "total": 6
+    },
+    "google": {
+      "active": 1,
+      "total": 6
+    }
+  },
+  "tiktok": {
+    "totalTikToks": 0,
+    "views": "0",
+    "viewsExact": 0,
+    "likes": "0",
+    "likesExact": 0,
+    "peakMonth": "Chưa có dữ liệu",
+    "timeframe": "24M (2 Years)",
+    "topHashtags": [],
+    "history": [],
+    "history24m": []
+  },
+  "traffic_sales": {
+    "visitors": "45.0K",
+    "visitorsDelta": "+15%",
+    "estSalesMonth": "$41.0K",
+    "estSalesDay": "$1.4K/day",
+    "history": [
+      {
+        "month": "Mar",
+        "year": "2025",
+        "visitors": 31.9,
+        "display": "32K"
+      },
+      {
+        "month": "Apr",
+        "year": "2025",
+        "visitors": 38.2,
+        "display": "38K"
+      },
+      {
+        "month": "May",
+        "year": "2025",
+        "visitors": 62.5,
+        "display": "62K"
+      },
+      {
+        "month": "Jun",
+        "year": "2025",
+        "visitors": 50.8,
+        "display": "51K"
+      },
+      {
+        "month": "Jul",
+        "year": "2025",
+        "visitors": 39.6,
+        "display": "40K"
+      },
+      {
+        "month": "Aug",
+        "year": "2025",
+        "visitors": 32.4,
+        "display": "32K"
+      },
+      {
+        "month": "Sep",
+        "year": "2025",
+        "visitors": 27.7,
+        "display": "28K"
+      },
+      {
+        "month": "Oct",
+        "year": "2025",
+        "visitors": 37.8,
+        "display": "38K"
+      },
+      {
+        "month": "Nov",
+        "year": "2025",
+        "visitors": 69.2,
+        "display": "69K"
+      },
+      {
+        "month": "Dec",
+        "year": "2025",
+        "visitors": 68.1,
+        "display": "68K"
+      },
+      {
+        "month": "Jan",
+        "year": "2026",
+        "visitors": 44.9,
+        "display": "45K"
+      },
+      {
+        "month": "Feb",
+        "year": "2026",
+        "visitors": 36.2,
+        "display": "36K"
+      },
+      {
+        "month": "Mar",
+        "year": "2026",
+        "visitors": 46.1,
+        "display": "46K"
+      },
+      {
+        "month": "Apr",
+        "year": "2026",
+        "visitors": 48.6,
+        "display": "49K"
+      },
+      {
+        "month": "May",
+        "year": "2026",
+        "visitors": 47.4,
+        "display": "47K"
+      },
+      {
+        "month": "Jun",
+        "year": "2026",
+        "visitors": 53.2,
+        "display": "53K"
+      },
+      {
+        "month": "Jul",
+        "year": "2026",
+        "visitors": 58.5,
+        "display": "58K"
+      },
+      {
+        "month": "Aug",
+        "year": "2026",
+        "visitors": 45.0,
+        "display": "45K"
+      }
+    ],
+    "historyAll": [
+      {
+        "month": "Mar",
+        "year": "2025",
+        "visitors": 31.9,
+        "display": "32K"
+      },
+      {
+        "month": "Apr",
+        "year": "2025",
+        "visitors": 38.2,
+        "display": "38K"
+      },
+      {
+        "month": "May",
+        "year": "2025",
+        "visitors": 62.5,
+        "display": "62K"
+      },
+      {
+        "month": "Jun",
+        "year": "2025",
+        "visitors": 50.8,
+        "display": "51K"
+      },
+      {
+        "month": "Jul",
+        "year": "2025",
+        "visitors": 39.6,
+        "display": "40K"
+      },
+      {
+        "month": "Aug",
+        "year": "2025",
+        "visitors": 32.4,
+        "display": "32K"
+      },
+      {
+        "month": "Sep",
+        "year": "2025",
+        "visitors": 27.7,
+        "display": "28K"
+      },
+      {
+        "month": "Oct",
+        "year": "2025",
+        "visitors": 37.8,
+        "display": "38K"
+      },
+      {
+        "month": "Nov",
+        "year": "2025",
+        "visitors": 69.2,
+        "display": "69K"
+      },
+      {
+        "month": "Dec",
+        "year": "2025",
+        "visitors": 68.1,
+        "display": "68K"
+      },
+      {
+        "month": "Jan",
+        "year": "2026",
+        "visitors": 44.9,
+        "display": "45K"
+      },
+      {
+        "month": "Feb",
+        "year": "2026",
+        "visitors": 36.2,
+        "display": "36K"
+      },
+      {
+        "month": "Mar",
+        "year": "2026",
+        "visitors": 46.1,
+        "display": "46K"
+      },
+      {
+        "month": "Apr",
+        "year": "2026",
+        "visitors": 48.6,
+        "display": "49K"
+      },
+      {
+        "month": "May",
+        "year": "2026",
+        "visitors": 47.4,
+        "display": "47K"
+      },
+      {
+        "month": "Jun",
+        "year": "2026",
+        "visitors": 53.2,
+        "display": "53K"
+      },
+      {
+        "month": "Jul",
+        "year": "2026",
+        "visitors": 58.5,
+        "display": "58K"
+      },
+      {
+        "month": "Aug",
+        "year": "2026",
+        "visitors": 45.0,
+        "display": "45K"
+      }
+    ],
+    "history1y": [
+      {
+        "month": "Sep",
+        "year": "2025",
+        "visitors": 27.7,
+        "display": "28K"
+      },
+      {
+        "month": "Oct",
+        "year": "2025",
+        "visitors": 37.8,
+        "display": "38K"
+      },
+      {
+        "month": "Nov",
+        "year": "2025",
+        "visitors": 69.2,
+        "display": "69K"
+      },
+      {
+        "month": "Dec",
+        "year": "2025",
+        "visitors": 68.1,
+        "display": "68K"
+      },
+      {
+        "month": "Jan",
+        "year": "2026",
+        "visitors": 44.9,
+        "display": "45K"
+      },
+      {
+        "month": "Feb",
+        "year": "2026",
+        "visitors": 36.2,
+        "display": "36K"
+      },
+      {
+        "month": "Mar",
+        "year": "2026",
+        "visitors": 46.1,
+        "display": "46K"
+      },
+      {
+        "month": "Apr",
+        "year": "2026",
+        "visitors": 48.6,
+        "display": "49K"
+      },
+      {
+        "month": "May",
+        "year": "2026",
+        "visitors": 47.4,
+        "display": "47K"
+      },
+      {
+        "month": "Jun",
+        "year": "2026",
+        "visitors": 53.2,
+        "display": "53K"
+      },
+      {
+        "month": "Jul",
+        "year": "2026",
+        "visitors": 58.5,
+        "display": "58K"
+      },
+      {
+        "month": "Aug",
+        "year": "2026",
+        "visitors": 45.0,
+        "display": "45K"
+      }
+    ],
+    "history6m": [
+      {
+        "month": "Mar",
+        "year": "2026",
+        "visitors": 46.1,
+        "display": "46K"
+      },
+      {
+        "month": "Apr",
+        "year": "2026",
+        "visitors": 48.6,
+        "display": "49K"
+      },
+      {
+        "month": "May",
+        "year": "2026",
+        "visitors": 47.4,
+        "display": "47K"
+      },
+      {
+        "month": "Jun",
+        "year": "2026",
+        "visitors": 53.2,
+        "display": "53K"
+      },
+      {
+        "month": "Jul",
+        "year": "2026",
+        "visitors": 58.5,
+        "display": "58K"
+      },
+      {
+        "month": "Aug",
+        "year": "2026",
+        "visitors": 45.0,
+        "display": "45K"
+      }
+    ],
+    "history3m": [
+      {
+        "month": "Jun",
+        "year": "2026",
+        "visitors": 53.2,
+        "display": "53K"
+      },
+      {
+        "month": "Jul",
+        "year": "2026",
+        "visitors": 58.5,
+        "display": "58K"
+      },
+      {
+        "month": "Aug",
+        "year": "2026",
+        "visitors": 45.0,
+        "display": "45K"
+      }
+    ],
+    "visitorsByCountry": [
+      {
+        "countryCode": "US",
+        "percentage": 48.0
+      },
+      {
+        "countryCode": "GB",
+        "percentage": 22.0
+      },
+      {
+        "countryCode": "AU",
+        "percentage": 15.0
+      },
+      {
+        "countryCode": "CA",
+        "percentage": 10.0
+      }
+    ]
+  },
+  "kpi": {
+    "activeAds": "6 / 202 -21%",
+    "activeAdsCount": "6",
+    "totalAdsCount": "/ 202",
+    "activeAdsDelta": "-21%",
+    "adsLaunched": "66",
+    "adsLaunchedDelta": "+143%",
+    "reach": "0.6M",
+    "spend": "· $0.0M",
+    "reachSpendDelta": "+152%"
+  },
+  "kpis": {
+    "ads_launched_30d": "66",
+    "reach_estimate": "0.6M",
+    "spend_estimate": "· $0.0M",
+    "velocity_7d": 2,
+    "velocity_14d": 3
+  },
+  "total_all_time": "202",
+  "hero_landing_pages": [
+    {
+      "title": "Products",
+      "url": "https://nikolatoy.com/products",
+      "count": 6,
+      "ratio": "100%"
+    }
+  ],
+  "countriesTargeted": [
+    {
+      "countryCode": "US",
+      "percentage": 100.0
+    },
+    {
+      "countryCode": "GB",
+      "percentage": 100.0
+    },
+    {
+      "countryCode": "AU",
+      "percentage": 100.0
+    }
+  ],
+  "data_source": "live_meta_scrape",
+  "data_status": "real",
+  "history_points": [
+    {
+      "weekLabel": "Week 15 · Apr 07, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": true,
+      "date": "2026-04-07",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 16 · Apr 14, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-14",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 17 · Apr 21, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-21",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 18 · Apr 28, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-28",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 19 · May 05, 2026",
+      "monthLabel": "May",
+      "isMonthStart": true,
+      "date": "2026-05-05",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 20 · May 12, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-12",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 21 · May 19, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-19",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 22 · May 26, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-26",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 23 · Jun 02, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": true,
+      "date": "2026-06-02",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 24 · Jun 09, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-09",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 25 · Jun 16, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-16",
+      "activeAds": 6,
+      "adsLaunched": 2,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 26 · Jun 23, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-23",
+      "activeAds": 6,
+      "adsLaunched": 2,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 27 · Jun 30, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-30",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 28 · Jul 07, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": true,
+      "date": "2026-07-07",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 29 · Jul 14, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-14",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 30 · Jul 21, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-21",
+      "activeAds": 9,
+      "adsLaunched": 3,
+      "reach": "33K",
+      "spend": "$0.3K",
+      "spendDay": "$45/day",
+      "runningAds": 9
+    },
+    {
+      "weekLabel": "Week 31 · Jul 28, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-28",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 32 · Aug 04, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": true,
+      "date": "2026-08-04",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 33 · Aug 11, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-11",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 34 · Aug 18, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-18",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 35 · Aug 25, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-25",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 36 · Sep 01, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": true,
+      "date": "2026-09-01",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 37 · Sep 08, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-08",
+      "activeAds": 9,
+      "adsLaunched": 3,
+      "reach": "33K",
+      "spend": "$0.3K",
+      "spendDay": "$45/day",
+      "runningAds": 9
+    },
+    {
+      "weekLabel": "Week 38 · Sep 15, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-15",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 39 · Sep 22, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-22",
+      "activeAds": 6,
+      "adsLaunched": 10,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 40 · Sep 29, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-29",
+      "activeAds": 6,
+      "adsLaunched": 6,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    }
+  ],
+  "historyChart": [
+    {
+      "weekLabel": "Week 15 · Apr 07, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": true,
+      "date": "2026-04-07",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 16 · Apr 14, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-14",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 17 · Apr 21, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-21",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 18 · Apr 28, 2026",
+      "monthLabel": "Apr",
+      "isMonthStart": false,
+      "date": "2026-04-28",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 19 · May 05, 2026",
+      "monthLabel": "May",
+      "isMonthStart": true,
+      "date": "2026-05-05",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 20 · May 12, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-12",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 21 · May 19, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-19",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 22 · May 26, 2026",
+      "monthLabel": "May",
+      "isMonthStart": false,
+      "date": "2026-05-26",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 23 · Jun 02, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": true,
+      "date": "2026-06-02",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 24 · Jun 09, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-09",
+      "activeAds": 5,
+      "adsLaunched": 2,
+      "reach": "19K",
+      "spend": "$0.2K",
+      "spendDay": "$25/day",
+      "runningAds": 5
+    },
+    {
+      "weekLabel": "Week 25 · Jun 16, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-16",
+      "activeAds": 6,
+      "adsLaunched": 2,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 26 · Jun 23, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-23",
+      "activeAds": 6,
+      "adsLaunched": 2,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 27 · Jun 30, 2026",
+      "monthLabel": "Jun",
+      "isMonthStart": false,
+      "date": "2026-06-30",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 28 · Jul 07, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": true,
+      "date": "2026-07-07",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 29 · Jul 14, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-14",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 30 · Jul 21, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-21",
+      "activeAds": 9,
+      "adsLaunched": 3,
+      "reach": "33K",
+      "spend": "$0.3K",
+      "spendDay": "$45/day",
+      "runningAds": 9
+    },
+    {
+      "weekLabel": "Week 31 · Jul 28, 2026",
+      "monthLabel": "Jul",
+      "isMonthStart": false,
+      "date": "2026-07-28",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 32 · Aug 04, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": true,
+      "date": "2026-08-04",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 33 · Aug 11, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-11",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 34 · Aug 18, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-18",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 35 · Aug 25, 2026",
+      "monthLabel": "Aug",
+      "isMonthStart": false,
+      "date": "2026-08-25",
+      "activeAds": 7,
+      "adsLaunched": 2,
+      "reach": "26K",
+      "spend": "$0.2K",
+      "spendDay": "$35/day",
+      "runningAds": 7
+    },
+    {
+      "weekLabel": "Week 36 · Sep 01, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": true,
+      "date": "2026-09-01",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 37 · Sep 08, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-08",
+      "activeAds": 9,
+      "adsLaunched": 3,
+      "reach": "33K",
+      "spend": "$0.3K",
+      "spendDay": "$45/day",
+      "runningAds": 9
+    },
+    {
+      "weekLabel": "Week 38 · Sep 15, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-15",
+      "activeAds": 8,
+      "adsLaunched": 2,
+      "reach": "30K",
+      "spend": "$0.3K",
+      "spendDay": "$40/day",
+      "runningAds": 8
+    },
+    {
+      "weekLabel": "Week 39 · Sep 22, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-22",
+      "activeAds": 6,
+      "adsLaunched": 10,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    },
+    {
+      "weekLabel": "Week 40 · Sep 29, 2026",
+      "monthLabel": "Sep",
+      "isMonthStart": false,
+      "date": "2026-09-29",
+      "activeAds": 6,
+      "adsLaunched": 6,
+      "reach": "22K",
+      "spend": "$0.2K",
+      "spendDay": "$30/day",
+      "runningAds": 6
+    }
+  ],
+  "velocity": {
+    "7d": 2,
+    "14d": 3,
+    "30d": 6
+  },
+  "advertiserAge": "Verified Brand",
+  "total_active_ads": 6,
+  "scanned_cards_count": 6,
+  "video_ads_count": 3,
+  "image_ads_count": 3,
+  "scaling_winning_ads": 0,
+  "ads": [
+    {
+      "id": "fb_2586263655149158",
+      "platformAdId": "2586263655149158",
+      "ad_archive_id": "2586263655149158",
+      "advertiser": "Kisah Kucing with Shopee",
+      "advertiserName": "Kisah Kucing with Shopee",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Kisah%20Kucing%20with%20Shopee&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "Kisah Kucing with Shopee",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop Kisah Kucing with Shopee Online",
+      "ctaDescription": "Kalau ada meja kosong dekat bilik, boleh",
+      "description": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 Siang nmpak mcm hiasan biasa, malam boleh buka lampu terus jadi lain macam. Lagi² kalau letak dekat meja kerja atau bilik tidur, mmg bagi suasana yang lebih menarik. 🔥 👉🏻 Kalau nak tengok: https://s.shopee.com.my/5AsNL35YxB",
+      "primary_text": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 Siang nmpak mcm hiasan biasa, malam boleh buka lampu terus jadi lain macam. Lagi² kalau letak dekat meja kerja atau bilik tidur, mmg bagi suasana yang lebih menarik. 🔥 👉🏻 Kalau nak tengok: https://s.shopee.com.my/5AsNL35YxB",
+      "hook": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 S",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/813699482_961297196289860_8104446674751315315_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QyhfKdhR5ysQ7kNvwHG2aGj&_nc_oc=AdoLUnohGenrucPh5wxH9cOGfH5wl51itFnjncc4GsZF9995Arqz3wY3ciPMvKHntuw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQOUOS5Q_JQEn9uyZH5qLCmVw6Malmqw-5etzZaYvbYhGg&oe=6AC29CFE",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/813699482_961297196289860_8104446674751315315_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QyhfKdhR5ysQ7kNvwHG2aGj&_nc_oc=AdoLUnohGenrucPh5wxH9cOGfH5wl51itFnjncc4GsZF9995Arqz3wY3ciPMvKHntuw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQOUOS5Q_JQEn9uyZH5qLCmVw6Malmqw-5etzZaYvbYhGg&oe=6AC29CFE",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/813699482_961297196289860_8104446674751315315_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QyhfKdhR5ysQ7kNvwHG2aGj&_nc_oc=AdoLUnohGenrucPh5wxH9cOGfH5wl51itFnjncc4GsZF9995Arqz3wY3ciPMvKHntuw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQOUOS5Q_JQEn9uyZH5qLCmVw6Malmqw-5etzZaYvbYhGg&oe=6AC29CFE",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/813699482_961297196289860_8104446674751315315_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QyhfKdhR5ysQ7kNvwHG2aGj&_nc_oc=AdoLUnohGenrucPh5wxH9cOGfH5wl51itFnjncc4GsZF9995Arqz3wY3ciPMvKHntuw&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQOUOS5Q_JQEn9uyZH5qLCmVw6Malmqw-5etzZaYvbYhGg&oe=6AC29CFE",
+      "isActive": true,
+      "daysRunning": 11,
+      "days_active": 11,
+      "startDate": "Started running on 18 Sep 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 1,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=2586263655149158"
+    },
+    {
+      "id": "fb_1650692723109133",
+      "platformAdId": "1650692723109133",
+      "ad_archive_id": "1650692723109133",
+      "advertiser": "Kisah Kucing with Shopee",
+      "advertiserName": "Kisah Kucing with Shopee",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Kisah%20Kucing%20with%20Shopee&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "Kisah Kucing with Shopee",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop Kisah Kucing with Shopee Online",
+      "ctaDescription": "Kalau ada meja kosong dekat bilik, boleh",
+      "description": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 Siang nmpak mcm hiasan biasa, malam boleh buka lampu terus jadi lain macam. Lagi² kalau letak dekat meja kerja atau bilik tidur, mmg bagi suasana yang lebih menarik. 🔥 👉🏻 Kalau nak tengok: https://s.shopee.com.my/5AsNL35YxB",
+      "primary_text": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 Siang nmpak mcm hiasan biasa, malam boleh buka lampu terus jadi lain macam. Lagi² kalau letak dekat meja kerja atau bilik tidur, mmg bagi suasana yang lebih menarik. 🔥 👉🏻 Kalau nak tengok: https://s.shopee.com.my/5AsNL35YxB",
+      "hook": "Kalau ada meja kosong dekat bilik, boleh letak benda ni. 😍 S",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/815065380_1851740376206076_6063337543642881375_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8hOF9VhBOMIQ7kNvwH9O3fl&_nc_oc=AdpIb_C-7CPLgV0cKXGly7QbMHw98fM_o6GXNF6Gd9OJ0fGpEKcBHDJ41y4WTfUllFg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQNbZFjDdokQitnMcF1xkfQ_pioqj9014-LFGR6Xa9lAtQ&oe=6AC29EA0",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/815065380_1851740376206076_6063337543642881375_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8hOF9VhBOMIQ7kNvwH9O3fl&_nc_oc=AdpIb_C-7CPLgV0cKXGly7QbMHw98fM_o6GXNF6Gd9OJ0fGpEKcBHDJ41y4WTfUllFg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQNbZFjDdokQitnMcF1xkfQ_pioqj9014-LFGR6Xa9lAtQ&oe=6AC29EA0",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/815065380_1851740376206076_6063337543642881375_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8hOF9VhBOMIQ7kNvwH9O3fl&_nc_oc=AdpIb_C-7CPLgV0cKXGly7QbMHw98fM_o6GXNF6Gd9OJ0fGpEKcBHDJ41y4WTfUllFg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQNbZFjDdokQitnMcF1xkfQ_pioqj9014-LFGR6Xa9lAtQ&oe=6AC29EA0",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/815065380_1851740376206076_6063337543642881375_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=8hOF9VhBOMIQ7kNvwH9O3fl&_nc_oc=AdpIb_C-7CPLgV0cKXGly7QbMHw98fM_o6GXNF6Gd9OJ0fGpEKcBHDJ41y4WTfUllFg&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQNbZFjDdokQitnMcF1xkfQ_pioqj9014-LFGR6Xa9lAtQ&oe=6AC29EA0",
+      "isActive": true,
+      "daysRunning": 11,
+      "days_active": 11,
+      "startDate": "Started running on 18 Sep 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 2,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1650692723109133"
+    },
+    {
+      "id": "fb_1803799174385513",
+      "platformAdId": "1803799174385513",
+      "ad_archive_id": "1803799174385513",
+      "advertiser": "แจกโปร",
+      "advertiserName": "แจกโปร",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=%E0%B9%81%E0%B8%88%E0%B8%81%E0%B9%82%E0%B8%9B%E0%B8%A3&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "แจกโปร",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop แจกโปร Online",
+      "ctaDescription": "Official Store 🧡: https://s.shopee.co.th",
+      "description": "Official Store 🧡: https://s.shopee.co.th/8KpYUFUrj7 🎴 สายคอลญี่ปุ่น ใบที่ตามหาอาจอยู่ในโปรนี้! รวมไอเทมสะสมสายอนิเมะ ทั้งการ์ด PTCG ญี่ปุ่นแท้, One Piece OP-13 / OP-14 และกรอบฟิกเกอร์อนิเมะ ดีลนี้เหมาะมากสำหรับสายเปิดซอง สายเก็บ Box หรือคนที่อยากเริ่มสะสมแบบจริงจัง",
+      "primary_text": "Official Store 🧡: https://s.shopee.co.th/8KpYUFUrj7 🎴 สายคอลญี่ปุ่น ใบที่ตามหาอาจอยู่ในโปรนี้! รวมไอเทมสะสมสายอนิเมะ ทั้งการ์ด PTCG ญี่ปุ่นแท้, One Piece OP-13 / OP-14 และกรอบฟิกเกอร์อนิเมะ ดีลนี้เหมาะมากสำหรับสายเปิดซอง สายเก็บ Box หรือคนที่อยากเริ่มสะสมแบบจริงจัง",
+      "hook": "Official Store 🧡: https://s.shopee.co.th/8KpYUFUrj7 🎴 สายคอล",
+      "mediaType": "image",
+      "type": "image",
+      "mediaUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/810384267_1083324500850307_8622077142757355992_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3NGTwcrIEuYQ7kNvwEy8bEQ&_nc_oc=AdrF9S8jh4zuUNeW8jG4YtloNg_tUsMr9BvOD_OqKwKs382mzBZ3QFw4PtS2VMpp64s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPtknCMzijOH1xmTr6TgWf42z7BYHmK88uVgBcZ4Kr1Gw&oe=6AC29967",
+      "video_url": "",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/810384267_1083324500850307_8622077142757355992_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3NGTwcrIEuYQ7kNvwEy8bEQ&_nc_oc=AdrF9S8jh4zuUNeW8jG4YtloNg_tUsMr9BvOD_OqKwKs382mzBZ3QFw4PtS2VMpp64s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPtknCMzijOH1xmTr6TgWf42z7BYHmK88uVgBcZ4Kr1Gw&oe=6AC29967",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/810384267_1083324500850307_8622077142757355992_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3NGTwcrIEuYQ7kNvwEy8bEQ&_nc_oc=AdrF9S8jh4zuUNeW8jG4YtloNg_tUsMr9BvOD_OqKwKs382mzBZ3QFw4PtS2VMpp64s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPtknCMzijOH1xmTr6TgWf42z7BYHmK88uVgBcZ4Kr1Gw&oe=6AC29967",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/810384267_1083324500850307_8622077142757355992_n.jpg?stp=dst-jpg_s60x60_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=3NGTwcrIEuYQ7kNvwEy8bEQ&_nc_oc=AdrF9S8jh4zuUNeW8jG4YtloNg_tUsMr9BvOD_OqKwKs382mzBZ3QFw4PtS2VMpp64s&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPtknCMzijOH1xmTr6TgWf42z7BYHmK88uVgBcZ4Kr1Gw&oe=6AC29967",
+      "isActive": true,
+      "daysRunning": 13,
+      "days_active": 13,
+      "startDate": "Started running on 16 Sep 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 3,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1803799174385513"
+    },
+    {
+      "id": "fb_1770961150614871",
+      "platformAdId": "1770961150614871",
+      "ad_archive_id": "1770961150614871",
+      "advertiser": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Exclusive%20Toys%20%3A%20%E0%B9%82%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ Online",
+      "ctaDescription": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎",
+      "description": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:22 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "primary_text": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:22 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "hook": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOq2miVOIhL5iBC0RSdcGFaeA01Q0xDEwhj6-GdidIfklVABNj7EtrXAIj-_59YTDr_Ua86DqDCxD8Rd1P7raXnE2jujM5MfK6we4hmxw.mp4?_nc_cat=108&_nc_oc=AdpjHlZMPN5qWZpoJfkeBmbpM2J27zCosw_EqRenp1kNgPxbQVTtNRs3km05ex_pzOs&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=brZW_zwMK2oQ7kNvwE36a5n&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQ0MzUyMzM0Nzg3ODIyNiwiYXNzZXRfYWdlX2RheXMiOjExLCJ2aV91c2VjYXNlX2lkIjoxMjM3MywiZHVyYXRpb25fcyI6MjIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPOe0jKa60wmFg2LmUmjhDSp-WbLOVNVY_0Tg76abKrTA&oe=6AC29B4A",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQOq2miVOIhL5iBC0RSdcGFaeA01Q0xDEwhj6-GdidIfklVABNj7EtrXAIj-_59YTDr_Ua86DqDCxD8Rd1P7raXnE2jujM5MfK6we4hmxw.mp4?_nc_cat=108&_nc_oc=AdpjHlZMPN5qWZpoJfkeBmbpM2J27zCosw_EqRenp1kNgPxbQVTtNRs3km05ex_pzOs&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=brZW_zwMK2oQ7kNvwE36a5n&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTQ0MzUyMzM0Nzg3ODIyNiwiYXNzZXRfYWdlX2RheXMiOjExLCJ2aV91c2VjYXNlX2lkIjoxMjM3MywiZHVyYXRpb25fcyI6MjIsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQPOe0jKa60wmFg2LmUmjhDSp-WbLOVNVY_0Tg76abKrTA&oe=6AC29B4A",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/814952633_2457252301464851_8364996357646647503_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2IM913x8iYYQ7kNvwH9VJqV&_nc_oc=AdpvrjBSPG4OzzErdrHZSCPgVTLjYuYq23yy210XEsiV7AJI4Zc-m09OYvkCiCOgVU4&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPfFORu7Ra1eWN85k2Up9Rp43c5oD22SNscGDcGCAPFcg&oe=6AC2A69D",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/814952633_2457252301464851_8364996357646647503_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2IM913x8iYYQ7kNvwH9VJqV&_nc_oc=AdpvrjBSPG4OzzErdrHZSCPgVTLjYuYq23yy210XEsiV7AJI4Zc-m09OYvkCiCOgVU4&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPfFORu7Ra1eWN85k2Up9Rp43c5oD22SNscGDcGCAPFcg&oe=6AC2A69D",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/814952633_2457252301464851_8364996357646647503_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=2IM913x8iYYQ7kNvwH9VJqV&_nc_oc=AdpvrjBSPG4OzzErdrHZSCPgVTLjYuYq23yy210XEsiV7AJI4Zc-m09OYvkCiCOgVU4&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPfFORu7Ra1eWN85k2Up9Rp43c5oD22SNscGDcGCAPFcg&oe=6AC2A69D",
+      "isActive": true,
+      "daysRunning": 11,
+      "days_active": 11,
+      "startDate": "Started running on 18 Sep 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 4,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1770961150614871"
+    },
+    {
+      "id": "fb_1250915150546145",
+      "platformAdId": "1250915150546145",
+      "ad_archive_id": "1250915150546145",
+      "advertiser": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Exclusive%20Toys%20%3A%20%E0%B9%82%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ Online",
+      "ctaDescription": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎",
+      "description": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:19 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "primary_text": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:19 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "hook": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQN4ikdNzkPUZGF_S8LcmFE60_5ClxF8ehErpdo3nzJBjVjEO2fyLiFD1oZZXMtvWVZMzt5myOYn4LduB6XksfpEc0eRbbLxrdH1uX5XAA.mp4?_nc_cat=109&_nc_oc=AdocJzIZTmW4zS6p8_rTUTG2kfNcC3WRa5fzjTDPPllmnv5T7kTLrj3sPX8F7fZ9tTE&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=AfCkJ5CTAosQ7kNvwFJzha3&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTExOTIyNjkxNzM2ODg2NiwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEyMzczLCJkdXJhdGlvbl9zIjoxOSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOsRz_tEt1b4_pvzNx8Mg0_s6Y03KETSxIJT6CVgBC22g&oe=6AC2A39D",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQN4ikdNzkPUZGF_S8LcmFE60_5ClxF8ehErpdo3nzJBjVjEO2fyLiFD1oZZXMtvWVZMzt5myOYn4LduB6XksfpEc0eRbbLxrdH1uX5XAA.mp4?_nc_cat=109&_nc_oc=AdocJzIZTmW4zS6p8_rTUTG2kfNcC3WRa5fzjTDPPllmnv5T7kTLrj3sPX8F7fZ9tTE&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=AfCkJ5CTAosQ7kNvwFJzha3&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTExOTIyNjkxNzM2ODg2NiwiYXNzZXRfYWdlX2RheXMiOjQsInZpX3VzZWNhc2VfaWQiOjEyMzczLCJkdXJhdGlvbl9zIjoxOSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQOsRz_tEt1b4_pvzNx8Mg0_s6Y03KETSxIJT6CVgBC22g&oe=6AC2A39D",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825273247_2309323859607192_562013807726761926_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MF-agBFPcfYQ7kNvwHcQcyH&_nc_oc=AdpVl-WDrkT9I_VarkjQXeQUhIACSBUQUjge2Tp9IfLHonnVcDOSI6Ao8DU5ksleDQk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPuhhUM7lR7OCmT2i2QdTRHP-QYBWt6x1YNTwey2U_f3Q&oe=6AC29D51",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825273247_2309323859607192_562013807726761926_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MF-agBFPcfYQ7kNvwHcQcyH&_nc_oc=AdpVl-WDrkT9I_VarkjQXeQUhIACSBUQUjge2Tp9IfLHonnVcDOSI6Ao8DU5ksleDQk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPuhhUM7lR7OCmT2i2QdTRHP-QYBWt6x1YNTwey2U_f3Q&oe=6AC29D51",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825273247_2309323859607192_562013807726761926_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=MF-agBFPcfYQ7kNvwHcQcyH&_nc_oc=AdpVl-WDrkT9I_VarkjQXeQUhIACSBUQUjge2Tp9IfLHonnVcDOSI6Ao8DU5ksleDQk&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQPuhhUM7lR7OCmT2i2QdTRHP-QYBWt6x1YNTwey2U_f3Q&oe=6AC29D51",
+      "isActive": true,
+      "daysRunning": 4,
+      "days_active": 4,
+      "startDate": "Started running on 25 Sep 2026",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 5,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1250915150546145"
+    },
+    {
+      "id": "fb_1409111688100508",
+      "platformAdId": "1409111688100508",
+      "ad_archive_id": "1409111688100508",
+      "advertiser": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "advertiserAvatarUrl": "https://ui-avatars.com/api/?name=Exclusive%20Toys%20%3A%20%E0%B9%82%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8&background=0D8ABC&color=fff",
+      "domain": "nikolatoy.com",
+      "siteName": "Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "landingUrl": "https://nikolatoy.com/products",
+      "landing_url": "https://nikolatoy.com/products",
+      "ctaDomain": "NIKOLATOY.COM",
+      "ctaText": "Open Drop-down\n​",
+      "cta_type": "Open Drop-down\n​",
+      "cta_title": "Shop Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ Online",
+      "ctaDescription": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎",
+      "description": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:23 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "primary_text": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอร์พังก์งานโลหะแข็งแรงพร้อมควบคุมเดินหน้าและถอยหลังแยกซ้ายขวาได้อย่างอิสระ , ผลิตจากวัสดุ PLA พร้อมชิ้นส่วนอิเล็กทรอนิกส์โชว์รายละเอียดกลไก , ขนาดตัวรถอยู่ที่ 6.5 x 6.5 x 3 เซนติเมตร เล็กกะทัดรัดเล่นสนุกและตั้งโชว์บนโต๊ะได้อย่างลงตัว ราคาเพียงชุดละ 650.- และ มัดจำเพียง 200.- สินค้าล็อตแรกเริ่มจัดส่งช่วงปลายเดือนกันยายน สั่งจองตอนนี้เพียงพิมพ์ ”+1“ เราจะทักหาคุณทันที ! 0:00 / 0:23 Exclusive Toys : โมเดลฟิกเกอร์จากต่างประเทศ",
+      "hook": "\" 𝐍𝐈𝐊𝐎𝐋𝐀𝐓𝐎𝐘 : 𝐌𝐈𝐍𝐈 𝐌𝐄𝐓𝐀𝐋 𝐓𝐑𝐀𝐂𝐊𝐄𝐃 𝐓𝐀𝐍𝐊 𝐑𝐎𝐁𝐎𝐓 \" งานดีไซน์ไซเบอ",
+      "mediaType": "video",
+      "type": "video",
+      "mediaUrl": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMXkA2ioYus_0D5f-xWWNdEKtfgvfnnzspQJi-Cg_WJbiKWHHl8-Ap1wke982T0VYTNQJw0Ok9ZmkiAMVDGDL9zNLofTwyS1-Eef5TAEA.mp4?_nc_cat=109&_nc_oc=AdpSYwMAREtr4CFaFmq8LItjcgtdGqivLOwT6Le4x7vQa9rl9NHPBtHt3iJqVoiwiwQ&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Cf_1Wwd4LzMQ7kNvwGwS8Zw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTEwNzQzNzE3ODI5NDU2NywiYXNzZXRfYWdlX2RheXMiOjEsInZpX3VzZWNhc2VfaWQiOjEyMzczLCJkdXJhdGlvbl9zIjoyMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMRE587vh5-hP-e8sdhrIVmTt5XRvfEPf22wkNj9TOctw&oe=6AC2B169",
+      "video_url": "https://video.fsgn19-1.fna.fbcdn.net/o1/v/t2/f2/m412/AQMXkA2ioYus_0D5f-xWWNdEKtfgvfnnzspQJi-Cg_WJbiKWHHl8-Ap1wke982T0VYTNQJw0Ok9ZmkiAMVDGDL9zNLofTwyS1-Eef5TAEA.mp4?_nc_cat=109&_nc_oc=AdpSYwMAREtr4CFaFmq8LItjcgtdGqivLOwT6Le4x7vQa9rl9NHPBtHt3iJqVoiwiwQ&_nc_sid=ef5aa3&_nc_ht=video.fsgn19-1.fna.fbcdn.net&_nc_ohc=Cf_1Wwd4LzMQ7kNvwGwS8Zw&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuMzYwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTEwNzQzNzE3ODI5NDU2NywiYXNzZXRfYWdlX2RheXMiOjEsInZpX3VzZWNhc2VfaWQiOjEyMzczLCJkdXJhdGlvbl9zIjoyMiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&_nc_map=urlgen_bucketless&_nc_zt=28&oh=00_AQMRE587vh5-hP-e8sdhrIVmTt5XRvfEPf22wkNj9TOctw&oe=6AC2B169",
+      "image_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825281663_4603272559942705_4479605231073229852_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9X6pItlp5KcQ7kNvwGzcxGA&_nc_oc=Adq4QYeDxLNJT8rR-T8tps12tKdecdY1b_7-4PnrH0Ohm81mnngSpAKq9Xm_MqGoeKE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQP4LhTfQjHdAFEEDrbGrxogDFfSvDRlYG2cj5cjKQx6ug&oe=6AC29C5C",
+      "thumbnailUrl": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825281663_4603272559942705_4479605231073229852_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9X6pItlp5KcQ7kNvwGzcxGA&_nc_oc=Adq4QYeDxLNJT8rR-T8tps12tKdecdY1b_7-4PnrH0Ohm81mnngSpAKq9Xm_MqGoeKE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQP4LhTfQjHdAFEEDrbGrxogDFfSvDRlYG2cj5cjKQx6ug&oe=6AC29C5C",
+      "thumbnail_url": "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.35426-6/825281663_4603272559942705_4479605231073229852_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9X6pItlp5KcQ7kNvwGzcxGA&_nc_oc=Adq4QYeDxLNJT8rR-T8tps12tKdecdY1b_7-4PnrH0Ohm81mnngSpAKq9Xm_MqGoeKE&_nc_zt=14&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=POhqGj1ftVPrDfedhCDpSg&_nc_ss=78289&oh=00_AQP4LhTfQjHdAFEEDrbGrxogDFfSvDRlYG2cj5cjKQx6ug&oe=6AC29C5C",
+      "isActive": true,
+      "daysRunning": 1,
+      "days_active": 1,
+      "startDate": "Started running on 28 Sep 2026 · Total active time 20 hrs",
+      "euReach": 15,
+      "targetCountryCodes": [
+        "US",
+        "GB",
+        "AU"
+      ],
+      "duplicates": 1,
+      "adOrder": 6,
+      "adRankPopulation": 6,
+      "adRankDelta7d": null,
+      "hasLowImpressions": true,
+      "pageCreatedAt": "2021-01-15T00:00:00",
+      "pageFollowers": 45000,
+      "pageActiveAds": 6,
+      "pageTotalAds": 30,
+      "adsOnThisLpCount": 3,
+      "adsOnThisLpTotal": 6,
+      "adsOnThisLpPercent": 45,
+      "ad_library_url": "https://www.facebook.com/ads/library/?id=1409111688100508"
+    }
+  ],
+  "logo_url": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+  "brand_name": "NIKOLATOY",
+  "tiktok_slug": "nikolamodel8",
+  "tiktok_handle": "@nikolamodel8",
+  "tiktok_hashtag": "#nikolamodel8",
+  "verified_domain": "nikolatoy.com",
+  "ground_truth": {
+    "brand_name": "NIKOLATOY",
+    "logo_url": "https://www.google.com/s2/favicons?domain=nikolatoy.com&sz=128",
+    "tiktok_slug": "nikolamodel8",
+    "canonical_domain": "nikolatoy.com",
+    "_source": "website_crawl",
+    "_healed_at": "2026-10-01T01:36:49Z"
+  }
+}

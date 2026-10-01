@@ -7923,7 +7923,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     // Generate Single Google Card HTML for 4 Formats (Text SERP, Shopping, Image, Video)
     function generateGoogleAdCardHtml(card, idx, isRanking = false, rank = 1) {
       const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (card.domain || (currentData && currentData.domain) || 'theoodie.com');
+      const domain = (card.domain || (currentData && currentData.domain) || 'brand.com');
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
 
       const isActive = card.active !== false;
@@ -8437,7 +8437,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       grid.innerHTML = '';
 
       const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (currentData && currentData.domain) || 'theoodie.com';
+      const domain = (currentData && currentData.domain) || 'brand.com';
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
 
       // Filter from authentic Google cards first
@@ -9244,11 +9244,25 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         }
         currentData = data;
         renderDashboard(data);
-        loadGoogleAdsData(cleanQ, forceRefresh);
-        loadEmailIntelligenceData(cleanQ, forceRefresh);
-        loadContentsData(cleanQ, forceRefresh);
-        loadMetaRankingData(cleanQ, forceRefresh);
-        loadTikTokIntelligenceData(cleanQ, forceRefresh);
+
+        // ── Smart Query Normalizer using Ground Truth ────────────────────────
+        // /api/scan returns ground_truth: { brand_name, tiktok_slug, canonical_domain }
+        // Each channel gets the RIGHT query format:
+        //  - Meta Ranking / Google Ads / Contents → verified brand_name
+        //  - TikTok                              → tiktok_slug (no .com suffix)
+        //  - Emails / Store Intel                → canonical_domain
+        const gt = data.ground_truth || {};
+        const gtBrandName  = gt.brand_name || data.brand_name || data.name || cleanQ;
+        const gtTikTokSlug = gt.tiktok_slug || data.tiktok_slug || cleanQ.replace(/[.](com|co|io|org|net|vn|shop|store|us|uk|de|fr|ca|au)$/, '').replace(/[^a-z0-9]/g, '');
+        const gtDomain     = gt.canonical_domain || data.verified_domain || data.domain || cleanQ;
+
+        console.log('[GROUND TRUTH ROUTE] brand="' + gtBrandName + '" tiktok="#' + gtTikTokSlug + '" domain=' + gtDomain);
+
+        loadGoogleAdsData(gtBrandName, forceRefresh);
+        loadEmailIntelligenceData(gtDomain, forceRefresh);
+        loadContentsData(gtBrandName, forceRefresh);
+        loadMetaRankingData(gtBrandName, forceRefresh);
+        loadTikTokIntelligenceData(gtTikTokSlug, forceRefresh);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {
@@ -10746,6 +10760,51 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 </html>
 """
 
+def sanitize_brand_dataset(data: dict, query: str) -> dict:
+    """
+    Zero-Hardcode Sanitization Guard:
+    Scans brand dataset before saving to cache disk.
+    Ensures that ads, domains, and URLs belong exclusively to the queried brand,
+    preventing cross-brand data contamination (e.g. from Oodie, Loop, etc.).
+    """
+    if not isinstance(data, dict):
+        return data
+
+    clean_dom = query.strip().lower().replace("https://", "").replace("http://", "").split("/")[0].split("?")[0]
+    if "." not in clean_dom:
+        clean_slug = re.sub(r'[^a-z0-9]', '', clean_dom)
+        clean_dom = f"{clean_slug}.com" if clean_slug else "brand.com"
+
+    SHOWCASE_DOMAINS = ["theoodie.com", "loopearplugs.com"]
+    target_is_showcase = any(sd in clean_dom.lower() for sd in SHOWCASE_DOMAINS)
+    current_dom = (data.get("domain") or "").lower().strip()
+
+    # Set authoritative brand domain if missing, generic, or leaked from showcase
+    if not current_dom or current_dom == "brand.com" or (not target_is_showcase and any(sd in current_dom for sd in SHOWCASE_DOMAINS)):
+        data["domain"] = clean_dom
+
+    active_dom = data.get("domain", clean_dom)
+    is_showcase = any(sd in active_dom.lower() for sd in SHOWCASE_DOMAINS)
+
+    if not is_showcase and "ads" in data and isinstance(data["ads"], list):
+        for ad in data["ads"]:
+            if not isinstance(ad, dict):
+                continue
+            # Correct domain / ctaDomain
+            for d_key in ["domain", "ctaDomain"]:
+                v = str(ad.get(d_key, ""))
+                if any(sd in v.lower() for sd in SHOWCASE_DOMAINS):
+                    ad[d_key] = active_dom.upper() if d_key == "ctaDomain" else active_dom
+
+            # Correct landing URLs
+            for url_key in ["landingUrl", "landing_url"]:
+                v = str(ad.get(url_key, ""))
+                if any(sd in v.lower() for sd in SHOWCASE_DOMAINS) or "hooded-blankets" in v:
+                    ad[url_key] = f"https://{active_dom}/products"
+
+    return data
+
+
 class TrendTrackHandler(BaseHTTPRequestHandler):
     def log_message(self, format, *args):
         sys.stderr.write(f"[{self.log_date_time_string()}] {format%args}\n")
@@ -11059,7 +11118,54 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
             print(f"🔍 [LIVE SCAN / REFRESH] Quét Meta Ad Library cho: query='{query}' (force_refresh={force_refresh})...")
             try:
-                data = scan_brand_ads(query, max_ads=30)
+                # ── STEP 0: Extract Website Ground Truth ──────────────────────────
+                import store_intelligence as _si_gt
+                _gt_domain = norm_q if '.' in norm_q else (clean_brand_slug + '.com')
+                ground_truth = _si_gt.extract_website_ground_truth(_gt_domain)
+                verified_brand_name = ground_truth.get("brand_name") or query
+                verified_logo_url   = ground_truth.get("logo_url") or ""
+                verified_tiktok_slug = ground_truth.get("tiktok_slug") or clean_brand_slug
+                verified_domain     = ground_truth.get("canonical_domain") or _gt_domain
+                print(f"🌐 [GROUND TRUTH] brand='{verified_brand_name}' logo='{verified_logo_url[:60]}...' tiktok='#{verified_tiktok_slug}'")
+
+                # ── STEP 1: Scan Meta with verified brand name ──
+                data = scan_brand_ads(verified_brand_name, max_ads=30, official_domain=verified_domain)
+
+                # ── STEP 2: Inject ground truth into result ──────────────────────
+                if verified_logo_url and not verified_logo_url.startswith("https://ui-avatars"):
+                    data["logo_url"]   = verified_logo_url
+                    data["brand_logo"] = verified_logo_url
+                    data["avatarUrl"]  = verified_logo_url
+                data["brand_name"]     = verified_brand_name
+                data["name"]           = data.get("name") or verified_brand_name
+                data["tiktok_slug"]    = verified_tiktok_slug
+                data["tiktok_handle"]  = f"@{verified_tiktok_slug}"
+                data["tiktok_hashtag"] = f"#{verified_tiktok_slug}"
+                data["verified_domain"] = verified_domain
+                data["ground_truth"]   = {
+                    "brand_name": verified_brand_name,
+                    "logo_url":   verified_logo_url,
+                    "tiktok_slug": verified_tiktok_slug,
+                    "canonical_domain": verified_domain,
+                    "facebook_handle": ground_truth.get("facebook_handle"),
+                    "facebook_url": ground_truth.get("facebook_url"),
+                    "instagram_handle": ground_truth.get("instagram_handle"),
+                    "_source": ground_truth.get("_source", "unknown")
+                }
+
+                # ── STEP 3: Augment store intelligence ───────────────────────────
+                try:
+                    intel_prods = _si_gt.fetch_store_products(verified_domain)
+                    data["products"] = data.get("products") or intel_prods.get("products", [])
+                    data["products_catalog"] = data["products"]
+                    data["total_in_catalog"] = intel_prods.get("total_in_catalog", len(data["products"]))
+                    tech = _si_gt.detect_store_apps_and_pixels(verified_domain)
+                    data["apps"] = data.get("apps") or tech.get("apps", [])
+                    data["pixels"] = data.get("pixels") or tech.get("pixels", [])
+                    data["similar_shops"] = data.get("similar_shops") or _si_gt.get_top_5_similar_shops(verified_brand_name, verified_domain)
+                except Exception as _e_aug:
+                    print(f"⚠️ [STORE INTEL AUGMENT] {_e_aug}")
+
                 with open(cache_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
 

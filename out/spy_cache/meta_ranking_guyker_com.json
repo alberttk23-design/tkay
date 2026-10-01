@@ -1,0 +1,36 @@
+{
+  "brand": "Guyker.Com",
+  "domain": "guyker_com.com",
+  "total_active_ads": 0,
+  "total_historical_ads": 0,
+  "eu_uk_count": 0,
+  "eu_uk_pct": 0,
+  "has_data": false,
+  "dates": [],
+  "modes": {
+    "biggest_gain": [],
+    "top_ranked": [],
+    "longest_active": [],
+    "most_reused": []
+  },
+  "charts": {
+    "biggest_gain": [],
+    "top_ranked": []
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=guyker_com.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=guyker_com.com&sz=128",
+  "brand_name": "Guykercom",
+  "name": "Guykercom",
+  "tiktok_slug": "guykercom",
+  "tiktok_handle": "@guykercom",
+  "tiktok_hashtag": "#guykercom",
+  "verified_domain": "guyker_com.com",
+  "ground_truth": {
+    "brand_name": "Guykercom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=guyker_com.com&sz=128",
+    "tiktok_slug": "guykercom",
+    "canonical_domain": "guyker_com.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:45Z"
+  }
+}

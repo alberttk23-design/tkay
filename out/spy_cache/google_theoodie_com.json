@@ -1,0 +1,2199 @@
+{
+  "brand": "The Oodie",
+  "found": true,
+  "data_source": "live_rpc",
+  "advertiser": {
+    "advertiser_id": "AR07524972952463343617",
+    "advertiser_name": "Davie Group Trading (Australia) Pty Ltd",
+    "country": "AU",
+    "ad_count_min": "46",
+    "ad_count_max": "46",
+    "verified_since": "Seen since Dec 29, 2022",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR07524972952463343617?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "Nov 2018",
+    "monthly_visitors": "~ 1.8M / mo",
+    "google_ads_count": "2.6K ads",
+    "visitor_countries": [
+      {
+        "country": "Australia",
+        "flag": "🇦🇺",
+        "pct": 48
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 24
+      },
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 18
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 10
+      }
+    ],
+    "best_sellers": [
+      {
+        "rank": 1,
+        "title": "The Oodie Original Wearable Blanket",
+        "price": "$89.00",
+        "image_url": "/static/google_creatives/miffy_shopping.svg"
+      },
+      {
+        "rank": 2,
+        "title": "I Love Dogs Oodie Wearable Blanket",
+        "price": "$89.00",
+        "image_url": "/static/google_creatives/naruto_itachi.svg"
+      },
+      {
+        "rank": 3,
+        "title": "Avocado Oodie Original Blanket",
+        "price": "$89.00",
+        "image_url": "/static/google_creatives/moss_green.svg"
+      },
+      {
+        "rank": 4,
+        "title": "Koala Oodie Original Sherpa Fleece",
+        "price": "$89.00",
+        "image_url": "/static/google_creatives/pastel_wave.svg"
+      },
+      {
+        "rank": 5,
+        "title": "Pizza Oodie Wearable Blanket",
+        "price": "$89.00",
+        "image_url": "/static/google_creatives/miffy_shopping.svg"
+      }
+    ]
+  },
+  "total_analyzed": 42,
+  "total_estimated": 2555,
+  "active_ads": 542,
+  "format_mix_total": 1891,
+  "format_mix": {
+    "Video": {
+      "count": 9,
+      "pct": 21.4
+    },
+    "Text": {
+      "count": 22,
+      "pct": 52.4
+    },
+    "Image": {
+      "count": 11,
+      "pct": 26.2
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 22,
+      "pct": 52.4
+    },
+    "Other": {
+      "count": 7,
+      "pct": 16.7
+    },
+    "YouTube": {
+      "count": 9,
+      "pct": 21.4
+    },
+    "Shopping": {
+      "count": 4,
+      "pct": 9.5
+    },
+    "Unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 9,
+      "pct": 21.4
+    },
+    "31-90 d": {
+      "count": 7,
+      "pct": 16.7
+    },
+    "91-180 d": {
+      "count": 7,
+      "pct": 16.7
+    },
+    "181-365 d": {
+      "count": 13,
+      "pct": 31.0
+    },
+    "365 d +": {
+      "count": 6,
+      "pct": 14.3
+    }
+  },
+  "country_mix": {
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 874,
+      "pct": 39.3
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "count": 874,
+      "pct": 39.3
+    },
+    "NZ": {
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "count": 474,
+      "pct": 21.3
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR06091998182630227969",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1267,
+      "date_range": "1267d · Apr 11, 2023 → now",
+      "reach_tag": "350K-400K",
+      "first_shown": "Apr 11, 2023",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=807739071109&uiFeatures=12,54&adGroupId=196528644695&itemIds=7019005456294304496&sig=ACiVB_xUH9J6hWAg_5e2z8Z-hswZ1sPMOw&htmlParentId=fletch-render-764168253592439969&responseCallback=fletchCallback764168253592439969",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02776462195247022081",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1092,
+      "date_range": "1092d · Oct 04, 2023 → now",
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 04, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16554349975288460105",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06918416093006528513",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1084,
+      "date_range": "1084d · Oct 12, 2023 → now",
+      "reach_tag": "350K-400K",
+      "first_shown": "Oct 12, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12282240194920667320",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_64",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1084,
+      "date_range": "1084d · Oct 12, 2023 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Oct 12, 2023",
+      "last_shown": "now",
+      "image_url": null,
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie™ Originals - Guaranteed Comfort",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Shop oversized cloud blankets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Cooling bamboo nightwear"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_63",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 940,
+      "date_range": "940d · Mar 04, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 04, 2024",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/moss_green.svg",
+      "domain": "gb.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "The Oodie Classic Collection",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_62",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 890,
+      "date_range": "890d · Apr 23, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Apr 23, 2024",
+      "last_shown": "now",
+      "image_url": "/static/emails/card_1.png",
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Stay Warm Everywhere with The Oodie",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR05093928210597412865",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 849,
+      "date_range": "849d · Jun 03, 2024 → now",
+      "reach_tag": "350K-400K",
+      "first_shown": "Jun 03, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8618993767203543068",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07449520083698712577",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 768,
+      "date_range": "768d · Aug 23, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Aug 23, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13909984466849792826",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_61",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 710,
+      "date_range": "710d · Oct 20, 2024 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Oct 20, 2024",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/miffy_shopping.svg",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Tie Dye Oodie Blanket Hoodie",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_60",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 620,
+      "date_range": "620d · Jan 18, 2025 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jan 18, 2025",
+      "last_shown": "now",
+      "image_url": null,
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie Official Store - Free Express Delivery",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Shop oversized cloud blankets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Cooling bamboo nightwear"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11917040714472488961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 587,
+      "date_range": "587d · Feb 20, 2025 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 20, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=733871318768&uiFeatures=12,54&adGroupId=180483394972&itemIds=6616189457536058052&sig=ACiVB_yydn0eMAsEh6Mwc5H7fUh1OhFHPA&htmlParentId=fletch-render-14839066205943845762&responseCallback=fletchCallback14839066205943845762",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_59",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 450,
+      "date_range": "450d · Jul 07, 2025 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 07, 2025",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/naruto_itachi.svg",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Sherpa Fleece Luxury Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_58",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 310,
+      "date_range": "310d · Nov 24, 2025 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Nov 24, 2025",
+      "last_shown": "now",
+      "image_url": null,
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Shop The Oodie - Buy Now Pay Later",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Shop oversized cloud blankets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Cooling bamboo nightwear"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00553042236963553281",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 300,
+      "date_range": "300d · Dec 04, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/237346350068266837",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR18117883976952578049",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 300,
+      "date_range": "300d · Dec 04, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3097378147&creativeId=786880713341&uiFeatures=12,54&adGroupId=190366346860&itemIds=1759278417338131254&sig=ACiVB_yVeBuE8VTl0ve1rllwrUkpWnk0nA&htmlParentId=fletch-render-15480577558288446178&responseCallback=fletchCallback15480577558288446178",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09620154430057873409",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 300,
+      "date_range": "300d · Dec 04, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 04, 2025",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3097378147&creativeId=786880713497&uiFeatures=12,54&adGroupId=190366347340&itemIds=6566259395952383868&sig=ACiVB_zPrxRAJvesJJJv3dixNQqFkTejnA&htmlParentId=fletch-render-12714827561892589197&responseCallback=fletchCallback12714827561892589197",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_57",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 240,
+      "date_range": "240d · Feb 02, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 02, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/pastel_wave.svg",
+      "domain": "gb.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Pizza Oodie Wearable Blanket",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06537457690761756673",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 221,
+      "date_range": "221d · Feb 20, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 20, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6290662769352556723",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14832370910480039937",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 218,
+      "date_range": "218d · Feb 24, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/406530992943791055",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_56",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 210,
+      "date_range": "210d · Mar 04, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 04, 2026",
+      "last_shown": "now",
+      "image_url": "/static/emails/card_1.png",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Unboxing The Oodie Cloud Hug",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR08641858075138981889",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 202,
+      "date_range": "202d · Mar 12, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 12, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=799889858793&uiFeatures=12,54&adGroupId=193386574719&itemIds=6983572065987779204&sig=ACiVB_yAfWSw63xe3sSHwuSxyFjaqhZmeQ&htmlParentId=fletch-render-8086277386678843129&responseCallback=fletchCallback8086277386678843129",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR15412572613658017793",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 199,
+      "date_range": "199d · Mar 15, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=798885965241&uiFeatures=12,54&adGroupId=193319772946&assets=%3DH4sIAAAAAAAAAOPS4eLk-DX975WnnAKsXJwc_x8fXvmUU4CRi5OjddqHvnYWATYuTo4pT8CizAAEbZ4QLgAAAA&sig=ACiVB_xU0bIBNr6JE8c91SVzUJW1YlwCbA&htmlParentId=fletch-render-13955003430917847306&responseCallback=fletchCallback13955003430917847306",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09868574333436166145",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16273118395217097348",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12516406690574237697",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8764671239590627643",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09697906558024810497",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5426133746685023408",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11408884570834075649",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13751821622916573550",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01303880748838682625",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=801689286840&uiFeatures=12,54&adGroupId=194288091283&itemIds=11204114346087404782&sig=ACiVB_x8K8_f39QGlWrV-y1sMEr4rWBkXQ&htmlParentId=fletch-render-15064437874794842279&responseCallback=fletchCallback15064437874794842279",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR12770503071839027201",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 190,
+      "date_range": "190d · Mar 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5286929226527870545",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_55",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 180,
+      "date_range": "180d · Apr 03, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 03, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/moss_green.svg",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "The Oodie Kids Blanket Hoodie Range",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07700943577966182401",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 165,
+      "date_range": "165d · Apr 18, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11470191245508561454",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08459954046805999617",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 163,
+      "date_range": "163d · Apr 20, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 20, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=805199144845&uiFeatures=12,54&adGroupId=196149981780&assets=%3DH4sIAAAAAAAAAAFCAL3_CkAKCQjbla36lQoQAgoICO27oI4-EAEKCQiM2tKZiQQQKQoJCJjqopydChAMCggIlKiXt0YQKAoJCK28ipipBBAGAPvgOEIAAAA&allowedVariations=46&sig=ACiVB_yI8R0VBpIoy4JrSvSfdGRTda5bbw&htmlParentId=fletch-render-15602538471484991936&responseCallback=fletchCallback15602538471484991936",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR11474891002628538369",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 161,
+      "date_range": "161d · Apr 22, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 22, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2464619614294561420",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07228009748157693953",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 147,
+      "date_range": "147d · May 05, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 05, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9929724084310122333",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_54",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 140,
+      "date_range": "140d · May 13, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 13, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/miffy_shopping.svg",
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Koala Oodie Original Sherpa",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10457036255156764673",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 132,
+      "date_range": "132d · May 21, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3097378147&creativeId=809622363293&uiFeatures=12,54&adGroupId=196623668813&itemIds=17000513922327036906&sig=ACiVB_w2La9ejecDxXbvYAWk9SbpGktsHg&htmlParentId=fletch-render-3225051784530700298&responseCallback=fletchCallback3225051784530700298",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17366399759694168065",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 127,
+      "date_range": "127d · May 26, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 26, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=810318687032&uiFeatures=12,54&adGroupId=199353852400&assets=%3DH4sIAAAAAAAAAAE4AMf_CjYKCQitvIqYqQQQBgoJCO3u65DmChABCgkItJ_C4M8KEAwKCAiUqJe3RhAoCgkIjNrSmYkEECmo9gJnOAAAAA&allowedVariations=44&sig=ACiVB_zfhMpSKvdJh47tNUpmxb5-4eGLnQ&htmlParentId=fletch-render-12286678517174318392&responseCallback=fletchCallback12286678517174318392",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR_oodie_ext_53",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 120,
+      "date_range": "120d · Jun 02, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 02, 2026",
+      "last_shown": "now",
+      "image_url": null,
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Official The Oodie Sleepwear & Loungewear",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Shop oversized cloud blankets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Cooling bamboo nightwear"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09847487865078939649",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 107,
+      "date_range": "107d · Jun 14, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8749699652129907601",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_52",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 88,
+      "date_range": "88d · Jul 04, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 04, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/pastel_wave.svg",
+      "domain": "gb.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Flannel Fleece Warmth Collection",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11567787056432152577",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 82,
+      "date_range": "82d · Jul 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16507322324911387316",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Discover The Oodie – Premium Quality Guaranteed",
+      "snippet": "Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07757985485300957185",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 82,
+      "date_range": "82d · Jul 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/459287564309299881",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17396226898815614977",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 82,
+      "date_range": "82d · Jul 10, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/547801708737655659",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR_oodie_ext_51",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 75,
+      "date_range": "75d · Jul 17, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 17, 2026",
+      "last_shown": "now",
+      "image_url": "/static/emails/card_1.png",
+      "domain": "gb.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "The Oodie Winter Comfort Guide",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR13356312765354999809",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 64,
+      "date_range": "64d · Jul 28, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 28, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=818543660532&uiFeatures=12,54&adGroupId=198261133346&itemIds=12575850191823995563&sig=ACiVB_xdi80KSK52_mPOBQWgPDb7l9tf6Q&htmlParentId=fletch-render-16400348261749324841&responseCallback=fletchCallback16400348261749324841",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "The Oodie Official Site – Oversized Wearable Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10942949338694811649",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 63,
+      "date_range": "63d · Jul 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1167338292920549082",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_50",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 60,
+      "date_range": "60d · Aug 01, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 01, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/moss_green.svg",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Avocado Oodie Blanket Hoodie",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_49",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 45,
+      "date_range": "45d · Aug 16, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 16, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/naruto_itachi.svg",
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "I Love Dogs Oodie Wearable Blanket",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18134370561105592321",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 37,
+      "date_range": "37d · Aug 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=822030411107&uiFeatures=12,54&adGroupId=196473776581&itemIds=6616189457536058052&sig=ACiVB_zPN29Lc6QEYaaUShyLFC5nugYZ5Q&htmlParentId=fletch-render-17511046039145312715&responseCallback=fletchCallback17511046039145312715",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "The Oodie – On Sale Now – Limited Time Offers",
+      "snippet": "The Oodie brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR02448559008613662721",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 36,
+      "date_range": "36d · Aug 25, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 25, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7834134274406756661",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR_oodie_ext_48",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 35,
+      "date_range": "35d · Aug 26, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 26, 2026",
+      "last_shown": "now",
+      "image_url": null,
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "The Oodie™ - Official Store | Oversized Blankets",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Shop oversized cloud blankets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Cooling bamboo nightwear"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13283655215925428225",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 30,
+      "date_range": "30d · Aug 31, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 31, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6207393654211843539",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14434369897616113665",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 30,
+      "date_range": "30d · Aug 31, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 31, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=822863566946&uiFeatures=12,54&adGroupId=202619787551&itemIds=11464425822871729366&sig=ACiVB_yBPMdzXe3Zk5Pv_myWkZPdo2ea0Q&htmlParentId=fletch-render-12982527128197831314&responseCallback=fletchCallback12982527128197831314",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Shop The Oodie – Top Rated Bestsellers",
+      "snippet": "Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR16759248854720708609",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 29,
+      "date_range": "29d · Sep 01, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 01, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15345103685274583135",
+      "domain": "www.theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00930783811782836225",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 29,
+      "date_range": "29d · Sep 01, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 01, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=822891121392&uiFeatures=12,54&adGroupId=204926474092&itemIds=14250643348999051997&sig=ACiVB_zgtKsAUtyCwweY_k6cvl29iGDdUQ&htmlParentId=fletch-render-12807533323057253199&responseCallback=fletchCallback12807533323057253199",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_47",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 29,
+      "date_range": "29d · Sep 01, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 01, 2026",
+      "last_shown": "now",
+      "image_url": "/static/emails/card_1.png",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Pure Comfort In Every Stitch | The Oodie",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR01516299145420210177",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 14,
+      "date_range": "14d · Sep 15, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17818060944946662429",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "The Oodie Official Collection – Up to 40% Off",
+      "snippet": "Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10156497911483990017",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 8,
+      "date_range": "8d · Sep 22, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 22, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=825528267025&uiFeatures=12,54&adGroupId=201125533100&itemIds=10201369768873211904&sig=ACiVB_zMYyOoeFBrTFWYJbcnyWSnwwJ9cw&htmlParentId=fletch-render-12321855109680708540&responseCallback=fletchCallback12321855109680708540",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Official The Oodie – Fast Worldwide Shipping",
+      "snippet": "Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08326347612911304705",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 7,
+      "date_range": "7d · Sep 23, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 23, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3097378147&creativeId=825756102620&uiFeatures=12,54&adGroupId=202911353720&itemIds=1672602588101553025&sig=ACiVB_zrUpvQUeTzIMM89rBQapNW-z7DNw&htmlParentId=fletch-render-17760259111502406332&responseCallback=fletchCallback17760259111502406332",
+      "domain": "nz.theoodie.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_45",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 7,
+      "date_range": "7d · Sep 23, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 23, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/moss_green.svg",
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Moss Green Sherpa Fleece Blanket",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_46",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 7,
+      "date_range": "7d · Sep 23, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 23, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/pastel_wave.svg",
+      "domain": "theoodie.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Pastel Wave Sherpa Fleece Blanket",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_43",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 6,
+      "date_range": "6d · Sep 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 24, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/miffy_shopping.svg",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Miffy Oodie Original Wearable",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": "$89.00",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR_oodie_ext_44",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 6,
+      "date_range": "6d · Sep 24, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 24, 2026",
+      "last_shown": "now",
+      "image_url": "/static/google_creatives/naruto_itachi.svg",
+      "domain": "ca.theoodie.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Naruto Itachi Akatsuki Blanket Hoodie",
+      "snippet": "Explore The Oodie Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15447308281923502081",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1,
+      "date_range": "1d · Sep 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=826283893569&uiFeatures=12,54&adGroupId=201309901595&itemIds=3292717437860950247&sig=ACiVB_wasxuhDe6zBqtDRkRW53quQ_7Byw&htmlParentId=fletch-render-4308778658068472563&responseCallback=fletchCallback4308778658068472563",
+      "domain": "us.theoodie.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "New Arrivals From The Oodie – Shop Online Today",
+      "snippet": "Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01066188771822665729",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1,
+      "date_range": "1d · Sep 29, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 29, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9352531683&creativeId=826407016985&uiFeatures=12,54&adGroupId=201224632552&itemIds=16026980075360529721&sig=ACiVB_warOZGXpXN3v6AkGGhdGCaYJX9QQ&htmlParentId=fletch-render-652562204107892350&responseCallback=fletchCallback652562204107892350",
+      "domain": "uk.theoodie.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Customer Favorites – Shop The Oodie Deals",
+      "snippet": "No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
+      "sitelinks": [
+        {
+          "title": "The Oodie Wearable Blankets",
+          "snippet": "Browse original cloud-soft blankets"
+        },
+        {
+          "title": "Shop The Oodie Bundles",
+          "snippet": "Save up to 40% on matching sets"
+        },
+        {
+          "title": "Sleep Tees",
+          "snippet": "Breathable bamboo cooling sleepwear"
+        },
+        {
+          "title": "Robes & Loungewear",
+          "snippet": "Premium luxury fleece robes"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    }
+  ],
+  "scanned_at": "2026-09-30T16:53:20.144391",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googletheoodiecom.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googletheoodiecom.com&sz=128",
+  "brand_name": "Googletheoodiecom",
+  "name": "Googletheoodiecom",
+  "tiktok_slug": "googletheoodiecom",
+  "tiktok_handle": "@googletheoodiecom",
+  "tiktok_hashtag": "#googletheoodiecom",
+  "verified_domain": "googletheoodiecom.com",
+  "ground_truth": {
+    "brand_name": "Googletheoodiecom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googletheoodiecom.com&sz=128",
+    "tiktok_slug": "googletheoodiecom",
+    "canonical_domain": "googletheoodiecom.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:40Z"
+  }
+}

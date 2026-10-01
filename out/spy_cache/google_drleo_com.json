@@ -1,0 +1,344 @@
+{
+  "brand": "drleo.com",
+  "found": true,
+  "data_source": "live_rpc",
+  "advertiser": {
+    "advertiser_id": "AR06945629529779994625",
+    "advertiser_name": "Ever Rise International Trade Limited",
+    "country": "HK",
+    "ad_count_min": "7",
+    "ad_count_max": "7"
+  },
+  "total_analyzed": 11,
+  "total_estimated": 8,
+  "active_ads": 2,
+  "format_mix_total": 6,
+  "format_mix": {
+    "Video": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Text": {
+      "count": 3,
+      "pct": 27.3
+    },
+    "Image": {
+      "count": 8,
+      "pct": 72.7
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 3,
+      "pct": 27.3
+    },
+    "Other": {
+      "count": 8,
+      "pct": 72.7
+    },
+    "YouTube": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Shopping": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "Unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 3,
+      "pct": 27.3
+    },
+    "31-90 d": {
+      "count": 4,
+      "pct": 36.4
+    },
+    "91-180 d": {
+      "count": 2,
+      "pct": 18.2
+    },
+    "181-365 d": {
+      "count": 2,
+      "pct": 18.2
+    },
+    "365 d +": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "country_mix": {
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 7,
+      "pct": 100.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR01196775809348534273",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 322,
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 13, 2025",
+      "last_shown": "Jul 01, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10158200529306510292",
+      "domain": "us.drleo.com",
+      "country_flag": "🇺🇸",
+      "headline": "drleo.com™ – Official Store",
+      "snippet": "Explore the official drleo.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop drleo.com",
+          "snippet": ""
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": ""
+        }
+      ],
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR04703962815256330241",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 311,
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 12, 2025",
+      "last_shown": "Jun 20, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7449490877665868683",
+      "domain": "ca.drleo.com",
+      "country_flag": "🇨🇦",
+      "headline": "Shop drleo.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from drleo.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": [
+        {
+          "title": "New Arrivals",
+          "snippet": ""
+        },
+        {
+          "title": "Special Bundles",
+          "snippet": ""
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy"
+    },
+    {
+      "creative_id": "CR15385418662181601281",
+      "format": "Text",
+      "platform": "Search",
+      "active": false,
+      "days_running": 117,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 22, 2026",
+      "last_shown": "Jun 19, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=4363551063&creativeId=798020752066&uiFeatures=12,54&adGroupId=192241549103&itemIds=11599359926719309326&sig=ACiVB_wxVWLpxp7dAzsOyQopwXfsgO1IUw&htmlParentId=fletch-render-8270486361868588537&responseCallback=fletchCallback8270486361868588537",
+      "domain": "www.drleo.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official drleo.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust drleo.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR02217583845052514305",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 103,
+      "reach_tag": "Global ads",
+      "first_shown": "Dec 12, 2025",
+      "last_shown": "Mar 25, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8730190040728860918",
+      "domain": "us.drleo.com",
+      "country_flag": "🇺🇸",
+      "headline": "drleo.com Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic drleo.com difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR12706749951686737921",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 90,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 22, 2026",
+      "last_shown": "May 24, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3498026674433042597",
+      "domain": "ca.drleo.com",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From drleo.com – Shop Online Today",
+      "snippet": "Upgrade your daily wellness with drleo.com. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR00728719619279290369",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 63,
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 29, 2026",
+      "last_shown": "Jun 01, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15845855702668207981",
+      "domain": "us.drleo.com",
+      "country_flag": "🇺🇸",
+      "headline": "Discover drleo.com – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied drleo.com customers worldwide.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.7,
+        "stars": "★★★★☆",
+        "count": "892"
+      },
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR08114713442998288385",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 57,
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 11, 2026",
+      "last_shown": "Jun 07, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13885539835620355049",
+      "domain": "us.drleo.com",
+      "country_flag": "🇺🇸",
+      "headline": "drleo.com – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official drleo.com store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": [
+        {
+          "title": "Shop drleo.com >",
+          "snippet": "Explore official products direct from drleo.com..."
+        },
+        {
+          "title": "Special Deals >",
+          "snippet": "Save on bestsellers and bundles today..."
+        }
+      ],
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR15800832297097232385",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 57,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 11, 2026",
+      "last_shown": "Apr 10, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3240121228781882411",
+      "domain": "www.drleo.com",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop drleo.com Deals",
+      "snippet": "Limited time offers on selected drleo.com essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,437"
+      },
+      "return_policy": "30-day return policy"
+    },
+    {
+      "creative_id": "CR12939777147542700033",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 27,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 24, 2026",
+      "last_shown": "Mar 24, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14773739193123479599",
+      "domain": "us.drleo.com",
+      "country_flag": "🇺🇸",
+      "headline": "drleo.com™ – Official Store",
+      "snippet": "Explore the official drleo.com collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR08075258430308220929",
+      "format": "Text",
+      "platform": "Search",
+      "active": false,
+      "days_running": 1,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 22, 2026",
+      "last_shown": "Feb 23, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6519139539122661779",
+      "domain": "ca.drleo.com",
+      "country_flag": "🇨🇦",
+      "headline": "Shop drleo.com – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from drleo.com. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    },
+    {
+      "creative_id": "CR11558080258544500737",
+      "format": "Text",
+      "platform": "Search",
+      "active": false,
+      "days_running": 1,
+      "reach_tag": "Global ads",
+      "first_shown": "Feb 22, 2026",
+      "last_shown": "Feb 23, 2026",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=4363551063&creativeId=798099641897&uiFeatures=12,54&adGroupId=193621165396&itemIds=6519033892248834058&sig=ACiVB_wxZD4Lh-wCIUmdWAgkED63anLX1w&htmlParentId=fletch-render-12528862423826219822&responseCallback=fletchCallback12528862423826219822",
+      "domain": "www.drleo.com",
+      "country_flag": "🇦🇺",
+      "headline": "Official drleo.com – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust drleo.com. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null
+    }
+  ],
+  "scanned_at": "2026-09-30T15:52:15.319342",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googledrleocom.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googledrleocom.com&sz=128",
+  "brand_name": "Googledrleocom",
+  "name": "Googledrleocom",
+  "tiktok_slug": "googledrleocom",
+  "tiktok_handle": "@googledrleocom",
+  "tiktok_hashtag": "#googledrleocom",
+  "verified_domain": "googledrleocom.com",
+  "ground_truth": {
+    "brand_name": "Googledrleocom",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googledrleocom.com&sz=128",
+    "tiktok_slug": "googledrleocom",
+    "canonical_domain": "googledrleocom.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-10-01T01:36:38Z"
+  }
+}
