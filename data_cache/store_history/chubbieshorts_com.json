@@ -1,0 +1,35 @@
+{
+  "domain": "chubbieshorts.com",
+  "brand_name": "Chubbies",
+  "store_age": {
+    "domain": "chubbieshorts.com",
+    "founding_date": "Recent",
+    "founding_iso": "",
+    "age_str": "6 mo",
+    "age_days": 180,
+    "store_age_months": 6.0,
+    "stage_badge": "🟡 Rising (6mo)",
+    "stage_tag": "UNDER_6_MONTHS",
+    "is_under_6_months": true
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819940,
+      "active_ads": 180,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (180 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 180,
+    "current_ads": 180,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 180 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

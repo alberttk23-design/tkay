@@ -1,0 +1,35 @@
+{
+  "domain": "glov.co",
+  "brand_name": "Glov Beauty",
+  "store_age": {
+    "domain": "glov.co",
+    "founding_date": "Oct 20, 2021",
+    "founding_iso": "2021-10-20T14:22:26+02:00",
+    "age_str": "4.9 yr",
+    "age_days": 1806,
+    "store_age_months": 59.3,
+    "stage_badge": "🏛️ Established (4.9yr)",
+    "stage_tag": "ESTABLISHED",
+    "is_under_6_months": false
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819938,
+      "active_ads": 42,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (42 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 42,
+    "current_ads": 42,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 42 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

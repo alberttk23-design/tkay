@@ -10898,6 +10898,30 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             self.wfile.write(bench_data.encode("utf-8"))
             return
 
+        if parsed.path == "/api/store-velocity":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            domain = query_params.get("domain", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            if not domain:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing domain parameter"}).encode("utf-8"))
+                return
+            try:
+                import store_history_manager as _shm
+                hist = _shm.load_store_history(domain)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(hist, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
         if parsed.path == "/api/google-ads":
             query_params = urllib.parse.parse_qs(parsed.query)
             query = query_params.get("query", [""])[0].strip()
@@ -11164,6 +11188,27 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                     data["apps"] = data.get("apps") or tech.get("apps", [])
                     data["pixels"] = data.get("pixels") or tech.get("pixels", [])
                     data["similar_shops"] = data.get("similar_shops") or _si_gt.get_top_5_similar_shops(verified_brand_name, verified_domain)
+
+                    # ── STEP 4: Store Age & Velocity Time-Series Tracking ────────
+                    store_age = _si_gt.extract_store_age(verified_domain, products=data["products"])
+                    data["store_age"] = store_age
+                    import store_history_manager as _shm
+                    active_cnt = data.get("active_ads_count") or len(data.get("ads", []))
+                    if isinstance(active_cnt, str):
+                        try:
+                            active_cnt = int(re.sub(r'[^0-9]', '', active_cnt))
+                        except Exception:
+                            active_cnt = len(data.get("ads", []))
+                    hist_data = _shm.record_store_snapshot(
+                        domain=verified_domain,
+                        brand_name=verified_brand_name,
+                        active_ads=active_cnt,
+                        traffic=data.get("traffic", ""),
+                        products_count=len(data["products"]),
+                        store_age=store_age
+                    )
+                    data["store_history"] = hist_data.get("snapshots", [])
+                    data["velocity"] = hist_data.get("velocity", {})
                 except Exception as _e_aug:
                     print(f"⚠️ [STORE INTEL AUGMENT] {_e_aug}")
 

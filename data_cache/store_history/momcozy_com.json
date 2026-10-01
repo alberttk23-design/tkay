@@ -1,0 +1,35 @@
+{
+  "domain": "momcozy.com",
+  "brand_name": "Momcozy",
+  "store_age": {
+    "domain": "momcozy.com",
+    "founding_date": "Sep 12, 2024",
+    "founding_iso": "2024-09-12T06:30:08-04:00",
+    "age_str": "2.0 yr",
+    "age_days": 748,
+    "store_age_months": 24.6,
+    "stage_badge": "🏛️ Established (2.0yr)",
+    "stage_tag": "ESTABLISHED",
+    "is_under_6_months": false
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819937,
+      "active_ads": 190,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (190 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 190,
+    "current_ads": 190,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 190 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

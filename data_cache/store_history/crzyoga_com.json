@@ -1,0 +1,35 @@
+{
+  "domain": "crzyoga.com",
+  "brand_name": "CRZ YOGA",
+  "store_age": {
+    "domain": "crzyoga.com",
+    "founding_date": "Aug 10, 2026",
+    "founding_iso": "2026-08-10T16:19:16+08:00",
+    "age_str": "1 mo",
+    "age_days": 51,
+    "store_age_months": 1.7,
+    "stage_badge": "🟡 Rising (1mo)",
+    "stage_tag": "UNDER_6_MONTHS",
+    "is_under_6_months": true
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819939,
+      "active_ads": 310,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (310 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 310,
+    "current_ads": 310,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 310 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

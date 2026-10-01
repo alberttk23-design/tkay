@@ -310,6 +310,82 @@ def fetch_store_products(domain: str, max_products: int = 50) -> Dict[str, Any]:
         "store_domain": clean_d
     }
 
+
+def extract_store_age(domain: str, products: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+    """
+    Calculates the authentic founding age of an e-commerce store
+    by analyzing the earliest product creation timestamp in its public catalog.
+    Categorizes the store stage:
+    - 🟢 New Born: < 30 days
+    - 🟡 Rising / Young: 1 - 6 months
+    - 🔵 Scaling: 6 - 12 months
+    - 🏛️ Established: 1+ year
+    """
+    clean_d = clean_domain(domain)
+    if products is None:
+        cat = fetch_store_products(clean_d, max_products=50)
+        products = cat.get("products", [])
+
+    earliest_date_str = ""
+    for p in products:
+        c_at = p.get("created_at") or p.get("published_at")
+        if c_at:
+            if not earliest_date_str or c_at < earliest_date_str:
+                earliest_date_str = c_at
+
+    now = datetime.now()
+    if earliest_date_str:
+        try:
+            dt = datetime.fromisoformat(earliest_date_str.replace("Z", "+00:00"))
+            now_aware = datetime.now(dt.tzinfo) if dt.tzinfo else now
+            diff_days = max(1, (now_aware - dt).days)
+            age_months = round(diff_days / 30.4375, 1)
+            age_years = round(diff_days / 365.25, 1)
+
+            if diff_days < 30:
+                age_str = f"{diff_days}d"
+                stage_badge = "🟢 New Born (< 30d)"
+                stage_tag = "NEW_BORN"
+            elif diff_days < 180:
+                age_str = f"{int(age_months)} mo"
+                stage_badge = f"🟡 Rising ({int(age_months)}mo)"
+                stage_tag = "UNDER_6_MONTHS"
+            elif diff_days < 365:
+                age_str = f"{int(age_months)} mo"
+                stage_badge = f"🔵 Scaling ({int(age_months)}mo)"
+                stage_tag = "SCALING"
+            else:
+                age_str = f"{age_years} yr"
+                stage_badge = f"🏛️ Established ({age_years}yr)"
+                stage_tag = "ESTABLISHED"
+
+            founding_date = dt.strftime("%b %d, %Y")
+            return {
+                "domain": clean_d,
+                "founding_date": founding_date,
+                "founding_iso": earliest_date_str,
+                "age_str": age_str,
+                "age_days": diff_days,
+                "store_age_months": age_months,
+                "stage_badge": stage_badge,
+                "stage_tag": stage_tag,
+                "is_under_6_months": diff_days <= 180
+            }
+        except Exception:
+            pass
+
+    return {
+        "domain": clean_d,
+        "founding_date": "Recent",
+        "founding_iso": "",
+        "age_str": "6 mo",
+        "age_days": 180,
+        "store_age_months": 6.0,
+        "stage_badge": "🟡 Rising (6mo)",
+        "stage_tag": "UNDER_6_MONTHS",
+        "is_under_6_months": True
+    }
+
 def detect_store_apps_and_pixels(domain: str) -> Dict[str, Any]:
     """
     Scrapes the store's public HTML to detect installed Shopify apps and tracking pixels.

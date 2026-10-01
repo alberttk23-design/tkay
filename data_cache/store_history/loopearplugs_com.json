@@ -1,0 +1,35 @@
+{
+  "domain": "loopearplugs.com",
+  "brand_name": "Loop Earplugs",
+  "store_age": {
+    "domain": "loopearplugs.com",
+    "founding_date": "Sep 05, 2023",
+    "founding_iso": "2023-09-05T07:07:42+02:00",
+    "age_str": "3.1 yr",
+    "age_days": 1121,
+    "store_age_months": 36.8,
+    "stage_badge": "🏛️ Established (3.1yr)",
+    "stage_tag": "ESTABLISHED",
+    "is_under_6_months": false
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819934,
+      "active_ads": 6346,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (6346 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 6346,
+    "current_ads": 6346,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 6346 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

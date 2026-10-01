@@ -1,0 +1,35 @@
+{
+  "domain": "blissy.com",
+  "brand_name": "Blissy",
+  "store_age": {
+    "domain": "blissy.com",
+    "founding_date": "Jun 09, 2026",
+    "founding_iso": "2026-06-09T03:17:16-07:00",
+    "age_str": "3 mo",
+    "age_days": 113,
+    "store_age_months": 3.7,
+    "stage_badge": "🟡 Rising (3mo)",
+    "stage_tag": "UNDER_6_MONTHS",
+    "is_under_6_months": true
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819937,
+      "active_ads": 165,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (165 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 165,
+    "current_ads": 165,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 165 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}

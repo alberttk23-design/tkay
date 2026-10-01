@@ -1,0 +1,35 @@
+{
+  "domain": "drsquatch.com",
+  "brand_name": "Dr. Squatch",
+  "store_age": {
+    "domain": "drsquatch.com",
+    "founding_date": "Sep 25, 2020",
+    "founding_iso": "2020-09-25T00:01:54-07:00",
+    "age_str": "6.0 yr",
+    "age_days": 2196,
+    "store_age_months": 72.1,
+    "stage_badge": "🏛️ Established (6.0yr)",
+    "stage_tag": "ESTABLISHED",
+    "is_under_6_months": false
+  },
+  "snapshots": [
+    {
+      "date": "2026-10-01",
+      "timestamp": 1790819934,
+      "active_ads": 380,
+      "traffic": "100K+",
+      "products_count": 0
+    }
+  ],
+  "velocity": {
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (380 ads)",
+    "delta_ads": 0,
+    "growth_pct": 0.0,
+    "prev_ads": 380,
+    "current_ads": 380,
+    "baseline_date": "2026-10-01",
+    "current_date": "2026-10-01",
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 380 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+  }
+}
