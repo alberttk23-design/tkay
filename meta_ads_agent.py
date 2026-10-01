@@ -587,11 +587,19 @@ def build_dynamic_meta_suite(brand_name: str, domain: str, raw_scanned: Dict[str
     car_pct = round((c_count / total_c) * 100)
     dco_pct = max(0, 100 - (v_pct + i_pct + car_pct))
 
+    import ad_scanner
+    trend_data = raw_scanned.get("meta_trend_data")
+    if not trend_data:
+        try:
+            trend_data = ad_scanner.reconstruct_weekly_meta_trend(total_num, raw_ads)
+        except Exception:
+            trend_data = {}
+
     insights = {
-        "historic_trend": [
-            {"week": f"W{idx*2+10}", "label": f"M{idx+1}", "active_ads": max(1, int(total_num * (0.3 + idx*0.1))), "ads_launched": max(1, int(total_num * (0.1 + (idx%3)*0.05)))}
-            for idx in range(7)
-        ],
+        "historic_trend": trend_data.get("weekly_trend", {}),
+        "weekly_trend": trend_data.get("weekly_trend", {}),
+        "daily_trend": trend_data.get("daily_trend", {}),
+        "history_points": trend_data.get("history_points", []),
         "format_mix": {
             "video_pct": v_pct,
             "image_pct": i_pct,
