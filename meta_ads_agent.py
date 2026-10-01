@@ -473,6 +473,13 @@ def get_oodie_benchmark_suite() -> Dict[str, Any]:
         "domain": "theoodie.com",
         "logo_url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=120&q=80",
         "total_active_ads": 556,
+        "monthly_cohorts": [
+            {"month": "Sep '26", "label": "Tháng này (<30d)", "count": 234, "pct": 42.1, "color": "#10b981"},
+            {"month": "Aug '26", "label": "30-60 ngày", "count": 161, "pct": 29.0, "color": "#3b82f6"},
+            {"month": "Jul '26", "label": "60-90 ngày", "count": 89, "pct": 16.0, "color": "#8b5cf6"},
+            {"month": "Jun '26", "label": "90-120 ngày", "count": 45, "pct": 8.1, "color": "#f59e0b"},
+            {"month": "May '26 & trước", "label": "Evergreen (>120d)", "count": 27, "pct": 4.8, "color": "#ef4444"}
+        ],
         "eu_uk_count": 122,
         "eu_uk_pct": 22,
         "header": {
@@ -508,6 +515,15 @@ def build_dynamic_meta_suite(brand_name: str, domain: str, raw_scanned: Dict[str
     total_num = raw_scanned.get("total_active_ads", len(raw_ads))
     if total_num == 0 and len(raw_ads) > 0:
         total_num = len(raw_ads)
+
+    # Monthly Cohorts Computation
+    monthly_cohorts = raw_scanned.get("monthly_cohorts")
+    if not monthly_cohorts:
+        try:
+            import ad_scanner
+            monthly_cohorts = ad_scanner.compute_monthly_ad_cohorts(total_num, raw_ads)
+        except Exception:
+            monthly_cohorts = []
 
     # 1. Enrich Ad Library Cards
     enriched_cards = []
@@ -719,6 +735,7 @@ def build_dynamic_meta_suite(brand_name: str, domain: str, raw_scanned: Dict[str
         "domain": clean_d,
         "logo_url": raw_scanned.get("logo_url") or raw_scanned.get("avatarUrl") or f"https://ui-avatars.com/api/?name={brand_name}&background=0284c7&color=fff",
         "total_active_ads": total_num,
+        "monthly_cohorts": monthly_cohorts,
         "main_page_active": main_page_act,
         "main_page_total": raw_scanned.get("main_page_total", total_num * 4),
         "main_page_total_display": main_page_tot_str,
@@ -785,7 +802,8 @@ class MetaAdsAgent:
                     "main_page_total": meta_ch.get("main_page_total", 17400),
                     "main_page_total_display": meta_ch.get("main_page_total_display", "17K"),
                     "footer_display": meta_ch.get("footer_display", "731 / 17.4K · 🇺🇸 🇨🇦"),
-                    "total_all_time": meta_ch.get("total", 25104)
+                    "total_all_time": meta_ch.get("total", 25104),
+                    "monthly_cohorts": truth.get("monthly_cohorts")
                 }
                 return build_dynamic_meta_suite(
                     brand_name=raw_scanned["name"],

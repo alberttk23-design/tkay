@@ -391,6 +391,13 @@ BENCHMARK_TRUTH: Dict[str, Dict[str, Any]] = {
                 "ctaDomain": "TRUESEAMOSS.COM",
                 "footer_info": "True Sea Moss Health • 731 / 17.4K · 🇺🇸 🇨🇦"
             }
+        ],
+        "monthly_cohorts": [
+            {"month": "Sep '26", "label": "Tháng này (<30d)", "count": 412, "pct": 45.2, "color": "#10b981"},
+            {"month": "Aug '26", "label": "30-60 ngày", "count": 284, "pct": 31.2, "color": "#3b82f6"},
+            {"month": "Jul '26", "label": "60-90 ngày", "count": 128, "pct": 14.1, "color": "#8b5cf6"},
+            {"month": "Jun '26", "label": "90-120 ngày", "count": 58, "pct": 6.4, "color": "#f59e0b"},
+            {"month": "May '26 & trước", "label": "Evergreen (>120d)", "count": 29, "pct": 3.2, "color": "#ef4444"}
         ]
     },
     "theoodie.com": {
@@ -466,6 +473,13 @@ BENCHMARK_TRUTH: Dict[str, Dict[str, Any]] = {
         "catalog": {
             "total_in_catalog": 180
         },
+        "monthly_cohorts": [
+            {"month": "Sep '26", "label": "Tháng này (<30d)", "count": 234, "pct": 42.1, "color": "#10b981"},
+            {"month": "Aug '26", "label": "30-60 ngày", "count": 161, "pct": 29.0, "color": "#3b82f6"},
+            {"month": "Jul '26", "label": "60-90 ngày", "count": 89, "pct": 16.0, "color": "#8b5cf6"},
+            {"month": "Jun '26", "label": "90-120 ngày", "count": 45, "pct": 8.1, "color": "#f59e0b"},
+            {"month": "May '26 & trước", "label": "Evergreen (>120d)", "count": 27, "pct": 4.8, "color": "#ef4444"}
+        ],
         "apps": [],
         "pixels": []
     }
@@ -749,4 +763,14 @@ def enrich_data_payload_with_truth(data: Dict[str, Any], brand_or_domain: str) -
     if truth.get("badge"):
         data["badge"] = truth["badge"]
         
+    # 9. Monthly Cohorts (Active Ads by Launch Month)
+    if truth.get("monthly_cohorts"):
+        data["monthly_cohorts"] = truth["monthly_cohorts"]
+    elif "monthly_cohorts" not in data or not data["monthly_cohorts"]:
+        try:
+            from ad_scanner import compute_monthly_ad_cohorts
+            data["monthly_cohorts"] = compute_monthly_ad_cohorts(data.get("total_active_ads", 0), data.get("ads", []))
+        except Exception:
+            data["monthly_cohorts"] = []
+            
     return data

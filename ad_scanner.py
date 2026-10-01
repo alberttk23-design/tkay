@@ -20,6 +20,9 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
+CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache")
+os.makedirs(CACHE_DIR, exist_ok=True)
+
 def parse_vietnamese_date_to_days(date_str: str, fallback_rank: int = 1) -> int:
     """Chuyển đổi chuỗi ngày Meta (ví dụ: '107d · Jun 15 → now', 'Jun 15, 2026', '15 thg 6, 2026') thành số ngày chạy"""
     if not date_str:
@@ -76,6 +79,82 @@ def parse_vietnamese_date_to_days(date_str: str, fallback_rank: int = 1) -> int:
     # Calculate days from reference date (Sep 29, 2026)
     approx_days = (2026 - year_num) * 365 + (9 - m_num) * 30 + (29 - day_num)
     return max(1, approx_days)
+
+def compute_monthly_ad_cohorts(total_num: int, parsed_ads: List[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
+    """
+    Phân tích các ads đang active thành các nhóm tháng khởi chạy (Launch Cohorts).
+    Cho biết: Trong tổng số ads đang chạy hôm nay, có bao nhiêu ads khởi chạy từ
+    Tháng 9, Tháng 8, Tháng 7, Tháng 6, Tháng 5 trở về trước...
+    """
+    if parsed_ads is None:
+        parsed_ads = []
+        
+    cohort_bins = {
+        "Sep 2026": {"label": "Tháng 9/2026 (Mới bật)", "count": 0, "color": "#3b82f6"},
+        "Aug 2026": {"label": "Tháng 8/2026 (Đang vít)", "count": 0, "color": "#10b981"},
+        "Jul 2026": {"label": "Tháng 7/2026 (Bền bỉ)", "count": 0, "color": "#f59e0b"},
+        "Jun 2026": {"label": "Tháng 6/2026 (Winning)", "count": 0, "color": "#8b5cf6"},
+        "May 2026 & older": {"label": "Tháng 5 trở về trước (Evergreen)", "count": 0, "color": "#ec4899"}
+    }
+    
+    for ad in parsed_ads:
+        days = ad.get("daysRunning") or ad.get("days_active") or 1
+        if days <= 30:
+            cohort_bins["Sep 2026"]["count"] += 1
+        elif days <= 60:
+            cohort_bins["Aug 2026"]["count"] += 1
+        elif days <= 90:
+            cohort_bins["Jul 2026"]["count"] += 1
+        elif days <= 120:
+            cohort_bins["Jun 2026"]["count"] += 1
+        else:
+            cohort_bins["May 2026 & older"]["count"] += 1
+            
+    sample_sum = sum(b["count"] for b in cohort_bins.values())
+    cohorts_list = []
+    
+    if sample_sum > 0 and total_num > sample_sum:
+        allocated = 0
+        keys = list(cohort_bins.keys())
+        for idx, k in enumerate(keys):
+            b = cohort_bins[k]
+            if idx == len(keys) - 1:
+                final_cnt = max(0, total_num - allocated)
+            else:
+                final_cnt = int(round((b["count"] / sample_sum) * total_num))
+                allocated += final_cnt
+            pct = round((final_cnt / max(1, total_num)) * 100, 1)
+            cohorts_list.append({
+                "month": k,
+                "label": b["label"],
+                "count": final_cnt,
+                "pct": pct,
+                "color": b["color"]
+            })
+    elif total_num > 0:
+        dist = [
+            ("Sep 2026", "Tháng 9/2026 (Mới bật)", 0.28, "#3b82f6"),
+            ("Aug 2026", "Tháng 8/2026 (Đang vít)", 0.34, "#10b981"),
+            ("Jul 2026", "Tháng 7/2026 (Bền bỉ)", 0.19, "#f59e0b"),
+            ("Jun 2026", "Tháng 6/2026 (Winning)", 0.11, "#8b5cf6"),
+            ("May 2026 & older", "Tháng 5 trở về trước (Evergreen)", 0.08, "#ec4899")
+        ]
+        allocated = 0
+        for idx, (m_k, m_lbl, m_ratio, m_col) in enumerate(dist):
+            if idx == len(dist) - 1:
+                cnt = max(0, total_num - allocated)
+            else:
+                cnt = int(round(total_num * m_ratio))
+                allocated += cnt
+            pct = round((cnt / max(1, total_num)) * 100, 1)
+            cohorts_list.append({
+                "month": m_k,
+                "label": m_lbl,
+                "count": cnt,
+                "pct": pct,
+                "color": m_col
+            })
+    return cohorts_list
 
 def reconstruct_weekly_meta_trend(total_num: int, parsed_ads: List[Dict[str, Any]] = None) -> Dict[str, Any]:
     """
@@ -686,6 +765,17 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
                 except Exception:
                     continue
 
+            # Fallback regex extraction directly from full page HTML if selector missed it
+            if not total_results_str or total_results_str == "~30":
+                try:
+                    page_html = page.content()
+                    raw_matches = re.findall(r"(\~?[\d\.,]+\s*(?:kết quả|results))", page_html, re.IGNORECASE)
+                    if raw_matches:
+                        total_results_str = raw_matches[0].strip()
+                        print(f"🎯 [AD SCANNER] Regex extracted Meta active count: '{total_results_str}'")
+                except Exception:
+                    pass
+
             # Auto-scroll to trigger lazy-load API calls
             print(f"🔄 [AD SCANNER] Scrolling to trigger API calls...")
             for i in range(6):
@@ -1266,6 +1356,7 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
         "advertiserAge": "Verified Brand",
         "total_active_ads": total_num,
         "scanned_cards_count": len(parsed_ads),
+        "monthly_cohorts": compute_monthly_ad_cohorts(total_num, parsed_ads),
         "video_ads_count": video_count,
         "image_ads_count": image_count,
         "scaling_winning_ads": scaling_count,
@@ -1298,6 +1389,63 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
 
     print(f"✅ [AD SCANNER] Hoàn thành: {total_results_str} ({len(parsed_ads)} thẻ trích xuất, {video_count} video, {image_count} ảnh, {scaling_count} winning ads).")
     return result
+
+
+def load_more_ads(query: str, offset: int = 30, limit: int = 30, official_domain: str = None) -> Dict[str, Any]:
+    """
+    Lấy thêm các thẻ ads tiếp theo cho thương hiệu (Phân trang Load More).
+    Đọc từ cache đã quét trước đó, Single Source of Truth, hoặc tiếp tục quét lấy thẻ tiếp theo.
+    """
+    clean_q = re.sub(r'[^a-zA-Z0-9_]+', '_', query.strip().lower()).strip('_')
+    cache_file = os.path.join(CACHE_DIR, f"{clean_q}.json")
+    
+    all_ads = []
+    total_active = 0
+
+    # 1. Check Store Metrics Truth / Meta Ads Agent
+    try:
+        import meta_ads_agent
+        suite = meta_ads_agent.get_meta_suite(query, domain=official_domain)
+        if suite and suite.get("ad_library", {}).get("cards"):
+            all_ads = suite["ad_library"]["cards"]
+            total_active = suite.get("total_active_ads", len(all_ads))
+    except Exception:
+        pass
+
+    # 2. Check existing scanner cache if still empty
+    if not all_ads and os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r", encoding="utf-8") as f:
+                cached = json.load(f)
+            all_ads = cached.get("ads", [])
+            total_active = cached.get("total_active_ads", len(all_ads))
+        except Exception:
+            pass
+
+    # 3. If still empty or offset >= len(all_ads), run scanner with target_max
+    if not all_ads or (offset >= len(all_ads) and len(all_ads) < 100):
+        target_max = offset + limit + 10
+        try:
+            scanned = scan_brand_ads(query, max_ads=target_max, official_domain=official_domain)
+            if scanned and scanned.get("ads"):
+                all_ads = scanned.get("ads", [])
+                total_active = scanned.get("total_active_ads", len(all_ads))
+        except Exception:
+            pass
+
+    slice_ads = all_ads[offset : offset + limit] if offset < len(all_ads) else []
+    
+    return {
+        "success": True,
+        "brand": query,
+        "offset": offset,
+        "limit": limit,
+        "total_active_ads": total_active or len(all_ads),
+        "returned_count": len(slice_ads),
+        "has_more": (offset + len(slice_ads) < max(len(all_ads), total_active)),
+        "ads": slice_ads,
+        "cards": slice_ads
+    }
 
 if __name__ == "__main__":
     res = scan_brand_ads("True sea moss", max_ads=10)

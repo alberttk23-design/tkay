@@ -1032,8 +1032,17 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
 
             <!-- Pagination Bar Matching media_1790759884591.png -->
-            <div id="metaLibraryPagination" class="flex items-center justify-center gap-2 pt-4 pb-8">
+            <div id="metaLibraryPagination" class="flex items-center justify-center gap-2 pt-4 pb-3">
               <!-- Dynamically rendered -->
+            </div>
+
+            <!-- Load More Ads (+30 Ads Button) -->
+            <div id="metaLoadMoreContainer" class="flex flex-col items-center justify-center pt-2 pb-8 gap-2">
+              <button type="button" id="btnLoadMoreMetaAds" onclick="loadMoreMetaAds()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition cursor-pointer flex items-center gap-2 shadow-md hover:shadow-lg active:scale-95">
+                <svg id="loadMoreSpinner" class="w-4 h-4 text-white hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <span id="loadMoreBtnText">+ Xem thêm 30 quảng cáo</span>
+              </button>
+              <span id="loadMoreStatusText" class="text-[11px] text-slate-400 font-medium">Đang hiển thị <span id="currentLoadedAdsCount">0</span> / <span id="totalAvailableAdsCount">0</span> active ads</span>
             </div>
           </div>
 
@@ -1100,6 +1109,25 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                     <!-- Populated dynamically -->
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Row 1.5: Monthly Active Ads Breakdown (Thống kê Active Ads Từng Tháng Khởi Chạy) -->
+            <div class="tt-card p-5 bg-white border border-slate-200 rounded-2xl shadow-xs">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-100 gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">📅</span>
+                  <h3 class="text-sm font-extrabold text-slate-900">Phân Phối Active Ads Theo Từng Tháng Khởi Chạy (Cohort Longevity)</h3>
+                  <span class="text-[10px] bg-blue-50 text-blue-700 font-bold px-2 py-0.5 rounded-full border border-blue-200">Độ sống dai của camp</span>
+                </div>
+                <div class="text-xs text-slate-500 font-medium">
+                  Tổng ads đang cắn tiền: <span id="monthlyCohortTotalActive" class="font-bold text-slate-900">—</span>
+                </div>
+              </div>
+
+              <!-- Monthly Cohorts Progress Bars & Stats -->
+              <div id="monthlyCohortContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 pt-4">
+                <!-- Dynamically populated via renderMonthlyCohorts() -->
               </div>
             </div>
 
@@ -4382,6 +4410,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             currentData.ads = suite.ad_library.cards;
             currentData.total_active_ads = totalAds;
           }
+          if (suite.monthly_cohorts) {
+            if (!currentData) currentData = {};
+            currentData.monthly_cohorts = suite.monthly_cohorts;
+          }
           if (suite.ranking) currentMetaRankingApiData = suite.ranking;
           if (suite.contents) currentMetaContentsApiData = suite.contents;
         }
@@ -4780,6 +4812,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         pagEl.innerHTML = pagesHtml;
       }
+      updateLoadMoreStatus();
     }
 
     function changeMetaLibraryPage(newPage) {
@@ -4788,6 +4821,94 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       renderMetaLibraryCards();
       const cont = document.getElementById('metaAdsContainer');
       if (cont) cont.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function updateLoadMoreStatus() {
+      const curEl = document.getElementById('currentLoadedAdsCount');
+      const totEl = document.getElementById('totalAvailableAdsCount');
+      const curCount = (currentData && currentData.ads) ? currentData.ads.length : 0;
+      const totCount = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : curCount;
+      if (curEl) curEl.textContent = curCount.toLocaleString();
+      if (totEl) totEl.textContent = totCount.toLocaleString();
+      const btn = document.getElementById('btnLoadMoreMetaAds');
+      const text = document.getElementById('loadMoreBtnText');
+      if (curCount >= totCount && totCount > 0) {
+        if (text) text.textContent = 'Đã tải hết quảng cáo khả dụng';
+        if (btn) btn.classList.add('opacity-50', 'pointer-events-none');
+      } else {
+        if (text) text.textContent = '+ Xem thêm 30 quảng cáo';
+        if (btn) btn.classList.remove('opacity-50', 'pointer-events-none');
+      }
+    }
+
+    async function loadMoreMetaAds() {
+      const btn = document.getElementById('btnLoadMoreMetaAds');
+      const spinner = document.getElementById('loadMoreSpinner');
+      const text = document.getElementById('loadMoreBtnText');
+      if (!currentData) return;
+
+      const currentCount = currentData.ads ? currentData.ads.length : 0;
+      const brand = currentData.brand_name || currentData.name || currentData.domain || getActiveBrandName();
+      const domain = currentData.domain || currentData.verified_domain || '';
+
+      if (btn) btn.disabled = true;
+      if (spinner) spinner.classList.remove('hidden');
+      if (text) text.textContent = 'Đang cào thêm 30 ads từ Meta...';
+
+      try {
+        const res = await fetch(`/api/meta/load-more?query=${encodeURIComponent(brand)}&domain=${encodeURIComponent(domain)}&offset=${currentCount}&limit=30`);
+        const result = await res.json();
+
+        if (result && result.ads && result.ads.length > 0) {
+          if (!currentData.ads) currentData.ads = [];
+          currentData.ads.push(...result.ads);
+          renderMetaLibraryCards();
+          updateLoadMoreStatus();
+          window.scrollBy({ top: 350, behavior: 'smooth' });
+        } else {
+          if (text) text.textContent = 'Đã tải hết quảng cáo khả dụng';
+          if (btn) btn.classList.add('opacity-50', 'pointer-events-none');
+        }
+      } catch (err) {
+        console.error('Lỗi khi tải thêm ads:', err);
+        if (text) text.textContent = 'Thử lại (+30 ads)';
+      } finally {
+        if (spinner) spinner.classList.add('hidden');
+        if (btn) btn.disabled = false;
+      }
+    }
+
+    function renderMonthlyCohorts(cohorts, totalActive) {
+      const container = document.getElementById('monthlyCohortContainer');
+      const totalEl = document.getElementById('monthlyCohortTotalActive');
+      if (!container) return;
+
+      const list = cohorts || currentData?.monthly_cohorts || [];
+      const tot = totalActive || currentData?.total_active_ads || (list.reduce((acc, c) => acc + (c.count || 0), 0)) || 0;
+      if (totalEl) totalEl.textContent = `${tot.toLocaleString()} ads`;
+
+      if (!list || list.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-4 text-center text-xs text-slate-400 font-medium">Chưa có phân bổ tháng cho thương hiệu này</div>';
+        return;
+      }
+
+      container.innerHTML = list.map(c => `
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between hover:border-slate-300 transition shadow-2xs">
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-slate-700 mb-1">
+              <span class="truncate" title="${c.label}">${c.month}</span>
+              <span class="text-[11px] font-extrabold px-1.5 py-0.5 rounded-md text-white" style="background-color: ${c.color || '#3b82f6'};">${c.pct}%</span>
+            </div>
+            <div class="text-[11px] text-slate-500 font-medium mb-2.5 truncate">${c.label}</div>
+          </div>
+          <div>
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-1.5">
+              <div class="h-full rounded-full transition-all duration-500" style="width: ${c.pct}%; background-color: ${c.color || '#3b82f6'};"></div>
+            </div>
+            <div class="text-right text-xs font-black text-slate-900">${(c.count || 0).toLocaleString()} ads</div>
+          </div>
+        </div>
+      `).join('');
     }
 
     // ==========================================
@@ -5044,6 +5165,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           `).join('');
         }
       }
+
+      // 5. Monthly Active Ads Breakdown (Cohort Longevity)
+      renderMonthlyCohorts(currentData?.monthly_cohorts, totalAds);
     }
 
     // ==========================================
@@ -9751,6 +9875,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // Feed Ad Cards
       renderFeedCards(data.ads || []);
+
+      // Monthly Cohorts
+      if (data.monthly_cohorts) {
+        renderMonthlyCohorts(data.monthly_cohorts, metaCount);
+      }
     }
 
     // Render Traffic Chart (Green Spline Area with Multi-Timeframe and Peak Labels)
@@ -11498,6 +11627,40 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.end_headers()
                 self.wfile.write(json.dumps(suite, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/meta/load-more":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            try:
+                offset = int(query_params.get("offset", [30])[0])
+            except:
+                offset = 30
+            try:
+                limit = int(query_params.get("limit", [30])[0])
+            except:
+                limit = 30
+                
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
+            try:
+                import ad_scanner
+                more_data = ad_scanner.load_more_ads(query, offset=offset, limit=limit, official_domain=domain)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(more_data, ensure_ascii=False).encode("utf-8"))
             except Exception as e:
                 self.send_response(500)
                 self.send_header("Content-Type", "application/json")
