@@ -548,5 +548,21 @@
       "return_policy": null
     }
   ],
-  "scanned_at": "2026-09-30T12:13:21.803795"
+  "scanned_at": "2026-09-30T12:13:21.803795",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googlecrzyoga.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googlecrzyoga.com&sz=128",
+  "brand_name": "Googlecrzyoga",
+  "name": "Googlecrzyoga",
+  "tiktok_slug": "googlecrzyoga",
+  "tiktok_handle": "@googlecrzyoga",
+  "tiktok_hashtag": "#googlecrzyoga",
+  "verified_domain": "googlecrzyoga.com",
+  "ground_truth": {
+    "brand_name": "Googlecrzyoga",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googlecrzyoga.com&sz=128",
+    "tiktok_slug": "googlecrzyoga",
+    "canonical_domain": "googlecrzyoga.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:42Z"
+  }
 }

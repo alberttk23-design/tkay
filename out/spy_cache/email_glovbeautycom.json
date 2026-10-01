@@ -1,0 +1,14 @@
+{
+  "brand": "Glovbeauty.Com",
+  "domain": "glovbeautycom.com",
+  "velocity": "0/wk",
+  "total_emails": 0,
+  "has_data": false,
+  "campaigns": [],
+  "flow_triggers": [],
+  "cadence_calendar": [],
+  "insights": {
+    "avg_discount": "0%",
+    "top_subject_keywords": []
+  }
+}

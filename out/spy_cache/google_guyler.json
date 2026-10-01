@@ -24,5 +24,21 @@
     "User interest": 0.0
   },
   "ad_cards": [],
-  "scanned_at": "2026-09-30T15:49:50.706082"
+  "scanned_at": "2026-09-30T18:28:47.319386",
+  "logo_url": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
+  "brand_name": "Googleguyler",
+  "name": "Googleguyler",
+  "tiktok_slug": "googleguyler",
+  "tiktok_handle": "@googleguyler",
+  "tiktok_hashtag": "#googleguyler",
+  "verified_domain": "googleguyler.com",
+  "ground_truth": {
+    "brand_name": "Googleguyler",
+    "logo_url": "https://www.google.com/s2/favicons?domain=googleguyler.com&sz=128",
+    "tiktok_slug": "googleguyler",
+    "canonical_domain": "googleguyler.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:43Z"
+  }
 }

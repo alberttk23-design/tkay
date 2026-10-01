@@ -13,6 +13,13 @@ import urllib.error
 import subprocess
 import os
 
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 PORT = 8765
 BASE_URL = f"http://localhost:{PORT}"
 
@@ -33,7 +40,8 @@ def check_syntax():
         "google_scanner.py",
         "tiktok_service.py",
         "email_scanner.py",
-        "meta_ranking.py"
+        "meta_ranking.py",
+        "contents_scanner.py"
     ]
     all_ok = True
     for f in files:
@@ -115,6 +123,29 @@ def verify_zero_hallucination():
             log_pass("Meta Ranking API: Sử dụng quảng cáo thực tế từ Ad Library, không dùng ảnh người mẫu Unsplash")
         else:
             log_fail("Meta Ranking API: Phát hiện thẻ xếp hạng giả mạo lấy từ Unsplash!")
+            all_ok = False
+
+    # 4. Test Google Ads API
+    ok, gg_data = check_api_endpoint("/api/google-ads")
+    if ok and gg_data:
+        g_active = gg_data.get("active_ads", -1)
+        g_total = gg_data.get("total_ads", gg_data.get("total_estimated", -1))
+        g_cards = len(gg_data.get("ad_cards", gg_data.get("library_cards", [])))
+        if g_active == 0 and g_total == 0 and g_cards == 0:
+            log_pass("Google Ads API: Trả về chính xác 0 ads cho brand lạ (Zero-Hallucination chuẩn xác)")
+        else:
+            log_fail(f"Google Ads API bị dính dữ liệu giả! active={g_active}, total={g_total}, cards={g_cards}")
+            all_ok = False
+
+    # 5. Test Contents API
+    ok, ct_data = check_api_endpoint("/api/contents")
+    if ok and ct_data:
+        c_counts = ct_data.get("counts", {})
+        c_total = sum(c_counts.values()) if isinstance(c_counts, dict) else -1
+        if c_total == 0:
+            log_pass("Contents API: Trả về chính xác 0 contents cho brand lạ (Zero-Hallucination chuẩn xác)")
+        else:
+            log_fail(f"Contents API bị dính dữ liệu giả! counts={c_counts}")
             all_ok = False
 
     return all_ok

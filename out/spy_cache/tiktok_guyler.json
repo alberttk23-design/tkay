@@ -13,5 +13,21 @@
       "video_pct": 0,
       "carousels_pct": 0
     }
+  },
+  "logo_url": "https://www.google.com/s2/favicons?domain=tiktokguyler.com&sz=128",
+  "brand_logo": "https://www.google.com/s2/favicons?domain=tiktokguyler.com&sz=128",
+  "brand_name": "Tiktokguyler",
+  "name": "Tiktokguyler",
+  "tiktok_slug": "tiktokguyler",
+  "tiktok_handle": "@tiktokguyler",
+  "tiktok_hashtag": "#tiktokguyler",
+  "verified_domain": "tiktokguyler.com",
+  "ground_truth": {
+    "brand_name": "Tiktokguyler",
+    "logo_url": "https://www.google.com/s2/favicons?domain=tiktokguyler.com&sz=128",
+    "tiktok_slug": "tiktokguyler",
+    "canonical_domain": "tiktokguyler.com",
+    "_source": "fallback_parse_fail",
+    "_healed_at": "2026-09-30T17:18:59Z"
   }
 }
