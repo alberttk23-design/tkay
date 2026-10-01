@@ -165,10 +165,37 @@ KNOWN_BRAND_REGISTRY = {
         "industry": "Baby & Mother Care",
         "confidence": 1.0
     },
-    "ridge wallet": {
-        "brand_name": "Ridge Wallet",
+    "ridge": {
+        "brand_name": "The Ridge",
         "canonical_domain": "ridge.com",
-        "facebook_search_term": "The Ridge",
+        "facebook_search_term": "Ridge Wallet",
+        "tiktok_slug": "ridge",
+        "google_search_term": "Ridge Wallet",
+        "industry": "Accessories & Everyday Carry",
+        "confidence": 1.0
+    },
+    "ridge.com": {
+        "brand_name": "The Ridge",
+        "canonical_domain": "ridge.com",
+        "facebook_search_term": "Ridge Wallet",
+        "tiktok_slug": "ridge",
+        "google_search_term": "Ridge Wallet",
+        "industry": "Accessories & Everyday Carry",
+        "confidence": 1.0
+    },
+    "the ridge": {
+        "brand_name": "The Ridge",
+        "canonical_domain": "ridge.com",
+        "facebook_search_term": "Ridge Wallet",
+        "tiktok_slug": "ridge",
+        "google_search_term": "Ridge Wallet",
+        "industry": "Accessories & Everyday Carry",
+        "confidence": 1.0
+    },
+    "ridge wallet": {
+        "brand_name": "The Ridge",
+        "canonical_domain": "ridge.com",
+        "facebook_search_term": "Ridge Wallet",
         "tiktok_slug": "ridge",
         "google_search_term": "Ridge Wallet",
         "industry": "Accessories & Everyday Carry",

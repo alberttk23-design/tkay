@@ -4306,7 +4306,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (metaAdsContainer) metaAdsContainer.classList.remove('hidden');
         if (metaBtn) metaBtn.className = "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-900 shadow-2xs cursor-pointer";
         const bName = getActiveBrandName();
-        loadMetaIntelligenceView(bName);
+        const bDomain = currentData?.verified_domain || currentData?.domain;
+        loadMetaIntelligenceView(bName, false, bDomain);
       } else if (tab === 'tiktok') {
         if (contentsContainer) contentsContainer.classList.add('hidden');
         if (emailContainer) emailContainer.classList.add('hidden');
@@ -4376,13 +4377,14 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
     async function handleMetaResetAndRescrape() {
       const bName = getActiveBrandName();
+      const bDomain = currentData?.verified_domain || currentData?.domain || (document.getElementById('brandInput')?.value.trim());
       if (!bName) return;
       const icon = document.getElementById('metaRescrapeIcon');
       const text = document.getElementById('metaRescrapeText');
       if (icon) icon.classList.add('animate-spin');
       if (text) text.textContent = 'Đang cào lại Meta...';
       try {
-        await loadMetaIntelligenceView(bName, true);
+        await loadMetaIntelligenceView(bName, true, bDomain);
         const q = document.getElementById('brandInput')?.value?.trim() || bName;
         // Also synchronize main brand cache
         await loadBrand(q, true);
@@ -4394,8 +4396,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
     }
 
-    async function loadMetaIntelligenceView(brandName, forceRefresh = false) {
+    async function loadMetaIntelligenceView(brandName, forceRefresh = false, domain = null) {
       const bName = brandName || getActiveBrandName();
+      const bDomain = domain || currentData?.verified_domain || currentData?.domain || (document.getElementById('brandInput')?.value.trim());
       const bTitle = document.getElementById('metaHeaderBrandName');
       const bAvatar = document.getElementById('metaHeaderBrandAvatar');
       const bAdsCount = document.getElementById('metaHeaderAdsCount');
@@ -4408,9 +4411,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         bAvatar.src = (currentData && currentData.avatarUrl) || getEmailBrandAvatar(bName);
       }
 
-      // Fetch unified Meta Suite from meta_ads_agent (supports forceRefresh to bypass cache)
+      // Fetch unified Meta Suite from meta_ads_agent (supports forceRefresh and domain routing)
       try {
-        const suiteUrl = '/api/meta/suite?query=' + encodeURIComponent(bName) + (forceRefresh ? '&refresh=true' : '');
+        let suiteUrl = '/api/meta/suite?query=' + encodeURIComponent(bName);
+        if (bDomain && bDomain !== bName) suiteUrl += '&domain=' + encodeURIComponent(bDomain);
+        if (forceRefresh) suiteUrl += '&refresh=true';
         const suiteRes = await fetch(suiteUrl);
         if (suiteRes.ok) {
           const suite = await suiteRes.json();
@@ -4421,6 +4426,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           const mainTotStr = suite.main_page_total_display || (suite.main_page_total ? (suite.main_page_total >= 1000 ? Math.round(suite.main_page_total/1000) + 'K' : suite.main_page_total) : (currentData?.channels?.meta?.main_page_total_display || `${totalAds}`));
           const allTimeTot = suite.total_all_time || currentData?.channels?.meta?.total || totalAds;
 
+          if (suite.brand_name && bTitle) bTitle.textContent = suite.brand_name;
           if (bAdsCount) bAdsCount.textContent = `• ${mainAct} / ${mainTotStr}`;
           if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
           if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds.toLocaleString()} / ${allTimeTot.toLocaleString()}`;
@@ -9783,7 +9789,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         loadContentsData(gtBrandName, forceRefresh);
         loadMetaRankingData(gtBrandName, forceRefresh);
         loadTikTokIntelligenceData(gtTikTokSlug, forceRefresh);
-        loadMetaIntelligenceView(gtBrandName, forceRefresh);
+        loadMetaIntelligenceView(gtBrandName, forceRefresh, gtDomain);
       } catch (err) {
         alert('Lỗi tải dữ liệu: ' + err.message);
       } finally {

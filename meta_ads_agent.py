@@ -822,8 +822,27 @@ class MetaAdsAgent:
             except Exception as _e_truth:
                 print(f"⚠️ [META AGENT] Truth engine check: {_e_truth}")
 
+        # Smart Disambiguation via Gemini Main Agent
+        meta_search_query = clean_b
+        target_domain = clean_d if (clean_d and '.' in clean_d) else None
+        resolved_brand_name = clean_b
+        
+        try:
+            import gemini_main_agent as _gma
+            dispatch_input = clean_b if '.' in clean_b else (domain or clean_b)
+            dispatched = _gma.disambiguate_and_dispatch(dispatch_input)
+            if dispatched:
+                if not target_domain or '.' not in target_domain:
+                    target_domain = dispatched.get("canonical_domain") or target_domain
+                meta_search_query = dispatched.get("facebook_search_term") or clean_b
+                resolved_brand_name = dispatched.get("brand_name") or clean_b
+        except Exception as _e_dis:
+            print(f"⚠️ [META AGENT] Disambiguation notice: {_e_dis}")
+            
+        final_domain = target_domain or (clean_d if (clean_d and '.' in clean_d) else f"{slugify(clean_b)}.com")
+
         # 3. Check Unified Cache or Purge if Force Refresh
-        slug = slugify(clean_d or clean_b)
+        slug = slugify(final_domain or clean_d or clean_b)
         suite_cache_file = os.path.join(self.cache_dir, f"meta_suite_{slug}.json")
         if force_refresh:
             try:
@@ -845,14 +864,14 @@ class MetaAdsAgent:
                 pass
 
         # 4. Execute Scrape / Retrieve Raw Ads from ad_scanner
-        print(f"🎯 [META AGENT] Orchestrating Meta intelligence for: {clean_b} ({clean_d})...")
+        print(f"🎯 [META AGENT] Orchestrating Meta intelligence for: {meta_search_query} ({final_domain})...")
         import ad_scanner
-        raw_scanned = ad_scanner.scan_brand_ads(clean_b, max_ads=50, official_domain=clean_d)
+        raw_scanned = ad_scanner.scan_brand_ads(meta_search_query, max_ads=50, official_domain=final_domain)
 
         # 5. Build Complete 6 Sub-Tab Suite
         suite = build_dynamic_meta_suite(
-            brand_name=raw_scanned.get("name") or clean_b,
-            domain=raw_scanned.get("domain") or clean_d,
+            brand_name=raw_scanned.get("name") or resolved_brand_name or clean_b,
+            domain=raw_scanned.get("domain") or final_domain,
             raw_scanned=raw_scanned
         )
 
