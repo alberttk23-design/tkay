@@ -4845,6 +4845,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // 3. Top Landing Pages Card
       const lpListEl = document.getElementById('metaInsightsLandingPagesList');
+      if (lpListEl) {
         const bDom = (currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
         rawAds.forEach(a => {
           const url = a.landing_url || a.landingUrl || `https://${bDom}`;
@@ -7979,10 +7980,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       } else {
         // Format A: Google Search Text SERP Card matching media_1790761189822.png & media_1790761291898.png
         const sitelinks = card.sitelinks || [
-          {"title": f"{brandName} Wearable Blankets", "snippet": "Browse original cloud-soft blankets"},
-          {"title": f"Shop {brandName} Bundles", "snippet": "Save up to 40% on matching sets"},
-          {"title": "Sleep Tees", "snippet": "Breathable bamboo cooling sleepwear"},
-          {"title": "Robes & Loungewear", "snippet": "Premium luxury fleece robes"}
+          {"title": `${brandName} Official Store`, "snippet": "Shop official verified collection"},
+          {"title": `Shop ${brandName} Deals`, "snippet": "Save up to 40% on popular best-sellers"},
+          {"title": "New Arrivals", "snippet": "Explore latest releases & seasonal drops"},
+          {"title": "Customer Reviews", "snippet": "Top rated favorites by verified buyers"}
         ];
 
         centerMediaHtml = `
