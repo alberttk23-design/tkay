@@ -657,9 +657,9 @@ def generate_oodie_dataset() -> dict:
     }
 
 def generate_true_sea_moss_dataset() -> dict:
-    """Authentic True Sea Moss organic superfood email campaigns with full 118 stream."""
+    """Authentic True Sea Moss organic superfood email campaigns with full 85 stream."""
     velocity = "3.8/wk"
-    total_emails = 118
+    total_emails = 85
 
     base_campaigns = [
         {

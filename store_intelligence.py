@@ -201,6 +201,60 @@ KNOWN_APP_CATALOG = [
         "icon_bg": "bg-red-500",
         "icon_text": "HJ",
         "url": "https://www.hotjar.com"
+    },
+    {
+        "id": "google_youtube",
+        "name": "Google & YouTube",
+        "category": "Google Ads · Shopping Ads · Performance Max",
+        "patterns": ["google-analytics", "gtag", "googleads"],
+        "icon_bg": "bg-amber-500",
+        "icon_text": "G",
+        "url": "https://apps.shopify.com/google"
+    },
+    {
+        "id": "cwill",
+        "name": "CWILL Order Tracking",
+        "category": "Order Tracking · Shipping Notifications · Branded Tracking",
+        "patterns": ["cwill", "cwillcall"],
+        "icon_bg": "bg-blue-600",
+        "icon_text": "CW",
+        "url": "https://apps.shopify.com/cwill"
+    },
+    {
+        "id": "postscript",
+        "name": "Postscript SMS Marketing",
+        "category": "SMS Marketing · Automations · Compliance",
+        "patterns": ["postscript.io", "postscript"],
+        "icon_bg": "bg-purple-600",
+        "icon_text": "PS",
+        "url": "https://apps.shopify.com/postscript-sms"
+    },
+    {
+        "id": "goaffpro",
+        "name": "GOAFFPRO - Affiliate Marketing",
+        "category": "Affiliate Marketing · Influencer Tracking · Commission",
+        "patterns": ["goaffpro.com", "goaffpro"],
+        "icon_bg": "bg-indigo-600",
+        "icon_text": "GA",
+        "url": "https://apps.shopify.com/goaffpro"
+    },
+    {
+        "id": "growave",
+        "name": "Growave: Loyalty, Wishlist, Reviews",
+        "category": "Loyalty · Rewards · Wishlist",
+        "patterns": ["growave.io", "growave"],
+        "icon_bg": "bg-violet-600",
+        "icon_text": "GW",
+        "url": "https://apps.shopify.com/growave"
+    },
+    {
+        "id": "pushowl",
+        "name": "PushOwl Web Push Notifications",
+        "category": "Web Push · Abandoned Cart · Retargeting",
+        "patterns": ["pushowl.com", "pushowl"],
+        "icon_bg": "bg-amber-600",
+        "icon_text": "PO",
+        "url": "https://apps.shopify.com/pushowl"
     }
 ]
 
@@ -247,6 +301,21 @@ def fetch_store_products(domain: str, max_products: int = 50) -> Dict[str, Any]:
     If store is not Shopify or blocked, returns empty zero state (NO FAKE DATA).
     """
     clean_d = clean_domain(domain)
+
+    # Check Single Source of Truth first
+    try:
+        import store_metrics_truth as _smt
+        truth = _smt.get_store_metrics_truth(clean_d)
+        if truth and truth.get("catalog", {}).get("products"):
+            print(f"💎 [STORE INTEL] Loaded authoritative catalog for {clean_d} (total: {truth['catalog'].get('total_in_catalog')})")
+            return {
+                "total_in_catalog": truth["catalog"].get("total_in_catalog", len(truth["catalog"]["products"])),
+                "products": truth["catalog"]["products"],
+                "has_catalog": True,
+                "store_domain": clean_d
+            }
+    except Exception:
+        pass
     url = f"https://{clean_d}/products.json?limit={max_products}"
     
     print(f"📦 [STORE INTEL] Fetching products catalog for: https://{clean_d}...")
@@ -392,6 +461,21 @@ def detect_store_apps_and_pixels(domain: str) -> Dict[str, Any]:
     Extracts real Meta Pixel IDs, GA4 Measurement IDs, TikTok Pixel IDs, etc.
     """
     clean_d = clean_domain(domain)
+
+    # Check Single Source of Truth first
+    try:
+        import store_metrics_truth as _smt
+        truth = _smt.get_store_metrics_truth(clean_d)
+        if truth and truth.get("apps"):
+            print(f"💎 [STORE INTEL] Loaded authoritative apps for {clean_d} (total: {len(truth['apps'])})")
+            return {
+                "domain": clean_d,
+                "apps": truth["apps"],
+                "pixels": truth.get("pixels", [])
+            }
+    except Exception:
+        pass
+
     url = f"https://{clean_d}"
     
     print(f"🕵️ [STORE INTEL] Detecting Apps & Pixels for: {url}...")

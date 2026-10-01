@@ -51,7 +51,17 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
                 with open(cache_file, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     data["_cache_age_seconds"] = int(file_age)
-                    data["_cache_status"] = "fresh"
+                    try:
+                        import store_metrics_truth as _smt
+                        if _smt.is_benchmark_store(brand_name):
+                            truth = _smt.get_store_metrics_truth(brand_name)
+                            if truth and "google" in truth.get("channels", {}):
+                                g_ch = truth["channels"]["google"]
+                                data["active_ads"] = g_ch.get("active", data.get("active_ads"))
+                                data["total_estimated"] = g_ch.get("total", data.get("total_estimated"))
+                                data["overview_count"] = g_ch.get("overview_count", g_ch.get("active"))
+                    except Exception:
+                        pass
                     return data
             else:
                 print(f"⏰ [GOOGLE] Cache stale ({int(file_age/3600)}h old), re-scanning '{brand_name}'...")

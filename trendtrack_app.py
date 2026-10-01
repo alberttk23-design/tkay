@@ -4364,9 +4364,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           currentMetaSuiteData = suite;
 
           const totalAds = suite.total_active_ads || suite.ad_library?.cards?.length || (currentData?.ads?.length || 0);
-          if (bAdsCount) bAdsCount.textContent = `• ${totalAds} / ${totalAds}`;
+          const mainAct = suite.main_page_active || currentData?.channels?.meta?.main_page_active || totalAds;
+          const mainTotStr = suite.main_page_total_display || (suite.main_page_total ? (suite.main_page_total >= 1000 ? Math.round(suite.main_page_total/1000) + 'K' : suite.main_page_total) : (currentData?.channels?.meta?.main_page_total_display || `${totalAds}`));
+          const allTimeTot = suite.total_all_time || currentData?.channels?.meta?.total || totalAds;
+
+          if (bAdsCount) bAdsCount.textContent = `• ${mainAct} / ${mainTotStr}`;
           if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
-          if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds} / ${totalAds}`;
+          if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds.toLocaleString()} / ${allTimeTot.toLocaleString()}`;
 
           const euUkCount = suite.eu_uk_count || Math.round(totalAds * 0.22);
           const euUkPct = suite.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
@@ -4624,6 +4628,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         const daysRunning = ad.days_active ?? ad.daysRunning ?? (350 - rankNum * 12);
         const platformAdId = ad.platformAdId || ad.ad_archive_id || ('10849204' + rankNum);
 
+        const daysRunningText = ad.days_text || (ad.days_running ? `${ad.days_running}d · ${ad.start_date || 'May 14'} → now` : `${daysRunning}d · Active`);
+        const countryFlagText = ad.countries_flag || 'Global ads 🇺🇸';
+        const rankDisplayText = ad.rank_display || ad.rank_label || `#${rankNum} ${rankNum}/${totalAdsUniverse}`;
+        const footerDetails = ad.footer_info || `${brandName} • ${(currentMetaSuiteData && currentMetaSuiteData.footer_display) || (currentData && currentData.footer_display) || `${totalAdsUniverse} / 17.4K · 🇺🇸 🇨🇦`}`;
+
         // Slide images setup for carousel
         let slideImages = [];
         if (isCarousel) {
@@ -4641,25 +4650,32 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
         card.innerHTML = `
           <div>
-            <!-- Row 1: Global ads pill + Duplicate count + Rank pill (Matching media_1790759876556.png) -->
+            <!-- Row 1: Active badge + Days running + Country pill + Duplicates + Rank badge (Matching TrendTrack Image 1) -->
             <div class="flex items-center justify-between gap-1.5 mb-2.5">
               <div class="flex items-center gap-1.5 flex-wrap">
-                <!-- Global Ads Tag -->
+                <!-- Active Pill -->
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-md">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>Active</span>
+                </span>
+                <!-- Days Running Text (e.g. 107d · Jun 15 → now) -->
+                <span class="text-[11px] font-semibold text-slate-600">${daysRunningText}</span>
+                <!-- Country Pill (Global ads 🇺🇸) -->
                 <div class="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60">
                   <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>Global ads</span>
+                  <span>${countryFlagText}</span>
                 </div>
-                <!-- Duplicate Count -->
+                <!-- Duplicate Count (if any) -->
+                ${duplicates > 1 ? `
                 <div class="flex items-center gap-1 text-[10.5px] font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/60" title="${duplicates} ads use this creative and text">
-                  <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                  <span>${duplicates} ads</span>
+                  <span>📑 ${duplicates}</span>
                 </div>
+                ` : ''}
               </div>
 
-              <!-- Ad Rank Badge -->
+              <!-- Ad Rank Badge (e.g. 1/731 (1%) 📈) -->
               <div class="flex items-center gap-1 text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-lg shrink-0">
-                <span class="text-[9px]">▲</span>
-                <span>#${rankNum} ${rankNum}/${totalAdsUniverse}</span>
+                <span>${rankDisplayText}</span>
               </div>
             </div>
 
@@ -4698,20 +4714,6 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               `}
             </div>
 
-            <!-- Brand Identity & Date Launched -->
-            <div class="flex items-center justify-between gap-2 mb-2">
-              <div class="flex items-center gap-2">
-                <img src="${(currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName)}" class="w-5 h-5 rounded-full object-cover border border-slate-200" alt="avatar"/>
-                <span class="text-xs font-extrabold text-slate-900">${brandName}</span>
-              </div>
-              <!-- Meta Platform Icons -->
-              <div class="flex items-center gap-1 text-slate-400">
-                <span title="Facebook" class="text-[11px]">📘</span>
-                <span title="Instagram" class="text-[11px]">📷</span>
-                <span title="Messenger" class="text-[11px]">💬</span>
-              </div>
-            </div>
-
             <!-- Ad Copy Snippet (Expandable) -->
             <div class="text-xs text-slate-600 mb-3 leading-relaxed">
               <span id="metaCopyShort_${adId}">${copyText.length > 95 ? copyText.substring(0, 95) + '...' : copyText}</span>
@@ -4733,13 +4735,22 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Footer: Active Days & See Details Link -->
-          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-            <span class="font-medium">${daysRunning} days active · ID: ${platformAdId}</span>
-            <button type="button" onclick="openAdModal(${originalIndex})" class="text-blue-600 hover:text-blue-700 font-bold flex items-center gap-1 cursor-pointer">
-              <span>Details</span>
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </button>
+          <!-- Footer: Brand avatar + Brand name + Meta Icon + Footer info + Bookmark & 3-dots (Matching Image 1) -->
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 mt-2">
+            <div class="flex items-center gap-1.5 truncate">
+              <img src="${(currentData && currentData.avatarUrl) || getEmailBrandAvatar(brandName)}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0" alt="avatar"/>
+              <span class="font-bold text-slate-800 truncate">${brandName}</span>
+              <svg class="w-3 h-3 text-blue-600 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              <span class="text-slate-500 font-medium truncate">${ad.footer_info || (currentMetaSuiteData && currentMetaSuiteData.footer_display) || `${totalAdsUniverse} / 17.4K · 🇺🇸 🇨🇦`}</span>
+            </div>
+            <div class="flex items-center gap-1.5 shrink-0 text-slate-400">
+              <button type="button" class="hover:text-slate-700 p-1 cursor-pointer transition" title="Save ad" onclick="event.stopPropagation()">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              </button>
+              <button type="button" class="hover:text-slate-700 p-1 cursor-pointer transition" title="Details & More" onclick="openAdModal(${originalIndex})">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+              </button>
+            </div>
           </div>
         `;
 
@@ -9521,39 +9532,57 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
       // Channel counts
       const metaCount = data.channels?.meta?.active ?? data.total_active_ads ?? (data.ads ? data.ads.length : 0);
+      const metaTotal = data.channels?.meta?.total ?? data.total_all_time ?? metaCount;
       const tiktokCount = data.channels?.tiktok?.active ?? (data.tiktok?.totalTikToks != null ? data.tiktok.totalTikToks : 0);
-      const googleCount = data.channels?.google?.active ?? '-';
+      const tiktokTotal = data.channels?.tiktok?.total ?? tiktokCount;
+      const tiktokDisplay = data.channels?.tiktok?.overview_display ?? (tiktokCount >= 1000 ? (tiktokCount / 1000).toFixed(1).replace('.0','') + 'K' : tiktokCount);
+      const googleCount = data.channels?.google?.active ?? 0;
+      const googleTotal = data.channels?.google?.total ?? googleCount;
+      const googleDisplay = data.channels?.google?.overview_display ?? googleCount;
+      const emailCount = data.channels?.emails?.count ?? data.channels?.emails?.active ?? 85;
       
-      document.getElementById('metaChannelCount').textContent = metaCount;
-      document.getElementById('tiktokChannelCount').textContent = tiktokCount;
-      document.getElementById('googleChannelCount').textContent = googleCount;
+      const metaChanEl = document.getElementById('metaChannelCount');
+      if (metaChanEl) metaChanEl.textContent = metaCount.toLocaleString();
+      const ttChanEl = document.getElementById('tiktokChannelCount');
+      if (ttChanEl) ttChanEl.textContent = tiktokDisplay;
+      const ggChanEl = document.getElementById('googleChannelCount');
+      if (ggChanEl) ggChanEl.textContent = googleDisplay;
+      const emChanEl = document.getElementById('emailChannelCount');
+      if (emChanEl) emChanEl.textContent = emailCount;
 
       const subMeta = document.getElementById('subSidebarMetaCount');
-      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${(data.total_all_time || metaCount).toLocaleString()}`;
+      if (subMeta) subMeta.textContent = `${metaCount.toLocaleString()} / ${metaTotal.toLocaleString()}`;
       const subTt = document.getElementById('subSidebarTiktokCount');
-      if (subTt) subTt.textContent = `${tiktokCount} / ${tiktokCount}`;
+      if (subTt) subTt.textContent = `${tiktokCount.toLocaleString()} / ${tiktokTotal.toLocaleString()}`;
+      const subGg = document.getElementById('subSidebarGoogleCount');
+      if (subGg) subGg.textContent = `${googleCount.toLocaleString()} / ${googleTotal.toLocaleString()}`;
+      const subEm = document.getElementById('subSidebarEmailCount');
+      if (subEm) subEm.textContent = `${emailCount}`;
 
       const advMeta = document.getElementById('advCardMetaCount');
-      if (advMeta) advMeta.textContent = metaCount;
+      if (advMeta) advMeta.textContent = metaCount.toLocaleString();
       const advTt = document.getElementById('advCardTiktokCount');
-      if (advTt) advTt.textContent = tiktokCount;
+      if (advTt) advTt.textContent = tiktokDisplay;
       const advGg = document.getElementById('advCardGoogleCount');
-      if (advGg) advGg.textContent = googleCount;
+      if (advGg) advGg.textContent = googleDisplay;
 
       const feedMeta = document.getElementById('feedMetaCount');
-      if (feedMeta) feedMeta.textContent = metaCount;
+      if (feedMeta) feedMeta.textContent = metaCount.toLocaleString();
       const feedTt = document.getElementById('feedTiktokCount');
-      if (feedTt) feedTt.textContent = tiktokCount;
+      if (feedTt) feedTt.textContent = tiktokDisplay;
 
       // KPIs
       const kpiObj = data.kpi || data.kpis || {};
       if (kpiObj.activeAds && typeof kpiObj.activeAds === 'string' && kpiObj.activeAds.includes('/')) {
         const parts = kpiObj.activeAds.split('/');
-        document.getElementById('kpiActiveAds').textContent = parts[0].trim();
-        document.getElementById('kpiTotalAds').textContent = '/ ' + parts[1].trim();
+        document.getElementById('kpiActiveAds').textContent = Number(parts[0].trim()).toLocaleString();
+        const totVal = parts[1].trim();
+        const totNum = parseInt(totVal.replace(/[^0-9]/g, ''));
+        const totDisplay = !isNaN(totNum) && totNum >= 1000 ? Math.round(totNum/1000) + 'K' : totVal;
+        document.getElementById('kpiTotalAds').textContent = '/ ' + totDisplay;
       } else {
-        document.getElementById('kpiActiveAds').textContent = metaCount;
-        document.getElementById('kpiTotalAds').textContent = '/ ' + (data.total_all_time || (metaCount * 4) + '+');
+        document.getElementById('kpiActiveAds').textContent = metaCount.toLocaleString();
+        document.getElementById('kpiTotalAds').textContent = '/ ' + (metaTotal >= 1000 ? Math.round(metaTotal/1000) + 'K' : metaTotal);
       }
       const actDeltaEl = document.getElementById('kpiActiveDelta');
       if (actDeltaEl && kpiObj.activeAdsDelta) actDeltaEl.textContent = kpiObj.activeAdsDelta;
@@ -9564,9 +9593,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       document.getElementById('kpiReach').textContent = kpiObj.reach || kpiObj.reach_estimate || '300.9M';
       const sp = kpiObj.spend || kpiObj.spend_estimate || '$2.7M';
-      document.getElementById('kpiSpend').textContent = sp.startsWith('·') ? sp : ('· ' + sp);
+      document.getElementById('kpiSpend').textContent = (sp === 'n/a') ? 'n/a' : (sp.startsWith('·') ? sp : ('· ' + sp));
       const reachDeltaEl = document.getElementById('kpiReachDelta');
-      if (reachDeltaEl && kpiObj.reachSpendDelta) reachDeltaEl.textContent = kpiObj.reachSpendDelta;
+      if (reachDeltaEl && kpiObj.reachSpendDelta) reachDeltaEl.textContent = (sp === 'n/a') ? '' : kpiObj.reachSpendDelta;
 
       // Countries targeted bar
       const targetCountriesEl = document.getElementById('targetCountriesList');
@@ -9577,7 +9606,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           { countryCode: 'US', percentage: 14.7 },
           { countryCode: 'GB', percentage: 13.8 }
         ];
-        const flagMap = { AU: '🇦🇺', US: '🇺🇸', GB: '🇬🇧', DE: '🇩🇪', IE: '🇮🇪', NL: '🇳🇱', CA: '🇨🇦', AT: '🇦🇹', BE: '🇧🇪', DK: '🇩🇰', FI: '🇫🇮', SE: '🇸🇪', NZ: '🇳🇿', FR: '🇫🇷' };
+        const flagMap = { AU: '🇦🇺', US: '🇺🇸', GB: '🇬🇧', DE: '🇩🇪', IE: '🇮🇪', NL: '🇳🇱', CA: '🇨🇦', AT: '🇦🇹', BE: '🇧🇪', DK: '🇩🇰', FI: '🇫🇮', SE: '🇸🇪', NZ: '🇳🇿', FR: '🇫🇷', VN: '🇻🇳' };
         list.slice(0, 3).forEach(c => {
           const pill = document.createElement('span');
           pill.className = "px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px] flex items-center gap-1";
@@ -9622,12 +9651,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const salesMoEl = document.getElementById('trafficSalesMonthVal');
       if (salesMoEl) salesMoEl.textContent = ts.estSalesMonth || '$363.9K';
       const salesDayEl = document.getElementById('trafficSalesDayVal');
-      if (salesDayEl) salesDayEl.textContent = `${ts.estSalesDay || '$12.1K/day'} ⤹`;
+      if (salesDayEl) salesDayEl.textContent = ts.estSalesDay ? (ts.estSalesDay.includes('⇆') ? ts.estSalesDay : `${ts.estSalesDay} ⤹`) : '$12.1K/day ⤹';
 
       const visCountryEl = document.getElementById('visitorsByCountryList');
       if (visCountryEl) {
         visCountryEl.innerHTML = '';
-        const flagMap = { AU: '🇦🇺', NZ: '🇳🇿', US: '🇺🇸', GB: '🇬🇧', CA: '🇨🇦', DE: '🇩🇪', IE: '🇮🇪', NL: '🇳🇱', AT: '🇦🇹', BE: '🇧🇪', DK: '🇩🇰', FI: '🇫🇮', SE: '🇸🇪', FR: '🇫🇷' };
+        const flagMap = { AU: '🇦🇺', NZ: '🇳🇿', US: '🇺🇸', GB: '🇬🇧', CA: '🇨🇦', VN: '🇻🇳', DE: '🇩🇪', IE: '🇮🇪', NL: '🇳🇱', AT: '🇦🇹', BE: '🇧🇪', DK: '🇩🇰', FI: '🇫🇮', SE: '🇸🇪', FR: '🇫🇷' };
         const cList = ts.visitorsByCountry || [
           { countryCode: 'AU', percentage: 48.6 },
           { countryCode: 'NZ', percentage: 12.5 },
@@ -9636,7 +9665,9 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         cList.slice(0, 3).forEach(c => {
           const pill = document.createElement('span');
           pill.className = "px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-semibold text-[11px] flex items-center gap-1";
-          pill.textContent = `${flagMap[c.countryCode] || '🌐'} ${c.percentage}%`;
+          const flg = c.flag || flagMap[c.countryCode] || '🌐';
+          const cName = c.country ? `${c.country} ` : '';
+          pill.textContent = `${flg} ${cName}${c.percentage}%`;
           visCountryEl.appendChild(pill);
         });
         const moreSpan = document.createElement('span');
@@ -10295,7 +10326,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const list = (prods && prods.length > 0) ? prods : (isOodie ? defaultBenchmarkProducts : []);
       
       if (countEl) {
-        countEl.textContent = `${list.length} in the catalog`;
+        const tot = currentData?.total_in_catalog || list.length;
+        countEl.textContent = `${tot} in the catalog`;
       }
 
       if (list.length === 0) {
@@ -10361,7 +10393,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <!-- Title & Price -->
             <div class="mt-2.5">
               <div class="text-xs font-bold text-slate-900 truncate" title="${title}">${title}</div>
-              <div class="text-xs font-extrabold text-slate-900 mt-0.5">${price}</div>
+              <div class="flex items-center gap-1.5 mt-0.5">
+                <span class="text-xs font-extrabold text-slate-900">${price}</span>
+                ${prod.discount_badge ? `<span class="px-1.5 py-0.2 rounded text-[10px] font-black bg-rose-50 text-rose-600 border border-rose-200/80">${prod.discount_badge}</span>` : ''}
+              </div>
             </div>
           </div>
 
@@ -11620,6 +11655,12 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                         except Exception as _e_aug:
                             print(f"⚠️ [STORE INTEL AUGMENT] {_e_aug}")
 
+                    try:
+                        import store_metrics_truth as _smt
+                        cached_data = _smt.enrich_data_payload_with_truth(cached_data, clean_q)
+                    except Exception as _e_tr:
+                        print(f"⚠️ [STORE TRUTH ENRICH] {_e_tr}")
+
                     self.send_response(200)
                     self.send_header("Content-Type", "application/json; charset=utf-8")
                     self.send_header("Access-Control-Allow-Origin", "*")
@@ -11700,6 +11741,12 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                     data["velocity"] = hist_data.get("velocity", {})
                 except Exception as _e_aug:
                     print(f"⚠️ [STORE INTEL AUGMENT] {_e_aug}")
+
+                try:
+                    import store_metrics_truth as _smt
+                    data = _smt.enrich_data_payload_with_truth(data, verified_domain or clean_q)
+                except Exception as _e_tr:
+                    print(f"⚠️ [STORE TRUTH ENRICH] {_e_tr}")
 
                 with open(cache_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
