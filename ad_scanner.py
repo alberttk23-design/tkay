@@ -313,18 +313,26 @@ def _extract_ads_from_meta_response(data: Any, out_ads: List[Dict[str, Any]], ou
     if not isinstance(data, (dict, list)):
         return
 
-    # Check for total count
+    # Check for total count and edges
     if isinstance(data, dict):
-        # 1. Check for search_results_connection.count (Meta GraphQL)
+        # 1. Check for search_results_connection.count & edges (Meta GraphQL)
         conn = data.get("search_results_connection")
-        if isinstance(conn, dict) and "count" in conn:
-            try:
-                cnt = int(conn["count"])
-                if cnt > 0:
-                    out_total["count"] = max(out_total.get("count", 0), cnt)
-                    out_total["str"] = f"~{cnt:,} results"
-            except Exception:
-                pass
+        if isinstance(conn, dict):
+            if "count" in conn:
+                try:
+                    cnt = int(conn["count"])
+                    if cnt > 0:
+                        out_total["count"] = max(out_total.get("count", 0), cnt)
+                        out_total["str"] = f"~{cnt:,} results"
+                except Exception:
+                    pass
+            # Parse all ads in edges -> node -> collated_results
+            for edge in conn.get("edges", []):
+                if isinstance(edge, dict):
+                    node = edge.get("node", {})
+                    for item in node.get("collated_results", []):
+                        if isinstance(item, dict):
+                            _extract_ads_from_meta_response(item, out_ads, out_total)
 
         total = data.get("totalCount") or data.get("total_count") or data.get("count")
         if total and isinstance(total, (int, str)):
@@ -735,8 +743,26 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
     clean_q = re.sub(r'[^a-z0-9]', '', query.lower())
     if clean_q in ["loopearplugs", "loopearplug", "loopearplugscom", "loopearplugsofficial"]:
         return generate_loop_meta_dataset(query)
+    # ── STEP 0: Resolve Facebook Page ID (Deterministic Industry-Standard) ──
+    resolved_page_info = None
+    target_page_id = None
+    resolved_page_name = None
+    try:
+        import meta_page_resolver as _mpr
+        resolved_page_info = _mpr.resolve_facebook_page_id(query, domain=official_domain, allow_live_probe=False)
+        if resolved_page_info:
+            target_page_id = resolved_page_info.get("page_id")
+            resolved_page_name = resolved_page_info.get("page_name")
+    except Exception as _e_mpr:
+        print(f"⚠️ [PAGE RESOLVER ERROR] {_e_mpr}")
+
     encoded_q = urllib.parse.quote(query)
-    ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={encoded_q}&search_type=keyword_unordered&media_type=all"
+    if target_page_id:
+        ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id={target_page_id}&media_type=all"
+        print(f"🎯 [AD SCANNER] Chế độ cào Page ID chuẩn xác: view_all_page_id={target_page_id} (Page: '{resolved_page_name}')")
+    else:
+        ad_lib_url = f"https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={encoded_q}&search_type=page&media_type=all"
+        print(f"ℹ️ [AD SCANNER] Chế độ tìm kiếm Page cho '{query}': {ad_lib_url}")
 
     print(f"🔍 [AD SCANNER] Bắt đầu quét Meta Ad Library cho: '{query}'{' (domain filter: ' + official_domain + ')' if official_domain else ''}...")
     
@@ -834,9 +860,20 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
                 page.evaluate("window.scrollBy(0, 2000)")
                 page.wait_for_timeout(1500)
 
-            # Extract GraphQL count & text count from full HTML after scrolling
+            # Extract GraphQL count, SSR JSON scripts & text count from full HTML
             try:
                 page_html = page.content()
+
+                # Parse embedded SSR JSON scripts (contains exact collated_results & active count)
+                ssr_scripts = re.findall(r'<script[^>]+type=[\"\']application/json[\"\'][^>]*>(.*?)</script>', page_html, re.DOTALL)
+                for s_raw in ssr_scripts:
+                    if 'search_results_connection' in s_raw or 'ad_archive_id' in s_raw:
+                        try:
+                            s_data = json.loads(s_raw)
+                            _extract_ads_from_meta_response(s_data, intercepted_ads, intercepted_total)
+                        except Exception:
+                            pass
+
                 m_json = re.search(r'\"search_results_connection\":\s*\{\s*\"count\":\s*(\d+)', page_html)
                 if m_json:
                     exact_c = int(m_json.group(1))

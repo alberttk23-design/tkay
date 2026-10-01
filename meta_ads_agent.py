@@ -841,6 +841,16 @@ class MetaAdsAgent:
             
         final_domain = target_domain or (clean_d if (clean_d and '.' in clean_d) else f"{slugify(clean_b)}.com")
 
+        # Check Page ID Resolver for official page name
+        try:
+            import meta_page_resolver as _mpr
+            pid_info = _mpr.resolve_facebook_page_id(clean_b, domain=final_domain, allow_live_probe=False)
+            if pid_info and pid_info.get("page_name"):
+                resolved_brand_name = pid_info["page_name"]
+                meta_search_query = pid_info["page_name"]
+        except Exception:
+            pass
+
         # 3. Check Unified Cache or Purge if Force Refresh
         slug = slugify(final_domain or clean_d or clean_b)
         suite_cache_file = os.path.join(self.cache_dir, f"meta_suite_{slug}.json")

@@ -1,6 +1,6 @@
 {
   "domain": "ridge.com",
-  "brand_name": "Ridge Wallet",
+  "brand_name": "Ridge",
   "store_age": {
     "domain": "ridge.com",
     "founding_date": "Mar 06, 2024",
@@ -15,21 +15,21 @@
   "snapshots": [
     {
       "date": "2026-10-01",
-      "timestamp": 1790819936,
-      "active_ads": 220,
-      "traffic": "100K+",
-      "products_count": 0
+      "timestamp": 1790836038,
+      "active_ads": 18,
+      "traffic": "N/A",
+      "products_count": 50
     }
   ],
   "velocity": {
     "trend_status": "STABLE",
-    "status_badge": "➡️ Ổn định (220 ads)",
+    "status_badge": "➡️ Ổn định (18 ads)",
     "delta_ads": 0,
     "growth_pct": 0.0,
-    "prev_ads": 220,
-    "current_ads": 220,
+    "prev_ads": 18,
+    "current_ads": 18,
     "baseline_date": "2026-10-01",
     "current_date": "2026-10-01",
-    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 220 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 18 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
   }
 }

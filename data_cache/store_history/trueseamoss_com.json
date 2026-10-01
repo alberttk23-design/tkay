@@ -3,14 +3,14 @@
   "brand_name": "True Sea Moss",
   "store_age": {
     "domain": "trueseamoss.com",
-    "founding_date": "Dec 09, 2024",
-    "founding_iso": "2024-12-09T02:44:41-08:00",
-    "age_str": "1.8 yr",
-    "age_days": 660,
-    "store_age_months": 21.7,
-    "stage_badge": "🏛️ Established (1.8yr)",
-    "stage_tag": "ESTABLISHED",
-    "is_under_6_months": false
+    "founding_date": "Recent",
+    "founding_iso": "",
+    "age_str": "6 mo",
+    "age_days": 180,
+    "store_age_months": 6.0,
+    "stage_badge": "🟡 Rising (6mo)",
+    "stage_tag": "UNDER_6_MONTHS",
+    "is_under_6_months": true
   },
   "snapshots": [
     {
@@ -32,7 +32,7 @@
       "timestamp": 1790819897,
       "active_ads": 27,
       "traffic": "100K+",
-      "products_count": 50
+      "products_count": 5
     }
   ],
   "velocity": {

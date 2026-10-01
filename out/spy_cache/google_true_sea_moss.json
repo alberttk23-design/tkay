@@ -58,16 +58,16 @@
       "pct": 28.9
     },
     "Other": {
-      "count": 21,
-      "pct": 46.7
+      "count": 20,
+      "pct": 44.4
     },
     "YouTube": {
       "count": 7,
       "pct": 15.6
     },
     "Shopping": {
-      "count": 4,
-      "pct": 8.9
+      "count": 5,
+      "pct": 11.1
     },
     "Unknown": {
       "count": 0,
@@ -76,12 +76,12 @@
   },
   "longevity_mix": {
     "0-30 d": {
-      "count": 11,
-      "pct": 24.4
+      "count": 10,
+      "pct": 22.2
     },
     "31-90 d": {
-      "count": 13,
-      "pct": 28.9
+      "count": 15,
+      "pct": 33.3
     },
     "91-180 d": {
       "count": 4,
@@ -92,8 +92,8 @@
       "pct": 28.9
     },
     "365 d +": {
-      "count": 4,
-      "pct": 8.9
+      "count": 3,
+      "pct": 6.7
     }
   },
   "country_mix": {
@@ -134,33 +134,11 @@
       "first_shown": "May 01, 2023",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/6514394988399349475",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
-      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR05384935652473176065",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 426,
-      "date_range": "426d · Jul 31, 2025 → now",
-      "reach_tag": "50K-100K",
-      "first_shown": "Jul 31, 2025",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/18019974918473117090",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
-      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "domain": "nz.trueseamoss.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Customer Favorites – Shop True Sea Moss Deals",
+      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
@@ -169,8 +147,8 @@
     },
     {
       "creative_id": "CR05124975000171839489",
-      "format": "Shopping",
-      "platform": "Shopping",
+      "format": "Image",
+      "platform": "Other",
       "active": true,
       "days_running": 386,
       "date_range": "386d · Sep 08, 2025 → now",
@@ -178,19 +156,15 @@
       "first_shown": "Sep 08, 2025",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/8791767989448845617",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
-      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Customer Favorites – Shop True Sea Moss Deals",
+      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
       "sitelinks": null,
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
+      "reviews": null,
       "return_policy": null,
-      "price": "$49.99",
+      "price": null,
       "video_duration": null
     },
     {
@@ -217,8 +191,8 @@
     },
     {
       "creative_id": "CR06028716795915927553",
-      "format": "Text",
-      "platform": "Search",
+      "format": "Image",
+      "platform": "Other",
       "active": true,
       "days_running": 292,
       "date_range": "292d · Dec 12, 2025 → now",
@@ -226,42 +200,21 @@
       "first_shown": "Dec 12, 2025",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/6951463169687799252",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "True Sea Moss™ – Official Store",
-      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
-      "sitelinks": [
-        {
-          "title": "Shop True Sea Moss Official",
-          "snippet": "Authentic items and new arrivals"
-        },
-        {
-          "title": "Best Sellers",
-          "snippet": "Top rated favorites by verified customers"
-        },
-        {
-          "title": "Special Offers",
-          "snippet": "Limited time promotions and discounts"
-        },
-        {
-          "title": "Customer Reviews",
-          "snippet": "See why thousands trust our quality"
-        }
-      ],
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": "30-day return policy",
+      "domain": "nz.trueseamoss.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
       "price": null,
       "video_duration": null
     },
     {
       "creative_id": "CR16371139357697900545",
-      "format": "Video",
-      "platform": "YouTube",
+      "format": "Shopping",
+      "platform": "Shopping",
       "active": true,
       "days_running": 280,
       "date_range": "280d · Dec 24, 2025 → now",
@@ -269,16 +222,20 @@
       "first_shown": "Dec 24, 2025",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/13432546675870617008",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
-      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Customer Favorites – Shop True Sea Moss Deals",
+      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
       "sitelinks": null,
-      "reviews": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
       "return_policy": null,
-      "price": null,
-      "video_duration": "0:15"
+      "price": "$49.99",
+      "video_duration": null
     },
     {
       "creative_id": "CR11020151066602766337",
@@ -326,8 +283,8 @@
     },
     {
       "creative_id": "CR17619173703348649985",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Shopping",
+      "platform": "Shopping",
       "active": true,
       "days_running": 212,
       "date_range": "212d · Mar 02, 2026 → now",
@@ -335,15 +292,19 @@
       "first_shown": "Mar 02, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/2434084705345476592",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
-      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
       "sitelinks": null,
-      "reviews": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
       "return_policy": null,
-      "price": null,
+      "price": "$49.99",
       "video_duration": null
     },
     {
@@ -390,9 +351,35 @@
       "video_duration": null
     },
     {
+      "creative_id": "CR06605090781290037249",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 195,
+      "date_range": "195d · Mar 19, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8022993099910839902",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
       "creative_id": "CR13111732382350704641",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Text",
+      "platform": "Search",
       "active": true,
       "days_running": 195,
       "date_range": "195d · Mar 19, 2026 → now",
@@ -400,33 +387,11 @@
       "first_shown": "Mar 19, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/10264095751336413561",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
-      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR03255061713984159745",
-      "format": "Text",
-      "platform": "Search",
-      "active": true,
-      "days_running": 195,
-      "date_range": "195d · Mar 18, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Mar 18, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7408600796655125373",
       "domain": "nz.trueseamoss.com",
       "country": "NZ",
       "country_flag": "🇳🇿",
-      "headline": "True Sea Moss™ – Official Store",
-      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
       "sitelinks": [
         {
           "title": "Shop True Sea Moss Official",
@@ -455,6 +420,28 @@
       "video_duration": null
     },
     {
+      "creative_id": "CR03255061713984159745",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 195,
+      "date_range": "195d · Mar 18, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7408600796655125373",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
       "creative_id": "CR13523915583384453121",
       "format": "Text",
       "platform": "Search",
@@ -464,7 +451,7 @@
       "reach_tag": "Global ads",
       "first_shown": "Mar 20, 2026",
       "last_shown": "now",
-      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9014729456&creativeId=800803814841&uiFeatures=12,54&adGroupId=200088102691&overlay=%3DH4sIAAAAAAAAAF3NsYoCQQyA4cPikLnicAsbLYK9gvgAsmq1IIjrC4SZwAZ3JjLJqPv2h51n-xff32zduCMMPSeqNm59yYWgJYSjqMJJHoEyLOF_rpOxPDlgMm28-wmkPvPNWFJ1ceediBoMUjJwjCWxDfBg6z6UzL4DToBvGvR8JbizYeSkUAOmAPtVM3Pfd9aS-2rifi0XUsIoqisvsZm7KYbArz32LWH2XR0OaFiNFl9_lpxvAeEAAAA&sig=ACiVB_yMlJMxVQUVC8abOm-N5fOHAE4Rqg&htmlParentId=fletch-render-4111880578931857019&responseCallback=fletchCallback4111880578931857019",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17153021810061667774",
       "domain": "www.trueseamoss.com",
       "country": "AU",
       "country_flag": "🇦🇺",
@@ -508,11 +495,11 @@
       "first_shown": "Mar 20, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/13247653617890853233",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
-      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
@@ -521,8 +508,8 @@
     },
     {
       "creative_id": "CR03329342726691880961",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Text",
+      "platform": "Search",
       "active": true,
       "days_running": 194,
       "date_range": "194d · Mar 20, 2026 → now",
@@ -530,41 +517,40 @@
       "first_shown": "Mar 20, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/5555221488362066886",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "True Sea Moss Official Collection – Up to 40% Off",
-      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "True Sea Moss™ – Official Store",
+      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop True Sea Moss Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
       "price": null,
       "video_duration": null
     },
     {
       "creative_id": "CR07563352548292165633",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 194,
-      "date_range": "194d · Mar 19, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Mar 19, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4159853846207653664",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "Customer Favorites – Shop True Sea Moss Deals",
-      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR06605090781290037249",
       "format": "Video",
       "platform": "YouTube",
       "active": true,
@@ -573,12 +559,12 @@
       "reach_tag": "Global ads",
       "first_shown": "Mar 19, 2026",
       "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8022993099910839902",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
-      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4159853846207653664",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "True Sea Moss Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
@@ -587,8 +573,8 @@
     },
     {
       "creative_id": "CR08216237330185322497",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Shopping",
+      "platform": "Shopping",
       "active": true,
       "days_running": 124,
       "date_range": "124d · May 28, 2026 → now",
@@ -596,21 +582,25 @@
       "first_shown": "May 28, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/8614342737236545517",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "Customer Favorites – Shop True Sea Moss Deals",
-      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "True Sea Moss Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
       "sitelinks": null,
-      "reviews": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
       "return_policy": null,
-      "price": null,
+      "price": "$49.99",
       "video_duration": null
     },
     {
       "creative_id": "CR06504567243525849089",
-      "format": "Text",
-      "platform": "Search",
+      "format": "Video",
+      "platform": "YouTube",
       "active": true,
       "days_running": 122,
       "date_range": "122d · May 30, 2026 → now",
@@ -618,9 +608,31 @@
       "first_shown": "May 30, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/12702734009251450586",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
+      "domain": "nz.trueseamoss.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
+      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR11118391124874493953",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 103,
+      "date_range": "103d · Jun 18, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10797550894939012254",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
       "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
       "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
       "sitelinks": [
@@ -651,16 +663,16 @@
       "video_duration": null
     },
     {
-      "creative_id": "CR11118391124874493953",
+      "creative_id": "CR17109936061175300097",
       "format": "Image",
       "platform": "Other",
       "active": true,
-      "days_running": 103,
-      "date_range": "103d · Jun 18, 2026 → now",
+      "days_running": 100,
+      "date_range": "100d · Jun 22, 2026 → now",
       "reach_tag": "Global ads",
-      "first_shown": "Jun 18, 2026",
+      "first_shown": "Jun 22, 2026",
       "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10797550894939012254",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14653741395122388119",
       "domain": "nz.trueseamoss.com",
       "country": "NZ",
       "country_flag": "🇳🇿",
@@ -673,29 +685,7 @@
       "video_duration": null
     },
     {
-      "creative_id": "CR17109936061175300097",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 100,
-      "date_range": "100d · Jun 22, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Jun 22, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14653741395122388119",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
-      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR01618722811075887105",
+      "creative_id": "CR11433545482773725185",
       "format": "Text",
       "platform": "Search",
       "active": true,
@@ -704,12 +694,12 @@
       "reach_tag": "Global ads",
       "first_shown": "Jul 02, 2026",
       "last_shown": "now",
-      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=3211952573&creativeId=815056099884&uiFeatures=12,54&adGroupId=200509805720&overlay=%3DH4sIAAAAAAAAAE2Oz0rDMBzHVxhuZgxmDyqefnjYQbaGHRWKWssORRDmE2TJzzSQJl2SdrCr6EN40tfyEXwK2cC56_fvp0hJv0QmtDIYzwjNcpg3skGYwqNaOqacQshymMLeyXJ4sFojD9YVbxEZCPTcqTooa-KWhH2wdra2fluYQMWMZBPgtlLcAwZwtmLGg3SsLtWqQQ9oQCtpMIEFBmebFjfAS9z8Pwv0wPSyqTzwPwLAkCRJcUaOWuUbp-MhGSzFyzafcFsVXxE5ZUKoLR3Tz8gcL-9FzgKL36PL1-inJwkOO53PuxG5eCpDqP0Npev1OpHWSr0bob60da2MpI4FZaSnjHPbmEArDE5xf7tKDz7HPJ0vxm06u746RPnoD-Jj0svynfI97JPu6OS8O4p-AWvnKVOEAQAA&sig=ACiVB_z7HMJ3iAlr96dT3DlRkHziFkosFg&htmlParentId=fletch-render-2298752156137992157&responseCallback=fletchCallback2298752156137992157",
-      "domain": "nz.trueseamoss.com",
-      "country": "NZ",
-      "country_flag": "🇳🇿",
-      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
-      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=2462870867&creativeId=815116200892&uiFeatures=12,54&adGroupId=203687337288&overlay=%3DH4sIAAAAAAAAAFWQMUscURSFGZC4vLjsZoqgNrkxYBHIDCkTWHRFLLYybNb--t515mbfvrd57-4O221jby2C2AWsbPUn-A_SpBfS5BeEGZHE_pzvO5xBrlolobHsKH2n3vZnTmCPRBbwAQ4sF6XAnvdjdgXsE9o4uEvUS0NRB54Ke5deJ-pHUkegYinhP8CJD2D8hKKwBnQG2AkFh3UNLZw80oOfCcUMRpGa8nHTFQ-RMOjyKWZqeYMsvWWDi9ggNcsCjgPhOGZwxFTBIeoxFjVxSARfA87JwlB8YIrZYEO9mHOcBZt2VBufdJn2k8Ftol6jMfw4b9jY-2YfBdPLZOsieVi16lv7_up0t_snbn4pRabxc55XVZUV3heWakoeSz-dsivygMKuiDlq7WdO8glJYB13vveeabd1rz_anvc-fnr_fM95643qtJbL5dnNr983D0kX1iFdU-rfwT_bLbXSfbW-0k3-ArS4-eDHAQAA&sig=ACiVB_zfj2fTX-5mnFWF7v7Zr7tykptxCA&htmlParentId=fletch-render-11020936092146891152&responseCallback=fletchCallback11020936092146891152",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "True Sea Moss™ – Official Store",
+      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
       "sitelinks": [
         {
           "title": "Shop True Sea Moss Official",
@@ -739,8 +729,8 @@
     },
     {
       "creative_id": "CR09874082749252370433",
-      "format": "Shopping",
-      "platform": "Shopping",
+      "format": "Text",
+      "platform": "Search",
       "active": true,
       "days_running": 88,
       "date_range": "88d · Jul 03, 2026 → now",
@@ -748,19 +738,36 @@
       "first_shown": "Jul 03, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/17364668768654046634",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "True Sea Moss Official Collection – Up to 40% Off",
-      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
-      "sitelinks": null,
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "True Sea Moss™ – Official Store",
+      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop True Sea Moss Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
       "reviews": {
         "rating": 4.8,
         "stars": "★★★★★",
         "count": "1,420"
       },
-      "return_policy": null,
-      "price": "$49.99",
+      "return_policy": "30-day return policy",
+      "price": null,
       "video_duration": null
     },
     {
@@ -774,11 +781,11 @@
       "first_shown": "Jul 14, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/13631096849797096197",
-      "domain": "nz.trueseamoss.com",
-      "country": "NZ",
-      "country_flag": "🇳🇿",
-      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
-      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
@@ -787,8 +794,8 @@
     },
     {
       "creative_id": "CR10298796328393637889",
-      "format": "Video",
-      "platform": "YouTube",
+      "format": "Text",
+      "platform": "Search",
       "active": true,
       "days_running": 70,
       "date_range": "70d · Jul 22, 2026 → now",
@@ -796,16 +803,37 @@
       "first_shown": "Jul 22, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982724188959549182",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "True Sea Moss Official Collection – Up to 40% Off",
-      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
+      "domain": "nz.trueseamoss.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "True Sea Moss™ – Official Store",
+      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop True Sea Moss Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
       "price": null,
-      "video_duration": "0:15"
+      "video_duration": null
     },
     {
       "creative_id": "CR16534910171546124289",
@@ -831,8 +859,8 @@
     },
     {
       "creative_id": "CR02026482608111616001",
-      "format": "Video",
-      "platform": "YouTube",
+      "format": "Image",
+      "platform": "Other",
       "active": true,
       "days_running": 68,
       "date_range": "68d · Jul 24, 2026 → now",
@@ -840,16 +868,16 @@
       "first_shown": "Jul 24, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/13099681045942213631",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
-      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
       "price": null,
-      "video_duration": "0:15"
+      "video_duration": null
     },
     {
       "creative_id": "CR00075458048495190017",
@@ -861,12 +889,12 @@
       "reach_tag": "Global ads",
       "first_shown": "Aug 01, 2026",
       "last_shown": "now",
-      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6954388897&creativeId=818884770121&uiFeatures=12,54&adGroupId=197527207086&assets=%3DH4sIAAAAAAAAAAEuANH_CiwKCQj8xJW0hwoQAwoJCJnm16PVCxAhCgkI8NrD3ZUGEAEKCQjcs9bItgYQBglfz1UuAAAA&sig=ACiVB_zS5XNJn4q9vwVIkwuzYBJdLOuDEQ&htmlParentId=fletch-render-730071238953883433&responseCallback=fletchCallback730071238953883433",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
-      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=6954388897&creativeId=818884770121&uiFeatures=12,54&adGroupId=197527207086&assets=%3DH4sIAAAAAAAAAAEuANH_CiwKCQj8xJW0hwoQAwoJCJnm16PVCxAhCgkI8NrD3ZUGEAEKCQjcs9bItgYQBglfz1UuAAAA&sig=ACiVB_zS5XNJn4q9vwVIkwuzYBJdLOuDEQ&htmlParentId=fletch-render-7952813253124647583&responseCallback=fletchCallback7952813253124647583",
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
       "sitelinks": [
         {
           "title": "Shop True Sea Moss Official",
@@ -896,8 +924,8 @@
     },
     {
       "creative_id": "CR18310015069741645825",
-      "format": "Video",
-      "platform": "YouTube",
+      "format": "Image",
+      "platform": "Other",
       "active": true,
       "days_running": 57,
       "date_range": "57d · Aug 03, 2026 → now",
@@ -905,21 +933,21 @@
       "first_shown": "Aug 03, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/6445019301056587965",
-      "domain": "nz.trueseamoss.com",
-      "country": "NZ",
-      "country_flag": "🇳🇿",
-      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
-      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Customer Favorites – Shop True Sea Moss Deals",
+      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
       "price": null,
-      "video_duration": "0:15"
+      "video_duration": null
     },
     {
       "creative_id": "CR03913456595320700929",
-      "format": "Text",
-      "platform": "Search",
+      "format": "Video",
+      "platform": "YouTube",
       "active": true,
       "days_running": 49,
       "date_range": "49d · Aug 11, 2026 → now",
@@ -927,42 +955,21 @@
       "first_shown": "Aug 11, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/9141666829647717628",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "True Sea Moss™ – Official Store",
-      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
-      "sitelinks": [
-        {
-          "title": "Shop True Sea Moss Official",
-          "snippet": "Authentic items and new arrivals"
-        },
-        {
-          "title": "Best Sellers",
-          "snippet": "Top rated favorites by verified customers"
-        },
-        {
-          "title": "Special Offers",
-          "snippet": "Limited time promotions and discounts"
-        },
-        {
-          "title": "Customer Reviews",
-          "snippet": "See why thousands trust our quality"
-        }
-      ],
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": "30-day return policy",
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
       "price": null,
-      "video_duration": null
+      "video_duration": "0:15"
     },
     {
       "creative_id": "CR07141461003182538753",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Video",
+      "platform": "YouTube",
       "active": true,
       "days_running": 47,
       "date_range": "47d · Aug 14, 2026 → now",
@@ -970,21 +977,21 @@
       "first_shown": "Aug 14, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/1772890365626548251",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
-      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
       "sitelinks": null,
       "reviews": null,
       "return_policy": null,
       "price": null,
-      "video_duration": null
+      "video_duration": "0:15"
     },
     {
       "creative_id": "CR03789494802546950145",
-      "format": "Text",
-      "platform": "Search",
+      "format": "Image",
+      "platform": "Other",
       "active": true,
       "days_running": 46,
       "date_range": "46d · Aug 14, 2026 → now",
@@ -992,11 +999,55 @@
       "first_shown": "Aug 14, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/9756573221873721641",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "True Sea Moss™ – Official Store",
-      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04891938381157629953",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 45,
+      "date_range": "45d · Aug 16, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 16, 2026",
+      "last_shown": "now",
+      "image_url": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=4969369772&creativeId=820962461453&uiFeatures=12,54&adGroupId=198497897039&overlay=%3DH4sIAAAAAAAAAEWPQUoDQRBFmYU6dhbKgCKCWLieDG4FNyGKMjGJkBNUuiszRXq6Q3dPJLscwXXWegCPIbgWPIK3kEyMbj_vV72fX4u4JFSaDSWXIhvUs3IBA6sIRuSYPLRhk_VJlmhYooYeLcYWnfL5dyRairx0PAtsTfIVic9ow0-3EEhbjdkQPLEjTd7DxBEpW6VQ_d-cEOkU0CiYk_MYWBMo8lwY6JbWevrV6LBLG78UeiynKdyjtptigRWb4u8x2MbJZ5BbNjCsHdy2-8gaHtiHDPq1DjzTBI-4qMgEGG75O54E6DbunTmyxrGmLD8Su3P2tdNJS-ybtUwmbZVfiWNUitdV1CNCJ8uOusGAyfnF2So-FQfxcrl8fv94fXuJDuEEkj2x02z5AeHvoJZ8AQAA&sig=ACiVB_wcw5Dju-V16t6B3O_cTIi00mjcwg&htmlParentId=fletch-render-2381769259869001319&responseCallback=fletchCallback2381769259869001319",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10921707323801993217",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 44,
+      "date_range": "44d · Aug 17, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11527113336179988361",
+      "domain": "nz.trueseamoss.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
       "sitelinks": [
         {
           "title": "Shop True Sea Moss Official",
@@ -1026,8 +1077,8 @@
     },
     {
       "creative_id": "CR09486495554612494337",
-      "format": "Image",
-      "platform": "Other",
+      "format": "Text",
+      "platform": "Search",
       "active": true,
       "days_running": 39,
       "date_range": "39d · Aug 21, 2026 → now",
@@ -1035,14 +1086,35 @@
       "first_shown": "Aug 21, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/4582821739727242116",
-      "domain": "us.trueseamoss.com",
-      "country": "US",
-      "country_flag": "🇺🇸",
-      "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
-      "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop True Sea Moss Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
       "price": null,
       "video_duration": null
     },
@@ -1079,28 +1151,6 @@
       "first_shown": "Aug 30, 2026",
       "last_shown": "now",
       "image_url": "https://tpc.googlesyndication.com/archive/simgad/9515841711848785140",
-      "domain": "uk.trueseamoss.com",
-      "country": "GB",
-      "country_flag": "🇬🇧",
-      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
-      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR01238686649978716161",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 30,
-      "date_range": "30d · Aug 30, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Aug 30, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/858247527036103944",
       "domain": "nz.trueseamoss.com",
       "country": "NZ",
       "country_flag": "🇳🇿",
@@ -1113,19 +1163,19 @@
       "video_duration": null
     },
     {
-      "creative_id": "CR16975401742545977345",
+      "creative_id": "CR01238686649978716161",
       "format": "Video",
       "platform": "YouTube",
       "active": true,
-      "days_running": 27,
-      "date_range": "27d · Sep 03, 2026 → now",
+      "days_running": 30,
+      "date_range": "30d · Aug 30, 2026 → now",
       "reach_tag": "Global ads",
-      "first_shown": "Sep 03, 2026",
+      "first_shown": "Aug 30, 2026",
       "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6528434924500761443",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/858247527036103944",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
       "headline": "True Sea Moss – On Sale Now – Limited Time Offers",
       "snippet": "Direct from the official True Sea Moss store. Unlock special bundles, seasonal promotions, and free express delivery.",
       "sitelinks": null,
@@ -1135,241 +1185,16 @@
       "video_duration": "0:15"
     },
     {
-      "creative_id": "CR04892201061357453313",
+      "creative_id": "CR16975401742545977345",
       "format": "Text",
       "platform": "Search",
       "active": true,
-      "days_running": 22,
-      "date_range": "22d · Sep 09, 2026 → now",
+      "days_running": 27,
+      "date_range": "27d · Sep 03, 2026 → now",
       "reach_tag": "Global ads",
-      "first_shown": "Sep 09, 2026",
+      "first_shown": "Sep 03, 2026",
       "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2689512311184450383",
-      "domain": "nz.trueseamoss.com",
-      "country": "NZ",
-      "country_flag": "🇳🇿",
-      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
-      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
-      "sitelinks": [
-        {
-          "title": "Shop True Sea Moss Official",
-          "snippet": "Authentic items and new arrivals"
-        },
-        {
-          "title": "Best Sellers",
-          "snippet": "Top rated favorites by verified customers"
-        },
-        {
-          "title": "Special Offers",
-          "snippet": "Limited time promotions and discounts"
-        },
-        {
-          "title": "Customer Reviews",
-          "snippet": "See why thousands trust our quality"
-        }
-      ],
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": "30-day return policy",
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR03324276589427949569",
-      "format": "Text",
-      "platform": "Search",
-      "active": true,
-      "days_running": 22,
-      "date_range": "22d · Sep 07, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 07, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13693385507414885282",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "Discover True Sea Moss – Premium Quality Guaranteed",
-      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied True Sea Moss customers worldwide.",
-      "sitelinks": [
-        {
-          "title": "Shop True Sea Moss Official",
-          "snippet": "Authentic items and new arrivals"
-        },
-        {
-          "title": "Best Sellers",
-          "snippet": "Top rated favorites by verified customers"
-        },
-        {
-          "title": "Special Offers",
-          "snippet": "Limited time promotions and discounts"
-        },
-        {
-          "title": "Customer Reviews",
-          "snippet": "See why thousands trust our quality"
-        }
-      ],
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": "30-day return policy",
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR15276113221967151105",
-      "format": "Shopping",
-      "platform": "Shopping",
-      "active": true,
-      "days_running": 19,
-      "date_range": "19d · Sep 11, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 11, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17158753276153753843",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "Shop True Sea Moss – Top Rated Bestsellers",
-      "snippet": "Shop top-rated favorites and new arrivals from True Sea Moss. 100% satisfaction guarantee with easy returns.",
-      "sitelinks": null,
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": null,
-      "price": "$49.99",
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR10079780587167547393",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 13,
-      "date_range": "13d · Sep 17, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 17, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5113966957397317381",
-      "domain": "nz.trueseamoss.com",
-      "country": "NZ",
-      "country_flag": "🇳🇿",
-      "headline": "Customer Favorites – Shop True Sea Moss Deals",
-      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR07214464280299569153",
-      "format": "Image",
-      "platform": "Other",
-      "active": true,
-      "days_running": 13,
-      "date_range": "13d · Sep 17, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 17, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13941191355261681650",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "True Sea Moss Official Collection – Up to 40% Off",
-      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
-      "sitelinks": null,
-      "reviews": null,
-      "return_policy": null,
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR05766504223541821441",
-      "format": "Text",
-      "platform": "Search",
-      "active": true,
-      "days_running": 12,
-      "date_range": "12d · Sep 18, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 18, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4508110992094146217",
-      "domain": "www.trueseamoss.com",
-      "country": "AU",
-      "country_flag": "🇦🇺",
-      "headline": "True Sea Moss™ – Official Store",
-      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
-      "sitelinks": [
-        {
-          "title": "Shop True Sea Moss Official",
-          "snippet": "Authentic items and new arrivals"
-        },
-        {
-          "title": "Best Sellers",
-          "snippet": "Top rated favorites by verified customers"
-        },
-        {
-          "title": "Special Offers",
-          "snippet": "Limited time promotions and discounts"
-        },
-        {
-          "title": "Customer Reviews",
-          "snippet": "See why thousands trust our quality"
-        }
-      ],
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": "30-day return policy",
-      "price": null,
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR04357880294779387905",
-      "format": "Shopping",
-      "platform": "Shopping",
-      "active": true,
-      "days_running": 9,
-      "date_range": "9d · Sep 21, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 21, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2796914656419340544",
-      "domain": "ca.trueseamoss.com",
-      "country": "CA",
-      "country_flag": "🇨🇦",
-      "headline": "Customer Favorites – Shop True Sea Moss Deals",
-      "snippet": "Limited time offers on selected True Sea Moss essentials. Save big when you shop direct today.",
-      "sitelinks": null,
-      "reviews": {
-        "rating": 4.8,
-        "stars": "★★★★★",
-        "count": "1,420"
-      },
-      "return_policy": null,
-      "price": "$49.99",
-      "video_duration": null
-    },
-    {
-      "creative_id": "CR13103616783946874881",
-      "format": "Text",
-      "platform": "Search",
-      "active": true,
-      "days_running": 9,
-      "date_range": "9d · Sep 21, 2026 → now",
-      "reach_tag": "Global ads",
-      "first_shown": "Sep 21, 2026",
-      "last_shown": "now",
-      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2529963257818123357",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6528434924500761443",
       "domain": "us.trueseamoss.com",
       "country": "US",
       "country_flag": "🇺🇸",
@@ -1401,7 +1226,186 @@
       "return_policy": "30-day return policy",
       "price": null,
       "video_duration": null
+    },
+    {
+      "creative_id": "CR04892201061357453313",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 22,
+      "date_range": "22d · Sep 09, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 09, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2689512311184450383",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
+      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR03324276589427949569",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 22,
+      "date_range": "22d · Sep 07, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 07, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13693385507414885282",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
+      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15276113221967151105",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 19,
+      "date_range": "19d · Sep 11, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 11, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17158753276153753843",
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Official True Sea Moss – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust True Sea Moss. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10079780587167547393",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 13,
+      "date_range": "13d · Sep 17, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5113966957397317381",
+      "domain": "www.trueseamoss.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "True Sea Moss Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07214464280299569153",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 13,
+      "date_range": "13d · Sep 17, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13941191355261681650",
+      "domain": "ca.trueseamoss.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "True Sea Moss™ – Official Store",
+      "snippet": "Explore the official True Sea Moss collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop True Sea Moss Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04357880294779387905",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 9,
+      "date_range": "9d · Sep 21, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2796914656419340544",
+      "domain": "us.trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "True Sea Moss Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic True Sea Moss difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13103616783946874881",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 9,
+      "date_range": "9d · Sep 21, 2026 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2529963257818123357",
+      "domain": "uk.trueseamoss.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "New Arrivals From True Sea Moss – Shop Online Today",
+      "snippet": "Shop the official True Sea Moss catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
     }
   ],
-  "scanned_at": "2026-10-01T09:30:01.127960"
+  "scanned_at": "2026-10-01T10:47:10.099264"
 }

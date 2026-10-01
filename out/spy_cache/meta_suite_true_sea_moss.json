@@ -2,63 +2,328 @@
   "brand_name": "True Sea Moss Health",
   "domain": "trueseamoss.com",
   "logo_url": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0284c7&color=fff",
-  "total_active_ads": 100,
+  "total_active_ads": 1165,
+  "monthly_cohorts": [
+    {
+      "month": "Sep 2026",
+      "label": "Tháng 9/2026 (Mới bật)",
+      "count": 1165,
+      "pct": 100.0,
+      "color": "#3b82f6"
+    },
+    {
+      "month": "Aug 2026",
+      "label": "Tháng 8/2026 (Đang vít)",
+      "count": 0,
+      "pct": 0.0,
+      "color": "#10b981"
+    },
+    {
+      "month": "Jul 2026",
+      "label": "Tháng 7/2026 (Bền bỉ)",
+      "count": 0,
+      "pct": 0.0,
+      "color": "#f59e0b"
+    },
+    {
+      "month": "Jun 2026",
+      "label": "Tháng 6/2026 (Winning)",
+      "count": 0,
+      "pct": 0.0,
+      "color": "#8b5cf6"
+    },
+    {
+      "month": "May 2026 & older",
+      "label": "Tháng 5 trở về trước (Evergreen)",
+      "count": 0,
+      "pct": 0.0,
+      "color": "#ec4899"
+    }
+  ],
+  "main_page_active": 1165,
+  "main_page_total": 4660,
+  "main_page_total_display": "4660",
+  "footer_display": "1165 / 4660 · 🌐",
+  "total_all_time": "2K",
   "eu_uk_count": 0,
   "eu_uk_pct": 0,
   "header": {
     "brand_name": "True Sea Moss Health",
     "is_main": true,
-    "total_ads_str": "• 100 / 100",
+    "total_ads_str": "• 1165 / 4660",
     "live_status": "Active",
     "eu_uk_label": "Reach & Spend · EU/UK only 0 (0%)"
   },
   "ad_library": {
+    "total_count": 1165,
     "total_cards": 0,
     "cards": []
   },
   "insights": {
-    "historic_trend": [
+    "historic_trend": {
+      "labels": [
+        "Jul 10",
+        "Jul 17",
+        "Jul 24",
+        "Jul 31",
+        "Aug 07",
+        "Aug 14",
+        "Aug 21",
+        "Aug 28",
+        "Sep 04",
+        "Sep 11",
+        "Sep 18",
+        "Sep 25"
+      ],
+      "active": [
+        97,
+        194,
+        291,
+        388,
+        485,
+        582,
+        680,
+        777,
+        874,
+        971,
+        1068,
+        1165
+      ],
+      "launched": [
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97
+      ]
+    },
+    "weekly_trend": {
+      "labels": [
+        "Jul 10",
+        "Jul 17",
+        "Jul 24",
+        "Jul 31",
+        "Aug 07",
+        "Aug 14",
+        "Aug 21",
+        "Aug 28",
+        "Sep 04",
+        "Sep 11",
+        "Sep 18",
+        "Sep 25"
+      ],
+      "active": [
+        97,
+        194,
+        291,
+        388,
+        485,
+        582,
+        680,
+        777,
+        874,
+        971,
+        1068,
+        1165
+      ],
+      "launched": [
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97,
+        97
+      ]
+    },
+    "daily_trend": {
+      "labels": [
+        "Sep 20",
+        "Sep 21",
+        "Sep 22",
+        "Sep 23",
+        "Sep 24",
+        "Sep 25",
+        "Sep 26",
+        "Sep 27",
+        "Sep 28",
+        "Sep 29",
+        "Sep 30",
+        "Oct 01"
+      ],
+      "active": [
+        990,
+        1005,
+        1019,
+        1034,
+        1048,
+        1063,
+        1078,
+        1092,
+        1107,
+        1121,
+        1136,
+        1150
+      ],
+      "launched": [
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35,
+        35
+      ]
+    },
+    "history_points": [
       {
-        "week": "W10",
-        "label": "M1",
-        "active_ads": 30,
-        "ads_launched": 10
+        "weekLabel": "Week 28 · Jul 10, 2026",
+        "monthLabel": "Jul",
+        "date": "2026-07-10",
+        "activeAds": 97,
+        "adsLaunched": 97,
+        "reach": "360K",
+        "spend": "$3.4K",
+        "spendDay": "$481/day",
+        "runningAds": 97
       },
       {
-        "week": "W12",
-        "label": "M2",
-        "active_ads": 40,
-        "ads_launched": 15
+        "weekLabel": "Week 29 · Jul 17, 2026",
+        "monthLabel": "Jul",
+        "date": "2026-07-17",
+        "activeAds": 194,
+        "adsLaunched": 97,
+        "reach": "721K",
+        "spend": "$6.7K",
+        "spendDay": "$962/day",
+        "runningAds": 194
       },
       {
-        "week": "W14",
-        "label": "M3",
-        "active_ads": 50,
-        "ads_launched": 20
+        "weekLabel": "Week 30 · Jul 24, 2026",
+        "monthLabel": "Jul",
+        "date": "2026-07-24",
+        "activeAds": 291,
+        "adsLaunched": 97,
+        "reach": "1.1M",
+        "spend": "$10.1K",
+        "spendDay": "$1.4K/day",
+        "runningAds": 291
       },
       {
-        "week": "W16",
-        "label": "M4",
-        "active_ads": 60,
-        "ads_launched": 10
+        "weekLabel": "Week 31 · Jul 31, 2026",
+        "monthLabel": "Jul",
+        "date": "2026-07-31",
+        "activeAds": 388,
+        "adsLaunched": 97,
+        "reach": "1.4M",
+        "spend": "$13.5K",
+        "spendDay": "$1.9K/day",
+        "runningAds": 388
       },
       {
-        "week": "W18",
-        "label": "M5",
-        "active_ads": 70,
-        "ads_launched": 15
+        "weekLabel": "Week 32 · Aug 07, 2026",
+        "monthLabel": "Aug",
+        "date": "2026-08-07",
+        "activeAds": 485,
+        "adsLaunched": 97,
+        "reach": "1.8M",
+        "spend": "$16.8K",
+        "spendDay": "$2.4K/day",
+        "runningAds": 485
       },
       {
-        "week": "W20",
-        "label": "M6",
-        "active_ads": 80,
-        "ads_launched": 20
+        "weekLabel": "Week 33 · Aug 14, 2026",
+        "monthLabel": "Aug",
+        "date": "2026-08-14",
+        "activeAds": 582,
+        "adsLaunched": 97,
+        "reach": "2.2M",
+        "spend": "$20.2K",
+        "spendDay": "$2.9K/day",
+        "runningAds": 582
       },
       {
-        "week": "W22",
-        "label": "M7",
-        "active_ads": 90,
-        "ads_launched": 10
+        "weekLabel": "Week 34 · Aug 21, 2026",
+        "monthLabel": "Aug",
+        "date": "2026-08-21",
+        "activeAds": 680,
+        "adsLaunched": 97,
+        "reach": "2.5M",
+        "spend": "$23.6K",
+        "spendDay": "$3.4K/day",
+        "runningAds": 680
+      },
+      {
+        "weekLabel": "Week 35 · Aug 28, 2026",
+        "monthLabel": "Aug",
+        "date": "2026-08-28",
+        "activeAds": 777,
+        "adsLaunched": 97,
+        "reach": "2.9M",
+        "spend": "$27.0K",
+        "spendDay": "$3.9K/day",
+        "runningAds": 777
+      },
+      {
+        "weekLabel": "Week 36 · Sep 04, 2026",
+        "monthLabel": "Sep",
+        "date": "2026-09-04",
+        "activeAds": 874,
+        "adsLaunched": 97,
+        "reach": "3.2M",
+        "spend": "$30.4K",
+        "spendDay": "$4.3K/day",
+        "runningAds": 874
+      },
+      {
+        "weekLabel": "Week 37 · Sep 11, 2026",
+        "monthLabel": "Sep",
+        "date": "2026-09-11",
+        "activeAds": 971,
+        "adsLaunched": 97,
+        "reach": "3.6M",
+        "spend": "$33.7K",
+        "spendDay": "$4.8K/day",
+        "runningAds": 971
+      },
+      {
+        "weekLabel": "Week 38 · Sep 18, 2026",
+        "monthLabel": "Sep",
+        "date": "2026-09-18",
+        "activeAds": 1068,
+        "adsLaunched": 97,
+        "reach": "4.0M",
+        "spend": "$37.1K",
+        "spendDay": "$5.3K/day",
+        "runningAds": 1068
+      },
+      {
+        "weekLabel": "Week 39 · Sep 25, 2026",
+        "monthLabel": "Sep",
+        "date": "2026-09-25",
+        "activeAds": 1165,
+        "adsLaunched": 97,
+        "reach": "4.3M",
+        "spend": "$40.5K",
+        "spendDay": "$5.8K/day",
+        "runningAds": 1165
       }
     ],
     "format_mix": {
