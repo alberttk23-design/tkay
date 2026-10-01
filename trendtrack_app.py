@@ -11057,11 +11057,26 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 return
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
 
-            clean_q = query.lower().strip()
+            # ── GEMINI MAIN AGENT: Intelligent Query Disambiguation ──────────
+            try:
+                import gemini_main_agent as _gma
+                dispatched = _gma.disambiguate_and_dispatch(query)
+                verified_brand_from_ai = dispatched.get("brand_name")
+                canonical_domain_from_ai = dispatched.get("canonical_domain")
+                tiktok_slug_from_ai = dispatched.get("tiktok_slug")
+                print(f"🤖 [MAIN AGENT] Query '{query}' -> brand='{verified_brand_from_ai}' domain='{canonical_domain_from_ai}' (engine={dispatched.get('_engine')})")
+            except Exception as _e_gma:
+                print(f"⚠️ [MAIN AGENT ERROR] {_e_gma}")
+                dispatched = {}
+                verified_brand_from_ai = None
+                canonical_domain_from_ai = None
+                tiktok_slug_from_ai = None
+
+            clean_q = canonical_domain_from_ai.lower().strip() if canonical_domain_from_ai else query.lower().strip()
             norm_q = re.sub(r'^https?://', '', clean_q)
             norm_q = re.sub(r'^(www|us|uk|au|shop|store)\.', '', norm_q)
             norm_q = norm_q.split('/')[0].split('?')[0]
-            clean_brand_slug = re.sub(r'\.(com|co|vn|io|shop|store|org|net|app|us|uk|de|fr|ca|au)$', '', norm_q)
+            clean_brand_slug = tiktok_slug_from_ai or re.sub(r'\.(com|co|vn|io|shop|store|org|net|app|us|uk|de|fr|ca|au)$', '', norm_q)
 
             alias_map = {
                 "the oodie": "the_oodie.json",
