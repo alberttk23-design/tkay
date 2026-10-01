@@ -1636,6 +1636,137 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div id="googleLibraryCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <!-- Populated via JavaScript renderGoogleLibraryCards() -->
             </div>
+
+            <!-- Sentinel / Infinite Scroll & Load More Controls -->
+            <div id="googleLibrarySentinel" class="py-8 flex flex-col items-center justify-center text-slate-400 gap-3 border-t border-slate-100 mt-6">
+              <div id="googleLibraryLoadingSpinner" class="flex items-center gap-2 text-xs font-semibold text-slate-500">
+                <svg class="animate-spin w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <span>Đang cuộn tải thêm quảng cáo...</span>
+              </div>
+              <button id="btnGoogleLoadMore" onclick="loadMoreGoogleAds()" class="px-5 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 text-xs font-bold text-slate-700 shadow-2xs transition flex items-center gap-2 cursor-pointer">
+                <span>Tải thêm quảng cáo</span>
+                <span id="googleLoadMoreBadge" class="text-[10px] text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded-full font-mono">+16</span>
+              </button>
+              <div id="googleLibraryAllLoaded" class="hidden text-xs font-medium text-slate-400">
+                ✓ Đã hiển thị toàn bộ quảng cáo trong thư viện
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-VIEW C: RANKING (Matching media_1790761291898.png 1:1) -->
+          <div id="googleRankingView" class="space-y-4 hidden">
+            <!-- Filter Bar Card -->
+            <div class="tt-card p-4 space-y-3">
+              <!-- Row 1: Filters Bar matching Ranking screenshot -->
+              <div class="flex items-center justify-between gap-4 flex-wrap">
+                <div class="flex items-center gap-2 flex-wrap text-xs">
+                  <!-- Dropdown: Ad Status -->
+                  <div class="relative">
+                    <select id="filterGoogleRankingStatus" onchange="filterGoogleRankingAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Ad Status ▾</option>
+                      <option value="active" selected>Active</option>
+                      <option value="inactive">Inactive</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Publication Date -->
+                  <div class="relative">
+                    <select id="filterGoogleRankingPubDate" onchange="filterGoogleRankingAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Publication Date ▾</option>
+                      <option value="7d">Last 7D</option>
+                      <option value="30d">Last 30D</option>
+                      <option value="90d">Last 90D</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Days Running -->
+                  <div class="relative">
+                    <select id="filterGoogleRankingDaysRunning" onchange="filterGoogleRankingAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Days Running ▾</option>
+                      <option value="1">1+ days</option>
+                      <option value="30">30+ days</option>
+                      <option value="90">90+ days</option>
+                      <option value="365">365+ days (Evergreen)</option>
+                    </select>
+                  </div>
+
+                  <!-- Button: Platform -->
+                  <button type="button" onclick="toggleGoogleRankingPlatformFilter()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-xs transition cursor-pointer">
+                    <span>Platform</span>
+                    <span class="text-emerald-200 text-xs font-normal">✕</span>
+                  </button>
+
+                  <!-- Button: Ad Reach -->
+                  <button type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs transition cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span>Ad Reach ▾</span>
+                  </button>
+
+                  <!-- Dropdown: Media Types -->
+                  <div class="relative">
+                    <select id="filterGoogleRankingMediaType" onchange="filterGoogleRankingAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Media Types ▾</option>
+                      <option value="Text">Text</option>
+                      <option value="Image">Image</option>
+                      <option value="Shopping">Shopping</option>
+                      <option value="Video">Video</option>
+                    </select>
+                  </div>
+
+                  <!-- Dropdown: Ad Countries -->
+                  <div class="relative">
+                    <select id="filterGoogleRankingCountry" onchange="filterGoogleRankingAds()" class="appearance-none bg-white border border-slate-200 hover:bg-slate-50 rounded-lg px-3 py-1.5 pr-6 font-bold text-slate-700 cursor-pointer shadow-2xs focus:outline-none">
+                      <option value="all">Ad Countries ▾</option>
+                      <option value="AU">🇦🇺 Australia</option>
+                      <option value="US">🇺🇸 United States</option>
+                      <option value="CA">🇨🇦 Canada</option>
+                      <option value="GB">🇬🇧 United Kingdom</option>
+                      <option value="NZ">🇳🇿 New Zealand</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Filter Tag Row -->
+              <div class="flex items-center justify-between pt-2 pb-1 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold text-[11px] shadow-2xs">
+                    <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                    <span>Search, - Youtube</span>
+                    <button onclick="clearGoogleRankingPlatformTag()" class="hover:text-emerald-950 font-bold ml-0.5">✕</button>
+                  </span>
+                </div>
+                <button onclick="clearAllGoogleRankingFilters()" class="text-xs font-medium text-slate-500 hover:text-slate-900 cursor-pointer">
+                  Clear
+                </button>
+              </div>
+
+              <!-- Row 2: Sort By, Ads Count & Search Controls -->
+              <div class="flex items-center justify-between gap-4 pt-2 border-t border-slate-100 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-500 font-semibold">Sort By:</span>
+                  <select id="googleRankingSort" onchange="sortGoogleRankingAds()" class="bg-white border border-slate-200 rounded-lg px-2.5 py-1 font-bold text-slate-800 shadow-2xs cursor-pointer focus:outline-none">
+                    <option value="longest" selected>Longest Running ⇣</option>
+                    <option value="newest">Newest ⇣</option>
+                    <option value="oldest">Oldest ⇡</option>
+                    <option value="reach">Most Seen (Reach)</option>
+                  </select>
+                </div>
+
+                <div class="flex items-center gap-3 text-slate-500">
+                  <span id="googleRankingAdsCount" class="font-bold text-slate-700">64+ ads</span>
+                  <div class="relative">
+                    <input type="text" id="googleRankingSearchInput" oninput="filterGoogleRankingAds()" placeholder="Tìm kiếm creative..." class="w-36 md:w-48 pl-7 pr-2 py-1 rounded-lg border border-slate-200 text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-blue-500"/>
+                    <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4-Column Large Ad Cards Grid for Ranking -->
+            <div id="googleRankingCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Populated via JavaScript renderGoogleRankingCards() -->
+            </div>
           </div>
         </div>
 
@@ -3422,7 +3553,297 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   </div>
 
   <!-- ======================================================== -->
-  <!-- MODAL: EMAIL DETAIL VIEWER MODAL                         -->
+  <!-- MODAL: GOOGLE AD DETAIL INTELLIGENCE MODAL               -->
+  <!-- (MATCHING 100% media_1790761317024.png)                  -->
+  <!-- ======================================================== -->
+  <div id="googleAdDetailModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-xs z-50 flex items-center justify-center p-2 sm:p-4 lg:p-6 hidden">
+    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-6xl w-full max-h-[94vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Modal Top Title Strip -->
+      <div class="px-6 py-3 border-b border-slate-100 flex items-center justify-between bg-white">
+        <div class="flex items-center gap-2 text-xs font-bold text-slate-600">
+          <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+          <span>Google Ads Transparency Intelligence</span>
+        </div>
+        <button onclick="closeGoogleAdModal()" class="w-8 h-8 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 flex items-center justify-center transition cursor-pointer" title="Đóng">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- 2-Column Responsive Body -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 flex-1 overflow-hidden min-h-0">
+        
+        <!-- LEFT COLUMN: Creative Floating Card + Pill Dock (lg:col-span-6) -->
+        <div class="lg:col-span-6 bg-slate-100/70 p-6 flex flex-col justify-between items-center overflow-y-auto relative">
+          
+          <!-- Floating Ad Creative Card -->
+          <div class="w-full max-w-sm sm:max-w-md bg-white rounded-2xl shadow-xl border border-slate-200/90 overflow-hidden flex flex-col my-auto transition duration-200">
+            <!-- Card Header -->
+            <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between text-xs bg-white">
+              <div class="flex items-center gap-1.5 font-bold text-slate-800">
+                <span class="w-4 h-4 rounded-full bg-blue-500 text-white flex items-center justify-center text-[9px] font-bold">G</span>
+                <span>Ad · <span id="gModalTopDomain">theoodie.com</span></span>
+              </div>
+              <span id="gModalTopFormat" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-100 text-slate-600 border border-slate-200">Other</span>
+            </div>
+
+            <!-- Card Creative Stage -->
+            <div id="gModalCreativeBody" class="p-4 flex items-center justify-center min-h-[300px] max-h-[420px] bg-slate-50/50 overflow-hidden">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Floating Bottom Pill Dock matching media_1790761317024.png -->
+          <div class="mt-6 px-4 py-2 rounded-full bg-slate-900/95 text-white shadow-2xl backdrop-blur-md flex items-center gap-3 border border-slate-700/60 z-10">
+            <!-- Copy Link -->
+            <button onclick="copyGoogleAdLink()" class="p-1.5 hover:text-blue-400 transition cursor-pointer" title="Sao chép liên kết quảng cáo">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </button>
+
+            <!-- Download Creative -->
+            <button onclick="downloadGoogleCreative()" class="p-1.5 hover:text-emerald-400 transition cursor-pointer" title="Tải xuống Creative">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            </button>
+
+            <!-- Bookmark / Save -->
+            <button onclick="toggleBookmarkGoogleModal()" id="btnGModalBookmark" class="p-1.5 hover:text-amber-400 transition cursor-pointer" title="Lưu trữ">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+            </button>
+
+            <!-- External Google Ads Transparency Link -->
+            <a id="btnGModalExternalLink" href="#" target="_blank" class="p-1.5 hover:text-blue-400 transition cursor-pointer" title="Xem trên Google Ads Transparency Center">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+
+            <!-- Divider -->
+            <div class="h-4 w-px bg-slate-700"></div>
+
+            <!-- Navigation Controls (< counter >) -->
+            <button onclick="prevGoogleAdModal()" class="p-1.5 hover:text-white text-slate-400 transition cursor-pointer" title="Quảng cáo trước">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <span id="gModalIndexCounter" class="text-xs font-mono text-slate-300 select-none">1 / 64</span>
+            <button onclick="nextGoogleAdModal()" class="p-1.5 hover:text-white text-slate-400 transition cursor-pointer" title="Quảng cáo tiếp">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Intelligence & Details Sidebar (lg:col-span-6) -->
+        <div class="lg:col-span-6 bg-white p-6 overflow-y-auto custom-scroll flex flex-col space-y-6 border-l border-slate-200">
+          
+          <!-- Shop Header -->
+          <div class="flex items-center justify-between gap-4 pb-4 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+              <img id="gModalBrandAvatar" src="https://ui-avatars.com/api/?name=The+Oodie&background=0284c7&color=fff" class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs" alt="Logo"/>
+              <div>
+                <h2 id="gModalBrandName" class="text-base font-black text-slate-900 leading-tight">The Oodie</h2>
+                <div class="flex items-center gap-2 text-xs text-slate-500 font-medium mt-0.5">
+                  <a id="gModalWebsiteLink" href="https://theoodie.com" target="_blank" class="hover:text-blue-600 flex items-center gap-1 font-semibold text-slate-700">
+                    <span id="gModalWebsiteText">theoodie.com</span>
+                    <span class="text-[10px]">↗</span>
+                  </a>
+                  <span>•</span>
+                  <span id="gModalCountryBadge" class="flex items-center gap-1 font-semibold text-slate-700">🇦🇺 AU</span>
+                </div>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold shadow-2xs">
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <span>Google Analytics</span>
+            </span>
+          </div>
+
+          <!-- 3 Sub Tabs -->
+          <div class="flex items-center gap-6 border-b border-slate-100 text-xs font-bold">
+            <button id="gModalSubTab_details" onclick="switchGModalSubTab('details')" class="pb-2.5 border-b-2 border-slate-900 text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+              Details
+            </button>
+            <button id="gModalSubTab_more" onclick="switchGModalSubTab('more')" class="pb-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+              More from this advertiser
+            </button>
+            <button id="gModalSubTab_boards" onclick="switchGModalSubTab('boards')" class="pb-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer">
+              Boards
+            </button>
+          </div>
+
+          <!-- TAB 1: DETAILS -->
+          <div id="gModalTabContent_details" class="space-y-6">
+            
+            <!-- SECTION 1: AD DETAILS -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                <span>AD DETAILS</span>
+                <span class="text-slate-400">▾</span>
+              </div>
+              <div class="bg-slate-50/80 rounded-2xl p-4 border border-slate-200/80 space-y-2.5 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Format:</span>
+                  <span id="gModalAdFormat" class="font-bold text-slate-800">Other</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Platform Mix:</span>
+                  <span id="gModalAdPlatform" class="font-bold text-slate-800">Other 100%</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Reach:</span>
+                  <span id="gModalAdReach" class="font-bold text-slate-800">Global ads</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Remarketing:</span>
+                  <span id="gModalAdRemarketing" class="font-bold text-emerald-700">No remarketing detected</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Targeting:</span>
+                  <span id="gModalAdInterests" class="font-bold text-slate-800">Interest targeting active</span>
+                </div>
+                <div class="flex items-center justify-between pt-1 border-t border-slate-200/60">
+                  <span class="text-slate-500 font-medium">Ad ID:</span>
+                  <span id="gModalAdId" class="font-mono text-[11px] text-slate-600 truncate max-w-[200px]">CR02776462195247022081</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2: ADVERTISER DETAILS -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                <span>ADVERTISER DETAILS</span>
+                <span class="text-slate-400">▾</span>
+              </div>
+              <div class="bg-slate-50/80 rounded-2xl p-4 border border-slate-200/80 space-y-3 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Legal Entity:</span>
+                  <div class="flex items-center gap-1.5 font-bold text-slate-900 text-right">
+                    <span id="gModalLegalEntity">Davie Group Trading (Australia) Pty Ltd</span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-blue-500 text-white flex items-center justify-center text-[8px] font-black shrink-0">G</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Verified Status:</span>
+                  <span id="gModalVerifiedSince" class="font-semibold text-slate-700">Seen since Dec 29, 2022</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-500 font-medium">Active Ads:</span>
+                  <span id="gModalActiveAdsCount" class="font-bold text-emerald-600 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>• 375 / 1.8K ads</span>
+                  </span>
+                </div>
+                <div class="flex items-center justify-between pt-1 border-t border-slate-200/60">
+                  <span class="text-slate-500 font-medium">Transparency Center:</span>
+                  <a id="gModalTransparencyLink" href="https://adstransparency.google.com" target="_blank" class="font-bold text-blue-600 hover:underline flex items-center gap-1">
+                    <span>Xem báo cáo gốc</span>
+                    <span class="text-[10px]">↗</span>
+                  </a>
+                </div>
+
+                <!-- 2 Mini Mix Distributions (Platform Mix & Targeting Mix) -->
+                <div class="pt-2 grid grid-cols-2 gap-3">
+                  <div class="p-3 bg-white rounded-xl border border-slate-200/60 space-y-1.5">
+                    <div class="text-[11px] font-bold text-slate-700 flex items-center justify-between">
+                      <span>Platform Mix</span>
+                      <span class="text-[10px] text-slate-400">Google</span>
+                    </div>
+                    <div class="space-y-1 text-[11px]">
+                      <div class="flex justify-between text-slate-600"><span>Search</span><span class="font-bold text-slate-900">45%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full" style="width: 45%"></div></div>
+                      <div class="flex justify-between text-slate-600"><span>YouTube</span><span class="font-bold text-slate-900">35%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-red-500 h-1.5 rounded-full" style="width: 35%"></div></div>
+                      <div class="flex justify-between text-slate-600"><span>Other / Display</span><span class="font-bold text-slate-900">20%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-emerald-500 h-1.5 rounded-full" style="width: 20%"></div></div>
+                    </div>
+                  </div>
+
+                  <div class="p-3 bg-white rounded-xl border border-slate-200/60 space-y-1.5">
+                    <div class="text-[11px] font-bold text-slate-700 flex items-center justify-between">
+                      <span>Targeting Mix</span>
+                      <span class="text-[10px] text-slate-400">Estimated</span>
+                    </div>
+                    <div class="space-y-1 text-[11px]">
+                      <div class="flex justify-between text-slate-600"><span>None / Broad</span><span class="font-bold text-slate-900">89%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-amber-500 h-1.5 rounded-full" style="width: 89%"></div></div>
+                      <div class="flex justify-between text-slate-600"><span>Retargeting</span><span class="font-bold text-slate-900">7%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-purple-500 h-1.5 rounded-full" style="width: 7%"></div></div>
+                      <div class="flex justify-between text-slate-600"><span>Both</span><span class="font-bold text-slate-900">4%</span></div>
+                      <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-indigo-500 h-1.5 rounded-full" style="width: 4%"></div></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- SECTION 3: SHOP DETAILS -->
+            <div class="space-y-3">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                <span>SHOP DETAILS</span>
+                <span class="text-slate-400">▾</span>
+              </div>
+              <div class="bg-slate-50/80 rounded-2xl p-4 border border-slate-200/80 space-y-3 text-xs">
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div class="p-2 bg-white rounded-xl border border-slate-200/60">
+                    <div class="text-[10px] text-slate-400 font-medium">Creation Date</div>
+                    <div id="gModalShopCreation" class="font-bold text-slate-900 mt-0.5">Nov 2018</div>
+                  </div>
+                  <div class="p-2 bg-white rounded-xl border border-slate-200/60">
+                    <div class="text-[10px] text-slate-400 font-medium">Visitors / mo</div>
+                    <div id="gModalShopVisitors" class="font-bold text-slate-900 mt-0.5">~ 1.8M / mo</div>
+                  </div>
+                  <div class="p-2 bg-white rounded-xl border border-slate-200/60">
+                    <div class="text-[10px] text-slate-400 font-medium">Google Ads</div>
+                    <div id="gModalShopGoogleAds" class="font-bold text-slate-900 mt-0.5">1.8K ads</div>
+                  </div>
+                </div>
+
+                <!-- Visitors Countries -->
+                <div class="pt-2">
+                  <div class="text-[11px] font-bold text-slate-600 mb-1.5">Visitors Countries:</div>
+                  <div id="gModalVisitorCountries" class="flex items-center gap-2 flex-wrap">
+                    <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 font-bold text-[11px] text-slate-700">🇦🇺 AU 48%</span>
+                    <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 font-bold text-[11px] text-slate-700">🇬🇧 UK 24%</span>
+                    <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 font-bold text-[11px] text-slate-700">🇺🇸 US 18%</span>
+                    <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 font-bold text-[11px] text-slate-700">🇨🇦 CA 10%</span>
+                  </div>
+                </div>
+
+                <!-- Top 5 Best Sellers -->
+                <div class="pt-2 border-t border-slate-200/60">
+                  <div class="text-[11px] font-bold text-slate-600 mb-2">Top 5 Best Sellers:</div>
+                  <div id="gModalBestSellersList" class="space-y-2">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TAB 2: MORE FROM THIS ADVERTISER -->
+          <div id="gModalTabContent_more" class="hidden space-y-4">
+            <div class="text-xs font-bold text-slate-700">Các quảng cáo khác cùng thương hiệu:</div>
+            <div id="gModalMoreGrid" class="grid grid-cols-2 gap-3">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- TAB 3: BOARDS -->
+          <div id="gModalTabContent_boards" class="hidden space-y-4">
+            <div class="text-xs font-bold text-slate-700">Lưu quảng cáo vào Bảng chiến dịch (Boards):</div>
+            <div class="space-y-2">
+              <input type="text" placeholder="Tên board mới (vd: Winter Campaign 2026)..." class="w-full px-3 py-2 text-xs border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-blue-500"/>
+              <button onclick="alert('Đã lưu quảng cáo vào board thành công!')" class="w-full py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer">
+                Lưu vào Board
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
   <!-- ======================================================== -->
   <div id="emailDetailModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-150">
@@ -7209,7 +7630,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // 5. Render Ad Cards
       renderGoogleAdCards(data.ad_cards || []);
-      renderGoogleLibraryCards(data.ad_cards || []);
+      filterGoogleLibraryAds();
+      filterGoogleRankingAds();
     }
 
     let currentGoogleCards = [];
@@ -7436,10 +7858,20 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       });
     }
 
-    // Switch between Google Ads Sub-Tabs: Insights | Ad Library | Ranking (Matching media_1790732770060.png)
+    // Global State for Google Ads Library & Ranking
+    let googleFilteredCards = [];
+    let googleRankingFilteredCards = [];
+    let googleCurrentDisplayCount = 16;
+    const GOOGLE_PAGE_SIZE = 16;
+    let googleScrollObserver = null;
+    let activeGooglePlatformFilter = 'all';
+    let activeGoogleRankingPlatformFilter = 'all';
+
+    // Switch between Google Ads Sub-Tabs: Insights | Ad Library | Ranking (Matching media_1790732770060.png & media_1790761291898.png)
     function switchGoogleSubTab(tab) {
       const insightsView = document.getElementById('googleInsightsView');
       const libraryView = document.getElementById('googleAdLibraryView');
+      const rankingView = document.getElementById('googleRankingView');
       const tabInsights = document.getElementById('googleSubTab_insights');
       const tabLibrary = document.getElementById('googleSubTab_library');
       const tabRanking = document.getElementById('googleSubTab_ranking');
@@ -7453,347 +7885,529 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       if (tab === 'library') {
         if (insightsView) insightsView.classList.add('hidden');
+        if (rankingView) rankingView.classList.add('hidden');
         if (libraryView) libraryView.classList.remove('hidden');
         if (tabLibrary) {
           tabLibrary.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
         }
-        renderGoogleLibraryCards();
+        filterGoogleLibraryAds();
+        setupGoogleInfiniteScroll();
       } else if (tab === 'ranking') {
-        if (insightsView) insightsView.classList.remove('hidden');
+        if (insightsView) insightsView.classList.add('hidden');
         if (libraryView) libraryView.classList.add('hidden');
+        if (rankingView) rankingView.classList.remove('hidden');
         if (tabRanking) {
           tabRanking.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
         }
+        filterGoogleRankingAds();
       } else {
         // default insights
-        if (insightsView) insightsView.classList.remove('hidden');
         if (libraryView) libraryView.classList.add('hidden');
+        if (rankingView) rankingView.classList.add('hidden');
+        if (insightsView) insightsView.classList.remove('hidden');
         if (tabInsights) {
           tabInsights.className = "pb-3 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5 cursor-pointer transition font-bold";
         }
       }
     }
 
-    // Render Google Ad Library 4-Column Cards Grid (Matching media_1790732770060.png 1:1)
-    function renderGoogleLibraryCards(customCards) {
-      const grid = document.getElementById('googleLibraryCardsGrid');
-      if (!grid) return;
-      grid.innerHTML = '';
-
+    // Generate Single Google Card HTML for 4 Formats (Text SERP, Shopping, Image, Video)
+    function generateGoogleAdCardHtml(card, idx, isRanking = false, rank = 1) {
       const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
-      const domain = (currentData && currentData.domain) || 'theoodie.com';
+      const domain = (card.domain || (currentData && currentData.domain) || 'theoodie.com');
       const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
 
-      let cards = customCards || (currentGoogleData && currentGoogleData.ad_cards) || [];
-      const isOodie = brandName.toLowerCase().includes('oodie');
+      const isActive = card.active !== false;
+      const days = card.days_running || 6;
+      const dateRange = card.date_range || `${days}d · ${card.first_shown || 'Sep 23'} → ${card.last_shown || 'now'}`;
+      const flag = card.country_flag || card.flag || (card.country === 'CA' ? '🇨🇦' : card.country === 'AU' ? '🇦🇺' : card.country === 'US' ? '🇺🇸' : card.country === 'GB' ? '🇬🇧' : '🌐');
+      const plat = card.platform || 'Other';
+      const fmt = card.format || 'Image';
+      const headline = card.headline || `${brandName} - Official Collection`;
+      const reachTag = card.reach_tag || 'Global ads';
 
-      if (!cards || cards.length === 0) {
-        if (isOodie) {
-          cards = [
-            {
-              id: 'gad_1',
-              active: true,
-              days_running: 6,
-              date_range: '6d · Sep 23 → now',
-              country: 'CA',
-              flag: '🇨🇦',
-              platform: 'Other',
-              format: 'Image',
-              headline: 'Naruto Itachi Akatsuki Blanket Hoodie',
-              image_url: '/static/google_creatives/naruto_itachi.svg'
-            },
-            {
-              id: 'gad_2',
-              active: true,
-              days_running: 6,
-              date_range: '6d · Sep 23 → now',
-              country: 'CA',
-              flag: '🇨🇦',
-              platform: 'Shopping',
-              format: 'Image',
-              headline: 'Miffy Oodie Original Wearabl',
-              image_url: '/static/google_creatives/miffy_shopping.svg'
-            },
-            {
-              id: 'gad_3',
-              active: true,
-              days_running: 7,
-              date_range: '7d · Sep 22 → now',
-              country: 'AU',
-              flag: '🇦🇺',
-              platform: 'Other',
-              format: 'Image',
-              headline: 'Moss Green Sherpa Fleece...',
-              image_url: '/static/google_creatives/moss_green.svg'
-            },
-            {
-              id: 'gad_4',
-              active: true,
-              days_running: 7,
-              date_range: '7d · Sep 22 → now',
-              country: 'AU',
-              flag: '🇦🇺',
-              platform: 'Other',
-              format: 'Image',
-              headline: 'Pastel Wave Sherpa Fleece...',
-              image_url: '/static/google_creatives/pastel_wave.svg'
-            }
-          ];
-        } else {
-          grid.innerHTML = `
-            <div class="col-span-full py-16 text-center text-slate-500">
-              <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo Google nào cho "${brandName}"</div>
-              <div class="text-xs text-slate-400 mt-1">Thương hiệu này hiện không có chiến dịch Google Search hoặc Shopping Ads hoạt động.</div>
+      let centerMediaHtml = '';
+      if (fmt === 'Shopping' || plat === 'Shopping') {
+        // Format C: Google Shopping Tall Card matching media_1790761172736.png
+        centerMediaHtml = `
+          <div class="rounded-xl overflow-hidden bg-slate-50/80 border border-slate-100 flex flex-col p-2 mb-3">
+            <div class="h-64 w-full flex items-center justify-center overflow-hidden rounded-lg bg-white mb-2">
+              <img src="${card.image_url || '/static/google_creatives/miffy_shopping.svg'}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Creative"/>
             </div>
-          `;
-          const countEl = document.getElementById('googleLibraryAdsCount');
-          if (countEl) countEl.textContent = '0 ads';
-          return;
-        }
+            <div class="px-1 text-left">
+              <div class="text-sm font-bold text-blue-600 leading-snug line-clamp-2 hover:underline cursor-pointer">${headline}</div>
+              <div class="text-xs font-black text-slate-900 mt-1">${card.price || '[Price]'}</div>
+              <div class="text-[11px] font-semibold text-slate-500 mt-0.5">${domain}</div>
+              <div class="text-[11px] font-semibold text-blue-600 mt-0.5 flex items-center gap-1">
+                <span>★ 4.8</span>
+                <span class="text-slate-400">[Reviews By Google]</span>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (fmt === 'Video' || plat === 'YouTube') {
+        // Format D: YouTube Video Card matching media_1790761189822.png
+        centerMediaHtml = `
+          <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200 relative">
+            <img src="${card.image_url || '/static/emails/card_1.png'}" class="max-h-full max-w-full object-cover opacity-85 rounded-lg" alt="Video thumbnail"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 right-3 px-1.5 py-0.5 bg-black/80 text-white text-[10px] font-mono rounded">
+              ${card.video_duration || '0:30'}
+            </div>
+          </div>
+        `;
+      } else if (fmt === 'Image') {
+        // Format B: Google Display Banner Card matching media_1790761172736.png
+        centerMediaHtml = `
+          <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200">
+            <img src="${card.image_url || '/static/google_creatives/moss_green.svg'}" class="max-h-full max-w-full object-contain rounded-lg" alt="Creative banner"/>
+          </div>
+        `;
+      } else {
+        // Format A: Google Search Text SERP Card matching media_1790761189822.png & media_1790761291898.png
+        const sitelinks = card.sitelinks || [
+          {"title": f"{brandName} Wearable Blankets", "snippet": "Browse original cloud-soft blankets"},
+          {"title": f"Shop {brandName} Bundles", "snippet": "Save up to 40% on matching sets"},
+          {"title": "Sleep Tees", "snippet": "Breathable bamboo cooling sleepwear"},
+          {"title": "Robes & Loungewear", "snippet": "Premium luxury fleece robes"}
+        ];
+
+        centerMediaHtml = `
+          <div class="h-72 w-full rounded-xl p-4 bg-white border border-slate-200 flex flex-col justify-between mb-3 text-left shadow-2xs overflow-hidden">
+            <div class="overflow-y-auto custom-scroll pr-1 flex-1">
+              <!-- Favicon + Domain -->
+              <div class="flex items-center gap-2 mb-1.5">
+                <div class="w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[9px] font-bold shrink-0">
+                  ${domain.charAt(0).toUpperCase()}
+                </div>
+                <div class="text-[11px] text-slate-500 font-medium truncate">
+                  ${domain}
+                </div>
+              </div>
+
+              <!-- Blue Headline Link -->
+              <a href="#" onclick="event.preventDefault();" class="text-[13px] font-bold text-blue-700 leading-snug line-clamp-2 hover:underline block mb-1">
+                ${headline}
+              </a>
+
+              <!-- Snippet Description -->
+              <div class="text-[11px] text-slate-600 leading-relaxed line-clamp-3 mb-2">
+                ${card.snippet || 'Explore the official collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.'}
+              </div>
+
+              <!-- Ratings & Reviews -->
+              <div class="flex items-center gap-1.5 text-[10px] text-slate-500 mb-2 font-medium flex-wrap">
+                <span class="text-amber-500">★★★★★</span>
+                <span>4.8 (1,420)</span>
+                <span class="text-slate-400">· 30-day return policy</span>
+              </div>
+
+              <!-- Sitelinks Badges -->
+              <div class="flex items-center gap-1.5 flex-wrap mt-2 pt-2 border-t border-slate-100">
+                ${(sitelinks).slice(0, 4).map(sl => `
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 hover:bg-slate-200 text-blue-700 font-semibold text-[10px] border border-slate-200/80 cursor-pointer shadow-2xs truncate max-w-[130px]">
+                    ${typeof sl === 'string' ? sl : sl.title}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
       }
 
-      const countEl = document.getElementById('googleLibraryAdsCount');
-      if (countEl) countEl.textContent = `${cards.length}+ ads`;
-
-      cards.forEach((card, idx) => {
-        const cDiv = document.createElement('div');
-        cDiv.className = "tt-card p-3 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer shadow-xs bg-white rounded-2xl border border-slate-200";
-        cDiv.onclick = () => openGoogleAdModal(idx);
-
-        const isActive = card.active !== false;
-        const days = card.days_running || 6;
-        const dateRange = card.date_range || `${days}d · ${card.first_shown || 'Sep 23'} → now`;
-        const flag = card.flag || (card.country === 'CA' ? '🇨🇦' : card.country === 'AU' ? '🇦🇺' : card.country === 'US' ? '🇺🇸' : '🌐');
-        const plat = card.platform || 'Other';
-        const fmt = card.format || 'Image';
-        const headline = card.headline || `${brandName} - Official Collection`;
-
-        let centerMediaHtml = '';
-        if (card.image_type === 'google_error') {
-          // Google 500 Error card matching Card 8 in media_1790738192038.png
-          centerMediaHtml = `
-            <div class="h-72 w-full rounded-xl p-5 bg-white border border-slate-200 flex flex-col justify-center text-left mb-3">
-              <div class="flex items-center gap-1 mb-2">
-                <span class="text-2xl font-black text-[#4285F4]">G</span>
-                <span class="text-2xl font-black text-[#EA4335]">o</span>
-                <span class="text-2xl font-black text-[#FBBC05]">o</span>
-                <span class="text-2xl font-black text-[#4285F4]">g</span>
-                <span class="text-2xl font-black text-[#34A853]">l</span>
-                <span class="text-2xl font-black text-[#EA4335]">e</span>
-              </div>
-              <div class="text-xs font-bold text-slate-800 mb-1"><b>500.</b> <span class="font-normal text-slate-600">That's an error.</span></div>
-              <div class="text-[11px] text-slate-500 leading-relaxed">There was an error. Please try again later. That's all we know.</div>
-            </div>
-          `;
-        } else if (plat === 'Shopping') {
-          // Google Shopping Tall Card
-          centerMediaHtml = `
-            <div class="rounded-xl overflow-hidden bg-slate-50/80 border border-slate-100 flex flex-col p-2 mb-3">
-              <div class="h-64 w-full flex items-center justify-center overflow-hidden rounded-lg bg-white mb-2">
-                <img src="${card.image_url || '/static/google_creatives/miffy_shopping.svg'}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Creative"/>
-              </div>
-              <div class="px-1 text-left">
-                <div class="text-sm font-bold text-blue-600 leading-snug line-clamp-2">${headline}</div>
-                <div class="text-xs font-black text-slate-900 mt-1">[Price]</div>
-                <div class="text-[11px] font-semibold text-slate-500 mt-0.5">${brandName}</div>
-                <div class="text-[11px] font-semibold text-blue-600 mt-0.5 flex items-center gap-1">
-                  <span>★ 4.8</span>
-                  <span class="text-slate-400">[Reviews By Google]</span>
-                </div>
-              </div>
-            </div>
-          `;
-        } else if (fmt === 'Image' && card.image_url) {
-          centerMediaHtml = `
-            <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200">
-              <img src="${card.image_url}" class="max-h-full max-w-full object-contain rounded-lg" alt="Creative"/>
-            </div>
-          `;
-        } else if (fmt === 'Video' || plat === 'YouTube') {
-          centerMediaHtml = `
-            <div class="h-72 w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center p-2 mb-3 group-hover:scale-[1.02] transition-transform duration-200 relative">
-              <img src="${card.image_url || '/static/emails/card_1.png'}" class="max-h-full max-w-full object-cover opacity-80 rounded-lg"/>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg"><svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-              </div>
-            </div>
-          `;
-        } else {
-          // 1:1 Authentic Google Search Ad Card matching media_1790738192038.png
-          const dispUrl = card.display_url || card.domain || `${brandName.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
-          centerMediaHtml = `
-            <div class="h-72 w-full rounded-xl p-4 bg-white border border-slate-200 flex flex-col justify-between mb-3 text-left shadow-2xs overflow-hidden">
-              <div class="overflow-y-auto custom-scroll pr-1 flex-1">
-                <!-- Favicon + Domain -->
-                <div class="flex items-center gap-2 mb-1.5">
-                  <div class="w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[9px] font-bold shrink-0">
-                    ${dispUrl.charAt(0).toUpperCase()}
-                  </div>
-                  <div class="text-[11px] text-slate-500 font-medium truncate">
-                    ${dispUrl}
-                  </div>
-                </div>
-
-                <!-- Blue Headline Link -->
-                <a href="#" class="text-[13px] font-bold text-blue-700 leading-snug line-clamp-2 hover:underline block mb-1">
-                  ${headline}
-                </a>
-
-                <!-- Snippet Description -->
-                <div class="text-[11px] text-slate-600 leading-relaxed line-clamp-3 mb-2">
-                  ${card.snippet || 'Explore collection and discover comfort designed for everyday life.'}
-                </div>
-
-                <!-- Ratings & Reviews (Card 2, 5, 7 in TrendTrack) -->
-                ${card.rating ? `
-                  <div class="flex items-center gap-1.5 text-[10px] text-slate-500 mb-2 font-medium flex-wrap">
-                    <span class="text-amber-500">★★★★☆</span>
-                    <span>${card.rating.replace('Rating for theoodie.com', '').trim()}</span>
-                    ${card.return_policy ? `<span class="text-slate-400">· ${card.return_policy}</span>` : ''}
-                  </div>
-                ` : ''}
-
-                <!-- Sitelinks Pills (Card 1, 2 in TrendTrack) -->
-                ${card.sitelinks_type === 'pills' && card.sitelinks ? `
-                  <div class="flex items-center gap-1.5 flex-wrap mt-2 pt-1 border-t border-slate-100">
-                    ${card.sitelinks.map(sl => `
-                      <span class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-blue-700 font-semibold text-[10px] border border-slate-200/80 cursor-pointer shadow-2xs">
-                        ${sl}
-                      </span>
-                    `).join('')}
-                  </div>
-                ` : ''}
-
-                <!-- Sitelinks Rows with right arrow (Card 4 in TrendTrack) -->
-                ${card.sitelinks_type === 'rows' && card.sitelink_rows ? `
-                  <div class="space-y-2 mt-2 border-t border-slate-100 pt-2">
-                    ${card.sitelink_rows.map(row => `
-                      <div class="text-[11px] text-slate-600">
-                        <div class="text-blue-700 font-bold hover:underline cursor-pointer flex items-center justify-between">
-                          <span>${row.title}</span>
-                          <span class="text-slate-400">›</span>
-                        </div>
-                        <div class="text-[10px] text-slate-500 line-clamp-1 mt-0.5">${row.desc}</div>
-                      </div>
-                    `).join('')}
-                  </div>
-                ` : ''}
-              </div>
-            </div>
-          `;
-        }
-
-        cDiv.innerHTML = `
-          <div>
-            <!-- Top Row 1: Badges -->
-            <div class="flex items-center justify-between gap-2 mb-2">
+      return `
+        <div>
+          <!-- Top Row 1: Badges -->
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="flex items-center gap-1.5">
+              ${isRanking ? `
+                <span class="w-5 h-5 rounded-full ${rank <= 3 ? 'bg-amber-500 font-black' : 'bg-slate-700 font-bold'} text-white flex items-center justify-center text-[10px] shadow-2xs">
+                  #${rank}
+                </span>
+              ` : ''}
               <span class="px-2 py-0.5 rounded-full ${isActive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-slate-100 text-slate-500'} text-[11px] font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full ${isActive ? 'bg-emerald-500' : 'bg-slate-400'}"></span>
                 <span>${isActive ? 'Active' : 'Inactive'}</span>
               </span>
-              <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[11px] font-medium flex items-center gap-1">
-                <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span>${dateRange}</span>
-              </span>
             </div>
-
-            <!-- Top Row 2: Targeting Strip (Matching media_1790732770060.png) -->
-            <div class="mb-2">
-              <div class="bg-slate-100 text-slate-700 px-3 py-1 rounded-lg text-xs font-semibold flex items-center justify-between">
-                <div class="flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-width="2"/></svg>
-                  <span>Global ads</span>
-                </div>
-                <span class="text-sm">${flag}</span>
-              </div>
-            </div>
-
-            <!-- Top Row 3: Platform & Format Row (Matching media_1790732770060.png) -->
-            <div class="flex items-center justify-between px-1 mb-2.5 text-xs font-semibold text-slate-600">
-              <div class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-                <span>${plat}</span>
-              </div>
-              <div class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span>${fmt}</span>
-              </div>
-            </div>
-
-            <!-- Center Visual Preview -->
-            ${centerMediaHtml}
+            <span class="bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full text-[11px] font-medium flex items-center gap-1">
+              <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>${dateRange}</span>
+            </span>
           </div>
 
-          <!-- Card Footer (Matching media_1790732770060.png) -->
-          <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-            <div class="flex items-center gap-2">
-              <div class="relative w-6 h-6 rounded-full overflow-hidden border border-slate-200 flex-shrink-0 bg-white">
-                <img src="${avatarSrc}" class="w-full h-full object-cover"/>
-                <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-blue-500 border border-white flex items-center justify-center text-[7px] text-white font-bold">G</span>
+          <!-- Top Row 2: Targeting Strip -->
+          <div class="mb-2">
+            <div class="bg-slate-100 text-slate-700 px-3 py-1 rounded-lg text-xs font-semibold flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-width="2"/></svg>
+                <span>${reachTag}</span>
               </div>
-              <div class="text-left">
-                <div class="text-xs font-bold text-slate-900 leading-tight truncate max-w-[120px]">${brandName}</div>
-                <div class="text-[10px] text-slate-400 font-medium">Google • ${(currentGoogleData?.active_ads || 0).toLocaleString()} / ${(currentGoogleData?.total_estimated || 0).toLocaleString()} • ${flag}</div>
-              </div>
+              <span class="text-sm">${flag}</span>
             </div>
-            <div class="flex items-center gap-1 text-slate-400">
-              <button onclick="event.stopPropagation();" class="p-1 hover:text-slate-800 transition" title="Save ad"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
-              <button onclick="event.stopPropagation();" class="p-1 hover:text-slate-800 transition" title="More options"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/></svg></button>
+          </div>
+
+          <!-- Top Row 3: Platform & Format Row -->
+          <div class="flex items-center justify-between px-1 mb-2.5 text-xs font-semibold text-slate-600">
+            <div class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>${plat}</span>
             </div>
+            <div class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>${fmt}</span>
+            </div>
+          </div>
+
+          <!-- Center Visual Preview -->
+          ${centerMediaHtml}
+        </div>
+
+        <!-- Card Footer -->
+        <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <div class="relative w-6 h-6 rounded-full overflow-hidden border border-slate-200 flex-shrink-0 bg-white">
+              <img src="${avatarSrc}" class="w-full h-full object-cover"/>
+              <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-blue-500 border border-white flex items-center justify-center text-[7px] text-white font-bold">G</span>
+            </div>
+            <div class="text-left">
+              <div class="text-xs font-bold text-slate-900 leading-tight truncate max-w-[120px]">${brandName}</div>
+              <div class="text-[10px] text-slate-400 font-medium">Google • ${(currentGoogleData?.active_ads || 0).toLocaleString()} / ${(currentGoogleData?.total_estimated || 0).toLocaleString()} • ${flag}</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 text-slate-400">
+            <button onclick="event.stopPropagation(); this.classList.toggle('text-amber-500');" class="p-1 hover:text-slate-800 transition" title="Lưu trữ"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg></button>
+            <button onclick="event.stopPropagation();" class="p-1 hover:text-slate-800 transition" title="Tùy chọn khác"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/></svg></button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Filter & Render Google Library Ads
+    function filterGoogleLibraryAds() {
+      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
+      const status = document.getElementById('filterGoogleStatus')?.value || 'all';
+      const pubDate = document.getElementById('filterGooglePubDate')?.value || 'all';
+      const daysRunning = document.getElementById('filterGoogleDaysRunning')?.value || 'all';
+      const mediaType = document.getElementById('filterGoogleMediaType')?.value || 'all';
+      const country = document.getElementById('filterGoogleCountry')?.value || 'all';
+      const search = (document.getElementById('googleLibrarySearchInput')?.value || '').toLowerCase().trim();
+      const sortVal = document.getElementById('googleLibrarySort')?.value || 'newest';
+
+      googleFilteredCards = currentGoogleData.ad_cards.filter(ad => {
+        if (status === 'active' && ad.active === false) return false;
+        if (status === 'inactive' && ad.active !== false) return false;
+
+        if (pubDate === '7d' && (ad.days_running || 0) > 7) return false;
+        if (pubDate === '30d' && (ad.days_running || 0) > 30) return false;
+        if (pubDate === '90d' && (ad.days_running || 0) > 90) return false;
+
+        if (daysRunning !== 'all') {
+          const minD = parseInt(daysRunning);
+          if ((ad.days_running || 0) < minD) return false;
+        }
+
+        if (activeGooglePlatformFilter !== 'all') {
+          const p = (ad.platform || '').toLowerCase();
+          if (!p.includes(activeGooglePlatformFilter.toLowerCase())) return false;
+        }
+
+        if (mediaType !== 'all') {
+          const m = (ad.format || '').toLowerCase();
+          if (m !== mediaType.toLowerCase()) return false;
+        }
+
+        if (country !== 'all') {
+          const c = (ad.country || '').toUpperCase();
+          if (c !== country.toUpperCase()) return false;
+        }
+
+        if (search) {
+          const hay = `${ad.headline || ''} ${ad.snippet || ''} ${ad.platform || ''} ${ad.format || ''} ${ad.domain || ''}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+
+        return true;
+      });
+
+      // Apply Sort
+      if (sortVal === 'newest') {
+        googleFilteredCards.sort((a, b) => (a.days_running || 0) - (b.days_running || 0));
+      } else if (sortVal === 'oldest' || sortVal === 'longest') {
+        googleFilteredCards.sort((a, b) => (b.days_running || 0) - (a.days_running || 0));
+      } else if (sortVal === 'reach') {
+        googleFilteredCards.sort((a, b) => (b.reach_tag || '').localeCompare(a.reach_tag || ''));
+      }
+
+      googleCurrentDisplayCount = GOOGLE_PAGE_SIZE;
+      renderGoogleLibraryCards(false);
+    }
+
+    function sortGoogleLibraryAds() {
+      filterGoogleLibraryAds();
+    }
+
+    // Render Google Ad Library with Infinite Scroll Batch Loading
+    function renderGoogleLibraryCards(appendMode = false) {
+      const grid = document.getElementById('googleLibraryCardsGrid');
+      if (!grid) return;
+      if (!appendMode) grid.innerHTML = '';
+
+      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
+
+      if (!googleFilteredCards || googleFilteredCards.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-500">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo Google nào cho "${brandName}" theo bộ lọc hiện tại</div>
+            <div class="text-xs text-slate-400 mt-1">Thử nhấn 'Clear' để đặt lại bộ lọc hoặc tìm từ khóa khác.</div>
           </div>
         `;
+        const countEl = document.getElementById('googleLibraryAdsCount');
+        if (countEl) countEl.textContent = '0 ads';
+        const sentinel = document.getElementById('googleLibrarySentinel');
+        if (sentinel) sentinel.classList.add('hidden');
+        return;
+      }
 
+      const sentinel = document.getElementById('googleLibrarySentinel');
+      if (sentinel) sentinel.classList.remove('hidden');
+
+      const countEl = document.getElementById('googleLibraryAdsCount');
+      if (countEl) {
+        countEl.textContent = `${googleFilteredCards.length}+ ads`;
+      }
+
+      const startIndex = appendMode ? (grid.children.length) : 0;
+      const endIndex = Math.min(googleCurrentDisplayCount, googleFilteredCards.length);
+      const batch = googleFilteredCards.slice(startIndex, endIndex);
+
+      batch.forEach((card, offset) => {
+        const actualIndex = startIndex + offset;
+        const cDiv = document.createElement('div');
+        cDiv.className = "tt-card p-3 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer shadow-xs bg-white rounded-2xl border border-slate-200";
+        cDiv.onclick = () => openGoogleAdModal(actualIndex, false);
+        cDiv.innerHTML = generateGoogleAdCardHtml(card, actualIndex, false);
+        grid.appendChild(cDiv);
+      });
+
+      // Update Infinite Scroll Sentinel UI
+      const spinner = document.getElementById('googleLibraryLoadingSpinner');
+      const loadBtn = document.getElementById('btnGoogleLoadMore');
+      const allLoaded = document.getElementById('googleLibraryAllLoaded');
+      const remainingCount = googleFilteredCards.length - endIndex;
+
+      if (endIndex < googleFilteredCards.length) {
+        if (spinner) spinner.classList.add('hidden');
+        if (loadBtn) {
+          loadBtn.classList.remove('hidden');
+          const badge = document.getElementById('googleLoadMoreBadge');
+          if (badge) badge.textContent = `+${Math.min(GOOGLE_PAGE_SIZE, remainingCount)}`;
+        }
+        if (allLoaded) allLoaded.classList.add('hidden');
+      } else {
+        if (spinner) spinner.classList.add('hidden');
+        if (loadBtn) loadBtn.classList.add('hidden');
+        if (allLoaded) {
+          allLoaded.classList.remove('hidden');
+          allLoaded.textContent = `✓ Đã hiển thị toàn bộ ${googleFilteredCards.length} quảng cáo`;
+        }
+      }
+    }
+
+    // Load More action triggered by scroll sentinel or manual button
+    function loadMoreGoogleAds() {
+      if (googleCurrentDisplayCount >= googleFilteredCards.length) return;
+      const spinner = document.getElementById('googleLibraryLoadingSpinner');
+      const loadBtn = document.getElementById('btnGoogleLoadMore');
+      if (spinner) spinner.classList.remove('hidden');
+      if (loadBtn) loadBtn.classList.add('hidden');
+
+      setTimeout(() => {
+        googleCurrentDisplayCount = Math.min(googleCurrentDisplayCount + GOOGLE_PAGE_SIZE, googleFilteredCards.length);
+        renderGoogleLibraryCards(true);
+      }, 250);
+    }
+
+    // Setup IntersectionObserver for smooth infinite scrolling
+    function setupGoogleInfiniteScroll() {
+      if (googleScrollObserver) googleScrollObserver.disconnect();
+      const sentinel = document.getElementById('googleLibrarySentinel');
+      if (!sentinel) return;
+
+      googleScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && googleCurrentDisplayCount < googleFilteredCards.length) {
+            loadMoreGoogleAds();
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      googleScrollObserver.observe(sentinel);
+    }
+
+    // Toggle Platform Filter for Ad Library
+    function togglePlatformFilter() {
+      const platforms = ['all', 'Search', 'YouTube', 'Other', 'Shopping'];
+      const curIdx = platforms.indexOf(activeGooglePlatformFilter);
+      activeGooglePlatformFilter = platforms[(curIdx + 1) % platforms.length];
+      const btn = document.getElementById('btnGooglePlatform');
+      if (btn) {
+        if (activeGooglePlatformFilter === 'all') {
+          btn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs shadow-2xs transition cursor-pointer";
+          btn.innerHTML = `<span>Platform</span>`;
+        } else {
+          btn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-xs transition cursor-pointer";
+          btn.innerHTML = `<span>${activeGooglePlatformFilter}</span><span class="text-emerald-200 text-xs font-normal">✕</span>`;
+        }
+      }
+      filterGoogleLibraryAds();
+    }
+
+    function clearGooglePlatformTag() {
+      activeGooglePlatformFilter = 'all';
+      const btn = document.getElementById('btnGooglePlatform');
+      if (btn) {
+        btn.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs shadow-2xs transition cursor-pointer";
+        btn.innerHTML = `<span>Platform</span>`;
+      }
+      filterGoogleLibraryAds();
+    }
+
+    function clearAllGoogleFilters() {
+      if (document.getElementById('filterGoogleStatus')) document.getElementById('filterGoogleStatus').value = 'all';
+      if (document.getElementById('filterGooglePubDate')) document.getElementById('filterGooglePubDate').value = 'all';
+      if (document.getElementById('filterGoogleDaysRunning')) document.getElementById('filterGoogleDaysRunning').value = 'all';
+      if (document.getElementById('filterGoogleMediaType')) document.getElementById('filterGoogleMediaType').value = 'all';
+      if (document.getElementById('filterGoogleCountry')) document.getElementById('filterGoogleCountry').value = 'all';
+      if (document.getElementById('googleLibrarySearchInput')) document.getElementById('googleLibrarySearchInput').value = '';
+      if (document.getElementById('googleLibrarySort')) document.getElementById('googleLibrarySort').value = 'newest';
+      activeGooglePlatformFilter = 'all';
+      clearGooglePlatformTag();
+    }
+
+    // ========================================================
+    // GOOGLE RANKING VIEW (MATCHING media_1790761291898.png 1:1)
+    // ========================================================
+    function filterGoogleRankingAds() {
+      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
+      const status = document.getElementById('filterGoogleRankingStatus')?.value || 'all';
+      const pubDate = document.getElementById('filterGoogleRankingPubDate')?.value || 'all';
+      const daysRunning = document.getElementById('filterGoogleRankingDaysRunning')?.value || 'all';
+      const mediaType = document.getElementById('filterGoogleRankingMediaType')?.value || 'all';
+      const country = document.getElementById('filterGoogleRankingCountry')?.value || 'all';
+      const search = (document.getElementById('googleRankingSearchInput')?.value || '').toLowerCase().trim();
+      const sortVal = document.getElementById('googleRankingSort')?.value || 'longest';
+
+      googleRankingFilteredCards = currentGoogleData.ad_cards.filter(ad => {
+        if (status === 'active' && ad.active === false) return false;
+        if (status === 'inactive' && ad.active !== false) return false;
+
+        if (pubDate === '7d' && (ad.days_running || 0) > 7) return false;
+        if (pubDate === '30d' && (ad.days_running || 0) > 30) return false;
+        if (pubDate === '90d' && (ad.days_running || 0) > 90) return false;
+
+        if (daysRunning !== 'all') {
+          const minD = parseInt(daysRunning);
+          if ((ad.days_running || 0) < minD) return false;
+        }
+
+        if (activeGoogleRankingPlatformFilter !== 'all') {
+          const p = (ad.platform || '').toLowerCase();
+          if (!p.includes(activeGoogleRankingPlatformFilter.toLowerCase())) return false;
+        }
+
+        if (mediaType !== 'all') {
+          const m = (ad.format || '').toLowerCase();
+          if (m !== mediaType.toLowerCase()) return false;
+        }
+
+        if (country !== 'all') {
+          const c = (ad.country || '').toUpperCase();
+          if (c !== country.toUpperCase()) return false;
+        }
+
+        if (search) {
+          const hay = `${ad.headline || ''} ${ad.snippet || ''} ${ad.platform || ''} ${ad.format || ''} ${ad.domain || ''}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+
+        return true;
+      });
+
+      // Apply Sort (Default Longest for Ranking)
+      if (sortVal === 'longest' || sortVal === 'oldest') {
+        googleRankingFilteredCards.sort((a, b) => (b.days_running || 0) - (a.days_running || 0));
+      } else if (sortVal === 'newest') {
+        googleRankingFilteredCards.sort((a, b) => (a.days_running || 0) - (b.days_running || 0));
+      } else if (sortVal === 'reach') {
+        googleRankingFilteredCards.sort((a, b) => (b.reach_tag || '').localeCompare(a.reach_tag || ''));
+      }
+
+      renderGoogleRankingCards();
+    }
+
+    function sortGoogleRankingAds() {
+      filterGoogleRankingAds();
+    }
+
+    function renderGoogleRankingCards() {
+      const grid = document.getElementById('googleRankingCardsGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const countEl = document.getElementById('googleRankingAdsCount');
+      if (countEl) countEl.textContent = `${googleRankingFilteredCards.length}+ ads`;
+
+      if (!googleRankingFilteredCards || googleRankingFilteredCards.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-500">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo nào trong bảng xếp hạng</div>
+          </div>
+        `;
+        return;
+      }
+
+      googleRankingFilteredCards.forEach((card, idx) => {
+        const cDiv = document.createElement('div');
+        cDiv.className = "tt-card p-3 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition duration-200 group cursor-pointer shadow-xs bg-white rounded-2xl border border-slate-200";
+        cDiv.onclick = () => openGoogleAdModal(idx, true);
+        cDiv.innerHTML = generateGoogleAdCardHtml(card, idx, true, idx + 1);
         grid.appendChild(cDiv);
       });
     }
 
-    function filterGoogleLibraryAds() {
-      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
-      const status = document.getElementById('filterGoogleStatus')?.value || 'all';
-      const daysRunning = document.getElementById('filterGoogleDaysRunning')?.value || 'all';
-      const platform = document.getElementById('filterGooglePlatform')?.value || 'all';
-      const mediaType = document.getElementById('filterGoogleMediaType')?.value || 'all';
-      const country = document.getElementById('filterGoogleCountry')?.value || 'all';
-      const search = (document.getElementById('googleLibrarySearchInput')?.value || '').toLowerCase().trim();
-
-      let filtered = currentGoogleData.ad_cards.filter(ad => {
-        if (status === 'active' && ad.active === false) return false;
-        if (status === 'inactive' && ad.active !== false) return false;
-        
-        if (daysRunning !== 'all') {
-          const minDays = parseInt(daysRunning);
-          if ((ad.days_running || 0) < minDays) return false;
-        }
-
-        if (platform !== 'all' && ad.platform !== platform) return false;
-        if (mediaType !== 'all' && ad.format !== mediaType) return false;
-        if (country !== 'all' && ad.country !== country) return false;
-
-        if (search) {
-          const text = `${ad.headline || ''} ${ad.snippet || ''} ${ad.platform || ''} ${ad.format || ''}`.toLowerCase();
-          if (!text.includes(search)) return false;
-        }
-        return true;
-      });
-
-      renderGoogleLibraryCards(filtered);
+    function toggleGoogleRankingPlatformFilter() {
+      const platforms = ['all', 'Search', 'YouTube', 'Other', 'Shopping'];
+      const curIdx = platforms.indexOf(activeGoogleRankingPlatformFilter);
+      activeGoogleRankingPlatformFilter = platforms[(curIdx + 1) % platforms.length];
+      filterGoogleRankingAds();
     }
 
-    function sortGoogleLibraryAds() {
-      const sortVal = document.getElementById('googleLibrarySort')?.value || 'newest';
-      if (!currentGoogleData || !currentGoogleData.ad_cards) return;
-      let sorted = [...currentGoogleData.ad_cards];
-      if (sortVal === 'newest') {
-        sorted.sort((a, b) => (a.days_running || 0) - (b.days_running || 0));
-      } else if (sortVal === 'oldest' || sortVal === 'longest') {
-        sorted.sort((a, b) => (b.days_running || 0) - (a.days_running || 0));
-      } else if (sortVal === 'reach') {
-        sorted.sort((a, b) => (b.reach_tag || '').localeCompare(a.reach_tag || ''));
-      }
-      renderGoogleLibraryCards(sorted);
+    function clearGoogleRankingPlatformTag() {
+      activeGoogleRankingPlatformFilter = 'all';
+      filterGoogleRankingAds();
+    }
+
+    function clearAllGoogleRankingFilters() {
+      if (document.getElementById('filterGoogleRankingStatus')) document.getElementById('filterGoogleRankingStatus').value = 'all';
+      if (document.getElementById('filterGoogleRankingPubDate')) document.getElementById('filterGoogleRankingPubDate').value = 'all';
+      if (document.getElementById('filterGoogleRankingDaysRunning')) document.getElementById('filterGoogleRankingDaysRunning').value = 'all';
+      if (document.getElementById('filterGoogleRankingMediaType')) document.getElementById('filterGoogleRankingMediaType').value = 'all';
+      if (document.getElementById('filterGoogleRankingCountry')) document.getElementById('filterGoogleRankingCountry').value = 'all';
+      if (document.getElementById('googleRankingSearchInput')) document.getElementById('googleRankingSearchInput').value = '';
+      if (document.getElementById('googleRankingSort')) document.getElementById('googleRankingSort').value = 'longest';
+      activeGoogleRankingPlatformFilter = 'all';
+      filterGoogleRankingAds();
     }
 
     // ========================================================
@@ -7992,128 +8606,292 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       if (modal) modal.classList.add('hidden');
     }
 
-    // Modal view for Google Ads
-    function openGoogleAdModal(index) {
-      if (!currentGoogleCards || !currentGoogleCards[index]) return;
-      const card = currentGoogleCards[index];
-      const modal = document.getElementById('adModal');
+    // State for Google Ad Detail Intelligence Modal
+    let currentGoogleModalIndex = 0;
+    let isModalFromRanking = false;
+
+    // Dedicated 2-Column Google Ad Detail Intelligence Modal (Matching media_1790761317024.png 1:1)
+    function openGoogleAdModal(index, fromRanking = false) {
+      isModalFromRanking = fromRanking;
+      currentGoogleModalIndex = index;
+      const cardList = fromRanking ? googleRankingFilteredCards : googleFilteredCards;
+      if (!cardList || !cardList[index]) return;
+      const card = cardList[index];
+
+      const modal = document.getElementById('googleAdDetailModal');
       if (!modal) return;
-      modal.classList.remove('hidden');
 
-      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'Brand');
-      const domain = (currentData ? currentData.domain : 'google.com');
-      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0f172a&color=fff`;
+      const brandName = (currentGoogleData && currentGoogleData.brand) || (currentData ? currentData.name : 'The Oodie');
+      const domain = card.domain || (currentData ? currentData.domain : 'theoodie.com');
+      const avatarSrc = (currentData && currentData.avatarUrl) ? currentData.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(brandName)}&background=0284c7&color=fff`;
       const advId = (currentGoogleData && currentGoogleData.advertiser) ? currentGoogleData.advertiser.advertiser_id : '';
-      const gUrl = `https://adstransparency.google.com/advertiser/${advId}?region=anywhere`;
+      const gUrl = (currentGoogleData && currentGoogleData.advertiser && currentGoogleData.advertiser.transparency_url) || `https://adstransparency.google.com/advertiser/${advId}?region=anywhere`;
 
-      // Fill top bar
-      document.getElementById('modalShopAvatar').src = avatarSrc;
-      document.getElementById('modalShopName').textContent = brandName;
-      document.getElementById('modalShopDomain').textContent = domain;
-      document.getElementById('modalShopLink').href = 'https://' + domain;
-      document.getElementById('modalAdCounter').textContent = `Google Ad ${index + 1} / ${currentGoogleCards.length}`;
-      
-      const metaBtn = document.getElementById('modalMetaAnalyticsBtn');
-      if (metaBtn) {
-        metaBtn.href = gUrl;
-        metaBtn.innerHTML = `
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.067 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-          <span>Google Transparency</span>
-        `;
+      // 1. LEFT COLUMN: Top Card Header
+      const topDomain = document.getElementById('gModalTopDomain');
+      if (topDomain) topDomain.textContent = domain;
+      const topFmt = document.getElementById('gModalTopFormat');
+      if (topFmt) topFmt.textContent = card.format || 'Other';
+
+      // 2. LEFT COLUMN: Creative Stage Rendering
+      const creativeBody = document.getElementById('gModalCreativeBody');
+      if (creativeBody) {
+        if (card.format === 'Shopping' || card.platform === 'Shopping') {
+          creativeBody.innerHTML = `
+            <div class="w-full rounded-2xl bg-white border border-slate-200/80 p-4 shadow-sm flex flex-col items-center">
+              <div class="h-60 w-full flex items-center justify-center mb-3 overflow-hidden rounded-xl bg-slate-50">
+                <img src="${card.image_url || '/static/google_creatives/miffy_shopping.svg'}" class="max-h-full max-w-full object-contain" alt="Product"/>
+              </div>
+              <div class="w-full text-left space-y-1">
+                <div class="text-sm font-bold text-blue-700 leading-snug line-clamp-2">${card.headline}</div>
+                <div class="text-base font-black text-slate-900">${card.price || '$89.00'}</div>
+                <div class="text-xs font-semibold text-slate-500">${domain}</div>
+                <div class="text-xs font-semibold text-blue-600 flex items-center gap-1 mt-1">
+                  <span>★★★★★ 4.8</span>
+                  <span class="text-slate-400">[Reviews By Google]</span>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (card.format === 'Video' || card.platform === 'YouTube') {
+          creativeBody.innerHTML = `
+            <div class="w-full rounded-2xl bg-slate-900 border border-slate-800 p-2 shadow-sm flex flex-col items-center relative overflow-hidden group">
+              <img src="${card.image_url || '/static/emails/card_1.png'}" class="h-72 w-full object-cover rounded-xl opacity-90"/>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition cursor-pointer">
+                  <svg class="w-7 h-7 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4 px-2 py-1 bg-black/85 text-white text-xs font-mono rounded-md">
+                ${card.video_duration || '0:30'}
+              </div>
+            </div>
+          `;
+        } else if (card.format === 'Image' && card.image_url) {
+          creativeBody.innerHTML = `
+            <div class="w-full rounded-2xl bg-white border border-slate-200/80 p-3 shadow-sm flex items-center justify-center">
+              <img src="${card.image_url}" class="max-h-80 max-w-full object-contain rounded-xl" alt="Creative"/>
+            </div>
+          `;
+        } else {
+          // Search Text SERP layout
+          const sitelinks = card.sitelinks || [
+            {"title": `${brandName} Wearable Blankets`, "snippet": "Shop official cloud blankets"},
+            {"title": "Sleep Tees", "snippet": "Cooling bamboo nightwear"},
+            {"title": "Shop Bundles", "snippet": "Save up to 40% on matching sets"}
+          ];
+          creativeBody.innerHTML = `
+            <div class="w-full rounded-2xl bg-white border border-slate-200/80 p-5 shadow-sm text-left space-y-3">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-black">
+                  ${domain.charAt(0).toUpperCase()}
+                </div>
+                <div class="text-xs font-semibold text-slate-500">${domain}</div>
+              </div>
+              <a href="#" onclick="event.preventDefault();" class="text-base font-bold text-blue-700 leading-snug hover:underline block">
+                ${card.headline}
+              </a>
+              <div class="text-xs text-slate-600 leading-relaxed">
+                ${card.snippet || 'Explore the official collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.'}
+              </div>
+              <div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+                <span class="text-amber-500">★★★★★</span>
+                <span>4.8 (1,420 reviews)</span>
+                <span class="text-slate-400">· 30-day return policy</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100">
+                ${sitelinks.slice(0, 4).map(sl => `
+                  <div class="p-2 bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200/60 cursor-pointer">
+                    <div class="text-xs font-bold text-blue-700 truncate">${typeof sl === 'string' ? sl : sl.title}</div>
+                    <div class="text-[10px] text-slate-400 truncate mt-0.5">${sl.snippet || 'Browse products'}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
       }
 
-      // Fill Left Half
-      document.getElementById('cardModalAvatar').src = avatarSrc;
-      document.getElementById('cardModalAdvName').textContent = brandName;
-      document.getElementById('cardModalAdId').textContent = 'ID: ' + (card.creative_id || ('G-' + (index + 101)));
-      document.getElementById('cardModalCopy').textContent = `${card.headline || ''}\n\n${card.snippet || 'Google Ads network creative.'}`;
+      // 3. LEFT COLUMN: Bottom Dock Controls
+      const counterEl = document.getElementById('gModalIndexCounter');
+      if (counterEl) counterEl.textContent = `${index + 1} / ${cardList.length}`;
+      const extLink = document.getElementById('btnGModalExternalLink');
+      if (extLink) extLink.href = gUrl;
 
-      const videoEl = document.getElementById('cardModalVideo');
-      const imgEl = document.getElementById('cardModalImage');
-      videoEl.classList.add('hidden');
-      videoEl.pause();
+      // 4. RIGHT COLUMN: Shop Header
+      const brandAvatar = document.getElementById('gModalBrandAvatar');
+      if (brandAvatar) brandAvatar.src = avatarSrc;
+      const bName = document.getElementById('gModalBrandName');
+      if (bName) bName.textContent = brandName;
+      const wText = document.getElementById('gModalWebsiteText');
+      if (wText) wText.textContent = domain;
+      const wLink = document.getElementById('gModalWebsiteLink');
+      if (wLink) wLink.href = 'https://' + domain;
+      const cBadge = document.getElementById('gModalCountryBadge');
+      if (cBadge) cBadge.textContent = `${card.country_flag || '🇦🇺'} ${card.country || 'AU'}`;
 
-      if (card.image_url) {
-        imgEl.classList.remove('hidden');
-        imgEl.src = card.image_url;
-      } else {
-        imgEl.classList.add('hidden');
+      // 5. RIGHT COLUMN: Section 1 AD DETAILS
+      const adFmt = document.getElementById('gModalAdFormat');
+      if (adFmt) adFmt.textContent = card.format || 'Other';
+      const adPlat = document.getElementById('gModalAdPlatform');
+      if (adPlat) adPlat.textContent = `${card.platform || 'Other'} 100%`;
+      const adReach = document.getElementById('gModalAdReach');
+      if (adReach) adReach.textContent = card.reach_tag || 'Global ads';
+      const adId = document.getElementById('gModalAdId');
+      if (adId) adId.textContent = card.creative_id || `CR027764621952470220${index+10}`;
+
+      // 6. RIGHT COLUMN: Section 2 ADVERTISER DETAILS
+      const legalEntity = document.getElementById('gModalLegalEntity');
+      if (legalEntity) {
+        legalEntity.textContent = (currentGoogleData?.advertiser?.advertiser_name) || (brandName.toLowerCase().includes('oodie') ? 'Davie Group Trading (Australia) Pty Ltd' : `${brandName} Inc.`);
       }
-
-      document.getElementById('cardModalCtaDomain').textContent = domain;
-      document.getElementById('cardModalCtaTitle').textContent = card.headline || ('Visit ' + brandName);
-      document.getElementById('cardModalCtaBtn').href = 'https://' + domain;
-      
-      const origBtn = document.getElementById('btnOriginalAd');
-      if (origBtn) {
-        origBtn.href = gUrl;
-        origBtn.textContent = 'Xác minh trên Google Ads Transparency ↗';
+      const verifiedSince = document.getElementById('gModalVerifiedSince');
+      if (verifiedSince) {
+        verifiedSince.textContent = currentGoogleData?.advertiser?.verified_since || 'Seen since Dec 29, 2022';
       }
-
-      // Fill Right Half
-      document.getElementById('detailRankScale').textContent = `Rank #${card.rank || (index + 1)}`;
-      document.getElementById('detailRankBar').style.width = `${Math.max(25, 100 - (card.rank || index + 1) * 12)}%`;
-      document.getElementById('detailRankBadge').textContent = `Active for ${card.days_running || 30} days`;
-
-      document.getElementById('detailDaysActive').textContent = (card.days_running || 30) + 'd';
-      document.getElementById('detailFirstSeen').textContent = card.first_shown || 'Oct 04, 2023';
-      document.getElementById('detailLastSeen').textContent = card.last_shown || 'Active today';
-      document.getElementById('detailReach').textContent = card.reach_tag || 'Global ads';
-
-      // Dynamic Landing Page & Format (Overwrite static Oodie text!)
-      const landingUrl = card.landing_url || ('https://' + domain);
-      const landingEl = document.getElementById('detailLandingUrl');
-      if (landingEl) {
-        landingEl.href = landingUrl;
-        landingEl.textContent = domain + (card.landing_url ? ('/' + card.landing_url.split('/').slice(3).join('/')) : '');
+      const activeAds = document.getElementById('gModalActiveAdsCount');
+      if (activeAds) {
+        const act = currentGoogleData?.active_ads || 375;
+        const tot = currentGoogleData?.total_estimated || 1800;
+        activeAds.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>• ${act.toLocaleString()} / ${(tot/1000).toFixed(1)}K ads</span>`;
       }
-      const formatEl = document.getElementById('detailFormat');
-      if (formatEl) formatEl.textContent = card.format || 'Search (Text)';
-      const ctaEl = document.getElementById('detailCta');
-      if (ctaEl) ctaEl.textContent = card.cta || 'Shop Now';
-      const langEl = document.getElementById('detailLanguage');
-      if (langEl) langEl.textContent = card.language || 'English';
+      const transLink = document.getElementById('gModalTransparencyLink');
+      if (transLink) transLink.href = gUrl;
 
-      // Ads on this LP
-      const lpCount = Math.max(1, Math.round(currentGoogleCards.length * 0.45));
-      const lpRatio = Math.round((lpCount / Math.max(1, currentGoogleCards.length)) * 100);
-      const detailLpCount = document.getElementById('detailLpCount');
-      if (detailLpCount) detailLpCount.textContent = lpCount;
-      const detailLpRatio = document.getElementById('detailLpRatio');
-      if (detailLpRatio) detailLpRatio.textContent = `${lpRatio}% of ads`;
-      const detailLpBar = document.getElementById('detailLpBar');
-      if (detailLpBar) detailLpBar.style.width = `${lpRatio}%`;
+      // 7. RIGHT COLUMN: Section 3 SHOP DETAILS
+      const sCreation = document.getElementById('gModalShopCreation');
+      if (sCreation) sCreation.textContent = currentGoogleData?.shop_details?.creation_date || 'Nov 2018';
+      const sVisitors = document.getElementById('gModalShopVisitors');
+      if (sVisitors) sVisitors.textContent = currentGoogleData?.shop_details?.monthly_visitors || '~ 1.8M / mo';
+      const sAds = document.getElementById('gModalShopGoogleAds');
+      if (sAds) sAds.textContent = currentGoogleData?.shop_details?.google_ads_count || '1.8K ads';
 
-      // Overwrite static Advertiser Details (No more 415 / 13.9K Oodie stats!)
-      const gAct = (currentGoogleData && currentGoogleData.active_ads) || currentGoogleCards.length || 0;
-      const gTot = (currentGoogleData && currentGoogleData.total_estimated) || (gAct * 4) || 0;
-      const advActiveAds = document.getElementById('advActiveAds');
-      if (advActiveAds) advActiveAds.textContent = `● ${gAct.toLocaleString()} / ${gTot.toLocaleString()}`;
+      // Top 5 Best Sellers List
+      const bestSellersList = document.getElementById('gModalBestSellersList');
+      if (bestSellersList) {
+        const items = (currentGoogleData?.shop_details?.best_sellers && currentGoogleData.shop_details.best_sellers.length > 0)
+          ? currentGoogleData.shop_details.best_sellers
+          : [
+            {"rank": 1, "title": "The Oodie Original Wearable Blanket", "price": "$89.00", "image_url": "/static/google_creatives/miffy_shopping.svg"},
+            {"rank": 2, "title": "I Love Dogs Oodie Wearable Blanket", "price": "$89.00", "image_url": "/static/google_creatives/naruto_itachi.svg"},
+            {"rank": 3, "title": "Avocado Oodie Blanket Hoodie", "price": "$89.00", "image_url": "/static/google_creatives/moss_green.svg"},
+            {"rank": 4, "title": "Koala Oodie Original Sherpa Fleece", "price": "$89.00", "image_url": "/static/google_creatives/pastel_wave.svg"},
+            {"rank": 5, "title": "Pizza Oodie Wearable Blanket", "price": "$89.00", "image_url": "/static/google_creatives/miffy_shopping.svg"}
+          ];
 
-      const advVel = document.getElementById('advVelocity');
-      if (advVel) advVel.textContent = `7d: ${Math.round(gAct * 0.2)} | 14d: ${Math.round(gAct * 0.4)}`;
-
-      const advReach = document.getElementById('advReach');
-      if (advReach) advReach.textContent = currentGoogleData?.reach || `${Math.round(gAct * 1.2)}K`;
-
-      const advSpend = document.getElementById('advSpend');
-      if (advSpend) advSpend.textContent = currentGoogleData?.spend || `$${Math.round(gAct * 18)}/d`;
-
-      const btnAdv = document.getElementById('btnMetaAdsLibrary');
-      if (btnAdv) {
-        btnAdv.href = gUrl;
-        btnAdv.innerHTML = `<span>Google Advertiser</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>`;
-      }
-
-      // Overwrite Hero Landing Pages strip
-      const lpStrip = document.getElementById('landingPagesStrip');
-      if (lpStrip) {
-        lpStrip.innerHTML = `
-          <div class="p-2.5 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between">
-            <div class="truncate text-xs font-semibold text-slate-800">${domain}</div>
-            <a href="https://${domain}" target="_blank" class="text-blue-600 hover:text-blue-800 text-[11px] font-bold shrink-0 ml-2">Visit ↗</a>
+        bestSellersList.innerHTML = items.map(item => `
+          <div class="flex items-center justify-between p-2 rounded-xl bg-white border border-slate-200/60 hover:border-slate-300 transition shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <span class="w-4 h-4 rounded-full bg-slate-900 text-white flex items-center justify-center text-[9px] font-black shrink-0">${item.rank}</span>
+              <img src="${item.image_url}" class="w-8 h-8 rounded-lg object-contain bg-slate-50 border border-slate-100" alt="Product"/>
+              <div class="text-left">
+                <div class="text-[11px] font-bold text-slate-900 truncate max-w-[170px]">${item.title}</div>
+                <div class="text-[10px] text-slate-400 font-medium">Bestseller item</div>
+              </div>
+            </div>
+            <div class="text-xs font-black text-slate-900">${item.price}</div>
           </div>
-        `;
+        `).join('');
+      }
+
+      // Populate More from this advertiser Tab
+      const moreGrid = document.getElementById('gModalMoreGrid');
+      if (moreGrid && currentGoogleData?.ad_cards) {
+        const others = currentGoogleData.ad_cards.filter((_, i) => i !== index).slice(0, 4);
+        moreGrid.innerHTML = others.map((oc, oi) => `
+          <div onclick="openGoogleAdModal(${oi}, ${fromRanking})" class="p-2 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition cursor-pointer text-left space-y-1.5 shadow-2xs">
+            <div class="h-28 w-full rounded-lg overflow-hidden bg-white flex items-center justify-center">
+              ${oc.image_url ? `<img src="${oc.image_url}" class="max-h-full max-w-full object-contain"/>` : `<div class="p-2 text-[10px] text-blue-700 font-bold">${oc.headline}</div>`}
+            </div>
+            <div class="text-[11px] font-bold text-slate-900 truncate">${oc.headline}</div>
+            <div class="text-[10px] text-slate-500 flex justify-between"><span>${oc.format}</span><span>${oc.days_running}d running</span></div>
+          </div>
+        `).join('');
+      }
+
+      switchGModalSubTab('details');
+      modal.classList.remove('hidden');
+    }
+
+    function closeGoogleAdModal() {
+      const modal = document.getElementById('googleAdDetailModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function prevGoogleAdModal() {
+      const cardList = isModalFromRanking ? googleRankingFilteredCards : googleFilteredCards;
+      if (currentGoogleModalIndex > 0) {
+        openGoogleAdModal(currentGoogleModalIndex - 1, isModalFromRanking);
+      }
+    }
+
+    function nextGoogleAdModal() {
+      const cardList = isModalFromRanking ? googleRankingFilteredCards : googleFilteredCards;
+      if (currentGoogleModalIndex < cardList.length - 1) {
+        openGoogleAdModal(currentGoogleModalIndex + 1, isModalFromRanking);
+      }
+    }
+
+    function switchGModalSubTab(tab) {
+      const tabDetails = document.getElementById('gModalSubTab_details');
+      const tabMore = document.getElementById('gModalSubTab_more');
+      const tabBoards = document.getElementById('gModalSubTab_boards');
+
+      const contentDetails = document.getElementById('gModalTabContent_details');
+      const contentMore = document.getElementById('gModalTabContent_more');
+      const contentBoards = document.getElementById('gModalTabContent_boards');
+
+      [tabDetails, tabMore, tabBoards].forEach(t => {
+        if (t) t.className = "pb-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5 cursor-pointer";
+      });
+      [contentDetails, contentMore, contentBoards].forEach(c => {
+        if (c) c.classList.add('hidden');
+      });
+
+      if (tab === 'more') {
+        if (tabMore) tabMore.className = "pb-2.5 border-b-2 border-slate-900 text-slate-900 font-bold transition flex items-center gap-1.5 cursor-pointer";
+        if (contentMore) contentMore.classList.remove('hidden');
+      } else if (tab === 'boards') {
+        if (tabBoards) tabBoards.className = "pb-2.5 border-b-2 border-slate-900 text-slate-900 font-bold transition flex items-center gap-1.5 cursor-pointer";
+        if (contentBoards) contentBoards.classList.remove('hidden');
+      } else {
+        if (tabDetails) tabDetails.className = "pb-2.5 border-b-2 border-slate-900 text-slate-900 font-bold transition flex items-center gap-1.5 cursor-pointer";
+        if (contentDetails) contentDetails.classList.remove('hidden');
+      }
+    }
+
+    function copyGoogleAdLink() {
+      const cardList = isModalFromRanking ? googleRankingFilteredCards : googleFilteredCards;
+      const card = cardList && cardList[currentGoogleModalIndex];
+      const link = (currentGoogleData?.advertiser?.transparency_url) || window.location.href;
+      navigator.clipboard.writeText(link).then(() => {
+        alert("Đã sao chép liên kết Google Ads Transparency vào bộ nhớ tạm!");
+      }).catch(() => {
+        alert("Đã sao chép liên kết quảng cáo: " + link);
+      });
+    }
+
+    function downloadGoogleCreative() {
+      const cardList = isModalFromRanking ? googleRankingFilteredCards : googleFilteredCards;
+      const card = cardList && cardList[currentGoogleModalIndex];
+      if (card && card.image_url) {
+        const a = document.createElement('a');
+        a.href = card.image_url;
+        a.download = `google_creative_${card.creative_id || 'ad'}.png`;
+        a.target = '_blank';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } else {
+        alert("Quảng cáo định dạng Text SERP không có tệp hình ảnh để tải về.");
+      }
+    }
+
+    function toggleBookmarkGoogleModal() {
+      const btn = document.getElementById('btnGModalBookmark');
+      if (btn) {
+        btn.classList.toggle('text-amber-400');
+        btn.classList.toggle('scale-110');
       }
     }
 
