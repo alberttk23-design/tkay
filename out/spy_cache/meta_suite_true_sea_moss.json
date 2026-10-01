@@ -1,0 +1,114 @@
+{
+  "brand_name": "True Sea Moss Health",
+  "domain": "trueseamoss.com",
+  "logo_url": "https://ui-avatars.com/api/?name=True%20Sea%20Moss%20Health&background=0284c7&color=fff",
+  "total_active_ads": 100,
+  "eu_uk_count": 0,
+  "eu_uk_pct": 0,
+  "header": {
+    "brand_name": "True Sea Moss Health",
+    "is_main": true,
+    "total_ads_str": "• 100 / 100",
+    "live_status": "Active",
+    "eu_uk_label": "Reach & Spend · EU/UK only 0 (0%)"
+  },
+  "ad_library": {
+    "total_cards": 0,
+    "cards": []
+  },
+  "insights": {
+    "historic_trend": [
+      {
+        "week": "W10",
+        "label": "M1",
+        "active_ads": 30,
+        "ads_launched": 10
+      },
+      {
+        "week": "W12",
+        "label": "M2",
+        "active_ads": 40,
+        "ads_launched": 15
+      },
+      {
+        "week": "W14",
+        "label": "M3",
+        "active_ads": 50,
+        "ads_launched": 20
+      },
+      {
+        "week": "W16",
+        "label": "M4",
+        "active_ads": 60,
+        "ads_launched": 10
+      },
+      {
+        "week": "W18",
+        "label": "M5",
+        "active_ads": 70,
+        "ads_launched": 15
+      },
+      {
+        "week": "W20",
+        "label": "M6",
+        "active_ads": 80,
+        "ads_launched": 20
+      },
+      {
+        "week": "W22",
+        "label": "M7",
+        "active_ads": 90,
+        "ads_launched": 10
+      }
+    ],
+    "format_mix": {
+      "video_pct": 0,
+      "image_pct": 0,
+      "carousel_pct": 0,
+      "dco_pct": 100
+    },
+    "top_landing_pages": [],
+    "best_ranked_creatives": []
+  },
+  "ranking": {
+    "modes": {
+      "biggest_gain": [],
+      "top_ranked": [],
+      "longest_active": [],
+      "most_reused": []
+    },
+    "trajectory_top_5": []
+  },
+  "contents": {
+    "facets": {
+      "creative": [],
+      "ad_copy": [],
+      "transcript": [],
+      "hook": [],
+      "headline": []
+    }
+  },
+  "partnerships": {
+    "total_collaborations": 0,
+    "creators": [
+      {
+        "id": "creator_1",
+        "name": "Creator Partner 1",
+        "handle": "@trueseamoss_partner1",
+        "avatar": "https://ui-avatars.com/api/?name=Creator+1&background=7c3aed&color=fff",
+        "category": "E-Commerce Reviewer",
+        "followers": "250K",
+        "active_ads": 2,
+        "ad_format": "Whitelisted Post",
+        "reach": "600K",
+        "sample_creative": null,
+        "tag": "Paid partnership with True Sea Moss Health",
+        "caption": "Testing the official drop from True Sea Moss Health! Highly recommend checking this out."
+      }
+    ]
+  },
+  "landing_pages": {
+    "total_landing_pages": 0,
+    "pages": []
+  }
+}

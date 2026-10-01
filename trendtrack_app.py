@@ -4337,9 +4337,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     let metaUnifiedTrajectoryChartInstance = null;
     let currentMetaUnifiedRankMode = 'biggest_gain'; // 'biggest_gain' | 'top_ranked' | 'longest_active' | 'most_reused'
     let currentMetaUnifiedContentMode = 'creative'; // 'creative' | 'ad_copy' | 'transcript' | 'hook' | 'headline'
-    let currentMetaUnifiedContentMediaFilter = 'all'; // 'all' | 'image' | 'video' | 'carousel' | 'dco'
+    let currentMetaSuiteData = null;
     let currentMetaRankingApiData = null;
     let currentMetaContentsApiData = null;
+    let metaLibraryCustomFilteredAds = null;
 
     async function loadMetaIntelligenceView(brandName) {
       const bName = brandName || getActiveBrandName();
@@ -4355,35 +4356,33 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         bAvatar.src = (currentData && currentData.avatarUrl) || getEmailBrandAvatar(bName);
       }
 
-      const totalAds = (currentData && currentData.total_active_ads != null) ? currentData.total_active_ads : (currentData?.ads?.length || 0);
-      if (bAdsCount) bAdsCount.textContent = `• ${totalAds} / ${totalAds}`;
-      if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
-      if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds} / ${totalAds}`;
+      // Fetch unified Meta Suite from meta_ads_agent
+      try {
+        const suiteRes = await fetch('/api/meta/suite?query=' + encodeURIComponent(bName));
+        if (suiteRes.ok) {
+          const suite = await suiteRes.json();
+          currentMetaSuiteData = suite;
 
-      const euUkCount = currentMetaRankData?.eu_uk_count || Math.round(totalAds * 0.22);
-      const euUkPct = currentMetaRankData?.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
-      if (euUkLabel) euUkLabel.textContent = `Reach & Spend · EU/UK only ${euUkCount} (${euUkPct}%)`;
+          const totalAds = suite.total_active_ads || suite.ad_library?.cards?.length || (currentData?.ads?.length || 0);
+          if (bAdsCount) bAdsCount.textContent = `• ${totalAds} / ${totalAds}`;
+          if (bTotalSubNav) bTotalSubNav.textContent = `${totalAds} Ads`;
+          if (subSidebarMetaCount) subSidebarMetaCount.textContent = `${totalAds} / ${totalAds}`;
 
-      // Parallel fetch meta-ranking and contents if not yet loaded or brand mismatch
-      if (!currentMetaRankingApiData || currentMetaRankingApiData.brand?.toLowerCase() !== bName.toLowerCase()) {
-        fetch('/api/meta-ranking?query=' + encodeURIComponent(bName))
-          .then(res => res.json())
-          .then(data => {
-            currentMetaRankingApiData = data;
-            currentMetaRankData = data;
-            if (currentMetaSubTab === 'ranking') renderMetaUnifiedRanking();
-            if (currentMetaSubTab === 'insights') renderMetaInsights();
-          }).catch(e => console.error('Error fetching meta ranking:', e));
-      }
+          const euUkCount = suite.eu_uk_count || Math.round(totalAds * 0.22);
+          const euUkPct = suite.eu_uk_pct || (totalAds > 0 ? Math.round((euUkCount / totalAds) * 100) : 0);
+          if (euUkLabel) euUkLabel.textContent = `Reach & Spend · EU/UK only ${euUkCount} (${euUkPct}%)`;
 
-      if (!currentMetaContentsApiData || currentMetaContentsApiData.brand?.toLowerCase() !== bName.toLowerCase()) {
-        fetch('/api/contents?query=' + encodeURIComponent(bName))
-          .then(res => res.json())
-          .then(data => {
-            currentMetaContentsApiData = data;
-            currentContentsData = data;
-            if (currentMetaSubTab === 'contents') renderMetaUnifiedContents();
-          }).catch(e => console.error('Error fetching meta contents:', e));
+          // Synchronize data for all subtabs
+          if (suite.ad_library?.cards?.length) {
+            if (!currentData) currentData = {};
+            currentData.ads = suite.ad_library.cards;
+            currentData.total_active_ads = totalAds;
+          }
+          if (suite.ranking) currentMetaRankingApiData = suite.ranking;
+          if (suite.contents) currentMetaContentsApiData = suite.contents;
+        }
+      } catch (e) {
+        console.error('Failed to load meta suite:', e);
       }
 
       switchMetaSubTab(currentMetaSubTab || 'library');
@@ -4456,6 +4455,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
     // (Matching media_1790759876556 & .884591)
     // ==========================================
     function filterMetaLibrary() {
+      metaLibraryCustomFilteredAds = null;
       metaLibraryCurrentPage = 1;
       renderMetaLibraryCards();
     }
@@ -4514,7 +4514,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const pagEl = document.getElementById('metaLibraryPagination');
       if (!grid) return;
 
-      const rawAds = (currentData && currentData.ads) ? currentData.ads : [];
+      const rawAds = metaLibraryCustomFilteredAds || ((currentData && currentData.ads) ? currentData.ads : []);
       if (!rawAds || rawAds.length === 0) {
         grid.innerHTML = `
           <div class="col-span-full py-16 text-center bg-white rounded-2xl border border-slate-200/80 shadow-xs">
@@ -5324,19 +5324,83 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const container = document.getElementById('metaPartnershipsContainer');
       if (!container) return;
 
-      container.innerHTML = `
-        <div class="tt-card p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
-          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-            <div class="flex items-center gap-2">
-              <span class="text-base">🤝</span>
-              <h3 class="text-sm font-extrabold text-slate-900">Creator & Influencer Partnerships</h3>
+      const pData = (currentMetaSuiteData && currentMetaSuiteData.partnerships) ? currentMetaSuiteData.partnerships : null;
+      const creators = (pData && pData.creators) ? pData.creators : [];
+      const totalCollabs = pData ? pData.total_collaborations : creators.length;
+
+      if (!creators || creators.length === 0) {
+        container.innerHTML = `
+          <div class="tt-card p-6 bg-white border border-slate-200 rounded-2xl shadow-xs">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="text-base">🤝</span>
+                <h3 class="text-sm font-extrabold text-slate-900">Creator & Influencer Partnerships</h3>
+              </div>
+              <span class="text-xs font-bold text-slate-500">• 0 active collaborations</span>
             </div>
-            <span class="text-xs font-bold text-slate-500">• 0 active collaborations</span>
+            <div class="py-12 text-center">
+              <div class="w-12 h-12 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-slate-400 mb-3 text-lg">🤝</div>
+              <div class="text-sm font-bold text-slate-800">Chưa phát hiện quảng cáo hợp tác trả phí (Whitelisted)</div>
+              <div class="text-xs text-slate-500 max-w-md mx-auto mt-1">Thương hiệu này hiện chỉ chạy quảng cáo từ trang chính chủ, chưa kích hoạt các chiến dịch Branded Content với Creator.</div>
+            </div>
           </div>
-          <div class="py-12 text-center">
-            <div class="w-12 h-12 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-slate-400 mb-3 text-lg">🤝</div>
-            <div class="text-sm font-bold text-slate-800">Chưa phát hiện quảng cáo hợp tác trả phí (Whitelisted)</div>
-            <div class="text-xs text-slate-500 max-w-md mx-auto mt-1">Thương hiệu này hiện chỉ chạy quảng cáo từ trang chính chủ, chưa kích hoạt các chiến dịch Branded Content với Creator.</div>
+        `;
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="space-y-6">
+          <div class="tt-card p-5 bg-white border border-slate-200 rounded-2xl shadow-xs flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-lg border border-purple-100">🤝</div>
+              <div>
+                <h3 class="text-sm font-extrabold text-slate-900">Creator & Influencer Partnerships</h3>
+                <p class="text-xs text-slate-500">Các mẫu quảng cáo chạy dạng Branded Content / Whitelisting giữa nhãn hàng và Creator</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700 font-extrabold text-xs border border-purple-200">
+              • ${totalCollabs} active collaborations
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            ${creators.map(c => `
+              <div class="tt-card p-5 bg-white border border-slate-200/90 rounded-2xl shadow-xs hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex items-start justify-between">
+                    <div class="flex items-center gap-3">
+                      <img src="${c.avatar || 'https://ui-avatars.com/api/?name=Creator&background=7c3aed&color=fff'}" alt="${c.name}" class="w-11 h-11 rounded-full object-cover border-2 border-purple-200" />
+                      <div>
+                        <div class="text-xs font-extrabold text-slate-900 leading-tight">${c.name}</div>
+                        <div class="text-[11px] font-semibold text-purple-600">${c.handle}</div>
+                        <div class="text-[10px] text-slate-400 mt-0.5">${c.category || 'Creator'}</div>
+                      </div>
+                    </div>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 border border-slate-200">
+                      ${c.active_ads} ads
+                    </span>
+                  </div>
+
+                  ${c.caption ? `
+                    <div class="mt-3.5 p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-[11px] text-slate-600 italic">
+                      "${c.caption}"
+                    </div>
+                  ` : ''}
+
+                  <div class="mt-3.5 flex items-center justify-between text-xs pt-3 border-t border-slate-100">
+                    <span class="text-[11px] text-slate-500 font-semibold">Estimated Reach</span>
+                    <span class="font-extrabold text-slate-900 text-xs">${c.reach || '—'}</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200 w-full justify-center">
+                    <span>✓</span>
+                    <span>${c.tag || 'Paid Partnership'}</span>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
           </div>
         </div>
       `;
@@ -5350,28 +5414,40 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const tableCont = document.getElementById('metaLandingPagesTableContainer');
       if (!tableCont) return;
 
-      const rawAds = (currentData && currentData.ads) || [];
-      const totalAds = rawAds.length || 556;
-      const lpMap = {};
+      const lpSuite = (currentMetaSuiteData && currentMetaSuiteData.landing_pages) ? currentMetaSuiteData.landing_pages : null;
+      let pages = (lpSuite && lpSuite.pages) ? lpSuite.pages : [];
 
-      const bDom = (currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
-      rawAds.forEach(a => {
-        const url = a.landing_url || a.landingUrl || `https://${bDom}`;
-        lpMap[url] = (lpMap[url] || 0) + 1;
-      });
-
-      let lpList = Object.entries(lpMap).sort((a, b) => b[1] - a[1]);
-      if (lpList.length === 0 && rawAds.length > 0) {
-        lpList = [
-          [`https://${bDom}/collections/all`, Math.round(totalAds * 0.50)],
-          [`https://${bDom}/collections/best-sellers`, Math.round(totalAds * 0.30)],
-          [`https://${bDom}/`, Math.round(totalAds * 0.20)]
-        ];
+      if (!pages || pages.length === 0) {
+        const rawAds = (currentData && currentData.ads) || [];
+        const totalAds = rawAds.length || 556;
+        const lpMap = {};
+        const bDom = (currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
+        rawAds.forEach(a => {
+          const url = a.landing_url || a.landingUrl || `https://${bDom}`;
+          lpMap[url] = (lpMap[url] || 0) + 1;
+        });
+        const sorted = Object.entries(lpMap).sort((a, b) => b[1] - a[1]);
+        pages = sorted.map(([url, count]) => {
+          const pct = Math.round((count / Math.max(1, totalAds)) * 100);
+          let fType = 'Homepage';
+          if (url.includes('/collections/')) fType = 'Collection';
+          else if (url.includes('/products/')) fType = 'Product Page';
+          else if (url.includes('/pages/')) fType = 'Advertorial / Bundle';
+          return {
+            url: url,
+            display_name: url.split('/').pop().replace(/-/g, ' ') || 'Homepage',
+            funnel_type: fType,
+            ads_count: count,
+            share_pct: pct,
+            status: pct >= 20 ? 'Scaling' : (pct >= 10 ? 'Active' : 'Testing'),
+            first_seen: 'Recently'
+          };
+        });
       }
 
-      if (badge) badge.textContent = `• ${lpList.length} landing pages`;
+      if (badge) badge.textContent = `• ${pages.length} landing pages`;
 
-      if (lpList.length === 0) {
+      if (pages.length === 0) {
         tableCont.innerHTML = `
           <div class="py-16 text-center text-slate-400">
             <div class="text-sm font-bold text-slate-700">Chưa có dữ liệu Landing Pages</div>
@@ -5385,35 +5461,45 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <table class="w-full text-left border-collapse">
           <thead>
             <tr class="border-b border-slate-100 text-[11px] font-extrabold uppercase text-slate-400">
-              <th class="py-2.5 px-3">Landing Page URL</th>
+              <th class="py-2.5 px-3">Landing Page URL & Funnel</th>
+              <th class="py-2.5 px-3">Status</th>
               <th class="py-2.5 px-3">Active Ads</th>
-              <th class="py-2.5 px-3">Share %</th>
-              <th class="py-2.5 px-3 text-right">Action</th>
+              <th class="py-2.5 px-3">Budget Share %</th>
+              <th class="py-2.5 px-3 text-right">Hành động</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-xs">
-            ${lpList.map(([url, count]) => {
-              const pct = Math.round((count / Math.max(1, totalAds)) * 100);
+            ${pages.map(p => {
+              const statusColor = p.status === 'Scaling' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : (p.status === 'Active' ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-slate-100 text-slate-600 border-slate-200');
+              const funnelColor = p.funnel_type === 'Collection' ? 'bg-indigo-50 text-indigo-700 border-indigo-200' : (p.funnel_type === 'Product Page' ? 'bg-amber-50 text-amber-700 border-amber-200' : 'bg-slate-100 text-slate-700 border-slate-200');
               return `
                 <tr class="hover:bg-slate-50 transition">
                   <td class="py-3 px-3">
-                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-1.5" title="${url}">
-                      <span class="truncate max-w-md">${url}</span>
-                      <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                    </a>
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold border ${funnelColor}">${p.funnel_type || 'Page'}</span>
+                      <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-bold truncate max-w-sm" title="${p.url}">
+                        ${p.display_name || p.url}
+                      </a>
+                    </div>
+                    <div class="text-[10px] text-slate-400 truncate max-w-sm mt-0.5 pl-0.5">${p.url}</div>
                   </td>
-                  <td class="py-3 px-3 font-extrabold text-slate-900">${count} ads</td>
+                  <td class="py-3 px-3">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold border ${statusColor}">
+                      ${p.status || 'Active'}
+                    </span>
+                  </td>
+                  <td class="py-3 px-3 font-extrabold text-slate-900">${p.ads_count} ads</td>
                   <td class="py-3 px-3">
                     <div class="flex items-center gap-2">
                       <div class="w-24 bg-slate-100 rounded-full h-1.5 overflow-hidden">
-                        <div class="bg-blue-600 h-1.5 rounded-full" style="width: ${Math.min(100, pct * 2)}%"></div>
+                        <div class="bg-blue-600 h-1.5 rounded-full" style="width: ${Math.min(100, (p.share_pct || 10) * 2)}%"></div>
                       </div>
-                      <span class="text-slate-600 font-bold">${pct}%</span>
+                      <span class="text-slate-700 font-bold">${p.share_pct}%</span>
                     </div>
                   </td>
                   <td class="py-3 px-3 text-right">
-                    <button type="button" onclick="switchMetaSubTab('library')" class="text-xs font-bold text-slate-700 hover:text-blue-600 cursor-pointer">
-                      Filter Library →
+                    <button type="button" onclick="filterLibraryByLandingPage('${p.url}')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition cursor-pointer">
+                      Lọc Ads →
                     </button>
                   </td>
                 </tr>
@@ -5422,6 +5508,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </tbody>
         </table>
       `;
+    }
+
+    function filterLibraryByLandingPage(lpUrl) {
+      const rawAds = (currentData && currentData.ads) ? currentData.ads : [];
+      metaLibraryCustomFilteredAds = rawAds.filter(a => (a.landing_url === lpUrl || a.landingUrl === lpUrl));
+      metaLibraryCurrentPage = 1;
+      switchMetaSubTab('library');
     }
 
     // ==========================================
@@ -11339,6 +11432,82 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             try:
                 import tiktok_service
                 data = tiktok_service.get_tiktok_brand_data(query, force_refresh=force_refresh)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/meta/suite":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
+            force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
+            try:
+                import meta_ads_agent
+                suite = meta_ads_agent.get_meta_suite(query, domain=domain, force_refresh=force_refresh)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(suite, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/meta/partnerships":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
+            try:
+                import meta_ads_agent
+                data = meta_ads_agent.get_meta_partnerships(query, domain=domain)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/meta/landing-pages":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            query = query_params.get("query", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            if not query:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing query parameter"}).encode("utf-8"))
+                return
+            try:
+                import meta_ads_agent
+                data = meta_ads_agent.get_meta_landing_pages(query, domain=domain)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.send_header("Access-Control-Allow-Origin", "*")

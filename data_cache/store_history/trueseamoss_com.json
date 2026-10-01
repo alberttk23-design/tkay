@@ -30,20 +30,20 @@
     {
       "date": "2026-10-01",
       "timestamp": 1790819897,
-      "active_ads": 52,
+      "active_ads": 27,
       "traffic": "100K+",
-      "products_count": 0
+      "products_count": 50
     }
   ],
   "velocity": {
-    "trend_status": "SCALING_FAST",
-    "status_badge": "🔥 Scaling (36 → 52 ads)",
-    "delta_ads": 16,
-    "growth_pct": 44.4,
+    "trend_status": "COOLING_DOWN",
+    "status_badge": "📉 Cooling (36 → 27 ads)",
+    "delta_ads": -9,
+    "growth_pct": -25.0,
     "prev_ads": 36,
-    "current_ads": 52,
+    "current_ads": 27,
     "baseline_date": "2026-09-17",
     "current_date": "2026-10-01",
-    "ai_rationale": "Chiến dịch đang mở rộng quy mô (Scale): Số active ads tăng +44.4% (từ 36 lên 52 ads trong 14 ngày qua). Thương hiệu vừa bổ sung nhiều biến thể video và ngân sách tập trung vào nhóm winning creatives."
+    "ai_rationale": "Số lượng quảng cáo giảm 9 ads (-25.0%). Thương hiệu vừa tắt các creative cũ hoặc hết chương trình khuyến mãi theo mùa, tái cơ cấu ngân sách dồn vào các góc quay best-seller."
   }
 }
