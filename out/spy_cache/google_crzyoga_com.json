@@ -1,0 +1,1675 @@
+{
+  "brand": "Tsinlo Network Technology Co., Limited",
+  "query": "crzyoga.com",
+  "domain": "crzyoga.com",
+  "found": true,
+  "data_source": "live_rpc",
+  "data_status": "real",
+  "advertiser": {
+    "advertiser_id": "AR15549335367478935553",
+    "advertiser_name": "Tsinlo Network Technology Co., Limited",
+    "country": "US",
+    "ad_count_min": "500",
+    "ad_count_max": "600",
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR15549335367478935553?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "Verified Store",
+    "monthly_visitors": "~ 1.5M / mo",
+    "google_ads_count": "600 ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 70
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 18
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 12
+      }
+    ],
+    "best_sellers": []
+  },
+  "total_analyzed": 40,
+  "total_estimated": 600,
+  "active_ads": 500,
+  "overview_count": "500",
+  "format_mix_total": 600,
+  "format_mix": {
+    "Video": {
+      "count": 12,
+      "pct": 30.0
+    },
+    "Text": {
+      "count": 25,
+      "pct": 62.5
+    },
+    "Image": {
+      "count": 3,
+      "pct": 7.5
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 25,
+      "pct": 62.5
+    },
+    "Other": {
+      "count": 3,
+      "pct": 7.5
+    },
+    "YouTube": {
+      "count": 12,
+      "pct": 30.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 6,
+      "pct": 15.0
+    },
+    "31-90 d": {
+      "count": 9,
+      "pct": 22.5
+    },
+    "91-180 d": {
+      "count": 5,
+      "pct": 12.5
+    },
+    "181-365 d": {
+      "count": 12,
+      "pct": 30.0
+    },
+    "365 d +": {
+      "count": 8,
+      "pct": 20.0
+    }
+  },
+  "country_mix": {
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 43,
+      "pct": 9.7
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "count": 100,
+      "pct": 22.6
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 100,
+      "pct": 22.6
+    },
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 200,
+      "pct": 45.1
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR17804355796750827521",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 894,
+      "date_range": "894d · Apr 19 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Apr 19, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9065379195246126763",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR07555219331932487681",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 834,
+      "date_range": "834d · Jun 19 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jun 19, 2024",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR04045575364213211137",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 629,
+      "date_range": "629d · Jan 09 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jan 09, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9430013226289122478",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15874729794995224577",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 621,
+      "date_range": "621d · Jan 18 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jan 18, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15151664516352731327",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED.",
+      "advertiser_id": "AR07753917747544719361",
+      "advertiser_name": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED",
+      "sitelinks": [
+        {
+          "title": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15817871368663334913",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 573,
+      "date_range": "573d · Mar 06 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 06, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/415341020280406914",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02228479670276325377",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 566,
+      "date_range": "566d · Mar 13 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 13, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17418052278253108767",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08700782999215538177",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 519,
+      "date_range": "519d · Apr 29 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Apr 29, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10143072328205329721",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR06419484534097575937",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 454,
+      "date_range": "454d · Jul 03 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 03, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15077831190330792690",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10133965722775191553",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 345,
+      "date_range": "345d · Oct 21 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Oct 21, 2025",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR14407736221298065409",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 242,
+      "date_range": "242d · Feb 01 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 01, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR09505090838858825729",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 241,
+      "date_range": "241d · Feb 02 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 02, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4462681164440144081",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12059816001601011713",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 239,
+      "date_range": "239d · Feb 03 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 03, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1570956798002978300",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08973210472698347521",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 237,
+      "date_range": "237d · Feb 06 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2838460259550936412",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12207471067362492417",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 236,
+      "date_range": "236d · Feb 06 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10708429781334704771",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR17525288673195589633",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 215,
+      "date_range": "215d · Feb 27 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 27, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR13511632045637369857",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 214,
+      "date_range": "214d · Feb 28 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 28, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10282424790383440514",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED.",
+      "advertiser_id": "AR07753917747544719361",
+      "advertiser_name": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED",
+      "sitelinks": [
+        {
+          "title": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04487580988494315521",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 201,
+      "date_range": "201d · Mar 14 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16225187125566707863",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED.",
+      "advertiser_id": "AR07753917747544719361",
+      "advertiser_name": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED",
+      "sitelinks": [
+        {
+          "title": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05974099268770725889",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 201,
+      "date_range": "201d · Mar 14 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11303957185112070688",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED.",
+      "advertiser_id": "AR07753917747544719361",
+      "advertiser_name": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED",
+      "sitelinks": [
+        {
+          "title": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08767833726538219521",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 200,
+      "date_range": "200d · Mar 14 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9738056274674702900",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR15700699085960904705",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 191,
+      "date_range": "191d · Mar 24 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14105713298742902502",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13881201337074450433",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 146,
+      "date_range": "146d · May 07 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 07, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR07585034367836094465",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 146,
+      "date_range": "146d · May 08 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 08, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16533360629481060741",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14717123881227780097",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 146,
+      "date_range": "146d · May 08 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 08, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2416502693775459403",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04763106988823412737",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 146,
+      "date_range": "146d · May 07 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 07, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12831261726666176674",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10601731710494179329",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 92,
+      "date_range": "92d · Jun 30 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 30, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED.",
+      "advertiser_id": "AR07753917747544719361",
+      "advertiser_name": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED",
+      "sitelinks": [
+        {
+          "title": "GUANGZHOU JIMU NETWORK TECHNOLOGY CO., LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04423058004044152833",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 83,
+      "date_range": "83d · Jul 10 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 10, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13185904865455547385",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03054709598524014593",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 77,
+      "date_range": "77d · Jul 15 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13853905215466966905",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10818317771541053441",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 73,
+      "date_range": "73d · Jul 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5213013139932614836",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15521062869079687169",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 56,
+      "date_range": "56d · Aug 06 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15710202190494323935",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00234791302133186561",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 56,
+      "date_range": "56d · Aug 06 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7855330168242934869",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01792711592639463425",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 55,
+      "date_range": "55d · Aug 06 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4176281018871938839",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02786939759375679489",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 55,
+      "date_range": "55d · Aug 06 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 06, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12737868332247474904",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR08719343751924809729",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 54,
+      "date_range": "54d · Aug 07 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 07, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9128913266973316892",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10546240595590905857",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 44,
+      "date_range": "44d · Aug 17 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3933801783101112276",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13124646043339718657",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 15,
+      "date_range": "15d · Sep 16 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 16, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14983726139581200427",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09177174999251812353",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 15,
+      "date_range": "15d · Sep 15 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13257958466447256774",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16908795527158562817",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 15,
+      "date_range": "15d · Sep 15 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 15, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16969045679752449592",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15384568945851760641",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 15,
+      "date_range": "15d · Sep 15 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 15, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR14080417416504934401",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 14,
+      "date_range": "14d · Sep 16 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 16, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR15261195048201486337",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 13,
+      "date_range": "13d · Sep 17 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 17, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "crzyoga.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tsinlo Network Technology Co., Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tsinlo Network Technology Co., Limited.",
+      "advertiser_id": "AR15549335367478935553",
+      "advertiser_name": "Tsinlo Network Technology Co., Limited",
+      "sitelinks": [
+        {
+          "title": "Tsinlo Network Technology Co., Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    }
+  ],
+  "scanned_at": "2026-10-01T14:01:57.212080"
+}

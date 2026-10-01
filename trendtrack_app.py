@@ -372,7 +372,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         <div class="tt-card p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div class="flex items-center gap-3.5">
             <div class="relative shrink-0">
-              <img id="shopAvatar" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-12 h-12 rounded-2xl object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
+              <img id="shopAvatar" onerror="handleAvatarError(this)" src="https://ui-avatars.com/api/?name=Brand&background=0284c7&color=fff" class="w-12 h-12 rounded-2xl object-cover border border-slate-200 shadow-2xs" alt="Avatar"/>
               <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold">@</div>
             </div>
             <div>
@@ -4112,6 +4112,13 @@ HTML_DASHBOARD = """<!DOCTYPE html>
   </div>
 
   <script>
+    function handleAvatarError(img, fallbackName) {
+      if (!img) return;
+      img.onerror = null;
+      const bName = fallbackName || (typeof currentData !== 'undefined' && currentData?.name) || (document.getElementById('shopName')?.textContent || 'Brand');
+      const cleanName = (bName || 'Brand').replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Brand';
+      img.src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(cleanName) + '&background=0284c7&color=fff';
+    }
     const round = (val, decimals = 2) => {
       if (typeof val !== 'number') val = parseFloat(val) || 0;
       const factor = Math.pow(10, decimals);
@@ -9850,7 +9857,11 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       document.getElementById('shopName').textContent = qTitle;
       document.getElementById('shopDomain').textContent = cleanDomain;
       document.getElementById('shopDomainLink').href = 'https://' + cleanDomain;
-      document.getElementById('shopAvatar').src = data.avatarUrl || ('https://ui-avatars.com/api/?name=' + encodeURIComponent(qTitle) + '&background=0284c7&color=fff');
+      let rawAvatar = data.avatarUrl || data.logo_url || '';
+      if (!rawAvatar || rawAvatar.includes('assets/logo.png')) {
+        rawAvatar = 'https://www.google.com/s2/favicons?domain=https://' + cleanDomain + '&sz=128';
+      }
+      document.getElementById('shopAvatar').src = rawAvatar;
       document.getElementById('shopAge').textContent = data.advertiserAge || 'Verified Store';
       document.getElementById('shopFollowers').textContent = (data.total_active_ads || data.ads?.length || 0) + ' active ads on Meta';
       
@@ -11675,8 +11686,9 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/google-ads":
             query_params = urllib.parse.parse_qs(parsed.query)
-            query = query_params.get("query", [""])[0].strip()
-            if not query:
+            query = query_params.get("query", [""])[0].strip() or query_params.get("brand", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            if not query and not domain:
                 self.send_response(400)
                 self.send_header("Content-Type", "application/json")
                 self.end_headers()
@@ -11685,7 +11697,7 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
             force_refresh = query_params.get("refresh", ["false"])[0].lower() in ["true", "1", "yes"]
             try:
                 from google_scanner import scan_google_ads
-                data = scan_google_ads(query, force_refresh=force_refresh)
+                data = scan_google_ads(query or domain, force_refresh=force_refresh, target_domain=domain)
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.send_header("Access-Control-Allow-Origin", "*")

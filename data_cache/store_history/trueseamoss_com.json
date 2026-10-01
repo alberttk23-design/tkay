@@ -30,20 +30,20 @@
     {
       "date": "2026-10-01",
       "timestamp": 1790819897,
-      "active_ads": 27,
+      "active_ads": 30,
       "traffic": "100K+",
       "products_count": 5
     }
   ],
   "velocity": {
-    "trend_status": "COOLING_DOWN",
-    "status_badge": "📉 Cooling (36 → 27 ads)",
-    "delta_ads": -9,
-    "growth_pct": -25.0,
+    "trend_status": "STABLE",
+    "status_badge": "➡️ Ổn định (30 ads)",
+    "delta_ads": -6,
+    "growth_pct": -16.7,
     "prev_ads": 36,
-    "current_ads": 27,
+    "current_ads": 30,
     "baseline_date": "2026-09-17",
     "current_date": "2026-10-01",
-    "ai_rationale": "Số lượng quảng cáo giảm 9 ads (-25.0%). Thương hiệu vừa tắt các creative cũ hoặc hết chương trình khuyến mãi theo mùa, tái cơ cấu ngân sách dồn vào các góc quay best-seller."
+    "ai_rationale": "Quy mô quảng cáo duy trì ổn định quanh mốc 30 active ads. Chiến dịch đang được tối ưu hóa duy trì lợi nhuận ổn định."
   }
 }

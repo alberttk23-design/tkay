@@ -2,7 +2,7 @@
   "query": "Ridge Wallet",
   "name": "Ridge",
   "domain": "ridge.com",
-  "avatarUrl": "https://ridge.com/cdn/shop/t/2468/assets/logo.png?v=437642",
+  "avatarUrl": "https://ridge.com/cdn/shop/files/ridge-favicon.svg?crop=center&height=180&v=1779278981&width=180",
   "reach_toggle": null,
   "channels": {
     "meta": {
@@ -3401,8 +3401,8 @@
     "canonical_domain": "ridge.com"
   },
   "_sanitized": true,
-  "logo_url": "https://ridge.com/cdn/shop/t/2468/assets/logo.png?v=437642",
-  "brand_logo": "https://ridge.com/cdn/shop/t/2468/assets/logo.png?v=437642",
+  "logo_url": "https://ridge.com/cdn/shop/files/ridge-favicon.svg?crop=center&height=180&v=1779278981&width=180",
+  "brand_logo": "https://ridge.com/cdn/shop/files/ridge-favicon.svg?crop=center&height=180&v=1779278981&width=180",
   "brand_name": "Ridge",
   "verified_domain": "ridge.com",
   "tiktok_slug": "ridge",
@@ -3410,7 +3410,7 @@
   "tiktok_hashtag": "#ridge",
   "ground_truth": {
     "brand_name": "Ridge",
-    "logo_url": "https://ridge.com/cdn/shop/t/2468/assets/logo.png?v=437642",
+    "logo_url": "https://ridge.com/cdn/shop/files/ridge-favicon.svg?crop=center&height=180&v=1779278981&width=180",
     "tiktok_slug": "ridge",
     "canonical_domain": "ridge.com",
     "facebook_handle": null,

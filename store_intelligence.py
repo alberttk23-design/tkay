@@ -1242,7 +1242,7 @@ def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
 
     # Default fallback values (used if HTTP fails)
     fallback_title = tiktok_slug.title() if tiktok_slug else raw_domain
-    fallback_logo = f"https://www.google.com/s2/favicons?domain={raw_domain}&sz=128"
+    fallback_logo = f"https://www.google.com/s2/favicons?domain=https://{canonical_domain}&sz=128"
 
     logo_url = None
     brand_name = None
@@ -1320,7 +1320,7 @@ def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
             brand_name = fallback_title
 
         # ── 3. Logo: JSON-LD Organization logo (highest quality) ─────────────
-        if jsonld_logo:
+        if jsonld_logo and "assets/logo.png" not in jsonld_logo:
             logo_url = jsonld_logo
 
         # ── 4. Logo: apple-touch-icon (prefer 512px) ─────────────────────────
@@ -1395,7 +1395,7 @@ def extract_website_ground_truth(domain: str) -> Dict[str, Any]:
     except Exception as e:
         print(f"⚠️ [GROUND TRUTH] Failed to fetch {raw_domain}: {e}")
 
-    if not logo_url:
+    if not logo_url or "assets/logo.png" in logo_url:
         logo_url = fallback_logo
 
     final_tt_slug = tiktok_handle or tiktok_slug or "brand"

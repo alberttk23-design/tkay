@@ -1,0 +1,1641 @@
+{
+  "brand": "THE RIDGE WALLET LLC",
+  "query": "ridge.com",
+  "domain": "ridge.com",
+  "found": true,
+  "data_source": "live_rpc",
+  "data_status": "real",
+  "advertiser": {
+    "advertiser_id": "AR14056452383756517377",
+    "advertiser_name": "THE RIDGE WALLET LLC",
+    "country": "US",
+    "ad_count_min": "5000",
+    "ad_count_max": "6000",
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR14056452383756517377?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "Verified Store",
+    "monthly_visitors": "~ 1.5M / mo",
+    "google_ads_count": "6.0K ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 70
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 18
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 12
+      }
+    ],
+    "best_sellers": []
+  },
+  "total_analyzed": 40,
+  "total_estimated": 6000,
+  "active_ads": 5000,
+  "overview_count": "5.0K",
+  "format_mix_total": 6000,
+  "format_mix": {
+    "Video": {
+      "count": 11,
+      "pct": 27.5
+    },
+    "Text": {
+      "count": 23,
+      "pct": 57.5
+    },
+    "Image": {
+      "count": 6,
+      "pct": 15.0
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 23,
+      "pct": 57.5
+    },
+    "Other": {
+      "count": 6,
+      "pct": 15.0
+    },
+    "YouTube": {
+      "count": 11,
+      "pct": 27.5
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 4,
+      "pct": 10.0
+    },
+    "31-90 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "91-180 d": {
+      "count": 4,
+      "pct": 10.0
+    },
+    "181-365 d": {
+      "count": 5,
+      "pct": 12.5
+    },
+    "365 d +": {
+      "count": 27,
+      "pct": 67.5
+    }
+  },
+  "country_mix": {
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 1000,
+      "pct": 25.6
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "count": 1000,
+      "pct": 25.6
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 1000,
+      "pct": 25.6
+    },
+    "AU": {
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "count": 900,
+      "pct": 23.1
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR17513769493598306305",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1483,
+      "date_range": "1483d · Sep 08 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Sep 08, 2022",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16007138266768909302",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05223978411571019777",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1483,
+      "date_range": "1483d · Sep 08 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Sep 08, 2022",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16982252344232116225",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1203,
+      "date_range": "1203d · Jun 16 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jun 16, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16490574506074519649",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12544198728161951745",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1121,
+      "date_range": "1121d · Sep 06 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Sep 06, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4018470827398818172",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14547445004856459265",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1083,
+      "date_range": "1083d · Oct 13 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Oct 13, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1541546097113969660",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00804855877470257153",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1065,
+      "date_range": "1065d · Nov 01 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Nov 01, 2023",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12775986636974456833",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 1063,
+      "date_range": "1063d · Nov 03 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Nov 03, 2023",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13968736575907954689",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1055,
+      "date_range": "1055d · Nov 11 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Nov 11, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/11310581637326430374",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08203251367716847617",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1048,
+      "date_range": "1048d · Nov 18 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Nov 18, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12122174334240661458",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16538654721603272705",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 897,
+      "date_range": "897d · Apr 17 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Apr 17, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14681867896714938462",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14746094225913282561",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 889,
+      "date_range": "889d · Apr 24 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Apr 24, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/18214902744318629076",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07329318912749731841",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 854,
+      "date_range": "854d · May 30 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "May 30, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14113596302502327981",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04499668065847345153",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 817,
+      "date_range": "817d · Jul 05 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Jul 05, 2024",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16657237409184762450",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11781079195390574593",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 579,
+      "date_range": "579d · Feb 28 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Feb 28, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9670064716615313281",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17277925228692897793",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 552,
+      "date_range": "552d · Mar 27 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 27, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/190172070595376036",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05907673175721771009",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 552,
+      "date_range": "552d · Mar 27 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 27, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8089614468260052416",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06289850051598483457",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 549,
+      "date_range": "549d · Mar 30 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "Mar 30, 2025",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11618156654763180033",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/846019286887505108",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00775745705829466113",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15717377403429655265",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04659499295173509121",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10049498739716114351",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04302021401826557953",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16361752373500376957",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17202120464667770881",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6150231427833433655",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01190039556871684097",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13005260558808804057",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12174023279400452097",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2334518438592594502",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18315072797459611649",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 446,
+      "date_range": "446d · Jul 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/336082159330585101",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13400124317992222721",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 407,
+      "date_range": "407d · Aug 19 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Aug 19, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3223445292872541363",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09929907883762253825",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 385,
+      "date_range": "385d · Sep 11 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 11, 2025",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR16928150573939687425",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 225,
+      "date_range": "225d · Feb 17 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 17, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05531815356378644481",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 225,
+      "date_range": "225d · Feb 18 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7167740982158201167",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": [
+        {
+          "title": "THE RIDGE WALLET LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00674096568806146049",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 225,
+      "date_range": "225d · Feb 17 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 17, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR07326908826211319809",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 224,
+      "date_range": "224d · Feb 19 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 19, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13954698810308427777",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 191,
+      "date_range": "191d · Mar 24 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 24, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR04244733229656965121",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 173,
+      "date_range": "173d · Apr 11 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 11, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR05313105588622721025",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 168,
+      "date_range": "168d · Apr 16 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Apr 16, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR13052236639940640769",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 141,
+      "date_range": "141d · May 13 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 13, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR01183689215796314113",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 131,
+      "date_range": "131d · May 23 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 23, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR14331069680674930689",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 15,
+      "date_range": "15d · Sep 16 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 16, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR00462155566429503489",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 12,
+      "date_range": "12d · Sep 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 19, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR04330228676852449281",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 12,
+      "date_range": "12d · Sep 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 19, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    },
+    {
+      "creative_id": "CR13448839245812727809",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 12,
+      "date_range": "12d · Sep 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 19, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THE RIDGE WALLET LLC • Official YouTube Feature",
+      "snippet": "Discover authentic offerings and verified updates directly from THE RIDGE WALLET LLC.",
+      "advertiser_id": "AR14056452383756517377",
+      "advertiser_name": "THE RIDGE WALLET LLC",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": "0:30"
+    }
+  ],
+  "scanned_at": "2026-10-01T14:01:34.050221"
+}

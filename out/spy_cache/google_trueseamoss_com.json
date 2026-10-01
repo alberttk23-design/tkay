@@ -1,0 +1,1893 @@
+{
+  "brand": "DIVA FAM, Inc.",
+  "query": "trueseamoss.com",
+  "domain": "trueseamoss.com",
+  "found": true,
+  "data_source": "live_rpc",
+  "data_status": "real",
+  "advertiser": {
+    "advertiser_id": "AR13513705355200167937",
+    "advertiser_name": "DIVA FAM, Inc.",
+    "country": "US",
+    "ad_count_min": "300",
+    "ad_count_max": "400",
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR13513705355200167937?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "Verified Store",
+    "monthly_visitors": "~ 1.5M / mo",
+    "google_ads_count": "400 ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 70
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 18
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 12
+      }
+    ],
+    "best_sellers": []
+  },
+  "total_analyzed": 40,
+  "total_estimated": 400,
+  "active_ads": 300,
+  "overview_count": "300",
+  "format_mix_total": 400,
+  "format_mix": {
+    "Text": {
+      "count": 39,
+      "pct": 97.5
+    },
+    "Image": {
+      "count": 1,
+      "pct": 2.5
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 39,
+      "pct": 97.5
+    },
+    "Other": {
+      "count": 1,
+      "pct": 2.5
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 10,
+      "pct": 25.0
+    },
+    "31-90 d": {
+      "count": 10,
+      "pct": 25.0
+    },
+    "91-180 d": {
+      "count": 4,
+      "pct": 10.0
+    },
+    "181-365 d": {
+      "count": 14,
+      "pct": 35.0
+    },
+    "365 d +": {
+      "count": 2,
+      "pct": 5.0
+    }
+  },
+  "country_mix": {
+    "US": {
+      "name": "United States",
+      "flag": "🇺🇸",
+      "count": 100,
+      "pct": 99.0
+    },
+    "CA": {
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "count": 1,
+      "pct": 1.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR14870469185950973953",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 1248,
+      "date_range": "1248d · May 01 → now",
+      "reach_tag": "125K-150K",
+      "first_shown": "May 01, 2023",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6514394988399349475",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "DIVA FAM, Inc.™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from DIVA FAM, Inc..",
+      "advertiser_id": "AR13513705355200167937",
+      "advertiser_name": "DIVA FAM, Inc.",
+      "sitelinks": [
+        {
+          "title": "DIVA FAM, Inc. Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05124975000171839489",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 386,
+      "date_range": "386d · Sep 08 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Sep 08, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8791767989448845617",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Nawazish Ali™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Nawazish Ali.",
+      "advertiser_id": "AR10642903069425139713",
+      "advertiser_name": "Nawazish Ali",
+      "sitelinks": [
+        {
+          "title": "Nawazish Ali Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06028716795915927553",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 292,
+      "date_range": "292d · Dec 12 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 12, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6951463169687799252",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Haq Nawaz™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Haq Nawaz.",
+      "advertiser_id": "AR06579267487991332865",
+      "advertiser_name": "Haq Nawaz",
+      "sitelinks": [
+        {
+          "title": "Haq Nawaz Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16371139357697900545",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 280,
+      "date_range": "280d · Dec 24 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 24, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13432546675870617008",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Vu Thi Van Ha™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Vu Thi Van Ha.",
+      "advertiser_id": "AR02405368293499076609",
+      "advertiser_name": "Vu Thi Van Ha",
+      "sitelinks": [
+        {
+          "title": "Vu Thi Van Ha Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11020151066602766337",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 278,
+      "date_range": "278d · Dec 26 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Dec 26, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15292271472624074745",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Vu Thi Van Ha™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Vu Thi Van Ha.",
+      "advertiser_id": "AR02405368293499076609",
+      "advertiser_name": "Vu Thi Van Ha",
+      "sitelinks": [
+        {
+          "title": "Vu Thi Van Ha Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18375172747278942209",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 239,
+      "date_range": "239d · Feb 04 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 04, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/3104290897509893415",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Phong Y. Khang™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Phong Y. Khang.",
+      "advertiser_id": "AR15838217882874937345",
+      "advertiser_name": "Phong Y. Khang",
+      "sitelinks": [
+        {
+          "title": "Phong Y. Khang Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR05265753745983012865",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 216,
+      "date_range": "216d · Feb 26 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 26, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9746324802778534485",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Haq Nawaz™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Haq Nawaz.",
+      "advertiser_id": "AR06579267487991332865",
+      "advertiser_name": "Haq Nawaz",
+      "sitelinks": [
+        {
+          "title": "Haq Nawaz Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17619173703348649985",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 212,
+      "date_range": "212d · Mar 02 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Mar 02, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2434084705345476592",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Nawazish Ali™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Nawazish Ali.",
+      "advertiser_id": "AR10642903069425139713",
+      "advertiser_name": "Nawazish Ali",
+      "sitelinks": [
+        {
+          "title": "Nawazish Ali Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13256407290564575233",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 197,
+      "date_range": "197d · Mar 16 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 16, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4370858348099430503",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "ĐẶNG QUANG TRUNG™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from ĐẶNG QUANG TRUNG.",
+      "advertiser_id": "AR08620455119231647745",
+      "advertiser_name": "ĐẶNG QUANG TRUNG",
+      "sitelinks": [
+        {
+          "title": "ĐẶNG QUANG TRUNG Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06605090781290037249",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 195,
+      "date_range": "195d · Mar 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8022993099910839902",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13111732382350704641",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 195,
+      "date_range": "195d · Mar 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10264095751336413561",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03255061713984159745",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 195,
+      "date_range": "195d · Mar 18 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7408600796655125373",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13523915583384453121",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 194,
+      "date_range": "194d · Mar 20 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 20, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17153021810061667774",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12253593999599730689",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 194,
+      "date_range": "194d · Mar 20 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 20, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13247653617890853233",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03329342726691880961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 194,
+      "date_range": "194d · Mar 20 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 20, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5555221488362066886",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07563352548292165633",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 194,
+      "date_range": "194d · Mar 19 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Mar 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4159853846207653664",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ping Jin™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Ping Jin.",
+      "advertiser_id": "AR16374767617220542465",
+      "advertiser_name": "Ping Jin",
+      "sitelinks": [
+        {
+          "title": "Ping Jin Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR08216237330185322497",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 124,
+      "date_range": "124d · May 28 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 28, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/8614342737236545517",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "MÒNG THỊ LINH™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from MÒNG THỊ LINH.",
+      "advertiser_id": "AR13039795116116541441",
+      "advertiser_name": "MÒNG THỊ LINH",
+      "sitelinks": [
+        {
+          "title": "MÒNG THỊ LINH Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06504567243525849089",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 122,
+      "date_range": "122d · May 30 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "May 30, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12702734009251450586",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN ZEN LAND™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN ZEN LAND.",
+      "advertiser_id": "AR00193805563098824705",
+      "advertiser_name": "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN ZEN LAND",
+      "sitelinks": [
+        {
+          "title": "CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN ZEN LAND Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11118391124874493953",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 103,
+      "date_range": "103d · Jun 18 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 18, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10797550894939012254",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Absolute Link Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Absolute Link Limited.",
+      "advertiser_id": "AR06785990551779934209",
+      "advertiser_name": "Absolute Link Limited",
+      "sitelinks": [
+        {
+          "title": "Absolute Link Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17109936061175300097",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 100,
+      "date_range": "100d · Jun 22 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jun 22, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14653741395122388119",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG NHIÊN THỊNH™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG NHIÊN THỊNH.",
+      "advertiser_id": "AR01942990823289257985",
+      "advertiser_name": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG NHIÊN THỊNH",
+      "sitelinks": [
+        {
+          "title": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG NHIÊN THỊNH Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09874082749252370433",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 88,
+      "date_range": "88d · Jul 03 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 03, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17364668768654046634",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "TRẦN AN KHANG™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from TRẦN AN KHANG.",
+      "advertiser_id": "AR17687846656998899713",
+      "advertiser_name": "TRẦN AN KHANG",
+      "sitelinks": [
+        {
+          "title": "TRẦN AN KHANG Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17954770009632800769",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 78,
+      "date_range": "78d · Jul 14 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13631096849797096197",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Usman Subhani™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Usman Subhani.",
+      "advertiser_id": "AR10416563738944471041",
+      "advertiser_name": "Usman Subhani",
+      "sitelinks": [
+        {
+          "title": "Usman Subhani Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10298796328393637889",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 70,
+      "date_range": "70d · Jul 22 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 22, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1982724188959549182",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "KICKBOXING USA, LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from KICKBOXING USA, LLC.",
+      "advertiser_id": "AR16266326968671141889",
+      "advertiser_name": "KICKBOXING USA, LLC",
+      "sitelinks": [
+        {
+          "title": "KICKBOXING USA, LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR02026482608111616001",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 68,
+      "date_range": "68d · Jul 24 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 24, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13099681045942213631",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Công ty cổ phần bất động sản Lima Việt Nam™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Công ty cổ phần bất động sản Lima Việt Nam.",
+      "advertiser_id": "AR15357413645755613185",
+      "advertiser_name": "Công ty cổ phần bất động sản Lima Việt Nam",
+      "sitelinks": [
+        {
+          "title": "Công ty cổ phần bất động sản Lima Việt Nam Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00075458048495190017",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 61,
+      "date_range": "61d · Aug 01 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 01, 2026",
+      "last_shown": "now",
+      "image_url": "",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "DIVA FAM, Inc. Official Promotion",
+      "snippet": "Discover authentic offerings and verified updates directly from DIVA FAM, Inc..",
+      "advertiser_id": "AR13513705355200167937",
+      "advertiser_name": "DIVA FAM, Inc.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR18310015069741645825",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 57,
+      "date_range": "57d · Aug 03 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 03, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6445019301056587965",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Nguyễn Duy Dương™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Nguyễn Duy Dương.",
+      "advertiser_id": "AR02288967232304185345",
+      "advertiser_name": "Nguyễn Duy Dương",
+      "sitelinks": [
+        {
+          "title": "Nguyễn Duy Dương Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03913456595320700929",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 49,
+      "date_range": "49d · Aug 11 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 11, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9141666829647717628",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "SAS UNDERGROUND LLC™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from SAS UNDERGROUND LLC.",
+      "advertiser_id": "AR06905444510088560641",
+      "advertiser_name": "SAS UNDERGROUND LLC",
+      "sitelinks": [
+        {
+          "title": "SAS UNDERGROUND LLC Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07141461003182538753",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 47,
+      "date_range": "47d · Aug 14 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1772890365626548251",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "TÔ NGỌC HUY™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from TÔ NGỌC HUY.",
+      "advertiser_id": "AR12135757800852684801",
+      "advertiser_name": "TÔ NGỌC HUY",
+      "sitelinks": [
+        {
+          "title": "TÔ NGỌC HUY Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03789494802546950145",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 46,
+      "date_range": "46d · Aug 14 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 14, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9756573221873721641",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "VNSOLUTION AI LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from VNSOLUTION AI LIMITED.",
+      "advertiser_id": "AR03443039418779172865",
+      "advertiser_name": "VNSOLUTION AI LIMITED",
+      "sitelinks": [
+        {
+          "title": "VNSOLUTION AI LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR09486495554612494337",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 39,
+      "date_range": "39d · Aug 21 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4582821739727242116",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "OCEAN SUNRISE LIMITED™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from OCEAN SUNRISE LIMITED.",
+      "advertiser_id": "AR03858991427845357569",
+      "advertiser_name": "OCEAN SUNRISE LIMITED",
+      "sitelinks": [
+        {
+          "title": "OCEAN SUNRISE LIMITED Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04035407724924633089",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 30,
+      "date_range": "30d · Aug 30 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 30, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/9515841711848785140",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION.",
+      "advertiser_id": "AR09193416057304383489",
+      "advertiser_name": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION",
+      "sitelinks": [
+        {
+          "title": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01238686649978716161",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 30,
+      "date_range": "30d · Aug 30 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Aug 30, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/858247527036103944",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION.",
+      "advertiser_id": "AR09193416057304383489",
+      "advertiser_name": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION",
+      "sitelinks": [
+        {
+          "title": "THA AFFORDABLE HOUSING DEVELOPMENT CORPORATION Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16975401742545977345",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 27,
+      "date_range": "27d · Sep 03 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 03, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/6528434924500761443",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "NGUYỄN MINH NHẬT™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from NGUYỄN MINH NHẬT.",
+      "advertiser_id": "AR00543303544648761345",
+      "advertiser_name": "NGUYỄN MINH NHẬT",
+      "sitelinks": [
+        {
+          "title": "NGUYỄN MINH NHẬT Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04892201061357453313",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 22,
+      "date_range": "22d · Sep 09 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 09, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2689512311184450383",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Bensimon Byrne Inc™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Bensimon Byrne Inc.",
+      "advertiser_id": "AR13408492623681814529",
+      "advertiser_name": "Bensimon Byrne Inc",
+      "sitelinks": [
+        {
+          "title": "Bensimon Byrne Inc Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR03324276589427949569",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 22,
+      "date_range": "22d · Sep 07 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 07, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13693385507414885282",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "CK OFFICE DESIGNS INC.™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from CK OFFICE DESIGNS INC..",
+      "advertiser_id": "AR02588629643166744577",
+      "advertiser_name": "CK OFFICE DESIGNS INC.",
+      "sitelinks": [
+        {
+          "title": "CK OFFICE DESIGNS INC. Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15276113221967151105",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 19,
+      "date_range": "19d · Sep 11 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 11, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17158753276153753843",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "VŨ ĐỨC LƯỢNG™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from VŨ ĐỨC LƯỢNG.",
+      "advertiser_id": "AR16868958640336273409",
+      "advertiser_name": "VŨ ĐỨC LƯỢNG",
+      "sitelinks": [
+        {
+          "title": "VŨ ĐỨC LƯỢNG Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR10079780587167547393",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 13,
+      "date_range": "13d · Sep 17 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5113966957397317381",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tô Văn Vụ™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tô Văn Vụ.",
+      "advertiser_id": "AR15667989139020578817",
+      "advertiser_name": "Tô Văn Vụ",
+      "sitelinks": [
+        {
+          "title": "Tô Văn Vụ Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR07214464280299569153",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 13,
+      "date_range": "13d · Sep 17 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 17, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13941191355261681650",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Tô Văn Vụ™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Tô Văn Vụ.",
+      "advertiser_id": "AR15667989139020578817",
+      "advertiser_name": "Tô Văn Vụ",
+      "sitelinks": [
+        {
+          "title": "Tô Văn Vụ Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04357880294779387905",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 9,
+      "date_range": "9d · Sep 21 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2796914656419340544",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "South Wind Tech Limited™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from South Wind Tech Limited.",
+      "advertiser_id": "AR12784598080762675201",
+      "advertiser_name": "South Wind Tech Limited",
+      "sitelinks": [
+        {
+          "title": "South Wind Tech Limited Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR13103616783946874881",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 9,
+      "date_range": "9d · Sep 21 → now",
+      "reach_tag": "Global ads",
+      "first_shown": "Sep 21, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2529963257818123357",
+      "domain": "trueseamoss.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Bensimon Byrne Inc™ – Official Store",
+      "snippet": "Discover authentic offerings and verified updates directly from Bensimon Byrne Inc.",
+      "advertiser_id": "AR13408492623681814529",
+      "advertiser_name": "Bensimon Byrne Inc",
+      "sitelinks": [
+        {
+          "title": "Bensimon Byrne Inc Bestsellers",
+          "snippet": "Shop top customer favorites"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Exclusive seasonal online deals"
+        },
+        {
+          "title": "New Arrivals",
+          "snippet": "Explore latest official releases"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "Verified ratings and satisfaction"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    }
+  ],
+  "scanned_at": "2026-10-01T14:01:45.263339"
+}

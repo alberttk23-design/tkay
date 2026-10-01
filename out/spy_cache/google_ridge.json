@@ -1,0 +1,647 @@
+{
+  "brand": "Ridge",
+  "found": true,
+  "data_source": "live_rpc",
+  "advertiser": {
+    "advertiser_id": "AR12833707853516636161",
+    "advertiser_name": "RIDGEWEL",
+    "country": "FR",
+    "ad_count_min": "19",
+    "ad_count_max": "19",
+    "verified_since": "Verified Google Advertiser",
+    "transparency_url": "https://adstransparency.google.com/advertiser/AR12833707853516636161?region=anywhere"
+  },
+  "shop_details": {
+    "creation_date": "2020",
+    "monthly_visitors": "~ 250K / mo",
+    "google_ads_count": "22 ads",
+    "visitor_countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "pct": 65
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "pct": 20
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "pct": 15
+      }
+    ],
+    "best_sellers": []
+  },
+  "total_analyzed": 19,
+  "total_estimated": 22,
+  "active_ads": 5,
+  "format_mix_total": 16,
+  "format_mix": {
+    "Video": {
+      "count": 3,
+      "pct": 15.8
+    },
+    "Text": {
+      "count": 5,
+      "pct": 26.3
+    },
+    "Image": {
+      "count": 11,
+      "pct": 57.9
+    }
+  },
+  "platform_mix": {
+    "Search": {
+      "count": 5,
+      "pct": 26.3
+    },
+    "Other": {
+      "count": 9,
+      "pct": 47.4
+    },
+    "YouTube": {
+      "count": 3,
+      "pct": 15.8
+    },
+    "Shopping": {
+      "count": 2,
+      "pct": 10.5
+    },
+    "Unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "longevity_mix": {
+    "0-30 d": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "31-90 d": {
+      "count": 2,
+      "pct": 10.5
+    },
+    "91-180 d": {
+      "count": 1,
+      "pct": 5.3
+    },
+    "181-365 d": {
+      "count": 7,
+      "pct": 36.8
+    },
+    "365 d +": {
+      "count": 9,
+      "pct": 47.4
+    }
+  },
+  "country_mix": {
+    "FR": {
+      "name": "France",
+      "flag": "🇫🇷",
+      "count": 19,
+      "pct": 100.0
+    }
+  },
+  "targeting_mix": {
+    "None": 89.0,
+    "Retargeting": 7.0,
+    "Both": 4.0,
+    "User interest": 0.0
+  },
+  "ad_cards": [
+    {
+      "creative_id": "CR08276661378236809217",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 441,
+      "date_range": "441d · Jul 16, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/5746786495167151443",
+      "domain": "ca.ridge.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Shop Ridge – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from Ridge. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR01472887823605432321",
+      "format": "Shopping",
+      "platform": "Shopping",
+      "active": true,
+      "days_running": 441,
+      "date_range": "441d · Jul 16, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7326616550255672776",
+      "domain": "ca.ridge.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Customer Favorites – Shop Ridge Deals",
+      "snippet": "Limited time offers on selected Ridge essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": null,
+      "price": "$49.99",
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11701147517549805569",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 441,
+      "date_range": "441d · Jul 15, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 15, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15524775929402115038",
+      "domain": "uk.ridge.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Ridge™ – Official Store",
+      "snippet": "Explore the official Ridge collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop Ridge Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16755391364203544577",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 440,
+      "date_range": "440d · Jul 17, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/196709030494745080",
+      "domain": "nz.ridge.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Discover Ridge – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied Ridge customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop Ridge Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12263644197302566913",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 440,
+      "date_range": "440d · Jul 16, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 16, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/14731790960126344264",
+      "domain": "nz.ridge.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Shop Ridge – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from Ridge. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR06122951195888713729",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 439,
+      "date_range": "439d · Jul 17, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/15916331676956022497",
+      "domain": "www.ridge.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Official Ridge – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust Ridge. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11984379814489358337",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 433,
+      "date_range": "433d · Jul 23, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 23, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/17563877200848113167",
+      "domain": "us.ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Ridge Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic Ridge difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR16954037750581952513",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 427,
+      "date_range": "427d · Jul 24, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 24, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4661694238890884072",
+      "domain": "ca.ridge.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Ridge – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official Ridge store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR05623151787297996801",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 420,
+      "date_range": "420d · Jul 28, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 28, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4283143493474326537",
+      "domain": "us.ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Discover Ridge – Premium Quality Guaranteed",
+      "snippet": "Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied Ridge customers worldwide.",
+      "sitelinks": [
+        {
+          "title": "Shop Ridge Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR11100236719021096961",
+      "format": "Text",
+      "platform": "Search",
+      "active": true,
+      "days_running": 310,
+      "date_range": "310d · Nov 24, 2025 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Nov 24, 2025",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/4283474518623504703",
+      "domain": "www.ridge.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Ridge™ – Official Store",
+      "snippet": "Explore the official Ridge collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop Ridge Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12717741056465043457",
+      "format": "Text",
+      "platform": "Search",
+      "active": false,
+      "days_running": 270,
+      "date_range": "270d · Jul 18, 2025 → Apr 14, 2026",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 18, 2025",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/1105619484011576302",
+      "domain": "ca.ridge.com",
+      "country": "CA",
+      "country_flag": "🇨🇦",
+      "headline": "Ridge™ – Official Store",
+      "snippet": "Explore the official Ridge collection. Shop direct for authentic products, exclusive online offers, and fast worldwide shipping.",
+      "sitelinks": [
+        {
+          "title": "Shop Ridge Official",
+          "snippet": "Authentic items and new arrivals"
+        },
+        {
+          "title": "Best Sellers",
+          "snippet": "Top rated favorites by verified customers"
+        },
+        {
+          "title": "Special Offers",
+          "snippet": "Limited time promotions and discounts"
+        },
+        {
+          "title": "Customer Reviews",
+          "snippet": "See why thousands trust our quality"
+        }
+      ],
+      "reviews": {
+        "rating": 4.8,
+        "stars": "★★★★★",
+        "count": "1,420"
+      },
+      "return_policy": "30-day return policy",
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR04874049747880509441",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": false,
+      "days_running": 270,
+      "date_range": "270d · Jul 18, 2025 → Apr 14, 2026",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jul 18, 2025",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2874028139677606109",
+      "domain": "us.ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Shop Ridge – Top Rated Bestsellers",
+      "snippet": "Shop top-rated favorites and new arrivals from Ridge. 100% satisfaction guarantee with easy returns.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR10546119168275513345",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 253,
+      "date_range": "253d · Jan 19, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/16114371105385410816",
+      "domain": "us.ridge.com",
+      "country": "US",
+      "country_flag": "🇺🇸",
+      "headline": "Official Ridge – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust Ridge. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR17864776151130439681",
+      "format": "Image",
+      "platform": "Other",
+      "active": true,
+      "days_running": 232,
+      "date_range": "232d · Feb 09, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 09, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2781303469948153643",
+      "domain": "uk.ridge.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Ridge – On Sale Now – Limited Time Offers",
+      "snippet": "Direct from the official Ridge store. Unlock special bundles, seasonal promotions, and free express delivery.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR00238965391869607937",
+      "format": "Video",
+      "platform": "YouTube",
+      "active": true,
+      "days_running": 232,
+      "date_range": "232d · Feb 09, 2026 → now",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 09, 2026",
+      "last_shown": "now",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/10483715571417811676",
+      "domain": "www.ridge.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "New Arrivals From Ridge – Shop Online Today",
+      "snippet": "Shop the official Ridge catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": "0:15"
+    },
+    {
+      "creative_id": "CR01445780489704046593",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 216,
+      "date_range": "216d · Feb 10, 2026 → Sep 14, 2026",
+      "reach_tag": "50K-100K",
+      "first_shown": "Feb 10, 2026",
+      "last_shown": "Sep 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/12053013949798707141",
+      "domain": "uk.ridge.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "New Arrivals From Ridge – Shop Online Today",
+      "snippet": "Shop the official Ridge catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR15100955599413706753",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 117,
+      "date_range": "117d · Jul 17, 2025 → Nov 12, 2025",
+      "reach_tag": "Global ads",
+      "first_shown": "Jul 17, 2025",
+      "last_shown": "Nov 12, 2025",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/7212746256820774550",
+      "domain": "uk.ridge.com",
+      "country": "GB",
+      "country_flag": "🇬🇧",
+      "headline": "Official Ridge – Fast Worldwide Shipping",
+      "snippet": "Discover why thousands of customers trust Ridge. Premium quality, verified standards, and exceptional customer care.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR12969119539475251201",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 84,
+      "date_range": "84d · Jan 19, 2026 → Apr 14, 2026",
+      "reach_tag": "Global ads",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/13909401511124009407",
+      "domain": "nz.ridge.com",
+      "country": "NZ",
+      "country_flag": "🇳🇿",
+      "headline": "Customer Favorites – Shop Ridge Deals",
+      "snippet": "Limited time offers on selected Ridge essentials. Save big when you shop direct today.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    },
+    {
+      "creative_id": "CR14131048243336839169",
+      "format": "Image",
+      "platform": "Other",
+      "active": false,
+      "days_running": 84,
+      "date_range": "84d · Jan 19, 2026 → Apr 14, 2026",
+      "reach_tag": "Global ads",
+      "first_shown": "Jan 19, 2026",
+      "last_shown": "Apr 14, 2026",
+      "image_url": "https://tpc.googlesyndication.com/archive/simgad/2962920039956842729",
+      "domain": "www.ridge.com",
+      "country": "AU",
+      "country_flag": "🇦🇺",
+      "headline": "Ridge Official Collection – Up to 40% Off",
+      "snippet": "Experience the authentic Ridge difference. Certified high-grade standards and hassle-free 30-day money-back guarantee.",
+      "sitelinks": null,
+      "reviews": null,
+      "return_policy": null,
+      "price": null,
+      "video_duration": null
+    }
+  ],
+  "scanned_at": "2026-10-01T14:01:30.667228"
+}
