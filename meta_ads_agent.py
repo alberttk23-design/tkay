@@ -875,6 +875,13 @@ class MetaAdsAgent:
             raw_scanned=raw_scanned
         )
 
+        # 5b. Pass through Data Quality Gatekeeper
+        try:
+            import data_sanitizer_agent as _dsa
+            suite = _dsa.sanitize_meta_suite(suite, final_domain, resolved_brand_name or clean_b)
+        except Exception as _e_san:
+            print(f"⚠️ [META AGENT SANITIZER] {_e_san}")
+
         # 6. Persist Unified Suite Cache
         try:
             with open(suite_cache_file, "w", encoding="utf-8") as f:

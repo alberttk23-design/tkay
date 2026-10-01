@@ -1488,7 +1488,14 @@ def scan_brand_ads(query: str, max_ads: int = 30, official_domain: str = None) -
         result["pixels"] = []
         result["similar_shops"] = []
 
-    print(f"✅ [AD SCANNER] Hoàn thành: {total_results_str} ({len(parsed_ads)} thẻ trích xuất, {video_count} video, {image_count} ảnh, {scaling_count} winning ads).")
+    # Pass through Data Quality Gatekeeper
+    try:
+        import data_sanitizer_agent as _dsa
+        result = _dsa.sanitize_brand_payload(result, clean_official or intel_domain)
+    except Exception as _e_gate:
+        print(f"⚠️ [AD SCANNER GATEKEEPER] {_e_gate}")
+
+    print(f"✅ [AD SCANNER] Hoàn thành: {total_results_str} ({len(result.get('ads', []))} thẻ trích xuất, {video_count} video, {image_count} ảnh, {scaling_count} winning ads).")
     return result
 
 

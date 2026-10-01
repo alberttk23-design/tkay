@@ -244,6 +244,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           />
           <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           <div class="absolute right-1 top-1 bottom-1 flex items-center gap-1">
+            <button type="button" id="btnPurge" onclick="handlePurgeBrandCache()" title="Xóa sạch vĩnh viễn cache & cào mới từ đầu (Hard Purge)" class="px-2 h-full rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-800 text-xs font-semibold transition cursor-pointer flex items-center gap-1 border border-rose-200 shadow-2xs">
+              <svg class="w-3.5 h-3.5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+              <span class="hidden md:inline text-[11px]">Xoá Cache</span>
+            </button>
             <button type="button" id="btnRefresh" onclick="handleRefresh()" title="Làm mới (Bỏ qua cache & quét lại)" class="px-2.5 h-full rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 text-xs font-semibold transition cursor-pointer flex items-center gap-1 border border-slate-200 shadow-2xs">
               <svg id="refreshIcon" class="w-3.5 h-3.5 text-slate-500 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
               <span class="hidden sm:inline text-[11px]">Làm mới</span>
@@ -397,7 +401,12 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <span>•</span>
                 <button type="button" onclick="handleRefresh()" title="Quét lại trực tiếp bỏ qua cache" class="hover:text-blue-600 flex items-center gap-1 text-slate-500 hover:text-blue-600 transition font-semibold cursor-pointer">
                   <svg class="w-3 h-3 text-slate-400 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                  <span>Làm mới dữ liệu</span>
+                  <span>Làm mới</span>
+                </button>
+                <span>•</span>
+                <button type="button" onclick="handlePurgeBrandCache()" title="Xoá sạch vĩnh viễn toàn bộ cache của thương hiệu này và cào mới từ đầu" class="hover:text-rose-700 flex items-center gap-1 text-rose-500 hover:text-rose-700 transition font-semibold cursor-pointer">
+                  <svg class="w-3 h-3 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                  <span>Xoá Cache Brand</span>
                 </button>
                 <span id="dataStatusBadge"></span>
               </div>
@@ -9624,6 +9633,42 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       });
     }
 
+    // Hard Purge Brand Cache Handler (Deletes all JSON files on disk)
+    async function handlePurgeBrandCache() {
+      const bInput = document.getElementById('brandInput');
+      const q = (bInput?.value || '').trim() || (currentData?.domain || currentData?.name || '');
+      if (!q) {
+        alert('Vui lòng nhập tên thương hiệu hoặc domain để xoá cache.');
+        return;
+      }
+      const domain = currentData?.domain || (q.includes('.') ? q : '');
+      const confirmed = confirm(`🗑️ XÁC NHẬN XOÁ SẠCH CACHE CHO: "${q}"?\n\nThao tác này sẽ xoá vĩnh viễn toàn bộ các file cache dữ liệu (Ads, Store, TikTok, Google, Email) trên máy chủ và cào mới trực tiếp 100% từ nền tảng.`);
+      if (!confirmed) return;
+
+      const purgeBtn = document.getElementById('btnPurge');
+      if (purgeBtn) purgeBtn.classList.add('opacity-50');
+
+      try {
+        const purgeUrl = `/api/brand/purge?brand=${encodeURIComponent(q)}&domain=${encodeURIComponent(domain)}`;
+        const res = await fetch(purgeUrl);
+        const data = await res.json();
+        console.log('🗑️ [CACHE PURGE SUCCESS]', data);
+        
+        // Show instant visual confirmation
+        const badge = document.getElementById('dataStatusBadge');
+        if (badge) {
+          badge.innerHTML = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[10px] font-bold">🗑️ Đã xoá ${data.deleted_count || 0} files • Đang cào mới...</span>`;
+        }
+
+        // Trigger immediate live rescrape
+        handleRefresh();
+      } catch (err) {
+        alert('Lỗi khi xoá cache: ' + err.message);
+      } finally {
+        if (purgeBtn) purgeBtn.classList.remove('opacity-50');
+      }
+    }
+
     function updatePresetButtonsState(query) {
       const qClean = (query || '').toLowerCase().trim();
       document.querySelectorAll('.preset-btn').forEach(btn => {
@@ -9817,10 +9862,10 @@ HTML_DASHBOARD = """<!DOCTYPE html>
         if (dataSource === 'no_data' || dataSource === 'empty') {
           statusBadge.innerHTML = '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">🔴 No Data Found</span>';
         } else if (cacheAge > 0) {
-          const ageStr = cacheAge < 3600 ? `${Math.round(cacheAge/60)}m ago` : `${Math.round(cacheAge/3600)}h ago`;
-          statusBadge.innerHTML = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold">🟡 Cached ${ageStr}</span>`;
+          const ageStr = cacheAge < 3600 ? `${Math.round(cacheAge/60)}m trước` : `${Math.round(cacheAge/3600)}h trước`;
+          statusBadge.innerHTML = `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[10px] font-bold shadow-2xs" title="Dữ liệu đang được tải từ bộ nhớ đệm">🟡 Cache (${ageStr}) <button type="button" onclick="handlePurgeBrandCache()" class="underline hover:text-rose-700 text-amber-900 ml-1 font-extrabold cursor-pointer" title="Xoá vĩnh viễn cache brand này">Xoá</button></span>`;
         } else {
-          statusBadge.innerHTML = '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold">🟢 Live Data</span>';
+          statusBadge.innerHTML = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold shadow-2xs" title="Dữ liệu vừa cào trực tiếp thời gian thực">🟢 Live Data</span>';
         }
       }
       // Channel counts
@@ -11854,7 +11899,31 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                 self.send_header("Content-Type", "application/json; charset=utf-8")
                 self.send_header("Access-Control-Allow-Origin", "*")
                 self.end_headers()
-                self.wfile.write(json.dumps(data, ensure_ascii=False).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
+            return
+
+        if parsed.path == "/api/brand/purge":
+            query_params = urllib.parse.parse_qs(parsed.query)
+            brand = query_params.get("brand", [""])[0].strip() or query_params.get("query", [""])[0].strip()
+            domain = query_params.get("domain", [""])[0].strip() or None
+            if not brand and not domain:
+                self.send_response(400)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": "Missing brand or domain parameter"}).encode("utf-8"))
+                return
+            try:
+                import cache_manager
+                purge_res = cache_manager.purge_brand_cache(brand, domain=domain)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps(purge_res, ensure_ascii=False).encode("utf-8"))
             except Exception as e:
                 self.send_response(500)
                 self.send_header("Content-Type", "application/json")
@@ -12056,6 +12125,13 @@ class TrendTrackHandler(BaseHTTPRequestHandler):
                     data = _smt.enrich_data_payload_with_truth(data, verified_domain or clean_q)
                 except Exception as _e_tr:
                     print(f"⚠️ [STORE TRUTH ENRICH] {_e_tr}")
+
+                # ── STEP 5: Pass payload through Data Quality Gatekeeper ───────
+                try:
+                    import data_sanitizer_agent as _dsa
+                    data = _dsa.sanitize_brand_payload(data, verified_domain)
+                except Exception as _e_gate:
+                    print(f"⚠️ [GATEKEEPER SANITIZER ERROR] {_e_gate}")
 
                 with open(cache_file, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)

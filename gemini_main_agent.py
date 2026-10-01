@@ -256,35 +256,51 @@ def heuristic_normalize_query(raw_query: str) -> Dict[str, Any]:
     }
 
 
-def call_gemini_api_with_fallback(raw_query: str, api_key: str, primary_model: str) -> Optional[Dict[str, Any]]:
-    """Calls Gemini API with an automatic fallback chain across available models."""
+def call_gemini_api_with_fallback(raw_query: str, api_key: str, primary_model: str, ground_truth: Optional[Dict[str, Any]] = None, explicit_domain: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    """Calls Gemini API with live web grounding context and automatic model fallback chain."""
     model_chain = [primary_model]
     for alt in ["models/gemini-3.1-flash-lite", "models/gemini-3.8-flash", "models/gemini-3.5-flash", "models/gemini-pro-latest"]:
         if alt not in model_chain:
             model_chain.append(alt)
 
+    gt_info = ""
+    if ground_truth:
+        gt_info = (
+            f"\n[LIVE GROUND TRUTH EVIDENCE FROM STORE PROBE]:\n"
+            f"- Verified Store Title: {ground_truth.get('brand_name')}\n"
+            f"- Canonical Domain: {ground_truth.get('canonical_domain')}\n"
+            f"- Facebook Handle in Footer: {ground_truth.get('facebook_handle')}\n"
+            f"- TikTok Handle in Footer: {ground_truth.get('tiktok_slug')}\n"
+        )
+    if explicit_domain:
+        gt_info += f"- EXPLICIT DOMAIN ANCHOR: {explicit_domain} (MUST BE PRESERVED AS CANONICAL_DOMAIN)\n"
+
     system_prompt = (
         "You are the TrendTrack Main Orchestrator Agent. "
-        "Analyze the user's input (which may be a brand name, messy product query, or misspelled shop name in English or Vietnamese) "
-        "and extract the canonical e-commerce brand identity. "
-        "Respond ONLY with a valid JSON object matching this schema:\n"
+        "Analyze the user's input and the verified live web evidence to extract the canonical e-commerce brand identity. "
+        "CRITICAL RULES:\n"
+        "1. If an EXPLICIT DOMAIN ANCHOR is provided, 'canonical_domain' MUST be exactly this domain. Do NOT guess older or alternate domains.\n"
+        "2. If Facebook handle is provided from live footer, prioritize it for 'facebook_search_term'.\n"
+        "3. Respond ONLY with a valid JSON object matching this schema:\n"
         "{\n"
         '  "brand_name": "Official Brand Name",\n'
         '  "canonical_domain": "brand.com",\n'
-        '  "facebook_search_term": "Official Facebook Page Name",\n'
+        '  "facebook_search_term": "Official Facebook Page Name or Keyword",\n'
         '  "tiktok_slug": "clean_alphanumeric_handle",\n'
         '  "google_search_term": "Official Brand Name",\n'
         '  "industry": "Industry Category",\n'
-        '  "confidence": 0.95\n'
+        '  "confidence": 0.98\n'
         "}\n"
         "Do not include markdown codeblocks, explanations, or any extra text."
     )
+
+    user_content = f"{system_prompt}\n\nUser Search Query: \"{raw_query}\"{gt_info}"
 
     payload = {
         "contents": [
             {
                 "parts": [
-                    {"text": f"{system_prompt}\n\nUser Search Query: \"{raw_query}\""}
+                    {"text": user_content}
                 ]
             }
         ],
@@ -313,9 +329,12 @@ def call_gemini_api_with_fallback(raw_query: str, api_key: str, primary_model: s
                             raw_json_str = parts[0].get("text", "").strip()
                             parsed = json.loads(raw_json_str)
                             parsed["_engine"] = f"gemini_{clean_m}"
+                            # Enforce domain anchor guarantee
+                            if explicit_domain:
+                                parsed["canonical_domain"] = explicit_domain
                             return parsed
-        except Exception as e:
-            # Try next model in chain if 503 or 404
+        except Exception:
+            # Try next model in chain if 503, 404, or timeout
             continue
 
     return None
@@ -324,16 +343,46 @@ def call_gemini_api_with_fallback(raw_query: str, api_key: str, primary_model: s
 def disambiguate_and_dispatch(raw_query: str) -> Dict[str, Any]:
     """
     Main entry point for Gemini Main Agent:
-    Disambiguates query and prepares dispatch packets for all 4 subagents.
+    Uses Live Web Grounding + Deterministic Domain Anchoring + Gemini AI Reasoning.
     """
     if not raw_query or not raw_query.strip():
         return heuristic_normalize_query("unknown")
 
-    # Check instant registry first (0ms latency)
     clean_low = raw_query.strip().lower()
+    clean_no_proto = re.sub(r'^https?://', '', clean_low)
+    clean_no_proto = re.sub(r'^(www|us|uk|au|shop|store)\.', '', clean_no_proto)
+    clean_no_proto = clean_no_proto.split('/')[0].split('?')[0]
+
+    # Detect if user explicitly typed a domain
+    domain_match = re.search(r'([a-z0-9\-]+)\.(com|co|vn|io|shop|store|org|net|app|us|uk|de|fr|ca|au)', clean_no_proto)
+    explicit_domain = domain_match.group(0) if domain_match else None
+
+    # Check instant registry first (0ms latency)
     for k, v in KNOWN_BRAND_REGISTRY.items():
-        if clean_low == k or clean_low == v["canonical_domain"]:
-            return {**v, "_engine": "registry_instant"}
+        if clean_low == k or clean_no_proto == k or (explicit_domain and explicit_domain == v["canonical_domain"]):
+            res = dict(v)
+            if explicit_domain:
+                res["canonical_domain"] = explicit_domain
+            res["_engine"] = "registry_instant"
+            return res
+
+    # ── LIVE STORE GROUNDING (Probe homepage for true identity) ───────────
+    ground_truth = None
+    target_probe = None
+    if explicit_domain:
+        target_probe = explicit_domain
+    elif re.match(r'^[a-z0-9\-]+(\.[a-z0-9\-]+)+$', clean_no_proto):
+        target_probe = clean_no_proto
+    elif re.match(r'^[a-z0-9\-]{3,30}$', clean_no_proto) and clean_no_proto not in ["shop", "store", "brand", "best", "the"]:
+        target_probe = f"{clean_no_proto}.com"
+
+    if target_probe:
+        try:
+            import store_intelligence as _si
+            ground_truth = _si.extract_website_ground_truth(target_probe)
+            print(f"🌐 [GEMINI GROUNDING PROBE] Target: {target_probe} -> Brand: '{ground_truth.get('brand_name')}' FB: '{ground_truth.get('facebook_handle')}'")
+        except Exception as _e_probe:
+            print(f"⚠️ [GROUNDING PROBE ERROR] {_e_probe}")
 
     # Attempt Gemini API using active configuration
     cfg = load_ai_config()
@@ -341,12 +390,32 @@ def disambiguate_and_dispatch(raw_query: str) -> Dict[str, Any]:
     active_model = cfg.get("active_model", "models/gemini-3.1-flash-lite")
 
     if api_key:
-        ai_res = call_gemini_api_with_fallback(raw_query, api_key, active_model)
+        ai_res = call_gemini_api_with_fallback(
+            raw_query,
+            api_key,
+            active_model,
+            ground_truth=ground_truth,
+            explicit_domain=explicit_domain
+        )
         if ai_res and ai_res.get("brand_name") and ai_res.get("canonical_domain"):
+            if ground_truth and ground_truth.get("brand_name") and ai_res.get("brand_name") == "Brand":
+                ai_res["brand_name"] = ground_truth.get("brand_name")
             return ai_res
 
-    # Fallback to smart heuristic normalizer
-    return heuristic_normalize_query(raw_query)
+    # Grounded fallback heuristic if Gemini API is unreachable
+    fallback = heuristic_normalize_query(raw_query)
+    if ground_truth and ground_truth.get("brand_name"):
+        fallback["brand_name"] = ground_truth.get("brand_name")
+        if ground_truth.get("canonical_domain"):
+            fallback["canonical_domain"] = ground_truth.get("canonical_domain")
+        if ground_truth.get("facebook_handle"):
+            fallback["facebook_search_term"] = ground_truth.get("facebook_handle")
+        if ground_truth.get("tiktok_slug"):
+            fallback["tiktok_slug"] = ground_truth.get("tiktok_slug")
+        fallback["_engine"] = "grounded_heuristic"
+    if explicit_domain:
+        fallback["canonical_domain"] = explicit_domain
+    return fallback
 
 
 if __name__ == "__main__":

@@ -134,5 +134,99 @@ class SmartCacheManager:
         self.set(key, existing_data, ttl_seconds)
         return existing_data
 
+    def purge_brand(self, brand: str, domain: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Atomically discovers and deletes ALL cache files related to a brand/domain across:
+        - out/spy_cache/
+        - data_cache/store_history/
+        """
+        import re
+        deleted_files = []
+        clean_brand = re.sub(r'[^a-z0-9]', '', (brand or "").lower())
+        clean_domain = re.sub(r'[^a-z0-9]', '', (domain or "").lower())
+        
+        domain_stem = ""
+        if domain:
+            d_clean = re.sub(r'^https?://', '', domain.lower()).split('/')[0].strip()
+            domain_stem = re.sub(r'\.(com|co|vn|io|shop|store|org|net|us|uk|de|fr|ca|au)$', '', d_clean)
+            domain_stem = re.sub(r'[^a-z0-9]', '', domain_stem)
+
+        stems = set(filter(None, [clean_brand, clean_domain, domain_stem]))
+        # Remove overly generic stems
+        stems = {s for s in stems if len(s) >= 3 and s not in ["com", "shop", "store", "the", "official"]}
+
+        if not stems:
+            return {"success": False, "error": "No valid brand stems found to purge", "deleted_files": []}
+
+        # 1. Purge matching files in out/spy_cache
+        if os.path.exists(self.cache_dir):
+            for fname in os.listdir(self.cache_dir):
+                if not fname.endswith(".json"):
+                    continue
+                fname_clean = re.sub(r'[^a-z0-9]', '', fname.lower().replace(".json", ""))
+                
+                # Check if any stem is part of filename with separator awareness
+                matched = False
+                for stem in stems:
+                    # Match exact stem or stem delimited by separators or as a major component
+                    pattern = rf'(^|_|-|\.){re.escape(stem)}(_|-|\.|\d|$)'
+                    if re.search(pattern, fname.lower()) or fname_clean == stem or fname_clean.startswith(stem) or fname_clean.endswith(stem):
+                        matched = True
+                        break
+
+                if matched:
+                    fpath = os.path.join(self.cache_dir, fname)
+                    try:
+                        os.remove(fpath)
+                        deleted_files.append(f"spy_cache/{fname}")
+                    except Exception as e:
+                        print(f"⚠️ [PURGE] Error deleting {fpath}: {e}")
+
+        # 2. Purge in data_cache/store_history
+        hist_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_cache", "store_history")
+        if os.path.exists(hist_dir):
+            for fname in os.listdir(hist_dir):
+                if not fname.endswith(".json"):
+                    continue
+                fname_clean = re.sub(r'[^a-z0-9]', '', fname.lower().replace(".json", ""))
+                matched = any(stem in fname_clean for stem in stems)
+                if matched:
+                    fpath = os.path.join(hist_dir, fname)
+                    try:
+                        os.remove(fpath)
+                        deleted_files.append(f"store_history/{fname}")
+                    except Exception as e:
+                        print(f"⚠️ [PURGE] Error deleting {fpath}: {e}")
+
+        # 3. Clear in-memory caches
+        try:
+            import store_intelligence as _si
+            if hasattr(_si, "_GROUND_TRUTH_CACHE"):
+                _si._GROUND_TRUTH_CACHE.clear()
+        except Exception:
+            pass
+
+        try:
+            import meta_ads_agent as _maa
+            if hasattr(_maa, "_SUITE_CACHE"):
+                _maa._SUITE_CACHE.clear()
+        except Exception:
+            pass
+
+        print(f"🗑️ [CACHE PURGED] Brand: '{brand}' Domain: '{domain}' -> Deleted {len(deleted_files)} files: {deleted_files}")
+        return {
+            "success": True,
+            "brand": brand,
+            "domain": domain,
+            "deleted_count": len(deleted_files),
+            "deleted_files": deleted_files
+        }
+
+
+def purge_brand_cache(brand: str, domain: Optional[str] = None) -> Dict[str, Any]:
+    """Top-level helper to purge brand cache."""
+    return smart_cache.purge_brand(brand, domain)
+
+
 # Global instance
 smart_cache = SmartCacheManager()
