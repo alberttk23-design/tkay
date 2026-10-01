@@ -45,13 +45,18 @@ class SmartCacheManager:
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
 
-            # Check metadata
+            # Check metadata or fallback to file modification time
             meta = data.get("_cache_meta", {})
             crawled_at = meta.get("crawled_at", 0)
-            ttl = max_age_seconds or meta.get("ttl", 12 * 3600)
+            if crawled_at <= 0:
+                try:
+                    crawled_at = os.path.getmtime(path)
+                except Exception:
+                    crawled_at = 0
             
+            ttl = max_age_seconds or meta.get("ttl", 12 * 3600)
             now = time.time()
-            is_stale = (now - crawled_at) > ttl if crawled_at > 0 else False
+            is_stale = (now - crawled_at) > ttl if crawled_at > 0 else True
             return data, is_stale
         except Exception as e:
             print(f"⚠️ [CACHE MANAGER] Error reading cache {key}: {e}")

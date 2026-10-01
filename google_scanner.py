@@ -327,6 +327,8 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         seen_creatives.add(c_id)
         unique_creatives.append(c)
 
+    is_oodie = "oodie" in slug
+
     # Standardize formats and include rich formats (Text, Image, Shopping, Video)
     for idx, c in enumerate(unique_creatives):
         c_id = c.get("2", "")
@@ -358,15 +360,6 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             active_sampled += 1
 
         days_running = max(1, (last_shown_ts - first_shown_ts) // 86400)
-
-        # Inject evergreen winning ads for realistic long-running data
-        if idx == 0 and "oodie" in slug:
-            days_running = 1267
-            first_shown_ts = int(time.mktime(datetime(2023, 4, 11).timetuple()))
-            last_shown_ts = now_ts
-            is_active = True
-            fmt_str = "Text"
-            platform_str = "Search"
 
         if days_running <= 30: longevity_buckets["0-30 d"] += 1
         elif days_running <= 90: longevity_buckets["31-90 d"] += 1
@@ -400,10 +393,9 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
         card_country = countries_list[idx % len(countries_list)]
         flag, card_domain = country_flag_map.get(card_country, ("🇦🇺", f"www.{b_domain}"))
 
-        # Varied headlines & snippets tailored to brand or clean ecommerce
-        is_oodie = "oodie" in slug
+        # Varied headlines & snippets — generic templates using actual brand name
         brand_headlines = [
-            f"{brand_name} Official Site – Oversized Wearable Blankets" if is_oodie else f"{brand_name}™ – Official Store",
+            f"{brand_name}™ – Official Store",
             f"Shop {brand_name} – Top Rated Bestsellers",
             f"Official {brand_name} – Fast Worldwide Shipping",
             f"{brand_name} – On Sale Now – Limited Time Offers",
@@ -418,24 +410,15 @@ async def scan_google_ads_async(brand_name: str, force_refresh: bool = False) ->
             f"Discover why thousands of customers trust {brand_name}. Premium quality, verified standards, and exceptional customer care.",
             f"Direct from the official {brand_name} store. Unlock special bundles, seasonal promotions, and free express delivery.",
             f"Browse bestsellers and exclusive releases crafted with care. Join over 100,000 satisfied {brand_name} customers worldwide.",
-            f"Upgrade your daily wellness with {brand_name}. Rated 4.8 stars by verified buyers with fast, secure checkout.",
+            f"Shop the official {brand_name} catalog. Rated 4.8 stars by verified buyers with fast, secure checkout.",
             f"Limited time offers on selected {brand_name} essentials. Save big when you shop direct today.",
             f"Experience the authentic {brand_name} difference. Certified high-grade standards and hassle-free 30-day money-back guarantee."
-        ] if not is_oodie else [
-            f"Explore {brand_name} Originals, sleep tees, robes and blankets designed for ultimate comfort. Free express shipping available.",
-            f"Restocked favourites plus fresh colours in matching sets designed for everyday wear. Shop today with flexible buy now pay later options.",
-            f"Shop the latest collection in personality filled prints including limited editions. Over 4,000,000 satisfied happy customers.",
-            f"{brand_name} brings pure comfort. Loved by over 4 million happy customers worldwide. Check out our latest deals today.",
-            f"Feels like a giant cloud hug. 100% cruelty-free, super soft flannel fleece on the outside and warm sherpa fleece on the inside.",
-            f"Meet the collection that is 3x softer than regular fabric. Finally get the deep relaxing sleep you deserve every single night.",
-            f"No More Night Sweats. Stay Cool All Year Round In A Silky Soft Bamboo Sleep Tee. One size fits almost everybody.",
-            f"Discover our award-winning ergonomic and comfort essentials. Rated 4.8 stars by thousands of verified reviewers."
         ]
 
         raw_h = c.get("3", {}).get("1", {}).get("1")
         raw_s = c.get("3", {}).get("1", {}).get("2")
-        headline = raw_h if (raw_h and len(raw_h) > 8 and "Official Collection" not in raw_h and ("oodie" in slug or "Oodie" not in raw_h)) else brand_headlines[idx % len(brand_headlines)]
-        snippet = raw_s if (raw_s and len(raw_s) > 20 and "exclusive discounts" not in raw_s and ("oodie" in slug or "Oodie" not in raw_s)) else brand_snippets[idx % len(brand_snippets)]
+        headline = raw_h if (raw_h and len(raw_h) > 8) else brand_headlines[idx % len(brand_headlines)]
+        snippet = raw_s if (raw_s and len(raw_s) > 20) else brand_snippets[idx % len(brand_snippets)]
 
         # Specific formatting per type
         sitelinks = None

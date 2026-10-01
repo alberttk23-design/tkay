@@ -4603,7 +4603,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
                 <div class="text-[10px] font-bold uppercase text-slate-400 truncate">${(ad.ctaDomain || currentData?.domain || 'ONLINE STORE').toUpperCase()}</div>
                 <div class="text-xs font-black text-slate-900 truncate" title="${headline}">${headline}</div>
               </div>
-              <a href="${ad.landing_url || ad.landingUrl || ('https://' + (currentData?.domain || 'theoodie.com'))}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs font-extrabold transition shrink-0 cursor-pointer shadow-2xs">
+              <a href="${ad.landing_url || ad.landingUrl || ('https://' + ((currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com')))}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs font-extrabold transition shrink-0 cursor-pointer shadow-2xs">
                 ${ctaBtnText}
               </a>
             </div>
@@ -4845,20 +4845,21 @@ HTML_DASHBOARD = """<!DOCTYPE html>
 
       // 3. Top Landing Pages Card
       const lpListEl = document.getElementById('metaInsightsLandingPagesList');
-      if (lpListEl) {
-        const lpCounts = {};
+        const bDom = (currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
         rawAds.forEach(a => {
-          const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+          const url = a.landing_url || a.landingUrl || `https://${bDom}`;
           lpCounts[url] = (lpCounts[url] || 0) + 1;
         });
 
         const sortedLps = Object.entries(lpCounts).sort((a, b) => b[1] - a[1]);
+        if (sortedLps.length === 0 && totalAds > 0) {
+          sortedLps.push([`https://${bDom}/collections/all`, Math.round(totalAds * 0.60)]);
+          sortedLps.push([`https://${bDom}/`, Math.round(totalAds * 0.40)]);
+        }
+
         if (sortedLps.length === 0) {
-          const dom = (currentData && currentData.domain) || 'theoodie.com';
-          sortedLps.push([`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.42)]);
-          sortedLps.push([`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.28)]);
-          sortedLps.push([`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.18)]);
-          sortedLps.push([`https://${dom}/`, Math.round(totalAds * 0.12)]);
+          lpListEl.innerHTML = '<div class="text-xs text-slate-400 py-6 text-center">Chưa có dữ liệu Landing Pages</div>';
+          return;
         }
 
         lpListEl.innerHTML = sortedLps.slice(0, 4).map(([url, count]) => {
@@ -5060,7 +5061,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
           </div>
           <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
             <span class="font-semibold text-slate-600">📑 ${card.copies_count || card.duplicates || 1} copies</span>
-            <a href="https://${card.cta_domain || (currentData?.domain || 'theoodie.com')}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">Shop Now →</a>
+            <a href="https://${card.cta_domain || ((currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com'))}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">Shop Now →</a>
           </div>
         </div>
       `).join('');
@@ -5223,24 +5224,32 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       const totalAds = rawAds.length || 556;
       const lpMap = {};
 
+      const bDom = (currentData && currentData.domain) || (getActiveBrandName().toLowerCase().replace(/[^a-z0-9]/g, '') + '.com');
       rawAds.forEach(a => {
-        const url = a.landing_url || a.landingUrl || `https://${(currentData && currentData.domain) || 'theoodie.com'}`;
+        const url = a.landing_url || a.landingUrl || `https://${bDom}`;
         lpMap[url] = (lpMap[url] || 0) + 1;
       });
 
       let lpList = Object.entries(lpMap).sort((a, b) => b[1] - a[1]);
-      if (lpList.length === 0) {
-        const dom = (currentData && currentData.domain) || 'theoodie.com';
+      if (lpList.length === 0 && rawAds.length > 0) {
         lpList = [
-          [`https://${dom}/collections/hooded-blankets`, Math.round(totalAds * 0.45)],
-          [`https://${dom}/collections/sleep-tees`, Math.round(totalAds * 0.25)],
-          [`https://${dom}/collections/dressing-gowns`, Math.round(totalAds * 0.15)],
-          [`https://${dom}/collections/bundles`, Math.round(totalAds * 0.10)],
-          [`https://${dom}/`, Math.round(totalAds * 0.05)]
+          [`https://${bDom}/collections/all`, Math.round(totalAds * 0.50)],
+          [`https://${bDom}/collections/best-sellers`, Math.round(totalAds * 0.30)],
+          [`https://${bDom}/`, Math.round(totalAds * 0.20)]
         ];
       }
 
       if (badge) badge.textContent = `• ${lpList.length} landing pages`;
+
+      if (lpList.length === 0) {
+        tableCont.innerHTML = `
+          <div class="py-16 text-center text-slate-400">
+            <div class="text-sm font-bold text-slate-700">Chưa có dữ liệu Landing Pages</div>
+            <div class="text-xs text-slate-400 mt-1">Không tìm thấy đường link landing page nào từ các mẫu quảng cáo.</div>
+          </div>
+        `;
+        return;
+      }
 
       tableCont.innerHTML = `
         <table class="w-full text-left border-collapse">
@@ -5675,8 +5684,8 @@ HTML_DASHBOARD = """<!DOCTYPE html>
               <!-- Bottom CTA Bar -->
               <div class="p-2.5 bg-white border-t border-slate-100 flex items-center justify-between gap-2">
                 <div class="min-w-0">
-                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider truncate">${card.cta_domain || 'theoodie.com'}</div>
-                  <div class="text-[11px] font-bold text-slate-800 truncate">${card.cta_title || 'Shop The Oodie'}</div>
+                  <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider truncate">${card.cta_domain || (currentData && currentData.domain) || (bName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com')}</div>
+                  <div class="text-[11px] font-bold text-slate-800 truncate">${card.cta_title || ('Shop ' + bName)}</div>
                 </div>
                 <button type="button" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[10px] font-bold shrink-0 transition">
                   ${card.cta_text || 'Shop Now'}
@@ -5690,7 +5699,7 @@ HTML_DASHBOARD = """<!DOCTYPE html>
             <div class="flex items-center gap-1.5 min-w-0">
               <img src="${avatarUrl}" class="w-4 h-4 rounded-full object-cover border border-slate-200 shrink-0"/>
               <span class="text-[11px] font-bold text-slate-700 truncate">${bName}</span>
-              <span class="text-[10px] text-slate-400 font-semibold shrink-0">• ${card.total_ads} / 14K</span>
+              <span class="text-[10px] text-slate-400 font-semibold shrink-0">• ${(card.total_ads || (currentData && currentData.total_ads) || 0).toLocaleString()} ads</span>
               <span class="text-[10px] text-slate-400 shrink-0">${card.countries_flag || '🌐'}</span>
             </div>
             <div class="flex items-center gap-1 text-slate-400 shrink-0">
@@ -8475,6 +8484,19 @@ HTML_DASHBOARD = """<!DOCTYPE html>
       }
 
       currentDrilldownCards = cards;
+
+      if (!cards || cards.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-500">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="text-sm font-bold text-slate-700">Không tìm thấy quảng cáo Google (${category}) cho "${brandName}"</div>
+            <div class="text-xs text-slate-400 mt-1">Chưa có mẫu quảng cáo nào thuộc phân loại này.</div>
+          </div>
+        `;
+        return;
+      }
 
       cards.forEach((card, idx) => {
         const cDiv = document.createElement('div');
